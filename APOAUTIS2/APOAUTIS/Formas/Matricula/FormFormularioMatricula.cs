@@ -30,8 +30,10 @@ namespace APOAUTIS
 
         private void button1_Click(object sender, EventArgs e)
         {
-         
-        }
+            FormaEntPadres forma = new FormaEntPadres();
+            forma.Show();
+            this.Hide();         
+    }
 
          
 
