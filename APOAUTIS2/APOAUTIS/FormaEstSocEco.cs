@@ -26,5 +26,25 @@ namespace APOAUTIS
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tabEstSocioEco.SelectedTab = InformacionFamilia;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            tabEstSocioEco.SelectedTab = SaludRecreacion;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            tabEstSocioEco.SelectedTab = InformacionVivienda;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

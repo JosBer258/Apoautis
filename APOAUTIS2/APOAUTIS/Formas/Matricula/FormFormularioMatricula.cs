@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace APOAUTIS
 {
     public partial class FrmMatricula : Form
@@ -28,19 +29,33 @@ namespace APOAUTIS
 
         }
 
+        
+
         private void button1_Click(object sender, EventArgs e)
         {
-            FormaEntPadres forma = new FormaEntPadres();
-            forma.Show();
-            this.Hide();         
-    }
+            tabMatricula.SelectedTab = tabPage2;
+        }
 
          
 
         private void FrmMatricula_Load(object sender, EventArgs e)
         {
-            tabPage2.Select();
-           
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            tabMatricula.SelectedTab = tabPage3;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            tabMatricula.SelectedTab = tabPage4;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

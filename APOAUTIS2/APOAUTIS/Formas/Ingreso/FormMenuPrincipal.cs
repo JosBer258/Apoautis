@@ -54,5 +54,23 @@ namespace APOAUTIS.Formas.Ingreso
             FormUsuario User = new FormUsuario();
             User.ShowDialog();
         }
+
+        private void entrevistaDePadresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormaEntPadres entPadres = new FormaEntPadres();
+            entPadres.ShowDialog();
+        }
+
+        private void estudioSocioeconomicoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormaEstSocEco estSocioEco = new FormaEstSocEco();
+            estSocioEco.ShowDialog();
+        }
+
+        private void evaluacionPsicoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormaEvalPsic evalPsic = new FormaEvalPsic();
+            evalPsic.ShowDialog();
+        }
     }
 }

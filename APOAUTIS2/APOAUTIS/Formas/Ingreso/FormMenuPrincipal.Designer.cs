@@ -32,12 +32,15 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.matriculaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alumnosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pruebasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mydbDataSet = new APOAUTIS.mydbDataSet();
             this.alumnosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pruebasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.entrevistaDePadresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estudioSocioeconomicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.evaluacionPsicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mydbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alumnosBindingSource)).BeginInit();
@@ -53,6 +56,9 @@
             this.alumnosToolStripMenuItem,
             this.usuariosToolStripMenuItem1,
             this.pruebasToolStripMenuItem,
+            this.entrevistaDePadresToolStripMenuItem,
+            this.estudioSocioeconomicoToolStripMenuItem,
+            this.evaluacionPsicoToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -74,13 +80,6 @@
             this.matriculaToolStripMenuItem.Text = "Matricula";
             this.matriculaToolStripMenuItem.Click += new System.EventHandler(this.matriculaToolStripMenuItem_Click);
             // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(45, 22);
-            this.salirToolStripMenuItem.Text = "Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
-            // 
             // alumnosToolStripMenuItem
             // 
             this.alumnosToolStripMenuItem.Name = "alumnosToolStripMenuItem";
@@ -95,6 +94,19 @@
             this.usuariosToolStripMenuItem1.Text = "Usuarios";
             this.usuariosToolStripMenuItem1.Click += new System.EventHandler(this.usuariosToolStripMenuItem1_Click);
             // 
+            // pruebasToolStripMenuItem
+            // 
+            this.pruebasToolStripMenuItem.Name = "pruebasToolStripMenuItem";
+            this.pruebasToolStripMenuItem.Size = new System.Drawing.Size(64, 22);
+            this.pruebasToolStripMenuItem.Text = "Pruebas";
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(45, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
             // mydbDataSet
             // 
             this.mydbDataSet.DataSetName = "mydbDataSet";
@@ -105,11 +117,26 @@
             this.alumnosBindingSource.DataMember = "alumnos";
             this.alumnosBindingSource.DataSource = this.mydbDataSet;
             // 
-            // pruebasToolStripMenuItem
+            // entrevistaDePadresToolStripMenuItem
             // 
-            this.pruebasToolStripMenuItem.Name = "pruebasToolStripMenuItem";
-            this.pruebasToolStripMenuItem.Size = new System.Drawing.Size(64, 22);
-            this.pruebasToolStripMenuItem.Text = "Pruebas";
+            this.entrevistaDePadresToolStripMenuItem.Name = "entrevistaDePadresToolStripMenuItem";
+            this.entrevistaDePadresToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.entrevistaDePadresToolStripMenuItem.Text = "Entrevista de Padres";
+            this.entrevistaDePadresToolStripMenuItem.Click += new System.EventHandler(this.entrevistaDePadresToolStripMenuItem_Click);
+            // 
+            // estudioSocioeconomicoToolStripMenuItem
+            // 
+            this.estudioSocioeconomicoToolStripMenuItem.Name = "estudioSocioeconomicoToolStripMenuItem";
+            this.estudioSocioeconomicoToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.estudioSocioeconomicoToolStripMenuItem.Text = "Estudio Socioeconomico";
+            this.estudioSocioeconomicoToolStripMenuItem.Click += new System.EventHandler(this.estudioSocioeconomicoToolStripMenuItem_Click);
+            // 
+            // evaluacionPsicoToolStripMenuItem
+            // 
+            this.evaluacionPsicoToolStripMenuItem.Name = "evaluacionPsicoToolStripMenuItem";
+            this.evaluacionPsicoToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.evaluacionPsicoToolStripMenuItem.Text = "Evaluacion Psico";
+            this.evaluacionPsicoToolStripMenuItem.Click += new System.EventHandler(this.evaluacionPsicoToolStripMenuItem_Click);
             // 
             // FormMenuPrincipal
             // 
@@ -145,5 +172,8 @@
         private System.Windows.Forms.ToolStripMenuItem alumnosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem pruebasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem entrevistaDePadresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem estudioSocioeconomicoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem evaluacionPsicoToolStripMenuItem;
     }
 }
