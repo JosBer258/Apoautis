@@ -49,3 +49,6 @@ C:\Users\Geovana\Desktop\ApoautisGit\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAU
 C:\Users\Geovana\Desktop\ApoautisGit\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Entrevista_Padres.FrmBusquedaEntPadres.resources
 C:\Users\Geovana\Desktop\ApoautisGit\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Estudio_Socioeconomico.FormaBusqEstSoc.resources
 C:\Users\Geovana\Desktop\ApoautisGit\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.FrmBusqMat.resources
+C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\bin\Debug\APOAUTIS.exe.config
+C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.exe
+C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.pdb
