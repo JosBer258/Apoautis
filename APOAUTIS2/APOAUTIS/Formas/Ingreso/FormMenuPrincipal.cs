@@ -26,8 +26,7 @@ namespace APOAUTIS.Formas.Ingreso
 
         private void matriculaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmMatricula mat = new FrmMatricula();
-            mat.ShowDialog();
+            
         }
 
         private void FormMenuPrincipal_Load(object sender, EventArgs e)
@@ -57,20 +56,54 @@ namespace APOAUTIS.Formas.Ingreso
 
         private void entrevistaDePadresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormaEntPadres entPadres = new FormaEntPadres();
-            entPadres.ShowDialog();
+            
         }
 
         private void estudioSocioeconomicoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormaEstSocEco estSocioEco = new FormaEstSocEco();
-            estSocioEco.ShowDialog();
+            
         }
 
         private void evaluacionPsicoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormaEvalPsic evalPsic = new FormaEvalPsic();
             evalPsic.ShowDialog();
+        }
+
+        private void ingresoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormaEntPadres entPadres = new FormaEntPadres();
+            entPadres.ShowDialog();
+        }
+
+        private void vistaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VistaEntrevistaPadres vistaEntPadres = new VistaEntrevistaPadres();
+            vistaEntPadres.ShowDialog();
+        }
+
+        private void ingresoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormaEstSocEco estSocioEco = new FormaEstSocEco();
+            estSocioEco.ShowDialog();
+        }
+
+        private void vistaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            VistaEstSoc vistaEsSc = new VistaEstSoc();
+            vistaEsSc.ShowDialog();
+        }
+
+        private void ingreoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmMatricula mat = new FrmMatricula();
+            mat.ShowDialog();
+        }
+
+        private void vistaToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            VistaMatricula vistaMat = new VistaMatricula();
+            vistaMat.ShowDialog();
         }
     }
 }

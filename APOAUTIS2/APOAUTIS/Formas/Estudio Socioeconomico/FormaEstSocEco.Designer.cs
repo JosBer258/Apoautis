@@ -33,7 +33,6 @@
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.textBox66 = new System.Windows.Forms.TextBox();
             this.textBox64 = new System.Windows.Forms.TextBox();
-            this.comboBox12 = new System.Windows.Forms.ComboBox();
             this.label69 = new System.Windows.Forms.Label();
             this.label68 = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
@@ -71,6 +70,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
             this.textBox26 = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
@@ -101,6 +101,7 @@
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.InformacionFamilia = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.textBox48 = new System.Windows.Forms.TextBox();
             this.label52 = new System.Windows.Forms.Label();
@@ -156,6 +157,7 @@
             this.label31 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.SaludRecreacion = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
             this.textBox67 = new System.Windows.Forms.TextBox();
             this.label71 = new System.Windows.Forms.Label();
             this.label70 = new System.Windows.Forms.Label();
@@ -198,6 +200,7 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.InformacionVivienda = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.radioButton13 = new System.Windows.Forms.RadioButton();
             this.radioButton12 = new System.Windows.Forms.RadioButton();
@@ -237,10 +240,6 @@
             this.checkBox16 = new System.Windows.Forms.CheckBox();
             this.checkBox17 = new System.Windows.Forms.CheckBox();
             this.checkBox18 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.tabEstSocioEco.SuspendLayout();
             this.DatosGenerales.SuspendLayout();
             this.groupBox13.SuspendLayout();
@@ -293,7 +292,6 @@
             // 
             this.groupBox13.Controls.Add(this.textBox66);
             this.groupBox13.Controls.Add(this.textBox64);
-            this.groupBox13.Controls.Add(this.comboBox12);
             this.groupBox13.Controls.Add(this.label69);
             this.groupBox13.Controls.Add(this.label68);
             this.groupBox13.Controls.Add(this.label67);
@@ -314,19 +312,10 @@
             // 
             // textBox64
             // 
-            this.textBox64.Location = new System.Drawing.Point(126, 98);
+            this.textBox64.Location = new System.Drawing.Point(126, 71);
             this.textBox64.Name = "textBox64";
             this.textBox64.Size = new System.Drawing.Size(100, 20);
             this.textBox64.TabIndex = 38;
-            // 
-            // comboBox12
-            // 
-            this.comboBox12.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Location = new System.Drawing.Point(126, 71);
-            this.comboBox12.Name = "comboBox12";
-            this.comboBox12.Size = new System.Drawing.Size(100, 21);
-            this.comboBox12.TabIndex = 39;
             // 
             // label69
             // 
@@ -674,6 +663,16 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos del encargado en caso de ser otro familiar";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(572, 53);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(91, 23);
+            this.button1.TabIndex = 44;
+            this.button1.Text = "Siguiente";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // label25
             // 
             this.label25.AutoSize = true;
@@ -953,6 +952,16 @@
             this.InformacionFamilia.TabIndex = 1;
             this.InformacionFamilia.Text = "Informacion de la familia";
             this.InformacionFamilia.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(588, 444);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(91, 23);
+            this.button2.TabIndex = 37;
+            this.button2.Text = "Siguiente";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox6
             // 
@@ -1447,6 +1456,16 @@
             this.SaludRecreacion.UseVisualStyleBackColor = true;
             this.SaludRecreacion.Click += new System.EventHandler(this.AtencionSalud_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(457, 367);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(91, 23);
+            this.button3.TabIndex = 25;
+            this.button3.Text = "Siguiente";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // textBox67
             // 
             this.textBox67.Location = new System.Drawing.Point(176, 364);
@@ -1695,7 +1714,6 @@
             this.textBox52.Name = "textBox52";
             this.textBox52.Size = new System.Drawing.Size(208, 20);
             this.textBox52.TabIndex = 8;
-            this.textBox52.Text = "POR ENFERMEDAD??";
             // 
             // label56
             // 
@@ -1857,6 +1875,16 @@
             this.InformacionVivienda.TabIndex = 5;
             this.InformacionVivienda.Text = "Informacion Vivienda";
             this.InformacionVivienda.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(426, 337);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(91, 23);
+            this.button4.TabIndex = 34;
+            this.button4.Text = "Finalizar";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // groupBox12
             // 
@@ -2279,46 +2307,6 @@
             this.checkBox18.Text = "Television";
             this.checkBox18.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(572, 53);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 23);
-            this.button1.TabIndex = 44;
-            this.button1.Text = "Siguiente";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(588, 444);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 23);
-            this.button2.TabIndex = 37;
-            this.button2.Text = "Siguiente";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(457, 367);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(91, 23);
-            this.button3.TabIndex = 25;
-            this.button3.Text = "Siguiente";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(426, 337);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(91, 23);
-            this.button4.TabIndex = 34;
-            this.button4.Text = "Finalizar";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // FormaEstSocEco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2541,7 +2529,6 @@
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.TextBox textBox60;
         private System.Windows.Forms.RadioButton radioButton13;
-        private System.Windows.Forms.ComboBox comboBox12;
         private System.Windows.Forms.TextBox textBox64;
         private System.Windows.Forms.Label label67;
         private System.Windows.Forms.TextBox textBox65;

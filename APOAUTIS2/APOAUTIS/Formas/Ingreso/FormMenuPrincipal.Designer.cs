@@ -32,15 +32,21 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.matriculaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ingresoToolStripMenuIt = new System.Windows.Forms.ToolStripMenuItem();
+            this.vistaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.alumnosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pruebasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.entrevistaDePadresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ingresoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vistaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estudioSocioeconomicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ingresoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.vistaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.evaluacionPsicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mydbDataSet = new APOAUTIS.mydbDataSet();
             this.alumnosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.entrevistaDePadresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.estudioSocioeconomicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.evaluacionPsicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mydbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alumnosBindingSource)).BeginInit();
@@ -75,10 +81,27 @@
             // 
             // matriculaToolStripMenuItem
             // 
+            this.matriculaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ingresoToolStripMenuIt,
+            this.vistaToolStripMenuItem2});
             this.matriculaToolStripMenuItem.Name = "matriculaToolStripMenuItem";
             this.matriculaToolStripMenuItem.Size = new System.Drawing.Size(73, 22);
             this.matriculaToolStripMenuItem.Text = "Matricula";
             this.matriculaToolStripMenuItem.Click += new System.EventHandler(this.matriculaToolStripMenuItem_Click);
+            // 
+            // ingresoToolStripMenuIt
+            // 
+            this.ingresoToolStripMenuIt.Name = "ingresoToolStripMenuIt";
+            this.ingresoToolStripMenuIt.Size = new System.Drawing.Size(152, 22);
+            this.ingresoToolStripMenuIt.Text = "Ingreso";
+            this.ingresoToolStripMenuIt.Click += new System.EventHandler(this.ingreoToolStripMenuItem_Click);
+            // 
+            // vistaToolStripMenuItem2
+            // 
+            this.vistaToolStripMenuItem2.Name = "vistaToolStripMenuItem2";
+            this.vistaToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.vistaToolStripMenuItem2.Text = "Vista";
+            this.vistaToolStripMenuItem2.Click += new System.EventHandler(this.vistaToolStripMenuItem2_Click);
             // 
             // alumnosToolStripMenuItem
             // 
@@ -100,6 +123,61 @@
             this.pruebasToolStripMenuItem.Size = new System.Drawing.Size(64, 22);
             this.pruebasToolStripMenuItem.Text = "Pruebas";
             // 
+            // entrevistaDePadresToolStripMenuItem
+            // 
+            this.entrevistaDePadresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ingresoToolStripMenuItem,
+            this.vistaToolStripMenuItem});
+            this.entrevistaDePadresToolStripMenuItem.Name = "entrevistaDePadresToolStripMenuItem";
+            this.entrevistaDePadresToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.entrevistaDePadresToolStripMenuItem.Text = "Entrevista de Padres";
+            this.entrevistaDePadresToolStripMenuItem.Click += new System.EventHandler(this.entrevistaDePadresToolStripMenuItem_Click);
+            // 
+            // ingresoToolStripMenuItem
+            // 
+            this.ingresoToolStripMenuItem.Name = "ingresoToolStripMenuItem";
+            this.ingresoToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.ingresoToolStripMenuItem.Text = "Ingreso";
+            this.ingresoToolStripMenuItem.Click += new System.EventHandler(this.ingresoToolStripMenuItem_Click);
+            // 
+            // vistaToolStripMenuItem
+            // 
+            this.vistaToolStripMenuItem.Name = "vistaToolStripMenuItem";
+            this.vistaToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.vistaToolStripMenuItem.Text = "Vista";
+            this.vistaToolStripMenuItem.Click += new System.EventHandler(this.vistaToolStripMenuItem_Click);
+            // 
+            // estudioSocioeconomicoToolStripMenuItem
+            // 
+            this.estudioSocioeconomicoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ingresoToolStripMenuItem1,
+            this.vistaToolStripMenuItem1});
+            this.estudioSocioeconomicoToolStripMenuItem.Name = "estudioSocioeconomicoToolStripMenuItem";
+            this.estudioSocioeconomicoToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.estudioSocioeconomicoToolStripMenuItem.Text = "Estudio Socioeconomico";
+            this.estudioSocioeconomicoToolStripMenuItem.Click += new System.EventHandler(this.estudioSocioeconomicoToolStripMenuItem_Click);
+            // 
+            // ingresoToolStripMenuItem1
+            // 
+            this.ingresoToolStripMenuItem1.Name = "ingresoToolStripMenuItem1";
+            this.ingresoToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
+            this.ingresoToolStripMenuItem1.Text = "Ingreso";
+            this.ingresoToolStripMenuItem1.Click += new System.EventHandler(this.ingresoToolStripMenuItem1_Click);
+            // 
+            // vistaToolStripMenuItem1
+            // 
+            this.vistaToolStripMenuItem1.Name = "vistaToolStripMenuItem1";
+            this.vistaToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
+            this.vistaToolStripMenuItem1.Text = "Vista";
+            this.vistaToolStripMenuItem1.Click += new System.EventHandler(this.vistaToolStripMenuItem1_Click);
+            // 
+            // evaluacionPsicoToolStripMenuItem
+            // 
+            this.evaluacionPsicoToolStripMenuItem.Name = "evaluacionPsicoToolStripMenuItem";
+            this.evaluacionPsicoToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.evaluacionPsicoToolStripMenuItem.Text = "Evaluacion Psico";
+            this.evaluacionPsicoToolStripMenuItem.Click += new System.EventHandler(this.evaluacionPsicoToolStripMenuItem_Click);
+            // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
@@ -116,27 +194,6 @@
             // 
             this.alumnosBindingSource.DataMember = "alumnos";
             this.alumnosBindingSource.DataSource = this.mydbDataSet;
-            // 
-            // entrevistaDePadresToolStripMenuItem
-            // 
-            this.entrevistaDePadresToolStripMenuItem.Name = "entrevistaDePadresToolStripMenuItem";
-            this.entrevistaDePadresToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.entrevistaDePadresToolStripMenuItem.Text = "Entrevista de Padres";
-            this.entrevistaDePadresToolStripMenuItem.Click += new System.EventHandler(this.entrevistaDePadresToolStripMenuItem_Click);
-            // 
-            // estudioSocioeconomicoToolStripMenuItem
-            // 
-            this.estudioSocioeconomicoToolStripMenuItem.Name = "estudioSocioeconomicoToolStripMenuItem";
-            this.estudioSocioeconomicoToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.estudioSocioeconomicoToolStripMenuItem.Text = "Estudio Socioeconomico";
-            this.estudioSocioeconomicoToolStripMenuItem.Click += new System.EventHandler(this.estudioSocioeconomicoToolStripMenuItem_Click);
-            // 
-            // evaluacionPsicoToolStripMenuItem
-            // 
-            this.evaluacionPsicoToolStripMenuItem.Name = "evaluacionPsicoToolStripMenuItem";
-            this.evaluacionPsicoToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
-            this.evaluacionPsicoToolStripMenuItem.Text = "Evaluacion Psico";
-            this.evaluacionPsicoToolStripMenuItem.Click += new System.EventHandler(this.evaluacionPsicoToolStripMenuItem_Click);
             // 
             // FormMenuPrincipal
             // 
@@ -175,5 +232,11 @@
         private System.Windows.Forms.ToolStripMenuItem entrevistaDePadresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estudioSocioeconomicoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem evaluacionPsicoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ingresoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vistaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ingresoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem vistaToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem ingresoToolStripMenuIt;
+        private System.Windows.Forms.ToolStripMenuItem vistaToolStripMenuItem2;
     }
 }

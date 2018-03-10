@@ -43,3 +43,9 @@ C:\Users\Geovana\Desktop\ApoautisGit\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAU
 C:\Users\Geovana\Desktop\ApoautisGit\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Usuarios.FormUsuario.resources
 C:\Users\Geovana\Desktop\ApoautisGit\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Properties.Resources.resources
 C:\Users\Geovana\Desktop\ApoautisGit\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.csproj.GenerateResource.Cache
+C:\Users\Geovana\Desktop\ApoautisGit\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.VistaEntrevistaPadres.resources
+C:\Users\Geovana\Desktop\ApoautisGit\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.VistaEstSoc.resources
+C:\Users\Geovana\Desktop\ApoautisGit\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.VistaMatricula.resources
+C:\Users\Geovana\Desktop\ApoautisGit\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Entrevista_Padres.FrmBusquedaEntPadres.resources
+C:\Users\Geovana\Desktop\ApoautisGit\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Estudio_Socioeconomico.FormaBusqEstSoc.resources
+C:\Users\Geovana\Desktop\ApoautisGit\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.FrmBusqMat.resources
