@@ -60,16 +60,40 @@
     <Compile Include="Clases\C_Validaciones.cs" />
     <Compile Include="Clases\DataGirdView.cs" />
     <Compile Include="Conexion.cs" />
-    <Compile Include="FormaEntPadres.cs">
+    <Compile Include="Formas\Entrevista Padres\FormaBusqueda1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormaEntPadres.Designer.cs">
+    <Compile Include="Formas\Entrevista Padres\FormaBusqueda1.Designer.cs">
+      <DependentUpon>FormaBusqueda1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Entrevista Padres\FrmBusquedaEntPadres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Entrevista Padres\FrmBusquedaEntPadres.Designer.cs">
+      <DependentUpon>FrmBusquedaEntPadres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Estudio Socioeconomico\FormaBusquedaEstSoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Estudio Socioeconomico\FormaBusquedaEstSoc.Designer.cs">
+      <DependentUpon>FormaBusquedaEstSoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBusquedaMatricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBusquedaMatricula.Designer.cs">
+      <DependentUpon>FrmBusquedaMatricula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Entrevista Padres\FormaEntPadres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Entrevista Padres\FormaEntPadres.Designer.cs">
       <DependentUpon>FormaEntPadres.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormaEvalPsic.cs">
+    <Compile Include="Formas\Evaluacion Psicodiagnostica\FormaEvalPsic.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormaEvalPsic.Designer.cs">
+    <Compile Include="Formas\Evaluacion Psicodiagnostica\FormaEvalPsic.Designer.cs">
       <DependentUpon>FormaEvalPsic.cs</DependentUpon>
     </Compile>
     <Compile Include="Formas\Alumnos\FormaAlumnos.cs">
@@ -90,10 +114,10 @@
     <Compile Include="Formas\Matricula\FormFormularioMatricula.Designer.cs">
       <DependentUpon>FormFormularioMatricula.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormaEstSocEco.cs">
+    <Compile Include="Formas\Estudio Socioeconomico\FormaEstSocEco.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormaEstSocEco.Designer.cs">
+    <Compile Include="Formas\Estudio Socioeconomico\FormaEstSocEco.Designer.cs">
       <DependentUpon>FormaEstSocEco.cs</DependentUpon>
     </Compile>
     <Compile Include="Formas\Ingreso\FormLogin.cs">
@@ -115,13 +139,40 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormaEntPadres.resx">
+    <Compile Include="Formas\Entrevista Padres\VistaEntrevistaPadres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Entrevista Padres\VistaEntrevistaPadres.Designer.cs">
+      <DependentUpon>VistaEntrevistaPadres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Estudio Socioeconomico\VistaEstSoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Estudio Socioeconomico\VistaEstSoc.Designer.cs">
+      <DependentUpon>VistaEstSoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Matricula\VistaMatricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Matricula\VistaMatricula.Designer.cs">
+      <DependentUpon>VistaMatricula.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Formas\Entrevista Padres\FrmBusquedaEntPadres.resx">
+      <DependentUpon>FrmBusquedaEntPadres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Estudio Socioeconomico\FormaBusquedaEstSoc.resx">
+      <DependentUpon>FormaBusquedaEstSoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBusquedaMatricula.resx">
+      <DependentUpon>FrmBusquedaMatricula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Entrevista Padres\FormaEntPadres.resx">
       <DependentUpon>FormaEntPadres.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormaEstSocEco.resx">
+    <EmbeddedResource Include="Formas\Estudio Socioeconomico\FormaEstSocEco.resx">
       <DependentUpon>FormaEstSocEco.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormaEvalPsic.resx">
+    <EmbeddedResource Include="Formas\Evaluacion Psicodiagnostica\FormaEvalPsic.resx">
       <DependentUpon>FormaEvalPsic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Alumnos\FormaAlumnos.resx">
@@ -148,6 +199,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Formas\Entrevista Padres\VistaEntrevistaPadres.resx">
+      <DependentUpon>VistaEntrevistaPadres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Estudio Socioeconomico\VistaEstSoc.resx">
+      <DependentUpon>VistaEstSoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Matricula\VistaMatricula.resx">
+      <DependentUpon>VistaMatricula.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="mydbDataSet.xsc">
       <DependentUpon>mydbDataSet.xsd</DependentUpon>
     </None>

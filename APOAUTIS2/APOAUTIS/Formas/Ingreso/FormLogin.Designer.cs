@@ -65,6 +65,7 @@
             this.Txt_Contrasenna.Name = "Txt_Contrasenna";
             this.Txt_Contrasenna.Size = new System.Drawing.Size(208, 31);
             this.Txt_Contrasenna.TabIndex = 121;
+            this.Txt_Contrasenna.Text = "123";
             this.Txt_Contrasenna.UseSystemPasswordChar = true;
             // 
             // label19
@@ -84,6 +85,7 @@
             this.Txt_NombreUsuario.Name = "Txt_NombreUsuario";
             this.Txt_NombreUsuario.Size = new System.Drawing.Size(208, 31);
             this.Txt_NombreUsuario.TabIndex = 119;
+            this.Txt_NombreUsuario.Text = "root";
             // 
             // label20
             // 
