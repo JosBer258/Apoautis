@@ -20,17 +20,17 @@ namespace APOAUTIS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            tabMatricula.SelectedTab = tabPage2;
+            tabMatricula.SelectedTab = Pest_TiposAtencion;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            tabMatricula.SelectedTab = tabPage3;
+            tabMatricula.SelectedTab = Pest_DatosResponsable;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            tabMatricula.SelectedTab = tabPage4;
+            tabMatricula.SelectedTab = Pest_DatosAdicionales;
         }
 
         private void button5_Click(object sender, EventArgs e)

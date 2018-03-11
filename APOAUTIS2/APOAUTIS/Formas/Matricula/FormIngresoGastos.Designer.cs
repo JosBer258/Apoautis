@@ -28,109 +28,109 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.Bttn_Ayuda = new System.Windows.Forms.Button();
+            this.Bttn_Salir = new System.Windows.Forms.Button();
+            this.TabGastos_Ingreso = new System.Windows.Forms.TabControl();
             this.Pest_Ingresos = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.Pest1_Bttn_Siguiente = new System.Windows.Forms.Button();
+            this.Pest1_Txt_Total = new System.Windows.Forms.TextBox();
+            this.Pest1_Txt_Pension = new System.Windows.Forms.TextBox();
+            this.Pest1_Txt_Otros = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.Pest1_Txt_Abuela = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.Pest1_Txt_Hijos = new System.Windows.Forms.TextBox();
+            this.Pest1_Txt_Madre = new System.Windows.Forms.TextBox();
+            this.Pest1_Txt_Padre = new System.Windows.Forms.TextBox();
             this.Pest_Gastos = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.Pest2_Bttn_Anterior = new System.Windows.Forms.Button();
+            this.Pest2_Total = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.Pest2_Txt_Vivienda = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.Pest2_Txt_Otros = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.Pest2_Txt_Vestimenta = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.Pest2_Txt_Salud = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.Pest2_Txt_Combustible = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.Pest2_Txt_Educacion = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.Pest2_Txt_Transporte = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.Pest2_Txt_AguaPotable = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.Pest2_Txt_Alimentos = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.Pest2_Txt_Telefono = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.Pest2_Txt_EnergiaElectrica = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Group_OpcionesBusqueda = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.tabControl1.SuspendLayout();
+            this.Txt_OpcionBusqueda = new System.Windows.Forms.TextBox();
+            this.Bttn_Buscar = new System.Windows.Forms.Button();
+            this.TabGastos_Ingreso.SuspendLayout();
             this.Pest_Ingresos.SuspendLayout();
             this.Pest_Gastos.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.Group_OpcionesBusqueda.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button5
+            // Bttn_Ayuda
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(332, 418);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(99, 35);
-            this.button5.TabIndex = 35;
-            this.button5.Text = "Ayuda";
-            this.button5.UseVisualStyleBackColor = true;
+            this.Bttn_Ayuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bttn_Ayuda.Location = new System.Drawing.Point(332, 418);
+            this.Bttn_Ayuda.Name = "Bttn_Ayuda";
+            this.Bttn_Ayuda.Size = new System.Drawing.Size(99, 35);
+            this.Bttn_Ayuda.TabIndex = 35;
+            this.Bttn_Ayuda.Text = "Ayuda";
+            this.Bttn_Ayuda.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // Bttn_Salir
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(460, 418);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(99, 35);
-            this.button4.TabIndex = 34;
-            this.button4.Text = "Salir";
-            this.button4.UseVisualStyleBackColor = true;
+            this.Bttn_Salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bttn_Salir.Location = new System.Drawing.Point(460, 418);
+            this.Bttn_Salir.Name = "Bttn_Salir";
+            this.Bttn_Salir.Size = new System.Drawing.Size(99, 35);
+            this.Bttn_Salir.TabIndex = 34;
+            this.Bttn_Salir.Text = "Salir";
+            this.Bttn_Salir.UseVisualStyleBackColor = true;
             // 
-            // tabControl1
+            // TabGastos_Ingreso
             // 
-            this.tabControl1.Controls.Add(this.Pest_Ingresos);
-            this.tabControl1.Controls.Add(this.Pest_Gastos);
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(25, 110);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(544, 285);
-            this.tabControl1.TabIndex = 33;
+            this.TabGastos_Ingreso.Controls.Add(this.Pest_Ingresos);
+            this.TabGastos_Ingreso.Controls.Add(this.Pest_Gastos);
+            this.TabGastos_Ingreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TabGastos_Ingreso.Location = new System.Drawing.Point(25, 110);
+            this.TabGastos_Ingreso.Name = "TabGastos_Ingreso";
+            this.TabGastos_Ingreso.SelectedIndex = 0;
+            this.TabGastos_Ingreso.Size = new System.Drawing.Size(544, 285);
+            this.TabGastos_Ingreso.TabIndex = 33;
             // 
             // Pest_Ingresos
             // 
-            this.Pest_Ingresos.Controls.Add(this.button2);
-            this.Pest_Ingresos.Controls.Add(this.textBox5);
-            this.Pest_Ingresos.Controls.Add(this.textBox7);
-            this.Pest_Ingresos.Controls.Add(this.textBox6);
+            this.Pest_Ingresos.Controls.Add(this.Pest1_Bttn_Siguiente);
+            this.Pest_Ingresos.Controls.Add(this.Pest1_Txt_Total);
+            this.Pest_Ingresos.Controls.Add(this.Pest1_Txt_Pension);
+            this.Pest_Ingresos.Controls.Add(this.Pest1_Txt_Otros);
             this.Pest_Ingresos.Controls.Add(this.label8);
             this.Pest_Ingresos.Controls.Add(this.label5);
-            this.Pest_Ingresos.Controls.Add(this.textBox8);
+            this.Pest_Ingresos.Controls.Add(this.Pest1_Txt_Abuela);
             this.Pest_Ingresos.Controls.Add(this.label6);
             this.Pest_Ingresos.Controls.Add(this.label2);
             this.Pest_Ingresos.Controls.Add(this.label3);
             this.Pest_Ingresos.Controls.Add(this.label7);
             this.Pest_Ingresos.Controls.Add(this.label4);
-            this.Pest_Ingresos.Controls.Add(this.textBox4);
-            this.Pest_Ingresos.Controls.Add(this.textBox2);
-            this.Pest_Ingresos.Controls.Add(this.textBox3);
+            this.Pest_Ingresos.Controls.Add(this.Pest1_Txt_Hijos);
+            this.Pest_Ingresos.Controls.Add(this.Pest1_Txt_Madre);
+            this.Pest_Ingresos.Controls.Add(this.Pest1_Txt_Padre);
             this.Pest_Ingresos.Location = new System.Drawing.Point(4, 22);
             this.Pest_Ingresos.Name = "Pest_Ingresos";
             this.Pest_Ingresos.Padding = new System.Windows.Forms.Padding(3);
@@ -139,39 +139,40 @@
             this.Pest_Ingresos.Text = "Ingresos";
             this.Pest_Ingresos.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // Pest1_Bttn_Siguiente
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(426, 214);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 35);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Siguiente";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Pest1_Bttn_Siguiente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_Bttn_Siguiente.Location = new System.Drawing.Point(426, 214);
+            this.Pest1_Bttn_Siguiente.Name = "Pest1_Bttn_Siguiente";
+            this.Pest1_Bttn_Siguiente.Size = new System.Drawing.Size(104, 35);
+            this.Pest1_Bttn_Siguiente.TabIndex = 4;
+            this.Pest1_Bttn_Siguiente.Text = "Siguiente";
+            this.Pest1_Bttn_Siguiente.UseVisualStyleBackColor = true;
+            this.Pest1_Bttn_Siguiente.Click += new System.EventHandler(this.Pest1_Bttn_Siguiente_Click);
             // 
-            // textBox5
+            // Pest1_Txt_Total
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(426, 181);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(104, 22);
-            this.textBox5.TabIndex = 29;
+            this.Pest1_Txt_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_Txt_Total.Location = new System.Drawing.Point(426, 181);
+            this.Pest1_Txt_Total.Name = "Pest1_Txt_Total";
+            this.Pest1_Txt_Total.Size = new System.Drawing.Size(104, 22);
+            this.Pest1_Txt_Total.TabIndex = 29;
             // 
-            // textBox7
+            // Pest1_Txt_Pension
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(183, 119);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(133, 22);
-            this.textBox7.TabIndex = 24;
+            this.Pest1_Txt_Pension.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_Txt_Pension.Location = new System.Drawing.Point(183, 119);
+            this.Pest1_Txt_Pension.Name = "Pest1_Txt_Pension";
+            this.Pest1_Txt_Pension.Size = new System.Drawing.Size(133, 22);
+            this.Pest1_Txt_Pension.TabIndex = 24;
             // 
-            // textBox6
+            // Pest1_Txt_Otros
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(183, 150);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(133, 22);
-            this.textBox6.TabIndex = 28;
+            this.Pest1_Txt_Otros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_Txt_Otros.Location = new System.Drawing.Point(183, 150);
+            this.Pest1_Txt_Otros.Name = "Pest1_Txt_Otros";
+            this.Pest1_Txt_Otros.Size = new System.Drawing.Size(133, 22);
+            this.Pest1_Txt_Otros.TabIndex = 28;
             // 
             // label8
             // 
@@ -193,13 +194,13 @@
             this.label5.TabIndex = 27;
             this.label5.Text = "Total";
             // 
-            // textBox8
+            // Pest1_Txt_Abuela
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(183, 29);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(133, 22);
-            this.textBox8.TabIndex = 16;
+            this.Pest1_Txt_Abuela.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_Txt_Abuela.Location = new System.Drawing.Point(183, 29);
+            this.Pest1_Txt_Abuela.Name = "Pest1_Txt_Abuela";
+            this.Pest1_Txt_Abuela.Size = new System.Drawing.Size(133, 22);
+            this.Pest1_Txt_Abuela.TabIndex = 16;
             // 
             // label6
             // 
@@ -251,56 +252,56 @@
             this.label4.TabIndex = 20;
             this.label4.Text = "Hijo(a)";
             // 
-            // textBox4
+            // Pest1_Txt_Hijos
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(183, 181);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(133, 22);
-            this.textBox4.TabIndex = 23;
+            this.Pest1_Txt_Hijos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_Txt_Hijos.Location = new System.Drawing.Point(183, 181);
+            this.Pest1_Txt_Hijos.Name = "Pest1_Txt_Hijos";
+            this.Pest1_Txt_Hijos.Size = new System.Drawing.Size(133, 22);
+            this.Pest1_Txt_Hijos.TabIndex = 23;
             // 
-            // textBox2
+            // Pest1_Txt_Madre
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(183, 60);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(133, 22);
-            this.textBox2.TabIndex = 21;
+            this.Pest1_Txt_Madre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_Txt_Madre.Location = new System.Drawing.Point(183, 60);
+            this.Pest1_Txt_Madre.Name = "Pest1_Txt_Madre";
+            this.Pest1_Txt_Madre.Size = new System.Drawing.Size(133, 22);
+            this.Pest1_Txt_Madre.TabIndex = 21;
             // 
-            // textBox3
+            // Pest1_Txt_Padre
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(183, 91);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(133, 22);
-            this.textBox3.TabIndex = 22;
+            this.Pest1_Txt_Padre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_Txt_Padre.Location = new System.Drawing.Point(183, 91);
+            this.Pest1_Txt_Padre.Name = "Pest1_Txt_Padre";
+            this.Pest1_Txt_Padre.Size = new System.Drawing.Size(133, 22);
+            this.Pest1_Txt_Padre.TabIndex = 22;
             // 
             // Pest_Gastos
             // 
-            this.Pest_Gastos.Controls.Add(this.button3);
-            this.Pest_Gastos.Controls.Add(this.textBox9);
+            this.Pest_Gastos.Controls.Add(this.Pest2_Bttn_Anterior);
+            this.Pest_Gastos.Controls.Add(this.Pest2_Total);
             this.Pest_Gastos.Controls.Add(this.label9);
-            this.Pest_Gastos.Controls.Add(this.textBox21);
+            this.Pest_Gastos.Controls.Add(this.Pest2_Txt_Vivienda);
             this.Pest_Gastos.Controls.Add(this.label21);
-            this.Pest_Gastos.Controls.Add(this.textBox23);
+            this.Pest_Gastos.Controls.Add(this.Pest2_Txt_Otros);
             this.Pest_Gastos.Controls.Add(this.label23);
-            this.Pest_Gastos.Controls.Add(this.textBox24);
+            this.Pest_Gastos.Controls.Add(this.Pest2_Txt_Vestimenta);
             this.Pest_Gastos.Controls.Add(this.label24);
-            this.Pest_Gastos.Controls.Add(this.textBox17);
+            this.Pest_Gastos.Controls.Add(this.Pest2_Txt_Salud);
             this.Pest_Gastos.Controls.Add(this.label17);
-            this.Pest_Gastos.Controls.Add(this.textBox18);
+            this.Pest_Gastos.Controls.Add(this.Pest2_Txt_Combustible);
             this.Pest_Gastos.Controls.Add(this.label18);
-            this.Pest_Gastos.Controls.Add(this.textBox19);
+            this.Pest_Gastos.Controls.Add(this.Pest2_Txt_Educacion);
             this.Pest_Gastos.Controls.Add(this.label19);
-            this.Pest_Gastos.Controls.Add(this.textBox20);
+            this.Pest_Gastos.Controls.Add(this.Pest2_Txt_Transporte);
             this.Pest_Gastos.Controls.Add(this.label20);
-            this.Pest_Gastos.Controls.Add(this.textBox13);
+            this.Pest_Gastos.Controls.Add(this.Pest2_Txt_AguaPotable);
             this.Pest_Gastos.Controls.Add(this.label13);
-            this.Pest_Gastos.Controls.Add(this.textBox14);
+            this.Pest_Gastos.Controls.Add(this.Pest2_Txt_Alimentos);
             this.Pest_Gastos.Controls.Add(this.label14);
-            this.Pest_Gastos.Controls.Add(this.textBox15);
+            this.Pest_Gastos.Controls.Add(this.Pest2_Txt_Telefono);
             this.Pest_Gastos.Controls.Add(this.label15);
-            this.Pest_Gastos.Controls.Add(this.textBox16);
+            this.Pest_Gastos.Controls.Add(this.Pest2_Txt_EnergiaElectrica);
             this.Pest_Gastos.Controls.Add(this.label16);
             this.Pest_Gastos.Location = new System.Drawing.Point(4, 22);
             this.Pest_Gastos.Name = "Pest_Gastos";
@@ -310,22 +311,23 @@
             this.Pest_Gastos.Text = "Gastos";
             this.Pest_Gastos.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // Pest2_Bttn_Anterior
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(431, 211);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(99, 35);
-            this.button3.TabIndex = 62;
-            this.button3.Text = "Anterior";
-            this.button3.UseVisualStyleBackColor = true;
+            this.Pest2_Bttn_Anterior.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest2_Bttn_Anterior.Location = new System.Drawing.Point(431, 211);
+            this.Pest2_Bttn_Anterior.Name = "Pest2_Bttn_Anterior";
+            this.Pest2_Bttn_Anterior.Size = new System.Drawing.Size(99, 35);
+            this.Pest2_Bttn_Anterior.TabIndex = 62;
+            this.Pest2_Bttn_Anterior.Text = "Anterior";
+            this.Pest2_Bttn_Anterior.UseVisualStyleBackColor = true;
+            this.Pest2_Bttn_Anterior.Click += new System.EventHandler(this.Pest2_Bttn_Anterior_Click);
             // 
-            // textBox9
+            // Pest2_Total
             // 
-            this.textBox9.Location = new System.Drawing.Point(431, 177);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(99, 20);
-            this.textBox9.TabIndex = 64;
+            this.Pest2_Total.Location = new System.Drawing.Point(431, 177);
+            this.Pest2_Total.Name = "Pest2_Total";
+            this.Pest2_Total.Size = new System.Drawing.Size(99, 20);
+            this.Pest2_Total.TabIndex = 64;
             // 
             // label9
             // 
@@ -336,12 +338,12 @@
             this.label9.TabIndex = 63;
             this.label9.Text = "Total";
             // 
-            // textBox21
+            // Pest2_Txt_Vivienda
             // 
-            this.textBox21.Location = new System.Drawing.Point(400, 17);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(130, 20);
-            this.textBox21.TabIndex = 61;
+            this.Pest2_Txt_Vivienda.Location = new System.Drawing.Point(400, 17);
+            this.Pest2_Txt_Vivienda.Name = "Pest2_Txt_Vivienda";
+            this.Pest2_Txt_Vivienda.Size = new System.Drawing.Size(130, 20);
+            this.Pest2_Txt_Vivienda.TabIndex = 61;
             // 
             // label21
             // 
@@ -352,12 +354,12 @@
             this.label21.TabIndex = 60;
             this.label21.Text = "Vivienda\r\n (alquiler  o pago)";
             // 
-            // textBox23
+            // Pest2_Txt_Otros
             // 
-            this.textBox23.Location = new System.Drawing.Point(400, 45);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(130, 20);
-            this.textBox23.TabIndex = 57;
+            this.Pest2_Txt_Otros.Location = new System.Drawing.Point(400, 45);
+            this.Pest2_Txt_Otros.Name = "Pest2_Txt_Otros";
+            this.Pest2_Txt_Otros.Size = new System.Drawing.Size(130, 20);
+            this.Pest2_Txt_Otros.TabIndex = 57;
             // 
             // label23
             // 
@@ -368,12 +370,12 @@
             this.label23.TabIndex = 56;
             this.label23.Text = "Otros";
             // 
-            // textBox24
+            // Pest2_Txt_Vestimenta
             // 
-            this.textBox24.Location = new System.Drawing.Point(135, 226);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(134, 20);
-            this.textBox24.TabIndex = 55;
+            this.Pest2_Txt_Vestimenta.Location = new System.Drawing.Point(135, 226);
+            this.Pest2_Txt_Vestimenta.Name = "Pest2_Txt_Vestimenta";
+            this.Pest2_Txt_Vestimenta.Size = new System.Drawing.Size(134, 20);
+            this.Pest2_Txt_Vestimenta.TabIndex = 55;
             // 
             // label24
             // 
@@ -384,12 +386,12 @@
             this.label24.TabIndex = 54;
             this.label24.Text = "Vestimenta";
             // 
-            // textBox17
+            // Pest2_Txt_Salud
             // 
-            this.textBox17.Location = new System.Drawing.Point(135, 174);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(134, 20);
-            this.textBox17.TabIndex = 53;
+            this.Pest2_Txt_Salud.Location = new System.Drawing.Point(135, 174);
+            this.Pest2_Txt_Salud.Name = "Pest2_Txt_Salud";
+            this.Pest2_Txt_Salud.Size = new System.Drawing.Size(134, 20);
+            this.Pest2_Txt_Salud.TabIndex = 53;
             // 
             // label17
             // 
@@ -400,12 +402,12 @@
             this.label17.TabIndex = 52;
             this.label17.Text = "Salud";
             // 
-            // textBox18
+            // Pest2_Txt_Combustible
             // 
-            this.textBox18.Location = new System.Drawing.Point(135, 122);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(134, 20);
-            this.textBox18.TabIndex = 51;
+            this.Pest2_Txt_Combustible.Location = new System.Drawing.Point(135, 122);
+            this.Pest2_Txt_Combustible.Name = "Pest2_Txt_Combustible";
+            this.Pest2_Txt_Combustible.Size = new System.Drawing.Size(134, 20);
+            this.Pest2_Txt_Combustible.TabIndex = 51;
             // 
             // label18
             // 
@@ -416,12 +418,12 @@
             this.label18.TabIndex = 50;
             this.label18.Text = "Combustible";
             // 
-            // textBox19
+            // Pest2_Txt_Educacion
             // 
-            this.textBox19.Location = new System.Drawing.Point(135, 200);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(134, 20);
-            this.textBox19.TabIndex = 49;
+            this.Pest2_Txt_Educacion.Location = new System.Drawing.Point(135, 200);
+            this.Pest2_Txt_Educacion.Name = "Pest2_Txt_Educacion";
+            this.Pest2_Txt_Educacion.Size = new System.Drawing.Size(134, 20);
+            this.Pest2_Txt_Educacion.TabIndex = 49;
             // 
             // label19
             // 
@@ -432,12 +434,12 @@
             this.label19.TabIndex = 48;
             this.label19.Text = "Educación";
             // 
-            // textBox20
+            // Pest2_Txt_Transporte
             // 
-            this.textBox20.Location = new System.Drawing.Point(135, 148);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(134, 20);
-            this.textBox20.TabIndex = 47;
+            this.Pest2_Txt_Transporte.Location = new System.Drawing.Point(135, 148);
+            this.Pest2_Txt_Transporte.Name = "Pest2_Txt_Transporte";
+            this.Pest2_Txt_Transporte.Size = new System.Drawing.Size(134, 20);
+            this.Pest2_Txt_Transporte.TabIndex = 47;
             // 
             // label20
             // 
@@ -448,12 +450,12 @@
             this.label20.TabIndex = 46;
             this.label20.Text = "Transporte";
             // 
-            // textBox13
+            // Pest2_Txt_AguaPotable
             // 
-            this.textBox13.Location = new System.Drawing.Point(135, 44);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(134, 20);
-            this.textBox13.TabIndex = 45;
+            this.Pest2_Txt_AguaPotable.Location = new System.Drawing.Point(135, 44);
+            this.Pest2_Txt_AguaPotable.Name = "Pest2_Txt_AguaPotable";
+            this.Pest2_Txt_AguaPotable.Size = new System.Drawing.Size(134, 20);
+            this.Pest2_Txt_AguaPotable.TabIndex = 45;
             // 
             // label13
             // 
@@ -464,12 +466,12 @@
             this.label13.TabIndex = 44;
             this.label13.Text = "Agua Potable\r\n";
             // 
-            // textBox14
+            // Pest2_Txt_Alimentos
             // 
-            this.textBox14.Location = new System.Drawing.Point(135, 96);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(134, 20);
-            this.textBox14.TabIndex = 43;
+            this.Pest2_Txt_Alimentos.Location = new System.Drawing.Point(135, 96);
+            this.Pest2_Txt_Alimentos.Name = "Pest2_Txt_Alimentos";
+            this.Pest2_Txt_Alimentos.Size = new System.Drawing.Size(134, 20);
+            this.Pest2_Txt_Alimentos.TabIndex = 43;
             // 
             // label14
             // 
@@ -480,12 +482,12 @@
             this.label14.TabIndex = 42;
             this.label14.Text = "Alimentos";
             // 
-            // textBox15
+            // Pest2_Txt_Telefono
             // 
-            this.textBox15.Location = new System.Drawing.Point(135, 70);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(134, 20);
-            this.textBox15.TabIndex = 41;
+            this.Pest2_Txt_Telefono.Location = new System.Drawing.Point(135, 70);
+            this.Pest2_Txt_Telefono.Name = "Pest2_Txt_Telefono";
+            this.Pest2_Txt_Telefono.Size = new System.Drawing.Size(134, 20);
+            this.Pest2_Txt_Telefono.TabIndex = 41;
             // 
             // label15
             // 
@@ -496,12 +498,12 @@
             this.label15.TabIndex = 40;
             this.label15.Text = "Teléfono";
             // 
-            // textBox16
+            // Pest2_Txt_EnergiaElectrica
             // 
-            this.textBox16.Location = new System.Drawing.Point(135, 17);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(134, 20);
-            this.textBox16.TabIndex = 39;
+            this.Pest2_Txt_EnergiaElectrica.Location = new System.Drawing.Point(135, 17);
+            this.Pest2_Txt_EnergiaElectrica.Name = "Pest2_Txt_EnergiaElectrica";
+            this.Pest2_Txt_EnergiaElectrica.Size = new System.Drawing.Size(134, 20);
+            this.Pest2_Txt_EnergiaElectrica.TabIndex = 39;
             // 
             // label16
             // 
@@ -512,18 +514,18 @@
             this.label16.TabIndex = 38;
             this.label16.Text = "Energía Eléctrica\r\n";
             // 
-            // groupBox1
+            // Group_OpcionesBusqueda
             // 
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(25, 23);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(540, 80);
-            this.groupBox1.TabIndex = 32;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Busqueda del Alumno";
+            this.Group_OpcionesBusqueda.Controls.Add(this.label1);
+            this.Group_OpcionesBusqueda.Controls.Add(this.Txt_OpcionBusqueda);
+            this.Group_OpcionesBusqueda.Controls.Add(this.Bttn_Buscar);
+            this.Group_OpcionesBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Group_OpcionesBusqueda.Location = new System.Drawing.Point(25, 23);
+            this.Group_OpcionesBusqueda.Name = "Group_OpcionesBusqueda";
+            this.Group_OpcionesBusqueda.Size = new System.Drawing.Size(540, 80);
+            this.Group_OpcionesBusqueda.TabIndex = 32;
+            this.Group_OpcionesBusqueda.TabStop = false;
+            this.Group_OpcionesBusqueda.Text = "Busqueda del Alumno";
             // 
             // label1
             // 
@@ -535,23 +537,23 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Nombre del alumno:";
             // 
-            // textBox1
+            // Txt_OpcionBusqueda
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(289, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(245, 20);
-            this.textBox1.TabIndex = 1;
+            this.Txt_OpcionBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_OpcionBusqueda.Location = new System.Drawing.Point(289, 36);
+            this.Txt_OpcionBusqueda.Name = "Txt_OpcionBusqueda";
+            this.Txt_OpcionBusqueda.Size = new System.Drawing.Size(245, 20);
+            this.Txt_OpcionBusqueda.TabIndex = 1;
             // 
-            // button1
+            // Bttn_Buscar
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(6, 28);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 35);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Bttn_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bttn_Buscar.Location = new System.Drawing.Point(6, 28);
+            this.Bttn_Buscar.Name = "Bttn_Buscar";
+            this.Bttn_Buscar.Size = new System.Drawing.Size(99, 35);
+            this.Bttn_Buscar.TabIndex = 2;
+            this.Bttn_Buscar.Text = "Buscar";
+            this.Bttn_Buscar.UseVisualStyleBackColor = true;
             // 
             // FormIngresoGastos
             // 
@@ -560,74 +562,74 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(590, 472);
             this.ControlBox = false;
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.Bttn_Ayuda);
+            this.Controls.Add(this.Bttn_Salir);
+            this.Controls.Add(this.TabGastos_Ingreso);
+            this.Controls.Add(this.Group_OpcionesBusqueda);
             this.Name = "FormIngresoGastos";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Ingreso y mantenimiento de Gastos";
-            this.tabControl1.ResumeLayout(false);
+            this.TabGastos_Ingreso.ResumeLayout(false);
             this.Pest_Ingresos.ResumeLayout(false);
             this.Pest_Ingresos.PerformLayout();
             this.Pest_Gastos.ResumeLayout(false);
             this.Pest_Gastos.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Group_OpcionesBusqueda.ResumeLayout(false);
+            this.Group_OpcionesBusqueda.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.Button Bttn_Ayuda;
+        private System.Windows.Forms.Button Bttn_Salir;
+        private System.Windows.Forms.TabControl TabGastos_Ingreso;
         private System.Windows.Forms.TabPage Pest_Ingresos;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button Pest1_Bttn_Siguiente;
+        private System.Windows.Forms.TextBox Pest1_Txt_Total;
+        private System.Windows.Forms.TextBox Pest1_Txt_Pension;
+        private System.Windows.Forms.TextBox Pest1_Txt_Otros;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox Pest1_Txt_Abuela;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox Pest1_Txt_Hijos;
+        private System.Windows.Forms.TextBox Pest1_Txt_Madre;
+        private System.Windows.Forms.TextBox Pest1_Txt_Padre;
         private System.Windows.Forms.TabPage Pest_Gastos;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Button Pest2_Bttn_Anterior;
+        private System.Windows.Forms.TextBox Pest2_Total;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox Pest2_Txt_Vivienda;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox23;
+        private System.Windows.Forms.TextBox Pest2_Txt_Otros;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.TextBox Pest2_Txt_Vestimenta;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox Pest2_Txt_Salud;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox Pest2_Txt_Combustible;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox Pest2_Txt_Educacion;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox Pest2_Txt_Transporte;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox Pest2_Txt_AguaPotable;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox Pest2_Txt_Alimentos;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox Pest2_Txt_Telefono;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox Pest2_Txt_EnergiaElectrica;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox Group_OpcionesBusqueda;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox Txt_OpcionBusqueda;
+        private System.Windows.Forms.Button Bttn_Buscar;
     }
 }

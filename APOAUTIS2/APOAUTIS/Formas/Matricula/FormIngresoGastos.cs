@@ -16,5 +16,15 @@ namespace APOAUTIS.Formas.Matricula
         {
             InitializeComponent();
         }
+
+        private void Pest1_Bttn_Siguiente_Click(object sender, EventArgs e)
+        {
+            TabGastos_Ingreso.SelectedTab = Pest_Gastos;
+        }
+
+        private void Pest2_Bttn_Anterior_Click(object sender, EventArgs e)
+        {
+            TabGastos_Ingreso.SelectedTab = Pest_Ingresos;
+        }
     }
 }

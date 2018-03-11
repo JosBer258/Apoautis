@@ -34,9 +34,11 @@
             this.matriculaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ingresoToolStripMenuIt = new System.Windows.Forms.ToolStripMenuItem();
             this.vistaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.historialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ingresosGastosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.montoMatriculaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alumnosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuariosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pruebasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.responsablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entrevistaDePadresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ingresoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vistaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,8 +62,7 @@
             this.usuariosToolStripMenuItem,
             this.matriculaToolStripMenuItem,
             this.alumnosToolStripMenuItem,
-            this.usuariosToolStripMenuItem1,
-            this.pruebasToolStripMenuItem,
+            this.responsablesToolStripMenuItem,
             this.entrevistaDePadresToolStripMenuItem,
             this.estudioSocioeconomicoToolStripMenuItem,
             this.evaluacionPsicoToolStripMenuItem,
@@ -83,7 +84,10 @@
             // 
             this.matriculaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ingresoToolStripMenuIt,
-            this.vistaToolStripMenuItem2});
+            this.vistaToolStripMenuItem2,
+            this.historialToolStripMenuItem,
+            this.ingresosGastosToolStripMenuItem,
+            this.montoMatriculaToolStripMenuItem});
             this.matriculaToolStripMenuItem.Name = "matriculaToolStripMenuItem";
             this.matriculaToolStripMenuItem.Size = new System.Drawing.Size(73, 22);
             this.matriculaToolStripMenuItem.Text = "Matricula";
@@ -92,16 +96,37 @@
             // ingresoToolStripMenuIt
             // 
             this.ingresoToolStripMenuIt.Name = "ingresoToolStripMenuIt";
-            this.ingresoToolStripMenuIt.Size = new System.Drawing.Size(152, 22);
+            this.ingresoToolStripMenuIt.Size = new System.Drawing.Size(169, 22);
             this.ingresoToolStripMenuIt.Text = "Ingreso";
             this.ingresoToolStripMenuIt.Click += new System.EventHandler(this.ingreoToolStripMenuItem_Click);
             // 
             // vistaToolStripMenuItem2
             // 
             this.vistaToolStripMenuItem2.Name = "vistaToolStripMenuItem2";
-            this.vistaToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.vistaToolStripMenuItem2.Size = new System.Drawing.Size(169, 22);
             this.vistaToolStripMenuItem2.Text = "Vista";
             this.vistaToolStripMenuItem2.Click += new System.EventHandler(this.vistaToolStripMenuItem2_Click);
+            // 
+            // historialToolStripMenuItem
+            // 
+            this.historialToolStripMenuItem.Name = "historialToolStripMenuItem";
+            this.historialToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.historialToolStripMenuItem.Text = "Historial";
+            this.historialToolStripMenuItem.Click += new System.EventHandler(this.historialToolStripMenuItem_Click);
+            // 
+            // ingresosGastosToolStripMenuItem
+            // 
+            this.ingresosGastosToolStripMenuItem.Name = "ingresosGastosToolStripMenuItem";
+            this.ingresosGastosToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.ingresosGastosToolStripMenuItem.Text = "Ingresos/Gastos";
+            this.ingresosGastosToolStripMenuItem.Click += new System.EventHandler(this.ingresosGastosToolStripMenuItem_Click);
+            // 
+            // montoMatriculaToolStripMenuItem
+            // 
+            this.montoMatriculaToolStripMenuItem.Name = "montoMatriculaToolStripMenuItem";
+            this.montoMatriculaToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.montoMatriculaToolStripMenuItem.Text = "Monto Matricula";
+            this.montoMatriculaToolStripMenuItem.Click += new System.EventHandler(this.montoMatriculaToolStripMenuItem_Click);
             // 
             // alumnosToolStripMenuItem
             // 
@@ -110,18 +135,12 @@
             this.alumnosToolStripMenuItem.Text = "Alumnos";
             this.alumnosToolStripMenuItem.Click += new System.EventHandler(this.alumnosToolStripMenuItem_Click);
             // 
-            // usuariosToolStripMenuItem1
+            // responsablesToolStripMenuItem
             // 
-            this.usuariosToolStripMenuItem1.Name = "usuariosToolStripMenuItem1";
-            this.usuariosToolStripMenuItem1.Size = new System.Drawing.Size(67, 22);
-            this.usuariosToolStripMenuItem1.Text = "Usuarios";
-            this.usuariosToolStripMenuItem1.Click += new System.EventHandler(this.usuariosToolStripMenuItem1_Click);
-            // 
-            // pruebasToolStripMenuItem
-            // 
-            this.pruebasToolStripMenuItem.Name = "pruebasToolStripMenuItem";
-            this.pruebasToolStripMenuItem.Size = new System.Drawing.Size(64, 22);
-            this.pruebasToolStripMenuItem.Text = "Pruebas";
+            this.responsablesToolStripMenuItem.Name = "responsablesToolStripMenuItem";
+            this.responsablesToolStripMenuItem.Size = new System.Drawing.Size(94, 22);
+            this.responsablesToolStripMenuItem.Text = "Responsables";
+            this.responsablesToolStripMenuItem.Click += new System.EventHandler(this.responsablesToolStripMenuItem_Click);
             // 
             // entrevistaDePadresToolStripMenuItem
             // 
@@ -205,6 +224,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMenuPrincipal";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -227,8 +247,6 @@
         private mydbDataSet mydbDataSet;
         private System.Windows.Forms.BindingSource alumnosBindingSource;
         private System.Windows.Forms.ToolStripMenuItem alumnosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem pruebasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem entrevistaDePadresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estudioSocioeconomicoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem evaluacionPsicoToolStripMenuItem;
@@ -238,5 +256,9 @@
         private System.Windows.Forms.ToolStripMenuItem vistaToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem ingresoToolStripMenuIt;
         private System.Windows.Forms.ToolStripMenuItem vistaToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem historialToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ingresosGastosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem montoMatriculaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem responsablesToolStripMenuItem;
     }
 }
