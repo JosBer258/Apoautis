@@ -845,16 +845,20 @@
             this.button4.TabIndex = 27;
             this.button4.Text = "Cancelar";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // VistaMatricula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(758, 429);
+            this.ControlBox = false;
             this.Controls.Add(this.button4);
             this.Controls.Add(this.tabMatricula);
             this.Name = "VistaMatricula";
-            this.Text = "VistaMatricula";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.Text = "Vista de Matricula";
             this.tabMatricula.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

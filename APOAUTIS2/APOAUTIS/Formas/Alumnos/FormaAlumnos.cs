@@ -32,5 +32,10 @@ namespace APOAUTIS.Formas.Alumnos
         {
             this.Close();
         }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
