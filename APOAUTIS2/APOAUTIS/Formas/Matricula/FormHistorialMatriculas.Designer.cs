@@ -28,97 +28,98 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.DGV_Show = new System.Windows.Forms.DataGridView();
+            this.Group_Opciones = new System.Windows.Forms.GroupBox();
+            this.Bttn_Recargar = new System.Windows.Forms.Button();
+            this.Bttn_Salir = new System.Windows.Forms.Button();
+            this.Radio_BusquedaEstudiante = new System.Windows.Forms.RadioButton();
+            this.Txt_NombreEstudiante = new System.Windows.Forms.TextBox();
+            this.Radio_BusquedaAnno = new System.Windows.Forms.RadioButton();
+            this.Cmb_Anno = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Show)).BeginInit();
+            this.Group_Opciones.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // DGV_Show
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 133);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(615, 314);
-            this.dataGridView1.TabIndex = 7;
+            this.DGV_Show.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Show.Location = new System.Drawing.Point(12, 133);
+            this.DGV_Show.Name = "DGV_Show";
+            this.DGV_Show.Size = new System.Drawing.Size(615, 314);
+            this.DGV_Show.TabIndex = 7;
             // 
-            // groupBox1
+            // Group_Opciones
             // 
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(615, 100);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Opciones de Busqueda";
+            this.Group_Opciones.Controls.Add(this.Bttn_Recargar);
+            this.Group_Opciones.Controls.Add(this.Bttn_Salir);
+            this.Group_Opciones.Controls.Add(this.Radio_BusquedaEstudiante);
+            this.Group_Opciones.Controls.Add(this.Txt_NombreEstudiante);
+            this.Group_Opciones.Controls.Add(this.Radio_BusquedaAnno);
+            this.Group_Opciones.Controls.Add(this.Cmb_Anno);
+            this.Group_Opciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Group_Opciones.Location = new System.Drawing.Point(12, 12);
+            this.Group_Opciones.Name = "Group_Opciones";
+            this.Group_Opciones.Size = new System.Drawing.Size(615, 100);
+            this.Group_Opciones.TabIndex = 6;
+            this.Group_Opciones.TabStop = false;
+            this.Group_Opciones.Text = "Opciones de Busqueda";
             // 
-            // button2
+            // Bttn_Recargar
             // 
-            this.button2.Location = new System.Drawing.Point(481, 56);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(128, 35);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Recargar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Bttn_Recargar.Location = new System.Drawing.Point(481, 56);
+            this.Bttn_Recargar.Name = "Bttn_Recargar";
+            this.Bttn_Recargar.Size = new System.Drawing.Size(128, 35);
+            this.Bttn_Recargar.TabIndex = 6;
+            this.Bttn_Recargar.Text = "Recargar";
+            this.Bttn_Recargar.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // Bttn_Salir
             // 
-            this.button1.Location = new System.Drawing.Point(481, 18);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 32);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Salir";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Bttn_Salir.Location = new System.Drawing.Point(481, 18);
+            this.Bttn_Salir.Name = "Bttn_Salir";
+            this.Bttn_Salir.Size = new System.Drawing.Size(128, 32);
+            this.Bttn_Salir.TabIndex = 5;
+            this.Bttn_Salir.Text = "Salir";
+            this.Bttn_Salir.UseVisualStyleBackColor = true;
+            this.Bttn_Salir.Click += new System.EventHandler(this.button1_Click);
             // 
-            // radioButton2
+            // Radio_BusquedaEstudiante
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(30, 30);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(199, 20);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Busqueda por estudiante";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.Radio_BusquedaEstudiante.AutoSize = true;
+            this.Radio_BusquedaEstudiante.Location = new System.Drawing.Point(30, 30);
+            this.Radio_BusquedaEstudiante.Name = "Radio_BusquedaEstudiante";
+            this.Radio_BusquedaEstudiante.Size = new System.Drawing.Size(199, 20);
+            this.Radio_BusquedaEstudiante.TabIndex = 3;
+            this.Radio_BusquedaEstudiante.TabStop = true;
+            this.Radio_BusquedaEstudiante.Text = "Busqueda por estudiante";
+            this.Radio_BusquedaEstudiante.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // Txt_NombreEstudiante
             // 
-            this.textBox1.Location = new System.Drawing.Point(276, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 22);
-            this.textBox1.TabIndex = 2;
+            this.Txt_NombreEstudiante.Location = new System.Drawing.Point(276, 28);
+            this.Txt_NombreEstudiante.Name = "Txt_NombreEstudiante";
+            this.Txt_NombreEstudiante.Size = new System.Drawing.Size(149, 22);
+            this.Txt_NombreEstudiante.TabIndex = 2;
             // 
-            // radioButton1
+            // Radio_BusquedaAnno
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(30, 59);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(242, 20);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Busqueda por año de matricula";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.Radio_BusquedaAnno.AutoSize = true;
+            this.Radio_BusquedaAnno.Location = new System.Drawing.Point(30, 59);
+            this.Radio_BusquedaAnno.Name = "Radio_BusquedaAnno";
+            this.Radio_BusquedaAnno.Size = new System.Drawing.Size(242, 20);
+            this.Radio_BusquedaAnno.TabIndex = 1;
+            this.Radio_BusquedaAnno.TabStop = true;
+            this.Radio_BusquedaAnno.Text = "Busqueda por año de matricula";
+            this.Radio_BusquedaAnno.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // Cmb_Anno
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(276, 59);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(149, 24);
-            this.comboBox1.TabIndex = 0;
+            this.Cmb_Anno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Cmb_Anno.FormattingEnabled = true;
+            this.Cmb_Anno.Location = new System.Drawing.Point(276, 59);
+            this.Cmb_Anno.Name = "Cmb_Anno";
+            this.Cmb_Anno.Size = new System.Drawing.Size(149, 24);
+            this.Cmb_Anno.TabIndex = 0;
             // 
             // FormHistorialMatriculas
             // 
@@ -127,27 +128,27 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(642, 470);
             this.ControlBox = false;
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.DGV_Show);
+            this.Controls.Add(this.Group_Opciones);
             this.Name = "FormHistorialMatriculas";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Historial de Matriculas";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Show)).EndInit();
+            this.Group_Opciones.ResumeLayout(false);
+            this.Group_Opciones.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridView DGV_Show;
+        private System.Windows.Forms.GroupBox Group_Opciones;
+        private System.Windows.Forms.Button Bttn_Recargar;
+        private System.Windows.Forms.Button Bttn_Salir;
+        private System.Windows.Forms.RadioButton Radio_BusquedaEstudiante;
+        private System.Windows.Forms.TextBox Txt_NombreEstudiante;
+        private System.Windows.Forms.RadioButton Radio_BusquedaAnno;
+        private System.Windows.Forms.ComboBox Cmb_Anno;
     }
 }

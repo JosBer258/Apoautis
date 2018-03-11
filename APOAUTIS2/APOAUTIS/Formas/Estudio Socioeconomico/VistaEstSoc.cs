@@ -35,7 +35,7 @@ namespace APOAUTIS
 
         private void button5_Click(object sender, EventArgs e)
         {
-            FormaBusqEstSoc frmBusqEstSoc = new FormaBusqEstSoc();
+            FromBusquedaAlumno frmBusqEstSoc = new FromBusquedaAlumno();
             frmBusqEstSoc.ShowDialog();
         }
     }

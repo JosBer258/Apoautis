@@ -1,4 +1,6 @@
 ﻿using APOAUTIS.Formas.Alumnos;
+using APOAUTIS.Formas.Matricula;
+using APOAUTIS.Formas.Responsables;
 using APOAUTIS.Formas.Usuarios;
 using System;
 using System.Collections.Generic;
@@ -31,9 +33,7 @@ namespace APOAUTIS.Formas.Ingreso
 
         private void FormMenuPrincipal_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'mydbDataSet.alumnos' Puede moverla o quitarla según sea necesario.
-         
-
+           
         }
 
         private void alumnosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -104,6 +104,35 @@ namespace APOAUTIS.Formas.Ingreso
         {
             VistaMatricula vistaMat = new VistaMatricula();
             vistaMat.ShowDialog();
+        }
+
+        private void historialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormHistorialMatriculas Hist = new FormHistorialMatriculas();
+            Hist.ShowDialog();
+        }
+
+        private void ingresosGastosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormIngresoGastos Ing = new FormIngresoGastos();
+            Ing.ShowDialog();
+        }
+
+        private void montoMatriculaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormMontoMatricula Mon = new FormMontoMatricula();
+            Mon.ShowDialog();
+        }
+
+        private void responsablesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormMantenimientoResponsable Resp = new FormMantenimientoResponsable();
+            Resp.ShowDialog();
+        }
+
+        private void pruebasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

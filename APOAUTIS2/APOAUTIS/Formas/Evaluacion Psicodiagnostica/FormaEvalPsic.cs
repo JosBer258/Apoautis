@@ -16,5 +16,15 @@ namespace APOAUTIS
         {
             InitializeComponent();
         }
+
+        private void radioButton6_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
