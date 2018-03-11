@@ -67,5 +67,11 @@ namespace APOAUTIS
         {
             this.Close();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            FormaEntPadres Ent = new FormaEntPadres();
+            Ent.ShowDialog();
+        }
     }
 }

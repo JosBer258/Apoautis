@@ -21,5 +21,10 @@ namespace APOAUTIS.Formas.Entrevista_Padres
         {
 
         }
+
+        private void Bttn_Cancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

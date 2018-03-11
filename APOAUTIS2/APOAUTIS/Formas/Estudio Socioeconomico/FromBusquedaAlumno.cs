@@ -16,5 +16,10 @@ namespace APOAUTIS.Formas.Estudio_Socioeconomico
         {
             InitializeComponent();
         }
+
+        private void Bttn_Cancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
