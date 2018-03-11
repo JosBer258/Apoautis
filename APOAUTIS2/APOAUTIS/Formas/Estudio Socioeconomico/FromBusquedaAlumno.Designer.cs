@@ -1,6 +1,6 @@
 ﻿namespace APOAUTIS.Formas.Estudio_Socioeconomico
 {
-    partial class FormaBusqEstSoc
+    partial class FromBusquedaAlumno
     {
         /// <summary>
         /// Required designer variable.
@@ -36,38 +36,38 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(120, 16);
+            this.textBox1.Location = new System.Drawing.Point(120, 15);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(238, 20);
-            this.textBox1.TabIndex = 5;
+            this.textBox1.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 19);
+            this.label1.Location = new System.Drawing.Point(12, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 13);
-            this.label1.TabIndex = 4;
+            this.label1.TabIndex = 7;
             this.label1.Text = "Nombre del Alumno:";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 59);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 58);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(519, 273);
-            this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.TabIndex = 6;
             // 
-            // FormaBusqEstSoc
+            // FromBusquedaAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(544, 345);
+            this.ClientSize = new System.Drawing.Size(553, 350);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "FormaBusqEstSoc";
-            this.Text = "Busqueda";
+            this.Name = "FromBusquedaAlumno";
+            this.Text = "FromBusquedaAlumno";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

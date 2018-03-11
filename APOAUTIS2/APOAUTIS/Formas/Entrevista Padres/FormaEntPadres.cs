@@ -96,5 +96,10 @@ namespace APOAUTIS
         {
             tabEntPadres.SelectedTab = tabPage10;
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

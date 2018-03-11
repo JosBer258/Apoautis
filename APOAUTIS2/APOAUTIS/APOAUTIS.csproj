@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\C_Alumnos.cs" />
+    <Compile Include="Clases\C_EntrePadres.cs" />
     <Compile Include="Clases\C_Login.cs" />
     <Compile Include="Clases\C_Usuarios.cs" />
     <Compile Include="Clases\C_Validaciones.cs" />
@@ -66,23 +67,17 @@
     <Compile Include="Formas\Alumnos\FormGlobalShowAlum.Designer.cs">
       <DependentUpon>FormGlobalShowAlum.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formas\Entrevista Padres\FormaBusqueda1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formas\Entrevista Padres\FormaBusqueda1.Designer.cs">
-      <DependentUpon>FormaBusqueda1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formas\Entrevista Padres\FrmBusquedaEntPadres.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formas\Entrevista Padres\FrmBusquedaEntPadres.Designer.cs">
       <DependentUpon>FrmBusquedaEntPadres.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formas\Estudio Socioeconomico\FormaBusquedaEstSoc.cs">
+    <Compile Include="Formas\Estudio Socioeconomico\FromBusquedaAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formas\Estudio Socioeconomico\FormaBusquedaEstSoc.Designer.cs">
-      <DependentUpon>FormaBusquedaEstSoc.cs</DependentUpon>
+    <Compile Include="Formas\Estudio Socioeconomico\FromBusquedaAlumno.Designer.cs">
+      <DependentUpon>FromBusquedaAlumno.cs</DependentUpon>
     </Compile>
     <Compile Include="Formas\Matricula\FormHistorialMatriculas.cs">
       <SubType>Form</SubType>
@@ -193,8 +188,8 @@
     <EmbeddedResource Include="Formas\Entrevista Padres\FrmBusquedaEntPadres.resx">
       <DependentUpon>FrmBusquedaEntPadres.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formas\Estudio Socioeconomico\FormaBusquedaEstSoc.resx">
-      <DependentUpon>FormaBusquedaEstSoc.cs</DependentUpon>
+    <EmbeddedResource Include="Formas\Estudio Socioeconomico\FromBusquedaAlumno.resx">
+      <DependentUpon>FromBusquedaAlumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Matricula\FormHistorialMatriculas.resx">
       <DependentUpon>FormHistorialMatriculas.cs</DependentUpon>

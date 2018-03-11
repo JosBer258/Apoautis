@@ -31,9 +31,12 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.Pest1_Dgv_BsqAlm = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
@@ -50,7 +53,6 @@
             this.textBox36 = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.textBox28 = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
@@ -128,10 +130,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label39 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -189,6 +189,46 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros de Busqueda";
             // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(276, 76);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(318, 21);
+            this.textBox3.TabIndex = 26;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(276, 42);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(318, 21);
+            this.textBox2.TabIndex = 23;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.Location = new System.Drawing.Point(19, 75);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(216, 19);
+            this.radioButton2.TabIndex = 25;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Busqueda por  ID del alumno:";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Location = new System.Drawing.Point(19, 41);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(251, 19);
+            this.radioButton1.TabIndex = 24;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Busqueda por nombre del alumno: ";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
             // Pest1_Dgv_BsqAlm
             // 
             this.Pest1_Dgv_BsqAlm.AllowUserToAddRows = false;
@@ -210,17 +250,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Informacion del Alumno";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(661, 518);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 48);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Salir";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tabControl2
             // 
@@ -370,7 +399,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox27);
+            this.groupBox3.Controls.Add(this.comboBox7);
             this.groupBox3.Controls.Add(this.label29);
             this.groupBox3.Controls.Add(this.textBox28);
             this.groupBox3.Controls.Add(this.label30);
@@ -406,13 +435,6 @@
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos Generales";
-            // 
-            // textBox27
-            // 
-            this.textBox27.Location = new System.Drawing.Point(396, 113);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(104, 20);
-            this.textBox27.TabIndex = 29;
             // 
             // label29
             // 
@@ -465,7 +487,7 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(24, 190);
+            this.label32.Location = new System.Drawing.Point(23, 187);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(128, 13);
             this.label32.TabIndex = 22;
@@ -530,7 +552,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(23, 164);
+            this.label26.Location = new System.Drawing.Point(23, 161);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(106, 13);
             this.label26.TabIndex = 14;
@@ -578,7 +600,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(23, 142);
+            this.label23.Location = new System.Drawing.Point(24, 136);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(36, 13);
             this.label23.TabIndex = 8;
@@ -1105,45 +1127,24 @@
             this.label39.TabIndex = 0;
             this.label39.Text = "Codigo";
             // 
-            // textBox3
+            // button1
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(276, 76);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(318, 21);
-            this.textBox3.TabIndex = 26;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(661, 518);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(142, 48);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Salir";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox2
+            // comboBox7
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(276, 42);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(318, 21);
-            this.textBox2.TabIndex = 23;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(19, 75);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(216, 19);
-            this.radioButton2.TabIndex = 25;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Busqueda por  ID del alumno:";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(19, 41);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(251, 19);
-            this.radioButton1.TabIndex = 24;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Busqueda por nombre del alumno: ";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.comboBox7.FormattingEnabled = true;
+            this.comboBox7.Location = new System.Drawing.Point(396, 113);
+            this.comboBox7.Name = "comboBox7";
+            this.comboBox7.Size = new System.Drawing.Size(104, 21);
+            this.comboBox7.TabIndex = 29;
             // 
             // FormaAlumnos
             // 
@@ -1208,7 +1209,6 @@
         private System.Windows.Forms.TextBox textBox36;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox27;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TextBox textBox28;
         private System.Windows.Forms.Label label30;
@@ -1290,5 +1290,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.ComboBox comboBox7;
     }
 }
