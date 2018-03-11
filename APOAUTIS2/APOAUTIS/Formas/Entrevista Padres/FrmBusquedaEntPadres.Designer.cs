@@ -28,48 +28,65 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Bttn_Cancelar = new System.Windows.Forms.Button();
+            this.Txt_FiltroAlumno = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.DGV_Show = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Show)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // Bttn_Cancelar
             // 
-            this.textBox1.Location = new System.Drawing.Point(120, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(238, 20);
-            this.textBox1.TabIndex = 5;
+            this.Bttn_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bttn_Cancelar.Location = new System.Drawing.Point(472, 394);
+            this.Bttn_Cancelar.Name = "Bttn_Cancelar";
+            this.Bttn_Cancelar.Size = new System.Drawing.Size(108, 44);
+            this.Bttn_Cancelar.TabIndex = 15;
+            this.Bttn_Cancelar.Text = "Cancelar";
+            this.Bttn_Cancelar.UseVisualStyleBackColor = true;
+            this.Bttn_Cancelar.Click += new System.EventHandler(this.Bttn_Cancelar_Click);
+            // 
+            // Txt_FiltroAlumno
+            // 
+            this.Txt_FiltroAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_FiltroAlumno.Location = new System.Drawing.Point(209, 14);
+            this.Txt_FiltroAlumno.Name = "Txt_FiltroAlumno";
+            this.Txt_FiltroAlumno.Size = new System.Drawing.Size(370, 24);
+            this.Txt_FiltroAlumno.TabIndex = 14;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 16);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(27, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Nombre del Alumno:";
+            this.label1.Size = new System.Drawing.Size(152, 16);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Nombre del Alumno: \r\n";
             // 
-            // dataGridView1
+            // DGV_Show
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 56);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(519, 273);
-            this.dataGridView1.TabIndex = 3;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.DGV_Show.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Show.Location = new System.Drawing.Point(27, 56);
+            this.DGV_Show.Name = "DGV_Show";
+            this.DGV_Show.Size = new System.Drawing.Size(552, 332);
+            this.DGV_Show.TabIndex = 12;
             // 
             // FrmBusquedaEntPadres
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(544, 340);
-            this.Controls.Add(this.textBox1);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(610, 451);
+            this.ControlBox = false;
+            this.Controls.Add(this.Bttn_Cancelar);
+            this.Controls.Add(this.Txt_FiltroAlumno);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DGV_Show);
             this.Name = "FrmBusquedaEntPadres";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "FrmBusquedaEntPadres";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Show)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -77,8 +94,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button Bttn_Cancelar;
+        private System.Windows.Forms.TextBox Txt_FiltroAlumno;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DGV_Show;
     }
 }

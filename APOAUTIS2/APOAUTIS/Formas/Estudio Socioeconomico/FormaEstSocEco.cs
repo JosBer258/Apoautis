@@ -1,4 +1,5 @@
-﻿using System;
+﻿using APOAUTIS.Formas.Matricula;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -45,6 +46,12 @@ namespace APOAUTIS
         private void button4_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FormMontoMatricula Monto = new FormMontoMatricula();
+            Monto.ShowDialog();
         }
     }
 }

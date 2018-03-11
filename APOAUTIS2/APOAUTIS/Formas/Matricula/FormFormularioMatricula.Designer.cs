@@ -54,26 +54,19 @@
             this.Pest1_Cmb_Recibio = new System.Windows.Forms.ComboBox();
             this.Pest1_Bttn_Siguiente = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Pest1_Grupo_Atencion = new System.Windows.Forms.GroupBox();
+            this.Pest2_Chk_AtencionFisica = new System.Windows.Forms.CheckBox();
+            this.Pest2_Chk_AtencionDomicilio = new System.Windows.Forms.CheckBox();
+            this.Pest2_Chk_AtencionDistancia = new System.Windows.Forms.CheckBox();
+            this.Pest2_Chk_AtencionIndividual = new System.Windows.Forms.CheckBox();
+            this.Pest2_Chk_AtencionEscolar = new System.Windows.Forms.CheckBox();
+            this.Pest2_Chk_AtencionVocacional = new System.Windows.Forms.CheckBox();
+            this.Pest2_Chk_AtencionPrecoval = new System.Windows.Forms.CheckBox();
+            this.Pest2_Chk_AtencionGrupal = new System.Windows.Forms.CheckBox();
+            this.Pest2_Pest_NombreInstituto = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.Pest2_Bttn_Siguiente = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.Pest3_Bttn_Siguiente = new System.Windows.Forms.Button();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.Pest4_Bttn_Finalizar = new System.Windows.Forms.Button();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.Pest4_TxtBox_Observaciones = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.Pest4_Txt_CualesMedic = new System.Windows.Forms.TextBox();
-            this.Pest4_Cmb_UsaMedicamentos = new System.Windows.Forms.ComboBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.Bttn_Salir = new System.Windows.Forms.Button();
-            this.Pest4_Txt_DireccionPorEmergencias = new System.Windows.Forms.TextBox();
-            this.Pest4_Txt_TelefonoPorEmergencia = new System.Windows.Forms.TextBox();
-            this.Pest4_Txt_Entrevistador = new System.Windows.Forms.TextBox();
-            this.Pest4_Txt_Fecha = new System.Windows.Forms.TextBox();
             this.Pest3_Grupo_DatosMadre = new System.Windows.Forms.GroupBox();
             this.label28 = new System.Windows.Forms.Label();
             this.Pest3_Txt_NombreMadre = new System.Windows.Forms.TextBox();
@@ -92,25 +85,33 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.Pest3_Txt_TelefonoPadre = new System.Windows.Forms.TextBox();
-            this.Pest1_Grupo_Atencion = new System.Windows.Forms.GroupBox();
-            this.Pest2_Chk_AtencionFisica = new System.Windows.Forms.CheckBox();
-            this.Pest2_Chk_AtencionDomicilio = new System.Windows.Forms.CheckBox();
-            this.Pest2_Chk_AtencionDistancia = new System.Windows.Forms.CheckBox();
-            this.Pest2_Chk_AtencionIndividual = new System.Windows.Forms.CheckBox();
-            this.Pest2_Chk_AtencionEscolar = new System.Windows.Forms.CheckBox();
-            this.Pest2_Chk_AtencionVocacional = new System.Windows.Forms.CheckBox();
-            this.Pest2_Chk_AtencionPrecoval = new System.Windows.Forms.CheckBox();
-            this.Pest2_Chk_AtencionGrupal = new System.Windows.Forms.CheckBox();
-            this.Pest2_Pest_NombreInstituto = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
+            this.Pest3_Bttn_Siguiente = new System.Windows.Forms.Button();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.Pest4_Txt_Entrevistador = new System.Windows.Forms.TextBox();
+            this.Pest4_Txt_Fecha = new System.Windows.Forms.TextBox();
+            this.Pest4_Txt_TelefonoPorEmergencia = new System.Windows.Forms.TextBox();
+            this.Pest4_Txt_DireccionPorEmergencias = new System.Windows.Forms.TextBox();
+            this.Pest4_Bttn_Finalizar = new System.Windows.Forms.Button();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.Pest4_TxtBox_Observaciones = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.Pest4_Txt_CualesMedic = new System.Windows.Forms.TextBox();
+            this.Pest4_Cmb_UsaMedicamentos = new System.Windows.Forms.ComboBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.Bttn_Salir = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabMatricula.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.Pest1_Grupo_Atencion.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
             this.Pest3_Grupo_DatosMadre.SuspendLayout();
             this.Pest3_Grupo_DatosPadre.SuspendLayout();
-            this.Pest1_Grupo_Atencion.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // Pest1_txtNumeroMatricula
@@ -388,6 +389,130 @@
             this.tabPage2.Text = "Tipos de Atencion";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // Pest1_Grupo_Atencion
+            // 
+            this.Pest1_Grupo_Atencion.Controls.Add(this.Pest2_Chk_AtencionFisica);
+            this.Pest1_Grupo_Atencion.Controls.Add(this.Pest2_Chk_AtencionDomicilio);
+            this.Pest1_Grupo_Atencion.Controls.Add(this.Pest2_Chk_AtencionDistancia);
+            this.Pest1_Grupo_Atencion.Controls.Add(this.Pest2_Chk_AtencionIndividual);
+            this.Pest1_Grupo_Atencion.Controls.Add(this.Pest2_Chk_AtencionEscolar);
+            this.Pest1_Grupo_Atencion.Controls.Add(this.Pest2_Chk_AtencionVocacional);
+            this.Pest1_Grupo_Atencion.Controls.Add(this.Pest2_Chk_AtencionPrecoval);
+            this.Pest1_Grupo_Atencion.Controls.Add(this.Pest2_Chk_AtencionGrupal);
+            this.Pest1_Grupo_Atencion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_Grupo_Atencion.Location = new System.Drawing.Point(41, 31);
+            this.Pest1_Grupo_Atencion.Name = "Pest1_Grupo_Atencion";
+            this.Pest1_Grupo_Atencion.Size = new System.Drawing.Size(518, 204);
+            this.Pest1_Grupo_Atencion.TabIndex = 37;
+            this.Pest1_Grupo_Atencion.TabStop = false;
+            this.Pest1_Grupo_Atencion.Text = "Tipos de Atencion";
+            // 
+            // Pest2_Chk_AtencionFisica
+            // 
+            this.Pest2_Chk_AtencionFisica.AutoSize = true;
+            this.Pest2_Chk_AtencionFisica.Enabled = false;
+            this.Pest2_Chk_AtencionFisica.Location = new System.Drawing.Point(279, 133);
+            this.Pest2_Chk_AtencionFisica.Name = "Pest2_Chk_AtencionFisica";
+            this.Pest2_Chk_AtencionFisica.Size = new System.Drawing.Size(221, 22);
+            this.Pest2_Chk_AtencionFisica.TabIndex = 15;
+            this.Pest2_Chk_AtencionFisica.Text = "Atencion fisica y deportes";
+            this.Pest2_Chk_AtencionFisica.UseVisualStyleBackColor = true;
+            // 
+            // Pest2_Chk_AtencionDomicilio
+            // 
+            this.Pest2_Chk_AtencionDomicilio.AutoSize = true;
+            this.Pest2_Chk_AtencionDomicilio.Enabled = false;
+            this.Pest2_Chk_AtencionDomicilio.Location = new System.Drawing.Point(279, 101);
+            this.Pest2_Chk_AtencionDomicilio.Name = "Pest2_Chk_AtencionDomicilio";
+            this.Pest2_Chk_AtencionDomicilio.Size = new System.Drawing.Size(170, 22);
+            this.Pest2_Chk_AtencionDomicilio.TabIndex = 14;
+            this.Pest2_Chk_AtencionDomicilio.Text = "Terapia a domicilio";
+            this.Pest2_Chk_AtencionDomicilio.UseVisualStyleBackColor = true;
+            // 
+            // Pest2_Chk_AtencionDistancia
+            // 
+            this.Pest2_Chk_AtencionDistancia.AutoSize = true;
+            this.Pest2_Chk_AtencionDistancia.Enabled = false;
+            this.Pest2_Chk_AtencionDistancia.Location = new System.Drawing.Point(279, 67);
+            this.Pest2_Chk_AtencionDistancia.Name = "Pest2_Chk_AtencionDistancia";
+            this.Pest2_Chk_AtencionDistancia.Size = new System.Drawing.Size(178, 22);
+            this.Pest2_Chk_AtencionDistancia.TabIndex = 13;
+            this.Pest2_Chk_AtencionDistancia.Text = "Atencion a distancia";
+            this.Pest2_Chk_AtencionDistancia.UseVisualStyleBackColor = true;
+            // 
+            // Pest2_Chk_AtencionIndividual
+            // 
+            this.Pest2_Chk_AtencionIndividual.AutoSize = true;
+            this.Pest2_Chk_AtencionIndividual.Enabled = false;
+            this.Pest2_Chk_AtencionIndividual.Location = new System.Drawing.Point(279, 37);
+            this.Pest2_Chk_AtencionIndividual.Name = "Pest2_Chk_AtencionIndividual";
+            this.Pest2_Chk_AtencionIndividual.Size = new System.Drawing.Size(166, 22);
+            this.Pest2_Chk_AtencionIndividual.TabIndex = 12;
+            this.Pest2_Chk_AtencionIndividual.Text = "Atencion individual";
+            this.Pest2_Chk_AtencionIndividual.UseVisualStyleBackColor = true;
+            // 
+            // Pest2_Chk_AtencionEscolar
+            // 
+            this.Pest2_Chk_AtencionEscolar.AutoSize = true;
+            this.Pest2_Chk_AtencionEscolar.Enabled = false;
+            this.Pest2_Chk_AtencionEscolar.Location = new System.Drawing.Point(61, 133);
+            this.Pest2_Chk_AtencionEscolar.Name = "Pest2_Chk_AtencionEscolar";
+            this.Pest2_Chk_AtencionEscolar.Size = new System.Drawing.Size(153, 22);
+            this.Pest2_Chk_AtencionEscolar.TabIndex = 11;
+            this.Pest2_Chk_AtencionEscolar.Text = "Atencion escolar";
+            this.Pest2_Chk_AtencionEscolar.UseVisualStyleBackColor = true;
+            // 
+            // Pest2_Chk_AtencionVocacional
+            // 
+            this.Pest2_Chk_AtencionVocacional.AutoSize = true;
+            this.Pest2_Chk_AtencionVocacional.Enabled = false;
+            this.Pest2_Chk_AtencionVocacional.Location = new System.Drawing.Point(61, 101);
+            this.Pest2_Chk_AtencionVocacional.Name = "Pest2_Chk_AtencionVocacional";
+            this.Pest2_Chk_AtencionVocacional.Size = new System.Drawing.Size(178, 22);
+            this.Pest2_Chk_AtencionVocacional.TabIndex = 10;
+            this.Pest2_Chk_AtencionVocacional.Text = "Atencion vocacional";
+            this.Pest2_Chk_AtencionVocacional.UseVisualStyleBackColor = true;
+            // 
+            // Pest2_Chk_AtencionPrecoval
+            // 
+            this.Pest2_Chk_AtencionPrecoval.AutoSize = true;
+            this.Pest2_Chk_AtencionPrecoval.Enabled = false;
+            this.Pest2_Chk_AtencionPrecoval.Location = new System.Drawing.Point(61, 69);
+            this.Pest2_Chk_AtencionPrecoval.Name = "Pest2_Chk_AtencionPrecoval";
+            this.Pest2_Chk_AtencionPrecoval.Size = new System.Drawing.Size(208, 22);
+            this.Pest2_Chk_AtencionPrecoval.TabIndex = 9;
+            this.Pest2_Chk_AtencionPrecoval.Text = "Atencion pre-vocacional";
+            this.Pest2_Chk_AtencionPrecoval.UseVisualStyleBackColor = true;
+            // 
+            // Pest2_Chk_AtencionGrupal
+            // 
+            this.Pest2_Chk_AtencionGrupal.AutoSize = true;
+            this.Pest2_Chk_AtencionGrupal.Enabled = false;
+            this.Pest2_Chk_AtencionGrupal.Location = new System.Drawing.Point(61, 37);
+            this.Pest2_Chk_AtencionGrupal.Name = "Pest2_Chk_AtencionGrupal";
+            this.Pest2_Chk_AtencionGrupal.Size = new System.Drawing.Size(143, 22);
+            this.Pest2_Chk_AtencionGrupal.TabIndex = 8;
+            this.Pest2_Chk_AtencionGrupal.Text = "Atencion grupal";
+            this.Pest2_Chk_AtencionGrupal.UseVisualStyleBackColor = true;
+            // 
+            // Pest2_Pest_NombreInstituto
+            // 
+            this.Pest2_Pest_NombreInstituto.Enabled = false;
+            this.Pest2_Pest_NombreInstituto.Location = new System.Drawing.Point(41, 275);
+            this.Pest2_Pest_NombreInstituto.Name = "Pest2_Pest_NombreInstituto";
+            this.Pest2_Pest_NombreInstituto.Size = new System.Drawing.Size(518, 21);
+            this.Pest2_Pest_NombreInstituto.TabIndex = 38;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(38, 251);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(515, 18);
+            this.label20.TabIndex = 36;
+            this.label20.Text = "Nombre de la Institucion, Escuela u otro centro donde esta incluido";
+            // 
             // Pest2_Bttn_Siguiente
             // 
             this.Pest2_Bttn_Siguiente.Location = new System.Drawing.Point(586, 286);
@@ -409,192 +534,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Datos de Responsables";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // Pest3_Bttn_Siguiente
-            // 
-            this.Pest3_Bttn_Siguiente.Location = new System.Drawing.Point(586, 294);
-            this.Pest3_Bttn_Siguiente.Name = "Pest3_Bttn_Siguiente";
-            this.Pest3_Bttn_Siguiente.Size = new System.Drawing.Size(121, 56);
-            this.Pest3_Bttn_Siguiente.TabIndex = 25;
-            this.Pest3_Bttn_Siguiente.Text = "Siguiente";
-            this.Pest3_Bttn_Siguiente.UseVisualStyleBackColor = true;
-            this.Pest3_Bttn_Siguiente.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.Pest4_Txt_Entrevistador);
-            this.tabPage4.Controls.Add(this.Pest4_Txt_Fecha);
-            this.tabPage4.Controls.Add(this.Pest4_Txt_TelefonoPorEmergencia);
-            this.tabPage4.Controls.Add(this.Pest4_Txt_DireccionPorEmergencias);
-            this.tabPage4.Controls.Add(this.Pest4_Bttn_Finalizar);
-            this.tabPage4.Controls.Add(this.label35);
-            this.tabPage4.Controls.Add(this.label34);
-            this.tabPage4.Controls.Add(this.Pest4_TxtBox_Observaciones);
-            this.tabPage4.Controls.Add(this.label33);
-            this.tabPage4.Controls.Add(this.label32);
-            this.tabPage4.Controls.Add(this.Pest4_Txt_CualesMedic);
-            this.tabPage4.Controls.Add(this.Pest4_Cmb_UsaMedicamentos);
-            this.tabPage4.Controls.Add(this.label31);
-            this.tabPage4.Controls.Add(this.label30);
-            this.tabPage4.Controls.Add(this.label29);
-            this.tabPage4.Location = new System.Drawing.Point(4, 24);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(713, 362);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Datos Adicionales";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // Pest4_Bttn_Finalizar
-            // 
-            this.Pest4_Bttn_Finalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest4_Bttn_Finalizar.Location = new System.Drawing.Point(586, 291);
-            this.Pest4_Bttn_Finalizar.Name = "Pest4_Bttn_Finalizar";
-            this.Pest4_Bttn_Finalizar.Size = new System.Drawing.Size(121, 56);
-            this.Pest4_Bttn_Finalizar.TabIndex = 25;
-            this.Pest4_Bttn_Finalizar.Text = "Finalizar";
-            this.Pest4_Bttn_Finalizar.UseVisualStyleBackColor = true;
-            this.Pest4_Bttn_Finalizar.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(235, 283);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(100, 16);
-            this.label35.TabIndex = 12;
-            this.label35.Text = "Entrevistador";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(30, 286);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(51, 16);
-            this.label34.TabIndex = 10;
-            this.label34.Text = "Fecha";
-            // 
-            // Pest4_TxtBox_Observaciones
-            // 
-            this.Pest4_TxtBox_Observaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest4_TxtBox_Observaciones.Location = new System.Drawing.Point(31, 154);
-            this.Pest4_TxtBox_Observaciones.Multiline = true;
-            this.Pest4_TxtBox_Observaciones.Name = "Pest4_TxtBox_Observaciones";
-            this.Pest4_TxtBox_Observaciones.Size = new System.Drawing.Size(663, 105);
-            this.Pest4_TxtBox_Observaciones.TabIndex = 9;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(28, 138);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(113, 16);
-            this.label33.TabIndex = 8;
-            this.label33.Text = "Observaciones";
-            this.label33.Click += new System.EventHandler(this.label33_Click);
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(305, 98);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(56, 16);
-            this.label32.TabIndex = 7;
-            this.label32.Text = "Cuales";
-            // 
-            // Pest4_Txt_CualesMedic
-            // 
-            this.Pest4_Txt_CualesMedic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest4_Txt_CualesMedic.Location = new System.Drawing.Point(378, 95);
-            this.Pest4_Txt_CualesMedic.Name = "Pest4_Txt_CualesMedic";
-            this.Pest4_Txt_CualesMedic.Size = new System.Drawing.Size(316, 22);
-            this.Pest4_Txt_CualesMedic.TabIndex = 6;
-            // 
-            // Pest4_Cmb_UsaMedicamentos
-            // 
-            this.Pest4_Cmb_UsaMedicamentos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Pest4_Cmb_UsaMedicamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest4_Cmb_UsaMedicamentos.FormattingEnabled = true;
-            this.Pest4_Cmb_UsaMedicamentos.Location = new System.Drawing.Point(167, 95);
-            this.Pest4_Cmb_UsaMedicamentos.Name = "Pest4_Cmb_UsaMedicamentos";
-            this.Pest4_Cmb_UsaMedicamentos.Size = new System.Drawing.Size(112, 24);
-            this.Pest4_Cmb_UsaMedicamentos.TabIndex = 5;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(28, 98);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(133, 16);
-            this.label31.TabIndex = 4;
-            this.label31.Text = "Usa medicamento";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(28, 61);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(417, 16);
-            this.label30.TabIndex = 2;
-            this.label30.Text = "Telefono donde se puede localizar en caso de emergencia";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(28, 26);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(421, 16);
-            this.label29.TabIndex = 0;
-            this.label29.Text = "Direccion donde se puede localizar en caso de emergencia";
-            // 
-            // Bttn_Salir
-            // 
-            this.Bttn_Salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bttn_Salir.Location = new System.Drawing.Point(602, 414);
-            this.Bttn_Salir.Name = "Bttn_Salir";
-            this.Bttn_Salir.Size = new System.Drawing.Size(121, 56);
-            this.Bttn_Salir.TabIndex = 25;
-            this.Bttn_Salir.Text = "Salir";
-            this.Bttn_Salir.UseVisualStyleBackColor = true;
-            this.Bttn_Salir.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // Pest4_Txt_DireccionPorEmergencias
-            // 
-            this.Pest4_Txt_DireccionPorEmergencias.Enabled = false;
-            this.Pest4_Txt_DireccionPorEmergencias.Location = new System.Drawing.Point(455, 23);
-            this.Pest4_Txt_DireccionPorEmergencias.Name = "Pest4_Txt_DireccionPorEmergencias";
-            this.Pest4_Txt_DireccionPorEmergencias.Size = new System.Drawing.Size(239, 21);
-            this.Pest4_Txt_DireccionPorEmergencias.TabIndex = 26;
-            // 
-            // Pest4_Txt_TelefonoPorEmergencia
-            // 
-            this.Pest4_Txt_TelefonoPorEmergencia.Enabled = false;
-            this.Pest4_Txt_TelefonoPorEmergencia.Location = new System.Drawing.Point(455, 58);
-            this.Pest4_Txt_TelefonoPorEmergencia.Name = "Pest4_Txt_TelefonoPorEmergencia";
-            this.Pest4_Txt_TelefonoPorEmergencia.Size = new System.Drawing.Size(239, 21);
-            this.Pest4_Txt_TelefonoPorEmergencia.TabIndex = 27;
-            // 
-            // Pest4_Txt_Entrevistador
-            // 
-            this.Pest4_Txt_Entrevistador.Enabled = false;
-            this.Pest4_Txt_Entrevistador.Location = new System.Drawing.Point(341, 280);
-            this.Pest4_Txt_Entrevistador.Name = "Pest4_Txt_Entrevistador";
-            this.Pest4_Txt_Entrevistador.Size = new System.Drawing.Size(179, 21);
-            this.Pest4_Txt_Entrevistador.TabIndex = 29;
-            // 
-            // Pest4_Txt_Fecha
-            // 
-            this.Pest4_Txt_Fecha.Enabled = false;
-            this.Pest4_Txt_Fecha.Location = new System.Drawing.Point(87, 283);
-            this.Pest4_Txt_Fecha.Name = "Pest4_Txt_Fecha";
-            this.Pest4_Txt_Fecha.Size = new System.Drawing.Size(136, 21);
-            this.Pest4_Txt_Fecha.TabIndex = 28;
             // 
             // Pest3_Grupo_DatosMadre
             // 
@@ -772,129 +711,203 @@
             this.Pest3_Txt_TelefonoPadre.Size = new System.Drawing.Size(169, 22);
             this.Pest3_Txt_TelefonoPadre.TabIndex = 8;
             // 
-            // Pest1_Grupo_Atencion
+            // Pest3_Bttn_Siguiente
             // 
-            this.Pest1_Grupo_Atencion.Controls.Add(this.Pest2_Chk_AtencionFisica);
-            this.Pest1_Grupo_Atencion.Controls.Add(this.Pest2_Chk_AtencionDomicilio);
-            this.Pest1_Grupo_Atencion.Controls.Add(this.Pest2_Chk_AtencionDistancia);
-            this.Pest1_Grupo_Atencion.Controls.Add(this.Pest2_Chk_AtencionIndividual);
-            this.Pest1_Grupo_Atencion.Controls.Add(this.Pest2_Chk_AtencionEscolar);
-            this.Pest1_Grupo_Atencion.Controls.Add(this.Pest2_Chk_AtencionVocacional);
-            this.Pest1_Grupo_Atencion.Controls.Add(this.Pest2_Chk_AtencionPrecoval);
-            this.Pest1_Grupo_Atencion.Controls.Add(this.Pest2_Chk_AtencionGrupal);
-            this.Pest1_Grupo_Atencion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest1_Grupo_Atencion.Location = new System.Drawing.Point(41, 31);
-            this.Pest1_Grupo_Atencion.Name = "Pest1_Grupo_Atencion";
-            this.Pest1_Grupo_Atencion.Size = new System.Drawing.Size(518, 204);
-            this.Pest1_Grupo_Atencion.TabIndex = 37;
-            this.Pest1_Grupo_Atencion.TabStop = false;
-            this.Pest1_Grupo_Atencion.Text = "Tipos de Atencion";
+            this.Pest3_Bttn_Siguiente.Location = new System.Drawing.Point(586, 294);
+            this.Pest3_Bttn_Siguiente.Name = "Pest3_Bttn_Siguiente";
+            this.Pest3_Bttn_Siguiente.Size = new System.Drawing.Size(121, 56);
+            this.Pest3_Bttn_Siguiente.TabIndex = 25;
+            this.Pest3_Bttn_Siguiente.Text = "Siguiente";
+            this.Pest3_Bttn_Siguiente.UseVisualStyleBackColor = true;
+            this.Pest3_Bttn_Siguiente.Click += new System.EventHandler(this.button3_Click);
             // 
-            // Pest2_Chk_AtencionFisica
+            // tabPage4
             // 
-            this.Pest2_Chk_AtencionFisica.AutoSize = true;
-            this.Pest2_Chk_AtencionFisica.Enabled = false;
-            this.Pest2_Chk_AtencionFisica.Location = new System.Drawing.Point(279, 133);
-            this.Pest2_Chk_AtencionFisica.Name = "Pest2_Chk_AtencionFisica";
-            this.Pest2_Chk_AtencionFisica.Size = new System.Drawing.Size(221, 22);
-            this.Pest2_Chk_AtencionFisica.TabIndex = 15;
-            this.Pest2_Chk_AtencionFisica.Text = "Atencion fisica y deportes";
-            this.Pest2_Chk_AtencionFisica.UseVisualStyleBackColor = true;
+            this.tabPage4.Controls.Add(this.button1);
+            this.tabPage4.Controls.Add(this.Pest4_Txt_Entrevistador);
+            this.tabPage4.Controls.Add(this.Pest4_Txt_Fecha);
+            this.tabPage4.Controls.Add(this.Pest4_Txt_TelefonoPorEmergencia);
+            this.tabPage4.Controls.Add(this.Pest4_Txt_DireccionPorEmergencias);
+            this.tabPage4.Controls.Add(this.Pest4_Bttn_Finalizar);
+            this.tabPage4.Controls.Add(this.label35);
+            this.tabPage4.Controls.Add(this.label34);
+            this.tabPage4.Controls.Add(this.Pest4_TxtBox_Observaciones);
+            this.tabPage4.Controls.Add(this.label33);
+            this.tabPage4.Controls.Add(this.label32);
+            this.tabPage4.Controls.Add(this.Pest4_Txt_CualesMedic);
+            this.tabPage4.Controls.Add(this.Pest4_Cmb_UsaMedicamentos);
+            this.tabPage4.Controls.Add(this.label31);
+            this.tabPage4.Controls.Add(this.label30);
+            this.tabPage4.Controls.Add(this.label29);
+            this.tabPage4.Location = new System.Drawing.Point(4, 24);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(713, 362);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Datos Adicionales";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // Pest2_Chk_AtencionDomicilio
+            // Pest4_Txt_Entrevistador
             // 
-            this.Pest2_Chk_AtencionDomicilio.AutoSize = true;
-            this.Pest2_Chk_AtencionDomicilio.Enabled = false;
-            this.Pest2_Chk_AtencionDomicilio.Location = new System.Drawing.Point(279, 101);
-            this.Pest2_Chk_AtencionDomicilio.Name = "Pest2_Chk_AtencionDomicilio";
-            this.Pest2_Chk_AtencionDomicilio.Size = new System.Drawing.Size(170, 22);
-            this.Pest2_Chk_AtencionDomicilio.TabIndex = 14;
-            this.Pest2_Chk_AtencionDomicilio.Text = "Terapia a domicilio";
-            this.Pest2_Chk_AtencionDomicilio.UseVisualStyleBackColor = true;
+            this.Pest4_Txt_Entrevistador.Enabled = false;
+            this.Pest4_Txt_Entrevistador.Location = new System.Drawing.Point(341, 244);
+            this.Pest4_Txt_Entrevistador.Name = "Pest4_Txt_Entrevistador";
+            this.Pest4_Txt_Entrevistador.Size = new System.Drawing.Size(179, 21);
+            this.Pest4_Txt_Entrevistador.TabIndex = 29;
             // 
-            // Pest2_Chk_AtencionDistancia
+            // Pest4_Txt_Fecha
             // 
-            this.Pest2_Chk_AtencionDistancia.AutoSize = true;
-            this.Pest2_Chk_AtencionDistancia.Enabled = false;
-            this.Pest2_Chk_AtencionDistancia.Location = new System.Drawing.Point(279, 67);
-            this.Pest2_Chk_AtencionDistancia.Name = "Pest2_Chk_AtencionDistancia";
-            this.Pest2_Chk_AtencionDistancia.Size = new System.Drawing.Size(178, 22);
-            this.Pest2_Chk_AtencionDistancia.TabIndex = 13;
-            this.Pest2_Chk_AtencionDistancia.Text = "Atencion a distancia";
-            this.Pest2_Chk_AtencionDistancia.UseVisualStyleBackColor = true;
+            this.Pest4_Txt_Fecha.Enabled = false;
+            this.Pest4_Txt_Fecha.Location = new System.Drawing.Point(87, 247);
+            this.Pest4_Txt_Fecha.Name = "Pest4_Txt_Fecha";
+            this.Pest4_Txt_Fecha.Size = new System.Drawing.Size(136, 21);
+            this.Pest4_Txt_Fecha.TabIndex = 28;
             // 
-            // Pest2_Chk_AtencionIndividual
+            // Pest4_Txt_TelefonoPorEmergencia
             // 
-            this.Pest2_Chk_AtencionIndividual.AutoSize = true;
-            this.Pest2_Chk_AtencionIndividual.Enabled = false;
-            this.Pest2_Chk_AtencionIndividual.Location = new System.Drawing.Point(279, 37);
-            this.Pest2_Chk_AtencionIndividual.Name = "Pest2_Chk_AtencionIndividual";
-            this.Pest2_Chk_AtencionIndividual.Size = new System.Drawing.Size(166, 22);
-            this.Pest2_Chk_AtencionIndividual.TabIndex = 12;
-            this.Pest2_Chk_AtencionIndividual.Text = "Atencion individual";
-            this.Pest2_Chk_AtencionIndividual.UseVisualStyleBackColor = true;
+            this.Pest4_Txt_TelefonoPorEmergencia.Enabled = false;
+            this.Pest4_Txt_TelefonoPorEmergencia.Location = new System.Drawing.Point(455, 58);
+            this.Pest4_Txt_TelefonoPorEmergencia.Name = "Pest4_Txt_TelefonoPorEmergencia";
+            this.Pest4_Txt_TelefonoPorEmergencia.Size = new System.Drawing.Size(239, 21);
+            this.Pest4_Txt_TelefonoPorEmergencia.TabIndex = 27;
             // 
-            // Pest2_Chk_AtencionEscolar
+            // Pest4_Txt_DireccionPorEmergencias
             // 
-            this.Pest2_Chk_AtencionEscolar.AutoSize = true;
-            this.Pest2_Chk_AtencionEscolar.Enabled = false;
-            this.Pest2_Chk_AtencionEscolar.Location = new System.Drawing.Point(61, 133);
-            this.Pest2_Chk_AtencionEscolar.Name = "Pest2_Chk_AtencionEscolar";
-            this.Pest2_Chk_AtencionEscolar.Size = new System.Drawing.Size(153, 22);
-            this.Pest2_Chk_AtencionEscolar.TabIndex = 11;
-            this.Pest2_Chk_AtencionEscolar.Text = "Atencion escolar";
-            this.Pest2_Chk_AtencionEscolar.UseVisualStyleBackColor = true;
+            this.Pest4_Txt_DireccionPorEmergencias.Enabled = false;
+            this.Pest4_Txt_DireccionPorEmergencias.Location = new System.Drawing.Point(455, 23);
+            this.Pest4_Txt_DireccionPorEmergencias.Name = "Pest4_Txt_DireccionPorEmergencias";
+            this.Pest4_Txt_DireccionPorEmergencias.Size = new System.Drawing.Size(239, 21);
+            this.Pest4_Txt_DireccionPorEmergencias.TabIndex = 26;
             // 
-            // Pest2_Chk_AtencionVocacional
+            // Pest4_Bttn_Finalizar
             // 
-            this.Pest2_Chk_AtencionVocacional.AutoSize = true;
-            this.Pest2_Chk_AtencionVocacional.Enabled = false;
-            this.Pest2_Chk_AtencionVocacional.Location = new System.Drawing.Point(61, 101);
-            this.Pest2_Chk_AtencionVocacional.Name = "Pest2_Chk_AtencionVocacional";
-            this.Pest2_Chk_AtencionVocacional.Size = new System.Drawing.Size(178, 22);
-            this.Pest2_Chk_AtencionVocacional.TabIndex = 10;
-            this.Pest2_Chk_AtencionVocacional.Text = "Atencion vocacional";
-            this.Pest2_Chk_AtencionVocacional.UseVisualStyleBackColor = true;
+            this.Pest4_Bttn_Finalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest4_Bttn_Finalizar.Location = new System.Drawing.Point(586, 291);
+            this.Pest4_Bttn_Finalizar.Name = "Pest4_Bttn_Finalizar";
+            this.Pest4_Bttn_Finalizar.Size = new System.Drawing.Size(121, 56);
+            this.Pest4_Bttn_Finalizar.TabIndex = 25;
+            this.Pest4_Bttn_Finalizar.Text = "Finalizar";
+            this.Pest4_Bttn_Finalizar.UseVisualStyleBackColor = true;
+            this.Pest4_Bttn_Finalizar.Click += new System.EventHandler(this.button4_Click);
             // 
-            // Pest2_Chk_AtencionPrecoval
+            // label35
             // 
-            this.Pest2_Chk_AtencionPrecoval.AutoSize = true;
-            this.Pest2_Chk_AtencionPrecoval.Enabled = false;
-            this.Pest2_Chk_AtencionPrecoval.Location = new System.Drawing.Point(61, 69);
-            this.Pest2_Chk_AtencionPrecoval.Name = "Pest2_Chk_AtencionPrecoval";
-            this.Pest2_Chk_AtencionPrecoval.Size = new System.Drawing.Size(208, 22);
-            this.Pest2_Chk_AtencionPrecoval.TabIndex = 9;
-            this.Pest2_Chk_AtencionPrecoval.Text = "Atencion pre-vocacional";
-            this.Pest2_Chk_AtencionPrecoval.UseVisualStyleBackColor = true;
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(235, 247);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(100, 16);
+            this.label35.TabIndex = 12;
+            this.label35.Text = "Entrevistador";
             // 
-            // Pest2_Chk_AtencionGrupal
+            // label34
             // 
-            this.Pest2_Chk_AtencionGrupal.AutoSize = true;
-            this.Pest2_Chk_AtencionGrupal.Enabled = false;
-            this.Pest2_Chk_AtencionGrupal.Location = new System.Drawing.Point(61, 37);
-            this.Pest2_Chk_AtencionGrupal.Name = "Pest2_Chk_AtencionGrupal";
-            this.Pest2_Chk_AtencionGrupal.Size = new System.Drawing.Size(143, 22);
-            this.Pest2_Chk_AtencionGrupal.TabIndex = 8;
-            this.Pest2_Chk_AtencionGrupal.Text = "Atencion grupal";
-            this.Pest2_Chk_AtencionGrupal.UseVisualStyleBackColor = true;
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(30, 250);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(51, 16);
+            this.label34.TabIndex = 10;
+            this.label34.Text = "Fecha";
             // 
-            // Pest2_Pest_NombreInstituto
+            // Pest4_TxtBox_Observaciones
             // 
-            this.Pest2_Pest_NombreInstituto.Enabled = false;
-            this.Pest2_Pest_NombreInstituto.Location = new System.Drawing.Point(41, 275);
-            this.Pest2_Pest_NombreInstituto.Name = "Pest2_Pest_NombreInstituto";
-            this.Pest2_Pest_NombreInstituto.Size = new System.Drawing.Size(518, 21);
-            this.Pest2_Pest_NombreInstituto.TabIndex = 38;
+            this.Pest4_TxtBox_Observaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest4_TxtBox_Observaciones.Location = new System.Drawing.Point(31, 154);
+            this.Pest4_TxtBox_Observaciones.Multiline = true;
+            this.Pest4_TxtBox_Observaciones.Name = "Pest4_TxtBox_Observaciones";
+            this.Pest4_TxtBox_Observaciones.Size = new System.Drawing.Size(663, 84);
+            this.Pest4_TxtBox_Observaciones.TabIndex = 9;
             // 
-            // label20
+            // label33
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(38, 251);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(515, 18);
-            this.label20.TabIndex = 36;
-            this.label20.Text = "Nombre de la Institucion, Escuela u otro centro donde esta incluido";
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(28, 138);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(113, 16);
+            this.label33.TabIndex = 8;
+            this.label33.Text = "Observaciones";
+            this.label33.Click += new System.EventHandler(this.label33_Click);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(305, 98);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(56, 16);
+            this.label32.TabIndex = 7;
+            this.label32.Text = "Cuales";
+            // 
+            // Pest4_Txt_CualesMedic
+            // 
+            this.Pest4_Txt_CualesMedic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest4_Txt_CualesMedic.Location = new System.Drawing.Point(378, 95);
+            this.Pest4_Txt_CualesMedic.Name = "Pest4_Txt_CualesMedic";
+            this.Pest4_Txt_CualesMedic.Size = new System.Drawing.Size(316, 22);
+            this.Pest4_Txt_CualesMedic.TabIndex = 6;
+            // 
+            // Pest4_Cmb_UsaMedicamentos
+            // 
+            this.Pest4_Cmb_UsaMedicamentos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Pest4_Cmb_UsaMedicamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest4_Cmb_UsaMedicamentos.FormattingEnabled = true;
+            this.Pest4_Cmb_UsaMedicamentos.Location = new System.Drawing.Point(167, 95);
+            this.Pest4_Cmb_UsaMedicamentos.Name = "Pest4_Cmb_UsaMedicamentos";
+            this.Pest4_Cmb_UsaMedicamentos.Size = new System.Drawing.Size(112, 24);
+            this.Pest4_Cmb_UsaMedicamentos.TabIndex = 5;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(28, 98);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(133, 16);
+            this.label31.TabIndex = 4;
+            this.label31.Text = "Usa medicamento";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(28, 61);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(417, 16);
+            this.label30.TabIndex = 2;
+            this.label30.Text = "Telefono donde se puede localizar en caso de emergencia";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(28, 26);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(421, 16);
+            this.label29.TabIndex = 0;
+            this.label29.Text = "Direccion donde se puede localizar en caso de emergencia";
+            // 
+            // Bttn_Salir
+            // 
+            this.Bttn_Salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bttn_Salir.Location = new System.Drawing.Point(602, 414);
+            this.Bttn_Salir.Name = "Bttn_Salir";
+            this.Bttn_Salir.Size = new System.Drawing.Size(121, 56);
+            this.Bttn_Salir.TabIndex = 25;
+            this.Bttn_Salir.Text = "Salir";
+            this.Bttn_Salir.UseVisualStyleBackColor = true;
+            this.Bttn_Salir.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(455, 291);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(121, 56);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "Ingresar prueba socioeconomica";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // FrmMatricula
             // 
@@ -914,15 +927,15 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.Pest1_Grupo_Atencion.ResumeLayout(false);
+            this.Pest1_Grupo_Atencion.PerformLayout();
             this.tabPage3.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
             this.Pest3_Grupo_DatosMadre.ResumeLayout(false);
             this.Pest3_Grupo_DatosMadre.PerformLayout();
             this.Pest3_Grupo_DatosPadre.ResumeLayout(false);
             this.Pest3_Grupo_DatosPadre.PerformLayout();
-            this.Pest1_Grupo_Atencion.ResumeLayout(false);
-            this.Pest1_Grupo_Atencion.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1004,6 +1017,7 @@
         private System.Windows.Forms.CheckBox Pest2_Chk_AtencionGrupal;
         private System.Windows.Forms.TextBox Pest2_Pest_NombreInstituto;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button button1;
     }
 }
 

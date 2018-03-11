@@ -28,30 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Bttn_Cancelar = new System.Windows.Forms.Button();
+            this.Txt_FiltroAlumno = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.DGV_Show = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Show)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // Bttn_Cancelar
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(457, 402);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 44);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Bttn_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bttn_Cancelar.Location = new System.Drawing.Point(457, 402);
+            this.Bttn_Cancelar.Name = "Bttn_Cancelar";
+            this.Bttn_Cancelar.Size = new System.Drawing.Size(108, 44);
+            this.Bttn_Cancelar.TabIndex = 7;
+            this.Bttn_Cancelar.Text = "Cancelar";
+            this.Bttn_Cancelar.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // Txt_FiltroAlumno
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(194, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(370, 24);
-            this.textBox1.TabIndex = 6;
+            this.Txt_FiltroAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_FiltroAlumno.Location = new System.Drawing.Point(194, 22);
+            this.Txt_FiltroAlumno.Name = "Txt_FiltroAlumno";
+            this.Txt_FiltroAlumno.Size = new System.Drawing.Size(370, 24);
+            this.Txt_FiltroAlumno.TabIndex = 6;
             // 
             // label1
             // 
@@ -63,13 +63,13 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Nombre del Alumno: \r\n";
             // 
-            // dataGridView1
+            // DGV_Show
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 64);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(552, 332);
-            this.dataGridView1.TabIndex = 4;
+            this.DGV_Show.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Show.Location = new System.Drawing.Point(12, 64);
+            this.DGV_Show.Name = "DGV_Show";
+            this.DGV_Show.Size = new System.Drawing.Size(552, 332);
+            this.DGV_Show.TabIndex = 4;
             // 
             // FormGlobalShowAlum
             // 
@@ -78,14 +78,14 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(577, 455);
             this.ControlBox = false;
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Bttn_Cancelar);
+            this.Controls.Add(this.Txt_FiltroAlumno);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DGV_Show);
             this.Name = "FormGlobalShowAlum";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Busqueda de todos los Alumnos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Show)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,9 +93,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button Bttn_Cancelar;
+        private System.Windows.Forms.TextBox Txt_FiltroAlumno;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DGV_Show;
     }
 }

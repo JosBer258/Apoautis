@@ -240,6 +240,7 @@
             this.checkBox16 = new System.Windows.Forms.CheckBox();
             this.checkBox17 = new System.Windows.Forms.CheckBox();
             this.checkBox18 = new System.Windows.Forms.CheckBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.tabEstSocioEco.SuspendLayout();
             this.DatosGenerales.SuspendLayout();
             this.groupBox13.SuspendLayout();
@@ -1865,6 +1866,7 @@
             // 
             // InformacionVivienda
             // 
+            this.InformacionVivienda.Controls.Add(this.button5);
             this.InformacionVivienda.Controls.Add(this.button4);
             this.InformacionVivienda.Controls.Add(this.groupBox12);
             this.InformacionVivienda.Controls.Add(this.groupBox11);
@@ -2307,6 +2309,17 @@
             this.checkBox18.Text = "Television";
             this.checkBox18.UseVisualStyleBackColor = true;
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(426, 375);
+            this.button5.Name = "button5";
+            this.button5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button5.Size = new System.Drawing.Size(155, 59);
+            this.button5.TabIndex = 35;
+            this.button5.Text = "Monto Matricula";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // FormaEstSocEco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2566,5 +2579,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }

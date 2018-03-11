@@ -141,5 +141,11 @@ namespace APOAUTIS
         {
             this.Close();
         }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            FormaEstSocEco Est = new FormaEstSocEco();
+            Est.ShowDialog();
+        }
     }
 }
