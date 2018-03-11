@@ -60,6 +60,12 @@
     <Compile Include="Clases\C_Validaciones.cs" />
     <Compile Include="Clases\DataGirdView.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="Formas\Alumnos\FormGlobalShowAlum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Alumnos\FormGlobalShowAlum.Designer.cs">
+      <DependentUpon>FormGlobalShowAlum.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formas\Entrevista Padres\FormaBusqueda1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,30 @@
     </Compile>
     <Compile Include="Formas\Estudio Socioeconomico\FormaBusquedaEstSoc.Designer.cs">
       <DependentUpon>FormaBusquedaEstSoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Matricula\FormHistorialMatriculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Matricula\FormHistorialMatriculas.Designer.cs">
+      <DependentUpon>FormHistorialMatriculas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Matricula\FormIngresoGastos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Matricula\FormIngresoGastos.Designer.cs">
+      <DependentUpon>FormIngresoGastos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Matricula\FormMontoMatricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Matricula\FormMontoMatricula.Designer.cs">
+      <DependentUpon>FormMontoMatricula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Responsables\FormMantenimientoResponsable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Responsables\FormMantenimientoResponsable.Designer.cs">
+      <DependentUpon>FormMantenimientoResponsable.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmBusquedaMatricula.cs">
       <SubType>Form</SubType>
@@ -151,17 +181,32 @@
     <Compile Include="Formas\Estudio Socioeconomico\VistaEstSoc.Designer.cs">
       <DependentUpon>VistaEstSoc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formas\Matricula\VistaMatricula.cs">
+    <Compile Include="Formas\Matricula\FormVistaMatricula.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formas\Matricula\VistaMatricula.Designer.cs">
-      <DependentUpon>VistaMatricula.cs</DependentUpon>
+    <Compile Include="Formas\Matricula\FormVistaMatricula.Designer.cs">
+      <DependentUpon>FormVistaMatricula.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Formas\Alumnos\FormGlobalShowAlum.resx">
+      <DependentUpon>FormGlobalShowAlum.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formas\Entrevista Padres\FrmBusquedaEntPadres.resx">
       <DependentUpon>FrmBusquedaEntPadres.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Estudio Socioeconomico\FormaBusquedaEstSoc.resx">
       <DependentUpon>FormaBusquedaEstSoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Matricula\FormHistorialMatriculas.resx">
+      <DependentUpon>FormHistorialMatriculas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Matricula\FormIngresoGastos.resx">
+      <DependentUpon>FormIngresoGastos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Matricula\FormMontoMatricula.resx">
+      <DependentUpon>FormMontoMatricula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Responsables\FormMantenimientoResponsable.resx">
+      <DependentUpon>FormMantenimientoResponsable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBusquedaMatricula.resx">
       <DependentUpon>FrmBusquedaMatricula.cs</DependentUpon>
@@ -205,8 +250,8 @@
     <EmbeddedResource Include="Formas\Estudio Socioeconomico\VistaEstSoc.resx">
       <DependentUpon>VistaEstSoc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formas\Matricula\VistaMatricula.resx">
-      <DependentUpon>VistaMatricula.cs</DependentUpon>
+    <EmbeddedResource Include="Formas\Matricula\FormVistaMatricula.resx">
+      <DependentUpon>FormVistaMatricula.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="mydbDataSet.xsc">
       <DependentUpon>mydbDataSet.xsd</DependentUpon>
@@ -230,7 +275,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Formas\Pruebas\" />
