@@ -117,7 +117,6 @@
             this.label19 = new System.Windows.Forms.Label();
             this.textBox23 = new System.Windows.Forms.TextBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.button11 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.textBox45 = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
@@ -242,6 +241,17 @@
             this.label85 = new System.Windows.Forms.Label();
             this.textBox83 = new System.Windows.Forms.TextBox();
             this.label87 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBox82 = new System.Windows.Forms.TextBox();
+            this.label89 = new System.Windows.Forms.Label();
+            this.textBox84 = new System.Windows.Forms.TextBox();
+            this.label90 = new System.Windows.Forms.Label();
+            this.textBox85 = new System.Windows.Forms.TextBox();
+            this.label91 = new System.Windows.Forms.Label();
+            this.button11 = new System.Windows.Forms.Button();
+            this.Colum_Cuando = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Colum_Donde = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Colum_Diagnosticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabEntPadres.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -255,6 +265,7 @@
             this.tabPage9.SuspendLayout();
             this.tabPage10.SuspendLayout();
             this.groupBox10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabEntPadres
@@ -1085,6 +1096,13 @@
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.button11);
+            this.tabPage6.Controls.Add(this.textBox85);
+            this.tabPage6.Controls.Add(this.label91);
+            this.tabPage6.Controls.Add(this.textBox84);
+            this.tabPage6.Controls.Add(this.label90);
+            this.tabPage6.Controls.Add(this.textBox82);
+            this.tabPage6.Controls.Add(this.label89);
+            this.tabPage6.Controls.Add(this.dataGridView1);
             this.tabPage6.Controls.Add(this.button4);
             this.tabPage6.Controls.Add(this.textBox45);
             this.tabPage6.Controls.Add(this.label46);
@@ -1104,18 +1122,9 @@
             this.tabPage6.UseVisualStyleBackColor = true;
             this.tabPage6.Click += new System.EventHandler(this.tabPage6_Click);
             // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(269, 143);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(296, 23);
-            this.button11.TabIndex = 81;
-            this.button11.Text = "Sen ingresan varios acontecimientos medicos";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(414, 192);
+            this.button4.Location = new System.Drawing.Point(474, 418);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(91, 23);
             this.button4.TabIndex = 80;
@@ -2296,6 +2305,96 @@
             this.label87.Text = "Ha notado que tenga interes particular por algun juguete u objeto / cuales";
             this.label87.Click += new System.EventHandler(this.label87_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Colum_Cuando,
+            this.Colum_Donde,
+            this.Colum_Diagnosticos});
+            this.dataGridView1.Location = new System.Drawing.Point(21, 262);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(544, 150);
+            this.dataGridView1.TabIndex = 82;
+            // 
+            // textBox82
+            // 
+            this.textBox82.Location = new System.Drawing.Point(58, 236);
+            this.textBox82.Name = "textBox82";
+            this.textBox82.Size = new System.Drawing.Size(100, 20);
+            this.textBox82.TabIndex = 84;
+            // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.Location = new System.Drawing.Point(18, 239);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(44, 13);
+            this.label89.TabIndex = 83;
+            this.label89.Text = "Cuando";
+            // 
+            // textBox84
+            // 
+            this.textBox84.Location = new System.Drawing.Point(210, 236);
+            this.textBox84.Name = "textBox84";
+            this.textBox84.Size = new System.Drawing.Size(100, 20);
+            this.textBox84.TabIndex = 86;
+            // 
+            // label90
+            // 
+            this.label90.AutoSize = true;
+            this.label90.Location = new System.Drawing.Point(170, 239);
+            this.label90.Name = "label90";
+            this.label90.Size = new System.Drawing.Size(39, 13);
+            this.label90.TabIndex = 85;
+            this.label90.Text = "Donde";
+            // 
+            // textBox85
+            // 
+            this.textBox85.Location = new System.Drawing.Point(361, 236);
+            this.textBox85.Name = "textBox85";
+            this.textBox85.Size = new System.Drawing.Size(100, 20);
+            this.textBox85.TabIndex = 88;
+            // 
+            // label91
+            // 
+            this.label91.AutoSize = true;
+            this.label91.Location = new System.Drawing.Point(321, 239);
+            this.label91.Name = "label91";
+            this.label91.Size = new System.Drawing.Size(130, 13);
+            this.label91.TabIndex = 87;
+            this.label91.Text = "Diagnostico y Tratamiento";
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(474, 234);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(91, 23);
+            this.button11.TabIndex = 89;
+            this.button11.Text = "Agregar";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // Colum_Cuando
+            // 
+            this.Colum_Cuando.HeaderText = "Cuando";
+            this.Colum_Cuando.Name = "Colum_Cuando";
+            this.Colum_Cuando.ReadOnly = true;
+            // 
+            // Colum_Donde
+            // 
+            this.Colum_Donde.HeaderText = "Donde";
+            this.Colum_Donde.Name = "Colum_Donde";
+            this.Colum_Donde.ReadOnly = true;
+            // 
+            // Colum_Diagnosticos
+            // 
+            this.Colum_Diagnosticos.HeaderText = "Diagnosticos y Tratamiento";
+            this.Colum_Diagnosticos.Name = "Colum_Diagnosticos";
+            this.Colum_Diagnosticos.ReadOnly = true;
+            // 
             // FormaEntPadres
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2329,6 +2428,7 @@
             this.tabPage10.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2548,6 +2648,16 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.TextBox textBox85;
+        private System.Windows.Forms.Label label91;
+        private System.Windows.Forms.TextBox textBox84;
+        private System.Windows.Forms.Label label90;
+        private System.Windows.Forms.TextBox textBox82;
+        private System.Windows.Forms.Label label89;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Colum_Cuando;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Colum_Donde;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Colum_Diagnosticos;
     }
 }

@@ -42,6 +42,8 @@
             this.Txt_NameUser = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.Txt_PasdUser = new System.Windows.Forms.TextBox();
+            this.Cmb_Estado = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Data)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -108,6 +110,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.Cmb_Estado);
             this.groupBox1.Controls.Add(this.Bttn_OK);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.Bttn_Clean);
@@ -125,6 +129,7 @@
             this.groupBox1.TabIndex = 122;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información de Usuario";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // Bttn_OK
             // 
@@ -140,7 +145,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 40);
+            this.label9.Location = new System.Drawing.Point(12, 33);
             this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(109, 13);
@@ -160,7 +165,7 @@
             // 
             // Txt_CodUser
             // 
-            this.Txt_CodUser.Location = new System.Drawing.Point(130, 37);
+            this.Txt_CodUser.Location = new System.Drawing.Point(130, 30);
             this.Txt_CodUser.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Txt_CodUser.Name = "Txt_CodUser";
             this.Txt_CodUser.ReadOnly = true;
@@ -170,7 +175,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(12, 69);
+            this.label20.Location = new System.Drawing.Point(12, 58);
             this.label20.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(113, 13);
@@ -179,7 +184,7 @@
             // 
             // Txt_NameUser
             // 
-            this.Txt_NameUser.Location = new System.Drawing.Point(130, 66);
+            this.Txt_NameUser.Location = new System.Drawing.Point(130, 55);
             this.Txt_NameUser.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Txt_NameUser.Name = "Txt_NameUser";
             this.Txt_NameUser.Size = new System.Drawing.Size(143, 20);
@@ -189,7 +194,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(12, 104);
+            this.label19.Location = new System.Drawing.Point(12, 83);
             this.label19.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(71, 13);
@@ -198,13 +203,32 @@
             // 
             // Txt_PasdUser
             // 
-            this.Txt_PasdUser.Location = new System.Drawing.Point(130, 101);
+            this.Txt_PasdUser.Location = new System.Drawing.Point(130, 80);
             this.Txt_PasdUser.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Txt_PasdUser.Name = "Txt_PasdUser";
             this.Txt_PasdUser.Size = new System.Drawing.Size(143, 20);
             this.Txt_PasdUser.TabIndex = 113;
             this.Txt_PasdUser.UseSystemPasswordChar = true;
             this.Txt_PasdUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_PasdUser_KeyPress);
+            // 
+            // Cmb_Estado
+            // 
+            this.Cmb_Estado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Cmb_Estado.FormattingEnabled = true;
+            this.Cmb_Estado.Location = new System.Drawing.Point(130, 105);
+            this.Cmb_Estado.Name = "Cmb_Estado";
+            this.Cmb_Estado.Size = new System.Drawing.Size(143, 21);
+            this.Cmb_Estado.TabIndex = 118;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 105);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.TabIndex = 119;
+            this.label1.Text = "Estado";
             // 
             // FormUsuario
             // 
@@ -247,5 +271,7 @@
         private System.Windows.Forms.TextBox Txt_NameUser;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox Txt_PasdUser;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox Cmb_Estado;
     }
 }

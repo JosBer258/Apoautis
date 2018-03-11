@@ -55,5 +55,10 @@ namespace APOAUTIS.Formas.Usuarios
             User.Fun_New();
             User.Fun_Show(DGV_Data);
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

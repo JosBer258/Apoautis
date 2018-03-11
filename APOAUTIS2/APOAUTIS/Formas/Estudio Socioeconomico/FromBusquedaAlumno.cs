@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace APOAUTIS.Formas.Estudio_Socioeconomico
 {
-    public partial class FormaBusqEstSoc : Form
+    public partial class FromBusquedaAlumno : Form
     {
-        public FormaBusqEstSoc()
+        public FromBusquedaAlumno()
         {
             InitializeComponent();
         }
