@@ -43,9 +43,9 @@
             // DGV_Show
             // 
             this.DGV_Show.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Show.Location = new System.Drawing.Point(12, 133);
+            this.DGV_Show.Location = new System.Drawing.Point(14, 133);
             this.DGV_Show.Name = "DGV_Show";
-            this.DGV_Show.Size = new System.Drawing.Size(615, 314);
+            this.DGV_Show.Size = new System.Drawing.Size(717, 314);
             this.DGV_Show.TabIndex = 7;
             // 
             // Group_Opciones
@@ -57,27 +57,28 @@
             this.Group_Opciones.Controls.Add(this.Radio_BusquedaAnno);
             this.Group_Opciones.Controls.Add(this.Cmb_Anno);
             this.Group_Opciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Group_Opciones.Location = new System.Drawing.Point(12, 12);
+            this.Group_Opciones.Location = new System.Drawing.Point(14, 12);
             this.Group_Opciones.Name = "Group_Opciones";
-            this.Group_Opciones.Size = new System.Drawing.Size(615, 100);
+            this.Group_Opciones.Size = new System.Drawing.Size(717, 100);
             this.Group_Opciones.TabIndex = 6;
             this.Group_Opciones.TabStop = false;
             this.Group_Opciones.Text = "Opciones de Busqueda";
             // 
             // Bttn_Recargar
             // 
-            this.Bttn_Recargar.Location = new System.Drawing.Point(481, 56);
+            this.Bttn_Recargar.Location = new System.Drawing.Point(561, 56);
             this.Bttn_Recargar.Name = "Bttn_Recargar";
-            this.Bttn_Recargar.Size = new System.Drawing.Size(128, 35);
+            this.Bttn_Recargar.Size = new System.Drawing.Size(149, 35);
             this.Bttn_Recargar.TabIndex = 6;
             this.Bttn_Recargar.Text = "Recargar";
             this.Bttn_Recargar.UseVisualStyleBackColor = true;
+            this.Bttn_Recargar.Click += new System.EventHandler(this.Bttn_Recargar_Click);
             // 
             // Bttn_Salir
             // 
-            this.Bttn_Salir.Location = new System.Drawing.Point(481, 18);
+            this.Bttn_Salir.Location = new System.Drawing.Point(561, 18);
             this.Bttn_Salir.Name = "Bttn_Salir";
-            this.Bttn_Salir.Size = new System.Drawing.Size(128, 32);
+            this.Bttn_Salir.Size = new System.Drawing.Size(149, 32);
             this.Bttn_Salir.TabIndex = 5;
             this.Bttn_Salir.Text = "Salir";
             this.Bttn_Salir.UseVisualStyleBackColor = true;
@@ -86,53 +87,59 @@
             // Radio_BusquedaEstudiante
             // 
             this.Radio_BusquedaEstudiante.AutoSize = true;
-            this.Radio_BusquedaEstudiante.Location = new System.Drawing.Point(30, 30);
+            this.Radio_BusquedaEstudiante.Location = new System.Drawing.Point(35, 30);
             this.Radio_BusquedaEstudiante.Name = "Radio_BusquedaEstudiante";
-            this.Radio_BusquedaEstudiante.Size = new System.Drawing.Size(199, 20);
+            this.Radio_BusquedaEstudiante.Size = new System.Drawing.Size(232, 20);
             this.Radio_BusquedaEstudiante.TabIndex = 3;
             this.Radio_BusquedaEstudiante.TabStop = true;
             this.Radio_BusquedaEstudiante.Text = "Busqueda por estudiante";
             this.Radio_BusquedaEstudiante.UseVisualStyleBackColor = true;
+            this.Radio_BusquedaEstudiante.CheckedChanged += new System.EventHandler(this.Radio_BusquedaEstudiante_CheckedChanged);
             // 
             // Txt_NombreEstudiante
             // 
-            this.Txt_NombreEstudiante.Location = new System.Drawing.Point(276, 28);
+            this.Txt_NombreEstudiante.Location = new System.Drawing.Point(322, 28);
+            this.Txt_NombreEstudiante.MaxLength = 25;
             this.Txt_NombreEstudiante.Name = "Txt_NombreEstudiante";
-            this.Txt_NombreEstudiante.Size = new System.Drawing.Size(149, 22);
+            this.Txt_NombreEstudiante.Size = new System.Drawing.Size(173, 22);
             this.Txt_NombreEstudiante.TabIndex = 2;
+            this.Txt_NombreEstudiante.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_NombreEstudiante_KeyPress);
             // 
             // Radio_BusquedaAnno
             // 
             this.Radio_BusquedaAnno.AutoSize = true;
-            this.Radio_BusquedaAnno.Location = new System.Drawing.Point(30, 59);
+            this.Radio_BusquedaAnno.Location = new System.Drawing.Point(35, 59);
             this.Radio_BusquedaAnno.Name = "Radio_BusquedaAnno";
-            this.Radio_BusquedaAnno.Size = new System.Drawing.Size(242, 20);
+            this.Radio_BusquedaAnno.Size = new System.Drawing.Size(282, 20);
             this.Radio_BusquedaAnno.TabIndex = 1;
             this.Radio_BusquedaAnno.TabStop = true;
             this.Radio_BusquedaAnno.Text = "Busqueda por año de matricula";
             this.Radio_BusquedaAnno.UseVisualStyleBackColor = true;
+            this.Radio_BusquedaAnno.CheckedChanged += new System.EventHandler(this.Radio_BusquedaAnno_CheckedChanged);
             // 
             // Cmb_Anno
             // 
             this.Cmb_Anno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cmb_Anno.FormattingEnabled = true;
-            this.Cmb_Anno.Location = new System.Drawing.Point(276, 59);
+            this.Cmb_Anno.Location = new System.Drawing.Point(322, 59);
             this.Cmb_Anno.Name = "Cmb_Anno";
-            this.Cmb_Anno.Size = new System.Drawing.Size(149, 24);
+            this.Cmb_Anno.Size = new System.Drawing.Size(173, 24);
             this.Cmb_Anno.TabIndex = 0;
             // 
             // FormHistorialMatriculas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(642, 470);
+            this.ClientSize = new System.Drawing.Size(749, 470);
             this.ControlBox = false;
             this.Controls.Add(this.DGV_Show);
             this.Controls.Add(this.Group_Opciones);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "FormHistorialMatriculas";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Historial de Matriculas";
+            this.Load += new System.EventHandler(this.FormHistorialMatriculas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Show)).EndInit();
             this.Group_Opciones.ResumeLayout(false);
             this.Group_Opciones.PerformLayout();
