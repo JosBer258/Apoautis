@@ -57,6 +57,7 @@
     <Compile Include="Clases\C_Alumnos.cs" />
     <Compile Include="Clases\C_EntrePadres.cs" />
     <Compile Include="Clases\C_Login.cs" />
+    <Compile Include="Clases\C_Responsables.cs" />
     <Compile Include="Clases\C_Usuarios.cs" />
     <Compile Include="Clases\C_Validaciones.cs" />
     <Compile Include="Clases\DataGirdView.cs" />
