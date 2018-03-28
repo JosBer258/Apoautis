@@ -134,5 +134,11 @@ namespace APOAUTIS.Formas.Ingreso
         {
 
         }
+
+        private void rangoDeMensualidadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormRangoMensualidad Mens = new FormRangoMensualidad();
+            Mens.ShowDialog();
+        }
     }
 }

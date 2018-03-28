@@ -15,7 +15,7 @@ namespace APOAUTIS.Formas.Matricula
     public partial class FormMontoMatricula : Form
     {
         FormGlobalShowAlum F_ShowAlum = new FormGlobalShowAlum();
-        C_MontoFactura Cl_Mon = new C_MontoFactura();
+        C_MontoMens Cl_Mon = new C_MontoMens();
   
 
         public FormMontoMatricula()
@@ -113,6 +113,7 @@ namespace APOAUTIS.Formas.Matricula
 
             Cl_Mon.Fun_UpdateMensu();
             Fun_Limpiar();
+            Cl_Mon.Fun_MuestraDatosGen(DGV_Show);
         }
 
         private void Bttn_Limpiar_Click(object sender, EventArgs e)
@@ -168,6 +169,11 @@ namespace APOAUTIS.Formas.Matricula
         {
             C_Validaciones Cl_val = new C_Validaciones();
             Cl_val.ValidarNombres_SoloLetras(sender,e);
+        }
+
+        private void DGV_Show_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
