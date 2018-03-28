@@ -78,3 +78,4 @@ C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug
 C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Matricula.FormIngresoGastos.resources
 C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Matricula.FormMontoMatricula.resources
 C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Responsables.FormMantenimientoResponsable.resources
+C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Matricula.FormRangoMensualidad.resources

@@ -60,6 +60,7 @@
     <Compile Include="Clases\C_Login.cs" />
     <Compile Include="Clases\C_MontoMens.cs" />
     <Compile Include="Clases\C_MuestraHistorialMatricu.cs" />
+    <Compile Include="Clases\C_SalarioMensaulidad.cs" />
     <Compile Include="Clases\C_ShowAlum.cs" />
     <Compile Include="Clases\C_Usuarios.cs" />
     <Compile Include="Clases\C_Validaciones.cs" />
@@ -100,6 +101,12 @@
     </Compile>
     <Compile Include="Formas\Matricula\FormMontoMatricula.Designer.cs">
       <DependentUpon>FormMontoMatricula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Matricula\FormRangoMensualidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Matricula\FormRangoMensualidad.Designer.cs">
+      <DependentUpon>FormRangoMensualidad.cs</DependentUpon>
     </Compile>
     <Compile Include="Formas\Responsables\FormMantenimientoResponsable.cs">
       <SubType>Form</SubType>
@@ -203,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Matricula\FormMontoMatricula.resx">
       <DependentUpon>FormMontoMatricula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Matricula\FormRangoMensualidad.resx">
+      <DependentUpon>FormRangoMensualidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Responsables\FormMantenimientoResponsable.resx">
       <DependentUpon>FormMantenimientoResponsable.cs</DependentUpon>

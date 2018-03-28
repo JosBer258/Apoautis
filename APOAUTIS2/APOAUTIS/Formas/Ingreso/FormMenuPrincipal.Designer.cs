@@ -51,6 +51,7 @@
             this.mydbDataSet = new APOAUTIS.mydbDataSet();
             this.alumnosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.rangoDeMensualidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mydbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alumnosBindingSource)).BeginInit();
@@ -90,7 +91,8 @@
             this.vistaToolStripMenuItem2,
             this.historialToolStripMenuItem,
             this.ingresosGastosToolStripMenuItem,
-            this.montoMatriculaToolStripMenuItem});
+            this.montoMatriculaToolStripMenuItem,
+            this.rangoDeMensualidadesToolStripMenuItem});
             this.matriculaToolStripMenuItem.Name = "matriculaToolStripMenuItem";
             this.matriculaToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.matriculaToolStripMenuItem.Text = "Matricula";
@@ -99,35 +101,35 @@
             // ingresoToolStripMenuIt
             // 
             this.ingresoToolStripMenuIt.Name = "ingresoToolStripMenuIt";
-            this.ingresoToolStripMenuIt.Size = new System.Drawing.Size(231, 22);
+            this.ingresoToolStripMenuIt.Size = new System.Drawing.Size(295, 22);
             this.ingresoToolStripMenuIt.Text = "Ingreso";
             this.ingresoToolStripMenuIt.Click += new System.EventHandler(this.ingreoToolStripMenuItem_Click);
             // 
             // vistaToolStripMenuItem2
             // 
             this.vistaToolStripMenuItem2.Name = "vistaToolStripMenuItem2";
-            this.vistaToolStripMenuItem2.Size = new System.Drawing.Size(231, 22);
+            this.vistaToolStripMenuItem2.Size = new System.Drawing.Size(295, 22);
             this.vistaToolStripMenuItem2.Text = "Vista";
             this.vistaToolStripMenuItem2.Click += new System.EventHandler(this.vistaToolStripMenuItem2_Click);
             // 
             // historialToolStripMenuItem
             // 
             this.historialToolStripMenuItem.Name = "historialToolStripMenuItem";
-            this.historialToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
+            this.historialToolStripMenuItem.Size = new System.Drawing.Size(295, 22);
             this.historialToolStripMenuItem.Text = "Historial";
             this.historialToolStripMenuItem.Click += new System.EventHandler(this.historialToolStripMenuItem_Click);
             // 
             // ingresosGastosToolStripMenuItem
             // 
             this.ingresosGastosToolStripMenuItem.Name = "ingresosGastosToolStripMenuItem";
-            this.ingresosGastosToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
+            this.ingresosGastosToolStripMenuItem.Size = new System.Drawing.Size(295, 22);
             this.ingresosGastosToolStripMenuItem.Text = "Ingresos/Gastos";
             this.ingresosGastosToolStripMenuItem.Click += new System.EventHandler(this.ingresosGastosToolStripMenuItem_Click);
             // 
             // montoMatriculaToolStripMenuItem
             // 
             this.montoMatriculaToolStripMenuItem.Name = "montoMatriculaToolStripMenuItem";
-            this.montoMatriculaToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
+            this.montoMatriculaToolStripMenuItem.Size = new System.Drawing.Size(295, 22);
             this.montoMatriculaToolStripMenuItem.Text = "Monto Matricula";
             this.montoMatriculaToolStripMenuItem.Click += new System.EventHandler(this.montoMatriculaToolStripMenuItem_Click);
             // 
@@ -182,14 +184,14 @@
             // ingresoToolStripMenuItem1
             // 
             this.ingresoToolStripMenuItem1.Name = "ingresoToolStripMenuItem1";
-            this.ingresoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.ingresoToolStripMenuItem1.Size = new System.Drawing.Size(146, 22);
             this.ingresoToolStripMenuItem1.Text = "Ingreso";
             this.ingresoToolStripMenuItem1.Click += new System.EventHandler(this.ingresoToolStripMenuItem1_Click);
             // 
             // vistaToolStripMenuItem1
             // 
             this.vistaToolStripMenuItem1.Name = "vistaToolStripMenuItem1";
-            this.vistaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.vistaToolStripMenuItem1.Size = new System.Drawing.Size(146, 22);
             this.vistaToolStripMenuItem1.Text = "Vista";
             this.vistaToolStripMenuItem1.Click += new System.EventHandler(this.vistaToolStripMenuItem1_Click);
             // 
@@ -226,6 +228,13 @@
             this.pictureBox1.Size = new System.Drawing.Size(358, 351);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // rangoDeMensualidadesToolStripMenuItem
+            // 
+            this.rangoDeMensualidadesToolStripMenuItem.Name = "rangoDeMensualidadesToolStripMenuItem";
+            this.rangoDeMensualidadesToolStripMenuItem.Size = new System.Drawing.Size(295, 22);
+            this.rangoDeMensualidadesToolStripMenuItem.Text = "Rango de mensualidades";
+            this.rangoDeMensualidadesToolStripMenuItem.Click += new System.EventHandler(this.rangoDeMensualidadesToolStripMenuItem_Click);
             // 
             // FormMenuPrincipal
             // 
@@ -277,5 +286,6 @@
         private System.Windows.Forms.ToolStripMenuItem montoMatriculaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem responsablesToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem rangoDeMensualidadesToolStripMenuItem;
     }
 }
