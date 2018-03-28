@@ -244,6 +244,7 @@
             this.DGV_Show.ReadOnly = true;
             this.DGV_Show.Size = new System.Drawing.Size(738, 194);
             this.DGV_Show.TabIndex = 0;
+            this.DGV_Show.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Show_CellContentClick);
             this.DGV_Show.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Show_CellContentDoubleClick);
             this.DGV_Show.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Show_CellDoubleClick);
             // 
