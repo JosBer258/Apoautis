@@ -31,124 +31,124 @@
             this.tabEstSocioEco = new System.Windows.Forms.TabControl();
             this.DatosGenerales = new System.Windows.Forms.TabPage();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.textBox66 = new System.Windows.Forms.TextBox();
-            this.textBox64 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_lugar_DatosGe = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_PersonaEntre_DatosGe = new System.Windows.Forms.TextBox();
             this.label69 = new System.Windows.Forms.Label();
             this.label68 = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
-            this.textBox65 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_fecha_DatosGe = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_TelTrabPadre_DatosGe = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_CelPadre_DatosGe = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_TelCAsaPadre_DatosGe = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.combox_EsSo_TrabajaPadre_forma = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_LugarTrabPadre_forma = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_OficioPadre_forma = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_DomiciPadre_DatosGe = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_IdentPadre_DatosGe = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_NomPadre_DatosGe = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Combox_EsSo_SexoEst_DatosGe = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_IdentiEst_DatosGe = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_EdadEst_DatosGe = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_FechaNa_DatosGe = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_LugarNaci_DatosGe = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_NombreEst_DatosGe = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btm_EsSo_Siguiente_DatosGe = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
-            this.textBox26 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_NomEncarg_DatosGe = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_ParentescoEncar_DatosGe = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_OficioEncarg_DatosGe = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_EdadEncarg_DatosGe = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_TelEncarg_DatosGe = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_TelTrabMadre_DatosGe = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_CelMadre_DatosGe = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_TelCasaMadre_DatosGe = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.Combox_EsSo_TrabajaMadre_forma = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_LugarTrabMadre_forma = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_OficioMadre_forma = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_DomiciMadre_DatosGe = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_IdentMadre_DatosGe = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_NomMadre_DatosGe = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.InformacionFamilia = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btm_EsSo_Siguiente_InfoFami = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.textBox48 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_TotalGastos_InfoFami = new System.Windows.Forms.TextBox();
             this.label52 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
-            this.textBox49 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_Otros_InfoFami = new System.Windows.Forms.TextBox();
             this.label54 = new System.Windows.Forms.Label();
-            this.textBox50 = new System.Windows.Forms.TextBox();
-            this.textBox51 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_Alquiler_InfoFami = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_Vestime_InfoFami = new System.Windows.Forms.TextBox();
             this.label55 = new System.Windows.Forms.Label();
-            this.textBox47 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_Combus_InfoFami = new System.Windows.Forms.TextBox();
             this.label51 = new System.Windows.Forms.Label();
-            this.textBox40 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_Alimentos_InfoFami = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
-            this.textBox41 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_Educa_InfoFami = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
-            this.textBox42 = new System.Windows.Forms.TextBox();
-            this.textBox43 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_Salud_InfoFami = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_Transp_InfoFami = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
-            this.textBox44 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_Telefono_InfoFami = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
-            this.textBox45 = new System.Windows.Forms.TextBox();
-            this.textBox46 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_Agua_InfoFami = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_Energia_InfoFami = new System.Windows.Forms.TextBox();
             this.label50 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox39 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_IngreTotales_InfoFami = new System.Windows.Forms.TextBox();
             this.label43 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
-            this.textBox36 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_IngreOtros_InfoFami = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
-            this.textBox37 = new System.Windows.Forms.TextBox();
-            this.textBox38 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_IngrePencion_InfoFami = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_IngreHijo_InfoFami = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
-            this.textBox33 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_IngreMadre_InfoFami = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
-            this.textBox34 = new System.Windows.Forms.TextBox();
-            this.textBox35 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_IngrePadre_InfoFami = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_IngreAbue_InfoFami = new System.Windows.Forms.TextBox();
             this.label39 = new System.Windows.Forms.Label();
-            this.textBox32 = new System.Windows.Forms.TextBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.textBox31 = new System.Windows.Forms.TextBox();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_TotalTraba_InfoFami = new System.Windows.Forms.TextBox();
+            this.combox_EsSo_CuantosFami_InfoFami = new System.Windows.Forms.ComboBox();
+            this.txt_EsSo_TotalMiemb_InfoFami = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_CuantosFamil_InfoFami = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_CuantosHijos_InfoFami = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_MasHijos_InfoFami = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_HabitantesCasa_InfoFami = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
@@ -158,89 +158,91 @@
             this.label26 = new System.Windows.Forms.Label();
             this.SaludRecreacion = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
-            this.textBox67 = new System.Windows.Forms.TextBox();
-            this.label71 = new System.Windows.Forms.Label();
             this.label70 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.radioButton14 = new System.Windows.Forms.RadioButton();
-            this.textBox59 = new System.Windows.Forms.TextBox();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
+            this.chekbox_EsSo_Ninguno_SaludRecre = new System.Windows.Forms.RadioButton();
+            this.txt_EsSo_CentrosCom_SaludRecre = new System.Windows.Forms.TextBox();
+            this.combox_EsSo_CentrosCom_SaludRecre = new System.Windows.Forms.ComboBox();
             this.label63 = new System.Windows.Forms.Label();
-            this.textBox58 = new System.Windows.Forms.TextBox();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
+            this.txt_EsSo_Museos_SaludRecre = new System.Windows.Forms.TextBox();
+            this.combox_EsSo_Museos_SaludRecre = new System.Windows.Forms.ComboBox();
             this.label62 = new System.Windows.Forms.Label();
-            this.textBox57 = new System.Windows.Forms.TextBox();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.txt_EsSo_cine_SaludRecre = new System.Windows.Forms.TextBox();
+            this.combox_EsSo_Cine_SaludRecre = new System.Windows.Forms.ComboBox();
             this.label61 = new System.Windows.Forms.Label();
             this.textBox56 = new System.Windows.Forms.TextBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.combox_EsSo_Playa_SaludRecre = new System.Windows.Forms.ComboBox();
             this.label60 = new System.Windows.Forms.Label();
-            this.textBox55 = new System.Windows.Forms.TextBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.txt_EsSo_OtrosLugares_SaludRecre = new System.Windows.Forms.TextBox();
+            this.combox_EsSo_OtrosLugares_SaludRecre = new System.Windows.Forms.ComboBox();
             this.label59 = new System.Windows.Forms.Label();
-            this.textBox54 = new System.Windows.Forms.TextBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.txt_EsSo_Balnearios_SaludRecre = new System.Windows.Forms.TextBox();
+            this.combox_EsSo_Balnearios_SaludRecre = new System.Windows.Forms.ComboBox();
             this.label58 = new System.Windows.Forms.Label();
-            this.textBox53 = new System.Windows.Forms.TextBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.txt_EsSo_Parques_SaludRecre = new System.Windows.Forms.TextBox();
+            this.combox_EsSo_Parques_SaludRecre = new System.Windows.Forms.ComboBox();
             this.label57 = new System.Windows.Forms.Label();
-            this.textBox52 = new System.Windows.Forms.TextBox();
+            this.chekbox_EsSo_GastoMedi_SaludRecre = new System.Windows.Forms.TextBox();
             this.label56 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
+            this.chekbox_EsSo_NingunaEnfer_SaludRecre = new System.Windows.Forms.CheckBox();
+            this.chekbox_EsSo_OtraEnfer_SaludRecre = new System.Windows.Forms.CheckBox();
+            this.chekbox_EsSo_InfecRespi_SaludRecre = new System.Windows.Forms.CheckBox();
+            this.chekbox_EsSo_HiperTensi_SaludRecre = new System.Windows.Forms.CheckBox();
+            this.chekbox_EsSo_Diabetes_SaludRecre = new System.Windows.Forms.CheckBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.chekbox_EsSo_OtroSalud_SaludRecre = new System.Windows.Forms.CheckBox();
+            this.chekbox_EsSo_ClinicaPart_SaludRecre = new System.Windows.Forms.CheckBox();
+            this.chekbox_EsSo_CentroSalud_SaludRecre = new System.Windows.Forms.CheckBox();
+            this.chekbox_EsSo_HospiSanfe_SaludRecre = new System.Windows.Forms.CheckBox();
+            this.chekbox_EsSo_HospEscu_SaludRecre = new System.Windows.Forms.CheckBox();
+            this.chekbox_EsSo_ihss_SaludRecre = new System.Windows.Forms.CheckBox();
             this.InformacionVivienda = new System.Windows.Forms.TabPage();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btm_EsSo_MontoMatri_InfoVivien = new System.Windows.Forms.Button();
+            this.btm_EsSo_Finalizar_InfoVivien = new System.Windows.Forms.Button();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.radioButton13 = new System.Windows.Forms.RadioButton();
-            this.radioButton12 = new System.Windows.Forms.RadioButton();
+            this.rbtm_EsSo_Madera_InfoVivien = new System.Windows.Forms.RadioButton();
+            this.rbtm_EsSo_OtroMaterPiso_InfoVivien = new System.Windows.Forms.RadioButton();
             this.radioButton11 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
+            this.rbtm_EsSo_CEramica_InfoVivien = new System.Windows.Forms.RadioButton();
             this.label64 = new System.Windows.Forms.Label();
-            this.textBox63 = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.txt_EsSo_OtroMaterPiso_InfoVivien = new System.Windows.Forms.TextBox();
+            this.rbtm_EsSo_Propia_InfoVivien = new System.Windows.Forms.RadioButton();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rbtm_EsSo_Alquilada_InfoVivien = new System.Windows.Forms.RadioButton();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.textBox61 = new System.Windows.Forms.TextBox();
+            this.rbtm_EsSo_OtroCaracte_InfoVivien = new System.Windows.Forms.RadioButton();
+            this.rbtm_EsSo_Tierra_InfoVivien = new System.Windows.Forms.RadioButton();
+            this.txt_EsSo_OtroCaracte_InfoVivien = new System.Windows.Forms.TextBox();
             this.label66 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
-            this.textBox62 = new System.Windows.Forms.TextBox();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.txt_EsSo_OtroMaterial_InfoVivien = new System.Windows.Forms.TextBox();
+            this.rbtm_EsSo_Ladrillo_InfoVivien = new System.Windows.Forms.RadioButton();
+            this.rbtm_EsSo_OtroMaterial_InfoVivien = new System.Windows.Forms.RadioButton();
+            this.rbtm_EsSo_Bloque_InfoVivien = new System.Windows.Forms.RadioButton();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.textBox60 = new System.Windows.Forms.TextBox();
-            this.checkBox27 = new System.Windows.Forms.CheckBox();
-            this.checkBox28 = new System.Windows.Forms.CheckBox();
-            this.checkBox29 = new System.Windows.Forms.CheckBox();
-            this.checkBox30 = new System.Windows.Forms.CheckBox();
-            this.checkBox31 = new System.Windows.Forms.CheckBox();
+            this.txt_EsSo_OtroServicio_InfoVivien = new System.Windows.Forms.TextBox();
+            this.chekbox_EsSo_Telefono_InfoVivien = new System.Windows.Forms.CheckBox();
+            this.chekbox_EsSo_OtrosServ_InfoVivien = new System.Windows.Forms.CheckBox();
+            this.chekbox_EsSo_Alcantari_InfoVivien = new System.Windows.Forms.CheckBox();
+            this.chekbox_EsSo_Agua_InfoVivien = new System.Windows.Forms.CheckBox();
+            this.chekbox_EsSo_Energia_InfoVivien = new System.Windows.Forms.CheckBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.checkBox20 = new System.Windows.Forms.CheckBox();
-            this.checkBox21 = new System.Windows.Forms.CheckBox();
-            this.checkBox22 = new System.Windows.Forms.CheckBox();
-            this.checkBox23 = new System.Windows.Forms.CheckBox();
-            this.checkBox24 = new System.Windows.Forms.CheckBox();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.checkBox14 = new System.Windows.Forms.CheckBox();
-            this.checkBox15 = new System.Windows.Forms.CheckBox();
-            this.checkBox16 = new System.Windows.Forms.CheckBox();
-            this.checkBox17 = new System.Windows.Forms.CheckBox();
-            this.checkBox18 = new System.Windows.Forms.CheckBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.chekbox_EsSo_AireAcon_InfoVivien = new System.Windows.Forms.CheckBox();
+            this.chekbox_EsSo_Microondas_InfoVivien = new System.Windows.Forms.CheckBox();
+            this.chekbox_EsSo_Automovil_InfoVivien = new System.Windows.Forms.CheckBox();
+            this.chekbox_EsSo_Estufa_InfoVivien = new System.Windows.Forms.CheckBox();
+            this.chekbox_EsSo_Refri_InfoVivien = new System.Windows.Forms.CheckBox();
+            this.chekbox_EsSo_Ventila_nfoVivien = new System.Windows.Forms.CheckBox();
+            this.chekbox_EsSo_Compu_InfoVivien = new System.Windows.Forms.CheckBox();
+            this.chekbox_EsSo_Lavadora_InfoVivien = new System.Windows.Forms.CheckBox();
+            this.chekbox_EsSo_Ducha_InfoVivien = new System.Windows.Forms.CheckBox();
+            this.chekbox_EsSo_EquipoSoni_InfoVivien = new System.Windows.Forms.CheckBox();
+            this.chekbox_EsSo_Tele_InfoVivien = new System.Windows.Forms.CheckBox();
+            this.btm_EsSo_BuscarAlumno_DatosGe = new System.Windows.Forms.Button();
+            this.label72 = new System.Windows.Forms.Label();
+            this.label71 = new System.Windows.Forms.Label();
+            this.txt_EsSo_Aporbado_SaludRecre = new System.Windows.Forms.TextBox();
             this.tabEstSocioEco.SuspendLayout();
             this.DatosGenerales.SuspendLayout();
             this.groupBox13.SuspendLayout();
@@ -270,11 +272,13 @@
             this.tabEstSocioEco.Location = new System.Drawing.Point(12, 12);
             this.tabEstSocioEco.Name = "tabEstSocioEco";
             this.tabEstSocioEco.SelectedIndex = 0;
-            this.tabEstSocioEco.Size = new System.Drawing.Size(719, 526);
+            this.tabEstSocioEco.Size = new System.Drawing.Size(781, 570);
             this.tabEstSocioEco.TabIndex = 0;
             // 
             // DatosGenerales
             // 
+            this.DatosGenerales.Controls.Add(this.label72);
+            this.DatosGenerales.Controls.Add(this.btm_EsSo_BuscarAlumno_DatosGe);
             this.DatosGenerales.Controls.Add(this.groupBox13);
             this.DatosGenerales.Controls.Add(this.groupBox2);
             this.DatosGenerales.Controls.Add(this.groupBox4);
@@ -283,7 +287,7 @@
             this.DatosGenerales.Location = new System.Drawing.Point(4, 22);
             this.DatosGenerales.Name = "DatosGenerales";
             this.DatosGenerales.Padding = new System.Windows.Forms.Padding(3);
-            this.DatosGenerales.Size = new System.Drawing.Size(711, 500);
+            this.DatosGenerales.Size = new System.Drawing.Size(773, 544);
             this.DatosGenerales.TabIndex = 0;
             this.DatosGenerales.Text = "Datos Generales";
             this.DatosGenerales.UseVisualStyleBackColor = true;
@@ -291,32 +295,33 @@
             // 
             // groupBox13
             // 
-            this.groupBox13.Controls.Add(this.textBox66);
-            this.groupBox13.Controls.Add(this.textBox64);
+            this.groupBox13.Controls.Add(this.txt_EsSo_lugar_DatosGe);
+            this.groupBox13.Controls.Add(this.txt_EsSo_PersonaEntre_DatosGe);
             this.groupBox13.Controls.Add(this.label69);
             this.groupBox13.Controls.Add(this.label68);
             this.groupBox13.Controls.Add(this.label67);
-            this.groupBox13.Controls.Add(this.textBox65);
-            this.groupBox13.Location = new System.Drawing.Point(17, 22);
+            this.groupBox13.Controls.Add(this.txt_EsSo_fecha_DatosGe);
+            this.groupBox13.Location = new System.Drawing.Point(15, 73);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Size = new System.Drawing.Size(238, 135);
             this.groupBox13.TabIndex = 40;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Datos de Entrevista";
             // 
-            // textBox66
+            // txt_EsSo_lugar_DatosGe
             // 
-            this.textBox66.Location = new System.Drawing.Point(126, 19);
-            this.textBox66.Name = "textBox66";
-            this.textBox66.Size = new System.Drawing.Size(100, 20);
-            this.textBox66.TabIndex = 34;
+            this.txt_EsSo_lugar_DatosGe.Location = new System.Drawing.Point(126, 19);
+            this.txt_EsSo_lugar_DatosGe.Name = "txt_EsSo_lugar_DatosGe";
+            this.txt_EsSo_lugar_DatosGe.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_lugar_DatosGe.TabIndex = 34;
+            this.txt_EsSo_lugar_DatosGe.TextChanged += new System.EventHandler(this.txt_EsSo_lugar_TextChanged);
             // 
-            // textBox64
+            // txt_EsSo_PersonaEntre_DatosGe
             // 
-            this.textBox64.Location = new System.Drawing.Point(126, 71);
-            this.textBox64.Name = "textBox64";
-            this.textBox64.Size = new System.Drawing.Size(100, 20);
-            this.textBox64.TabIndex = 38;
+            this.txt_EsSo_PersonaEntre_DatosGe.Location = new System.Drawing.Point(126, 71);
+            this.txt_EsSo_PersonaEntre_DatosGe.Name = "txt_EsSo_PersonaEntre_DatosGe";
+            this.txt_EsSo_PersonaEntre_DatosGe.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_PersonaEntre_DatosGe.TabIndex = 38;
             // 
             // label69
             // 
@@ -345,34 +350,35 @@
             this.label67.TabIndex = 37;
             this.label67.Text = "Persona Entrevistada";
             // 
-            // textBox65
+            // txt_EsSo_fecha_DatosGe
             // 
-            this.textBox65.Location = new System.Drawing.Point(126, 45);
-            this.textBox65.Name = "textBox65";
-            this.textBox65.Size = new System.Drawing.Size(100, 20);
-            this.textBox65.TabIndex = 36;
+            this.txt_EsSo_fecha_DatosGe.Location = new System.Drawing.Point(126, 45);
+            this.txt_EsSo_fecha_DatosGe.Name = "txt_EsSo_fecha_DatosGe";
+            this.txt_EsSo_fecha_DatosGe.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_fecha_DatosGe.TabIndex = 36;
+            this.txt_EsSo_fecha_DatosGe.TextChanged += new System.EventHandler(this.textBox65_TextChanged);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.textBox14);
+            this.groupBox2.Controls.Add(this.txt_EsSo_TelTrabPadre_DatosGe);
             this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.textBox15);
-            this.groupBox2.Controls.Add(this.textBox16);
+            this.groupBox2.Controls.Add(this.txt_EsSo_CelPadre_DatosGe);
+            this.groupBox2.Controls.Add(this.txt_EsSo_TelCAsaPadre_DatosGe);
             this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Controls.Add(this.comboBox3);
+            this.groupBox2.Controls.Add(this.combox_EsSo_TrabajaPadre_forma);
             this.groupBox2.Controls.Add(this.label20);
-            this.groupBox2.Controls.Add(this.textBox17);
+            this.groupBox2.Controls.Add(this.txt_EsSo_LugarTrabPadre_forma);
             this.groupBox2.Controls.Add(this.label21);
-            this.groupBox2.Controls.Add(this.textBox18);
+            this.groupBox2.Controls.Add(this.txt_EsSo_OficioPadre_forma);
             this.groupBox2.Controls.Add(this.label22);
-            this.groupBox2.Controls.Add(this.textBox19);
+            this.groupBox2.Controls.Add(this.txt_EsSo_DomiciPadre_DatosGe);
             this.groupBox2.Controls.Add(this.label23);
-            this.groupBox2.Controls.Add(this.textBox20);
-            this.groupBox2.Controls.Add(this.textBox21);
+            this.groupBox2.Controls.Add(this.txt_EsSo_IdentPadre_DatosGe);
+            this.groupBox2.Controls.Add(this.txt_EsSo_NomPadre_DatosGe);
             this.groupBox2.Controls.Add(this.label24);
-            this.groupBox2.Location = new System.Drawing.Point(17, 282);
+            this.groupBox2.Location = new System.Drawing.Point(15, 333);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(682, 113);
             this.groupBox2.TabIndex = 32;
@@ -388,12 +394,12 @@
             this.label16.TabIndex = 31;
             this.label16.Text = "Telefono Celular";
             // 
-            // textBox14
+            // txt_EsSo_TelTrabPadre_DatosGe
             // 
-            this.textBox14.Location = new System.Drawing.Point(562, 71);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(100, 20);
-            this.textBox14.TabIndex = 30;
+            this.txt_EsSo_TelTrabPadre_DatosGe.Location = new System.Drawing.Point(562, 71);
+            this.txt_EsSo_TelTrabPadre_DatosGe.Name = "txt_EsSo_TelTrabPadre_DatosGe";
+            this.txt_EsSo_TelTrabPadre_DatosGe.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_TelTrabPadre_DatosGe.TabIndex = 30;
             // 
             // label17
             // 
@@ -404,19 +410,19 @@
             this.label17.TabIndex = 29;
             this.label17.Text = "Telefono del Trabajo";
             // 
-            // textBox15
+            // txt_EsSo_CelPadre_DatosGe
             // 
-            this.textBox15.Location = new System.Drawing.Point(562, 45);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(100, 20);
-            this.textBox15.TabIndex = 28;
+            this.txt_EsSo_CelPadre_DatosGe.Location = new System.Drawing.Point(562, 45);
+            this.txt_EsSo_CelPadre_DatosGe.Name = "txt_EsSo_CelPadre_DatosGe";
+            this.txt_EsSo_CelPadre_DatosGe.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_CelPadre_DatosGe.TabIndex = 28;
             // 
-            // textBox16
+            // txt_EsSo_TelCAsaPadre_DatosGe
             // 
-            this.textBox16.Location = new System.Drawing.Point(562, 19);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(100, 20);
-            this.textBox16.TabIndex = 27;
+            this.txt_EsSo_TelCAsaPadre_DatosGe.Location = new System.Drawing.Point(562, 19);
+            this.txt_EsSo_TelCAsaPadre_DatosGe.Name = "txt_EsSo_TelCAsaPadre_DatosGe";
+            this.txt_EsSo_TelCAsaPadre_DatosGe.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_TelCAsaPadre_DatosGe.TabIndex = 27;
             // 
             // label18
             // 
@@ -436,14 +442,17 @@
             this.label19.TabIndex = 25;
             this.label19.Text = "Lugar de Trabajo";
             // 
-            // comboBox3
+            // combox_EsSo_TrabajaPadre_forma
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(336, 45);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(101, 21);
-            this.comboBox3.TabIndex = 24;
+            this.combox_EsSo_TrabajaPadre_forma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combox_EsSo_TrabajaPadre_forma.FormattingEnabled = true;
+            this.combox_EsSo_TrabajaPadre_forma.Items.AddRange(new object[] {
+            "Si",
+            "No"});
+            this.combox_EsSo_TrabajaPadre_forma.Location = new System.Drawing.Point(336, 45);
+            this.combox_EsSo_TrabajaPadre_forma.Name = "combox_EsSo_TrabajaPadre_forma";
+            this.combox_EsSo_TrabajaPadre_forma.Size = new System.Drawing.Size(101, 21);
+            this.combox_EsSo_TrabajaPadre_forma.TabIndex = 24;
             // 
             // label20
             // 
@@ -454,12 +463,12 @@
             this.label20.TabIndex = 23;
             this.label20.Text = "Trabaja";
             // 
-            // textBox17
+            // txt_EsSo_LugarTrabPadre_forma
             // 
-            this.textBox17.Location = new System.Drawing.Point(336, 71);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(100, 20);
-            this.textBox17.TabIndex = 22;
+            this.txt_EsSo_LugarTrabPadre_forma.Location = new System.Drawing.Point(336, 71);
+            this.txt_EsSo_LugarTrabPadre_forma.Name = "txt_EsSo_LugarTrabPadre_forma";
+            this.txt_EsSo_LugarTrabPadre_forma.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_LugarTrabPadre_forma.TabIndex = 22;
             // 
             // label21
             // 
@@ -470,12 +479,12 @@
             this.label21.TabIndex = 21;
             this.label21.Text = "No. de Identidad";
             // 
-            // textBox18
+            // txt_EsSo_OficioPadre_forma
             // 
-            this.textBox18.Location = new System.Drawing.Point(337, 19);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(100, 20);
-            this.textBox18.TabIndex = 20;
+            this.txt_EsSo_OficioPadre_forma.Location = new System.Drawing.Point(337, 19);
+            this.txt_EsSo_OficioPadre_forma.Name = "txt_EsSo_OficioPadre_forma";
+            this.txt_EsSo_OficioPadre_forma.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_OficioPadre_forma.TabIndex = 20;
             // 
             // label22
             // 
@@ -486,12 +495,12 @@
             this.label22.TabIndex = 19;
             this.label22.Text = "Profesion/Oficio";
             // 
-            // textBox19
+            // txt_EsSo_DomiciPadre_DatosGe
             // 
-            this.textBox19.Location = new System.Drawing.Point(117, 71);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(100, 20);
-            this.textBox19.TabIndex = 18;
+            this.txt_EsSo_DomiciPadre_DatosGe.Location = new System.Drawing.Point(117, 71);
+            this.txt_EsSo_DomiciPadre_DatosGe.Name = "txt_EsSo_DomiciPadre_DatosGe";
+            this.txt_EsSo_DomiciPadre_DatosGe.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_DomiciPadre_DatosGe.TabIndex = 18;
             // 
             // label23
             // 
@@ -502,19 +511,19 @@
             this.label23.TabIndex = 17;
             this.label23.Text = "Domicilio";
             // 
-            // textBox20
+            // txt_EsSo_IdentPadre_DatosGe
             // 
-            this.textBox20.Location = new System.Drawing.Point(117, 45);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(100, 20);
-            this.textBox20.TabIndex = 16;
+            this.txt_EsSo_IdentPadre_DatosGe.Location = new System.Drawing.Point(117, 45);
+            this.txt_EsSo_IdentPadre_DatosGe.Name = "txt_EsSo_IdentPadre_DatosGe";
+            this.txt_EsSo_IdentPadre_DatosGe.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_IdentPadre_DatosGe.TabIndex = 16;
             // 
-            // textBox21
+            // txt_EsSo_NomPadre_DatosGe
             // 
-            this.textBox21.Location = new System.Drawing.Point(117, 19);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(100, 20);
-            this.textBox21.TabIndex = 14;
+            this.txt_EsSo_NomPadre_DatosGe.Location = new System.Drawing.Point(117, 19);
+            this.txt_EsSo_NomPadre_DatosGe.Name = "txt_EsSo_NomPadre_DatosGe";
+            this.txt_EsSo_NomPadre_DatosGe.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_NomPadre_DatosGe.TabIndex = 14;
             // 
             // label24
             // 
@@ -527,33 +536,36 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.comboBox1);
+            this.groupBox4.Controls.Add(this.Combox_EsSo_SexoEst_DatosGe);
             this.groupBox4.Controls.Add(this.label6);
-            this.groupBox4.Controls.Add(this.textBox5);
+            this.groupBox4.Controls.Add(this.txt_EsSo_IdentiEst_DatosGe);
             this.groupBox4.Controls.Add(this.label5);
-            this.groupBox4.Controls.Add(this.textBox4);
+            this.groupBox4.Controls.Add(this.txt_EsSo_EdadEst_DatosGe);
             this.groupBox4.Controls.Add(this.label4);
-            this.groupBox4.Controls.Add(this.textBox3);
+            this.groupBox4.Controls.Add(this.txt_EsSo_FechaNa_DatosGe);
             this.groupBox4.Controls.Add(this.label3);
-            this.groupBox4.Controls.Add(this.textBox2);
+            this.groupBox4.Controls.Add(this.txt_EsSo_LugarNaci_DatosGe);
             this.groupBox4.Controls.Add(this.label2);
-            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Controls.Add(this.txt_EsSo_NombreEst_DatosGe);
             this.groupBox4.Controls.Add(this.label1);
-            this.groupBox4.Location = new System.Drawing.Point(261, 22);
+            this.groupBox4.Location = new System.Drawing.Point(259, 73);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(438, 135);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Datos del Beneficiario (a)";
             // 
-            // comboBox1
+            // Combox_EsSo_SexoEst_DatosGe
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(318, 19);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(101, 21);
-            this.comboBox1.TabIndex = 12;
+            this.Combox_EsSo_SexoEst_DatosGe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Combox_EsSo_SexoEst_DatosGe.FormattingEnabled = true;
+            this.Combox_EsSo_SexoEst_DatosGe.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino"});
+            this.Combox_EsSo_SexoEst_DatosGe.Location = new System.Drawing.Point(318, 19);
+            this.Combox_EsSo_SexoEst_DatosGe.Name = "Combox_EsSo_SexoEst_DatosGe";
+            this.Combox_EsSo_SexoEst_DatosGe.Size = new System.Drawing.Size(101, 21);
+            this.Combox_EsSo_SexoEst_DatosGe.TabIndex = 12;
             // 
             // label6
             // 
@@ -564,12 +576,13 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Sexo";
             // 
-            // textBox5
+            // txt_EsSo_IdentiEst_DatosGe
             // 
-            this.textBox5.Location = new System.Drawing.Point(319, 45);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 9;
+            this.txt_EsSo_IdentiEst_DatosGe.Location = new System.Drawing.Point(319, 45);
+            this.txt_EsSo_IdentiEst_DatosGe.Name = "txt_EsSo_IdentiEst_DatosGe";
+            this.txt_EsSo_IdentiEst_DatosGe.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_IdentiEst_DatosGe.TabIndex = 9;
+            this.txt_EsSo_IdentiEst_DatosGe.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label5
             // 
@@ -580,12 +593,12 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "No. de Identidad";
             // 
-            // textBox4
+            // txt_EsSo_EdadEst_DatosGe
             // 
-            this.textBox4.Location = new System.Drawing.Point(119, 97);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 7;
+            this.txt_EsSo_EdadEst_DatosGe.Location = new System.Drawing.Point(119, 97);
+            this.txt_EsSo_EdadEst_DatosGe.Name = "txt_EsSo_EdadEst_DatosGe";
+            this.txt_EsSo_EdadEst_DatosGe.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_EdadEst_DatosGe.TabIndex = 7;
             // 
             // label4
             // 
@@ -596,12 +609,12 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Edad";
             // 
-            // textBox3
+            // txt_EsSo_FechaNa_DatosGe
             // 
-            this.textBox3.Location = new System.Drawing.Point(119, 71);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 5;
+            this.txt_EsSo_FechaNa_DatosGe.Location = new System.Drawing.Point(119, 71);
+            this.txt_EsSo_FechaNa_DatosGe.Name = "txt_EsSo_FechaNa_DatosGe";
+            this.txt_EsSo_FechaNa_DatosGe.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_FechaNa_DatosGe.TabIndex = 5;
             // 
             // label3
             // 
@@ -612,12 +625,12 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Fecha Nacimiento";
             // 
-            // textBox2
+            // txt_EsSo_LugarNaci_DatosGe
             // 
-            this.textBox2.Location = new System.Drawing.Point(119, 45);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
+            this.txt_EsSo_LugarNaci_DatosGe.Location = new System.Drawing.Point(119, 45);
+            this.txt_EsSo_LugarNaci_DatosGe.Name = "txt_EsSo_LugarNaci_DatosGe";
+            this.txt_EsSo_LugarNaci_DatosGe.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_LugarNaci_DatosGe.TabIndex = 3;
             // 
             // label2
             // 
@@ -628,12 +641,12 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Lugar de Nacimiento";
             // 
-            // textBox1
+            // txt_EsSo_NombreEst_DatosGe
             // 
-            this.textBox1.Location = new System.Drawing.Point(119, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.txt_EsSo_NombreEst_DatosGe.Location = new System.Drawing.Point(119, 19);
+            this.txt_EsSo_NombreEst_DatosGe.Name = "txt_EsSo_NombreEst_DatosGe";
+            this.txt_EsSo_NombreEst_DatosGe.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_NombreEst_DatosGe.TabIndex = 1;
             // 
             // label1
             // 
@@ -646,33 +659,33 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.btm_EsSo_Siguiente_DatosGe);
             this.groupBox3.Controls.Add(this.label25);
-            this.groupBox3.Controls.Add(this.textBox26);
+            this.groupBox3.Controls.Add(this.txt_EsSo_NomEncarg_DatosGe);
             this.groupBox3.Controls.Add(this.label30);
-            this.groupBox3.Controls.Add(this.textBox25);
-            this.groupBox3.Controls.Add(this.textBox22);
+            this.groupBox3.Controls.Add(this.txt_EsSo_ParentescoEncar_DatosGe);
+            this.groupBox3.Controls.Add(this.txt_EsSo_OficioEncarg_DatosGe);
             this.groupBox3.Controls.Add(this.label29);
             this.groupBox3.Controls.Add(this.label27);
-            this.groupBox3.Controls.Add(this.textBox24);
-            this.groupBox3.Controls.Add(this.textBox23);
+            this.groupBox3.Controls.Add(this.txt_EsSo_EdadEncarg_DatosGe);
+            this.groupBox3.Controls.Add(this.txt_EsSo_TelEncarg_DatosGe);
             this.groupBox3.Controls.Add(this.label28);
-            this.groupBox3.Location = new System.Drawing.Point(17, 401);
+            this.groupBox3.Location = new System.Drawing.Point(15, 452);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(682, 88);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos del encargado en caso de ser otro familiar";
             // 
-            // button1
+            // btm_EsSo_Siguiente_DatosGe
             // 
-            this.button1.Location = new System.Drawing.Point(572, 53);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 23);
-            this.button1.TabIndex = 44;
-            this.button1.Text = "Siguiente";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btm_EsSo_Siguiente_DatosGe.Location = new System.Drawing.Point(572, 53);
+            this.btm_EsSo_Siguiente_DatosGe.Name = "btm_EsSo_Siguiente_DatosGe";
+            this.btm_EsSo_Siguiente_DatosGe.Size = new System.Drawing.Size(91, 23);
+            this.btm_EsSo_Siguiente_DatosGe.TabIndex = 44;
+            this.btm_EsSo_Siguiente_DatosGe.Text = "Siguiente";
+            this.btm_EsSo_Siguiente_DatosGe.UseVisualStyleBackColor = true;
+            this.btm_EsSo_Siguiente_DatosGe.Click += new System.EventHandler(this.button1_Click);
             // 
             // label25
             // 
@@ -683,12 +696,12 @@
             this.label25.TabIndex = 43;
             this.label25.Text = "Telefono";
             // 
-            // textBox26
+            // txt_EsSo_NomEncarg_DatosGe
             // 
-            this.textBox26.Location = new System.Drawing.Point(119, 29);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(100, 20);
-            this.textBox26.TabIndex = 33;
+            this.txt_EsSo_NomEncarg_DatosGe.Location = new System.Drawing.Point(119, 29);
+            this.txt_EsSo_NomEncarg_DatosGe.Name = "txt_EsSo_NomEncarg_DatosGe";
+            this.txt_EsSo_NomEncarg_DatosGe.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_NomEncarg_DatosGe.TabIndex = 33;
             // 
             // label30
             // 
@@ -699,19 +712,19 @@
             this.label30.TabIndex = 32;
             this.label30.Text = "Nombre";
             // 
-            // textBox25
+            // txt_EsSo_ParentescoEncar_DatosGe
             // 
-            this.textBox25.Location = new System.Drawing.Point(119, 55);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(100, 20);
-            this.textBox25.TabIndex = 34;
+            this.txt_EsSo_ParentescoEncar_DatosGe.Location = new System.Drawing.Point(119, 55);
+            this.txt_EsSo_ParentescoEncar_DatosGe.Name = "txt_EsSo_ParentescoEncar_DatosGe";
+            this.txt_EsSo_ParentescoEncar_DatosGe.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_ParentescoEncar_DatosGe.TabIndex = 34;
             // 
-            // textBox22
+            // txt_EsSo_OficioEncarg_DatosGe
             // 
-            this.textBox22.Location = new System.Drawing.Point(562, 26);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(100, 20);
-            this.textBox22.TabIndex = 40;
+            this.txt_EsSo_OficioEncarg_DatosGe.Location = new System.Drawing.Point(562, 26);
+            this.txt_EsSo_OficioEncarg_DatosGe.Name = "txt_EsSo_OficioEncarg_DatosGe";
+            this.txt_EsSo_OficioEncarg_DatosGe.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_OficioEncarg_DatosGe.TabIndex = 40;
             // 
             // label29
             // 
@@ -731,19 +744,19 @@
             this.label27.TabIndex = 39;
             this.label27.Text = "Parentesco";
             // 
-            // textBox24
+            // txt_EsSo_EdadEncarg_DatosGe
             // 
-            this.textBox24.Location = new System.Drawing.Point(336, 25);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(100, 20);
-            this.textBox24.TabIndex = 36;
+            this.txt_EsSo_EdadEncarg_DatosGe.Location = new System.Drawing.Point(336, 25);
+            this.txt_EsSo_EdadEncarg_DatosGe.Name = "txt_EsSo_EdadEncarg_DatosGe";
+            this.txt_EsSo_EdadEncarg_DatosGe.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_EdadEncarg_DatosGe.TabIndex = 36;
             // 
-            // textBox23
+            // txt_EsSo_TelEncarg_DatosGe
             // 
-            this.textBox23.Location = new System.Drawing.Point(336, 55);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(100, 20);
-            this.textBox23.TabIndex = 38;
+            this.txt_EsSo_TelEncarg_DatosGe.Location = new System.Drawing.Point(336, 55);
+            this.txt_EsSo_TelEncarg_DatosGe.Name = "txt_EsSo_TelEncarg_DatosGe";
+            this.txt_EsSo_TelEncarg_DatosGe.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_TelEncarg_DatosGe.TabIndex = 38;
             // 
             // label28
             // 
@@ -757,24 +770,24 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.textBox11);
+            this.groupBox1.Controls.Add(this.txt_EsSo_TelTrabMadre_DatosGe);
             this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.textBox12);
-            this.groupBox1.Controls.Add(this.textBox13);
+            this.groupBox1.Controls.Add(this.txt_EsSo_CelMadre_DatosGe);
+            this.groupBox1.Controls.Add(this.txt_EsSo_TelCasaMadre_DatosGe);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.Combox_EsSo_TrabajaMadre_forma);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.txt_EsSo_LugarTrabMadre_forma);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox7);
+            this.groupBox1.Controls.Add(this.txt_EsSo_OficioMadre_forma);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.textBox8);
+            this.groupBox1.Controls.Add(this.txt_EsSo_DomiciMadre_DatosGe);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.textBox9);
-            this.groupBox1.Controls.Add(this.textBox10);
+            this.groupBox1.Controls.Add(this.txt_EsSo_IdentMadre_DatosGe);
+            this.groupBox1.Controls.Add(this.txt_EsSo_NomMadre_DatosGe);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Location = new System.Drawing.Point(17, 163);
+            this.groupBox1.Location = new System.Drawing.Point(15, 214);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(682, 113);
             this.groupBox1.TabIndex = 0;
@@ -790,12 +803,12 @@
             this.label13.TabIndex = 31;
             this.label13.Text = "Telefono Celular";
             // 
-            // textBox11
+            // txt_EsSo_TelTrabMadre_DatosGe
             // 
-            this.textBox11.Location = new System.Drawing.Point(562, 71);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 20);
-            this.textBox11.TabIndex = 30;
+            this.txt_EsSo_TelTrabMadre_DatosGe.Location = new System.Drawing.Point(562, 71);
+            this.txt_EsSo_TelTrabMadre_DatosGe.Name = "txt_EsSo_TelTrabMadre_DatosGe";
+            this.txt_EsSo_TelTrabMadre_DatosGe.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_TelTrabMadre_DatosGe.TabIndex = 30;
             // 
             // label14
             // 
@@ -806,19 +819,19 @@
             this.label14.TabIndex = 29;
             this.label14.Text = "Telefono del Trabajo";
             // 
-            // textBox12
+            // txt_EsSo_CelMadre_DatosGe
             // 
-            this.textBox12.Location = new System.Drawing.Point(562, 45);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 20);
-            this.textBox12.TabIndex = 28;
+            this.txt_EsSo_CelMadre_DatosGe.Location = new System.Drawing.Point(562, 45);
+            this.txt_EsSo_CelMadre_DatosGe.Name = "txt_EsSo_CelMadre_DatosGe";
+            this.txt_EsSo_CelMadre_DatosGe.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_CelMadre_DatosGe.TabIndex = 28;
             // 
-            // textBox13
+            // txt_EsSo_TelCasaMadre_DatosGe
             // 
-            this.textBox13.Location = new System.Drawing.Point(562, 19);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(100, 20);
-            this.textBox13.TabIndex = 27;
+            this.txt_EsSo_TelCasaMadre_DatosGe.Location = new System.Drawing.Point(562, 19);
+            this.txt_EsSo_TelCasaMadre_DatosGe.Name = "txt_EsSo_TelCasaMadre_DatosGe";
+            this.txt_EsSo_TelCasaMadre_DatosGe.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_TelCasaMadre_DatosGe.TabIndex = 27;
             // 
             // label15
             // 
@@ -838,14 +851,17 @@
             this.label11.TabIndex = 25;
             this.label11.Text = "Lugar de Trabajo";
             // 
-            // comboBox2
+            // Combox_EsSo_TrabajaMadre_forma
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(336, 45);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(101, 21);
-            this.comboBox2.TabIndex = 24;
+            this.Combox_EsSo_TrabajaMadre_forma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Combox_EsSo_TrabajaMadre_forma.FormattingEnabled = true;
+            this.Combox_EsSo_TrabajaMadre_forma.Items.AddRange(new object[] {
+            "Si",
+            "no"});
+            this.Combox_EsSo_TrabajaMadre_forma.Location = new System.Drawing.Point(336, 45);
+            this.Combox_EsSo_TrabajaMadre_forma.Name = "Combox_EsSo_TrabajaMadre_forma";
+            this.Combox_EsSo_TrabajaMadre_forma.Size = new System.Drawing.Size(101, 21);
+            this.Combox_EsSo_TrabajaMadre_forma.TabIndex = 24;
             // 
             // label7
             // 
@@ -856,12 +872,12 @@
             this.label7.TabIndex = 23;
             this.label7.Text = "Trabaja";
             // 
-            // textBox6
+            // txt_EsSo_LugarTrabMadre_forma
             // 
-            this.textBox6.Location = new System.Drawing.Point(336, 71);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 22;
+            this.txt_EsSo_LugarTrabMadre_forma.Location = new System.Drawing.Point(336, 71);
+            this.txt_EsSo_LugarTrabMadre_forma.Name = "txt_EsSo_LugarTrabMadre_forma";
+            this.txt_EsSo_LugarTrabMadre_forma.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_LugarTrabMadre_forma.TabIndex = 22;
             // 
             // label8
             // 
@@ -872,12 +888,12 @@
             this.label8.TabIndex = 21;
             this.label8.Text = "No. de Identidad";
             // 
-            // textBox7
+            // txt_EsSo_OficioMadre_forma
             // 
-            this.textBox7.Location = new System.Drawing.Point(337, 19);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 20;
+            this.txt_EsSo_OficioMadre_forma.Location = new System.Drawing.Point(337, 19);
+            this.txt_EsSo_OficioMadre_forma.Name = "txt_EsSo_OficioMadre_forma";
+            this.txt_EsSo_OficioMadre_forma.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_OficioMadre_forma.TabIndex = 20;
             // 
             // label9
             // 
@@ -888,12 +904,12 @@
             this.label9.TabIndex = 19;
             this.label9.Text = "Profesion/Oficio";
             // 
-            // textBox8
+            // txt_EsSo_DomiciMadre_DatosGe
             // 
-            this.textBox8.Location = new System.Drawing.Point(117, 71);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 18;
+            this.txt_EsSo_DomiciMadre_DatosGe.Location = new System.Drawing.Point(117, 71);
+            this.txt_EsSo_DomiciMadre_DatosGe.Name = "txt_EsSo_DomiciMadre_DatosGe";
+            this.txt_EsSo_DomiciMadre_DatosGe.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_DomiciMadre_DatosGe.TabIndex = 18;
             // 
             // label10
             // 
@@ -904,19 +920,19 @@
             this.label10.TabIndex = 17;
             this.label10.Text = "Domicilio";
             // 
-            // textBox9
+            // txt_EsSo_IdentMadre_DatosGe
             // 
-            this.textBox9.Location = new System.Drawing.Point(117, 45);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 16;
+            this.txt_EsSo_IdentMadre_DatosGe.Location = new System.Drawing.Point(117, 45);
+            this.txt_EsSo_IdentMadre_DatosGe.Name = "txt_EsSo_IdentMadre_DatosGe";
+            this.txt_EsSo_IdentMadre_DatosGe.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_IdentMadre_DatosGe.TabIndex = 16;
             // 
-            // textBox10
+            // txt_EsSo_NomMadre_DatosGe
             // 
-            this.textBox10.Location = new System.Drawing.Point(117, 19);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 14;
+            this.txt_EsSo_NomMadre_DatosGe.Location = new System.Drawing.Point(117, 19);
+            this.txt_EsSo_NomMadre_DatosGe.Name = "txt_EsSo_NomMadre_DatosGe";
+            this.txt_EsSo_NomMadre_DatosGe.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_NomMadre_DatosGe.TabIndex = 14;
             // 
             // label12
             // 
@@ -929,16 +945,16 @@
             // 
             // InformacionFamilia
             // 
-            this.InformacionFamilia.Controls.Add(this.button2);
+            this.InformacionFamilia.Controls.Add(this.btm_EsSo_Siguiente_InfoFami);
             this.InformacionFamilia.Controls.Add(this.groupBox6);
             this.InformacionFamilia.Controls.Add(this.groupBox5);
-            this.InformacionFamilia.Controls.Add(this.textBox32);
-            this.InformacionFamilia.Controls.Add(this.comboBox4);
-            this.InformacionFamilia.Controls.Add(this.textBox31);
-            this.InformacionFamilia.Controls.Add(this.textBox30);
-            this.InformacionFamilia.Controls.Add(this.textBox29);
-            this.InformacionFamilia.Controls.Add(this.textBox28);
-            this.InformacionFamilia.Controls.Add(this.textBox27);
+            this.InformacionFamilia.Controls.Add(this.txt_EsSo_TotalTraba_InfoFami);
+            this.InformacionFamilia.Controls.Add(this.combox_EsSo_CuantosFami_InfoFami);
+            this.InformacionFamilia.Controls.Add(this.txt_EsSo_TotalMiemb_InfoFami);
+            this.InformacionFamilia.Controls.Add(this.txt_EsSo_CuantosFamil_InfoFami);
+            this.InformacionFamilia.Controls.Add(this.txt_EsSo_CuantosHijos_InfoFami);
+            this.InformacionFamilia.Controls.Add(this.txt_EsSo_MasHijos_InfoFami);
+            this.InformacionFamilia.Controls.Add(this.txt_EsSo_HabitantesCasa_InfoFami);
             this.InformacionFamilia.Controls.Add(this.label36);
             this.InformacionFamilia.Controls.Add(this.label35);
             this.InformacionFamilia.Controls.Add(this.label34);
@@ -949,46 +965,47 @@
             this.InformacionFamilia.Location = new System.Drawing.Point(4, 22);
             this.InformacionFamilia.Name = "InformacionFamilia";
             this.InformacionFamilia.Padding = new System.Windows.Forms.Padding(3);
-            this.InformacionFamilia.Size = new System.Drawing.Size(711, 500);
+            this.InformacionFamilia.Size = new System.Drawing.Size(764, 532);
             this.InformacionFamilia.TabIndex = 1;
             this.InformacionFamilia.Text = "Informacion de la familia";
             this.InformacionFamilia.UseVisualStyleBackColor = true;
+            this.InformacionFamilia.Click += new System.EventHandler(this.InformacionFamilia_Click);
             // 
-            // button2
+            // btm_EsSo_Siguiente_InfoFami
             // 
-            this.button2.Location = new System.Drawing.Point(588, 444);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 23);
-            this.button2.TabIndex = 37;
-            this.button2.Text = "Siguiente";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btm_EsSo_Siguiente_InfoFami.Location = new System.Drawing.Point(588, 444);
+            this.btm_EsSo_Siguiente_InfoFami.Name = "btm_EsSo_Siguiente_InfoFami";
+            this.btm_EsSo_Siguiente_InfoFami.Size = new System.Drawing.Size(91, 23);
+            this.btm_EsSo_Siguiente_InfoFami.TabIndex = 37;
+            this.btm_EsSo_Siguiente_InfoFami.Text = "Siguiente";
+            this.btm_EsSo_Siguiente_InfoFami.UseVisualStyleBackColor = true;
+            this.btm_EsSo_Siguiente_InfoFami.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.textBox48);
+            this.groupBox6.Controls.Add(this.txt_EsSo_TotalGastos_InfoFami);
             this.groupBox6.Controls.Add(this.label52);
             this.groupBox6.Controls.Add(this.label53);
-            this.groupBox6.Controls.Add(this.textBox49);
+            this.groupBox6.Controls.Add(this.txt_EsSo_Otros_InfoFami);
             this.groupBox6.Controls.Add(this.label54);
-            this.groupBox6.Controls.Add(this.textBox50);
-            this.groupBox6.Controls.Add(this.textBox51);
+            this.groupBox6.Controls.Add(this.txt_EsSo_Alquiler_InfoFami);
+            this.groupBox6.Controls.Add(this.txt_EsSo_Vestime_InfoFami);
             this.groupBox6.Controls.Add(this.label55);
-            this.groupBox6.Controls.Add(this.textBox47);
+            this.groupBox6.Controls.Add(this.txt_EsSo_Combus_InfoFami);
             this.groupBox6.Controls.Add(this.label51);
-            this.groupBox6.Controls.Add(this.textBox40);
+            this.groupBox6.Controls.Add(this.txt_EsSo_Alimentos_InfoFami);
             this.groupBox6.Controls.Add(this.label44);
             this.groupBox6.Controls.Add(this.label45);
-            this.groupBox6.Controls.Add(this.textBox41);
+            this.groupBox6.Controls.Add(this.txt_EsSo_Educa_InfoFami);
             this.groupBox6.Controls.Add(this.label46);
-            this.groupBox6.Controls.Add(this.textBox42);
-            this.groupBox6.Controls.Add(this.textBox43);
+            this.groupBox6.Controls.Add(this.txt_EsSo_Salud_InfoFami);
+            this.groupBox6.Controls.Add(this.txt_EsSo_Transp_InfoFami);
             this.groupBox6.Controls.Add(this.label47);
             this.groupBox6.Controls.Add(this.label48);
-            this.groupBox6.Controls.Add(this.textBox44);
+            this.groupBox6.Controls.Add(this.txt_EsSo_Telefono_InfoFami);
             this.groupBox6.Controls.Add(this.label49);
-            this.groupBox6.Controls.Add(this.textBox45);
-            this.groupBox6.Controls.Add(this.textBox46);
+            this.groupBox6.Controls.Add(this.txt_EsSo_Agua_InfoFami);
+            this.groupBox6.Controls.Add(this.txt_EsSo_Energia_InfoFami);
             this.groupBox6.Controls.Add(this.label50);
             this.groupBox6.Location = new System.Drawing.Point(6, 277);
             this.groupBox6.Name = "groupBox6";
@@ -997,12 +1014,12 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Cual es la distribucion del gasto";
             // 
-            // textBox48
+            // txt_EsSo_TotalGastos_InfoFami
             // 
-            this.textBox48.Location = new System.Drawing.Point(578, 109);
-            this.textBox48.Name = "textBox48";
-            this.textBox48.Size = new System.Drawing.Size(100, 20);
-            this.textBox48.TabIndex = 45;
+            this.txt_EsSo_TotalGastos_InfoFami.Location = new System.Drawing.Point(578, 109);
+            this.txt_EsSo_TotalGastos_InfoFami.Name = "txt_EsSo_TotalGastos_InfoFami";
+            this.txt_EsSo_TotalGastos_InfoFami.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_TotalGastos_InfoFami.TabIndex = 45;
             // 
             // label52
             // 
@@ -1022,12 +1039,12 @@
             this.label53.TabIndex = 43;
             this.label53.Text = "Vivienda (alquiler o pago)";
             // 
-            // textBox49
+            // txt_EsSo_Otros_InfoFami
             // 
-            this.textBox49.Location = new System.Drawing.Point(578, 83);
-            this.textBox49.Name = "textBox49";
-            this.textBox49.Size = new System.Drawing.Size(100, 20);
-            this.textBox49.TabIndex = 42;
+            this.txt_EsSo_Otros_InfoFami.Location = new System.Drawing.Point(578, 83);
+            this.txt_EsSo_Otros_InfoFami.Name = "txt_EsSo_Otros_InfoFami";
+            this.txt_EsSo_Otros_InfoFami.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_Otros_InfoFami.TabIndex = 42;
             // 
             // label54
             // 
@@ -1038,19 +1055,19 @@
             this.label54.TabIndex = 41;
             this.label54.Text = "Otros";
             // 
-            // textBox50
+            // txt_EsSo_Alquiler_InfoFami
             // 
-            this.textBox50.Location = new System.Drawing.Point(578, 57);
-            this.textBox50.Name = "textBox50";
-            this.textBox50.Size = new System.Drawing.Size(100, 20);
-            this.textBox50.TabIndex = 40;
+            this.txt_EsSo_Alquiler_InfoFami.Location = new System.Drawing.Point(578, 57);
+            this.txt_EsSo_Alquiler_InfoFami.Name = "txt_EsSo_Alquiler_InfoFami";
+            this.txt_EsSo_Alquiler_InfoFami.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_Alquiler_InfoFami.TabIndex = 40;
             // 
-            // textBox51
+            // txt_EsSo_Vestime_InfoFami
             // 
-            this.textBox51.Location = new System.Drawing.Point(578, 31);
-            this.textBox51.Name = "textBox51";
-            this.textBox51.Size = new System.Drawing.Size(100, 20);
-            this.textBox51.TabIndex = 39;
+            this.txt_EsSo_Vestime_InfoFami.Location = new System.Drawing.Point(578, 31);
+            this.txt_EsSo_Vestime_InfoFami.Name = "txt_EsSo_Vestime_InfoFami";
+            this.txt_EsSo_Vestime_InfoFami.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_Vestime_InfoFami.TabIndex = 39;
             // 
             // label55
             // 
@@ -1061,12 +1078,12 @@
             this.label55.TabIndex = 38;
             this.label55.Text = "Vestimenta";
             // 
-            // textBox47
+            // txt_EsSo_Combus_InfoFami
             // 
-            this.textBox47.Location = new System.Drawing.Point(312, 109);
-            this.textBox47.Name = "textBox47";
-            this.textBox47.Size = new System.Drawing.Size(100, 20);
-            this.textBox47.TabIndex = 37;
+            this.txt_EsSo_Combus_InfoFami.Location = new System.Drawing.Point(312, 109);
+            this.txt_EsSo_Combus_InfoFami.Name = "txt_EsSo_Combus_InfoFami";
+            this.txt_EsSo_Combus_InfoFami.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_Combus_InfoFami.TabIndex = 37;
             // 
             // label51
             // 
@@ -1077,12 +1094,12 @@
             this.label51.TabIndex = 36;
             this.label51.Text = "Combustible";
             // 
-            // textBox40
+            // txt_EsSo_Alimentos_InfoFami
             // 
-            this.textBox40.Location = new System.Drawing.Point(106, 109);
-            this.textBox40.Name = "textBox40";
-            this.textBox40.Size = new System.Drawing.Size(100, 20);
-            this.textBox40.TabIndex = 35;
+            this.txt_EsSo_Alimentos_InfoFami.Location = new System.Drawing.Point(106, 109);
+            this.txt_EsSo_Alimentos_InfoFami.Name = "txt_EsSo_Alimentos_InfoFami";
+            this.txt_EsSo_Alimentos_InfoFami.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_Alimentos_InfoFami.TabIndex = 35;
             // 
             // label44
             // 
@@ -1102,12 +1119,12 @@
             this.label45.TabIndex = 33;
             this.label45.Text = "Salud";
             // 
-            // textBox41
+            // txt_EsSo_Educa_InfoFami
             // 
-            this.textBox41.Location = new System.Drawing.Point(312, 83);
-            this.textBox41.Name = "textBox41";
-            this.textBox41.Size = new System.Drawing.Size(100, 20);
-            this.textBox41.TabIndex = 32;
+            this.txt_EsSo_Educa_InfoFami.Location = new System.Drawing.Point(312, 83);
+            this.txt_EsSo_Educa_InfoFami.Name = "txt_EsSo_Educa_InfoFami";
+            this.txt_EsSo_Educa_InfoFami.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_Educa_InfoFami.TabIndex = 32;
             // 
             // label46
             // 
@@ -1118,19 +1135,19 @@
             this.label46.TabIndex = 31;
             this.label46.Text = "Educacion";
             // 
-            // textBox42
+            // txt_EsSo_Salud_InfoFami
             // 
-            this.textBox42.Location = new System.Drawing.Point(312, 57);
-            this.textBox42.Name = "textBox42";
-            this.textBox42.Size = new System.Drawing.Size(100, 20);
-            this.textBox42.TabIndex = 30;
+            this.txt_EsSo_Salud_InfoFami.Location = new System.Drawing.Point(312, 57);
+            this.txt_EsSo_Salud_InfoFami.Name = "txt_EsSo_Salud_InfoFami";
+            this.txt_EsSo_Salud_InfoFami.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_Salud_InfoFami.TabIndex = 30;
             // 
-            // textBox43
+            // txt_EsSo_Transp_InfoFami
             // 
-            this.textBox43.Location = new System.Drawing.Point(312, 31);
-            this.textBox43.Name = "textBox43";
-            this.textBox43.Size = new System.Drawing.Size(100, 20);
-            this.textBox43.TabIndex = 29;
+            this.txt_EsSo_Transp_InfoFami.Location = new System.Drawing.Point(312, 31);
+            this.txt_EsSo_Transp_InfoFami.Name = "txt_EsSo_Transp_InfoFami";
+            this.txt_EsSo_Transp_InfoFami.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_Transp_InfoFami.TabIndex = 29;
             // 
             // label47
             // 
@@ -1150,12 +1167,12 @@
             this.label48.TabIndex = 27;
             this.label48.Text = "Agua Potable";
             // 
-            // textBox44
+            // txt_EsSo_Telefono_InfoFami
             // 
-            this.textBox44.Location = new System.Drawing.Point(106, 83);
-            this.textBox44.Name = "textBox44";
-            this.textBox44.Size = new System.Drawing.Size(100, 20);
-            this.textBox44.TabIndex = 26;
+            this.txt_EsSo_Telefono_InfoFami.Location = new System.Drawing.Point(106, 83);
+            this.txt_EsSo_Telefono_InfoFami.Name = "txt_EsSo_Telefono_InfoFami";
+            this.txt_EsSo_Telefono_InfoFami.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_Telefono_InfoFami.TabIndex = 26;
             // 
             // label49
             // 
@@ -1166,19 +1183,19 @@
             this.label49.TabIndex = 25;
             this.label49.Text = "Telefono";
             // 
-            // textBox45
+            // txt_EsSo_Agua_InfoFami
             // 
-            this.textBox45.Location = new System.Drawing.Point(106, 57);
-            this.textBox45.Name = "textBox45";
-            this.textBox45.Size = new System.Drawing.Size(100, 20);
-            this.textBox45.TabIndex = 24;
+            this.txt_EsSo_Agua_InfoFami.Location = new System.Drawing.Point(106, 57);
+            this.txt_EsSo_Agua_InfoFami.Name = "txt_EsSo_Agua_InfoFami";
+            this.txt_EsSo_Agua_InfoFami.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_Agua_InfoFami.TabIndex = 24;
             // 
-            // textBox46
+            // txt_EsSo_Energia_InfoFami
             // 
-            this.textBox46.Location = new System.Drawing.Point(106, 31);
-            this.textBox46.Name = "textBox46";
-            this.textBox46.Size = new System.Drawing.Size(100, 20);
-            this.textBox46.TabIndex = 23;
+            this.txt_EsSo_Energia_InfoFami.Location = new System.Drawing.Point(106, 31);
+            this.txt_EsSo_Energia_InfoFami.Name = "txt_EsSo_Energia_InfoFami";
+            this.txt_EsSo_Energia_InfoFami.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_Energia_InfoFami.TabIndex = 23;
             // 
             // label50
             // 
@@ -1191,19 +1208,19 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.textBox39);
+            this.groupBox5.Controls.Add(this.txt_EsSo_IngreTotales_InfoFami);
             this.groupBox5.Controls.Add(this.label43);
             this.groupBox5.Controls.Add(this.label40);
-            this.groupBox5.Controls.Add(this.textBox36);
+            this.groupBox5.Controls.Add(this.txt_EsSo_IngreOtros_InfoFami);
             this.groupBox5.Controls.Add(this.label41);
-            this.groupBox5.Controls.Add(this.textBox37);
-            this.groupBox5.Controls.Add(this.textBox38);
+            this.groupBox5.Controls.Add(this.txt_EsSo_IngrePencion_InfoFami);
+            this.groupBox5.Controls.Add(this.txt_EsSo_IngreHijo_InfoFami);
             this.groupBox5.Controls.Add(this.label42);
             this.groupBox5.Controls.Add(this.label37);
-            this.groupBox5.Controls.Add(this.textBox33);
+            this.groupBox5.Controls.Add(this.txt_EsSo_IngreMadre_InfoFami);
             this.groupBox5.Controls.Add(this.label38);
-            this.groupBox5.Controls.Add(this.textBox34);
-            this.groupBox5.Controls.Add(this.textBox35);
+            this.groupBox5.Controls.Add(this.txt_EsSo_IngrePadre_InfoFami);
+            this.groupBox5.Controls.Add(this.txt_EsSo_IngreAbue_InfoFami);
             this.groupBox5.Controls.Add(this.label39);
             this.groupBox5.Location = new System.Drawing.Point(6, 150);
             this.groupBox5.Name = "groupBox5";
@@ -1212,12 +1229,12 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Detalle de ingresos";
             // 
-            // textBox39
+            // txt_EsSo_IngreTotales_InfoFami
             // 
-            this.textBox39.Location = new System.Drawing.Point(516, 50);
-            this.textBox39.Name = "textBox39";
-            this.textBox39.Size = new System.Drawing.Size(148, 20);
-            this.textBox39.TabIndex = 35;
+            this.txt_EsSo_IngreTotales_InfoFami.Location = new System.Drawing.Point(516, 50);
+            this.txt_EsSo_IngreTotales_InfoFami.Name = "txt_EsSo_IngreTotales_InfoFami";
+            this.txt_EsSo_IngreTotales_InfoFami.Size = new System.Drawing.Size(148, 20);
+            this.txt_EsSo_IngreTotales_InfoFami.TabIndex = 35;
             // 
             // label43
             // 
@@ -1237,12 +1254,12 @@
             this.label40.TabIndex = 33;
             this.label40.Text = "Pension (jubilacion)";
             // 
-            // textBox36
+            // txt_EsSo_IngreOtros_InfoFami
             // 
-            this.textBox36.Location = new System.Drawing.Point(382, 83);
-            this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new System.Drawing.Size(100, 20);
-            this.textBox36.TabIndex = 32;
+            this.txt_EsSo_IngreOtros_InfoFami.Location = new System.Drawing.Point(382, 83);
+            this.txt_EsSo_IngreOtros_InfoFami.Name = "txt_EsSo_IngreOtros_InfoFami";
+            this.txt_EsSo_IngreOtros_InfoFami.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_IngreOtros_InfoFami.TabIndex = 32;
             // 
             // label41
             // 
@@ -1253,19 +1270,19 @@
             this.label41.TabIndex = 31;
             this.label41.Text = "Otros Ingresos (rentas, remesas, etc.)";
             // 
-            // textBox37
+            // txt_EsSo_IngrePencion_InfoFami
             // 
-            this.textBox37.Location = new System.Drawing.Point(382, 57);
-            this.textBox37.Name = "textBox37";
-            this.textBox37.Size = new System.Drawing.Size(100, 20);
-            this.textBox37.TabIndex = 30;
+            this.txt_EsSo_IngrePencion_InfoFami.Location = new System.Drawing.Point(382, 57);
+            this.txt_EsSo_IngrePencion_InfoFami.Name = "txt_EsSo_IngrePencion_InfoFami";
+            this.txt_EsSo_IngrePencion_InfoFami.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_IngrePencion_InfoFami.TabIndex = 30;
             // 
-            // textBox38
+            // txt_EsSo_IngreHijo_InfoFami
             // 
-            this.textBox38.Location = new System.Drawing.Point(382, 31);
-            this.textBox38.Name = "textBox38";
-            this.textBox38.Size = new System.Drawing.Size(100, 20);
-            this.textBox38.TabIndex = 29;
+            this.txt_EsSo_IngreHijo_InfoFami.Location = new System.Drawing.Point(382, 31);
+            this.txt_EsSo_IngreHijo_InfoFami.Name = "txt_EsSo_IngreHijo_InfoFami";
+            this.txt_EsSo_IngreHijo_InfoFami.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_IngreHijo_InfoFami.TabIndex = 29;
             // 
             // label42
             // 
@@ -1285,12 +1302,12 @@
             this.label37.TabIndex = 27;
             this.label37.Text = "Padre";
             // 
-            // textBox33
+            // txt_EsSo_IngreMadre_InfoFami
             // 
-            this.textBox33.Location = new System.Drawing.Point(65, 83);
-            this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(100, 20);
-            this.textBox33.TabIndex = 26;
+            this.txt_EsSo_IngreMadre_InfoFami.Location = new System.Drawing.Point(65, 83);
+            this.txt_EsSo_IngreMadre_InfoFami.Name = "txt_EsSo_IngreMadre_InfoFami";
+            this.txt_EsSo_IngreMadre_InfoFami.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_IngreMadre_InfoFami.TabIndex = 26;
             // 
             // label38
             // 
@@ -1301,19 +1318,19 @@
             this.label38.TabIndex = 25;
             this.label38.Text = "Madre";
             // 
-            // textBox34
+            // txt_EsSo_IngrePadre_InfoFami
             // 
-            this.textBox34.Location = new System.Drawing.Point(65, 57);
-            this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new System.Drawing.Size(100, 20);
-            this.textBox34.TabIndex = 24;
+            this.txt_EsSo_IngrePadre_InfoFami.Location = new System.Drawing.Point(65, 57);
+            this.txt_EsSo_IngrePadre_InfoFami.Name = "txt_EsSo_IngrePadre_InfoFami";
+            this.txt_EsSo_IngrePadre_InfoFami.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_IngrePadre_InfoFami.TabIndex = 24;
             // 
-            // textBox35
+            // txt_EsSo_IngreAbue_InfoFami
             // 
-            this.textBox35.Location = new System.Drawing.Point(65, 31);
-            this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new System.Drawing.Size(100, 20);
-            this.textBox35.TabIndex = 23;
+            this.txt_EsSo_IngreAbue_InfoFami.Location = new System.Drawing.Point(65, 31);
+            this.txt_EsSo_IngreAbue_InfoFami.Name = "txt_EsSo_IngreAbue_InfoFami";
+            this.txt_EsSo_IngreAbue_InfoFami.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_IngreAbue_InfoFami.TabIndex = 23;
             // 
             // label39
             // 
@@ -1324,56 +1341,56 @@
             this.label39.TabIndex = 22;
             this.label39.Text = "Abuela";
             // 
-            // textBox32
+            // txt_EsSo_TotalTraba_InfoFami
             // 
-            this.textBox32.Location = new System.Drawing.Point(204, 105);
-            this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new System.Drawing.Size(100, 20);
-            this.textBox32.TabIndex = 13;
+            this.txt_EsSo_TotalTraba_InfoFami.Location = new System.Drawing.Point(204, 105);
+            this.txt_EsSo_TotalTraba_InfoFami.Name = "txt_EsSo_TotalTraba_InfoFami";
+            this.txt_EsSo_TotalTraba_InfoFami.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_TotalTraba_InfoFami.TabIndex = 13;
             // 
-            // comboBox4
+            // combox_EsSo_CuantosFami_InfoFami
             // 
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(204, 63);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(88, 21);
-            this.comboBox4.TabIndex = 12;
+            this.combox_EsSo_CuantosFami_InfoFami.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combox_EsSo_CuantosFami_InfoFami.FormattingEnabled = true;
+            this.combox_EsSo_CuantosFami_InfoFami.Location = new System.Drawing.Point(204, 63);
+            this.combox_EsSo_CuantosFami_InfoFami.Name = "combox_EsSo_CuantosFami_InfoFami";
+            this.combox_EsSo_CuantosFami_InfoFami.Size = new System.Drawing.Size(88, 21);
+            this.combox_EsSo_CuantosFami_InfoFami.TabIndex = 12;
             // 
-            // textBox31
+            // txt_EsSo_TotalMiemb_InfoFami
             // 
-            this.textBox31.Location = new System.Drawing.Point(605, 63);
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(74, 20);
-            this.textBox31.TabIndex = 11;
+            this.txt_EsSo_TotalMiemb_InfoFami.Location = new System.Drawing.Point(605, 63);
+            this.txt_EsSo_TotalMiemb_InfoFami.Name = "txt_EsSo_TotalMiemb_InfoFami";
+            this.txt_EsSo_TotalMiemb_InfoFami.Size = new System.Drawing.Size(74, 20);
+            this.txt_EsSo_TotalMiemb_InfoFami.TabIndex = 11;
             // 
-            // textBox30
+            // txt_EsSo_CuantosFamil_InfoFami
             // 
-            this.textBox30.Location = new System.Drawing.Point(349, 64);
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(100, 20);
-            this.textBox30.TabIndex = 10;
+            this.txt_EsSo_CuantosFamil_InfoFami.Location = new System.Drawing.Point(349, 64);
+            this.txt_EsSo_CuantosFamil_InfoFami.Name = "txt_EsSo_CuantosFamil_InfoFami";
+            this.txt_EsSo_CuantosFamil_InfoFami.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_CuantosFamil_InfoFami.TabIndex = 10;
             // 
-            // textBox29
+            // txt_EsSo_CuantosHijos_InfoFami
             // 
-            this.textBox29.Location = new System.Drawing.Point(558, 27);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(100, 20);
-            this.textBox29.TabIndex = 9;
+            this.txt_EsSo_CuantosHijos_InfoFami.Location = new System.Drawing.Point(558, 27);
+            this.txt_EsSo_CuantosHijos_InfoFami.Name = "txt_EsSo_CuantosHijos_InfoFami";
+            this.txt_EsSo_CuantosHijos_InfoFami.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_CuantosHijos_InfoFami.TabIndex = 9;
             // 
-            // textBox28
+            // txt_EsSo_MasHijos_InfoFami
             // 
-            this.textBox28.Location = new System.Drawing.Point(401, 27);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(100, 20);
-            this.textBox28.TabIndex = 8;
+            this.txt_EsSo_MasHijos_InfoFami.Location = new System.Drawing.Point(401, 27);
+            this.txt_EsSo_MasHijos_InfoFami.Name = "txt_EsSo_MasHijos_InfoFami";
+            this.txt_EsSo_MasHijos_InfoFami.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_MasHijos_InfoFami.TabIndex = 8;
             // 
-            // textBox27
+            // txt_EsSo_HabitantesCasa_InfoFami
             // 
-            this.textBox27.Location = new System.Drawing.Point(202, 27);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(100, 20);
-            this.textBox27.TabIndex = 7;
+            this.txt_EsSo_HabitantesCasa_InfoFami.Location = new System.Drawing.Point(202, 27);
+            this.txt_EsSo_HabitantesCasa_InfoFami.Name = "txt_EsSo_HabitantesCasa_InfoFami";
+            this.txt_EsSo_HabitantesCasa_InfoFami.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_HabitantesCasa_InfoFami.TabIndex = 7;
             // 
             // label36
             // 
@@ -1441,17 +1458,17 @@
             // SaludRecreacion
             // 
             this.SaludRecreacion.Controls.Add(this.button3);
-            this.SaludRecreacion.Controls.Add(this.textBox67);
+            this.SaludRecreacion.Controls.Add(this.txt_EsSo_Aporbado_SaludRecre);
             this.SaludRecreacion.Controls.Add(this.label71);
             this.SaludRecreacion.Controls.Add(this.label70);
             this.SaludRecreacion.Controls.Add(this.groupBox9);
-            this.SaludRecreacion.Controls.Add(this.textBox52);
+            this.SaludRecreacion.Controls.Add(this.chekbox_EsSo_GastoMedi_SaludRecre);
             this.SaludRecreacion.Controls.Add(this.label56);
             this.SaludRecreacion.Controls.Add(this.groupBox8);
             this.SaludRecreacion.Controls.Add(this.groupBox7);
             this.SaludRecreacion.Location = new System.Drawing.Point(4, 22);
             this.SaludRecreacion.Name = "SaludRecreacion";
-            this.SaludRecreacion.Size = new System.Drawing.Size(711, 500);
+            this.SaludRecreacion.Size = new System.Drawing.Size(773, 544);
             this.SaludRecreacion.TabIndex = 3;
             this.SaludRecreacion.Text = "Atencion en Salud y Recreacion";
             this.SaludRecreacion.UseVisualStyleBackColor = true;
@@ -1467,22 +1484,6 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // textBox67
-            // 
-            this.textBox67.Location = new System.Drawing.Point(176, 364);
-            this.textBox67.Name = "textBox67";
-            this.textBox67.Size = new System.Drawing.Size(208, 20);
-            this.textBox67.TabIndex = 12;
-            // 
-            // label71
-            // 
-            this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(19, 367);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(126, 13);
-            this.label71.TabIndex = 11;
-            this.label71.Text = "Revisado y aprovado por";
-            // 
             // label70
             // 
             this.label70.AutoSize = true;
@@ -1494,27 +1495,27 @@
             // 
             // groupBox9
             // 
-            this.groupBox9.Controls.Add(this.radioButton14);
-            this.groupBox9.Controls.Add(this.textBox59);
-            this.groupBox9.Controls.Add(this.comboBox11);
+            this.groupBox9.Controls.Add(this.chekbox_EsSo_Ninguno_SaludRecre);
+            this.groupBox9.Controls.Add(this.txt_EsSo_CentrosCom_SaludRecre);
+            this.groupBox9.Controls.Add(this.combox_EsSo_CentrosCom_SaludRecre);
             this.groupBox9.Controls.Add(this.label63);
-            this.groupBox9.Controls.Add(this.textBox58);
-            this.groupBox9.Controls.Add(this.comboBox10);
+            this.groupBox9.Controls.Add(this.txt_EsSo_Museos_SaludRecre);
+            this.groupBox9.Controls.Add(this.combox_EsSo_Museos_SaludRecre);
             this.groupBox9.Controls.Add(this.label62);
-            this.groupBox9.Controls.Add(this.textBox57);
-            this.groupBox9.Controls.Add(this.comboBox9);
+            this.groupBox9.Controls.Add(this.txt_EsSo_cine_SaludRecre);
+            this.groupBox9.Controls.Add(this.combox_EsSo_Cine_SaludRecre);
             this.groupBox9.Controls.Add(this.label61);
             this.groupBox9.Controls.Add(this.textBox56);
-            this.groupBox9.Controls.Add(this.comboBox8);
+            this.groupBox9.Controls.Add(this.combox_EsSo_Playa_SaludRecre);
             this.groupBox9.Controls.Add(this.label60);
-            this.groupBox9.Controls.Add(this.textBox55);
-            this.groupBox9.Controls.Add(this.comboBox7);
+            this.groupBox9.Controls.Add(this.txt_EsSo_OtrosLugares_SaludRecre);
+            this.groupBox9.Controls.Add(this.combox_EsSo_OtrosLugares_SaludRecre);
             this.groupBox9.Controls.Add(this.label59);
-            this.groupBox9.Controls.Add(this.textBox54);
-            this.groupBox9.Controls.Add(this.comboBox6);
+            this.groupBox9.Controls.Add(this.txt_EsSo_Balnearios_SaludRecre);
+            this.groupBox9.Controls.Add(this.combox_EsSo_Balnearios_SaludRecre);
             this.groupBox9.Controls.Add(this.label58);
-            this.groupBox9.Controls.Add(this.textBox53);
-            this.groupBox9.Controls.Add(this.comboBox5);
+            this.groupBox9.Controls.Add(this.txt_EsSo_Parques_SaludRecre);
+            this.groupBox9.Controls.Add(this.combox_EsSo_Parques_SaludRecre);
             this.groupBox9.Controls.Add(this.label57);
             this.groupBox9.Location = new System.Drawing.Point(13, 197);
             this.groupBox9.Name = "groupBox9";
@@ -1523,32 +1524,32 @@
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Lugares que visita con frecuencia";
             // 
-            // radioButton14
+            // chekbox_EsSo_Ninguno_SaludRecre
             // 
-            this.radioButton14.AutoSize = true;
-            this.radioButton14.Location = new System.Drawing.Point(304, 115);
-            this.radioButton14.Name = "radioButton14";
-            this.radioButton14.Size = new System.Drawing.Size(65, 17);
-            this.radioButton14.TabIndex = 21;
-            this.radioButton14.TabStop = true;
-            this.radioButton14.Text = "Ninguno";
-            this.radioButton14.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_Ninguno_SaludRecre.AutoSize = true;
+            this.chekbox_EsSo_Ninguno_SaludRecre.Location = new System.Drawing.Point(304, 115);
+            this.chekbox_EsSo_Ninguno_SaludRecre.Name = "chekbox_EsSo_Ninguno_SaludRecre";
+            this.chekbox_EsSo_Ninguno_SaludRecre.Size = new System.Drawing.Size(65, 17);
+            this.chekbox_EsSo_Ninguno_SaludRecre.TabIndex = 21;
+            this.chekbox_EsSo_Ninguno_SaludRecre.TabStop = true;
+            this.chekbox_EsSo_Ninguno_SaludRecre.Text = "Ninguno";
+            this.chekbox_EsSo_Ninguno_SaludRecre.UseVisualStyleBackColor = true;
             // 
-            // textBox59
+            // txt_EsSo_CentrosCom_SaludRecre
             // 
-            this.textBox59.Location = new System.Drawing.Point(176, 59);
-            this.textBox59.Name = "textBox59";
-            this.textBox59.Size = new System.Drawing.Size(100, 20);
-            this.textBox59.TabIndex = 20;
+            this.txt_EsSo_CentrosCom_SaludRecre.Location = new System.Drawing.Point(176, 59);
+            this.txt_EsSo_CentrosCom_SaludRecre.Name = "txt_EsSo_CentrosCom_SaludRecre";
+            this.txt_EsSo_CentrosCom_SaludRecre.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_CentrosCom_SaludRecre.TabIndex = 20;
             // 
-            // comboBox11
+            // combox_EsSo_CentrosCom_SaludRecre
             // 
-            this.comboBox11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Location = new System.Drawing.Point(121, 59);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(49, 21);
-            this.comboBox11.TabIndex = 19;
+            this.combox_EsSo_CentrosCom_SaludRecre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combox_EsSo_CentrosCom_SaludRecre.FormattingEnabled = true;
+            this.combox_EsSo_CentrosCom_SaludRecre.Location = new System.Drawing.Point(121, 59);
+            this.combox_EsSo_CentrosCom_SaludRecre.Name = "combox_EsSo_CentrosCom_SaludRecre";
+            this.combox_EsSo_CentrosCom_SaludRecre.Size = new System.Drawing.Size(49, 21);
+            this.combox_EsSo_CentrosCom_SaludRecre.TabIndex = 19;
             // 
             // label63
             // 
@@ -1559,21 +1560,21 @@
             this.label63.TabIndex = 18;
             this.label63.Text = "Centros Comerciales";
             // 
-            // textBox58
+            // txt_EsSo_Museos_SaludRecre
             // 
-            this.textBox58.Location = new System.Drawing.Point(176, 85);
-            this.textBox58.Name = "textBox58";
-            this.textBox58.Size = new System.Drawing.Size(100, 20);
-            this.textBox58.TabIndex = 17;
+            this.txt_EsSo_Museos_SaludRecre.Location = new System.Drawing.Point(176, 85);
+            this.txt_EsSo_Museos_SaludRecre.Name = "txt_EsSo_Museos_SaludRecre";
+            this.txt_EsSo_Museos_SaludRecre.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_Museos_SaludRecre.TabIndex = 17;
             // 
-            // comboBox10
+            // combox_EsSo_Museos_SaludRecre
             // 
-            this.comboBox10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Location = new System.Drawing.Point(121, 85);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(49, 21);
-            this.comboBox10.TabIndex = 16;
+            this.combox_EsSo_Museos_SaludRecre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combox_EsSo_Museos_SaludRecre.FormattingEnabled = true;
+            this.combox_EsSo_Museos_SaludRecre.Location = new System.Drawing.Point(121, 85);
+            this.combox_EsSo_Museos_SaludRecre.Name = "combox_EsSo_Museos_SaludRecre";
+            this.combox_EsSo_Museos_SaludRecre.Size = new System.Drawing.Size(49, 21);
+            this.combox_EsSo_Museos_SaludRecre.TabIndex = 16;
             // 
             // label62
             // 
@@ -1584,21 +1585,21 @@
             this.label62.TabIndex = 15;
             this.label62.Text = "Museos";
             // 
-            // textBox57
+            // txt_EsSo_cine_SaludRecre
             // 
-            this.textBox57.Location = new System.Drawing.Point(176, 111);
-            this.textBox57.Name = "textBox57";
-            this.textBox57.Size = new System.Drawing.Size(100, 20);
-            this.textBox57.TabIndex = 14;
+            this.txt_EsSo_cine_SaludRecre.Location = new System.Drawing.Point(176, 111);
+            this.txt_EsSo_cine_SaludRecre.Name = "txt_EsSo_cine_SaludRecre";
+            this.txt_EsSo_cine_SaludRecre.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_cine_SaludRecre.TabIndex = 14;
             // 
-            // comboBox9
+            // combox_EsSo_Cine_SaludRecre
             // 
-            this.comboBox9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(121, 111);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(49, 21);
-            this.comboBox9.TabIndex = 13;
+            this.combox_EsSo_Cine_SaludRecre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combox_EsSo_Cine_SaludRecre.FormattingEnabled = true;
+            this.combox_EsSo_Cine_SaludRecre.Location = new System.Drawing.Point(121, 111);
+            this.combox_EsSo_Cine_SaludRecre.Name = "combox_EsSo_Cine_SaludRecre";
+            this.combox_EsSo_Cine_SaludRecre.Size = new System.Drawing.Size(49, 21);
+            this.combox_EsSo_Cine_SaludRecre.TabIndex = 13;
             // 
             // label61
             // 
@@ -1616,14 +1617,14 @@
             this.textBox56.Size = new System.Drawing.Size(100, 20);
             this.textBox56.TabIndex = 11;
             // 
-            // comboBox8
+            // combox_EsSo_Playa_SaludRecre
             // 
-            this.comboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(363, 59);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(49, 21);
-            this.comboBox8.TabIndex = 10;
+            this.combox_EsSo_Playa_SaludRecre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combox_EsSo_Playa_SaludRecre.FormattingEnabled = true;
+            this.combox_EsSo_Playa_SaludRecre.Location = new System.Drawing.Point(363, 59);
+            this.combox_EsSo_Playa_SaludRecre.Name = "combox_EsSo_Playa_SaludRecre";
+            this.combox_EsSo_Playa_SaludRecre.Size = new System.Drawing.Size(49, 21);
+            this.combox_EsSo_Playa_SaludRecre.TabIndex = 10;
             // 
             // label60
             // 
@@ -1634,21 +1635,21 @@
             this.label60.TabIndex = 9;
             this.label60.Text = "La Playa";
             // 
-            // textBox55
+            // txt_EsSo_OtrosLugares_SaludRecre
             // 
-            this.textBox55.Location = new System.Drawing.Point(418, 85);
-            this.textBox55.Name = "textBox55";
-            this.textBox55.Size = new System.Drawing.Size(100, 20);
-            this.textBox55.TabIndex = 8;
+            this.txt_EsSo_OtrosLugares_SaludRecre.Location = new System.Drawing.Point(418, 85);
+            this.txt_EsSo_OtrosLugares_SaludRecre.Name = "txt_EsSo_OtrosLugares_SaludRecre";
+            this.txt_EsSo_OtrosLugares_SaludRecre.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_OtrosLugares_SaludRecre.TabIndex = 8;
             // 
-            // comboBox7
+            // combox_EsSo_OtrosLugares_SaludRecre
             // 
-            this.comboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(363, 85);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(49, 21);
-            this.comboBox7.TabIndex = 7;
+            this.combox_EsSo_OtrosLugares_SaludRecre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combox_EsSo_OtrosLugares_SaludRecre.FormattingEnabled = true;
+            this.combox_EsSo_OtrosLugares_SaludRecre.Location = new System.Drawing.Point(363, 85);
+            this.combox_EsSo_OtrosLugares_SaludRecre.Name = "combox_EsSo_OtrosLugares_SaludRecre";
+            this.combox_EsSo_OtrosLugares_SaludRecre.Size = new System.Drawing.Size(49, 21);
+            this.combox_EsSo_OtrosLugares_SaludRecre.TabIndex = 7;
             // 
             // label59
             // 
@@ -1659,21 +1660,21 @@
             this.label59.TabIndex = 6;
             this.label59.Text = "Otros";
             // 
-            // textBox54
+            // txt_EsSo_Balnearios_SaludRecre
             // 
-            this.textBox54.Location = new System.Drawing.Point(418, 33);
-            this.textBox54.Name = "textBox54";
-            this.textBox54.Size = new System.Drawing.Size(100, 20);
-            this.textBox54.TabIndex = 5;
+            this.txt_EsSo_Balnearios_SaludRecre.Location = new System.Drawing.Point(418, 33);
+            this.txt_EsSo_Balnearios_SaludRecre.Name = "txt_EsSo_Balnearios_SaludRecre";
+            this.txt_EsSo_Balnearios_SaludRecre.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_Balnearios_SaludRecre.TabIndex = 5;
             // 
-            // comboBox6
+            // combox_EsSo_Balnearios_SaludRecre
             // 
-            this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(363, 33);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(49, 21);
-            this.comboBox6.TabIndex = 4;
+            this.combox_EsSo_Balnearios_SaludRecre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combox_EsSo_Balnearios_SaludRecre.FormattingEnabled = true;
+            this.combox_EsSo_Balnearios_SaludRecre.Location = new System.Drawing.Point(363, 33);
+            this.combox_EsSo_Balnearios_SaludRecre.Name = "combox_EsSo_Balnearios_SaludRecre";
+            this.combox_EsSo_Balnearios_SaludRecre.Size = new System.Drawing.Size(49, 21);
+            this.combox_EsSo_Balnearios_SaludRecre.TabIndex = 4;
             // 
             // label58
             // 
@@ -1684,21 +1685,21 @@
             this.label58.TabIndex = 3;
             this.label58.Text = "Balnearios";
             // 
-            // textBox53
+            // txt_EsSo_Parques_SaludRecre
             // 
-            this.textBox53.Location = new System.Drawing.Point(176, 33);
-            this.textBox53.Name = "textBox53";
-            this.textBox53.Size = new System.Drawing.Size(100, 20);
-            this.textBox53.TabIndex = 2;
+            this.txt_EsSo_Parques_SaludRecre.Location = new System.Drawing.Point(176, 33);
+            this.txt_EsSo_Parques_SaludRecre.Name = "txt_EsSo_Parques_SaludRecre";
+            this.txt_EsSo_Parques_SaludRecre.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_Parques_SaludRecre.TabIndex = 2;
             // 
-            // comboBox5
+            // combox_EsSo_Parques_SaludRecre
             // 
-            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(121, 33);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(49, 21);
-            this.comboBox5.TabIndex = 1;
+            this.combox_EsSo_Parques_SaludRecre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combox_EsSo_Parques_SaludRecre.FormattingEnabled = true;
+            this.combox_EsSo_Parques_SaludRecre.Location = new System.Drawing.Point(121, 33);
+            this.combox_EsSo_Parques_SaludRecre.Name = "combox_EsSo_Parques_SaludRecre";
+            this.combox_EsSo_Parques_SaludRecre.Size = new System.Drawing.Size(49, 21);
+            this.combox_EsSo_Parques_SaludRecre.TabIndex = 1;
             // 
             // label57
             // 
@@ -1709,12 +1710,12 @@
             this.label57.TabIndex = 0;
             this.label57.Text = "Parques";
             // 
-            // textBox52
+            // chekbox_EsSo_GastoMedi_SaludRecre
             // 
-            this.textBox52.Location = new System.Drawing.Point(176, 136);
-            this.textBox52.Name = "textBox52";
-            this.textBox52.Size = new System.Drawing.Size(208, 20);
-            this.textBox52.TabIndex = 8;
+            this.chekbox_EsSo_GastoMedi_SaludRecre.Location = new System.Drawing.Point(176, 136);
+            this.chekbox_EsSo_GastoMedi_SaludRecre.Name = "chekbox_EsSo_GastoMedi_SaludRecre";
+            this.chekbox_EsSo_GastoMedi_SaludRecre.Size = new System.Drawing.Size(208, 20);
+            this.chekbox_EsSo_GastoMedi_SaludRecre.TabIndex = 8;
             // 
             // label56
             // 
@@ -1727,11 +1728,11 @@
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.checkBox8);
-            this.groupBox8.Controls.Add(this.checkBox9);
-            this.groupBox8.Controls.Add(this.checkBox10);
-            this.groupBox8.Controls.Add(this.checkBox11);
-            this.groupBox8.Controls.Add(this.checkBox12);
+            this.groupBox8.Controls.Add(this.chekbox_EsSo_NingunaEnfer_SaludRecre);
+            this.groupBox8.Controls.Add(this.chekbox_EsSo_OtraEnfer_SaludRecre);
+            this.groupBox8.Controls.Add(this.chekbox_EsSo_InfecRespi_SaludRecre);
+            this.groupBox8.Controls.Add(this.chekbox_EsSo_HiperTensi_SaludRecre);
+            this.groupBox8.Controls.Add(this.chekbox_EsSo_Diabetes_SaludRecre);
             this.groupBox8.Location = new System.Drawing.Point(271, 15);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(248, 109);
@@ -1739,64 +1740,64 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Enfermedades que padecen en su familia";
             // 
-            // checkBox8
+            // chekbox_EsSo_NingunaEnfer_SaludRecre
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(159, 31);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(66, 17);
-            this.checkBox8.TabIndex = 4;
-            this.checkBox8.Text = "Ninguna";
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_NingunaEnfer_SaludRecre.AutoSize = true;
+            this.chekbox_EsSo_NingunaEnfer_SaludRecre.Location = new System.Drawing.Point(159, 31);
+            this.chekbox_EsSo_NingunaEnfer_SaludRecre.Name = "chekbox_EsSo_NingunaEnfer_SaludRecre";
+            this.chekbox_EsSo_NingunaEnfer_SaludRecre.Size = new System.Drawing.Size(66, 17);
+            this.chekbox_EsSo_NingunaEnfer_SaludRecre.TabIndex = 4;
+            this.chekbox_EsSo_NingunaEnfer_SaludRecre.Text = "Ninguna";
+            this.chekbox_EsSo_NingunaEnfer_SaludRecre.UseVisualStyleBackColor = true;
             // 
-            // checkBox9
+            // chekbox_EsSo_OtraEnfer_SaludRecre
             // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(159, 54);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(46, 17);
-            this.checkBox9.TabIndex = 3;
-            this.checkBox9.Text = "Otra";
-            this.checkBox9.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_OtraEnfer_SaludRecre.AutoSize = true;
+            this.chekbox_EsSo_OtraEnfer_SaludRecre.Location = new System.Drawing.Point(159, 54);
+            this.chekbox_EsSo_OtraEnfer_SaludRecre.Name = "chekbox_EsSo_OtraEnfer_SaludRecre";
+            this.chekbox_EsSo_OtraEnfer_SaludRecre.Size = new System.Drawing.Size(46, 17);
+            this.chekbox_EsSo_OtraEnfer_SaludRecre.TabIndex = 3;
+            this.chekbox_EsSo_OtraEnfer_SaludRecre.Text = "Otra";
+            this.chekbox_EsSo_OtraEnfer_SaludRecre.UseVisualStyleBackColor = true;
             // 
-            // checkBox10
+            // chekbox_EsSo_InfecRespi_SaludRecre
             // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(7, 77);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(145, 17);
-            this.checkBox10.TabIndex = 2;
-            this.checkBox10.Text = "Infecciones Respiratorias";
-            this.checkBox10.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_InfecRespi_SaludRecre.AutoSize = true;
+            this.chekbox_EsSo_InfecRespi_SaludRecre.Location = new System.Drawing.Point(7, 77);
+            this.chekbox_EsSo_InfecRespi_SaludRecre.Name = "chekbox_EsSo_InfecRespi_SaludRecre";
+            this.chekbox_EsSo_InfecRespi_SaludRecre.Size = new System.Drawing.Size(145, 17);
+            this.chekbox_EsSo_InfecRespi_SaludRecre.TabIndex = 2;
+            this.chekbox_EsSo_InfecRespi_SaludRecre.Text = "Infecciones Respiratorias";
+            this.chekbox_EsSo_InfecRespi_SaludRecre.UseVisualStyleBackColor = true;
             // 
-            // checkBox11
+            // chekbox_EsSo_HiperTensi_SaludRecre
             // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Location = new System.Drawing.Point(7, 54);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(85, 17);
-            this.checkBox11.TabIndex = 1;
-            this.checkBox11.Text = "Hipertension";
-            this.checkBox11.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_HiperTensi_SaludRecre.AutoSize = true;
+            this.chekbox_EsSo_HiperTensi_SaludRecre.Location = new System.Drawing.Point(7, 54);
+            this.chekbox_EsSo_HiperTensi_SaludRecre.Name = "chekbox_EsSo_HiperTensi_SaludRecre";
+            this.chekbox_EsSo_HiperTensi_SaludRecre.Size = new System.Drawing.Size(85, 17);
+            this.chekbox_EsSo_HiperTensi_SaludRecre.TabIndex = 1;
+            this.chekbox_EsSo_HiperTensi_SaludRecre.Text = "Hipertension";
+            this.chekbox_EsSo_HiperTensi_SaludRecre.UseVisualStyleBackColor = true;
             // 
-            // checkBox12
+            // chekbox_EsSo_Diabetes_SaludRecre
             // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(7, 31);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(68, 17);
-            this.checkBox12.TabIndex = 0;
-            this.checkBox12.Text = "Diabetes";
-            this.checkBox12.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_Diabetes_SaludRecre.AutoSize = true;
+            this.chekbox_EsSo_Diabetes_SaludRecre.Location = new System.Drawing.Point(7, 31);
+            this.chekbox_EsSo_Diabetes_SaludRecre.Name = "chekbox_EsSo_Diabetes_SaludRecre";
+            this.chekbox_EsSo_Diabetes_SaludRecre.Size = new System.Drawing.Size(68, 17);
+            this.chekbox_EsSo_Diabetes_SaludRecre.TabIndex = 0;
+            this.chekbox_EsSo_Diabetes_SaludRecre.Text = "Diabetes";
+            this.chekbox_EsSo_Diabetes_SaludRecre.UseVisualStyleBackColor = true;
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.checkBox5);
-            this.groupBox7.Controls.Add(this.checkBox6);
-            this.groupBox7.Controls.Add(this.checkBox4);
-            this.groupBox7.Controls.Add(this.checkBox3);
-            this.groupBox7.Controls.Add(this.checkBox2);
-            this.groupBox7.Controls.Add(this.checkBox1);
+            this.groupBox7.Controls.Add(this.chekbox_EsSo_OtroSalud_SaludRecre);
+            this.groupBox7.Controls.Add(this.chekbox_EsSo_ClinicaPart_SaludRecre);
+            this.groupBox7.Controls.Add(this.chekbox_EsSo_CentroSalud_SaludRecre);
+            this.groupBox7.Controls.Add(this.chekbox_EsSo_HospiSanfe_SaludRecre);
+            this.groupBox7.Controls.Add(this.chekbox_EsSo_HospEscu_SaludRecre);
+            this.groupBox7.Controls.Add(this.chekbox_EsSo_ihss_SaludRecre);
             this.groupBox7.Location = new System.Drawing.Point(13, 15);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(252, 109);
@@ -1804,111 +1805,122 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Lugares donde recibe atencion medica";
             // 
-            // checkBox5
+            // chekbox_EsSo_OtroSalud_SaludRecre
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(143, 77);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(46, 17);
-            this.checkBox5.TabIndex = 5;
-            this.checkBox5.Text = "Otro";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_OtroSalud_SaludRecre.AutoSize = true;
+            this.chekbox_EsSo_OtroSalud_SaludRecre.Location = new System.Drawing.Point(143, 77);
+            this.chekbox_EsSo_OtroSalud_SaludRecre.Name = "chekbox_EsSo_OtroSalud_SaludRecre";
+            this.chekbox_EsSo_OtroSalud_SaludRecre.Size = new System.Drawing.Size(46, 17);
+            this.chekbox_EsSo_OtroSalud_SaludRecre.TabIndex = 5;
+            this.chekbox_EsSo_OtroSalud_SaludRecre.Text = "Otro";
+            this.chekbox_EsSo_OtroSalud_SaludRecre.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // chekbox_EsSo_ClinicaPart_SaludRecre
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(143, 54);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(104, 17);
-            this.checkBox6.TabIndex = 4;
-            this.checkBox6.Text = "Clinica Particular";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_ClinicaPart_SaludRecre.AutoSize = true;
+            this.chekbox_EsSo_ClinicaPart_SaludRecre.Location = new System.Drawing.Point(143, 54);
+            this.chekbox_EsSo_ClinicaPart_SaludRecre.Name = "chekbox_EsSo_ClinicaPart_SaludRecre";
+            this.chekbox_EsSo_ClinicaPart_SaludRecre.Size = new System.Drawing.Size(104, 17);
+            this.chekbox_EsSo_ClinicaPart_SaludRecre.TabIndex = 4;
+            this.chekbox_EsSo_ClinicaPart_SaludRecre.Text = "Clinica Particular";
+            this.chekbox_EsSo_ClinicaPart_SaludRecre.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // chekbox_EsSo_CentroSalud_SaludRecre
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(143, 31);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(102, 17);
-            this.checkBox4.TabIndex = 3;
-            this.checkBox4.Text = "Centro de Salud";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_CentroSalud_SaludRecre.AutoSize = true;
+            this.chekbox_EsSo_CentroSalud_SaludRecre.Location = new System.Drawing.Point(143, 31);
+            this.chekbox_EsSo_CentroSalud_SaludRecre.Name = "chekbox_EsSo_CentroSalud_SaludRecre";
+            this.chekbox_EsSo_CentroSalud_SaludRecre.Size = new System.Drawing.Size(102, 17);
+            this.chekbox_EsSo_CentroSalud_SaludRecre.TabIndex = 3;
+            this.chekbox_EsSo_CentroSalud_SaludRecre.Text = "Centro de Salud";
+            this.chekbox_EsSo_CentroSalud_SaludRecre.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // chekbox_EsSo_HospiSanfe_SaludRecre
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(19, 77);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(117, 17);
-            this.checkBox3.TabIndex = 2;
-            this.checkBox3.Text = "Hospital San Felipe";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_HospiSanfe_SaludRecre.AutoSize = true;
+            this.chekbox_EsSo_HospiSanfe_SaludRecre.Location = new System.Drawing.Point(19, 77);
+            this.chekbox_EsSo_HospiSanfe_SaludRecre.Name = "chekbox_EsSo_HospiSanfe_SaludRecre";
+            this.chekbox_EsSo_HospiSanfe_SaludRecre.Size = new System.Drawing.Size(117, 17);
+            this.chekbox_EsSo_HospiSanfe_SaludRecre.TabIndex = 2;
+            this.chekbox_EsSo_HospiSanfe_SaludRecre.Text = "Hospital San Felipe";
+            this.chekbox_EsSo_HospiSanfe_SaludRecre.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // chekbox_EsSo_HospEscu_SaludRecre
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(19, 54);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(105, 17);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Hospital Escuela";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_HospEscu_SaludRecre.AutoSize = true;
+            this.chekbox_EsSo_HospEscu_SaludRecre.Location = new System.Drawing.Point(19, 54);
+            this.chekbox_EsSo_HospEscu_SaludRecre.Name = "chekbox_EsSo_HospEscu_SaludRecre";
+            this.chekbox_EsSo_HospEscu_SaludRecre.Size = new System.Drawing.Size(105, 17);
+            this.chekbox_EsSo_HospEscu_SaludRecre.TabIndex = 1;
+            this.chekbox_EsSo_HospEscu_SaludRecre.Text = "Hospital Escuela";
+            this.chekbox_EsSo_HospEscu_SaludRecre.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // chekbox_EsSo_ihss_SaludRecre
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(19, 31);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(51, 17);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "IHSS";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_ihss_SaludRecre.AutoSize = true;
+            this.chekbox_EsSo_ihss_SaludRecre.Location = new System.Drawing.Point(19, 31);
+            this.chekbox_EsSo_ihss_SaludRecre.Name = "chekbox_EsSo_ihss_SaludRecre";
+            this.chekbox_EsSo_ihss_SaludRecre.Size = new System.Drawing.Size(51, 17);
+            this.chekbox_EsSo_ihss_SaludRecre.TabIndex = 0;
+            this.chekbox_EsSo_ihss_SaludRecre.Text = "IHSS";
+            this.chekbox_EsSo_ihss_SaludRecre.UseVisualStyleBackColor = true;
             // 
             // InformacionVivienda
             // 
-            this.InformacionVivienda.Controls.Add(this.button5);
-            this.InformacionVivienda.Controls.Add(this.button4);
+            this.InformacionVivienda.Controls.Add(this.btm_EsSo_MontoMatri_InfoVivien);
+            this.InformacionVivienda.Controls.Add(this.btm_EsSo_Finalizar_InfoVivien);
             this.InformacionVivienda.Controls.Add(this.groupBox12);
             this.InformacionVivienda.Controls.Add(this.groupBox11);
             this.InformacionVivienda.Controls.Add(this.groupBox10);
             this.InformacionVivienda.Location = new System.Drawing.Point(4, 22);
             this.InformacionVivienda.Name = "InformacionVivienda";
-            this.InformacionVivienda.Size = new System.Drawing.Size(711, 500);
+            this.InformacionVivienda.Size = new System.Drawing.Size(773, 544);
             this.InformacionVivienda.TabIndex = 5;
             this.InformacionVivienda.Text = "Informacion Vivienda";
             this.InformacionVivienda.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btm_EsSo_MontoMatri_InfoVivien
             // 
-            this.button4.Location = new System.Drawing.Point(426, 337);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(91, 23);
-            this.button4.TabIndex = 34;
-            this.button4.Text = "Finalizar";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btm_EsSo_MontoMatri_InfoVivien.Location = new System.Drawing.Point(426, 375);
+            this.btm_EsSo_MontoMatri_InfoVivien.Name = "btm_EsSo_MontoMatri_InfoVivien";
+            this.btm_EsSo_MontoMatri_InfoVivien.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btm_EsSo_MontoMatri_InfoVivien.Size = new System.Drawing.Size(155, 59);
+            this.btm_EsSo_MontoMatri_InfoVivien.TabIndex = 35;
+            this.btm_EsSo_MontoMatri_InfoVivien.Text = "Monto Matricula";
+            this.btm_EsSo_MontoMatri_InfoVivien.UseVisualStyleBackColor = true;
+            this.btm_EsSo_MontoMatri_InfoVivien.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // btm_EsSo_Finalizar_InfoVivien
+            // 
+            this.btm_EsSo_Finalizar_InfoVivien.Location = new System.Drawing.Point(426, 337);
+            this.btm_EsSo_Finalizar_InfoVivien.Name = "btm_EsSo_Finalizar_InfoVivien";
+            this.btm_EsSo_Finalizar_InfoVivien.Size = new System.Drawing.Size(91, 23);
+            this.btm_EsSo_Finalizar_InfoVivien.TabIndex = 34;
+            this.btm_EsSo_Finalizar_InfoVivien.Text = "Finalizar";
+            this.btm_EsSo_Finalizar_InfoVivien.UseVisualStyleBackColor = true;
+            this.btm_EsSo_Finalizar_InfoVivien.Click += new System.EventHandler(this.button4_Click);
             // 
             // groupBox12
             // 
-            this.groupBox12.Controls.Add(this.radioButton13);
-            this.groupBox12.Controls.Add(this.radioButton12);
+            this.groupBox12.Controls.Add(this.rbtm_EsSo_Madera_InfoVivien);
+            this.groupBox12.Controls.Add(this.rbtm_EsSo_OtroMaterPiso_InfoVivien);
             this.groupBox12.Controls.Add(this.radioButton11);
-            this.groupBox12.Controls.Add(this.radioButton10);
+            this.groupBox12.Controls.Add(this.rbtm_EsSo_CEramica_InfoVivien);
             this.groupBox12.Controls.Add(this.label64);
-            this.groupBox12.Controls.Add(this.textBox63);
-            this.groupBox12.Controls.Add(this.radioButton1);
+            this.groupBox12.Controls.Add(this.txt_EsSo_OtroMaterPiso_InfoVivien);
+            this.groupBox12.Controls.Add(this.rbtm_EsSo_Propia_InfoVivien);
             this.groupBox12.Controls.Add(this.radioButton7);
-            this.groupBox12.Controls.Add(this.radioButton2);
+            this.groupBox12.Controls.Add(this.rbtm_EsSo_Alquilada_InfoVivien);
             this.groupBox12.Controls.Add(this.radioButton8);
-            this.groupBox12.Controls.Add(this.radioButton3);
-            this.groupBox12.Controls.Add(this.radioButton9);
-            this.groupBox12.Controls.Add(this.textBox61);
+            this.groupBox12.Controls.Add(this.rbtm_EsSo_OtroCaracte_InfoVivien);
+            this.groupBox12.Controls.Add(this.rbtm_EsSo_Tierra_InfoVivien);
+            this.groupBox12.Controls.Add(this.txt_EsSo_OtroCaracte_InfoVivien);
             this.groupBox12.Controls.Add(this.label66);
             this.groupBox12.Controls.Add(this.label65);
-            this.groupBox12.Controls.Add(this.textBox62);
-            this.groupBox12.Controls.Add(this.radioButton6);
-            this.groupBox12.Controls.Add(this.radioButton4);
-            this.groupBox12.Controls.Add(this.radioButton5);
+            this.groupBox12.Controls.Add(this.txt_EsSo_OtroMaterial_InfoVivien);
+            this.groupBox12.Controls.Add(this.rbtm_EsSo_Ladrillo_InfoVivien);
+            this.groupBox12.Controls.Add(this.rbtm_EsSo_OtroMaterial_InfoVivien);
+            this.groupBox12.Controls.Add(this.rbtm_EsSo_Bloque_InfoVivien);
             this.groupBox12.Location = new System.Drawing.Point(11, 20);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(223, 300);
@@ -1916,27 +1928,27 @@
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Caracteristicas de la vivienda";
             // 
-            // radioButton13
+            // rbtm_EsSo_Madera_InfoVivien
             // 
-            this.radioButton13.AutoSize = true;
-            this.radioButton13.Location = new System.Drawing.Point(152, 120);
-            this.radioButton13.Name = "radioButton13";
-            this.radioButton13.Size = new System.Drawing.Size(55, 17);
-            this.radioButton13.TabIndex = 36;
-            this.radioButton13.TabStop = true;
-            this.radioButton13.Text = "Madre";
-            this.radioButton13.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_Madera_InfoVivien.AutoSize = true;
+            this.rbtm_EsSo_Madera_InfoVivien.Location = new System.Drawing.Point(152, 120);
+            this.rbtm_EsSo_Madera_InfoVivien.Name = "rbtm_EsSo_Madera_InfoVivien";
+            this.rbtm_EsSo_Madera_InfoVivien.Size = new System.Drawing.Size(61, 17);
+            this.rbtm_EsSo_Madera_InfoVivien.TabIndex = 36;
+            this.rbtm_EsSo_Madera_InfoVivien.TabStop = true;
+            this.rbtm_EsSo_Madera_InfoVivien.Text = "Madera";
+            this.rbtm_EsSo_Madera_InfoVivien.UseVisualStyleBackColor = true;
             // 
-            // radioButton12
+            // rbtm_EsSo_OtroMaterPiso_InfoVivien
             // 
-            this.radioButton12.AutoSize = true;
-            this.radioButton12.Location = new System.Drawing.Point(19, 259);
-            this.radioButton12.Name = "radioButton12";
-            this.radioButton12.Size = new System.Drawing.Size(45, 17);
-            this.radioButton12.TabIndex = 35;
-            this.radioButton12.TabStop = true;
-            this.radioButton12.Text = "Otro";
-            this.radioButton12.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_OtroMaterPiso_InfoVivien.AutoSize = true;
+            this.rbtm_EsSo_OtroMaterPiso_InfoVivien.Location = new System.Drawing.Point(19, 259);
+            this.rbtm_EsSo_OtroMaterPiso_InfoVivien.Name = "rbtm_EsSo_OtroMaterPiso_InfoVivien";
+            this.rbtm_EsSo_OtroMaterPiso_InfoVivien.Size = new System.Drawing.Size(45, 17);
+            this.rbtm_EsSo_OtroMaterPiso_InfoVivien.TabIndex = 35;
+            this.rbtm_EsSo_OtroMaterPiso_InfoVivien.TabStop = true;
+            this.rbtm_EsSo_OtroMaterPiso_InfoVivien.Text = "Otro";
+            this.rbtm_EsSo_OtroMaterPiso_InfoVivien.UseVisualStyleBackColor = true;
             // 
             // radioButton11
             // 
@@ -1949,16 +1961,16 @@
             this.radioButton11.Text = "Madera";
             this.radioButton11.UseVisualStyleBackColor = true;
             // 
-            // radioButton10
+            // rbtm_EsSo_CEramica_InfoVivien
             // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(19, 236);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(69, 17);
-            this.radioButton10.TabIndex = 33;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "Ceramica";
-            this.radioButton10.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_CEramica_InfoVivien.AutoSize = true;
+            this.rbtm_EsSo_CEramica_InfoVivien.Location = new System.Drawing.Point(19, 236);
+            this.rbtm_EsSo_CEramica_InfoVivien.Name = "rbtm_EsSo_CEramica_InfoVivien";
+            this.rbtm_EsSo_CEramica_InfoVivien.Size = new System.Drawing.Size(69, 17);
+            this.rbtm_EsSo_CEramica_InfoVivien.TabIndex = 33;
+            this.rbtm_EsSo_CEramica_InfoVivien.TabStop = true;
+            this.rbtm_EsSo_CEramica_InfoVivien.Text = "Ceramica";
+            this.rbtm_EsSo_CEramica_InfoVivien.UseVisualStyleBackColor = true;
             // 
             // label64
             // 
@@ -1969,23 +1981,23 @@
             this.label64.TabIndex = 2;
             this.label64.Text = "Tenencia:";
             // 
-            // textBox63
+            // txt_EsSo_OtroMaterPiso_InfoVivien
             // 
-            this.textBox63.Location = new System.Drawing.Point(70, 259);
-            this.textBox63.Name = "textBox63";
-            this.textBox63.Size = new System.Drawing.Size(100, 20);
-            this.textBox63.TabIndex = 32;
+            this.txt_EsSo_OtroMaterPiso_InfoVivien.Location = new System.Drawing.Point(70, 259);
+            this.txt_EsSo_OtroMaterPiso_InfoVivien.Name = "txt_EsSo_OtroMaterPiso_InfoVivien";
+            this.txt_EsSo_OtroMaterPiso_InfoVivien.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_OtroMaterPiso_InfoVivien.TabIndex = 32;
             // 
-            // radioButton1
+            // rbtm_EsSo_Propia_InfoVivien
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(19, 43);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(55, 17);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Propia";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_Propia_InfoVivien.AutoSize = true;
+            this.rbtm_EsSo_Propia_InfoVivien.Location = new System.Drawing.Point(19, 43);
+            this.rbtm_EsSo_Propia_InfoVivien.Name = "rbtm_EsSo_Propia_InfoVivien";
+            this.rbtm_EsSo_Propia_InfoVivien.Size = new System.Drawing.Size(55, 17);
+            this.rbtm_EsSo_Propia_InfoVivien.TabIndex = 3;
+            this.rbtm_EsSo_Propia_InfoVivien.TabStop = true;
+            this.rbtm_EsSo_Propia_InfoVivien.Text = "Propia";
+            this.rbtm_EsSo_Propia_InfoVivien.UseVisualStyleBackColor = true;
             // 
             // radioButton7
             // 
@@ -1998,16 +2010,16 @@
             this.radioButton7.Text = "Ladrillo";
             this.radioButton7.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbtm_EsSo_Alquilada_InfoVivien
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(80, 43);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(68, 17);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Alquilada";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_Alquilada_InfoVivien.AutoSize = true;
+            this.rbtm_EsSo_Alquilada_InfoVivien.Location = new System.Drawing.Point(80, 43);
+            this.rbtm_EsSo_Alquilada_InfoVivien.Name = "rbtm_EsSo_Alquilada_InfoVivien";
+            this.rbtm_EsSo_Alquilada_InfoVivien.Size = new System.Drawing.Size(68, 17);
+            this.rbtm_EsSo_Alquilada_InfoVivien.TabIndex = 4;
+            this.rbtm_EsSo_Alquilada_InfoVivien.TabStop = true;
+            this.rbtm_EsSo_Alquilada_InfoVivien.Text = "Alquilada";
+            this.rbtm_EsSo_Alquilada_InfoVivien.UseVisualStyleBackColor = true;
             // 
             // radioButton8
             // 
@@ -2020,34 +2032,34 @@
             this.radioButton8.Text = "Cemento";
             this.radioButton8.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rbtm_EsSo_OtroCaracte_InfoVivien
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(19, 66);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(45, 17);
-            this.radioButton3.TabIndex = 5;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Otro";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_OtroCaracte_InfoVivien.AutoSize = true;
+            this.rbtm_EsSo_OtroCaracte_InfoVivien.Location = new System.Drawing.Point(19, 66);
+            this.rbtm_EsSo_OtroCaracte_InfoVivien.Name = "rbtm_EsSo_OtroCaracte_InfoVivien";
+            this.rbtm_EsSo_OtroCaracte_InfoVivien.Size = new System.Drawing.Size(45, 17);
+            this.rbtm_EsSo_OtroCaracte_InfoVivien.TabIndex = 5;
+            this.rbtm_EsSo_OtroCaracte_InfoVivien.TabStop = true;
+            this.rbtm_EsSo_OtroCaracte_InfoVivien.Text = "Otro";
+            this.rbtm_EsSo_OtroCaracte_InfoVivien.UseVisualStyleBackColor = true;
             // 
-            // radioButton9
+            // rbtm_EsSo_Tierra_InfoVivien
             // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(19, 213);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(52, 17);
-            this.radioButton9.TabIndex = 29;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "Tierra";
-            this.radioButton9.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_Tierra_InfoVivien.AutoSize = true;
+            this.rbtm_EsSo_Tierra_InfoVivien.Location = new System.Drawing.Point(19, 213);
+            this.rbtm_EsSo_Tierra_InfoVivien.Name = "rbtm_EsSo_Tierra_InfoVivien";
+            this.rbtm_EsSo_Tierra_InfoVivien.Size = new System.Drawing.Size(52, 17);
+            this.rbtm_EsSo_Tierra_InfoVivien.TabIndex = 29;
+            this.rbtm_EsSo_Tierra_InfoVivien.TabStop = true;
+            this.rbtm_EsSo_Tierra_InfoVivien.Text = "Tierra";
+            this.rbtm_EsSo_Tierra_InfoVivien.UseVisualStyleBackColor = true;
             // 
-            // textBox61
+            // txt_EsSo_OtroCaracte_InfoVivien
             // 
-            this.textBox61.Location = new System.Drawing.Point(70, 65);
-            this.textBox61.Name = "textBox61";
-            this.textBox61.Size = new System.Drawing.Size(100, 20);
-            this.textBox61.TabIndex = 22;
+            this.txt_EsSo_OtroCaracte_InfoVivien.Location = new System.Drawing.Point(70, 65);
+            this.txt_EsSo_OtroCaracte_InfoVivien.Name = "txt_EsSo_OtroCaracte_InfoVivien";
+            this.txt_EsSo_OtroCaracte_InfoVivien.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_OtroCaracte_InfoVivien.TabIndex = 22;
             // 
             // label66
             // 
@@ -2067,54 +2079,54 @@
             this.label65.TabIndex = 23;
             this.label65.Text = "Material de construccion:";
             // 
-            // textBox62
+            // txt_EsSo_OtroMaterial_InfoVivien
             // 
-            this.textBox62.Location = new System.Drawing.Point(75, 144);
-            this.textBox62.Name = "textBox62";
-            this.textBox62.Size = new System.Drawing.Size(100, 20);
-            this.textBox62.TabIndex = 27;
+            this.txt_EsSo_OtroMaterial_InfoVivien.Location = new System.Drawing.Point(75, 144);
+            this.txt_EsSo_OtroMaterial_InfoVivien.Name = "txt_EsSo_OtroMaterial_InfoVivien";
+            this.txt_EsSo_OtroMaterial_InfoVivien.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_OtroMaterial_InfoVivien.TabIndex = 27;
             // 
-            // radioButton6
+            // rbtm_EsSo_Ladrillo_InfoVivien
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(19, 120);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(58, 17);
-            this.radioButton6.TabIndex = 24;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Ladrillo";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_Ladrillo_InfoVivien.AutoSize = true;
+            this.rbtm_EsSo_Ladrillo_InfoVivien.Location = new System.Drawing.Point(19, 120);
+            this.rbtm_EsSo_Ladrillo_InfoVivien.Name = "rbtm_EsSo_Ladrillo_InfoVivien";
+            this.rbtm_EsSo_Ladrillo_InfoVivien.Size = new System.Drawing.Size(58, 17);
+            this.rbtm_EsSo_Ladrillo_InfoVivien.TabIndex = 24;
+            this.rbtm_EsSo_Ladrillo_InfoVivien.TabStop = true;
+            this.rbtm_EsSo_Ladrillo_InfoVivien.Text = "Ladrillo";
+            this.rbtm_EsSo_Ladrillo_InfoVivien.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // rbtm_EsSo_OtroMaterial_InfoVivien
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(19, 144);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(50, 17);
-            this.radioButton4.TabIndex = 26;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Otros";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_OtroMaterial_InfoVivien.AutoSize = true;
+            this.rbtm_EsSo_OtroMaterial_InfoVivien.Location = new System.Drawing.Point(19, 144);
+            this.rbtm_EsSo_OtroMaterial_InfoVivien.Name = "rbtm_EsSo_OtroMaterial_InfoVivien";
+            this.rbtm_EsSo_OtroMaterial_InfoVivien.Size = new System.Drawing.Size(50, 17);
+            this.rbtm_EsSo_OtroMaterial_InfoVivien.TabIndex = 26;
+            this.rbtm_EsSo_OtroMaterial_InfoVivien.TabStop = true;
+            this.rbtm_EsSo_OtroMaterial_InfoVivien.Text = "Otros";
+            this.rbtm_EsSo_OtroMaterial_InfoVivien.UseVisualStyleBackColor = true;
             // 
-            // radioButton5
+            // rbtm_EsSo_Bloque_InfoVivien
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(80, 120);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(58, 17);
-            this.radioButton5.TabIndex = 25;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Bloque";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_Bloque_InfoVivien.AutoSize = true;
+            this.rbtm_EsSo_Bloque_InfoVivien.Location = new System.Drawing.Point(80, 120);
+            this.rbtm_EsSo_Bloque_InfoVivien.Name = "rbtm_EsSo_Bloque_InfoVivien";
+            this.rbtm_EsSo_Bloque_InfoVivien.Size = new System.Drawing.Size(58, 17);
+            this.rbtm_EsSo_Bloque_InfoVivien.TabIndex = 25;
+            this.rbtm_EsSo_Bloque_InfoVivien.TabStop = true;
+            this.rbtm_EsSo_Bloque_InfoVivien.Text = "Bloque";
+            this.rbtm_EsSo_Bloque_InfoVivien.UseVisualStyleBackColor = true;
             // 
             // groupBox11
             // 
-            this.groupBox11.Controls.Add(this.textBox60);
-            this.groupBox11.Controls.Add(this.checkBox27);
-            this.groupBox11.Controls.Add(this.checkBox28);
-            this.groupBox11.Controls.Add(this.checkBox29);
-            this.groupBox11.Controls.Add(this.checkBox30);
-            this.groupBox11.Controls.Add(this.checkBox31);
+            this.groupBox11.Controls.Add(this.txt_EsSo_OtroServicio_InfoVivien);
+            this.groupBox11.Controls.Add(this.chekbox_EsSo_Telefono_InfoVivien);
+            this.groupBox11.Controls.Add(this.chekbox_EsSo_OtrosServ_InfoVivien);
+            this.groupBox11.Controls.Add(this.chekbox_EsSo_Alcantari_InfoVivien);
+            this.groupBox11.Controls.Add(this.chekbox_EsSo_Agua_InfoVivien);
+            this.groupBox11.Controls.Add(this.chekbox_EsSo_Energia_InfoVivien);
             this.groupBox11.Location = new System.Drawing.Point(240, 20);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(298, 117);
@@ -2122,76 +2134,76 @@
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Servicios con los que cuenta";
             // 
-            // textBox60
+            // txt_EsSo_OtroServicio_InfoVivien
             // 
-            this.textBox60.Location = new System.Drawing.Point(177, 76);
-            this.textBox60.Name = "textBox60";
-            this.textBox60.Size = new System.Drawing.Size(100, 20);
-            this.textBox60.TabIndex = 21;
+            this.txt_EsSo_OtroServicio_InfoVivien.Location = new System.Drawing.Point(177, 76);
+            this.txt_EsSo_OtroServicio_InfoVivien.Name = "txt_EsSo_OtroServicio_InfoVivien";
+            this.txt_EsSo_OtroServicio_InfoVivien.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_OtroServicio_InfoVivien.TabIndex = 21;
             // 
-            // checkBox27
+            // chekbox_EsSo_Telefono_InfoVivien
             // 
-            this.checkBox27.AutoSize = true;
-            this.checkBox27.Location = new System.Drawing.Point(16, 76);
-            this.checkBox27.Name = "checkBox27";
-            this.checkBox27.Size = new System.Drawing.Size(68, 17);
-            this.checkBox27.TabIndex = 20;
-            this.checkBox27.Text = "Telefono";
-            this.checkBox27.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_Telefono_InfoVivien.AutoSize = true;
+            this.chekbox_EsSo_Telefono_InfoVivien.Location = new System.Drawing.Point(16, 76);
+            this.chekbox_EsSo_Telefono_InfoVivien.Name = "chekbox_EsSo_Telefono_InfoVivien";
+            this.chekbox_EsSo_Telefono_InfoVivien.Size = new System.Drawing.Size(68, 17);
+            this.chekbox_EsSo_Telefono_InfoVivien.TabIndex = 20;
+            this.chekbox_EsSo_Telefono_InfoVivien.Text = "Telefono";
+            this.chekbox_EsSo_Telefono_InfoVivien.UseVisualStyleBackColor = true;
             // 
-            // checkBox28
+            // chekbox_EsSo_OtrosServ_InfoVivien
             // 
-            this.checkBox28.AutoSize = true;
-            this.checkBox28.Location = new System.Drawing.Point(177, 53);
-            this.checkBox28.Name = "checkBox28";
-            this.checkBox28.Size = new System.Drawing.Size(51, 17);
-            this.checkBox28.TabIndex = 19;
-            this.checkBox28.Text = "Otros";
-            this.checkBox28.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_OtrosServ_InfoVivien.AutoSize = true;
+            this.chekbox_EsSo_OtrosServ_InfoVivien.Location = new System.Drawing.Point(177, 53);
+            this.chekbox_EsSo_OtrosServ_InfoVivien.Name = "chekbox_EsSo_OtrosServ_InfoVivien";
+            this.chekbox_EsSo_OtrosServ_InfoVivien.Size = new System.Drawing.Size(51, 17);
+            this.chekbox_EsSo_OtrosServ_InfoVivien.TabIndex = 19;
+            this.chekbox_EsSo_OtrosServ_InfoVivien.Text = "Otros";
+            this.chekbox_EsSo_OtrosServ_InfoVivien.UseVisualStyleBackColor = true;
             // 
-            // checkBox29
+            // chekbox_EsSo_Alcantari_InfoVivien
             // 
-            this.checkBox29.AutoSize = true;
-            this.checkBox29.Location = new System.Drawing.Point(177, 30);
-            this.checkBox29.Name = "checkBox29";
-            this.checkBox29.Size = new System.Drawing.Size(89, 17);
-            this.checkBox29.TabIndex = 18;
-            this.checkBox29.Text = "Alcantarillado";
-            this.checkBox29.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_Alcantari_InfoVivien.AutoSize = true;
+            this.chekbox_EsSo_Alcantari_InfoVivien.Location = new System.Drawing.Point(177, 30);
+            this.chekbox_EsSo_Alcantari_InfoVivien.Name = "chekbox_EsSo_Alcantari_InfoVivien";
+            this.chekbox_EsSo_Alcantari_InfoVivien.Size = new System.Drawing.Size(89, 17);
+            this.chekbox_EsSo_Alcantari_InfoVivien.TabIndex = 18;
+            this.chekbox_EsSo_Alcantari_InfoVivien.Text = "Alcantarillado";
+            this.chekbox_EsSo_Alcantari_InfoVivien.UseVisualStyleBackColor = true;
             // 
-            // checkBox30
+            // chekbox_EsSo_Agua_InfoVivien
             // 
-            this.checkBox30.AutoSize = true;
-            this.checkBox30.Location = new System.Drawing.Point(16, 53);
-            this.checkBox30.Name = "checkBox30";
-            this.checkBox30.Size = new System.Drawing.Size(89, 17);
-            this.checkBox30.TabIndex = 17;
-            this.checkBox30.Text = "Agua potable";
-            this.checkBox30.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_Agua_InfoVivien.AutoSize = true;
+            this.chekbox_EsSo_Agua_InfoVivien.Location = new System.Drawing.Point(16, 53);
+            this.chekbox_EsSo_Agua_InfoVivien.Name = "chekbox_EsSo_Agua_InfoVivien";
+            this.chekbox_EsSo_Agua_InfoVivien.Size = new System.Drawing.Size(89, 17);
+            this.chekbox_EsSo_Agua_InfoVivien.TabIndex = 17;
+            this.chekbox_EsSo_Agua_InfoVivien.Text = "Agua potable";
+            this.chekbox_EsSo_Agua_InfoVivien.UseVisualStyleBackColor = true;
             // 
-            // checkBox31
+            // chekbox_EsSo_Energia_InfoVivien
             // 
-            this.checkBox31.AutoSize = true;
-            this.checkBox31.Location = new System.Drawing.Point(16, 30);
-            this.checkBox31.Name = "checkBox31";
-            this.checkBox31.Size = new System.Drawing.Size(105, 17);
-            this.checkBox31.TabIndex = 16;
-            this.checkBox31.Text = "Energia electrica";
-            this.checkBox31.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_Energia_InfoVivien.AutoSize = true;
+            this.chekbox_EsSo_Energia_InfoVivien.Location = new System.Drawing.Point(16, 30);
+            this.chekbox_EsSo_Energia_InfoVivien.Name = "chekbox_EsSo_Energia_InfoVivien";
+            this.chekbox_EsSo_Energia_InfoVivien.Size = new System.Drawing.Size(105, 17);
+            this.chekbox_EsSo_Energia_InfoVivien.TabIndex = 16;
+            this.chekbox_EsSo_Energia_InfoVivien.Text = "Energia electrica";
+            this.chekbox_EsSo_Energia_InfoVivien.UseVisualStyleBackColor = true;
             // 
             // groupBox10
             // 
-            this.groupBox10.Controls.Add(this.checkBox20);
-            this.groupBox10.Controls.Add(this.checkBox21);
-            this.groupBox10.Controls.Add(this.checkBox22);
-            this.groupBox10.Controls.Add(this.checkBox23);
-            this.groupBox10.Controls.Add(this.checkBox24);
-            this.groupBox10.Controls.Add(this.checkBox13);
-            this.groupBox10.Controls.Add(this.checkBox14);
-            this.groupBox10.Controls.Add(this.checkBox15);
-            this.groupBox10.Controls.Add(this.checkBox16);
-            this.groupBox10.Controls.Add(this.checkBox17);
-            this.groupBox10.Controls.Add(this.checkBox18);
+            this.groupBox10.Controls.Add(this.chekbox_EsSo_AireAcon_InfoVivien);
+            this.groupBox10.Controls.Add(this.chekbox_EsSo_Microondas_InfoVivien);
+            this.groupBox10.Controls.Add(this.chekbox_EsSo_Automovil_InfoVivien);
+            this.groupBox10.Controls.Add(this.chekbox_EsSo_Estufa_InfoVivien);
+            this.groupBox10.Controls.Add(this.chekbox_EsSo_Refri_InfoVivien);
+            this.groupBox10.Controls.Add(this.chekbox_EsSo_Ventila_nfoVivien);
+            this.groupBox10.Controls.Add(this.chekbox_EsSo_Compu_InfoVivien);
+            this.groupBox10.Controls.Add(this.chekbox_EsSo_Lavadora_InfoVivien);
+            this.groupBox10.Controls.Add(this.chekbox_EsSo_Ducha_InfoVivien);
+            this.groupBox10.Controls.Add(this.chekbox_EsSo_EquipoSoni_InfoVivien);
+            this.groupBox10.Controls.Add(this.chekbox_EsSo_Tele_InfoVivien);
             this.groupBox10.Location = new System.Drawing.Point(240, 143);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(298, 177);
@@ -2199,137 +2211,164 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "En su casa dispone de...";
             // 
-            // checkBox20
+            // chekbox_EsSo_AireAcon_InfoVivien
             // 
-            this.checkBox20.AutoSize = true;
-            this.checkBox20.Location = new System.Drawing.Point(159, 121);
-            this.checkBox20.Name = "checkBox20";
-            this.checkBox20.Size = new System.Drawing.Size(117, 17);
-            this.checkBox20.TabIndex = 16;
-            this.checkBox20.Text = "Aire acondicionado";
-            this.checkBox20.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_AireAcon_InfoVivien.AutoSize = true;
+            this.chekbox_EsSo_AireAcon_InfoVivien.Location = new System.Drawing.Point(159, 121);
+            this.chekbox_EsSo_AireAcon_InfoVivien.Name = "chekbox_EsSo_AireAcon_InfoVivien";
+            this.chekbox_EsSo_AireAcon_InfoVivien.Size = new System.Drawing.Size(117, 17);
+            this.chekbox_EsSo_AireAcon_InfoVivien.TabIndex = 16;
+            this.chekbox_EsSo_AireAcon_InfoVivien.Text = "Aire acondicionado";
+            this.chekbox_EsSo_AireAcon_InfoVivien.UseVisualStyleBackColor = true;
             // 
-            // checkBox21
+            // chekbox_EsSo_Microondas_InfoVivien
             // 
-            this.checkBox21.AutoSize = true;
-            this.checkBox21.Location = new System.Drawing.Point(159, 52);
-            this.checkBox21.Name = "checkBox21";
-            this.checkBox21.Size = new System.Drawing.Size(81, 17);
-            this.checkBox21.TabIndex = 15;
-            this.checkBox21.Text = "Microondas";
-            this.checkBox21.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_Microondas_InfoVivien.AutoSize = true;
+            this.chekbox_EsSo_Microondas_InfoVivien.Location = new System.Drawing.Point(159, 52);
+            this.chekbox_EsSo_Microondas_InfoVivien.Name = "chekbox_EsSo_Microondas_InfoVivien";
+            this.chekbox_EsSo_Microondas_InfoVivien.Size = new System.Drawing.Size(81, 17);
+            this.chekbox_EsSo_Microondas_InfoVivien.TabIndex = 15;
+            this.chekbox_EsSo_Microondas_InfoVivien.Text = "Microondas";
+            this.chekbox_EsSo_Microondas_InfoVivien.UseVisualStyleBackColor = true;
             // 
-            // checkBox22
+            // chekbox_EsSo_Automovil_InfoVivien
             // 
-            this.checkBox22.AutoSize = true;
-            this.checkBox22.Location = new System.Drawing.Point(159, 29);
-            this.checkBox22.Name = "checkBox22";
-            this.checkBox22.Size = new System.Drawing.Size(72, 17);
-            this.checkBox22.TabIndex = 14;
-            this.checkBox22.Text = "Automovil";
-            this.checkBox22.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_Automovil_InfoVivien.AutoSize = true;
+            this.chekbox_EsSo_Automovil_InfoVivien.Location = new System.Drawing.Point(159, 29);
+            this.chekbox_EsSo_Automovil_InfoVivien.Name = "chekbox_EsSo_Automovil_InfoVivien";
+            this.chekbox_EsSo_Automovil_InfoVivien.Size = new System.Drawing.Size(72, 17);
+            this.chekbox_EsSo_Automovil_InfoVivien.TabIndex = 14;
+            this.chekbox_EsSo_Automovil_InfoVivien.Text = "Automovil";
+            this.chekbox_EsSo_Automovil_InfoVivien.UseVisualStyleBackColor = true;
             // 
-            // checkBox23
+            // chekbox_EsSo_Estufa_InfoVivien
             // 
-            this.checkBox23.AutoSize = true;
-            this.checkBox23.Location = new System.Drawing.Point(10, 98);
-            this.checkBox23.Name = "checkBox23";
-            this.checkBox23.Size = new System.Drawing.Size(143, 17);
-            this.checkBox23.TabIndex = 13;
-            this.checkBox23.Text = "Estufa de gas o electrica";
-            this.checkBox23.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_Estufa_InfoVivien.AutoSize = true;
+            this.chekbox_EsSo_Estufa_InfoVivien.Location = new System.Drawing.Point(10, 98);
+            this.chekbox_EsSo_Estufa_InfoVivien.Name = "chekbox_EsSo_Estufa_InfoVivien";
+            this.chekbox_EsSo_Estufa_InfoVivien.Size = new System.Drawing.Size(143, 17);
+            this.chekbox_EsSo_Estufa_InfoVivien.TabIndex = 13;
+            this.chekbox_EsSo_Estufa_InfoVivien.Text = "Estufa de gas o electrica";
+            this.chekbox_EsSo_Estufa_InfoVivien.UseVisualStyleBackColor = true;
             // 
-            // checkBox24
+            // chekbox_EsSo_Refri_InfoVivien
             // 
-            this.checkBox24.AutoSize = true;
-            this.checkBox24.Location = new System.Drawing.Point(10, 75);
-            this.checkBox24.Name = "checkBox24";
-            this.checkBox24.Size = new System.Drawing.Size(84, 17);
-            this.checkBox24.TabIndex = 12;
-            this.checkBox24.Text = "Refrigerador";
-            this.checkBox24.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_Refri_InfoVivien.AutoSize = true;
+            this.chekbox_EsSo_Refri_InfoVivien.Location = new System.Drawing.Point(10, 75);
+            this.chekbox_EsSo_Refri_InfoVivien.Name = "chekbox_EsSo_Refri_InfoVivien";
+            this.chekbox_EsSo_Refri_InfoVivien.Size = new System.Drawing.Size(84, 17);
+            this.chekbox_EsSo_Refri_InfoVivien.TabIndex = 12;
+            this.chekbox_EsSo_Refri_InfoVivien.Text = "Refrigerador";
+            this.chekbox_EsSo_Refri_InfoVivien.UseVisualStyleBackColor = true;
             // 
-            // checkBox13
+            // chekbox_EsSo_Ventila_nfoVivien
             // 
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.Location = new System.Drawing.Point(159, 98);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(73, 17);
-            this.checkBox13.TabIndex = 11;
-            this.checkBox13.Text = "Ventilador";
-            this.checkBox13.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_Ventila_nfoVivien.AutoSize = true;
+            this.chekbox_EsSo_Ventila_nfoVivien.Location = new System.Drawing.Point(159, 98);
+            this.chekbox_EsSo_Ventila_nfoVivien.Name = "chekbox_EsSo_Ventila_nfoVivien";
+            this.chekbox_EsSo_Ventila_nfoVivien.Size = new System.Drawing.Size(73, 17);
+            this.chekbox_EsSo_Ventila_nfoVivien.TabIndex = 11;
+            this.chekbox_EsSo_Ventila_nfoVivien.Text = "Ventilador";
+            this.chekbox_EsSo_Ventila_nfoVivien.UseVisualStyleBackColor = true;
             // 
-            // checkBox14
+            // chekbox_EsSo_Compu_InfoVivien
             // 
-            this.checkBox14.AutoSize = true;
-            this.checkBox14.Location = new System.Drawing.Point(159, 75);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(89, 17);
-            this.checkBox14.TabIndex = 10;
-            this.checkBox14.Text = "Computadora";
-            this.checkBox14.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_Compu_InfoVivien.AutoSize = true;
+            this.chekbox_EsSo_Compu_InfoVivien.Location = new System.Drawing.Point(159, 75);
+            this.chekbox_EsSo_Compu_InfoVivien.Name = "chekbox_EsSo_Compu_InfoVivien";
+            this.chekbox_EsSo_Compu_InfoVivien.Size = new System.Drawing.Size(89, 17);
+            this.chekbox_EsSo_Compu_InfoVivien.TabIndex = 10;
+            this.chekbox_EsSo_Compu_InfoVivien.Text = "Computadora";
+            this.chekbox_EsSo_Compu_InfoVivien.UseVisualStyleBackColor = true;
             // 
-            // checkBox15
+            // chekbox_EsSo_Lavadora_InfoVivien
             // 
-            this.checkBox15.AutoSize = true;
-            this.checkBox15.Location = new System.Drawing.Point(10, 144);
-            this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(71, 17);
-            this.checkBox15.TabIndex = 9;
-            this.checkBox15.Text = "Lavadora";
-            this.checkBox15.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_Lavadora_InfoVivien.AutoSize = true;
+            this.chekbox_EsSo_Lavadora_InfoVivien.Location = new System.Drawing.Point(10, 144);
+            this.chekbox_EsSo_Lavadora_InfoVivien.Name = "chekbox_EsSo_Lavadora_InfoVivien";
+            this.chekbox_EsSo_Lavadora_InfoVivien.Size = new System.Drawing.Size(71, 17);
+            this.chekbox_EsSo_Lavadora_InfoVivien.TabIndex = 9;
+            this.chekbox_EsSo_Lavadora_InfoVivien.Text = "Lavadora";
+            this.chekbox_EsSo_Lavadora_InfoVivien.UseVisualStyleBackColor = true;
             // 
-            // checkBox16
+            // chekbox_EsSo_Ducha_InfoVivien
             // 
-            this.checkBox16.AutoSize = true;
-            this.checkBox16.Location = new System.Drawing.Point(10, 121);
-            this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(116, 17);
-            this.checkBox16.TabIndex = 8;
-            this.checkBox16.Text = "Calentador (ducha)";
-            this.checkBox16.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_Ducha_InfoVivien.AutoSize = true;
+            this.chekbox_EsSo_Ducha_InfoVivien.Location = new System.Drawing.Point(10, 121);
+            this.chekbox_EsSo_Ducha_InfoVivien.Name = "chekbox_EsSo_Ducha_InfoVivien";
+            this.chekbox_EsSo_Ducha_InfoVivien.Size = new System.Drawing.Size(116, 17);
+            this.chekbox_EsSo_Ducha_InfoVivien.TabIndex = 8;
+            this.chekbox_EsSo_Ducha_InfoVivien.Text = "Calentador (ducha)";
+            this.chekbox_EsSo_Ducha_InfoVivien.UseVisualStyleBackColor = true;
             // 
-            // checkBox17
+            // chekbox_EsSo_EquipoSoni_InfoVivien
             // 
-            this.checkBox17.AutoSize = true;
-            this.checkBox17.Location = new System.Drawing.Point(10, 52);
-            this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(108, 17);
-            this.checkBox17.TabIndex = 7;
-            this.checkBox17.Text = "Equipo de sonido";
-            this.checkBox17.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_EquipoSoni_InfoVivien.AutoSize = true;
+            this.chekbox_EsSo_EquipoSoni_InfoVivien.Location = new System.Drawing.Point(10, 52);
+            this.chekbox_EsSo_EquipoSoni_InfoVivien.Name = "chekbox_EsSo_EquipoSoni_InfoVivien";
+            this.chekbox_EsSo_EquipoSoni_InfoVivien.Size = new System.Drawing.Size(108, 17);
+            this.chekbox_EsSo_EquipoSoni_InfoVivien.TabIndex = 7;
+            this.chekbox_EsSo_EquipoSoni_InfoVivien.Text = "Equipo de sonido";
+            this.chekbox_EsSo_EquipoSoni_InfoVivien.UseVisualStyleBackColor = true;
             // 
-            // checkBox18
+            // chekbox_EsSo_Tele_InfoVivien
             // 
-            this.checkBox18.AutoSize = true;
-            this.checkBox18.Location = new System.Drawing.Point(10, 29);
-            this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(74, 17);
-            this.checkBox18.TabIndex = 6;
-            this.checkBox18.Text = "Television";
-            this.checkBox18.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_Tele_InfoVivien.AutoSize = true;
+            this.chekbox_EsSo_Tele_InfoVivien.Location = new System.Drawing.Point(10, 29);
+            this.chekbox_EsSo_Tele_InfoVivien.Name = "chekbox_EsSo_Tele_InfoVivien";
+            this.chekbox_EsSo_Tele_InfoVivien.Size = new System.Drawing.Size(74, 17);
+            this.chekbox_EsSo_Tele_InfoVivien.TabIndex = 6;
+            this.chekbox_EsSo_Tele_InfoVivien.Text = "Television";
+            this.chekbox_EsSo_Tele_InfoVivien.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btm_EsSo_BuscarAlumno_DatosGe
             // 
-            this.button5.Location = new System.Drawing.Point(426, 375);
-            this.button5.Name = "button5";
-            this.button5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button5.Size = new System.Drawing.Size(155, 59);
-            this.button5.TabIndex = 35;
-            this.button5.Text = "Monto Matricula";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btm_EsSo_BuscarAlumno_DatosGe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btm_EsSo_BuscarAlumno_DatosGe.Location = new System.Drawing.Point(538, 22);
+            this.btm_EsSo_BuscarAlumno_DatosGe.Name = "btm_EsSo_BuscarAlumno_DatosGe";
+            this.btm_EsSo_BuscarAlumno_DatosGe.Size = new System.Drawing.Size(151, 45);
+            this.btm_EsSo_BuscarAlumno_DatosGe.TabIndex = 47;
+            this.btm_EsSo_BuscarAlumno_DatosGe.Text = "Buscar por Alumno";
+            this.btm_EsSo_BuscarAlumno_DatosGe.UseVisualStyleBackColor = true;
+            this.btm_EsSo_BuscarAlumno_DatosGe.Click += new System.EventHandler(this.button5_Click_1);
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label72.Location = new System.Drawing.Point(316, 34);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(216, 20);
+            this.label72.TabIndex = 48;
+            this.label72.Text = "Buscar Alumno Matriculado";
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Location = new System.Drawing.Point(19, 367);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(126, 13);
+            this.label71.TabIndex = 11;
+            this.label71.Text = "Revisado y aprovado por";
+            // 
+            // txt_EsSo_Aporbado_SaludRecre
+            // 
+            this.txt_EsSo_Aporbado_SaludRecre.Location = new System.Drawing.Point(176, 364);
+            this.txt_EsSo_Aporbado_SaludRecre.Name = "txt_EsSo_Aporbado_SaludRecre";
+            this.txt_EsSo_Aporbado_SaludRecre.Size = new System.Drawing.Size(208, 20);
+            this.txt_EsSo_Aporbado_SaludRecre.TabIndex = 12;
             // 
             // FormaEstSocEco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(739, 549);
+            this.ClientSize = new System.Drawing.Size(724, 582);
             this.Controls.Add(this.tabEstSocioEco);
             this.Name = "FormaEstSocEco";
             this.Text = "Estudio Socieconomico";
             this.tabEstSocioEco.ResumeLayout(false);
             this.DatosGenerales.ResumeLayout(false);
+            this.DatosGenerales.PerformLayout();
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -2375,87 +2414,87 @@
         private System.Windows.Forms.TabPage InformacionFamilia;
         private System.Windows.Forms.TabPage SaludRecreacion;
         private System.Windows.Forms.TabPage InformacionVivienda;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox Combox_EsSo_SexoEst_DatosGe;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txt_EsSo_IdentiEst_DatosGe;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_EsSo_EdadEst_DatosGe;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_EsSo_FechaNa_DatosGe;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_EsSo_LugarNaci_DatosGe;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_EsSo_NombreEst_DatosGe;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txt_EsSo_TelTrabMadre_DatosGe;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txt_EsSo_CelMadre_DatosGe;
+        private System.Windows.Forms.TextBox txt_EsSo_TelCasaMadre_DatosGe;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox Combox_EsSo_TrabajaMadre_forma;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txt_EsSo_LugarTrabMadre_forma;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txt_EsSo_OficioMadre_forma;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txt_EsSo_DomiciMadre_DatosGe;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txt_EsSo_IdentMadre_DatosGe;
+        private System.Windows.Forms.TextBox txt_EsSo_NomMadre_DatosGe;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txt_EsSo_TelTrabPadre_DatosGe;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox txt_EsSo_CelPadre_DatosGe;
+        private System.Windows.Forms.TextBox txt_EsSo_TelCAsaPadre_DatosGe;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox combox_EsSo_TrabajaPadre_forma;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox txt_EsSo_LugarTrabPadre_forma;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox txt_EsSo_OficioPadre_forma;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox txt_EsSo_DomiciPadre_DatosGe;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox txt_EsSo_IdentPadre_DatosGe;
+        private System.Windows.Forms.TextBox txt_EsSo_NomPadre_DatosGe;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox textBox26;
+        private System.Windows.Forms.TextBox txt_EsSo_NomEncarg_DatosGe;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.TextBox txt_EsSo_ParentescoEncar_DatosGe;
+        private System.Windows.Forms.TextBox txt_EsSo_OficioEncarg_DatosGe;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.TextBox textBox23;
+        private System.Windows.Forms.TextBox txt_EsSo_EdadEncarg_DatosGe;
+        private System.Windows.Forms.TextBox txt_EsSo_TelEncarg_DatosGe;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox textBox39;
+        private System.Windows.Forms.TextBox txt_EsSo_IngreTotales_InfoFami;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.TextBox textBox36;
+        private System.Windows.Forms.TextBox txt_EsSo_IngreOtros_InfoFami;
         private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.TextBox textBox37;
-        private System.Windows.Forms.TextBox textBox38;
+        private System.Windows.Forms.TextBox txt_EsSo_IngrePencion_InfoFami;
+        private System.Windows.Forms.TextBox txt_EsSo_IngreHijo_InfoFami;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.TextBox textBox33;
+        private System.Windows.Forms.TextBox txt_EsSo_IngreMadre_InfoFami;
         private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.TextBox textBox34;
-        private System.Windows.Forms.TextBox textBox35;
+        private System.Windows.Forms.TextBox txt_EsSo_IngrePadre_InfoFami;
+        private System.Windows.Forms.TextBox txt_EsSo_IngreAbue_InfoFami;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.TextBox textBox32;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.TextBox textBox31;
-        private System.Windows.Forms.TextBox textBox30;
-        private System.Windows.Forms.TextBox textBox29;
-        private System.Windows.Forms.TextBox textBox28;
-        private System.Windows.Forms.TextBox textBox27;
+        private System.Windows.Forms.TextBox txt_EsSo_TotalTraba_InfoFami;
+        private System.Windows.Forms.ComboBox combox_EsSo_CuantosFami_InfoFami;
+        private System.Windows.Forms.TextBox txt_EsSo_TotalMiemb_InfoFami;
+        private System.Windows.Forms.TextBox txt_EsSo_CuantosFamil_InfoFami;
+        private System.Windows.Forms.TextBox txt_EsSo_CuantosHijos_InfoFami;
+        private System.Windows.Forms.TextBox txt_EsSo_MasHijos_InfoFami;
+        private System.Windows.Forms.TextBox txt_EsSo_HabitantesCasa_InfoFami;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label34;
@@ -2464,121 +2503,123 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.TextBox textBox48;
+        private System.Windows.Forms.TextBox txt_EsSo_TotalGastos_InfoFami;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.TextBox textBox49;
+        private System.Windows.Forms.TextBox txt_EsSo_Otros_InfoFami;
         private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.TextBox textBox50;
-        private System.Windows.Forms.TextBox textBox51;
+        private System.Windows.Forms.TextBox txt_EsSo_Alquiler_InfoFami;
+        private System.Windows.Forms.TextBox txt_EsSo_Vestime_InfoFami;
         private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.TextBox textBox47;
+        private System.Windows.Forms.TextBox txt_EsSo_Combus_InfoFami;
         private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.TextBox textBox40;
+        private System.Windows.Forms.TextBox txt_EsSo_Alimentos_InfoFami;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.TextBox textBox41;
+        private System.Windows.Forms.TextBox txt_EsSo_Educa_InfoFami;
         private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.TextBox textBox42;
-        private System.Windows.Forms.TextBox textBox43;
+        private System.Windows.Forms.TextBox txt_EsSo_Salud_InfoFami;
+        private System.Windows.Forms.TextBox txt_EsSo_Transp_InfoFami;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.TextBox textBox44;
+        private System.Windows.Forms.TextBox txt_EsSo_Telefono_InfoFami;
         private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.TextBox textBox45;
-        private System.Windows.Forms.TextBox textBox46;
+        private System.Windows.Forms.TextBox txt_EsSo_Agua_InfoFami;
+        private System.Windows.Forms.TextBox txt_EsSo_Energia_InfoFami;
         private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.TextBox textBox52;
+        private System.Windows.Forms.TextBox chekbox_EsSo_GastoMedi_SaludRecre;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.CheckBox checkBox10;
-        private System.Windows.Forms.CheckBox checkBox11;
-        private System.Windows.Forms.CheckBox checkBox12;
+        private System.Windows.Forms.CheckBox chekbox_EsSo_NingunaEnfer_SaludRecre;
+        private System.Windows.Forms.CheckBox chekbox_EsSo_OtraEnfer_SaludRecre;
+        private System.Windows.Forms.CheckBox chekbox_EsSo_InfecRespi_SaludRecre;
+        private System.Windows.Forms.CheckBox chekbox_EsSo_HiperTensi_SaludRecre;
+        private System.Windows.Forms.CheckBox chekbox_EsSo_Diabetes_SaludRecre;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox chekbox_EsSo_OtroSalud_SaludRecre;
+        private System.Windows.Forms.CheckBox chekbox_EsSo_ClinicaPart_SaludRecre;
+        private System.Windows.Forms.CheckBox chekbox_EsSo_CentroSalud_SaludRecre;
+        private System.Windows.Forms.CheckBox chekbox_EsSo_HospiSanfe_SaludRecre;
+        private System.Windows.Forms.CheckBox chekbox_EsSo_HospEscu_SaludRecre;
+        private System.Windows.Forms.CheckBox chekbox_EsSo_ihss_SaludRecre;
         private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.CheckBox checkBox20;
-        private System.Windows.Forms.CheckBox checkBox21;
-        private System.Windows.Forms.CheckBox checkBox22;
-        private System.Windows.Forms.CheckBox checkBox23;
-        private System.Windows.Forms.CheckBox checkBox24;
-        private System.Windows.Forms.CheckBox checkBox13;
-        private System.Windows.Forms.CheckBox checkBox14;
-        private System.Windows.Forms.CheckBox checkBox15;
-        private System.Windows.Forms.CheckBox checkBox16;
-        private System.Windows.Forms.CheckBox checkBox17;
-        private System.Windows.Forms.CheckBox checkBox18;
+        private System.Windows.Forms.CheckBox chekbox_EsSo_AireAcon_InfoVivien;
+        private System.Windows.Forms.CheckBox chekbox_EsSo_Microondas_InfoVivien;
+        private System.Windows.Forms.CheckBox chekbox_EsSo_Automovil_InfoVivien;
+        private System.Windows.Forms.CheckBox chekbox_EsSo_Estufa_InfoVivien;
+        private System.Windows.Forms.CheckBox chekbox_EsSo_Refri_InfoVivien;
+        private System.Windows.Forms.CheckBox chekbox_EsSo_Ventila_nfoVivien;
+        private System.Windows.Forms.CheckBox chekbox_EsSo_Compu_InfoVivien;
+        private System.Windows.Forms.CheckBox chekbox_EsSo_Lavadora_InfoVivien;
+        private System.Windows.Forms.CheckBox chekbox_EsSo_Ducha_InfoVivien;
+        private System.Windows.Forms.CheckBox chekbox_EsSo_EquipoSoni_InfoVivien;
+        private System.Windows.Forms.CheckBox chekbox_EsSo_Tele_InfoVivien;
         private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.CheckBox checkBox27;
-        private System.Windows.Forms.CheckBox checkBox28;
-        private System.Windows.Forms.CheckBox checkBox29;
-        private System.Windows.Forms.CheckBox checkBox30;
-        private System.Windows.Forms.CheckBox checkBox31;
+        private System.Windows.Forms.CheckBox chekbox_EsSo_Telefono_InfoVivien;
+        private System.Windows.Forms.CheckBox chekbox_EsSo_OtrosServ_InfoVivien;
+        private System.Windows.Forms.CheckBox chekbox_EsSo_Alcantari_InfoVivien;
+        private System.Windows.Forms.CheckBox chekbox_EsSo_Agua_InfoVivien;
+        private System.Windows.Forms.CheckBox chekbox_EsSo_Energia_InfoVivien;
         private System.Windows.Forms.GroupBox groupBox12;
-        private System.Windows.Forms.RadioButton radioButton12;
+        private System.Windows.Forms.RadioButton rbtm_EsSo_OtroMaterPiso_InfoVivien;
         private System.Windows.Forms.RadioButton radioButton11;
-        private System.Windows.Forms.RadioButton radioButton10;
+        private System.Windows.Forms.RadioButton rbtm_EsSo_CEramica_InfoVivien;
         private System.Windows.Forms.Label label64;
-        private System.Windows.Forms.TextBox textBox63;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.TextBox txt_EsSo_OtroMaterPiso_InfoVivien;
+        private System.Windows.Forms.RadioButton rbtm_EsSo_Propia_InfoVivien;
         private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton rbtm_EsSo_Alquilada_InfoVivien;
         private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.TextBox textBox61;
+        private System.Windows.Forms.RadioButton rbtm_EsSo_OtroCaracte_InfoVivien;
+        private System.Windows.Forms.RadioButton rbtm_EsSo_Tierra_InfoVivien;
+        private System.Windows.Forms.TextBox txt_EsSo_OtroCaracte_InfoVivien;
         private System.Windows.Forms.Label label66;
         private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.TextBox textBox62;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.TextBox textBox60;
-        private System.Windows.Forms.RadioButton radioButton13;
-        private System.Windows.Forms.TextBox textBox64;
+        private System.Windows.Forms.TextBox txt_EsSo_OtroMaterial_InfoVivien;
+        private System.Windows.Forms.RadioButton rbtm_EsSo_Ladrillo_InfoVivien;
+        private System.Windows.Forms.RadioButton rbtm_EsSo_OtroMaterial_InfoVivien;
+        private System.Windows.Forms.RadioButton rbtm_EsSo_Bloque_InfoVivien;
+        private System.Windows.Forms.TextBox txt_EsSo_OtroServicio_InfoVivien;
+        private System.Windows.Forms.RadioButton rbtm_EsSo_Madera_InfoVivien;
+        private System.Windows.Forms.TextBox txt_EsSo_PersonaEntre_DatosGe;
         private System.Windows.Forms.Label label67;
-        private System.Windows.Forms.TextBox textBox65;
+        private System.Windows.Forms.TextBox txt_EsSo_fecha_DatosGe;
         private System.Windows.Forms.Label label68;
-        private System.Windows.Forms.TextBox textBox66;
+        private System.Windows.Forms.TextBox txt_EsSo_lugar_DatosGe;
         private System.Windows.Forms.Label label69;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.RadioButton radioButton14;
-        private System.Windows.Forms.TextBox textBox59;
-        private System.Windows.Forms.ComboBox comboBox11;
+        private System.Windows.Forms.RadioButton chekbox_EsSo_Ninguno_SaludRecre;
+        private System.Windows.Forms.TextBox txt_EsSo_CentrosCom_SaludRecre;
+        private System.Windows.Forms.ComboBox combox_EsSo_CentrosCom_SaludRecre;
         private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.TextBox textBox58;
-        private System.Windows.Forms.ComboBox comboBox10;
+        private System.Windows.Forms.TextBox txt_EsSo_Museos_SaludRecre;
+        private System.Windows.Forms.ComboBox combox_EsSo_Museos_SaludRecre;
         private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.TextBox textBox57;
-        private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.TextBox txt_EsSo_cine_SaludRecre;
+        private System.Windows.Forms.ComboBox combox_EsSo_Cine_SaludRecre;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.TextBox textBox56;
-        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.ComboBox combox_EsSo_Playa_SaludRecre;
         private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.TextBox textBox55;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.TextBox txt_EsSo_OtrosLugares_SaludRecre;
+        private System.Windows.Forms.ComboBox combox_EsSo_OtrosLugares_SaludRecre;
         private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.TextBox textBox54;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.TextBox txt_EsSo_Balnearios_SaludRecre;
+        private System.Windows.Forms.ComboBox combox_EsSo_Balnearios_SaludRecre;
         private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.TextBox textBox53;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.TextBox txt_EsSo_Parques_SaludRecre;
+        private System.Windows.Forms.ComboBox combox_EsSo_Parques_SaludRecre;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.Label label70;
-        private System.Windows.Forms.TextBox textBox67;
-        private System.Windows.Forms.Label label71;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btm_EsSo_Siguiente_DatosGe;
+        private System.Windows.Forms.Button btm_EsSo_Siguiente_InfoFami;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btm_EsSo_Finalizar_InfoVivien;
+        private System.Windows.Forms.Button btm_EsSo_MontoMatri_InfoVivien;
+        private System.Windows.Forms.Label label72;
+        private System.Windows.Forms.Button btm_EsSo_BuscarAlumno_DatosGe;
+        private System.Windows.Forms.TextBox txt_EsSo_Aporbado_SaludRecre;
+        private System.Windows.Forms.Label label71;
     }
 }
