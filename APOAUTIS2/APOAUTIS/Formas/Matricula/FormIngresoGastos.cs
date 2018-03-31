@@ -1,5 +1,6 @@
 ﻿using APOAUTIS.Clases;
 using APOAUTIS.Formas.Alumnos;
+using APOAUTIS.Formas.Manuales;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -413,8 +414,11 @@ namespace APOAUTIS.Formas.Matricula
             Cl_Gastos.Fun_ActualizarDatos();
         }
 
-
-
+        private void Bttn_Ayuda_Click(object sender, EventArgs e)
+        {
+            FormManual Manual = new FormManual();
+            Manual.ShowDialog();
+        }
     }
     
 }

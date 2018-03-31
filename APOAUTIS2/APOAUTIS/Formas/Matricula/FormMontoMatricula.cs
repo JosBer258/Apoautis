@@ -1,5 +1,6 @@
 ﻿using APOAUTIS.Clases;
 using APOAUTIS.Formas.Alumnos;
+using APOAUTIS.Formas.Manuales;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -174,6 +175,12 @@ namespace APOAUTIS.Formas.Matricula
         private void DGV_Show_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormManual Manual = new FormManual();
+            Manual.ShowDialog();
         }
     }
 }
