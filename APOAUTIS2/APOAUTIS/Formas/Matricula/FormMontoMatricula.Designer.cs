@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Bttn_Salir = new System.Windows.Forms.Button();
             this.Gruop_MuestraDatos = new System.Windows.Forms.GroupBox();
             this.Bttn_BusquedaDeAlumno = new System.Windows.Forms.Button();
@@ -50,10 +51,13 @@
             this.Gruop_Opciones = new System.Windows.Forms.GroupBox();
             this.Radio_Agregar = new System.Windows.Forms.RadioButton();
             this.Radio_Actualizar = new System.Windows.Forms.RadioButton();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.Gruop_MuestraDatos.SuspendLayout();
             this.Gruop_Busqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Show)).BeginInit();
             this.Gruop_Opciones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // Bttn_Salir
@@ -65,6 +69,7 @@
             this.Bttn_Salir.TabIndex = 17;
             this.Bttn_Salir.Text = "Salir";
             this.Bttn_Salir.UseVisualStyleBackColor = true;
+            this.Bttn_Salir.Click += new System.EventHandler(this.Bttn_Salir_Click);
             // 
             // Gruop_MuestraDatos
             // 
@@ -98,6 +103,7 @@
             this.Bttn_BusquedaDeAlumno.TabIndex = 13;
             this.Bttn_BusquedaDeAlumno.Text = "Busqueda de Alumno";
             this.Bttn_BusquedaDeAlumno.UseVisualStyleBackColor = true;
+            this.Bttn_BusquedaDeAlumno.Click += new System.EventHandler(this.Bttn_BusquedaDeAlumno_Click);
             // 
             // Bttn_Limpiar
             // 
@@ -107,11 +113,12 @@
             this.Bttn_Limpiar.TabIndex = 12;
             this.Bttn_Limpiar.Text = "Limpiar";
             this.Bttn_Limpiar.UseVisualStyleBackColor = true;
+            this.Bttn_Limpiar.Click += new System.EventHandler(this.Bttn_Limpiar_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(386, 93);
+            this.label5.Location = new System.Drawing.Point(369, 93);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 13);
             this.label5.TabIndex = 11;
@@ -120,7 +127,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(386, 68);
+            this.label4.Location = new System.Drawing.Point(369, 68);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 13);
             this.label4.TabIndex = 10;
@@ -154,12 +161,13 @@
             // 
             // Bttn_Calcular
             // 
-            this.Bttn_Calcular.Location = new System.Drawing.Point(495, 116);
+            this.Bttn_Calcular.Location = new System.Drawing.Point(478, 116);
             this.Bttn_Calcular.Name = "Bttn_Calcular";
             this.Bttn_Calcular.Size = new System.Drawing.Size(100, 39);
             this.Bttn_Calcular.TabIndex = 6;
             this.Bttn_Calcular.Text = "Calcular";
             this.Bttn_Calcular.UseVisualStyleBackColor = true;
+            this.Bttn_Calcular.Click += new System.EventHandler(this.Bttn_Calcular_Click);
             // 
             // Bttn_Aceptar
             // 
@@ -169,16 +177,19 @@
             this.Bttn_Aceptar.TabIndex = 5;
             this.Bttn_Aceptar.Text = "Aceptar";
             this.Bttn_Aceptar.UseVisualStyleBackColor = true;
+            this.Bttn_Aceptar.Click += new System.EventHandler(this.Bttn_Aceptar_Click);
             // 
             // Txt_Mensualidad
             // 
-            this.Txt_Mensualidad.Location = new System.Drawing.Point(495, 90);
+            this.Txt_Mensualidad.Enabled = false;
+            this.Txt_Mensualidad.Location = new System.Drawing.Point(478, 90);
             this.Txt_Mensualidad.Name = "Txt_Mensualidad";
             this.Txt_Mensualidad.Size = new System.Drawing.Size(100, 20);
             this.Txt_Mensualidad.TabIndex = 4;
             // 
             // Txt_Responsable
             // 
+            this.Txt_Responsable.Enabled = false;
             this.Txt_Responsable.Location = new System.Drawing.Point(147, 88);
             this.Txt_Responsable.Name = "Txt_Responsable";
             this.Txt_Responsable.Size = new System.Drawing.Size(201, 20);
@@ -186,13 +197,15 @@
             // 
             // Txt_TotalIngreso
             // 
-            this.Txt_TotalIngreso.Location = new System.Drawing.Point(495, 65);
+            this.Txt_TotalIngreso.Enabled = false;
+            this.Txt_TotalIngreso.Location = new System.Drawing.Point(478, 65);
             this.Txt_TotalIngreso.Name = "Txt_TotalIngreso";
             this.Txt_TotalIngreso.Size = new System.Drawing.Size(100, 20);
             this.Txt_TotalIngreso.TabIndex = 1;
             // 
             // Txt_NombreAlumno
             // 
+            this.Txt_NombreAlumno.Enabled = false;
             this.Txt_NombreAlumno.Location = new System.Drawing.Point(147, 64);
             this.Txt_NombreAlumno.Name = "Txt_NombreAlumno";
             this.Txt_NombreAlumno.Size = new System.Drawing.Size(201, 20);
@@ -222,18 +235,29 @@
             // 
             // DGV_Show
             // 
+            this.DGV_Show.AllowUserToAddRows = false;
+            this.DGV_Show.AllowUserToDeleteRows = false;
+            this.DGV_Show.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DGV_Show.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
             this.DGV_Show.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Show.Location = new System.Drawing.Point(6, 63);
             this.DGV_Show.Name = "DGV_Show";
+            this.DGV_Show.ReadOnly = true;
             this.DGV_Show.Size = new System.Drawing.Size(738, 194);
             this.DGV_Show.TabIndex = 0;
+            this.DGV_Show.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Show_CellContentClick);
+            this.DGV_Show.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Show_CellContentDoubleClick);
+            this.DGV_Show.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Show_CellDoubleClick);
             // 
             // Txt_Filtro_Matricula
             // 
             this.Txt_Filtro_Matricula.Location = new System.Drawing.Point(135, 28);
+            this.Txt_Filtro_Matricula.MaxLength = 25;
             this.Txt_Filtro_Matricula.Name = "Txt_Filtro_Matricula";
             this.Txt_Filtro_Matricula.Size = new System.Drawing.Size(155, 20);
             this.Txt_Filtro_Matricula.TabIndex = 13;
+            this.Txt_Filtro_Matricula.TextChanged += new System.EventHandler(this.Txt_Filtro_Matricula_TextChanged);
+            this.Txt_Filtro_Matricula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Filtro_Matricula_KeyPress);
             // 
             // Gruop_Opciones
             // 
@@ -257,6 +281,7 @@
             this.Radio_Agregar.TabStop = true;
             this.Radio_Agregar.Text = "Agregar";
             this.Radio_Agregar.UseVisualStyleBackColor = true;
+            this.Radio_Agregar.CheckedChanged += new System.EventHandler(this.Radio_Agregar_CheckedChanged);
             // 
             // Radio_Actualizar
             // 
@@ -268,6 +293,22 @@
             this.Radio_Actualizar.TabStop = true;
             this.Radio_Actualizar.Text = "Actualizar";
             this.Radio_Actualizar.UseVisualStyleBackColor = true;
+            this.Radio_Actualizar.CheckedChanged += new System.EventHandler(this.Radio_Actualizar_CheckedChanged);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(547, 452);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(99, 41);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Ayuda";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormMontoMatricula
             // 
@@ -276,6 +317,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(774, 499);
             this.ControlBox = false;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Bttn_Salir);
             this.Controls.Add(this.Gruop_MuestraDatos);
             this.Controls.Add(this.Gruop_Busqueda);
@@ -283,6 +325,7 @@
             this.Name = "FormMontoMatricula";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = " Monto de Matricula";
+            this.Load += new System.EventHandler(this.FormMontoMatricula_Load);
             this.Gruop_MuestraDatos.ResumeLayout(false);
             this.Gruop_MuestraDatos.PerformLayout();
             this.Gruop_Busqueda.ResumeLayout(false);
@@ -290,6 +333,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Show)).EndInit();
             this.Gruop_Opciones.ResumeLayout(false);
             this.Gruop_Opciones.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -318,5 +362,7 @@
         private System.Windows.Forms.RadioButton Radio_Agregar;
         private System.Windows.Forms.RadioButton Radio_Actualizar;
         private System.Windows.Forms.Button Bttn_BusquedaDeAlumno;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button button1;
     }
 }

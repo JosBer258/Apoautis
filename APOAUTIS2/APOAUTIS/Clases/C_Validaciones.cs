@@ -178,12 +178,12 @@ namespace APOAUTIS.Clases
                 e.Handled = false;
             }
             else
-            if (char.IsDigit(e.KeyChar) && a == 3)
+            if (char.IsDigit(e.KeyChar) && a == 4)
             {
                 e.Handled = true;
             }
             else
-            if (char.IsDigit(e.KeyChar) && a != 3)
+            if (char.IsDigit(e.KeyChar) && a != 4)
             {
                 e.Handled = false;
             }
