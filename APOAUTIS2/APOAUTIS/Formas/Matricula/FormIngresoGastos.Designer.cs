@@ -93,6 +93,7 @@
             this.Bttn_Ayuda.TabIndex = 35;
             this.Bttn_Ayuda.Text = "Ayuda";
             this.Bttn_Ayuda.UseVisualStyleBackColor = true;
+            this.Bttn_Ayuda.Click += new System.EventHandler(this.Bttn_Ayuda_Click);
             // 
             // Bttn_Salir
             // 
