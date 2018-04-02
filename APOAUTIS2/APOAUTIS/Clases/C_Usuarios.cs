@@ -95,12 +95,27 @@ namespace APOAUTIS.Clases
 
         }
 
-        public string AddNomUsuario1 { get => AddNomUsuario; set => AddNomUsuario = value; }
-        public string AddPassword1 { get => AddPassword; set => AddPassword = value; }
-        public int AddEstado1 { get => AddEstado; set => AddEstado = value; }
-        public int AddCodUser1 { get => AddCodUser; set => AddCodUser = value; }
+        public string AddNomUsuario1 {
+            get { return AddNomUsuario; }
+            set { AddNomUsuario = value; } }
 
-        public void Fun_Show(DataGridView dgv)
+        public string AddPassword1 { get
+            {
+                return AddPassword;
+            }
+            set { AddPassword = value; }
+        }
+        public int AddEstado1 { get
+            {
+                return AddEstado;
+            }
+            set { AddEstado = value; }
+        }
+        public int AddCodUser1 { get { return AddCodUser; }
+        set { AddCodUser = value; }
+}
+
+public void Fun_Show(DataGridView dgv)
         {
 
             cnx.Open();

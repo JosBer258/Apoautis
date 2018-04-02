@@ -107,3 +107,10 @@ C:\Users\ROHEZU\Pictures\ApoAutis Sistema\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\
 C:\Users\ROHEZU\Pictures\ApoAutis Sistema\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.csproj.GenerateResource.Cache
 C:\Users\ROHEZU\Pictures\ApoAutis Sistema\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.exe
 C:\Users\ROHEZU\Pictures\ApoAutis Sistema\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.pdb
+C:\Users\ROHEZU\Pictures\ApoAutis Sistema\Apoautis\APOAUTIS2\APOAUTIS\bin\Debug\Interop.AcroPDFLib.dll
+C:\Users\ROHEZU\Pictures\ApoAutis Sistema\Apoautis\APOAUTIS2\APOAUTIS\bin\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\ROHEZU\Pictures\ApoAutis Sistema\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\Interop.AcroPDFLib.dll
+C:\Users\ROHEZU\Pictures\ApoAutis Sistema\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\ROHEZU\Pictures\ApoAutis Sistema\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.csproj.ResolveComReference.cache
+C:\Users\ROHEZU\Pictures\ApoAutis Sistema\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Manuales.FormManual.resources
+C:\Users\ROHEZU\Pictures\ApoAutis Sistema\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Matricula.FormRangoMensualidad.resources

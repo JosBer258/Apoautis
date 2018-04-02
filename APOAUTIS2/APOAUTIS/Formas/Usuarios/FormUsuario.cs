@@ -227,6 +227,7 @@ namespace APOAUTIS.Formas.Usuarios
 
                         Txt_CodUser.Text = DGV_Data.CurrentCell.Value.ToString();
                         ExtraerDatosCodigo(Convert.ToInt16(Txt_CodUser.Text));
+                        Txt_PasdUser.Clear();
 
                     }
                     else
@@ -234,6 +235,7 @@ namespace APOAUTIS.Formas.Usuarios
                     {
 
                         Txt_NameUser.Text = DGV_Data.CurrentCell.Value.ToString();
+                        Txt_PasdUser.Clear();
                         ExtraerDatosNombre((Txt_NameUser.Text));
                     }
 
