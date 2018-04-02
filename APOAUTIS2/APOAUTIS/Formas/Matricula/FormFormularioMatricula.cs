@@ -73,5 +73,10 @@ namespace APOAUTIS
             FormaEntPadres Ent = new FormaEntPadres();
             Ent.ShowDialog();
         }
+
+        private void Pest1_Txt_NomEducador_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

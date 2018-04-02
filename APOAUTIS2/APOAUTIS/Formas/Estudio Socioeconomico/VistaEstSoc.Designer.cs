@@ -525,6 +525,7 @@
             this.textBox69.Name = "textBox69";
             this.textBox69.Size = new System.Drawing.Size(100, 20);
             this.textBox69.TabIndex = 11;
+            this.textBox69.TextChanged += new System.EventHandler(this.textBox69_TextChanged);
             // 
             // label6
             // 

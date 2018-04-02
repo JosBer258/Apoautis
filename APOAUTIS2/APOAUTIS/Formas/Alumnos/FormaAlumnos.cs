@@ -37,5 +37,15 @@ namespace APOAUTIS.Formas.Alumnos
         {
 
         }
+
+        private void Pest1_Txt_BusquedaPorNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Pest2_Pest1_Bttn_Aceptar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

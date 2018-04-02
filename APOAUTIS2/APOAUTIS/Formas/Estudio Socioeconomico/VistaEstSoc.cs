@@ -44,5 +44,10 @@ namespace APOAUTIS
         {
 
         }
+
+        private void textBox69_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

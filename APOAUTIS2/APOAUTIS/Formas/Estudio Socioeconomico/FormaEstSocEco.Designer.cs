@@ -30,6 +30,8 @@
         {
             this.tabEstSocioEco = new System.Windows.Forms.TabControl();
             this.DatosGenerales = new System.Windows.Forms.TabPage();
+            this.label72 = new System.Windows.Forms.Label();
+            this.btm_EsSo_BuscarAlumno_DatosGe = new System.Windows.Forms.Button();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.txt_EsSo_lugar_DatosGe = new System.Windows.Forms.TextBox();
             this.txt_EsSo_PersonaEntre_DatosGe = new System.Windows.Forms.TextBox();
@@ -57,7 +59,7 @@
             this.txt_EsSo_NomPadre_DatosGe = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.Combox_EsSo_SexoEst_DatosGe = new System.Windows.Forms.ComboBox();
+            this.txt_EsSo_SexoAlum_DatosGe = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_EsSo_IdentiEst_DatosGe = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -158,6 +160,8 @@
             this.label26 = new System.Windows.Forms.Label();
             this.SaludRecreacion = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
+            this.txt_EsSo_Aporbado_SaludRecre = new System.Windows.Forms.TextBox();
+            this.label71 = new System.Windows.Forms.Label();
             this.label70 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.chekbox_EsSo_Ninguno_SaludRecre = new System.Windows.Forms.RadioButton();
@@ -239,10 +243,6 @@
             this.chekbox_EsSo_Ducha_InfoVivien = new System.Windows.Forms.CheckBox();
             this.chekbox_EsSo_EquipoSoni_InfoVivien = new System.Windows.Forms.CheckBox();
             this.chekbox_EsSo_Tele_InfoVivien = new System.Windows.Forms.CheckBox();
-            this.btm_EsSo_BuscarAlumno_DatosGe = new System.Windows.Forms.Button();
-            this.label72 = new System.Windows.Forms.Label();
-            this.label71 = new System.Windows.Forms.Label();
-            this.txt_EsSo_Aporbado_SaludRecre = new System.Windows.Forms.TextBox();
             this.tabEstSocioEco.SuspendLayout();
             this.DatosGenerales.SuspendLayout();
             this.groupBox13.SuspendLayout();
@@ -272,7 +272,7 @@
             this.tabEstSocioEco.Location = new System.Drawing.Point(12, 12);
             this.tabEstSocioEco.Name = "tabEstSocioEco";
             this.tabEstSocioEco.SelectedIndex = 0;
-            this.tabEstSocioEco.Size = new System.Drawing.Size(781, 570);
+            this.tabEstSocioEco.Size = new System.Drawing.Size(712, 570);
             this.tabEstSocioEco.TabIndex = 0;
             // 
             // DatosGenerales
@@ -287,11 +287,32 @@
             this.DatosGenerales.Location = new System.Drawing.Point(4, 22);
             this.DatosGenerales.Name = "DatosGenerales";
             this.DatosGenerales.Padding = new System.Windows.Forms.Padding(3);
-            this.DatosGenerales.Size = new System.Drawing.Size(773, 544);
+            this.DatosGenerales.Size = new System.Drawing.Size(704, 544);
             this.DatosGenerales.TabIndex = 0;
             this.DatosGenerales.Text = "Datos Generales";
             this.DatosGenerales.UseVisualStyleBackColor = true;
             this.DatosGenerales.Click += new System.EventHandler(this.DatosGenerales_Click);
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label72.Location = new System.Drawing.Point(316, 34);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(216, 20);
+            this.label72.TabIndex = 48;
+            this.label72.Text = "Buscar Alumno Matriculado";
+            // 
+            // btm_EsSo_BuscarAlumno_DatosGe
+            // 
+            this.btm_EsSo_BuscarAlumno_DatosGe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btm_EsSo_BuscarAlumno_DatosGe.Location = new System.Drawing.Point(538, 22);
+            this.btm_EsSo_BuscarAlumno_DatosGe.Name = "btm_EsSo_BuscarAlumno_DatosGe";
+            this.btm_EsSo_BuscarAlumno_DatosGe.Size = new System.Drawing.Size(151, 45);
+            this.btm_EsSo_BuscarAlumno_DatosGe.TabIndex = 47;
+            this.btm_EsSo_BuscarAlumno_DatosGe.Text = "Buscar por Alumno";
+            this.btm_EsSo_BuscarAlumno_DatosGe.UseVisualStyleBackColor = true;
+            this.btm_EsSo_BuscarAlumno_DatosGe.Click += new System.EventHandler(this.btm_EsSo_BuscarAlumno_DatosGe_Click);
             // 
             // groupBox13
             // 
@@ -536,7 +557,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.Combox_EsSo_SexoEst_DatosGe);
+            this.groupBox4.Controls.Add(this.txt_EsSo_SexoAlum_DatosGe);
             this.groupBox4.Controls.Add(this.label6);
             this.groupBox4.Controls.Add(this.txt_EsSo_IdentiEst_DatosGe);
             this.groupBox4.Controls.Add(this.label5);
@@ -555,17 +576,13 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Datos del Beneficiario (a)";
             // 
-            // Combox_EsSo_SexoEst_DatosGe
+            // txt_EsSo_SexoAlum_DatosGe
             // 
-            this.Combox_EsSo_SexoEst_DatosGe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Combox_EsSo_SexoEst_DatosGe.FormattingEnabled = true;
-            this.Combox_EsSo_SexoEst_DatosGe.Items.AddRange(new object[] {
-            "Masculino",
-            "Femenino"});
-            this.Combox_EsSo_SexoEst_DatosGe.Location = new System.Drawing.Point(318, 19);
-            this.Combox_EsSo_SexoEst_DatosGe.Name = "Combox_EsSo_SexoEst_DatosGe";
-            this.Combox_EsSo_SexoEst_DatosGe.Size = new System.Drawing.Size(101, 21);
-            this.Combox_EsSo_SexoEst_DatosGe.TabIndex = 12;
+            this.txt_EsSo_SexoAlum_DatosGe.Location = new System.Drawing.Point(318, 19);
+            this.txt_EsSo_SexoAlum_DatosGe.Name = "txt_EsSo_SexoAlum_DatosGe";
+            this.txt_EsSo_SexoAlum_DatosGe.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_SexoAlum_DatosGe.TabIndex = 11;
+            this.txt_EsSo_SexoAlum_DatosGe.TextChanged += new System.EventHandler(this.txt_EsSo_SexoAlum_DatosGe_TextChanged);
             // 
             // label6
             // 
@@ -965,7 +982,7 @@
             this.InformacionFamilia.Location = new System.Drawing.Point(4, 22);
             this.InformacionFamilia.Name = "InformacionFamilia";
             this.InformacionFamilia.Padding = new System.Windows.Forms.Padding(3);
-            this.InformacionFamilia.Size = new System.Drawing.Size(764, 532);
+            this.InformacionFamilia.Size = new System.Drawing.Size(704, 544);
             this.InformacionFamilia.TabIndex = 1;
             this.InformacionFamilia.Text = "Informacion de la familia";
             this.InformacionFamilia.UseVisualStyleBackColor = true;
@@ -1468,7 +1485,7 @@
             this.SaludRecreacion.Controls.Add(this.groupBox7);
             this.SaludRecreacion.Location = new System.Drawing.Point(4, 22);
             this.SaludRecreacion.Name = "SaludRecreacion";
-            this.SaludRecreacion.Size = new System.Drawing.Size(773, 544);
+            this.SaludRecreacion.Size = new System.Drawing.Size(704, 544);
             this.SaludRecreacion.TabIndex = 3;
             this.SaludRecreacion.Text = "Atencion en Salud y Recreacion";
             this.SaludRecreacion.UseVisualStyleBackColor = true;
@@ -1483,6 +1500,22 @@
             this.button3.Text = "Siguiente";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // txt_EsSo_Aporbado_SaludRecre
+            // 
+            this.txt_EsSo_Aporbado_SaludRecre.Location = new System.Drawing.Point(176, 364);
+            this.txt_EsSo_Aporbado_SaludRecre.Name = "txt_EsSo_Aporbado_SaludRecre";
+            this.txt_EsSo_Aporbado_SaludRecre.Size = new System.Drawing.Size(208, 20);
+            this.txt_EsSo_Aporbado_SaludRecre.TabIndex = 12;
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Location = new System.Drawing.Point(19, 367);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(126, 13);
+            this.label71.TabIndex = 11;
+            this.label71.Text = "Revisado y aprovado por";
             // 
             // label70
             // 
@@ -1874,7 +1907,7 @@
             this.InformacionVivienda.Controls.Add(this.groupBox10);
             this.InformacionVivienda.Location = new System.Drawing.Point(4, 22);
             this.InformacionVivienda.Name = "InformacionVivienda";
-            this.InformacionVivienda.Size = new System.Drawing.Size(773, 544);
+            this.InformacionVivienda.Size = new System.Drawing.Size(704, 544);
             this.InformacionVivienda.TabIndex = 5;
             this.InformacionVivienda.Text = "Informacion Vivienda";
             this.InformacionVivienda.UseVisualStyleBackColor = true;
@@ -2321,43 +2354,6 @@
             this.chekbox_EsSo_Tele_InfoVivien.Text = "Television";
             this.chekbox_EsSo_Tele_InfoVivien.UseVisualStyleBackColor = true;
             // 
-            // btm_EsSo_BuscarAlumno_DatosGe
-            // 
-            this.btm_EsSo_BuscarAlumno_DatosGe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btm_EsSo_BuscarAlumno_DatosGe.Location = new System.Drawing.Point(538, 22);
-            this.btm_EsSo_BuscarAlumno_DatosGe.Name = "btm_EsSo_BuscarAlumno_DatosGe";
-            this.btm_EsSo_BuscarAlumno_DatosGe.Size = new System.Drawing.Size(151, 45);
-            this.btm_EsSo_BuscarAlumno_DatosGe.TabIndex = 47;
-            this.btm_EsSo_BuscarAlumno_DatosGe.Text = "Buscar por Alumno";
-            this.btm_EsSo_BuscarAlumno_DatosGe.UseVisualStyleBackColor = true;
-            this.btm_EsSo_BuscarAlumno_DatosGe.Click += new System.EventHandler(this.button5_Click_1);
-            // 
-            // label72
-            // 
-            this.label72.AutoSize = true;
-            this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label72.Location = new System.Drawing.Point(316, 34);
-            this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(216, 20);
-            this.label72.TabIndex = 48;
-            this.label72.Text = "Buscar Alumno Matriculado";
-            // 
-            // label71
-            // 
-            this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(19, 367);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(126, 13);
-            this.label71.TabIndex = 11;
-            this.label71.Text = "Revisado y aprovado por";
-            // 
-            // txt_EsSo_Aporbado_SaludRecre
-            // 
-            this.txt_EsSo_Aporbado_SaludRecre.Location = new System.Drawing.Point(176, 364);
-            this.txt_EsSo_Aporbado_SaludRecre.Name = "txt_EsSo_Aporbado_SaludRecre";
-            this.txt_EsSo_Aporbado_SaludRecre.Size = new System.Drawing.Size(208, 20);
-            this.txt_EsSo_Aporbado_SaludRecre.TabIndex = 12;
-            // 
             // FormaEstSocEco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2365,7 +2361,7 @@
             this.ClientSize = new System.Drawing.Size(724, 582);
             this.Controls.Add(this.tabEstSocioEco);
             this.Name = "FormaEstSocEco";
-            this.Text = "Estudio Socieconomico";
+            this.Text = " ";
             this.tabEstSocioEco.ResumeLayout(false);
             this.DatosGenerales.ResumeLayout(false);
             this.DatosGenerales.PerformLayout();
@@ -2414,7 +2410,6 @@
         private System.Windows.Forms.TabPage InformacionFamilia;
         private System.Windows.Forms.TabPage SaludRecreacion;
         private System.Windows.Forms.TabPage InformacionVivienda;
-        private System.Windows.Forms.ComboBox Combox_EsSo_SexoEst_DatosGe;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_EsSo_IdentiEst_DatosGe;
         private System.Windows.Forms.Label label5;
@@ -2621,5 +2616,6 @@
         private System.Windows.Forms.Button btm_EsSo_BuscarAlumno_DatosGe;
         private System.Windows.Forms.TextBox txt_EsSo_Aporbado_SaludRecre;
         private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.TextBox txt_EsSo_SexoAlum_DatosGe;
     }
 }

@@ -169,6 +169,7 @@
             this.Pest1_Txt_NomEducador.Name = "Pest1_Txt_NomEducador";
             this.Pest1_Txt_NomEducador.Size = new System.Drawing.Size(187, 24);
             this.Pest1_Txt_NomEducador.TabIndex = 5;
+            this.Pest1_Txt_NomEducador.TextChanged += new System.EventHandler(this.Pest1_Txt_NomEducador_TextChanged);
             // 
             // label4
             // 

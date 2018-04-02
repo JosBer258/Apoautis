@@ -102,8 +102,8 @@
             this.Pest2_Pest3_DGV_MuestraEncargados = new System.Windows.Forms.DataGridView();
             this.Pest2_Pest3_Grupo_Encargados = new System.Windows.Forms.GroupBox();
             this.Pest2_Pest3_Radio_Actualizar = new System.Windows.Forms.RadioButton();
-            this.Pest2_Pest3_Radio_Nuevo = new System.Windows.Forms.RadioButton();
             this.Pest2_Pest3_Cmb_Estado = new System.Windows.Forms.ComboBox();
+            this.Pest2_Pest3_Radio_Nuevo = new System.Windows.Forms.RadioButton();
             this.Pest2_Pest3_Cmb_Trabaja = new System.Windows.Forms.ComboBox();
             this.Pest2_Pest3_Txt_EdadAnos = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -202,6 +202,7 @@
             this.Pest1_Txt_BusquedaPorNombre.Name = "Pest1_Txt_BusquedaPorNombre";
             this.Pest1_Txt_BusquedaPorNombre.Size = new System.Drawing.Size(318, 21);
             this.Pest1_Txt_BusquedaPorNombre.TabIndex = 23;
+            this.Pest1_Txt_BusquedaPorNombre.TextChanged += new System.EventHandler(this.Pest1_Txt_BusquedaPorNombre_TextChanged);
             // 
             // Pest1_Radio_ID
             // 
@@ -283,6 +284,7 @@
             this.Pest2_Pest1_Bttn_Aceptar.TabIndex = 3;
             this.Pest2_Pest1_Bttn_Aceptar.Text = "Aceptar";
             this.Pest2_Pest1_Bttn_Aceptar.UseVisualStyleBackColor = true;
+            this.Pest2_Pest1_Bttn_Aceptar.Click += new System.EventHandler(this.Pest2_Pest1_Bttn_Aceptar_Click);
             // 
             // Pest2_Pest1_Bttn_Limpiar
             // 
@@ -891,6 +893,15 @@
             this.Pest2_Pest3_Radio_Actualizar.Text = "Actualizar";
             this.Pest2_Pest3_Radio_Actualizar.UseVisualStyleBackColor = true;
             // 
+            // Pest2_Pest3_Cmb_Estado
+            // 
+            this.Pest2_Pest3_Cmb_Estado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Pest2_Pest3_Cmb_Estado.FormattingEnabled = true;
+            this.Pest2_Pest3_Cmb_Estado.Location = new System.Drawing.Point(538, 51);
+            this.Pest2_Pest3_Cmb_Estado.Name = "Pest2_Pest3_Cmb_Estado";
+            this.Pest2_Pest3_Cmb_Estado.Size = new System.Drawing.Size(101, 21);
+            this.Pest2_Pest3_Cmb_Estado.TabIndex = 28;
+            // 
             // Pest2_Pest3_Radio_Nuevo
             // 
             this.Pest2_Pest3_Radio_Nuevo.AutoSize = true;
@@ -901,15 +912,6 @@
             this.Pest2_Pest3_Radio_Nuevo.TabStop = true;
             this.Pest2_Pest3_Radio_Nuevo.Text = "Nuevo";
             this.Pest2_Pest3_Radio_Nuevo.UseVisualStyleBackColor = true;
-            // 
-            // Pest2_Pest3_Cmb_Estado
-            // 
-            this.Pest2_Pest3_Cmb_Estado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Pest2_Pest3_Cmb_Estado.FormattingEnabled = true;
-            this.Pest2_Pest3_Cmb_Estado.Location = new System.Drawing.Point(538, 51);
-            this.Pest2_Pest3_Cmb_Estado.Name = "Pest2_Pest3_Cmb_Estado";
-            this.Pest2_Pest3_Cmb_Estado.Size = new System.Drawing.Size(101, 21);
-            this.Pest2_Pest3_Cmb_Estado.TabIndex = 28;
             // 
             // Pest2_Pest3_Cmb_Trabaja
             // 

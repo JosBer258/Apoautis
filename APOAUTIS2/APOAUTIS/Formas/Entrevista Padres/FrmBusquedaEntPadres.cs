@@ -26,5 +26,10 @@ namespace APOAUTIS.Formas.Entrevista_Padres
         {
             this.Close();
         }
+
+        private void Txt_FiltroAlumno_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
