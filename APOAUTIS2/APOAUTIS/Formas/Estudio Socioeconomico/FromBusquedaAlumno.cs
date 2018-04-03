@@ -29,6 +29,34 @@ namespace APOAUTIS.Formas.Estudio_Socioeconomico
 
         private void DGV_Show_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            try
+            {
+                FormaEstSocEco estudio = new FormaEstSocEco();
+                foreach (Form frm in Application.OpenForms)
+                {
+                    if (frm.Name == "FormaEstSocEco")
+                    {
+                        estudio = (FormaEstSocEco)frm;
+                        estudio.txt_EsSo_IdentiEst_DatosGe.Text = DGV_Show.CurrentRow.Cells[0].Value.ToString();
+                        estudio.txt_EsSo_NombreEst_DatosGe.Text = DGV_Show.CurrentRow.Cells[1].Value.ToString();
+                        estudio.txt_EsSo_LugarNaci_DatosGe.Text = DGV_Show.CurrentRow.Cells[2].Value.ToString();
+                        estudio.txt_EsSo_FechaNa_DatosGe.Text = DGV_Show.CurrentRow.Cells[3].Value.ToString();
+                        estudio.txt_EsSo_EdadEst_DatosGe.Text = DGV_Show.CurrentRow.Cells[4].Value.ToString();
+                        estudio.txt_EsSo_SexoAlum_DatosGe.Text = DGV_Show.CurrentRow.Cells[5].Value.ToString();
+
+
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+             
+
+                 
 
         }
 
@@ -49,7 +77,10 @@ namespace APOAUTIS.Formas.Estudio_Socioeconomico
 
         private void btm_Aceptar_Click(object sender, EventArgs e)
         {
+
+
             
+            /*
                 if (DGV_Show.SelectedRows.Count == 1)
                 {
                     double cod = Convert.ToDouble(DGV_Show.CurrentRow.Cells[0].Value);
@@ -57,8 +88,13 @@ namespace APOAUTIS.Formas.Estudio_Socioeconomico
 
                     this.Close();
                 }
+
                 else
                     MessageBox.Show("debe de seleccionar una fila");
+
+                */
             }
+
+    
     }
 }

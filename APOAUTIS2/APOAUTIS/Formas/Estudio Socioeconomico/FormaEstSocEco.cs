@@ -59,12 +59,12 @@ namespace APOAUTIS
 
         }
 
-        private void txt_EsSo_lugar_TextChanged(object sender, EventArgs e)
+        public void txt_EsSo_lugar_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox5_TextChanged(object sender, EventArgs e)
+        public void txt_EsSo_IdentiEst_DatosGe_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -86,13 +86,23 @@ namespace APOAUTIS
           
         }
 
-        private void txt_EsSo_SexoAlum_DatosGe_TextChanged(object sender, EventArgs e)
+        public void txt_EsSo_SexoAlum_DatosGe_TextChanged(object sender, EventArgs e)
         {
 
         }
 
         private void btm_EsSo_BuscarAlumno_DatosGe_Click(object sender, EventArgs e)
         {
+
+
+
+
+
+
+
+
+
+            /*
             FromBusquedaAlumno frmBusqEstSoc = new FromBusquedaAlumno();
             frmBusqEstSoc.ShowDialog();
 
@@ -106,6 +116,26 @@ namespace APOAUTIS
                 txt_EsSo_SexoAlum_DatosGe.Text = Convert.ToString(FromBusquedaAlumno.AlumnoSeleccionado.sexoAlumno);
 
             }
+            */
+        }
+
+        public void txt_EsSo_NombreEst_DatosGe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public void txt_EsSo_LugarNaci_DatosGe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public void txt_EsSo_FechaNa_DatosGe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public void txt_EsSo_EdadEst_DatosGe_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AxAcroPDFLib\AxAcroPDF.cs" />
     <Compile Include="Clases\C_Alumnos.cs" />
     <Compile Include="Clases\C_EntrePadres.cs" />
     <Compile Include="Clases\C_EstudioSocioMetodos.cs" />

@@ -118,3 +118,4 @@ C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug
 C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Manuales.FormManual.resources
 >>>>>>> master
 C:\Users\Gerald\Documents\SistemaApoautis\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.csproj.ResolveComReference.cache
+C:\Users\Gerald\Documents\SistemaApoautis\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Manuales.FormManual.resources
