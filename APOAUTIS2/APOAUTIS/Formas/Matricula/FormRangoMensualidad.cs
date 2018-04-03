@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using APOAUTIS.Clases;
+using APOAUTIS.Formas.Manuales;
 
 namespace APOAUTIS.Formas.Matricula
 {
@@ -169,6 +170,12 @@ namespace APOAUTIS.Formas.Matricula
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void Bttn_Ayuda_Click(object sender, EventArgs e)
+        {
+            FormManual Manual = new FormManual();
+            Manual.ShowDialog();
         }
     }
 }

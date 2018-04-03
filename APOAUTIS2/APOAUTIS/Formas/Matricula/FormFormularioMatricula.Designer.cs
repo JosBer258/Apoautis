@@ -87,6 +87,7 @@
             this.Pest3_Txt_TelefonoPadre = new System.Windows.Forms.TextBox();
             this.Pest3_Bttn_Siguiente = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.Pest4_Txt_Entrevistador = new System.Windows.Forms.TextBox();
             this.Pest4_Txt_Fecha = new System.Windows.Forms.TextBox();
             this.Pest4_Txt_TelefonoPorEmergencia = new System.Windows.Forms.TextBox();
@@ -103,7 +104,6 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.Bttn_Salir = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabMatricula.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -169,6 +169,7 @@
             this.Pest1_Txt_NomEducador.Name = "Pest1_Txt_NomEducador";
             this.Pest1_Txt_NomEducador.Size = new System.Drawing.Size(187, 24);
             this.Pest1_Txt_NomEducador.TabIndex = 5;
+            this.Pest1_Txt_NomEducador.TextChanged += new System.EventHandler(this.Pest1_Txt_NomEducador_TextChanged);
             // 
             // label4
             // 
@@ -746,6 +747,17 @@
             this.tabPage4.Text = "Datos Adicionales";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(455, 291);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(121, 56);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "Ingresar prueba socioeconomica";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Pest4_Txt_Entrevistador
             // 
             this.Pest4_Txt_Entrevistador.Enabled = false;
@@ -897,17 +909,6 @@
             this.Bttn_Salir.Text = "Salir";
             this.Bttn_Salir.UseVisualStyleBackColor = true;
             this.Bttn_Salir.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(455, 291);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 56);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Ingresar prueba socioeconomica";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // FrmMatricula
             // 
