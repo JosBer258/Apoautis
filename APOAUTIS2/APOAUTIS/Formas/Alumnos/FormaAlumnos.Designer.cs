@@ -93,16 +93,12 @@
             this.label17 = new System.Windows.Forms.Label();
             this.Pest2_Pest2_Txt_LugRecAtencMedica = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.Pest2_Pest2_Cmb_TienAlergias = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.Pest2_Pest2_Cmb_UsaMedic = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.Pest2_Pest3_Grupo_MuestraDatosEncargado = new System.Windows.Forms.GroupBox();
             this.Pest2_Pest3_DGV_MuestraEncargados = new System.Windows.Forms.DataGridView();
             this.Pest2_Pest3_Grupo_Encargados = new System.Windows.Forms.GroupBox();
-            this.Pest2_Pest3_Radio_Actualizar = new System.Windows.Forms.RadioButton();
-            this.Pest2_Pest3_Radio_Nuevo = new System.Windows.Forms.RadioButton();
             this.Pest2_Pest3_Cmb_Estado = new System.Windows.Forms.ComboBox();
             this.Pest2_Pest3_Cmb_Trabaja = new System.Windows.Forms.ComboBox();
             this.Pest2_Pest3_Txt_EdadAnos = new System.Windows.Forms.TextBox();
@@ -130,6 +126,8 @@
             this.Pest2_Pest3_Txt_Codigo = new System.Windows.Forms.TextBox();
             this.label39 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.Pest2_Pest2_Txt_Alergias = new System.Windows.Forms.TextBox();
+            this.Pest2_Pest2_Txt_Medicamentos = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.Pest1_Grupo_OpcionesBusqueda.SuspendLayout();
@@ -194,6 +192,7 @@
             this.Pest1_Txt_ID.Name = "Pest1_Txt_ID";
             this.Pest1_Txt_ID.Size = new System.Drawing.Size(318, 21);
             this.Pest1_Txt_ID.TabIndex = 26;
+            this.Pest1_Txt_ID.TextChanged += new System.EventHandler(this.Pest1_Txt_ID_TextChanged);
             // 
             // Pest1_Txt_BusquedaPorNombre
             // 
@@ -202,6 +201,7 @@
             this.Pest1_Txt_BusquedaPorNombre.Name = "Pest1_Txt_BusquedaPorNombre";
             this.Pest1_Txt_BusquedaPorNombre.Size = new System.Drawing.Size(318, 21);
             this.Pest1_Txt_BusquedaPorNombre.TabIndex = 23;
+            this.Pest1_Txt_BusquedaPorNombre.TextChanged += new System.EventHandler(this.Pest1_Txt_BusquedaPorNombre_TextChanged);
             // 
             // Pest1_Radio_ID
             // 
@@ -226,6 +226,7 @@
             this.Pest1_Radio_Alumno.TabStop = true;
             this.Pest1_Radio_Alumno.Text = "Busqueda por nombre del alumno: ";
             this.Pest1_Radio_Alumno.UseVisualStyleBackColor = true;
+            this.Pest1_Radio_Alumno.CheckedChanged += new System.EventHandler(this.Pest1_Radio_Alumno_CheckedChanged);
             // 
             // Pest1_Dgv_BsqAlm
             // 
@@ -237,6 +238,7 @@
             this.Pest1_Dgv_BsqAlm.ReadOnly = true;
             this.Pest1_Dgv_BsqAlm.Size = new System.Drawing.Size(764, 311);
             this.Pest1_Dgv_BsqAlm.TabIndex = 0;
+            this.Pest1_Dgv_BsqAlm.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Pest1_Dgv_BsqAlm_CellDoubleClick);
             // 
             // tabPage2
             // 
@@ -504,6 +506,7 @@
             // 
             // Pest2_Pest1_Txt_Escolaridad
             // 
+            this.Pest2_Pest1_Txt_Escolaridad.Enabled = false;
             this.Pest2_Pest1_Txt_Escolaridad.Location = new System.Drawing.Point(395, 165);
             this.Pest2_Pest1_Txt_Escolaridad.Name = "Pest2_Pest1_Txt_Escolaridad";
             this.Pest2_Pest1_Txt_Escolaridad.Size = new System.Drawing.Size(104, 20);
@@ -617,6 +620,7 @@
             // 
             // Pest2_Pest1_Txt_FechaNacimiento
             // 
+            this.Pest2_Pest1_Txt_FechaNacimiento.Enabled = false;
             this.Pest2_Pest1_Txt_FechaNacimiento.Location = new System.Drawing.Point(152, 109);
             this.Pest2_Pest1_Txt_FechaNacimiento.Name = "Pest2_Pest1_Txt_FechaNacimiento";
             this.Pest2_Pest1_Txt_FechaNacimiento.Size = new System.Drawing.Size(138, 20);
@@ -633,6 +637,7 @@
             // 
             // Pest2_Pest1_Txt_Codigo
             // 
+            this.Pest2_Pest1_Txt_Codigo.Enabled = false;
             this.Pest2_Pest1_Txt_Codigo.Location = new System.Drawing.Point(152, 31);
             this.Pest2_Pest1_Txt_Codigo.Name = "Pest2_Pest1_Txt_Codigo";
             this.Pest2_Pest1_Txt_Codigo.Size = new System.Drawing.Size(70, 20);
@@ -649,6 +654,7 @@
             // 
             // Pest2_Pest1_Txt_LugarNacimiento
             // 
+            this.Pest2_Pest1_Txt_LugarNacimiento.Enabled = false;
             this.Pest2_Pest1_Txt_LugarNacimiento.Location = new System.Drawing.Point(152, 83);
             this.Pest2_Pest1_Txt_LugarNacimiento.Name = "Pest2_Pest1_Txt_LugarNacimiento";
             this.Pest2_Pest1_Txt_LugarNacimiento.Size = new System.Drawing.Size(138, 20);
@@ -665,6 +671,7 @@
             // 
             // Pest2_Pest1_Txt_NombComp
             // 
+            this.Pest2_Pest1_Txt_NombComp.Enabled = false;
             this.Pest2_Pest1_Txt_NombComp.Location = new System.Drawing.Point(152, 57);
             this.Pest2_Pest1_Txt_NombComp.Name = "Pest2_Pest1_Txt_NombComp";
             this.Pest2_Pest1_Txt_NombComp.Size = new System.Drawing.Size(138, 20);
@@ -703,23 +710,27 @@
             // 
             // Pest2_Pest2_DGV_AconMed
             // 
+            this.Pest2_Pest2_DGV_AconMed.AllowUserToAddRows = false;
+            this.Pest2_Pest2_DGV_AconMed.AllowUserToDeleteRows = false;
             this.Pest2_Pest2_DGV_AconMed.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Pest2_Pest2_DGV_AconMed.Location = new System.Drawing.Point(12, 36);
             this.Pest2_Pest2_DGV_AconMed.Name = "Pest2_Pest2_DGV_AconMed";
+            this.Pest2_Pest2_DGV_AconMed.ReadOnly = true;
+            this.Pest2_Pest2_DGV_AconMed.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.Pest2_Pest2_DGV_AconMed.Size = new System.Drawing.Size(709, 112);
             this.Pest2_Pest2_DGV_AconMed.TabIndex = 0;
             // 
             // Pest2_Pest2_Grupo_Historial
             // 
+            this.Pest2_Pest2_Grupo_Historial.Controls.Add(this.Pest2_Pest2_Txt_Medicamentos);
+            this.Pest2_Pest2_Grupo_Historial.Controls.Add(this.Pest2_Pest2_Txt_Alergias);
             this.Pest2_Pest2_Grupo_Historial.Controls.Add(this.Pest2_Pest2_Txt_GastaMedic);
             this.Pest2_Pest2_Grupo_Historial.Controls.Add(this.label18);
             this.Pest2_Pest2_Grupo_Historial.Controls.Add(this.Pest2_Pest2_Txt_EnferPadSuFam);
             this.Pest2_Pest2_Grupo_Historial.Controls.Add(this.label17);
             this.Pest2_Pest2_Grupo_Historial.Controls.Add(this.Pest2_Pest2_Txt_LugRecAtencMedica);
             this.Pest2_Pest2_Grupo_Historial.Controls.Add(this.label16);
-            this.Pest2_Pest2_Grupo_Historial.Controls.Add(this.Pest2_Pest2_Cmb_TienAlergias);
             this.Pest2_Pest2_Grupo_Historial.Controls.Add(this.label15);
-            this.Pest2_Pest2_Grupo_Historial.Controls.Add(this.Pest2_Pest2_Cmb_UsaMedic);
             this.Pest2_Pest2_Grupo_Historial.Controls.Add(this.label14);
             this.Pest2_Pest2_Grupo_Historial.Location = new System.Drawing.Point(6, 20);
             this.Pest2_Pest2_Grupo_Historial.Name = "Pest2_Pest2_Grupo_Historial";
@@ -730,6 +741,7 @@
             // 
             // Pest2_Pest2_Txt_GastaMedic
             // 
+            this.Pest2_Pest2_Txt_GastaMedic.Enabled = false;
             this.Pest2_Pest2_Txt_GastaMedic.Location = new System.Drawing.Point(260, 102);
             this.Pest2_Pest2_Txt_GastaMedic.Name = "Pest2_Pest2_Txt_GastaMedic";
             this.Pest2_Pest2_Txt_GastaMedic.Size = new System.Drawing.Size(106, 20);
@@ -749,6 +761,7 @@
             this.Pest2_Pest2_Txt_EnferPadSuFam.Location = new System.Drawing.Point(512, 29);
             this.Pest2_Pest2_Txt_EnferPadSuFam.Multiline = true;
             this.Pest2_Pest2_Txt_EnferPadSuFam.Name = "Pest2_Pest2_Txt_EnferPadSuFam";
+            this.Pest2_Pest2_Txt_EnferPadSuFam.ReadOnly = true;
             this.Pest2_Pest2_Txt_EnferPadSuFam.Size = new System.Drawing.Size(203, 73);
             this.Pest2_Pest2_Txt_EnferPadSuFam.TabIndex = 8;
             // 
@@ -766,6 +779,7 @@
             this.Pest2_Pest2_Txt_LugRecAtencMedica.Location = new System.Drawing.Point(512, 108);
             this.Pest2_Pest2_Txt_LugRecAtencMedica.Multiline = true;
             this.Pest2_Pest2_Txt_LugRecAtencMedica.Name = "Pest2_Pest2_Txt_LugRecAtencMedica";
+            this.Pest2_Pest2_Txt_LugRecAtencMedica.ReadOnly = true;
             this.Pest2_Pest2_Txt_LugRecAtencMedica.Size = new System.Drawing.Size(201, 73);
             this.Pest2_Pest2_Txt_LugRecAtencMedica.TabIndex = 6;
             // 
@@ -778,15 +792,6 @@
             this.label16.TabIndex = 5;
             this.label16.Text = "Lugares que recibe \r\natencion medica";
             // 
-            // Pest2_Pest2_Cmb_TienAlergias
-            // 
-            this.Pest2_Pest2_Cmb_TienAlergias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Pest2_Pest2_Cmb_TienAlergias.FormattingEnabled = true;
-            this.Pest2_Pest2_Cmb_TienAlergias.Location = new System.Drawing.Point(260, 69);
-            this.Pest2_Pest2_Cmb_TienAlergias.Name = "Pest2_Pest2_Cmb_TienAlergias";
-            this.Pest2_Pest2_Cmb_TienAlergias.Size = new System.Drawing.Size(106, 21);
-            this.Pest2_Pest2_Cmb_TienAlergias.TabIndex = 3;
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -795,15 +800,6 @@
             this.label15.Size = new System.Drawing.Size(101, 13);
             this.label15.TabIndex = 4;
             this.label15.Text = "¿Tiene alergias?";
-            // 
-            // Pest2_Pest2_Cmb_UsaMedic
-            // 
-            this.Pest2_Pest2_Cmb_UsaMedic.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Pest2_Pest2_Cmb_UsaMedic.FormattingEnabled = true;
-            this.Pest2_Pest2_Cmb_UsaMedic.Location = new System.Drawing.Point(260, 37);
-            this.Pest2_Pest2_Cmb_UsaMedic.Name = "Pest2_Pest2_Cmb_UsaMedic";
-            this.Pest2_Pest2_Cmb_UsaMedic.Size = new System.Drawing.Size(106, 21);
-            this.Pest2_Pest2_Cmb_UsaMedic.TabIndex = 0;
             // 
             // label14
             // 
@@ -845,9 +841,7 @@
             // 
             // Pest2_Pest3_Grupo_Encargados
             // 
-            this.Pest2_Pest3_Grupo_Encargados.Controls.Add(this.Pest2_Pest3_Radio_Actualizar);
             this.Pest2_Pest3_Grupo_Encargados.Controls.Add(this.Pest2_Pest3_Cmb_Estado);
-            this.Pest2_Pest3_Grupo_Encargados.Controls.Add(this.Pest2_Pest3_Radio_Nuevo);
             this.Pest2_Pest3_Grupo_Encargados.Controls.Add(this.Pest2_Pest3_Cmb_Trabaja);
             this.Pest2_Pest3_Grupo_Encargados.Controls.Add(this.Pest2_Pest3_Txt_EdadAnos);
             this.Pest2_Pest3_Grupo_Encargados.Controls.Add(this.label13);
@@ -879,28 +873,6 @@
             this.Pest2_Pest3_Grupo_Encargados.TabIndex = 1;
             this.Pest2_Pest3_Grupo_Encargados.TabStop = false;
             this.Pest2_Pest3_Grupo_Encargados.Text = "Datos de los Encargados";
-            // 
-            // Pest2_Pest3_Radio_Actualizar
-            // 
-            this.Pest2_Pest3_Radio_Actualizar.AutoSize = true;
-            this.Pest2_Pest3_Radio_Actualizar.Location = new System.Drawing.Point(6, 40);
-            this.Pest2_Pest3_Radio_Actualizar.Name = "Pest2_Pest3_Radio_Actualizar";
-            this.Pest2_Pest3_Radio_Actualizar.Size = new System.Drawing.Size(81, 17);
-            this.Pest2_Pest3_Radio_Actualizar.TabIndex = 30;
-            this.Pest2_Pest3_Radio_Actualizar.TabStop = true;
-            this.Pest2_Pest3_Radio_Actualizar.Text = "Actualizar";
-            this.Pest2_Pest3_Radio_Actualizar.UseVisualStyleBackColor = true;
-            // 
-            // Pest2_Pest3_Radio_Nuevo
-            // 
-            this.Pest2_Pest3_Radio_Nuevo.AutoSize = true;
-            this.Pest2_Pest3_Radio_Nuevo.Location = new System.Drawing.Point(6, 74);
-            this.Pest2_Pest3_Radio_Nuevo.Name = "Pest2_Pest3_Radio_Nuevo";
-            this.Pest2_Pest3_Radio_Nuevo.Size = new System.Drawing.Size(62, 17);
-            this.Pest2_Pest3_Radio_Nuevo.TabIndex = 29;
-            this.Pest2_Pest3_Radio_Nuevo.TabStop = true;
-            this.Pest2_Pest3_Radio_Nuevo.Text = "Nuevo";
-            this.Pest2_Pest3_Radio_Nuevo.UseVisualStyleBackColor = true;
             // 
             // Pest2_Pest3_Cmb_Estado
             // 
@@ -1129,6 +1101,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // Pest2_Pest2_Txt_Alergias
+            // 
+            this.Pest2_Pest2_Txt_Alergias.Enabled = false;
+            this.Pest2_Pest2_Txt_Alergias.Location = new System.Drawing.Point(260, 69);
+            this.Pest2_Pest2_Txt_Alergias.Name = "Pest2_Pest2_Txt_Alergias";
+            this.Pest2_Pest2_Txt_Alergias.Size = new System.Drawing.Size(106, 20);
+            this.Pest2_Pest2_Txt_Alergias.TabIndex = 11;
+            // 
+            // Pest2_Pest2_Txt_Medicamentos
+            // 
+            this.Pest2_Pest2_Txt_Medicamentos.Enabled = false;
+            this.Pest2_Pest2_Txt_Medicamentos.Location = new System.Drawing.Point(260, 37);
+            this.Pest2_Pest2_Txt_Medicamentos.Name = "Pest2_Pest2_Txt_Medicamentos";
+            this.Pest2_Pest2_Txt_Medicamentos.Size = new System.Drawing.Size(106, 20);
+            this.Pest2_Pest2_Txt_Medicamentos.TabIndex = 12;
+            // 
             // FormaAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1231,16 +1219,12 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox Pest2_Pest2_Txt_LugRecAtencMedica;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ComboBox Pest2_Pest2_Cmb_TienAlergias;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox Pest2_Pest2_Cmb_UsaMedic;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.GroupBox Pest2_Pest3_Grupo_MuestraDatosEncargado;
         private System.Windows.Forms.DataGridView Pest2_Pest3_DGV_MuestraEncargados;
         private System.Windows.Forms.GroupBox Pest2_Pest3_Grupo_Encargados;
-        private System.Windows.Forms.RadioButton Pest2_Pest3_Radio_Actualizar;
-        private System.Windows.Forms.RadioButton Pest2_Pest3_Radio_Nuevo;
         private System.Windows.Forms.ComboBox Pest2_Pest3_Cmb_Estado;
         private System.Windows.Forms.ComboBox Pest2_Pest3_Cmb_Trabaja;
         private System.Windows.Forms.TextBox Pest2_Pest3_Txt_EdadAnos;
@@ -1272,5 +1256,7 @@
         private System.Windows.Forms.RadioButton Pest1_Radio_ID;
         private System.Windows.Forms.RadioButton Pest1_Radio_Alumno;
         private System.Windows.Forms.ComboBox Pest2_Pest1_Cmb_Estado;
+        private System.Windows.Forms.TextBox Pest2_Pest2_Txt_Medicamentos;
+        private System.Windows.Forms.TextBox Pest2_Pest2_Txt_Alergias;
     }
 }
