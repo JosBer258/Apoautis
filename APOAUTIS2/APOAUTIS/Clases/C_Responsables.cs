@@ -26,7 +26,7 @@ namespace APOAUTIS.Clases
         private string telCelResp;
         private string telTrabResp;
         private string corrResp;
-
+     
         public int CodResp
         {
             get
@@ -104,6 +104,8 @@ namespace APOAUTIS.Clases
                 edadResp = value;
             }
         }
+
+
 
         public string TrabResp
         {
@@ -196,7 +198,7 @@ namespace APOAUTIS.Clases
             }
         }
 
-        public void Fill_DGV(DataGridView dgv)
+        public void Fill_DGV_Resp(DataGridView dgv)
         {
 
             cnx.Open();
@@ -207,7 +209,7 @@ namespace APOAUTIS.Clases
                                                     NumIdRes as 'Numero de Identidad', 
                                                     DomicilioRes as 'Domicilio',
                                                     ProfecionRes as 'Profesion',
-                                                    LugarTrabajoRes as 'Lugar de Trabajo',
+                                                    LugarTrabajoRes as 'Trabajo',
                                                     TelCasaRes as 'Telefono de Casa',
                                                     TelCelRes as 'Telefono Celular',
                                                     TelTrabajoRes as 'Telefono de Trabajo',
@@ -225,31 +227,95 @@ namespace APOAUTIS.Clases
             cnx.Close();
         }
 
+        public void Fill_DGV_Alum(DataGridView dgv, string codR)
+        {
+
+            cnx.Open();
+            try
+            {
+                DataAdapter = new MySqlDataAdapter(@"SELECT  A.CodAlumno as 'Codigo de Alumno',
+		                                                A.NomAlumno as 'Nombre Completo',
+		                                                A.LugarNaciAlum as 'Lugar de Nacimiento',
+		                                                A.FechaNaciAlum as 'Fecha de Nacimiento',
+		                                                A.EdadAlum as 'Edad en Años',
+		                                                A.EdadCronologica as 'Edad Cronologica',
+		                                                A.SexoAlum as 'Sexo',
+		                                                A.IdAlum as 'Numero de Identidad',
+		                                                A.DireccionAlum as 'Direccion',
+		                                                A.TelFijoAlum as 'Telefono Fijo',
+		                                                A.CelAlumno as 'Telefono Celular',
+		                                                A.EscolaridadAlum as 'Escolaridad',
+		                                                A.LugarOrigAlum as 'Lugar de Origen',
+		                                                A.InstProceAlumno as 'Instituto de Procedencia',
+		                                                A.InstDondeEstaIncluido as 'Instituto Donde Esta Incluido' 
+                                                        FROM responsables as R
+                                                        INNER JOIN `alumnos/responsables` as AR 
+                                                        ON R.CodResp = AR.CodResp 
+                                                        INNER JOIN  alumnos as A
+                                                        ON AR.CodAlumno = A.CodAlumno
+                                                        WHERE R.CodResp  = " + codR, ccnx);
+                dt = new DataTable();
+                DataAdapter.Fill(dt);
+                dgv.DataSource = dt;
+
+            }
+            catch
+            {
+
+            }
+            cnx.Close();
+        }
+
+        public void DGV_Busq(DataGridView dgv, string nombreResp)
+        {
+            
+            string searchQuery = @"SELECT CodResp as 'Codigo de Responsable', 
+                                            NomComRes as 'Nombre Completo', 
+                                            NumIdRes as 'Numero de Identidad', 
+                                            DomicilioRes as 'Domicilio',
+                                            ProfecionRes as 'Profesion',
+                                            LugarTrabajoRes as 'Trabajo',
+                                            TelCasaRes as 'Telefono de Casa',
+                                            TelCelRes as 'Telefono Celular',
+                                            TelTrabajoRes as 'Telefono de Trabajo',
+                                            CorreoRes as 'Correo'
+                                            FROM responsables WHERE NomComRes LIKE '%" + nombreResp + "%'";
+            MySqlDataAdapter adapter = new MySqlDataAdapter(searchQuery, cnx);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            dgv.DataSource = table;
+            
+    }
+
         public void updateResp()
         {
             this.sql = string.Format(@"UPDATE responsables SET NomComRes = '{0}',
-                                        NumIdRes = '{1}',
-                                        DomicilioRes = '{2}', 
-                                        ProfecionRes = '{3}',
-                                        LugarTrabajoRes = '{4}', 
-                                        TelCasaRes = '{5}',
-                                        TelCelRes = '{6}',
-                                        TelTrabajoRes = '{7}',
-                                        CorreoRes = '{8}'
-                                        WHERE CodResp = '{9}'", 
-                                        nomResp, idResp, domResp, profResp, lugTrab, telCasResp, telCelResp, telTrabResp, corrResp, codResp);
+                                    NumIdRes = '{1}',
+                                    DomicilioRes = '{2}', 
+                                    ProfecionRes = '{3}',
+                                    LugarTrabajoRes = '{4}', 
+                                    TelCasaRes = '{5}',
+                                    TelCelRes = '{6}',
+                                    TelTrabajoRes = '{7}',
+                                    CorreoRes = '{8}'
+                                    WHERE CodResp = '{9}'",
+                                        nomResp, idResp, domResp, profResp, lugTrab,
+                                        telCasResp, telCelResp, telTrabResp, corrResp, codResp);
 
-            this.cmd = new MySqlCommand(this.sql, this.cnx);
-            this.cnx.Open();
-            MySqlDataReader Reg = null;
-            Reg = this.cmd.ExecuteReader();
-            this.cnx.Close();
+                this.cmd = new MySqlCommand(this.sql, this.cnx);
+                this.cnx.Open();
+                MySqlDataReader Reg = null;
+                Reg = this.cmd.ExecuteReader();
+                this.cnx.Close();
+           
         }
 
         public void msjUpdateCorrecto()
         {
             MessageBox.Show("Los datos se han actualizado correctamente","Datos Actualizados");
         }
+
+        
 
         public void limpiarTxtResp()
         {
@@ -263,13 +329,45 @@ namespace APOAUTIS.Clases
             fResp.txtTelCelResp.Text = string.Empty;
             fResp.txtTelTrabResp.Text = string.Empty;
             fResp.txtLugResp.Text = string.Empty;
-
+            fResp.txtCorrResp.Text = string.Empty;
         }
+
+        public void validarSoloNumeros(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+              
     }
 }
 
-/*OFICIO Y PREFESION ES LO MISMO
-# de ID es STRING
-No se puede llenar el DGV de Alumnos sin hacer la Matricula primero
-CAMPO DE EDAD
+/*
+
+En BD
+OFICIO Y PROFESION SON LO MISMO
+# de ID debe ser STRING
+??CAMPO DE EDAD EN RESPONSABLES
+??LUGAR DE ORIGEN
+Quitar UNIQ # DE CEL
+
+** CORREO DEBE ACEPTAR GUION BAJO
+
+CLICK DERECHO
+* VALIDAR ESPACIOS
+* VALIDAR FECHA DE NACIMIENTO
+** Que se cambie a no el combobox
+
+MAX LENGTH DE TODOS LOS TEXTBOXES
+VALIDAR FECHA
+MOSTRAR COD DE EVAL AUTOINC
+SOLO NUMEROS NO DIGITOS
+COD DE EVAL AUTO
+QUITAR VALIDACIONES DE TXT COD, NOM E ID
+UNIQ # DE ID
+UNIQ COD
+SI del trabajo
+
+
 */

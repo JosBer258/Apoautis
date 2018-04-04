@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="Clases\C_Alumnos.cs" />
     <Compile Include="Clases\C_EntrePadres.cs" />
+    <Compile Include="Clases\C_EvalPsico.cs" />
     <Compile Include="Clases\C_Login.cs" />
     <Compile Include="Clases\C_MontoFactura.cs" />
     <Compile Include="Clases\C_MuestraHistorialMatricu.cs" />
