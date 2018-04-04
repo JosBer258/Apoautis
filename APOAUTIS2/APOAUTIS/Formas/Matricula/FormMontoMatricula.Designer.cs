@@ -194,6 +194,7 @@
             this.Txt_Responsable.Name = "Txt_Responsable";
             this.Txt_Responsable.Size = new System.Drawing.Size(201, 20);
             this.Txt_Responsable.TabIndex = 3;
+            this.Txt_Responsable.TextChanged += new System.EventHandler(this.Txt_Responsable_TextChanged);
             // 
             // Txt_TotalIngreso
             // 

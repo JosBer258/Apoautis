@@ -182,5 +182,10 @@ namespace APOAUTIS.Formas.Matricula
             FormManual Manual = new FormManual();
             Manual.ShowDialog();
         }
+
+        private void Txt_Responsable_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

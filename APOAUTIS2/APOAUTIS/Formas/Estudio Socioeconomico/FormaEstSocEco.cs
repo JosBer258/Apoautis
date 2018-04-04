@@ -13,6 +13,17 @@ namespace APOAUTIS
 {
     public partial class FormaEstSocEco : Form
     {
+
+
+
+        Clases.C_Validaciones Validaciones = new Clases.C_Validaciones();
+        FromBusquedaAlumno F_ShowAlum = new FromBusquedaAlumno();
+
+      //  FormGlobalShowAlum F_ShowAlum = new FormGlobalShowAlum();
+        Clases.C_DatosGenerales C_datos = new Clases.C_DatosGenerales();
+
+        int Var_codigoAlumno = 0;
+
         public FormaEstSocEco()
         {
             InitializeComponent();
@@ -61,7 +72,7 @@ namespace APOAUTIS
 
         private void txt_EsSo_lugar_TextChanged(object sender, EventArgs e)
         {
-
+      
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -76,14 +87,16 @@ namespace APOAUTIS
 
         private void btm_EsSo_BuscarAlumno_DatosGe_Click_1(object sender, EventArgs e)
         {
-          FromBusquedaAlumno   frmBusqEstSoc = new FromBusquedaAlumno();
-            frmBusqEstSoc.ShowDialog();
+          /*FromBusquedaAlumno   frmBusqEstSoc = new FromBusquedaAlumno();
+            frmBusqEstSoc.ShowDialog();*/
+            /*
+            AddOwnedForm(F_ShowAlum);
+            F_ShowAlum.Accion = "Gastos";
+            F_ShowAlum.ShowDialog();
+            */
 
 
 
-            
-
-          
         }
 
         private void txt_EsSo_SexoAlum_DatosGe_TextChanged(object sender, EventArgs e)
@@ -98,12 +111,16 @@ namespace APOAUTIS
 
             if(FromBusquedaAlumno.AlumnoSeleccionado != null)
             {
-                txt_EsSo_IdentiEst_DatosGe.Text = Convert.ToString(FromBusquedaAlumno.AlumnoSeleccionado.idAlumno);
-                txt_EsSo_NombreEst_DatosGe.Text = FromBusquedaAlumno.AlumnoSeleccionado.nombreAlumno;
-                txt_EsSo_LugarNaci_DatosGe.Text = FromBusquedaAlumno.AlumnoSeleccionado.lugarNacAlumno;
-                txt_EsSo_FechaNa_DatosGe.Text = Convert.ToString(FromBusquedaAlumno.AlumnoSeleccionado.fecha_NacAlumno);
-                txt_EsSo_EdadEst_DatosGe.Text = Convert.ToString(FromBusquedaAlumno.AlumnoSeleccionado.edadAlumno);
-                txt_EsSo_SexoAlum_DatosGe.Text = Convert.ToString(FromBusquedaAlumno.AlumnoSeleccionado.sexoAlumno);
+                C_datos.CodAlumno = Var_codigoAlumno;
+
+
+               // txt_EsSo_NombreEst_DatosGe.Text = Var_Nombre;
+                txt_EsSo_IdentiEst_DatosGe.Text = Convert.ToString(FromBusquedaAlumno.AlumnoSeleccionado.IdAlumno);
+                txt_EsSo_NombreEst_DatosGe.Text = FromBusquedaAlumno.AlumnoSeleccionado.NombreAlumno;
+                txt_EsSo_LugarNaci_DatosGe.Text = FromBusquedaAlumno.AlumnoSeleccionado.LugarNacAlumno;
+                txt_EsSo_FechaNa_DatosGe.Text = Convert.ToString( FromBusquedaAlumno.AlumnoSeleccionado.Fecha_NacAlumno.Date);
+                txt_EsSo_EdadEst_DatosGe.Text = Convert.ToString(FromBusquedaAlumno.AlumnoSeleccionado.EdadAlumno);
+                txt_EsSo_SexoAlum_DatosGe.Text = Convert.ToString(FromBusquedaAlumno.AlumnoSeleccionado.SexoAlumno);
 
             }
 

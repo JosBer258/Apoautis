@@ -271,6 +271,7 @@
             this.Pest1_Txt_NombreEstudiante.Name = "Pest1_Txt_NombreEstudiante";
             this.Pest1_Txt_NombreEstudiante.Size = new System.Drawing.Size(141, 22);
             this.Pest1_Txt_NombreEstudiante.TabIndex = 5;
+            this.Pest1_Txt_NombreEstudiante.TextChanged += new System.EventHandler(this.Pest1_Txt_NombreEstudiante_TextChanged);
             // 
             // label11
             // 

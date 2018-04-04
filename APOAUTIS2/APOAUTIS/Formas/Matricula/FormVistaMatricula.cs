@@ -42,5 +42,10 @@ namespace APOAUTIS
         {
             this.Close();
         }
+
+        private void Pest1_Txt_NombreEstudiante_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

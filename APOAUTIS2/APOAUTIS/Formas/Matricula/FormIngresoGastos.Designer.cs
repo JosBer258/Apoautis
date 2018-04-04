@@ -511,6 +511,7 @@
             this.Txt_OpcionBusqueda.Name = "Txt_OpcionBusqueda";
             this.Txt_OpcionBusqueda.Size = new System.Drawing.Size(221, 20);
             this.Txt_OpcionBusqueda.TabIndex = 1;
+            this.Txt_OpcionBusqueda.TextChanged += new System.EventHandler(this.Txt_OpcionBusqueda_TextChanged);
             // 
             // Bttn_Buscar
             // 
