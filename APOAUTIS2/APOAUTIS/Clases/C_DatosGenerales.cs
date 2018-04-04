@@ -113,9 +113,7 @@ namespace APOAUTIS.Clases
             }
         }
 
-        //   private string lugarEntrevista;
-        //private string fechaEntrevista;
-        // private string personaEntrevis;
+
 
 
 

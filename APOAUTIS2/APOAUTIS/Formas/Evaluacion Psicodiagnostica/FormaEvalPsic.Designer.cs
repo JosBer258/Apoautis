@@ -57,17 +57,17 @@
             this.Grupo_IngresoResultado = new System.Windows.Forms.GroupBox();
             this.Date_FechaEvaluacion = new System.Windows.Forms.DateTimePicker();
             this.Grupo_Busqueda = new System.Windows.Forms.GroupBox();
-            this.Bttn_Salir = new System.Windows.Forms.Button();
-            this.Radio_Busq_ImpresionDiagnos = new System.Windows.Forms.RadioButton();
-            this.Busq_Txt_ImpresionDiagnostica = new System.Windows.Forms.TextBox();
+            this.Radio_Busq_TodasPruebas = new System.Windows.Forms.RadioButton();
+            this.Busq_Txt_Observaciones_Conjunto = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.Busq_Txt_Diagnosti_Conjunto = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Radio_Busq_ImpresionYObservaciones = new System.Windows.Forms.RadioButton();
             this.Radio_Busq_Observaciones = new System.Windows.Forms.RadioButton();
             this.Busq_Txt_Observaciones = new System.Windows.Forms.TextBox();
-            this.Radio_Busq_ImpresionYObservaciones = new System.Windows.Forms.RadioButton();
-            this.label9 = new System.Windows.Forms.Label();
-            this.Busq_Txt_Diagnosti_Conjunto = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.Busq_Txt_Observaciones_Conjunto = new System.Windows.Forms.TextBox();
-            this.Radio_Busq_TodasPruebas = new System.Windows.Forms.RadioButton();
+            this.Radio_Busq_ImpresionDiagnos = new System.Windows.Forms.RadioButton();
+            this.Busq_Txt_ImpresionDiagnostica = new System.Windows.Forms.TextBox();
+            this.Bttn_Salir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Show)).BeginInit();
             this.Grupo_IngresoResultado.SuspendLayout();
             this.Grupo_Busqueda.SuspendLayout();
@@ -125,6 +125,7 @@
             this.Bttn_Ok.TabIndex = 90;
             this.Bttn_Ok.Text = "OK";
             this.Bttn_Ok.UseVisualStyleBackColor = true;
+            this.Bttn_Ok.Click += new System.EventHandler(this.Bttn_Ok_Click);
             // 
             // Bttn_Limpiar
             // 
@@ -352,33 +353,60 @@
             this.Grupo_Busqueda.TabStop = false;
             this.Grupo_Busqueda.Text = "Opciones de Busqueda";
             // 
-            // Bttn_Salir
+            // Radio_Busq_TodasPruebas
             // 
-            this.Bttn_Salir.Location = new System.Drawing.Point(729, 592);
-            this.Bttn_Salir.Name = "Bttn_Salir";
-            this.Bttn_Salir.Size = new System.Drawing.Size(118, 40);
-            this.Bttn_Salir.TabIndex = 91;
-            this.Bttn_Salir.Text = "Salir";
-            this.Bttn_Salir.UseVisualStyleBackColor = true;
-            this.Bttn_Salir.Click += new System.EventHandler(this.button2_Click);
+            this.Radio_Busq_TodasPruebas.AutoSize = true;
+            this.Radio_Busq_TodasPruebas.Location = new System.Drawing.Point(648, 34);
+            this.Radio_Busq_TodasPruebas.Name = "Radio_Busq_TodasPruebas";
+            this.Radio_Busq_TodasPruebas.Size = new System.Drawing.Size(129, 17);
+            this.Radio_Busq_TodasPruebas.TabIndex = 16;
+            this.Radio_Busq_TodasPruebas.TabStop = true;
+            this.Radio_Busq_TodasPruebas.Text = "Todas las pruebas";
+            this.Radio_Busq_TodasPruebas.UseVisualStyleBackColor = true;
+            this.Radio_Busq_TodasPruebas.CheckedChanged += new System.EventHandler(this.radioButton6_CheckedChanged);
             // 
-            // Radio_Busq_ImpresionDiagnos
+            // Busq_Txt_Observaciones_Conjunto
             // 
-            this.Radio_Busq_ImpresionDiagnos.AutoSize = true;
-            this.Radio_Busq_ImpresionDiagnos.Location = new System.Drawing.Point(339, 32);
-            this.Radio_Busq_ImpresionDiagnos.Name = "Radio_Busq_ImpresionDiagnos";
-            this.Radio_Busq_ImpresionDiagnos.Size = new System.Drawing.Size(150, 17);
-            this.Radio_Busq_ImpresionDiagnos.TabIndex = 8;
-            this.Radio_Busq_ImpresionDiagnos.TabStop = true;
-            this.Radio_Busq_ImpresionDiagnos.Text = "Impresion Diagnostica";
-            this.Radio_Busq_ImpresionDiagnos.UseVisualStyleBackColor = true;
+            this.Busq_Txt_Observaciones_Conjunto.Location = new System.Drawing.Point(463, 94);
+            this.Busq_Txt_Observaciones_Conjunto.Name = "Busq_Txt_Observaciones_Conjunto";
+            this.Busq_Txt_Observaciones_Conjunto.Size = new System.Drawing.Size(133, 20);
+            this.Busq_Txt_Observaciones_Conjunto.TabIndex = 15;
             // 
-            // Busq_Txt_ImpresionDiagnostica
+            // label10
             // 
-            this.Busq_Txt_ImpresionDiagnostica.Location = new System.Drawing.Point(490, 31);
-            this.Busq_Txt_ImpresionDiagnostica.Name = "Busq_Txt_ImpresionDiagnostica";
-            this.Busq_Txt_ImpresionDiagnostica.Size = new System.Drawing.Size(105, 20);
-            this.Busq_Txt_ImpresionDiagnostica.TabIndex = 7;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(361, 98);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(101, 13);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "y Observaciones";
+            // 
+            // Busq_Txt_Diagnosti_Conjunto
+            // 
+            this.Busq_Txt_Diagnosti_Conjunto.Location = new System.Drawing.Point(250, 93);
+            this.Busq_Txt_Diagnosti_Conjunto.Name = "Busq_Txt_Diagnosti_Conjunto";
+            this.Busq_Txt_Diagnosti_Conjunto.Size = new System.Drawing.Size(105, 20);
+            this.Busq_Txt_Diagnosti_Conjunto.TabIndex = 13;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(112, 96);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(132, 13);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Impresion Diagnostica";
+            // 
+            // Radio_Busq_ImpresionYObservaciones
+            // 
+            this.Radio_Busq_ImpresionYObservaciones.AutoSize = true;
+            this.Radio_Busq_ImpresionYObservaciones.Location = new System.Drawing.Point(12, 94);
+            this.Radio_Busq_ImpresionYObservaciones.Name = "Radio_Busq_ImpresionYObservaciones";
+            this.Radio_Busq_ImpresionYObservaciones.Size = new System.Drawing.Size(103, 17);
+            this.Radio_Busq_ImpresionYObservaciones.TabIndex = 11;
+            this.Radio_Busq_ImpresionYObservaciones.TabStop = true;
+            this.Radio_Busq_ImpresionYObservaciones.Text = "Busqueda por";
+            this.Radio_Busq_ImpresionYObservaciones.UseVisualStyleBackColor = true;
             // 
             // Radio_Busq_Observaciones
             // 
@@ -398,60 +426,33 @@
             this.Busq_Txt_Observaciones.Size = new System.Drawing.Size(105, 20);
             this.Busq_Txt_Observaciones.TabIndex = 9;
             // 
-            // Radio_Busq_ImpresionYObservaciones
+            // Radio_Busq_ImpresionDiagnos
             // 
-            this.Radio_Busq_ImpresionYObservaciones.AutoSize = true;
-            this.Radio_Busq_ImpresionYObservaciones.Location = new System.Drawing.Point(12, 94);
-            this.Radio_Busq_ImpresionYObservaciones.Name = "Radio_Busq_ImpresionYObservaciones";
-            this.Radio_Busq_ImpresionYObservaciones.Size = new System.Drawing.Size(103, 17);
-            this.Radio_Busq_ImpresionYObservaciones.TabIndex = 11;
-            this.Radio_Busq_ImpresionYObservaciones.TabStop = true;
-            this.Radio_Busq_ImpresionYObservaciones.Text = "Busqueda por";
-            this.Radio_Busq_ImpresionYObservaciones.UseVisualStyleBackColor = true;
+            this.Radio_Busq_ImpresionDiagnos.AutoSize = true;
+            this.Radio_Busq_ImpresionDiagnos.Location = new System.Drawing.Point(339, 32);
+            this.Radio_Busq_ImpresionDiagnos.Name = "Radio_Busq_ImpresionDiagnos";
+            this.Radio_Busq_ImpresionDiagnos.Size = new System.Drawing.Size(150, 17);
+            this.Radio_Busq_ImpresionDiagnos.TabIndex = 8;
+            this.Radio_Busq_ImpresionDiagnos.TabStop = true;
+            this.Radio_Busq_ImpresionDiagnos.Text = "Impresion Diagnostica";
+            this.Radio_Busq_ImpresionDiagnos.UseVisualStyleBackColor = true;
             // 
-            // label9
+            // Busq_Txt_ImpresionDiagnostica
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(112, 96);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(132, 13);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Impresion Diagnostica";
+            this.Busq_Txt_ImpresionDiagnostica.Location = new System.Drawing.Point(490, 31);
+            this.Busq_Txt_ImpresionDiagnostica.Name = "Busq_Txt_ImpresionDiagnostica";
+            this.Busq_Txt_ImpresionDiagnostica.Size = new System.Drawing.Size(105, 20);
+            this.Busq_Txt_ImpresionDiagnostica.TabIndex = 7;
             // 
-            // Busq_Txt_Diagnosti_Conjunto
+            // Bttn_Salir
             // 
-            this.Busq_Txt_Diagnosti_Conjunto.Location = new System.Drawing.Point(250, 93);
-            this.Busq_Txt_Diagnosti_Conjunto.Name = "Busq_Txt_Diagnosti_Conjunto";
-            this.Busq_Txt_Diagnosti_Conjunto.Size = new System.Drawing.Size(105, 20);
-            this.Busq_Txt_Diagnosti_Conjunto.TabIndex = 13;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(361, 98);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(101, 13);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "y Observaciones";
-            // 
-            // Busq_Txt_Observaciones_Conjunto
-            // 
-            this.Busq_Txt_Observaciones_Conjunto.Location = new System.Drawing.Point(463, 94);
-            this.Busq_Txt_Observaciones_Conjunto.Name = "Busq_Txt_Observaciones_Conjunto";
-            this.Busq_Txt_Observaciones_Conjunto.Size = new System.Drawing.Size(133, 20);
-            this.Busq_Txt_Observaciones_Conjunto.TabIndex = 15;
-            // 
-            // Radio_Busq_TodasPruebas
-            // 
-            this.Radio_Busq_TodasPruebas.AutoSize = true;
-            this.Radio_Busq_TodasPruebas.Location = new System.Drawing.Point(648, 34);
-            this.Radio_Busq_TodasPruebas.Name = "Radio_Busq_TodasPruebas";
-            this.Radio_Busq_TodasPruebas.Size = new System.Drawing.Size(129, 17);
-            this.Radio_Busq_TodasPruebas.TabIndex = 16;
-            this.Radio_Busq_TodasPruebas.TabStop = true;
-            this.Radio_Busq_TodasPruebas.Text = "Todas las pruebas";
-            this.Radio_Busq_TodasPruebas.UseVisualStyleBackColor = true;
-            this.Radio_Busq_TodasPruebas.CheckedChanged += new System.EventHandler(this.radioButton6_CheckedChanged);
+            this.Bttn_Salir.Location = new System.Drawing.Point(729, 592);
+            this.Bttn_Salir.Name = "Bttn_Salir";
+            this.Bttn_Salir.Size = new System.Drawing.Size(118, 40);
+            this.Bttn_Salir.TabIndex = 91;
+            this.Bttn_Salir.Text = "Salir";
+            this.Bttn_Salir.UseVisualStyleBackColor = true;
+            this.Bttn_Salir.Click += new System.EventHandler(this.button2_Click);
             // 
             // FormaEvalPsic
             // 

@@ -11,6 +11,11 @@ namespace APOAUTIS.Clases
 {
     class C_EstudioSocioMetodos: Conexion
     {
+
+
+
+
+
         public static MySqlConnection ObtenerConexion()
         {
             MySqlConnection conectar = new MySqlConnection("server=127.0.0.1; database=mydb; Uid=root; pwd=123456;");
@@ -20,19 +25,19 @@ namespace APOAUTIS.Clases
         }
 
 
-
-
-        /*public static int Agregar(C_DatosGenerales DatosGenerales)
+        public static int AgregarEstudioSo(C_EstudioSocioEc estudio)
         {
 
             int retorno = 0;
 
-            MySqlCommand comando = new MySqlCommand(string.Format("Insert into clientes (Nombre, Apellido, Fecha_Nacimiento, Direccion) values ('{0}','{1}','{2}', '{3}')",
-                pCliente.Nombre, pCliente.Apellido, pCliente.Fecha_Nac, pCliente.Direccion), BdComun.ObtnerCOnexion());
+            MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO estudiosocioeconomico (Alumnos_CodAlumno, Lugar, Fecha, PersonaEntrevis, RevisaAproPor) values ('{0}','{1}','{2}', '{3}','{4}')",
+                estudio.CodAlumno, estudio.LugarEntrevista, estudio.FechaEntrevista, estudio.PersonaEntrevis,estudio.EntrevistadoPor1), C_EstudioSocioMetodos.ObtenerConexion());
             retorno = comando.ExecuteNonQuery();
             return retorno;
         }
-        */
+
+
+
 
         public static List<C_DatosGenerales> Buscar( string nombreAlumno)
         {

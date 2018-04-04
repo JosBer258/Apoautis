@@ -57,6 +57,32 @@ namespace APOAUTIS
         private void button4_Click(object sender, EventArgs e)
         {
             this.Hide();
+            // string strDate = dateTimePicker1.Value.ToString("yyyy/MM/dd");
+            // DateTime varFeInicio = Convert.toDatetime(dtpFeInicio.Text);
+
+           Var_codigoAlumno= C_datos.CodAlumno ;
+
+            Clases.C_EstudioSocioEc estudioSocio = new Clases.C_EstudioSocioEc();
+            estudioSocio.CodAlumno= Var_codigoAlumno;
+            estudioSocio.LugarEntrevista = txt_EsSo_lugar_DatosGe.Text.Trim();
+            estudioSocio.FechaEntrevista = Convert.ToDateTime(dateTimePicker1.Value.Year + "/" + dateTimePicker1.Value.Month + "/" + dateTimePicker1.Value.Day); //Convert.ToDateTime(dateTimePicker1.Text);
+            estudioSocio.PersonaEntrevis =  txt_EsSo_PersonaEntre_DatosGe.Text;
+            estudioSocio.EntrevistadoPor1 = txt_EsSo_Aporbado_SaludRecre.Text.Trim();
+
+
+            int resultado = Clases.C_EstudioSocioMetodos.AgregarEstudioSo(estudioSocio);
+            if (resultado > 0)
+            {
+                MessageBox.Show("Cliente Guardado Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("No se pudo guardar el cliente", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+
+
+            
         }
 
         private void button5_Click(object sender, EventArgs e)

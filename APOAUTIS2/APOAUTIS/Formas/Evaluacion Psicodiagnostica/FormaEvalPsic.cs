@@ -26,5 +26,10 @@ namespace APOAUTIS
         {
             this.Close();
         }
+
+        private void Bttn_Ok_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

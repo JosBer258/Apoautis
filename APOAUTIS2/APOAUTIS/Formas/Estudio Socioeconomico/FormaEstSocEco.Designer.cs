@@ -38,7 +38,6 @@
             this.label69 = new System.Windows.Forms.Label();
             this.label68 = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
-            this.txt_EsSo_fecha_DatosGe = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txt_EsSo_TelTrabPadre_DatosGe = new System.Windows.Forms.TextBox();
@@ -243,6 +242,8 @@
             this.chekbox_EsSo_Ducha_InfoVivien = new System.Windows.Forms.CheckBox();
             this.chekbox_EsSo_EquipoSoni_InfoVivien = new System.Windows.Forms.CheckBox();
             this.chekbox_EsSo_Tele_InfoVivien = new System.Windows.Forms.CheckBox();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tabEstSocioEco.SuspendLayout();
             this.DatosGenerales.SuspendLayout();
             this.groupBox13.SuspendLayout();
@@ -316,12 +317,12 @@
             // 
             // groupBox13
             // 
+            this.groupBox13.Controls.Add(this.dateTimePicker1);
             this.groupBox13.Controls.Add(this.txt_EsSo_lugar_DatosGe);
             this.groupBox13.Controls.Add(this.txt_EsSo_PersonaEntre_DatosGe);
             this.groupBox13.Controls.Add(this.label69);
             this.groupBox13.Controls.Add(this.label68);
             this.groupBox13.Controls.Add(this.label67);
-            this.groupBox13.Controls.Add(this.txt_EsSo_fecha_DatosGe);
             this.groupBox13.Location = new System.Drawing.Point(15, 73);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Size = new System.Drawing.Size(238, 135);
@@ -331,7 +332,7 @@
             // 
             // txt_EsSo_lugar_DatosGe
             // 
-            this.txt_EsSo_lugar_DatosGe.Location = new System.Drawing.Point(126, 19);
+            this.txt_EsSo_lugar_DatosGe.Location = new System.Drawing.Point(126, 64);
             this.txt_EsSo_lugar_DatosGe.Name = "txt_EsSo_lugar_DatosGe";
             this.txt_EsSo_lugar_DatosGe.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_lugar_DatosGe.TabIndex = 34;
@@ -339,7 +340,7 @@
             // 
             // txt_EsSo_PersonaEntre_DatosGe
             // 
-            this.txt_EsSo_PersonaEntre_DatosGe.Location = new System.Drawing.Point(126, 71);
+            this.txt_EsSo_PersonaEntre_DatosGe.Location = new System.Drawing.Point(126, 97);
             this.txt_EsSo_PersonaEntre_DatosGe.Name = "txt_EsSo_PersonaEntre_DatosGe";
             this.txt_EsSo_PersonaEntre_DatosGe.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_PersonaEntre_DatosGe.TabIndex = 38;
@@ -347,7 +348,7 @@
             // label69
             // 
             this.label69.AutoSize = true;
-            this.label69.Location = new System.Drawing.Point(15, 22);
+            this.label69.Location = new System.Drawing.Point(16, 64);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(34, 13);
             this.label69.TabIndex = 33;
@@ -356,7 +357,7 @@
             // label68
             // 
             this.label68.AutoSize = true;
-            this.label68.Location = new System.Drawing.Point(15, 48);
+            this.label68.Location = new System.Drawing.Point(15, 16);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(37, 13);
             this.label68.TabIndex = 35;
@@ -365,19 +366,11 @@
             // label67
             // 
             this.label67.AutoSize = true;
-            this.label67.Location = new System.Drawing.Point(15, 74);
+            this.label67.Location = new System.Drawing.Point(14, 100);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(108, 13);
             this.label67.TabIndex = 37;
             this.label67.Text = "Persona Entrevistada";
-            // 
-            // txt_EsSo_fecha_DatosGe
-            // 
-            this.txt_EsSo_fecha_DatosGe.Location = new System.Drawing.Point(126, 45);
-            this.txt_EsSo_fecha_DatosGe.Name = "txt_EsSo_fecha_DatosGe";
-            this.txt_EsSo_fecha_DatosGe.Size = new System.Drawing.Size(100, 20);
-            this.txt_EsSo_fecha_DatosGe.TabIndex = 36;
-            this.txt_EsSo_fecha_DatosGe.TextChanged += new System.EventHandler(this.textBox65_TextChanged);
             // 
             // groupBox2
             // 
@@ -578,7 +571,7 @@
             // 
             // txt_EsSo_SexoAlum_DatosGe
             // 
-            this.txt_EsSo_SexoAlum_DatosGe.Location = new System.Drawing.Point(318, 19);
+            this.txt_EsSo_SexoAlum_DatosGe.Location = new System.Drawing.Point(318, 71);
             this.txt_EsSo_SexoAlum_DatosGe.Name = "txt_EsSo_SexoAlum_DatosGe";
             this.txt_EsSo_SexoAlum_DatosGe.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_SexoAlum_DatosGe.TabIndex = 11;
@@ -587,7 +580,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(227, 22);
+            this.label6.Location = new System.Drawing.Point(225, 74);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(31, 13);
             this.label6.TabIndex = 10;
@@ -595,7 +588,7 @@
             // 
             // txt_EsSo_IdentiEst_DatosGe
             // 
-            this.txt_EsSo_IdentiEst_DatosGe.Location = new System.Drawing.Point(319, 45);
+            this.txt_EsSo_IdentiEst_DatosGe.Location = new System.Drawing.Point(317, 97);
             this.txt_EsSo_IdentiEst_DatosGe.Name = "txt_EsSo_IdentiEst_DatosGe";
             this.txt_EsSo_IdentiEst_DatosGe.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_IdentiEst_DatosGe.TabIndex = 9;
@@ -604,7 +597,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(227, 48);
+            this.label5.Location = new System.Drawing.Point(225, 100);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(86, 13);
             this.label5.TabIndex = 8;
@@ -646,7 +639,7 @@
             // 
             this.txt_EsSo_LugarNaci_DatosGe.Location = new System.Drawing.Point(119, 45);
             this.txt_EsSo_LugarNaci_DatosGe.Name = "txt_EsSo_LugarNaci_DatosGe";
-            this.txt_EsSo_LugarNaci_DatosGe.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_LugarNaci_DatosGe.Size = new System.Drawing.Size(298, 20);
             this.txt_EsSo_LugarNaci_DatosGe.TabIndex = 3;
             // 
             // label2
@@ -662,7 +655,7 @@
             // 
             this.txt_EsSo_NombreEst_DatosGe.Location = new System.Drawing.Point(119, 19);
             this.txt_EsSo_NombreEst_DatosGe.Name = "txt_EsSo_NombreEst_DatosGe";
-            this.txt_EsSo_NombreEst_DatosGe.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_NombreEst_DatosGe.Size = new System.Drawing.Size(298, 20);
             this.txt_EsSo_NombreEst_DatosGe.TabIndex = 1;
             // 
             // label1
@@ -1925,11 +1918,12 @@
             // 
             // btm_EsSo_Finalizar_InfoVivien
             // 
-            this.btm_EsSo_Finalizar_InfoVivien.Location = new System.Drawing.Point(426, 337);
+            this.btm_EsSo_Finalizar_InfoVivien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btm_EsSo_Finalizar_InfoVivien.Location = new System.Drawing.Point(198, 384);
             this.btm_EsSo_Finalizar_InfoVivien.Name = "btm_EsSo_Finalizar_InfoVivien";
-            this.btm_EsSo_Finalizar_InfoVivien.Size = new System.Drawing.Size(91, 23);
+            this.btm_EsSo_Finalizar_InfoVivien.Size = new System.Drawing.Size(195, 41);
             this.btm_EsSo_Finalizar_InfoVivien.TabIndex = 34;
-            this.btm_EsSo_Finalizar_InfoVivien.Text = "Finalizar";
+            this.btm_EsSo_Finalizar_InfoVivien.Text = "Guardar Estudio  SocioEconomico";
             this.btm_EsSo_Finalizar_InfoVivien.UseVisualStyleBackColor = true;
             this.btm_EsSo_Finalizar_InfoVivien.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -2354,6 +2348,13 @@
             this.chekbox_EsSo_Tele_InfoVivien.Text = "Television";
             this.chekbox_EsSo_Tele_InfoVivien.UseVisualStyleBackColor = true;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(17, 32);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 39;
+            // 
             // FormaEstSocEco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2578,7 +2579,6 @@
         private System.Windows.Forms.RadioButton rbtm_EsSo_Madera_InfoVivien;
         private System.Windows.Forms.TextBox txt_EsSo_PersonaEntre_DatosGe;
         private System.Windows.Forms.Label label67;
-        private System.Windows.Forms.TextBox txt_EsSo_fecha_DatosGe;
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.TextBox txt_EsSo_lugar_DatosGe;
         private System.Windows.Forms.Label label69;
@@ -2617,5 +2617,7 @@
         private System.Windows.Forms.TextBox txt_EsSo_Aporbado_SaludRecre;
         private System.Windows.Forms.Label label71;
         private System.Windows.Forms.TextBox txt_EsSo_SexoAlum_DatosGe;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
