@@ -342,7 +342,7 @@ namespace APOAUTIS.Clases
 
 
 
-        public void NoVacio(Form form1)
+        public bool NoVacio(Form form1)
         {
             bool txtCompletado = true;
             string MensajeError = "Uno o más textbox estan vacíos";
@@ -356,10 +356,14 @@ namespace APOAUTIS.Clases
                         c.Focus();
                         MessageBox.Show(MensajeError, "Error");
                         break;
+                        return false;
                     }
                 }
             }
+            return true;
         }
+
+
 
     }
 }

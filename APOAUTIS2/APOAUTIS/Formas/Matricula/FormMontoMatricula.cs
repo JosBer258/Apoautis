@@ -163,7 +163,7 @@ namespace APOAUTIS.Formas.Matricula
                     (int)Convert.ToDouble(row.Cells["Codigo de Alumno"].Value.ToString()),
                     row.Cells["Nombre de Alumno"].Value.ToString());
             }
-            catch (Exception) { }
+            catch (Exception) {}
         }
 
         private void Txt_Filtro_Matricula_KeyPress(object sender, KeyPressEventArgs e)
