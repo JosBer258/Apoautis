@@ -40,7 +40,7 @@
             this.Pest1_Grupo_DatosEncargado = new System.Windows.Forms.GroupBox();
             this.txtCorrResp = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.cmdEstResp = new System.Windows.Forms.ComboBox();
+            this.cmbEstResp = new System.Windows.Forms.ComboBox();
             this.cmbTrabResp = new System.Windows.Forms.ComboBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
@@ -124,6 +124,7 @@
             this.DGV_ShowResponsables.AllowUserToDeleteRows = false;
             this.DGV_ShowResponsables.AllowUserToResizeColumns = false;
             this.DGV_ShowResponsables.AllowUserToResizeRows = false;
+            this.DGV_ShowResponsables.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.DGV_ShowResponsables.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DGV_ShowResponsables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_ShowResponsables.Location = new System.Drawing.Point(10, 99);
@@ -174,6 +175,8 @@
             this.DGV_ShowAlumnosResp.AllowUserToDeleteRows = false;
             this.DGV_ShowAlumnosResp.AllowUserToResizeColumns = false;
             this.DGV_ShowAlumnosResp.AllowUserToResizeRows = false;
+            this.DGV_ShowAlumnosResp.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DGV_ShowAlumnosResp.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DGV_ShowAlumnosResp.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DGV_ShowAlumnosResp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_ShowAlumnosResp.Location = new System.Drawing.Point(6, 19);
@@ -188,7 +191,7 @@
             // 
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.txtCorrResp);
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.label12);
-            this.Pest1_Grupo_DatosEncargado.Controls.Add(this.cmdEstResp);
+            this.Pest1_Grupo_DatosEncargado.Controls.Add(this.cmbEstResp);
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.cmbTrabResp);
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.btnLimpiar);
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.btnAceptar);
@@ -240,15 +243,18 @@
             this.label12.TabIndex = 29;
             this.label12.Text = "Correo";
             // 
-            // cmdEstResp
+            // cmbEstResp
             // 
-            this.cmdEstResp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmdEstResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdEstResp.FormattingEnabled = true;
-            this.cmdEstResp.Location = new System.Drawing.Point(539, 54);
-            this.cmdEstResp.Name = "cmdEstResp";
-            this.cmdEstResp.Size = new System.Drawing.Size(101, 24);
-            this.cmdEstResp.TabIndex = 28;
+            this.cmbEstResp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEstResp.FormattingEnabled = true;
+            this.cmbEstResp.Items.AddRange(new object[] {
+            "Responsable-Activo",
+            "Responsable-Inactivo"});
+            this.cmbEstResp.Location = new System.Drawing.Point(539, 54);
+            this.cmbEstResp.Name = "cmbEstResp";
+            this.cmbEstResp.Size = new System.Drawing.Size(193, 24);
+            this.cmbEstResp.TabIndex = 28;
             // 
             // cmbTrabResp
             // 
@@ -302,7 +308,7 @@
             this.txtTelTrabResp.Location = new System.Drawing.Point(539, 167);
             this.txtTelTrabResp.MaxLength = 11;
             this.txtTelTrabResp.Name = "txtTelTrabResp";
-            this.txtTelTrabResp.Size = new System.Drawing.Size(158, 22);
+            this.txtTelTrabResp.Size = new System.Drawing.Size(193, 22);
             this.txtTelTrabResp.TabIndex = 21;
             this.txtTelTrabResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelTrabResp_KeyPress);
             // 
@@ -322,7 +328,7 @@
             this.txtTelCelResp.Location = new System.Drawing.Point(539, 139);
             this.txtTelCelResp.MaxLength = 11;
             this.txtTelCelResp.Name = "txtTelCelResp";
-            this.txtTelCelResp.Size = new System.Drawing.Size(158, 22);
+            this.txtTelCelResp.Size = new System.Drawing.Size(193, 22);
             this.txtTelCelResp.TabIndex = 19;
             this.txtTelCelResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelCelResp_KeyPress);
             // 
@@ -382,7 +388,7 @@
             this.txtTelCasResp.Location = new System.Drawing.Point(539, 111);
             this.txtTelCasResp.MaxLength = 11;
             this.txtTelCasResp.Name = "txtTelCasResp";
-            this.txtTelCasResp.Size = new System.Drawing.Size(158, 22);
+            this.txtTelCasResp.Size = new System.Drawing.Size(193, 22);
             this.txtTelCasResp.TabIndex = 11;
             this.txtTelCasResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelCasResp_KeyPress);
             // 
@@ -402,7 +408,7 @@
             this.txtLugResp.Location = new System.Drawing.Point(539, 83);
             this.txtLugResp.MaxLength = 45;
             this.txtLugResp.Name = "txtLugResp";
-            this.txtLugResp.Size = new System.Drawing.Size(158, 22);
+            this.txtLugResp.Size = new System.Drawing.Size(193, 22);
             this.txtLugResp.TabIndex = 9;
             this.txtLugResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLugResp_KeyPress);
             // 
@@ -524,7 +530,7 @@
         private System.Windows.Forms.GroupBox Pest1_Grupo_ShowAlumno;
         private System.Windows.Forms.DataGridView DGV_ShowAlumnosResp;
         private System.Windows.Forms.GroupBox Pest1_Grupo_DatosEncargado;
-        private System.Windows.Forms.ComboBox cmdEstResp;
+        private System.Windows.Forms.ComboBox cmbEstResp;
         private System.Windows.Forms.ComboBox cmbTrabResp;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnAceptar;
