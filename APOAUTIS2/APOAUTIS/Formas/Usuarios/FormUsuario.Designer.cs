@@ -217,6 +217,7 @@
             // 
             this.Txt_NameUser.Location = new System.Drawing.Point(130, 55);
             this.Txt_NameUser.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.Txt_NameUser.MaxLength = 45;
             this.Txt_NameUser.Name = "Txt_NameUser";
             this.Txt_NameUser.Size = new System.Drawing.Size(143, 20);
             this.Txt_NameUser.TabIndex = 111;
@@ -237,6 +238,7 @@
             // 
             this.Txt_PasdUser.Location = new System.Drawing.Point(130, 80);
             this.Txt_PasdUser.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.Txt_PasdUser.MaxLength = 20;
             this.Txt_PasdUser.Name = "Txt_PasdUser";
             this.Txt_PasdUser.Size = new System.Drawing.Size(143, 20);
             this.Txt_PasdUser.TabIndex = 113;

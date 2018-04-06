@@ -17,6 +17,7 @@ namespace APOAUTIS.Formas.Alumnos
     {
         C_Alumnos alumno = new C_Alumnos();
         C_Responsables resp = new C_Responsables();
+        C_Validaciones val = new C_Validaciones();
 
         private bool Vacios(GroupBox groupBox1)
         {
@@ -46,10 +47,10 @@ namespace APOAUTIS.Formas.Alumnos
             }
 
         }
-        private void validacionMenu()
+        private void validacionMenu(GroupBox groupBox1)
         {
             var blankContextMenu = new ContextMenuStrip();
-            var boxe1 = Pest2_Pest3_Grupo_Encargados.Controls.OfType<TextBox>();
+            var boxe1 = groupBox1.Controls.OfType<TextBox>();
             foreach (var box in boxe1)
             {
                 box.ContextMenuStrip = blankContextMenu;
@@ -68,6 +69,7 @@ namespace APOAUTIS.Formas.Alumnos
             Pest1_Radio_Alumno.Checked = true;
             alumno.GenerarEstado(Pest2_Pest1_Cmb_Estado);
             alumno.VerificarYear();
+            validacionMenu(Pest2_Pest3_Grupo_Encargados);
             
             
         }
@@ -189,22 +191,98 @@ namespace APOAUTIS.Formas.Alumnos
 
         private void Pest2_Pest3_Bttn_Aceptar_Click(object sender, EventArgs e)
         {
-            string srt = Convert.ToString(Pest2_Pest3_Cmb_Trabaja.SelectedItem)+", "+Pest2_Pest3_Txt_LugarTrabajo.Text;
-            resp.CodResp = Convert.ToInt32(Pest2_Pest3_Txt_Codigo.Text);
-            resp.NomResp= Pest2_Pest3_Txt_Completo.Text;
-            resp.IdResp = Convert.ToInt32(Pest2_Pest3_Txt_ID.Text);
-            resp.DomResp = Pest2_Pest3_Txt_Domicilio.Text;
-            resp.ProfResp = Pest2_Pest3_Txt_ProfecionUOficio.Text;
-            resp.LugTrab = srt;
-            resp.TelCasResp = Pest2_Pest3_Txt_TelefonoCasa.Text;
-            resp.TelCelResp = Pest2_Pest3_Txt_TelefonoCelular.Text;
-            resp.TelTrabResp = Pest2_Pest3_Txt_TelefonoTrabajo.Text;
-            resp.CorrResp = Pest2_Pest3_Txt_EdadAnos.Text;
-            resp.insertResponsable();
-            resp.insertResponsableAlumno(alumno.CodAlumno11,Convert.ToInt32(Pest2_Pest3_Txt_Codigo.Text));
+           
 
-          resp.Fill_DGV_Resp_Por_Alumno(Pest2_Pest3_DGV_MuestraEncargados, alumno.CodAlumno11);
-            Pest2_Pest3_Txt_Codigo.Text = Convert.ToString(resp.ObtenerUltimoCodigoResponsable());
+            if (alumno.CodAlumno11 > 0)
+            {
+                if (Vacios(Pest2_Pest3_Grupo_Encargados) == true)
+                {
+
+
+                    string srt = Convert.ToString(Pest2_Pest3_Cmb_Trabaja.SelectedItem) + ", " + Pest2_Pest3_Txt_LugarTrabajo.Text;
+                    resp.CodResp = Convert.ToInt32(Pest2_Pest3_Txt_Codigo.Text);
+                    resp.NomResp = Pest2_Pest3_Txt_Completo.Text;
+                    resp.IdResp = Convert.ToInt32(Pest2_Pest3_Txt_ID.Text);
+                    resp.DomResp = Pest2_Pest3_Txt_Domicilio.Text;
+                    resp.ProfResp = Pest2_Pest3_Txt_ProfecionUOficio.Text;
+                    resp.LugTrab = srt;
+                    resp.TelCasResp = Pest2_Pest3_Txt_TelefonoCasa.Text;
+                    resp.TelCelResp = Pest2_Pest3_Txt_TelefonoCelular.Text;
+                    resp.TelTrabResp = Pest2_Pest3_Txt_TelefonoTrabajo.Text;
+                    resp.CorrResp = Pest2_Pest3_Txt_EdadAnos.Text;
+
+
+                    resp.insertResponsable();
+                    resp.insertResponsableAlumno(alumno.CodAlumno11, Convert.ToInt32(Pest2_Pest3_Txt_Codigo.Text));
+
+                    resp.Fill_DGV_Resp_Por_Alumno(Pest2_Pest3_DGV_MuestraEncargados, alumno.CodAlumno11);
+                    Pest2_Pest3_Txt_Codigo.Text = Convert.ToString(resp.ObtenerUltimoCodigoResponsable());
+                }
+            }
+            else
+            {
+                MessageBox.Show("No existe un alumno seleccionado, por favor vuelva a la " +
+                    "pantalla de busqueda de alumno y seleccione uno", "Warning");
+            }
+           
+           
+           
+
+        }
+
+        private void Pest1_Txt_BusquedaPorNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.ValidarNombres_SoloLetras(sender, e);
+        }
+
+        private void Pest1_Txt_ID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.ValidarID(sender, e);
+        }
+
+        private void Pest2_Pest3_Txt_Completo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.ValidarNombres_SoloLetras(sender, e);
+        }
+
+        private void Pest2_Pest3_Txt_ID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.ValidarID(sender, e);
+        }
+
+        private void Pest2_Pest3_Txt_Domicilio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.ValidarNombres_SoloLetras(sender, e);
+        }
+
+        private void Pest2_Pest3_Txt_ProfecionUOficio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.ValidarNombres_SoloLetras(sender, e);
+        }
+
+        private void Pest2_Pest3_Txt_EdadAnos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.ValidarCorreoIngreso(sender, e, Pest2_Pest3_Txt_EdadAnos);
+        }
+
+        private void Pest2_Pest3_Txt_LugarTrabajo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.ValidarNombres_SoloLetras(sender, e);
+        }
+
+        private void Pest2_Pest3_Txt_TelefonoCasa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.ValidarID(sender, e);
+        }
+
+        private void Pest2_Pest3_Txt_TelefonoCelular_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.ValidarID(sender, e);
+        }
+
+        private void Pest2_Pest3_Txt_TelefonoTrabajo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.ValidarID(sender, e);
         }
     }
 }
