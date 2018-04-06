@@ -11,7 +11,6 @@ namespace APOAUTIS.Clases
 {
     class C_Alumnos: Conexion
     {
-            {
            private int CodAlumno1;
         private string NomAlumno1;
             private string LugarNaciAlum1;
