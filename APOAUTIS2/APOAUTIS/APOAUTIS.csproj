@@ -56,10 +56,12 @@
   <ItemGroup>
     <Compile Include="Clases\C_Alumnos.cs" />
     <Compile Include="Clases\C_EntrePadres.cs" />
+    <Compile Include="Clases\C_IngGast.cs" />
     <Compile Include="Clases\C_EvalPsico.cs" />
     <Compile Include="Clases\C_Login.cs" />
     <Compile Include="Clases\C_MontoMens.cs" />
     <Compile Include="Clases\C_MuestraHistorialMatricu.cs" />
+    <Compile Include="Clases\C_SalarioMensaulidad.cs" />
     <Compile Include="Clases\C_ShowAlum.cs" />
     <Compile Include="Clases\C_Responsables.cs" />
     <Compile Include="Clases\C_Usuarios.cs" />
@@ -84,6 +86,12 @@
     <Compile Include="Formas\Estudio Socioeconomico\FromBusquedaAlumno.Designer.cs">
       <DependentUpon>FromBusquedaAlumno.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formas\Manuales\FormManual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Manuales\FormManual.Designer.cs">
+      <DependentUpon>FormManual.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formas\Matricula\FormHistorialMatriculas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +109,12 @@
     </Compile>
     <Compile Include="Formas\Matricula\FormMontoMatricula.Designer.cs">
       <DependentUpon>FormMontoMatricula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Matricula\FormRangoMensualidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Matricula\FormRangoMensualidad.Designer.cs">
+      <DependentUpon>FormRangoMensualidad.cs</DependentUpon>
     </Compile>
     <Compile Include="Formas\Responsables\FormMantenimientoResponsable.cs">
       <SubType>Form</SubType>
@@ -196,6 +210,9 @@
     <EmbeddedResource Include="Formas\Estudio Socioeconomico\FromBusquedaAlumno.resx">
       <DependentUpon>FromBusquedaAlumno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Manuales\FormManual.resx">
+      <DependentUpon>FormManual.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formas\Matricula\FormHistorialMatriculas.resx">
       <DependentUpon>FormHistorialMatriculas.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Matricula\FormMontoMatricula.resx">
       <DependentUpon>FormMontoMatricula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Matricula\FormRangoMensualidad.resx">
+      <DependentUpon>FormRangoMensualidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Responsables\FormMantenimientoResponsable.resx">
       <DependentUpon>FormMantenimientoResponsable.cs</DependentUpon>
@@ -281,6 +301,25 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Formas\Pruebas\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
