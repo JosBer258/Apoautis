@@ -26,15 +26,11 @@ namespace APOAUTIS.Formas.Matricula
 
         private void Bttn_BusquedaDeAlumno_Click(object sender, EventArgs e)
         {
-          
-            AddOwnedForm(F_ShowAlum);
-            F_ShowAlum.Accion = "Monto";
-            F_ShowAlum.ShowDialog();
-        }
+          }
 
         private void FormMontoMatricula_Load(object sender, EventArgs e)
         {
-            Radio_Agregar.Checked = true;
+            Gruop_Busqueda.Enabled = true;
             Cl_Mon.Fun_MuestraDatosGen(DGV_Show);
             var blankContextMenu = new ContextMenuStrip();
             Txt_Filtro_Matricula.ContextMenuStrip = blankContextMenu;
@@ -56,27 +52,12 @@ namespace APOAUTIS.Formas.Matricula
 
         private void Radio_Agregar_CheckedChanged(object sender, EventArgs e)
         {
-            if (Radio_Agregar.Checked == true)
-            {
-                Gruop_Busqueda.Enabled = false;
-                Bttn_BusquedaDeAlumno.Enabled = true;
-                Fun_Limpiar();
-            }
-            else
-            {
-                Gruop_Busqueda.Enabled = true;
-                Bttn_BusquedaDeAlumno.Enabled = false;
-            }
+           
         }
 
         private void Radio_Actualizar_CheckedChanged(object sender, EventArgs e)
         {
-            if (Radio_Actualizar.Checked == true)
-            {
-                Gruop_Busqueda.Enabled = true;
-                Bttn_BusquedaDeAlumno.Enabled = false;
-                Fun_Limpiar();
-            }
+           
         }
 
         private void Bttn_Salir_Click(object sender, EventArgs e)

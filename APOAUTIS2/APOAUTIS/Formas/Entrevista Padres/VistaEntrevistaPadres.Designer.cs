@@ -30,6 +30,8 @@
         {
             this.TapEntrevistaVista = new System.Windows.Forms.TabControl();
             this.Pest_DatosGenerales = new System.Windows.Forms.TabPage();
+            this.PestDatosGen_Txt_EdadCron = new System.Windows.Forms.TextBox();
+            this.PestDatosGen_Bttn_BusquedaAlumno = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.PestDatosGen_Txt_Fecha = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -58,7 +60,6 @@
             this.label94 = new System.Windows.Forms.Label();
             this.PestAnam_Txt_DatosPrenatales = new System.Windows.Forms.TextBox();
             this.label95 = new System.Windows.Forms.Label();
-            this.PestAnam_Txt_PesoAlNacer = new System.Windows.Forms.TextBox();
             this.label96 = new System.Windows.Forms.Label();
             this.PestAnam_Txt_DuracionGestacion = new System.Windows.Forms.TextBox();
             this.label97 = new System.Windows.Forms.Label();
@@ -156,6 +157,8 @@
             this.textBox132 = new System.Windows.Forms.TextBox();
             this.textBox133 = new System.Windows.Forms.TextBox();
             this.Pest_VidaDiaria2 = new System.Windows.Forms.TabPage();
+            this.textBox114 = new System.Windows.Forms.TextBox();
+            this.textBox113 = new System.Windows.Forms.TextBox();
             this.button19 = new System.Windows.Forms.Button();
             this.textBox134 = new System.Windows.Forms.TextBox();
             this.label141 = new System.Windows.Forms.Label();
@@ -209,8 +212,6 @@
             this.textBox159 = new System.Windows.Forms.TextBox();
             this.label168 = new System.Windows.Forms.Label();
             this.Pest_RasgosIdentificables2 = new System.Windows.Forms.TabPage();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
@@ -228,10 +229,12 @@
             this.checkBox26 = new System.Windows.Forms.CheckBox();
             this.checkBox27 = new System.Windows.Forms.CheckBox();
             this.checkBox28 = new System.Windows.Forms.CheckBox();
-            this.PestDatosGen_Bttn_BusquedaAlumno = new System.Windows.Forms.Button();
-            this.textBox113 = new System.Windows.Forms.TextBox();
-            this.textBox114 = new System.Windows.Forms.TextBox();
-            this.PestDatosGen_Txt_EdadCron = new System.Windows.Forms.TextBox();
+            this.button24 = new System.Windows.Forms.Button();
+            this.button26 = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.PestA_Txt_PesAlNacer = new System.Windows.Forms.TextBox();
             this.TapEntrevistaVista.SuspendLayout();
             this.Pest_DatosGenerales.SuspendLayout();
             this.Pest_Amnesis.SuspendLayout();
@@ -249,6 +252,7 @@
             this.Pest_RasgosIdentificables.SuspendLayout();
             this.Pest_RasgosIdentificables2.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // TapEntrevistaVista
@@ -303,6 +307,26 @@
             this.Pest_DatosGenerales.Text = "Datos Generales";
             this.Pest_DatosGenerales.UseVisualStyleBackColor = true;
             // 
+            // PestDatosGen_Txt_EdadCron
+            // 
+            this.PestDatosGen_Txt_EdadCron.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PestDatosGen_Txt_EdadCron.Location = new System.Drawing.Point(247, 167);
+            this.PestDatosGen_Txt_EdadCron.Name = "PestDatosGen_Txt_EdadCron";
+            this.PestDatosGen_Txt_EdadCron.Size = new System.Drawing.Size(248, 22);
+            this.PestDatosGen_Txt_EdadCron.TabIndex = 48;
+            // 
+            // PestDatosGen_Bttn_BusquedaAlumno
+            // 
+            this.PestDatosGen_Bttn_BusquedaAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PestDatosGen_Bttn_BusquedaAlumno.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.PestDatosGen_Bttn_BusquedaAlumno.Location = new System.Drawing.Point(54, 18);
+            this.PestDatosGen_Bttn_BusquedaAlumno.Name = "PestDatosGen_Bttn_BusquedaAlumno";
+            this.PestDatosGen_Bttn_BusquedaAlumno.Size = new System.Drawing.Size(441, 68);
+            this.PestDatosGen_Bttn_BusquedaAlumno.TabIndex = 47;
+            this.PestDatosGen_Bttn_BusquedaAlumno.Text = "Busqueda por Alumno";
+            this.PestDatosGen_Bttn_BusquedaAlumno.UseVisualStyleBackColor = true;
+            this.PestDatosGen_Bttn_BusquedaAlumno.Click += new System.EventHandler(this.PestDatosGen_Bttn_BusquedaAlumno_Click);
+            // 
             // button12
             // 
             this.button12.Location = new System.Drawing.Point(464, 503);
@@ -314,178 +338,192 @@
             // 
             // PestDatosGen_Txt_Fecha
             // 
-            this.PestDatosGen_Txt_Fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PestDatosGen_Txt_Fecha.Location = new System.Drawing.Point(247, 435);
+            this.PestDatosGen_Txt_Fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PestDatosGen_Txt_Fecha.Location = new System.Drawing.Point(247, 413);
             this.PestDatosGen_Txt_Fecha.Name = "PestDatosGen_Txt_Fecha";
-            this.PestDatosGen_Txt_Fecha.Size = new System.Drawing.Size(216, 26);
+            this.PestDatosGen_Txt_Fecha.Size = new System.Drawing.Size(248, 22);
             this.PestDatosGen_Txt_Fecha.TabIndex = 24;
+            this.PestDatosGen_Txt_Fecha.TextChanged += new System.EventHandler(this.PestDatosGen_Txt_Fecha_TextChanged);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(24, 435);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(55, 413);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(59, 20);
+            this.label10.Size = new System.Drawing.Size(51, 16);
             this.label10.TabIndex = 23;
             this.label10.Text = "Fecha";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // PestDatosGen_Txt_Lugar
             // 
-            this.PestDatosGen_Txt_Lugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PestDatosGen_Txt_Lugar.Location = new System.Drawing.Point(247, 398);
+            this.PestDatosGen_Txt_Lugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PestDatosGen_Txt_Lugar.Location = new System.Drawing.Point(247, 385);
             this.PestDatosGen_Txt_Lugar.Name = "PestDatosGen_Txt_Lugar";
-            this.PestDatosGen_Txt_Lugar.Size = new System.Drawing.Size(216, 26);
+            this.PestDatosGen_Txt_Lugar.Size = new System.Drawing.Size(248, 22);
             this.PestDatosGen_Txt_Lugar.TabIndex = 22;
+            this.PestDatosGen_Txt_Lugar.TextChanged += new System.EventHandler(this.PestDatosGen_Txt_Lugar_TextChanged);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(24, 398);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(55, 385);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(55, 20);
+            this.label11.Size = new System.Drawing.Size(47, 16);
             this.label11.TabIndex = 21;
             this.label11.Text = "Lugar";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // PestDatosGen_Txt_RefiridoPor
             // 
-            this.PestDatosGen_Txt_RefiridoPor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PestDatosGen_Txt_RefiridoPor.Location = new System.Drawing.Point(247, 362);
+            this.PestDatosGen_Txt_RefiridoPor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PestDatosGen_Txt_RefiridoPor.Location = new System.Drawing.Point(247, 357);
             this.PestDatosGen_Txt_RefiridoPor.Name = "PestDatosGen_Txt_RefiridoPor";
-            this.PestDatosGen_Txt_RefiridoPor.Size = new System.Drawing.Size(216, 26);
+            this.PestDatosGen_Txt_RefiridoPor.Size = new System.Drawing.Size(248, 22);
             this.PestDatosGen_Txt_RefiridoPor.TabIndex = 15;
+            this.PestDatosGen_Txt_RefiridoPor.TextChanged += new System.EventHandler(this.PestDatosGen_Txt_RefiridoPor_TextChanged);
             // 
             // label77
             // 
             this.label77.AutoSize = true;
-            this.label77.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label77.Location = new System.Drawing.Point(24, 362);
+            this.label77.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label77.Location = new System.Drawing.Point(51, 357);
             this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(109, 20);
+            this.label77.Size = new System.Drawing.Size(95, 16);
             this.label77.TabIndex = 14;
             this.label77.Text = "Referido por";
+            this.label77.Click += new System.EventHandler(this.label77_Click);
             // 
             // PestDatosGen_Txt_Telefono
             // 
-            this.PestDatosGen_Txt_Telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PestDatosGen_Txt_Telefono.Location = new System.Drawing.Point(247, 326);
+            this.PestDatosGen_Txt_Telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PestDatosGen_Txt_Telefono.Location = new System.Drawing.Point(247, 329);
             this.PestDatosGen_Txt_Telefono.Name = "PestDatosGen_Txt_Telefono";
-            this.PestDatosGen_Txt_Telefono.Size = new System.Drawing.Size(216, 26);
+            this.PestDatosGen_Txt_Telefono.Size = new System.Drawing.Size(248, 22);
             this.PestDatosGen_Txt_Telefono.TabIndex = 13;
+            this.PestDatosGen_Txt_Telefono.TextChanged += new System.EventHandler(this.PestDatosGen_Txt_Telefono_TextChanged);
             // 
             // label79
             // 
             this.label79.AutoSize = true;
-            this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label79.Location = new System.Drawing.Point(24, 329);
+            this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label79.Location = new System.Drawing.Point(51, 329);
             this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(79, 20);
+            this.label79.Size = new System.Drawing.Size(70, 16);
             this.label79.TabIndex = 12;
             this.label79.Text = "Telefono";
+            this.label79.Click += new System.EventHandler(this.label79_Click);
             // 
             // PestDatosGen_Txt_Direccion
             // 
-            this.PestDatosGen_Txt_Direccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PestDatosGen_Txt_Direccion.Location = new System.Drawing.Point(247, 290);
+            this.PestDatosGen_Txt_Direccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PestDatosGen_Txt_Direccion.Location = new System.Drawing.Point(247, 301);
             this.PestDatosGen_Txt_Direccion.Name = "PestDatosGen_Txt_Direccion";
-            this.PestDatosGen_Txt_Direccion.Size = new System.Drawing.Size(216, 26);
+            this.PestDatosGen_Txt_Direccion.Size = new System.Drawing.Size(248, 22);
             this.PestDatosGen_Txt_Direccion.TabIndex = 11;
+            this.PestDatosGen_Txt_Direccion.TextChanged += new System.EventHandler(this.PestDatosGen_Txt_Direccion_TextChanged);
             // 
             // label81
             // 
             this.label81.AutoSize = true;
-            this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label81.Location = new System.Drawing.Point(24, 293);
+            this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label81.Location = new System.Drawing.Point(52, 301);
             this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(84, 20);
+            this.label81.Size = new System.Drawing.Size(74, 16);
             this.label81.TabIndex = 10;
             this.label81.Text = "Direccion";
+            this.label81.Click += new System.EventHandler(this.label81_Click);
             // 
             // PestDatosGen_Txt_Escolaridad
             // 
-            this.PestDatosGen_Txt_Escolaridad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PestDatosGen_Txt_Escolaridad.Location = new System.Drawing.Point(247, 254);
+            this.PestDatosGen_Txt_Escolaridad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PestDatosGen_Txt_Escolaridad.Location = new System.Drawing.Point(247, 272);
             this.PestDatosGen_Txt_Escolaridad.Name = "PestDatosGen_Txt_Escolaridad";
-            this.PestDatosGen_Txt_Escolaridad.Size = new System.Drawing.Size(216, 26);
+            this.PestDatosGen_Txt_Escolaridad.Size = new System.Drawing.Size(248, 22);
             this.PestDatosGen_Txt_Escolaridad.TabIndex = 9;
+            this.PestDatosGen_Txt_Escolaridad.TextChanged += new System.EventHandler(this.PestDatosGen_Txt_Escolaridad_TextChanged);
             // 
             // label83
             // 
             this.label83.AutoSize = true;
-            this.label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label83.Location = new System.Drawing.Point(24, 257);
+            this.label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label83.Location = new System.Drawing.Point(55, 272);
             this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(103, 20);
+            this.label83.Size = new System.Drawing.Size(92, 16);
             this.label83.TabIndex = 8;
             this.label83.Text = "Escolaridad";
+            this.label83.Click += new System.EventHandler(this.label83_Click);
             // 
             // PestDatosGen_Txt_Responsables
             // 
-            this.PestDatosGen_Txt_Responsables.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PestDatosGen_Txt_Responsables.Location = new System.Drawing.Point(247, 219);
+            this.PestDatosGen_Txt_Responsables.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PestDatosGen_Txt_Responsables.Location = new System.Drawing.Point(247, 195);
+            this.PestDatosGen_Txt_Responsables.Multiline = true;
             this.PestDatosGen_Txt_Responsables.Name = "PestDatosGen_Txt_Responsables";
-            this.PestDatosGen_Txt_Responsables.Size = new System.Drawing.Size(216, 26);
+            this.PestDatosGen_Txt_Responsables.Size = new System.Drawing.Size(248, 70);
             this.PestDatosGen_Txt_Responsables.TabIndex = 7;
             // 
             // label89
             // 
             this.label89.AutoSize = true;
-            this.label89.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label89.Location = new System.Drawing.Point(24, 222);
+            this.label89.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label89.Location = new System.Drawing.Point(52, 195);
             this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(123, 20);
+            this.label89.Size = new System.Drawing.Size(109, 16);
             this.label89.TabIndex = 6;
             this.label89.Text = "Responsables";
             // 
             // label90
             // 
             this.label90.AutoSize = true;
-            this.label90.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label90.Location = new System.Drawing.Point(24, 184);
+            this.label90.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label90.Location = new System.Drawing.Point(51, 167);
             this.label90.Name = "label90";
-            this.label90.Size = new System.Drawing.Size(148, 20);
+            this.label90.Size = new System.Drawing.Size(131, 16);
             this.label90.TabIndex = 4;
             this.label90.Text = "Edad cronologica";
             // 
             // PestDatosGen_Txt_FechaNacim
             // 
-            this.PestDatosGen_Txt_FechaNacim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PestDatosGen_Txt_FechaNacim.Location = new System.Drawing.Point(247, 148);
+            this.PestDatosGen_Txt_FechaNacim.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PestDatosGen_Txt_FechaNacim.Location = new System.Drawing.Point(247, 139);
             this.PestDatosGen_Txt_FechaNacim.Name = "PestDatosGen_Txt_FechaNacim";
-            this.PestDatosGen_Txt_FechaNacim.Size = new System.Drawing.Size(216, 26);
+            this.PestDatosGen_Txt_FechaNacim.Size = new System.Drawing.Size(248, 22);
             this.PestDatosGen_Txt_FechaNacim.TabIndex = 3;
             // 
             // label91
             // 
             this.label91.AutoSize = true;
-            this.label91.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label91.Location = new System.Drawing.Point(24, 151);
+            this.label91.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label91.Location = new System.Drawing.Point(51, 139);
             this.label91.Name = "label91";
-            this.label91.Size = new System.Drawing.Size(176, 20);
+            this.label91.Size = new System.Drawing.Size(152, 16);
             this.label91.TabIndex = 2;
             this.label91.Text = "Fecha de nacimiento";
             // 
             // PestDatosGen_Txt_NombreCompleto
             // 
-            this.PestDatosGen_Txt_NombreCompleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PestDatosGen_Txt_NombreCompleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PestDatosGen_Txt_NombreCompleto.Location = new System.Drawing.Point(247, 111);
             this.PestDatosGen_Txt_NombreCompleto.Name = "PestDatosGen_Txt_NombreCompleto";
-            this.PestDatosGen_Txt_NombreCompleto.Size = new System.Drawing.Size(216, 26);
+            this.PestDatosGen_Txt_NombreCompleto.Size = new System.Drawing.Size(248, 22);
             this.PestDatosGen_Txt_NombreCompleto.TabIndex = 1;
             // 
             // label92
             // 
             this.label92.AutoSize = true;
-            this.label92.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label92.Location = new System.Drawing.Point(24, 114);
+            this.label92.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label92.Location = new System.Drawing.Point(51, 114);
             this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(217, 20);
+            this.label92.Size = new System.Drawing.Size(190, 16);
             this.label92.TabIndex = 0;
             this.label92.Text = "Nombre completo del niño";
             // 
             // Pest_Amnesis
             // 
+            this.Pest_Amnesis.Controls.Add(this.PestA_Txt_PesAlNacer);
             this.Pest_Amnesis.Controls.Add(this.PestAnam_Txt_DatosPostnatales);
             this.Pest_Amnesis.Controls.Add(this.PestAnam_Txt_DatosPerinatales);
             this.Pest_Amnesis.Controls.Add(this.button13);
@@ -493,7 +531,6 @@
             this.Pest_Amnesis.Controls.Add(this.label94);
             this.Pest_Amnesis.Controls.Add(this.PestAnam_Txt_DatosPrenatales);
             this.Pest_Amnesis.Controls.Add(this.label95);
-            this.Pest_Amnesis.Controls.Add(this.PestAnam_Txt_PesoAlNacer);
             this.Pest_Amnesis.Controls.Add(this.label96);
             this.Pest_Amnesis.Controls.Add(this.PestAnam_Txt_DuracionGestacion);
             this.Pest_Amnesis.Controls.Add(this.label97);
@@ -572,14 +609,6 @@
             this.label95.Size = new System.Drawing.Size(145, 40);
             this.label95.TabIndex = 31;
             this.label95.Text = "Datos relevantes\r\n perinatales";
-            // 
-            // PestAnam_Txt_PesoAlNacer
-            // 
-            this.PestAnam_Txt_PesoAlNacer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PestAnam_Txt_PesoAlNacer.Location = new System.Drawing.Point(204, 78);
-            this.PestAnam_Txt_PesoAlNacer.Name = "PestAnam_Txt_PesoAlNacer";
-            this.PestAnam_Txt_PesoAlNacer.Size = new System.Drawing.Size(177, 26);
-            this.PestAnam_Txt_PesoAlNacer.TabIndex = 30;
             // 
             // label96
             // 
@@ -1246,7 +1275,7 @@
             this.Pest_VidaDiaria.Controls.Add(this.textBox133);
             this.Pest_VidaDiaria.Location = new System.Drawing.Point(4, 22);
             this.Pest_VidaDiaria.Name = "Pest_VidaDiaria";
-            this.Pest_VidaDiaria.Size = new System.Drawing.Size(589, 587);
+            this.Pest_VidaDiaria.Size = new System.Drawing.Size(589, 504);
             this.Pest_VidaDiaria.TabIndex = 6;
             this.Pest_VidaDiaria.Text = "Vida Diaria";
             this.Pest_VidaDiaria.UseVisualStyleBackColor = true;
@@ -1539,10 +1568,26 @@
             this.Pest_VidaDiaria2.Controls.Add(this.label150);
             this.Pest_VidaDiaria2.Location = new System.Drawing.Point(4, 22);
             this.Pest_VidaDiaria2.Name = "Pest_VidaDiaria2";
-            this.Pest_VidaDiaria2.Size = new System.Drawing.Size(589, 587);
+            this.Pest_VidaDiaria2.Size = new System.Drawing.Size(589, 504);
             this.Pest_VidaDiaria2.TabIndex = 11;
             this.Pest_VidaDiaria2.Text = " Vida Diaria II";
             this.Pest_VidaDiaria2.UseVisualStyleBackColor = true;
+            // 
+            // textBox114
+            // 
+            this.textBox114.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox114.Location = new System.Drawing.Point(171, 353);
+            this.textBox114.Name = "textBox114";
+            this.textBox114.Size = new System.Drawing.Size(76, 22);
+            this.textBox114.TabIndex = 155;
+            // 
+            // textBox113
+            // 
+            this.textBox113.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox113.Location = new System.Drawing.Point(208, 28);
+            this.textBox113.Name = "textBox113";
+            this.textBox113.Size = new System.Drawing.Size(155, 22);
+            this.textBox113.TabIndex = 154;
             // 
             // button19
             // 
@@ -1734,7 +1779,7 @@
             this.Pest_ComoReacciona.Controls.Add(this.textBox147);
             this.Pest_ComoReacciona.Location = new System.Drawing.Point(4, 22);
             this.Pest_ComoReacciona.Name = "Pest_ComoReacciona";
-            this.Pest_ComoReacciona.Size = new System.Drawing.Size(589, 587);
+            this.Pest_ComoReacciona.Size = new System.Drawing.Size(589, 504);
             this.Pest_ComoReacciona.TabIndex = 7;
             this.Pest_ComoReacciona.Text = "Como reacciona ante";
             this.Pest_ComoReacciona.UseVisualStyleBackColor = true;
@@ -1872,7 +1917,7 @@
             this.Pest_RelacionesConFamilia.Controls.Add(this.label164);
             this.Pest_RelacionesConFamilia.Location = new System.Drawing.Point(4, 22);
             this.Pest_RelacionesConFamilia.Name = "Pest_RelacionesConFamilia";
-            this.Pest_RelacionesConFamilia.Size = new System.Drawing.Size(589, 587);
+            this.Pest_RelacionesConFamilia.Size = new System.Drawing.Size(589, 504);
             this.Pest_RelacionesConFamilia.TabIndex = 8;
             this.Pest_RelacionesConFamilia.Text = "Relacion con la familia";
             this.Pest_RelacionesConFamilia.UseVisualStyleBackColor = true;
@@ -1970,7 +2015,7 @@
             this.Pest_RasgosIdentificables.Controls.Add(this.label168);
             this.Pest_RasgosIdentificables.Location = new System.Drawing.Point(4, 22);
             this.Pest_RasgosIdentificables.Name = "Pest_RasgosIdentificables";
-            this.Pest_RasgosIdentificables.Size = new System.Drawing.Size(589, 587);
+            this.Pest_RasgosIdentificables.Size = new System.Drawing.Size(589, 504);
             this.Pest_RasgosIdentificables.TabIndex = 9;
             this.Pest_RasgosIdentificables.Text = "Rasgos Identificables";
             this.Pest_RasgosIdentificables.UseVisualStyleBackColor = true;
@@ -2064,27 +2109,6 @@
             this.Pest_RasgosIdentificables2.TabIndex = 10;
             this.Pest_RasgosIdentificables2.Text = "Rasgos Identificables II";
             this.Pest_RasgosIdentificables2.UseVisualStyleBackColor = true;
-            // 
-            // button24
-            // 
-            this.button24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button24.Location = new System.Drawing.Point(611, 442);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(105, 71);
-            this.button24.TabIndex = 139;
-            this.button24.Text = "Volver al inicio";
-            this.button24.UseVisualStyleBackColor = true;
-            // 
-            // button26
-            // 
-            this.button26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button26.Location = new System.Drawing.Point(611, 365);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(105, 71);
-            this.button26.TabIndex = 137;
-            this.button26.Text = "Finalizar";
-            this.button26.UseVisualStyleBackColor = true;
-            this.button26.Click += new System.EventHandler(this.button26_Click);
             // 
             // groupBox6
             // 
@@ -2270,49 +2294,76 @@
             this.checkBox28.Text = "Muestra movimientos estereotipados";
             this.checkBox28.UseVisualStyleBackColor = true;
             // 
-            // PestDatosGen_Bttn_BusquedaAlumno
+            // button24
             // 
-            this.PestDatosGen_Bttn_BusquedaAlumno.Location = new System.Drawing.Point(28, 23);
-            this.PestDatosGen_Bttn_BusquedaAlumno.Name = "PestDatosGen_Bttn_BusquedaAlumno";
-            this.PestDatosGen_Bttn_BusquedaAlumno.Size = new System.Drawing.Size(139, 69);
-            this.PestDatosGen_Bttn_BusquedaAlumno.TabIndex = 47;
-            this.PestDatosGen_Bttn_BusquedaAlumno.Text = "Busqueda por Alumno";
-            this.PestDatosGen_Bttn_BusquedaAlumno.UseVisualStyleBackColor = true;
+            this.button24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button24.Location = new System.Drawing.Point(611, 442);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(105, 71);
+            this.button24.TabIndex = 139;
+            this.button24.Text = "Volver al inicio";
+            this.button24.UseVisualStyleBackColor = true;
             // 
-            // textBox113
+            // button26
             // 
-            this.textBox113.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox113.Location = new System.Drawing.Point(208, 28);
-            this.textBox113.Name = "textBox113";
-            this.textBox113.Size = new System.Drawing.Size(155, 22);
-            this.textBox113.TabIndex = 154;
+            this.button26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button26.Location = new System.Drawing.Point(611, 365);
+            this.button26.Name = "button26";
+            this.button26.Size = new System.Drawing.Size(105, 71);
+            this.button26.TabIndex = 137;
+            this.button26.Text = "Finalizar";
+            this.button26.UseVisualStyleBackColor = true;
+            this.button26.Click += new System.EventHandler(this.button26_Click);
             // 
-            // textBox114
+            // tabControl1
             // 
-            this.textBox114.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox114.Location = new System.Drawing.Point(171, 353);
-            this.textBox114.Name = "textBox114";
-            this.textBox114.Size = new System.Drawing.Size(76, 22);
-            this.textBox114.TabIndex = 155;
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(615, 12);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(379, 347);
+            this.tabControl1.TabIndex = 140;
             // 
-            // PestDatosGen_Txt_EdadCron
+            // tabPage1
             // 
-            this.PestDatosGen_Txt_EdadCron.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PestDatosGen_Txt_EdadCron.Location = new System.Drawing.Point(247, 185);
-            this.PestDatosGen_Txt_EdadCron.Name = "PestDatosGen_Txt_EdadCron";
-            this.PestDatosGen_Txt_EdadCron.Size = new System.Drawing.Size(216, 26);
-            this.PestDatosGen_Txt_EdadCron.TabIndex = 48;
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(371, 321);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(192, 74);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // PestA_Txt_PesAlNacer
+            // 
+            this.PestA_Txt_PesAlNacer.Location = new System.Drawing.Point(204, 83);
+            this.PestA_Txt_PesAlNacer.Name = "PestA_Txt_PesAlNacer";
+            this.PestA_Txt_PesAlNacer.Size = new System.Drawing.Size(100, 20);
+            this.PestA_Txt_PesAlNacer.TabIndex = 0;
             // 
             // VistaEntrevistaPadres
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(729, 559);
+            this.ClientSize = new System.Drawing.Size(1006, 559);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.button26);
             this.Controls.Add(this.button24);
             this.Controls.Add(this.TapEntrevistaVista);
             this.Name = "VistaEntrevistaPadres";
             this.Text = "VistaEntrevistaPadres";
+            this.Load += new System.EventHandler(this.VistaEntrevistaPadres_Load);
             this.TapEntrevistaVista.ResumeLayout(false);
             this.Pest_DatosGenerales.ResumeLayout(false);
             this.Pest_DatosGenerales.PerformLayout();
@@ -2342,6 +2393,7 @@
             this.Pest_RasgosIdentificables2.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2380,7 +2432,6 @@
         private System.Windows.Forms.Label label94;
         private System.Windows.Forms.TextBox PestAnam_Txt_DatosPrenatales;
         private System.Windows.Forms.Label label95;
-        private System.Windows.Forms.TextBox PestAnam_Txt_PesoAlNacer;
         private System.Windows.Forms.Label label96;
         private System.Windows.Forms.TextBox PestAnam_Txt_DuracionGestacion;
         private System.Windows.Forms.Label label97;
@@ -2552,5 +2603,9 @@
         private System.Windows.Forms.CheckBox checkBox28;
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TextBox PestA_Txt_PesAlNacer;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }
