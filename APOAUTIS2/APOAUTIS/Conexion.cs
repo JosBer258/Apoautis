@@ -7,7 +7,7 @@ using System.Data;
 using System.Data.Sql;
 using System.Data.SqlClient;
 using APOAUTIS.Properties;
-//using System.Windows.Forms;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 
@@ -48,12 +48,12 @@ namespace APOAUTIS
             try
             {
                 cnx.Open();
-              
+                MessageBox.Show("ABIERTO");
 
             }
             catch (Exception)
             {
-         
+                MessageBox.Show("Error");
             }
         }
     }

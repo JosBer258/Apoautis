@@ -15,7 +15,7 @@ namespace APOAUTIS.Clases
         private int var_anio_primario;
         private int var_anio_final;
         private int var_anio_busqueda;
-        private string var_nom_filtro;
+        private int var_nom_filtro;
 
         public int Var_anio_primario
         {
@@ -56,7 +56,7 @@ namespace APOAUTIS.Clases
             }
         }
 
-        public string Var_nom_filtro
+        public int Var_nom_filtro
         {
             get
             {
@@ -107,41 +107,7 @@ namespace APOAUTIS.Clases
 
         public void Fun_MostrarTodos(System.Windows.Forms.DataGridView Var_MuestraDatos)
         {
-            sql = string.Format("select B.CodMatricula as 'Codigo Matricula',A.CodAlumno as 'Codigo de Alumno', A.IdAlum as 'No. Identidad', A.NomAlumno as 'Nombre de Alumno', A.SexoAlum as 'Genero', B.Jornada as 'Jornada', B.AnioIngreso as 'Año de Ingreso', B.Entrevistador as 'Entrevistador', B.CuotaPago as 'Cuota de pago' from alumnos as A inner join matricula as B on A.CodAlumno = B.Alumnos_CodAlumno order by A.NomAlumno and B.CodMatricula desc ; ");
-            cnx.Open();
-            cmd = new MySqlCommand(sql, cnx);
-            DataAdapter = new MySqlDataAdapter(cmd);
-            dt = new System.Data.DataTable();
-            DataAdapter.Fill(dt);
-            Var_MuestraDatos.DataSource = dt;
-            cnx.Close();
-        }
-
-        public void Fun_MostrarPorNombre(System.Windows.Forms.DataGridView Var_MuestraDatos)
-        {
-            sql = string.Format("select B.CodMatricula as 'Codigo Matricula',A.CodAlumno as 'Codigo de Alumno', A.IdAlum as 'No. Identidad', A.NomAlumno as 'Nombre de Alumno', A.SexoAlum as 'Genero', B.Jornada as 'Jornada', B.AnioIngreso as 'Año de Ingreso', B.Entrevistador as 'Entrevistador', B.CuotaPago as 'Cuota de pago' from alumnos as A inner join matricula as B on A.CodAlumno = B.Alumnos_CodAlumno where A.NomAlumno like '%{0}%' order by A.NomAlumno and B.CodMatricula desc ; ", Var_nom_filtro);
-            cnx.Open();
-            cmd = new MySqlCommand(sql, cnx);
-            DataAdapter = new MySqlDataAdapter(cmd);
-            dt = new System.Data.DataTable();
-            DataAdapter.Fill(dt);
-            Var_MuestraDatos.DataSource = dt;
-            cnx.Close();
-
-        }
-
-
-        public void Fun_MostrarPorYear(System.Windows.Forms.DataGridView Var_MuestraDatos)
-        {
-            sql = string.Format("select B.CodMatricula as 'Codigo Matricula',A.CodAlumno as 'Codigo de Alumno', A.IdAlum as 'No. Identidad', A.NomAlumno as 'Nombre de Alumno', A.SexoAlum as 'Genero', B.Jornada as 'Jornada', B.AnioIngreso as 'Año de Ingreso', B.Entrevistador as 'Entrevistador', B.CuotaPago as 'Cuota de pago' from alumnos as A inner join matricula as B on A.CodAlumno = B.Alumnos_CodAlumno where B.AnioIngreso = '{0}' order by A.NomAlumno and B.CodMatricula desc ; ", Var_anio_busqueda);
-            cnx.Open();
-            cmd = new MySqlCommand(sql, cnx);
-            DataAdapter = new MySqlDataAdapter(cmd);
-            dt = new System.Data.DataTable();
-            DataAdapter.Fill(dt);
-            Var_MuestraDatos.DataSource = dt;
-            cnx.Close();
 
         }
     }
-    }
+}

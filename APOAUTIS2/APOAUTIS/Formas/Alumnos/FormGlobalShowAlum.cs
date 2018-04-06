@@ -60,15 +60,7 @@ namespace APOAUTIS.Formas.Alumnos
                     (int)Convert.ToDouble(row.Cells["Codigo"].Value.ToString()),
                     row.Cells["Nombre del Alumno"].Value.ToString());
             }
-                else
-                if (Accion == "Gastos")
-                {
-                    FormIngresoGastos Form_Ingr = Owner as FormIngresoGastos;
-                    Form_Ingr.Fun_CargarDatos((int)Convert.ToDouble(row.Cells["Codigo"].Value.ToString()),
-                    row.Cells["Nombre del Alumno"].Value.ToString());
-                }
-
-                this.Close();
+            this.Close();
 
         }
             catch (Exception) { }
@@ -92,16 +84,7 @@ namespace APOAUTIS.Formas.Alumnos
                 Form_Monto.Fun_CargarDatos(
                     (int)Convert.ToDouble(row.Cells["Codigo"].Value.ToString()),
                     row.Cells["Nombre del Alumno"].Value.ToString());
-                }else
-                if(Accion == "Gastos")
-                {
-                    FormIngresoGastos Form_Ingr = Owner as FormIngresoGastos;
-                    Form_Ingr.Fun_CargarDatos((int)Convert.ToDouble(row.Cells["Codigo"].Value.ToString()),
-                    row.Cells["Nombre del Alumno"].Value.ToString());
-                }
-
-
-
+            }
             this.Close();
             }
             catch (Exception) { }
