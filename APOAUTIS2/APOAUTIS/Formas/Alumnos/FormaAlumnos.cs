@@ -16,7 +16,47 @@ namespace APOAUTIS.Formas.Alumnos
     public partial class FormaAlumnos : Form
     {
         C_Alumnos alumno = new C_Alumnos();
+        C_Responsables resp = new C_Responsables();
 
+        private bool Vacios(GroupBox groupBox1)
+        {
+
+            int s = 0;
+
+            var boxesx = groupBox1.Controls.OfType<TextBox>();
+            foreach (var box in boxesx)
+            {
+                if (string.IsNullOrWhiteSpace(box.Text))
+                {
+                    errorProvider1.SetError(box, "Please fill the required field");
+                    s++;
+                }
+                else
+                {
+                    errorProvider1.SetError(box, "");
+                }
+
+            }
+            if (s > 0)
+                return false;
+            else
+            {
+
+                return true;
+            }
+
+        }
+        private void validacionMenu()
+        {
+            var blankContextMenu = new ContextMenuStrip();
+            var boxe1 = Pest2_Pest3_Grupo_Encargados.Controls.OfType<TextBox>();
+            foreach (var box in boxe1)
+            {
+                box.ContextMenuStrip = blankContextMenu;
+
+            }
+
+        }
         public FormaAlumnos()
         {
             InitializeComponent();
@@ -26,6 +66,8 @@ namespace APOAUTIS.Formas.Alumnos
         {
             alumno.Fun_Show(Pest1_Dgv_BsqAlm);
             Pest1_Radio_Alumno.Checked = true;
+            alumno.GenerarEstado(Pest2_Pest1_Cmb_Estado);
+            alumno.VerificarYear();
             
             
         }
@@ -96,8 +138,9 @@ namespace APOAUTIS.Formas.Alumnos
                    
                     alumno.CodAlumno11 = Convert.ToInt32(Pest1_Dgv_BsqAlm.CurrentCell.Value.ToString());
                     alumno.FillAlumnosPest2Por(2);
-                    
-                    
+                    alumno.Fun_Show(Pest1_Dgv_BsqAlm);
+
+
 
                 }
                 else
@@ -105,14 +148,14 @@ namespace APOAUTIS.Formas.Alumnos
                 {
                     alumno.NomAlumno11 = Pest1_Dgv_BsqAlm.CurrentCell.Value.ToString();
                     alumno.FillAlumnosPest2Por(1);
-
+                    alumno.Fun_Show(Pest1_Dgv_BsqAlm);
                 }
                 else
                  if (Convert.ToInt16(a) == 7)
                 {
                     alumno.IdAlum11 = Pest1_Dgv_BsqAlm.CurrentCell.Value.ToString();
                     alumno.FillAlumnosPest2Por(3);
-
+                    alumno.Fun_Show(Pest1_Dgv_BsqAlm);
                 }
                 Pest2_Pest1_Txt_Codigo.Text = Convert.ToString(alumno.CodAlumno11);
                 Pest2_Pest1_Txt_NombComp.Text = Convert.ToString(alumno.NomAlumno11);
@@ -136,10 +179,32 @@ namespace APOAUTIS.Formas.Alumnos
                 Pest2_Pest2_Txt_GastaMedic.Text = Convert.ToString(alumno.GastosMEdicos1);
                 Pest2_Pest2_Txt_EnferPadSuFam.Text = Convert.ToString(alumno.EnfermedadesPadeciFamilia1);
                 Pest2_Pest2_Txt_LugRecAtencMedica.Text = Convert.ToString(alumno.LugaresAtencionMedica1);
-
+               
+                resp.Fill_DGV_Resp_Por_Alumno(Pest2_Pest3_DGV_MuestraEncargados, alumno.CodAlumno11);
+                Pest2_Pest3_Txt_Codigo.Text= Convert.ToString(resp.ObtenerUltimoCodigoResponsable());
                 MessageBox.Show("Listo");
                
             }
+        }
+
+        private void Pest2_Pest3_Bttn_Aceptar_Click(object sender, EventArgs e)
+        {
+            string srt = Convert.ToString(Pest2_Pest3_Cmb_Trabaja.SelectedItem)+", "+Pest2_Pest3_Txt_LugarTrabajo.Text;
+            resp.CodResp = Convert.ToInt32(Pest2_Pest3_Txt_Codigo.Text);
+            resp.NomResp= Pest2_Pest3_Txt_Completo.Text;
+            resp.IdResp = Convert.ToInt32(Pest2_Pest3_Txt_ID.Text);
+            resp.DomResp = Pest2_Pest3_Txt_Domicilio.Text;
+            resp.ProfResp = Pest2_Pest3_Txt_ProfecionUOficio.Text;
+            resp.LugTrab = srt;
+            resp.TelCasResp = Pest2_Pest3_Txt_TelefonoCasa.Text;
+            resp.TelCelResp = Pest2_Pest3_Txt_TelefonoCelular.Text;
+            resp.TelTrabResp = Pest2_Pest3_Txt_TelefonoTrabajo.Text;
+            resp.CorrResp = Pest2_Pest3_Txt_EdadAnos.Text;
+            resp.insertResponsable();
+            resp.insertResponsableAlumno(alumno.CodAlumno11,Convert.ToInt32(Pest2_Pest3_Txt_Codigo.Text));
+
+          resp.Fill_DGV_Resp_Por_Alumno(Pest2_Pest3_DGV_MuestraEncargados, alumno.CodAlumno11);
+            Pest2_Pest3_Txt_Codigo.Text = Convert.ToString(resp.ObtenerUltimoCodigoResponsable());
         }
     }
 }

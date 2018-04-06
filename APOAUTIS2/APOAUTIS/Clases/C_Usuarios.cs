@@ -121,8 +121,8 @@ public void Fun_Show(DataGridView dgv)
             cnx.Open();
             try
             {
-                DataAdapter = new MySqlDataAdapter(@"select A.CodUsuario, 
-A.NomUsuario, B.DescripcionEstado from ingreso as C inner join 
+                DataAdapter = new MySqlDataAdapter(@"select A.CodUsuario as 'Codigo de Usuario', 
+A.NomUsuario as 'Nombre de Usuario', B.DescripcionEstado as 'Descripcion de Estado' from ingreso as C inner join 
 usuarios as A on A.CodUsuario = C.CodUsuario inner join Estados as B on 
 A.CodigoEstado = B.CodEstado ", ccnx);
                 dt = new DataTable();
@@ -238,11 +238,23 @@ where A.NomUsuario = '{0}' AND A.ClaveUsuaio = '{1}'", this.var_nom_user, this.v
 
             if (Reg.Read())
             {
-                var_codigo_estado = Convert.ToInt16((Reg["CodigoEstado"].ToString()));
-                var_cod_user = Convert.ToInt16((Reg["CodUsuario"].ToString()));
-
-                this.cnx.Close();
-                resultado = true;
+                Var_codigo_estado = Convert.ToInt16((Reg["CodigoEstado"].ToString()));
+                Var_cod_user = Convert.ToInt16((Reg["CodUsuario"].ToString()));
+                Formas.Ingreso.FormMenuPrincipal menu = new Formas.Ingreso.FormMenuPrincipal();
+                menu.State = Var_codigo_estado;
+                
+                
+                if (Var_nom_user == Reg["NomUsuario"].ToString())
+                {
+                    resultado = true;
+                    this.cnx.Close();
+                }
+                else
+                {
+                    resultado = false;
+                    this.cnx.Close();
+                }
+                
 
             }
             else
@@ -305,6 +317,22 @@ AND B.CodigoEstado = '{1}'", this.Var_cod_user, this.Var_codigo_estado);
             Reg3 = this.cmd.ExecuteReader();
             this.cnx.Close();
         }
+        public void RestablecerIntentos2()
+        {
+
+            this.sql = string.Format(@"UPDATE  ingreso as A INNER JOIN usuarios 
+as B  ON A.CodUsuario = B.CodUsuario 
+ Set A.Intentos = 6
+WHERE B.CodUsuario = '{0}'
+AND B.CodigoEstado = '{1}'", AddCodUser1, AddEstado1);
+            this.cmd = new MySqlCommand(this.sql, this.cnx);
+            this.cnx.Open();
+            MySqlDataReader Reg3 = null;
+            Reg3 = this.cmd.ExecuteReader();
+            this.cnx.Close();
+        }
+
+
 
         public void BloquearUsuario()
         {

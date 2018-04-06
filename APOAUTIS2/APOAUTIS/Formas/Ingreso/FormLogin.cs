@@ -44,7 +44,7 @@ namespace APOAUTIS
             Usuarios.Var_cont_user = pssword;
             if( Usuarios.checkLogin() == true)
             {
-                if (Usuarios.Var_codigo_estado == 1)
+                if (Usuarios.Var_codigo_estado == 1 || Usuarios.Var_codigo_estado == 3)
                 {
                     Usuarios.RestablecerIntentos();
                     FormMenuPrincipal menu = new FormMenuPrincipal();
@@ -95,7 +95,9 @@ namespace APOAUTIS
 
         private void Login_Load(object sender, EventArgs e)
         {
- 
+            var blankContextMenu = new ContextMenuStrip();
+            Txt_NombreUsuario.ContextMenuStrip = blankContextMenu;
+            Txt_Contrasenna.ContextMenuStrip = blankContextMenu;
 
         }
 

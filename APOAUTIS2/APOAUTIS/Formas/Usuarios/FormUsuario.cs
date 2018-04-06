@@ -141,6 +141,10 @@ namespace APOAUTIS.Formas.Usuarios
                     User.AddPassword1 = Txt_PasdUser.Text;
                     User.AddCodUser1 = Convert.ToInt32(Txt_CodUser.Text);
                     User.AddEstado1 = Convert.ToInt32(Cmb_Estado.SelectedValue.ToString());
+                    if (User.AddEstado1 == 1 || User.AddEstado1 == 3)
+                    {
+                        User.RestablecerIntentos2();
+                    }
 
                     User.updateUsuario();
                         User.Fun_Show(DGV_Data);
@@ -214,35 +218,7 @@ namespace APOAUTIS.Formas.Usuarios
 
         private void DGV_Data_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            string a;
-            a = DGV_Data.CurrentCell.ColumnIndex.ToString();
-          
-            if (Rad_New.Checked == false)
-            {
-                if (Convert.ToInt16(a) == 1 || Convert.ToInt16(a) == 0)
-                {
-
-                    if (Convert.ToInt16(a) == 0)
-                    {
-
-                        Txt_CodUser.Text = DGV_Data.CurrentCell.Value.ToString();
-                        ExtraerDatosCodigo(Convert.ToInt16(Txt_CodUser.Text));
-                        Txt_PasdUser.Clear();
-
-                    }
-                    else
-                     if (Convert.ToInt16(a) == 1)
-                    {
-
-                        Txt_NameUser.Text = DGV_Data.CurrentCell.Value.ToString();
-                        Txt_PasdUser.Clear();
-                        ExtraerDatosNombre((Txt_NameUser.Text));
-                    }
-
-                    MessageBox.Show("Listo");
-                    Vacios(sender, e);
-                }
-            }
+           
         }
            
 
@@ -319,6 +295,39 @@ where A.NomUsuario = '{0}' ", Nomuser);
         private void Txt_PasdUser_TextChanged(object sender, EventArgs e)
         {
             Vacios(sender, e);
+        }
+
+        private void DGV_Data_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string a;
+            a = DGV_Data.CurrentCell.ColumnIndex.ToString();
+
+            if (Rad_New.Checked == false)
+            {
+                if (Convert.ToInt16(a) == 1 || Convert.ToInt16(a) == 0)
+                {
+
+                    if (Convert.ToInt16(a) == 0)
+                    {
+
+                        Txt_CodUser.Text = DGV_Data.CurrentCell.Value.ToString();
+                        ExtraerDatosCodigo(Convert.ToInt16(Txt_CodUser.Text));
+                        Txt_PasdUser.Clear();
+
+                    }
+                    else
+                     if (Convert.ToInt16(a) == 1)
+                    {
+
+                        Txt_NameUser.Text = DGV_Data.CurrentCell.Value.ToString();
+                        Txt_PasdUser.Clear();
+                        ExtraerDatosNombre((Txt_NameUser.Text));
+                    }
+
+                    MessageBox.Show("Listo");
+                    Vacios(sender, e);
+                }
+            }
         }
     }
 }

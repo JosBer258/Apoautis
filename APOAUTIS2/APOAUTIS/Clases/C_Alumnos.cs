@@ -144,7 +144,7 @@ where A.IdAlum like'%{0}%'", IdAlum11);
                 InstProceAlumno11 = (Reg["InstProceAlumno"].ToString());
                 InstDondeEstaIncluido11 = (Reg["InstDondeEstaIncluido"].ToString());
                 this.cnx.Close();
-                
+                VerificarYear();
 
             }
             else
@@ -184,6 +184,7 @@ A.Alumnos_CodAlumno=B.CodAlumno where B.CodAlumno like'%{0}%'", CodAlumno11);
             {
 
             }
+            this.cnx.Close();
 
 
         }
@@ -192,7 +193,13 @@ A.Alumnos_CodAlumno=B.CodAlumno where B.CodAlumno like'%{0}%'", CodAlumno11);
             cnx.Open();
             try
             {
-                DataAdapter = new MySqlDataAdapter(@"select * from alumnos", ccnx);
+                DataAdapter = new MySqlDataAdapter(@"select A.CodAlumno as'Codigo de Alumno', A.NomAlumno as 'Nombre completo',
+A.LugarNaciAlum as 'Lugar de Nacimiento', A.FechaNaciAlum as 'Fecha de Nacimiento', A.EdadAlum as 'Edad', A.EdadCronologica
+as 'Edad Cronologica',
+A.SexoAlum as 'Sexo', A.IdAlum as 'Identidad', A.DireccionAlum as 'Direccion', A.TelFijoAlum as 'Telefono fijo', 
+A.CelAlumno as 'Celular', A.EscolaridadAlum as 'Escolaridad',
+A.LugarOrigAlum as 'Lugar de Origen', A.InstProceAlumno as 'Instituto de Procedencia', A.InstDondeEstaIncluido 
+as 'Intituto donde esta incluido' from alumnos as A", ccnx);
                 dt = new DataTable();
                 DataAdapter.Fill(dt);
                 dgv.DataSource = dt;
@@ -214,8 +221,9 @@ A.Alumnos_CodAlumno=B.CodAlumno where B.CodAlumno like'%{0}%'", CodAlumno11);
 
 
                 this.sql = string.Format
-               (@"select B.NomAlumno,B.SexoAlum,B.EdadAlum,B.IdAlum,A.Cuando,A.Donde,
-A.DiagnosticoTratamiento from acontecimientomedco as A inner join
+               (@"select B.NomAlumno as 'Nombre Alumno',B.SexoAlum as 'Sexo',B.EdadAlum as 'Edad',
+B.IdAlum as 'Identidad',A.Cuando,A.Donde,
+A.DiagnosticoTratamiento as 'Diagnostico Y Tratamiento' from acontecimientomedco as A inner join
 alumnos as B on A.Alumnos_CodAlumno=B.CodAlumno where B.CodAlumno like'%{0}%'", CodAlumno11);
                 this.cmd = new MySqlCommand(this.sql, this.cnx);
                 this.DataAdapter = new MySqlDataAdapter(this.cmd);
@@ -242,10 +250,13 @@ alumnos as B on A.Alumnos_CodAlumno=B.CodAlumno where B.CodAlumno like'%{0}%'", 
 
 
                 this.sql = string.Format
-               (@"select A.CodAlumno,A.NomAlumno,
-A.LugarNaciAlum,A.FechaNaciAlum,A.EdadAlum,A.EdadCronologica,
-A.SexoAlum,A.IdAlum,A.DireccionAlum,A.TelFijoAlum,A.CelAlumno,A.EscolaridadAlum,
-A.LugarOrigAlum,A.InstProceAlumno,A.InstDondeEstaIncluido from Alumnos as A
+               (@"select A.CodAlumno as'Codigo de Alumno', A.NomAlumno as 'Nombre completo',
+A.LugarNaciAlum as 'Lugar de Nacimiento', A.FechaNaciAlum as 'Fecha de Nacimiento', A.EdadAlum as 'Edad', A.EdadCronologica
+as 'Edad Cronologica',
+A.SexoAlum as 'Sexo', A.IdAlum as 'Identidad', A.DireccionAlum as 'Direccion', A.TelFijoAlum as 'Telefono fijo', 
+A.CelAlumno as 'Celular', A.EscolaridadAlum as 'Escolaridad',
+A.LugarOrigAlum as 'Lugar de Origen', A.InstProceAlumno as 'Instituto de Procedencia', A.InstDondeEstaIncluido 
+as 'Intituto donde esta incluido' from alumnos as A
 where A.NomAlumno like'%{0}%'", busq);
                 this.cmd = new MySqlCommand(this.sql, this.cnx);
                 this.DataAdapter = new MySqlDataAdapter(this.cmd);
@@ -272,10 +283,13 @@ where A.NomAlumno like'%{0}%'", busq);
                 string busq;
                 busq = a;
                 this.sql = string.Format
-                (@"select A.CodAlumno,A.NomAlumno,
-A.LugarNaciAlum,A.FechaNaciAlum,A.EdadAlum,A.EdadCronologica,
-A.SexoAlum,A.IdAlum,A.DireccionAlum,A.TelFijoAlum,A.CelAlumno,A.EscolaridadAlum,
-A.LugarOrigAlum,A.InstProceAlumno,A.InstDondeEstaIncluido from Alumnos as A
+                (@"select A.CodAlumno as'Codigo de Alumno', A.NomAlumno as 'Nombre completo',
+A.LugarNaciAlum as 'Lugar de Nacimiento', A.FechaNaciAlum as 'Fecha de Nacimiento', A.EdadAlum as 'Edad', A.EdadCronologica
+as 'Edad Cronologica',
+A.SexoAlum as 'Sexo', A.IdAlum as 'Identidad', A.DireccionAlum as 'Direccion', A.TelFijoAlum as 'Telefono fijo', 
+A.CelAlumno as 'Celular', A.EscolaridadAlum as 'Escolaridad',
+A.LugarOrigAlum as 'Lugar de Origen', A.InstProceAlumno as 'Instituto de Procedencia', A.InstDondeEstaIncluido 
+as 'Intituto donde esta incluido' from alumnos as A
 where A.IdAlum like '%{0}%'", busq);
                 this.cmd = new MySqlCommand(this.sql, this.cnx);
                 this.DataAdapter = new MySqlDataAdapter(this.cmd);
@@ -291,6 +305,72 @@ where A.IdAlum like '%{0}%'", busq);
             cnx.Close();
         }
 
+
+
+
+
+        public void GenerarEstado(ComboBox Com_Roles)
+        {
+            cnx.Open();
+            sql = string.Format(@"select CodEstado, DescripcionEstado from estados where CodtipoEstado=2");
+            cmd = new MySqlCommand(sql, cnx);
+            DataAdapter = new MySqlDataAdapter(cmd);
+            dt = new DataTable();
+            DataAdapter.Fill(dt);
+            cnx.Close();
+
+            Com_Roles.ValueMember = "CodEstado";
+            Com_Roles.DisplayMember = "DescripcionEstado";
+            Com_Roles.DataSource = dt;
+        }
+
+        public DateTime ne;
+        public string w;
+        public void VerificarYear()
+        {
+            this.sql = string.Format(@"select FechaNaciAlum from alumnos where CodAlumno='{0}'", CodAlumno11);
+            this.cmd = new MySqlCommand(this.sql, this.cnx);
+            this.cnx.Open();
+            MySqlDataReader Reg = null;
+            Reg = this.cmd.ExecuteReader();
+
+            if (Reg.Read())
+            {
+
+                ne = DateTime.Parse(Reg["FechaNaciAlum"].ToString());
+                DateTime nacimiento = new DateTime(ne.Year,ne.Month,ne.Day); //Fecha de nacimiento
+                int edad = DateTime.Today.AddTicks(-nacimiento.Ticks).Year - 1;
+                EdadAlum11 = edad; 
+                TimeSpan ts = DateTime.Now.Date - ne.Date;
+                
+                double Años = ts.Days / 365;
+                double Meses = Convert.ToInt32((ts.Days - (Años * 365)) / 30.4167);
+                double Dias = Convert.ToInt32((ts.Days - (Años * 365)) - (Meses * 30.4167));
+                string str = "Año:" + Años.ToString() + " Mes:" + Meses.ToString() + " Dia:" + Dias.ToString();
+                EdadCronologica11 = str;
+                this.cnx.Close();
+                updateEdades();
+               
+            }
+            else
+            {
+
+            }
+            this.cnx.Close();
+
+        }
+        public void updateEdades()
+        {
+            this.sql = string.Format(@"update alumnos set EdadAlum ='{0}', EdadCronologica='{1}'
+where CodAlumno='{2}'", EdadAlum11, EdadCronologica11, CodAlumno11);
+            this.cmd = new MySqlCommand(this.sql, this.cnx);
+            this.cnx.Open();
+            MySqlDataReader Reg = null;
+            Reg = this.cmd.ExecuteReader();
+
+            this.cnx.Close();
+        }
+       
 
     }
 }

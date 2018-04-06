@@ -77,6 +77,7 @@
             this.DGV_Data.TabIndex = 124;
             this.DGV_Data.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Data_CellContentClick);
             this.DGV_Data.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Data_CellContentDoubleClick);
+            this.DGV_Data.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Data_CellDoubleClick);
             this.DGV_Data.SelectionChanged += new System.EventHandler(this.DGV_Data_SelectionChanged);
             // 
             // groupBox2
