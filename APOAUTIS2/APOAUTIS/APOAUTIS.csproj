@@ -66,6 +66,7 @@
     <Compile Include="Clases\C_Validaciones.cs" />
     <Compile Include="Clases\C_VistaEntrevistaPadres.cs" />
     <Compile Include="Clases\DataGirdView.cs" />
+    <Compile Include="Clases\C_EstudioSocioEc.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Formas\Alumnos\FormGlobalShowAlum.cs">
       <SubType>Form</SubType>
