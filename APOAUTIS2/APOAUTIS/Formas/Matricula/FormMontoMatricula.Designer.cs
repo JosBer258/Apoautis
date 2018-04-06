@@ -52,6 +52,7 @@
             this.Radio_Agregar = new System.Windows.Forms.RadioButton();
             this.Radio_Actualizar = new System.Windows.Forms.RadioButton();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.Gruop_MuestraDatos.SuspendLayout();
             this.Gruop_Busqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Show)).BeginInit();
@@ -244,6 +245,7 @@
             this.DGV_Show.ReadOnly = true;
             this.DGV_Show.Size = new System.Drawing.Size(738, 194);
             this.DGV_Show.TabIndex = 0;
+            this.DGV_Show.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Show_CellContentClick);
             this.DGV_Show.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Show_CellContentDoubleClick);
             this.DGV_Show.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Show_CellDoubleClick);
             // 
@@ -297,6 +299,17 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(547, 452);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(99, 41);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Ayuda";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormMontoMatricula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -304,6 +317,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(774, 499);
             this.ControlBox = false;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Bttn_Salir);
             this.Controls.Add(this.Gruop_MuestraDatos);
             this.Controls.Add(this.Gruop_Busqueda);
@@ -349,5 +363,6 @@
         private System.Windows.Forms.RadioButton Radio_Actualizar;
         private System.Windows.Forms.Button Bttn_BusquedaDeAlumno;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button button1;
     }
 }

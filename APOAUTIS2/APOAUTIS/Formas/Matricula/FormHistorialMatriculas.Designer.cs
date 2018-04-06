@@ -42,9 +42,13 @@
             // 
             // DGV_Show
             // 
+            this.DGV_Show.AllowUserToAddRows = false;
+            this.DGV_Show.AllowUserToDeleteRows = false;
+            this.DGV_Show.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.DGV_Show.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Show.Location = new System.Drawing.Point(14, 133);
             this.DGV_Show.Name = "DGV_Show";
+            this.DGV_Show.ReadOnly = true;
             this.DGV_Show.Size = new System.Drawing.Size(717, 314);
             this.DGV_Show.TabIndex = 7;
             // 
@@ -89,7 +93,7 @@
             this.Radio_BusquedaEstudiante.AutoSize = true;
             this.Radio_BusquedaEstudiante.Location = new System.Drawing.Point(35, 30);
             this.Radio_BusquedaEstudiante.Name = "Radio_BusquedaEstudiante";
-            this.Radio_BusquedaEstudiante.Size = new System.Drawing.Size(232, 20);
+            this.Radio_BusquedaEstudiante.Size = new System.Drawing.Size(199, 20);
             this.Radio_BusquedaEstudiante.TabIndex = 3;
             this.Radio_BusquedaEstudiante.TabStop = true;
             this.Radio_BusquedaEstudiante.Text = "Busqueda por estudiante";
@@ -103,6 +107,7 @@
             this.Txt_NombreEstudiante.Name = "Txt_NombreEstudiante";
             this.Txt_NombreEstudiante.Size = new System.Drawing.Size(173, 22);
             this.Txt_NombreEstudiante.TabIndex = 2;
+            this.Txt_NombreEstudiante.TextChanged += new System.EventHandler(this.Txt_NombreEstudiante_TextChanged);
             this.Txt_NombreEstudiante.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_NombreEstudiante_KeyPress);
             // 
             // Radio_BusquedaAnno
@@ -110,7 +115,7 @@
             this.Radio_BusquedaAnno.AutoSize = true;
             this.Radio_BusquedaAnno.Location = new System.Drawing.Point(35, 59);
             this.Radio_BusquedaAnno.Name = "Radio_BusquedaAnno";
-            this.Radio_BusquedaAnno.Size = new System.Drawing.Size(282, 20);
+            this.Radio_BusquedaAnno.Size = new System.Drawing.Size(242, 20);
             this.Radio_BusquedaAnno.TabIndex = 1;
             this.Radio_BusquedaAnno.TabStop = true;
             this.Radio_BusquedaAnno.Text = "Busqueda por año de matricula";
@@ -125,6 +130,7 @@
             this.Cmb_Anno.Name = "Cmb_Anno";
             this.Cmb_Anno.Size = new System.Drawing.Size(173, 24);
             this.Cmb_Anno.TabIndex = 0;
+            this.Cmb_Anno.SelectedIndexChanged += new System.EventHandler(this.Cmb_Anno_SelectedIndexChanged);
             // 
             // FormHistorialMatriculas
             // 
