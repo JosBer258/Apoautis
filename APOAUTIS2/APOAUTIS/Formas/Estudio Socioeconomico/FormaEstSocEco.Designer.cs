@@ -33,6 +33,7 @@
             this.label72 = new System.Windows.Forms.Label();
             this.btm_EsSo_BuscarAlumno_DatosGe = new System.Windows.Forms.Button();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txt_EsSo_lugar_DatosGe = new System.Windows.Forms.TextBox();
             this.txt_EsSo_PersonaEntre_DatosGe = new System.Windows.Forms.TextBox();
             this.label69 = new System.Windows.Forms.Label();
@@ -243,7 +244,6 @@
             this.chekbox_EsSo_EquipoSoni_InfoVivien = new System.Windows.Forms.CheckBox();
             this.chekbox_EsSo_Tele_InfoVivien = new System.Windows.Forms.CheckBox();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tabEstSocioEco.SuspendLayout();
             this.DatosGenerales.SuspendLayout();
             this.groupBox13.SuspendLayout();
@@ -329,6 +329,13 @@
             this.groupBox13.TabIndex = 40;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Datos de Entrevista";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(17, 32);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 39;
             // 
             // txt_EsSo_lugar_DatosGe
             // 
@@ -1341,6 +1348,7 @@
             this.txt_EsSo_IngreAbue_InfoFami.Name = "txt_EsSo_IngreAbue_InfoFami";
             this.txt_EsSo_IngreAbue_InfoFami.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_IngreAbue_InfoFami.TabIndex = 23;
+            this.txt_EsSo_IngreAbue_InfoFami.TextChanged += new System.EventHandler(this.txt_EsSo_IngreAbue_InfoFami_TextChanged);
             // 
             // label39
             // 
@@ -1361,7 +1369,11 @@
             // combox_EsSo_CuantosFami_InfoFami
             // 
             this.combox_EsSo_CuantosFami_InfoFami.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combox_EsSo_CuantosFami_InfoFami.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.combox_EsSo_CuantosFami_InfoFami.FormattingEnabled = true;
+            this.combox_EsSo_CuantosFami_InfoFami.Items.AddRange(new object[] {
+            "Si",
+            "No"});
             this.combox_EsSo_CuantosFami_InfoFami.Location = new System.Drawing.Point(204, 63);
             this.combox_EsSo_CuantosFami_InfoFami.Name = "combox_EsSo_CuantosFami_InfoFami";
             this.combox_EsSo_CuantosFami_InfoFami.Size = new System.Drawing.Size(88, 21);
@@ -2347,13 +2359,6 @@
             this.chekbox_EsSo_Tele_InfoVivien.TabIndex = 6;
             this.chekbox_EsSo_Tele_InfoVivien.Text = "Television";
             this.chekbox_EsSo_Tele_InfoVivien.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(17, 32);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 39;
             // 
             // FormaEstSocEco
             // 

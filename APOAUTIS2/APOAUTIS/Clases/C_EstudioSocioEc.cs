@@ -11,25 +11,20 @@ namespace APOAUTIS.Clases
 {
    public class C_EstudioSocioEc
     {
+        private int codEstudioSocio;
         private int codAlumno;
         private string lugarEntrevista;
         private DateTime fechaEntrevista;
         private string personaEntrevis;
         private string EntrevistadoPor;
 
-        public C_EstudioSocioEc(int codAlumno, string lugarEntrevista, DateTime fechaEntrevista, string personaEntrevis, string entrevistadoPor1)
-        {
-            CodAlumno = codAlumno;
-            LugarEntrevista = lugarEntrevista;
-            FechaEntrevista = fechaEntrevista;
-            PersonaEntrevis = personaEntrevis;
-            EntrevistadoPor1 = entrevistadoPor1;
-            
-        }
+
 
         public C_EstudioSocioEc()
         {
         }
+
+       
 
         public string LugarEntrevista
         {
@@ -95,5 +90,32 @@ namespace APOAUTIS.Clases
                 codAlumno = value;
             }
         }
+
+        public int CodEstudioSocio
+        {
+            get
+            {
+                return codEstudioSocio;
+            }
+
+            set
+            {
+                codEstudioSocio = value;
+            }
+        }
+
+
+        public C_EstudioSocioEc(string lugarEntrevista, DateTime fechaEntrevista, string personaEntrevis, string entrevistadoPor1, int codAlumno, int codEstudioSocio)
+        {
+            LugarEntrevista = lugarEntrevista;
+            FechaEntrevista = fechaEntrevista;
+            PersonaEntrevis = personaEntrevis;
+            EntrevistadoPor1 = entrevistadoPor1;
+            CodAlumno = codAlumno;
+            CodEstudioSocio = codEstudioSocio;
+        }
+
+
+
     }
 }

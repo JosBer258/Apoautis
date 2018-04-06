@@ -19,11 +19,12 @@ namespace APOAUTIS
         Clases.C_Validaciones Validaciones = new Clases.C_Validaciones();
         FromBusquedaAlumno F_ShowAlum = new FromBusquedaAlumno();
 
+
       //  FormGlobalShowAlum F_ShowAlum = new FormGlobalShowAlum();
         Clases.C_DatosGenerales C_datos = new Clases.C_DatosGenerales();
-
+        Clases.C_EstudioSocioEc C_estudio = new Clases.C_EstudioSocioEc();
         int Var_codigoAlumno = 0;
-
+        int var_CodEstudioSE =0;
         public FormaEstSocEco()
         {
             InitializeComponent();
@@ -60,9 +61,12 @@ namespace APOAUTIS
             // string strDate = dateTimePicker1.Value.ToString("yyyy/MM/dd");
             // DateTime varFeInicio = Convert.toDatetime(dtpFeInicio.Text);
 
-           Var_codigoAlumno= C_datos.CodAlumno ;
 
+            Var_codigoAlumno = C_datos.CodAlumno;
+
+            /*
             Clases.C_EstudioSocioEc estudioSocio = new Clases.C_EstudioSocioEc();
+            estudioSocio.CodEstudioSocio = Var_codigoAlumno;
             estudioSocio.CodAlumno= Var_codigoAlumno;
             estudioSocio.LugarEntrevista = txt_EsSo_lugar_DatosGe.Text.Trim();
             estudioSocio.FechaEntrevista = Convert.ToDateTime(dateTimePicker1.Value.Year + "/" + dateTimePicker1.Value.Month + "/" + dateTimePicker1.Value.Day); //Convert.ToDateTime(dateTimePicker1.Text);
@@ -73,16 +77,53 @@ namespace APOAUTIS
             int resultado = Clases.C_EstudioSocioMetodos.AgregarEstudioSo(estudioSocio);
             if (resultado > 0)
             {
-                MessageBox.Show("Cliente Guardado Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Estudio SocioEconomico Ingresado Exitosamente", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("No se pudo guardar el cliente", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("No se pudo guardar ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            */
+
+            Clases.C_InformacionFamilia infoFamilia = new Clases.C_InformacionFamilia();
+            infoFamilia.CodAlumno1 = Var_codigoAlumno;
+            infoFamilia.PersonasHabitan1 = Convert.ToInt32(txt_EsSo_HabitantesCasa_InfoFami.Text.Trim());
+            infoFamilia.TieneMasHijos1 = txt_EsSo_MasHijos_InfoFami.Text.Trim();
+            infoFamilia.HabitanOtrosFamiliares1 = combox_EsSo_CuantosFami_InfoFami.Text;
+            infoFamilia.MienEnTotal1 = Convert.ToInt32(txt_EsSo_TotalMiemb_InfoFami.Text.Trim());
+            infoFamilia.CuantosMiembrosTrabajan1 = Convert.ToInt32(txt_EsSo_TotalMiemb_InfoFami.Text.Trim());
+            infoFamilia.IngresoAbuela1 = Convert.ToDouble(txt_EsSo_IngreAbue_InfoFami.Text.Trim());
+            infoFamilia.IngresoMadre1 = Convert.ToDouble(txt_EsSo_IngreMadre_InfoFami.Text.Trim());
+            infoFamilia.IngresoPadre1 = Convert.ToDouble(txt_EsSo_IngrePadre_InfoFami.Text.Trim());
+            infoFamilia.IngresoHijo1 = Convert.ToDouble(txt_EsSo_IngreHijo_InfoFami.Text.Trim());
+            infoFamilia.Pension1 = Convert.ToDouble(txt_EsSo_IngrePencion_InfoFami.Text.Trim());
+            infoFamilia.OtrosIngresos1= Convert.ToDouble(txt_EsSo_IngreOtros_InfoFami.Text.Trim());
+            infoFamilia.TotalIngresos1 = Convert.ToDouble(txt_EsSo_IngreTotales_InfoFami.Text.Trim());
+            infoFamilia.GastosEnergia1 = Convert.ToDouble(txt_EsSo_Energia_InfoFami.Text.Trim());
+            infoFamilia.GastoAgua1 = Convert.ToDouble(txt_EsSo_Telefono_InfoFami.Text.Trim());
+            infoFamilia.GastoComida1 = Convert.ToDouble(txt_EsSo_Alimentos_InfoFami.Text.Trim());
+            infoFamilia.GastoTel1 = Convert.ToDouble(txt_EsSo_Telefono_InfoFami.Text.Trim());
+            infoFamilia.GastoSalub1 = Convert.ToDouble(txt_EsSo_Salud_InfoFami.Text.Trim());
+            infoFamilia.GastoTransp1= Convert.ToDouble(txt_EsSo_Transp_InfoFami.Text.Trim());
+            infoFamilia.GastoEduca1= Convert.ToDouble(txt_EsSo_Educa_InfoFami.Text.Trim());
+            infoFamilia.GastoGaso1= Convert.ToDouble(txt_EsSo_TotalGastos_InfoFami.Text.Trim());
+            infoFamilia.GastoRpa1= Convert.ToDouble(txt_EsSo_Vestime_InfoFami.Text.Trim());
+            infoFamilia.GastoVivienda1= Convert.ToDouble(txt_EsSo_Alquiler_InfoFami.Text.Trim());
+            infoFamilia.OtrosGastos1 = Convert.ToDouble(txt_EsSo_Otros_InfoFami.Text.Trim());
+            infoFamilia.TotalGastos1 = Convert.ToDouble(txt_EsSo_TotalGastos_InfoFami.Text.Trim());
+
+            int resultado2 = Clases.C_EstudioSocioMetodos.AgregarEInformacionFamilia(infoFamilia);
+
+            if (resultado2 > 0)
+            {
+                MessageBox.Show("Estudio SocioEconomico Ingresado Exitosamente", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("No se pudo guardar ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
 
-
-            
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -98,7 +139,7 @@ namespace APOAUTIS
 
         private void txt_EsSo_lugar_TextChanged(object sender, EventArgs e)
         {
-      
+            Validaciones.ValidarNombres_SoloLetras(sender,e);
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -135,21 +176,34 @@ namespace APOAUTIS
             FromBusquedaAlumno frmBusqEstSoc = new FromBusquedaAlumno();
             frmBusqEstSoc.ShowDialog();
 
-            if(FromBusquedaAlumno.AlumnoSeleccionado != null)
+            if (FromBusquedaAlumno.AlumnoSeleccionado != null)
             {
-                C_datos.CodAlumno = Var_codigoAlumno;
+                    C_datos.CodAlumno = FromBusquedaAlumno.AlumnoSeleccionado.CodAlumno;
+                    txt_EsSo_IdentiEst_DatosGe.Text = Convert.ToString(FromBusquedaAlumno.AlumnoSeleccionado.IdAlumno);
+                    txt_EsSo_NombreEst_DatosGe.Text = FromBusquedaAlumno.AlumnoSeleccionado.NombreAlumno;
+                    txt_EsSo_LugarNaci_DatosGe.Text = FromBusquedaAlumno.AlumnoSeleccionado.LugarNacAlumno;
+                    txt_EsSo_FechaNa_DatosGe.Text = Convert.ToString(FromBusquedaAlumno.AlumnoSeleccionado.Fecha_NacAlumno.Date);
+                    txt_EsSo_EdadEst_DatosGe.Text = Convert.ToString(FromBusquedaAlumno.AlumnoSeleccionado.EdadAlumno);
+                    txt_EsSo_SexoAlum_DatosGe.Text = Convert.ToString(FromBusquedaAlumno.AlumnoSeleccionado.SexoAlumno);
+
+                    
 
 
-               // txt_EsSo_NombreEst_DatosGe.Text = Var_Nombre;
-                txt_EsSo_IdentiEst_DatosGe.Text = Convert.ToString(FromBusquedaAlumno.AlumnoSeleccionado.IdAlumno);
-                txt_EsSo_NombreEst_DatosGe.Text = FromBusquedaAlumno.AlumnoSeleccionado.NombreAlumno;
-                txt_EsSo_LugarNaci_DatosGe.Text = FromBusquedaAlumno.AlumnoSeleccionado.LugarNacAlumno;
-                txt_EsSo_FechaNa_DatosGe.Text = Convert.ToString( FromBusquedaAlumno.AlumnoSeleccionado.Fecha_NacAlumno.Date);
-                txt_EsSo_EdadEst_DatosGe.Text = Convert.ToString(FromBusquedaAlumno.AlumnoSeleccionado.EdadAlumno);
-                txt_EsSo_SexoAlum_DatosGe.Text = Convert.ToString(FromBusquedaAlumno.AlumnoSeleccionado.SexoAlumno);
 
-            }
+             }
 
+  
+
+
+
+
+
+            
+        }
+
+        private void txt_EsSo_IngreAbue_InfoFami_TextChanged(object sender, EventArgs e)
+        {
+       
         }
     }
 }

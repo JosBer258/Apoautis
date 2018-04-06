@@ -30,13 +30,22 @@ namespace APOAUTIS.Clases
 
             int retorno = 0;
 
-            MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO estudiosocioeconomico (Alumnos_CodAlumno, Lugar, Fecha, PersonaEntrevis, RevisaAproPor) values ('{0}','{1}','{2}', '{3}','{4}')",
-                estudio.CodAlumno, estudio.LugarEntrevista, estudio.FechaEntrevista, estudio.PersonaEntrevis,estudio.EntrevistadoPor1), C_EstudioSocioMetodos.ObtenerConexion());
+            MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO estudiosocioeconomico (CodEstudioSE,Alumnos_CodAlumno, Lugar, Fecha, PersonaEntrevis, RevisaAproPor) values ('{0}','{1}','{2}', '{3}','{4}','{5}')",
+                estudio.CodEstudioSocio,estudio.CodAlumno, estudio.LugarEntrevista, estudio.FechaEntrevista, estudio.PersonaEntrevis,estudio.EntrevistadoPor1), C_EstudioSocioMetodos.ObtenerConexion());
             retorno = comando.ExecuteNonQuery();
             return retorno;
         }
 
+        public static int AgregarEInformacionFamilia(C_InformacionFamilia infoFamilia)
+        {
 
+            int retorno = 0;
+
+            MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO informacionfamilia (Alumnos_CodAlumno, PersonasHabitan, TienenMasHijos, HabitanOtrosFami, MiemEnTotal, CuantMiembrTrab, IngresoAbuela,IngresoMadre,IngresoPadre, IngresoHijo, Pension, OtrosIngresos, TotalMensLemp, GastoEnergiaElec, GastoAgua, GastoTel, GastoComida, GastoTransp, GastoSalub, GastoEduca, GastoGaso,GastoRopa, GastoVivienda, OtrosGastos,TotalGastos)VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', '{16}', '{17}', '{18}', '{19}', '{20}', '{21}', '{22}', '{23}', '{24}','{25}')",
+                infoFamilia.CodAlumno1,infoFamilia.PersonasHabitan1,infoFamilia.TieneMasHijos1, infoFamilia.HabitanOtrosFamiliares1, infoFamilia.MienEnTotal1,infoFamilia.CuantosMiembrosTrabajan1,infoFamilia.IngresoAbuela1,infoFamilia.IngresoMadre1,infoFamilia.IngresoPadre1,infoFamilia.IngresoHijo1,infoFamilia.Pension1,infoFamilia.OtrosIngresos1,infoFamilia.TotalIngresos1,infoFamilia.GastosEnergia1,infoFamilia.GastoAgua1,infoFamilia.GastoTel1,infoFamilia.GastoComida1,infoFamilia.GastoTransp1,infoFamilia.GastoSalub1,infoFamilia.GastoEduca1,infoFamilia.GastoGaso1,infoFamilia.GastoRpa1,infoFamilia.GastoVivienda1,infoFamilia.OtrosGastos1,infoFamilia.TotalGastos1), C_EstudioSocioMetodos.ObtenerConexion());
+            retorno = comando.ExecuteNonQuery();
+            return retorno;
+        }
 
 
         public static List<C_DatosGenerales> Buscar( string nombreAlumno)
