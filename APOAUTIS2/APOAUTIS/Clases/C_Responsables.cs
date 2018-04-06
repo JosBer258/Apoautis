@@ -15,7 +15,7 @@ namespace APOAUTIS.Clases
     {
         private int codResp;
         private string nomResp;
-        private int idResp;
+        private string idResp;
         private string domResp;
         private string profResp;
         private int edadResp;
@@ -51,20 +51,7 @@ namespace APOAUTIS.Clases
             {
                 nomResp = value;
             }
-        }
-
-        public int IdResp
-        {
-            get
-            {
-                return idResp;
-            }
-
-            set
-            {
-                idResp = value;
-            }
-        }
+        }                
 
         public string DomResp
         {
@@ -198,6 +185,19 @@ namespace APOAUTIS.Clases
             }
         }
 
+        public string IdResp
+        {
+            get
+            {
+                return idResp;
+            }
+
+            set
+            {
+                idResp = value;
+            }
+        }
+
         public void Fill_DGV_Resp(DataGridView dgv)
         {
 
@@ -323,7 +323,7 @@ namespace APOAUTIS.Clases
             fResp.txtCodResp.Text = string.Empty;
             fResp.txtNomResp.Text = string.Empty;
             fResp.txtDomResp.Text = string.Empty;
-            fResp.txtEdadResp.Text = string.Empty;
+            //fResp.txtEdadResp.Text = string.Empty;
             fResp.txtIdResp.Text = string.Empty;
             fResp.txtTelCasResp.Text = string.Empty;
             fResp.txtTelCelResp.Text = string.Empty;
@@ -349,25 +349,16 @@ En BD
 OFICIO Y PROFESION SON LO MISMO
 # de ID debe ser STRING
 ??CAMPO DE EDAD EN RESPONSABLES
-??LUGAR DE ORIGEN
+??LUGAR DE ORIGEN en Alumnos
 Quitar UNIQ # DE CEL
-
-** CORREO DEBE ACEPTAR GUION BAJO
-
-CLICK DERECHO
-* VALIDAR ESPACIOS
-* VALIDAR FECHA DE NACIMIENTO
-** Que se cambie a no el combobox
+COD DE EVAL AUTO
 
 MAX LENGTH DE TODOS LOS TEXTBOXES
-VALIDAR FECHA
 MOSTRAR COD DE EVAL AUTOINC
 SOLO NUMEROS NO DIGITOS
-COD DE EVAL AUTO
-QUITAR VALIDACIONES DE TXT COD, NOM E ID
-UNIQ # DE ID
-UNIQ COD
-SI del trabajo
 
+**SI del trabajo
+CORREO DEBE ACEPTAR GUION BAJO
+Que se cambie a no el combobox
 
 */

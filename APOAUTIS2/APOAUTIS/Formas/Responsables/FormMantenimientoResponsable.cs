@@ -67,10 +67,13 @@ namespace APOAUTIS.Formas.Responsables
             txtProfResp.Text = row.Cells["Profesion"].Value.ToString();
             cResp.Fill_DGV_Alum(DGV_ShowAlumnosResp, row.Cells["Codigo de Responsable"].Value.ToString());
 
+            
+            if (tmp.ToUpperInvariant().Contains("SI, ") == true) { cmbTrabResp.SelectedIndex = 0; } else { cmbTrabResp.SelectedIndex = 1; }
             string tmp2 = tmp.Replace("Si,", String.Empty);
             tmp2 = tmp.Replace("No,", String.Empty);
             txtLugResp.Text = tmp2.Trim();
-            
+            tmp2 = txtLugResp.Text.Replace("Si,", String.Empty);
+            txtLugResp.Text = tmp2.Trim();
             MessageBox.Show("Datos Cargados","");
             
             
@@ -156,7 +159,7 @@ namespace APOAUTIS.Formas.Responsables
             txtCodResp.Text = string.Empty;
             txtNomResp.Text = string.Empty;
             txtDomResp.Text = string.Empty;
-            txtEdadResp.Text = string.Empty;
+            //txtEdadResp.Text = string.Empty;
             txtIdResp.Text = string.Empty;
             txtTelCasResp.Text = string.Empty;
             txtTelCelResp.Text = string.Empty;
@@ -202,7 +205,7 @@ namespace APOAUTIS.Formas.Responsables
                         cResp.TelCasResp = txtTelCasResp.Text;
                         cResp.TelCelResp = txtTelCelResp.Text;
                         cResp.TelTrabResp = txtTelTrabResp.Text;
-                        cResp.IdResp = Convert.ToInt32(txtIdResp.Text);
+                        cResp.IdResp = txtIdResp.Text;
                         cResp.LugTrab = cmbTrabResp.SelectedItem.ToString() + ", " + txtLugResp.Text;
                         cResp.ProfResp = txtProfResp.Text;
                         //cResp.EdadResp = Convert.ToInt32(txtEdadResp.Text);
@@ -244,7 +247,7 @@ namespace APOAUTIS.Formas.Responsables
                             cResp.TelCasResp = txtTelCasResp.Text;
                             cResp.TelCelResp = txtTelCelResp.Text;
                             cResp.TelTrabResp = txtTelTrabResp.Text;
-                            cResp.IdResp = Convert.ToInt32(txtIdResp.Text);
+                            cResp.IdResp = txtIdResp.Text;
                             cResp.LugTrab = cmbTrabResp.SelectedItem.ToString() + ", " + txtLugResp.Text;
                             cResp.ProfResp = txtProfResp.Text;
                             //cResp.EdadResp = Convert.ToInt32(txtEdadResp.Text);

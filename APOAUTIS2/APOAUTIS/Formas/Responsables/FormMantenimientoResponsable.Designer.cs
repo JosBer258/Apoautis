@@ -42,8 +42,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.cmdEstResp = new System.Windows.Forms.ComboBox();
             this.cmbTrabResp = new System.Windows.Forms.ComboBox();
-            this.txtEdadResp = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -78,7 +76,7 @@
             // btnSalir
             // 
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(672, 459);
+            this.btnSalir.Location = new System.Drawing.Point(684, 463);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(99, 35);
             this.btnSalir.TabIndex = 31;
@@ -94,7 +92,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(775, 441);
+            this.tabControl1.Size = new System.Drawing.Size(775, 445);
             this.tabControl1.TabIndex = 30;
             // 
             // tabPage1
@@ -105,7 +103,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(767, 415);
+            this.tabPage1.Size = new System.Drawing.Size(767, 419);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Busqueda de Responsable";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -154,7 +152,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(767, 415);
+            this.tabPage2.Size = new System.Drawing.Size(767, 419);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Datos de Responsable";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -165,7 +163,7 @@
             this.Pest1_Grupo_ShowAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest1_Grupo_ShowAlumno.Location = new System.Drawing.Point(6, 275);
             this.Pest1_Grupo_ShowAlumno.Name = "Pest1_Grupo_ShowAlumno";
-            this.Pest1_Grupo_ShowAlumno.Size = new System.Drawing.Size(755, 134);
+            this.Pest1_Grupo_ShowAlumno.Size = new System.Drawing.Size(755, 138);
             this.Pest1_Grupo_ShowAlumno.TabIndex = 4;
             this.Pest1_Grupo_ShowAlumno.TabStop = false;
             this.Pest1_Grupo_ShowAlumno.Text = "Alumnos bajo su cuidado";
@@ -183,7 +181,7 @@
             this.DGV_ShowAlumnosResp.Name = "DGV_ShowAlumnosResp";
             this.DGV_ShowAlumnosResp.ReadOnly = true;
             this.DGV_ShowAlumnosResp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_ShowAlumnosResp.Size = new System.Drawing.Size(743, 104);
+            this.DGV_ShowAlumnosResp.Size = new System.Drawing.Size(743, 113);
             this.DGV_ShowAlumnosResp.TabIndex = 2;
             // 
             // Pest1_Grupo_DatosEncargado
@@ -192,8 +190,6 @@
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.label12);
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.cmdEstResp);
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.cmbTrabResp);
-            this.Pest1_Grupo_DatosEncargado.Controls.Add(this.txtEdadResp);
-            this.Pest1_Grupo_DatosEncargado.Controls.Add(this.label13);
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.btnLimpiar);
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.btnAceptar);
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.label7);
@@ -227,7 +223,7 @@
             // txtCorrResp
             // 
             this.txtCorrResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorrResp.Location = new System.Drawing.Point(189, 191);
+            this.txtCorrResp.Location = new System.Drawing.Point(189, 167);
             this.txtCorrResp.MaxLength = 45;
             this.txtCorrResp.Name = "txtCorrResp";
             this.txtCorrResp.Size = new System.Drawing.Size(158, 22);
@@ -238,7 +234,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(36, 194);
+            this.label12.Location = new System.Drawing.Point(36, 170);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(55, 16);
             this.label12.TabIndex = 29;
@@ -267,26 +263,6 @@
             this.cmbTrabResp.Size = new System.Drawing.Size(101, 24);
             this.cmbTrabResp.TabIndex = 27;
             this.cmbTrabResp.SelectedIndexChanged += new System.EventHandler(this.cmbTrabResp_SelectedIndexChanged);
-            // 
-            // txtEdadResp
-            // 
-            this.txtEdadResp.Enabled = false;
-            this.txtEdadResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEdadResp.Location = new System.Drawing.Point(189, 163);
-            this.txtEdadResp.MaxLength = 3;
-            this.txtEdadResp.Name = "txtEdadResp";
-            this.txtEdadResp.Size = new System.Drawing.Size(158, 22);
-            this.txtEdadResp.TabIndex = 26;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(36, 163);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(94, 16);
-            this.label13.TabIndex = 25;
-            this.label13.Text = "Edad (Años)";
             // 
             // btnLimpiar
             // 
@@ -550,7 +526,6 @@
         private System.Windows.Forms.GroupBox Pest1_Grupo_DatosEncargado;
         private System.Windows.Forms.ComboBox cmdEstResp;
         private System.Windows.Forms.ComboBox cmbTrabResp;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Label label7;
@@ -566,7 +541,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label14;
         public System.Windows.Forms.TextBox txtCodResp;
-        public System.Windows.Forms.TextBox txtEdadResp;
         public System.Windows.Forms.TextBox txtTelTrabResp;
         public System.Windows.Forms.TextBox txtTelCelResp;
         public System.Windows.Forms.TextBox txtDomResp;
