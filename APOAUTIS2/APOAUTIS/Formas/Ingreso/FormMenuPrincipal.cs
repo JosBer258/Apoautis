@@ -141,5 +141,11 @@ namespace APOAUTIS.Formas.Ingreso
             FormRangoMensualidad Mens = new FormRangoMensualidad();
             Mens.ShowDialog();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Prueba a= new Prueba();
+            a.ShowDialog();
+        }
     }
 }

@@ -158,8 +158,7 @@ namespace APOAUTIS
                 CL_Entrevista.Var_nombre_completo_alumno = FV_Nombre;
                 CL_Entrevista.Fun_ExtraerInformacion_Anamnesis();
                 Fun_MostrarDatosAnamnesis();
-           
-
+          
 
         }
 

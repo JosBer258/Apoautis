@@ -64,6 +64,7 @@
     <Compile Include="Clases\C_ShowAlum.cs" />
     <Compile Include="Clases\C_Usuarios.cs" />
     <Compile Include="Clases\C_Validaciones.cs" />
+    <Compile Include="Clases\C_VistaEntrevistaPadres.cs" />
     <Compile Include="Clases\DataGirdView.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Formas\Alumnos\FormGlobalShowAlum.cs">
@@ -83,6 +84,12 @@
     </Compile>
     <Compile Include="Formas\Estudio Socioeconomico\FromBusquedaAlumno.Designer.cs">
       <DependentUpon>FromBusquedaAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Ingreso\Prueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Ingreso\Prueba.Designer.cs">
+      <DependentUpon>Prueba.cs</DependentUpon>
     </Compile>
     <Compile Include="Formas\Manuales\FormManual.cs">
       <SubType>Form</SubType>
@@ -207,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Estudio Socioeconomico\FromBusquedaAlumno.resx">
       <DependentUpon>FromBusquedaAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Ingreso\Prueba.resx">
+      <DependentUpon>Prueba.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Manuales\FormManual.resx">
       <DependentUpon>FormManual.cs</DependentUpon>

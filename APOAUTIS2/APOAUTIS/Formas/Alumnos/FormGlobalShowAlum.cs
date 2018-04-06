@@ -1,5 +1,6 @@
 ﻿using APOAUTIS.Clases;
 using APOAUTIS.Formas.Entrevista_Padres;
+using APOAUTIS.Formas.Ingreso;
 using APOAUTIS.Formas.Matricula;
 using System;
 using System.Collections.Generic;
@@ -67,6 +68,13 @@ namespace APOAUTIS.Formas.Alumnos
                     row.Cells["Nombre del Alumno"].Value.ToString());
                     Form_Ent.Fun_MostrarDatosAnamnesis();
                 }
+                else if (Accion == "PP")
+                {
+                   Prueba Form_Ent = new Prueba();
+                    Form_Ent.Fun_ExtraerDatos((int)Convert.ToDouble(row.Cells["Codigo"].Value.ToString()),
+                    row.Cells["Nombre del Alumno"].Value.ToString());
+                    Form_Ent.Fun_MostrarDatosAnamnesis();
+                }
 
                 this.Close();
 
@@ -100,7 +108,13 @@ namespace APOAUTIS.Formas.Alumnos
                     row.Cells["Nombre del Alumno"].Value.ToString());
                     Form_Ent.Fun_MostrarDatosAnamnesis();
                 }
-
+                else if (Accion == "PP")
+                {
+                    Prueba Form_Ent = new Prueba();
+                    Form_Ent.Fun_ExtraerDatos((int)Convert.ToDouble(row.Cells["Codigo"].Value.ToString()),
+                    row.Cells["Nombre del Alumno"].Value.ToString());
+                    Form_Ent.Fun_MostrarDatosAnamnesis();
+                }
 
 
                 this.Close();
