@@ -60,6 +60,8 @@
     <Compile Include="Clases\C_EvalPsico.cs" />
     <Compile Include="Clases\C_Login.cs" />
     <Compile Include="Clases\C_MontoMens.cs" />
+    <Compile Include="Clases\C_Matricula.cs" />
+    <Compile Include="Clases\C_MontoFactura.cs" />
     <Compile Include="Clases\C_MuestraHistorialMatricu.cs" />
     <Compile Include="Clases\C_SalarioMensaulidad.cs" />
     <Compile Include="Clases\C_ShowAlum.cs" />

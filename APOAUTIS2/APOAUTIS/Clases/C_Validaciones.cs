@@ -248,7 +248,7 @@ namespace APOAUTIS.Clases
         {
             if (!Char.IsNumber(e.KeyChar) &&
                e.KeyChar != Convert.ToChar(Keys.Back) && !Char.IsLetter(e.KeyChar) && e.KeyChar != Convert.ToChar(Keys.Enter)
-               && e.KeyChar != Convert.ToChar('@') && e.KeyChar != Convert.ToChar('.'))
+               && e.KeyChar != Convert.ToChar('@') && e.KeyChar != Convert.ToChar('.') && e.KeyChar != Convert.ToChar('_'))
             {
                 e.Handled = true;
             }

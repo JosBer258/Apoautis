@@ -15,7 +15,7 @@ namespace APOAUTIS.Clases
     {
         private int codResp;
         private string nomResp;
-        private int idResp;
+        private string idResp;
         private string domResp;
         private string profResp;
         private int edadResp;
@@ -52,20 +52,7 @@ namespace APOAUTIS.Clases
             {
                 nomResp = value;
             }
-        }
-
-        public int IdResp
-        {
-            get
-            {
-                return idResp;
-            }
-
-            set
-            {
-                idResp = value;
-            }
-        }
+        }                
 
         public string DomResp
         {
@@ -199,23 +186,39 @@ namespace APOAUTIS.Clases
             }
         }
 
+        public string IdResp
+        {
+            get
+            {
+                return idResp;
+            }
+
+            set
+            {
+                idResp = value;
+            }
+        }
+
         public void Fill_DGV_Resp(DataGridView dgv)
         {
 
             cnx.Open();
             try
             {
-                DataAdapter = new MySqlDataAdapter(@"SELECT CodResp as 'Codigo de Responsable', 
-                                                    NomComRes as 'Nombre Completo', 
-                                                    NumIdRes as 'Numero de Identidad', 
-                                                    DomicilioRes as 'Domicilio',
-                                                    ProfecionRes as 'Profesion',
-                                                    LugarTrabajoRes as 'Trabajo',
-                                                    TelCasaRes as 'Telefono de Casa',
-                                                    TelCelRes as 'Telefono Celular',
-                                                    TelTrabajoRes as 'Telefono de Trabajo',
-                                                    CorreoRes as 'Correo' 
-                                                    FROM responsables", ccnx);
+                DataAdapter = new MySqlDataAdapter(@"SELECT A.CodResp as 'Codigo de Responsable',
+					                                    B.DescripcionEstado as 'Estado',
+					                                    A.NomComRes as 'Nombre Completo', 
+					                                    A.NumIdRes as 'Numero de Identidad', 
+					                                    A.DomicilioRes as 'Domicilio',
+					                                    A.ProfecionRes as 'Profesion',
+					                                    A.LugarTrabajoRes as 'Trabajo',
+					                                    A.TelCasaRes as 'Telefono de Casa',
+					                                    A.TelCelRes as 'Telefono Celular',
+					                                    A.TelTrabajoRes as 'Telefono de Trabajo',
+					                                    A.CorreoRes as 'Correo' 
+					                                    FROM responsables as A
+                                                        inner join Estados as B
+                                                        on A.Estado = B.CodEstado", ccnx);
                 dt = new DataTable();
                 DataAdapter.Fill(dt);
                 dgv.DataSource = dt;
@@ -395,29 +398,32 @@ namespace APOAUTIS.Clases
             try
             {
                 DataAdapter = new MySqlDataAdapter(@"SELECT  A.CodAlumno as 'Codigo de Alumno',
-		                                                A.NomAlumno as 'Nombre Completo',
-		                                                A.LugarNaciAlum as 'Lugar de Nacimiento',
-		                                                A.FechaNaciAlum as 'Fecha de Nacimiento',
-		                                                A.EdadAlum as 'Edad en Años',
-		                                                A.EdadCronologica as 'Edad Cronologica',
-		                                                A.SexoAlum as 'Sexo',
-		                                                A.IdAlum as 'Numero de Identidad',
-		                                                A.DireccionAlum as 'Direccion',
-		                                                A.TelFijoAlum as 'Telefono Fijo',
-		                                                A.CelAlumno as 'Telefono Celular',
-		                                                A.EscolaridadAlum as 'Escolaridad',
-		                                                A.LugarOrigAlum as 'Lugar de Origen',
-		                                                A.InstProceAlumno as 'Instituto de Procedencia',
-		                                                A.InstDondeEstaIncluido as 'Instituto Donde Esta Incluido' 
-                                                        FROM responsables as R
-                                                        INNER JOIN `alumnos/responsables` as AR 
-                                                        ON R.CodResp = AR.CodResp 
-                                                        INNER JOIN  alumnos as A
-                                                        ON AR.CodAlumno = A.CodAlumno
-                                                        WHERE R.CodResp  = " + codR, ccnx);
-                dt = new DataTable();
-                DataAdapter.Fill(dt);
-                dgv.DataSource = dt;
+		                                            E.DescripcionEstado as 'Estado',
+		                                            A.NomAlumno as 'Nombre Completo',
+		                                            A.LugarNaciAlum as 'Lugar de Nacimiento',
+		                                            A.FechaNaciAlum as 'Fecha de Nacimiento',
+		                                            A.EdadAlum as 'Edad en Años',
+		                                            A.EdadCronologica as 'Edad Cronologica',
+		                                            A.SexoAlum as 'Sexo',
+		                                            A.IdAlum as 'Numero de Identidad',
+		                                            A.DireccionAlum as 'Direccion',
+		                                            A.TelFijoAlum as 'Telefono Fijo',
+		                                            A.CelAlumno as 'Telefono Celular',
+		                                            A.EscolaridadAlum as 'Escolaridad',
+		                                            A.LugarOrigAlum as 'Lugar de Origen',
+		                                            A.InstProceAlumno as 'Instituto de Procedencia',
+		                                            A.InstDondeEstaIncluido as 'Instituto Donde Esta Incluido' 
+		                                            FROM responsables as R
+		                                            INNER JOIN `alumnos/responsables` as AR 
+		                                            ON R.CodResp = AR.CodResp 
+		                                            INNER JOIN  alumnos as A
+		                                            ON AR.CodAlumno = A.CodAlumno
+                                                    INNER JOIN  estados as E
+		                                            ON A.Estado = E.CodEstado
+                                                    WHERE R.CodResp = " + codR, ccnx);
+                                                    dt = new DataTable();
+                                                    DataAdapter.Fill(dt);
+                                                    dgv.DataSource = dt;
 
             }
             catch
@@ -430,17 +436,20 @@ namespace APOAUTIS.Clases
         public void DGV_Busq(DataGridView dgv, string nombreResp)
         {
             
-            string searchQuery = @"SELECT CodResp as 'Codigo de Responsable', 
-                                            NomComRes as 'Nombre Completo', 
-                                            NumIdRes as 'Numero de Identidad', 
-                                            DomicilioRes as 'Domicilio',
-                                            ProfecionRes as 'Profesion',
-                                            LugarTrabajoRes as 'Trabajo',
-                                            TelCasaRes as 'Telefono de Casa',
-                                            TelCelRes as 'Telefono Celular',
-                                            TelTrabajoRes as 'Telefono de Trabajo',
-                                            CorreoRes as 'Correo'
-                                            FROM responsables WHERE NomComRes LIKE '%" + nombreResp + "%'";
+            string searchQuery = @"SELECT A.CodResp as 'Codigo de Responsable',
+					                                    B.DescripcionEstado as 'Estado',
+					                                    A.NomComRes as 'Nombre Completo', 
+					                                    A.NumIdRes as 'Numero de Identidad', 
+					                                    A.DomicilioRes as 'Domicilio',
+					                                    A.ProfecionRes as 'Profesion',
+					                                    A.LugarTrabajoRes as 'Trabajo',
+					                                    A.TelCasaRes as 'Telefono de Casa',
+					                                    A.TelCelRes as 'Telefono Celular',
+					                                    A.TelTrabajoRes as 'Telefono de Trabajo',
+					                                    A.CorreoRes as 'Correo' 
+					                                    FROM responsables as A
+                                                        inner join Estados as B
+                                                        on A.Estado = B.CodEstado WHERE A.NomComRes LIKE '%" + nombreResp + "%'";
             MySqlDataAdapter adapter = new MySqlDataAdapter(searchQuery, cnx);
             DataTable table = new DataTable();
             adapter.Fill(table);
@@ -458,10 +467,11 @@ namespace APOAUTIS.Clases
                                     TelCasaRes = '{5}',
                                     TelCelRes = '{6}',
                                     TelTrabajoRes = '{7}',
-                                    CorreoRes = '{8}'
-                                    WHERE CodResp = '{9}'",
+                                    CorreoRes = '{8}',
+                                    Estado = '{9}'
+                                    WHERE CodResp = '{10}'",
                                         nomResp, idResp, domResp, profResp, lugTrab,
-                                        telCasResp, telCelResp, telTrabResp, corrResp, codResp);
+                                        telCasResp, telCelResp, telTrabResp, corrResp, estResp, codResp);
 
                 this.cmd = new MySqlCommand(this.sql, this.cnx);
                 this.cnx.Open();
@@ -484,7 +494,7 @@ namespace APOAUTIS.Clases
             fResp.txtCodResp.Text = string.Empty;
             fResp.txtNomResp.Text = string.Empty;
             fResp.txtDomResp.Text = string.Empty;
-            fResp.txtEdadResp.Text = string.Empty;
+            //fResp.txtEdadResp.Text = string.Empty;
             fResp.txtIdResp.Text = string.Empty;
             fResp.txtTelCasResp.Text = string.Empty;
             fResp.txtTelCelResp.Text = string.Empty;
@@ -510,25 +520,16 @@ En BD
 OFICIO Y PROFESION SON LO MISMO
 # de ID debe ser STRING
 ??CAMPO DE EDAD EN RESPONSABLES
-??LUGAR DE ORIGEN
+??LUGAR DE ORIGEN en Alumnos
 Quitar UNIQ # DE CEL
-
-** CORREO DEBE ACEPTAR GUION BAJO
-
-CLICK DERECHO
-* VALIDAR ESPACIOS
-* VALIDAR FECHA DE NACIMIENTO
-** Que se cambie a no el combobox
+COD DE EVAL AUTO
 
 MAX LENGTH DE TODOS LOS TEXTBOXES
-VALIDAR FECHA
 MOSTRAR COD DE EVAL AUTOINC
 SOLO NUMEROS NO DIGITOS
-COD DE EVAL AUTO
-QUITAR VALIDACIONES DE TXT COD, NOM E ID
-UNIQ # DE ID
-UNIQ COD
-SI del trabajo
 
+**SI del trabajo
+CORREO DEBE ACEPTAR GUION BAJO
+Que se cambie a no el combobox
 
 */

@@ -13,7 +13,10 @@ namespace APOAUTIS
 {
     public partial class FrmMatricula : Form
     {
-       
+        Clases.C_Validaciones Val = new Clases.C_Validaciones();
+        Clases.C_Matricula cEval = new Clases.C_Matricula();
+        Clases.C_Alumnos cAlum = new Clases.C_Alumnos();
+
         public FrmMatricula()
         {
             InitializeComponent();
@@ -72,6 +75,16 @@ namespace APOAUTIS
         {
             FormaEntPadres Ent = new FormaEntPadres();
             Ent.ShowDialog();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
