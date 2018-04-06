@@ -292,6 +292,7 @@
             this.Pest2_Pest1_Bttn_Aceptar.TabIndex = 3;
             this.Pest2_Pest1_Bttn_Aceptar.Text = "Aceptar";
             this.Pest2_Pest1_Bttn_Aceptar.UseVisualStyleBackColor = true;
+            this.Pest2_Pest1_Bttn_Aceptar.Click += new System.EventHandler(this.Pest2_Pest1_Bttn_Aceptar_Click);
             // 
             // Pest2_Pest1_Bttn_Limpiar
             // 
@@ -469,6 +470,7 @@
             this.Pest2_Pest1_Txt_InstiProcedencia.Name = "Pest2_Pest1_Txt_InstiProcedencia";
             this.Pest2_Pest1_Txt_InstiProcedencia.Size = new System.Drawing.Size(138, 20);
             this.Pest2_Pest1_Txt_InstiProcedencia.TabIndex = 27;
+            this.Pest2_Pest1_Txt_InstiProcedencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Pest1_Txt_InstiProcedencia_KeyPress);
             // 
             // label30
             // 
@@ -485,6 +487,7 @@
             this.Pest2_Pest1_Txt_Celular.Name = "Pest2_Pest1_Txt_Celular";
             this.Pest2_Pest1_Txt_Celular.Size = new System.Drawing.Size(104, 20);
             this.Pest2_Pest1_Txt_Celular.TabIndex = 25;
+            this.Pest2_Pest1_Txt_Celular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Pest1_Txt_Celular_KeyPress);
             // 
             // label31
             // 
@@ -501,6 +504,7 @@
             this.Pest2_Pest1_Txt_Instituto.Name = "Pest2_Pest1_Txt_Instituto";
             this.Pest2_Pest1_Txt_Instituto.Size = new System.Drawing.Size(163, 20);
             this.Pest2_Pest1_Txt_Instituto.TabIndex = 23;
+            this.Pest2_Pest1_Txt_Instituto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Pest1_Txt_Instituto_KeyPress);
             // 
             // label32
             // 
@@ -517,6 +521,7 @@
             this.Pest2_Pest1_Txt_Escolaridad.Name = "Pest2_Pest1_Txt_Escolaridad";
             this.Pest2_Pest1_Txt_Escolaridad.Size = new System.Drawing.Size(104, 20);
             this.Pest2_Pest1_Txt_Escolaridad.TabIndex = 21;
+            this.Pest2_Pest1_Txt_Escolaridad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Pest1_Txt_Escolaridad_KeyPress);
             // 
             // label33
             // 
@@ -533,6 +538,7 @@
             this.Pest2_Pest1_Txt_TelefonoFijo.Name = "Pest2_Pest1_Txt_TelefonoFijo";
             this.Pest2_Pest1_Txt_TelefonoFijo.Size = new System.Drawing.Size(104, 20);
             this.Pest2_Pest1_Txt_TelefonoFijo.TabIndex = 19;
+            this.Pest2_Pest1_Txt_TelefonoFijo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Pest1_Txt_TelefonoFijo_KeyPress);
             // 
             // label24
             // 
@@ -550,6 +556,7 @@
             this.Pest2_Pest1_Txt_Direccion.Name = "Pest2_Pest1_Txt_Direccion";
             this.Pest2_Pest1_Txt_Direccion.Size = new System.Drawing.Size(165, 42);
             this.Pest2_Pest1_Txt_Direccion.TabIndex = 17;
+            this.Pest2_Pest1_Txt_Direccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Pest1_Txt_Direccion_KeyPress);
             // 
             // label25
             // 
@@ -601,6 +608,8 @@
             this.Pest2_Pest1_Txt_Sexo.Name = "Pest2_Pest1_Txt_Sexo";
             this.Pest2_Pest1_Txt_Sexo.Size = new System.Drawing.Size(104, 20);
             this.Pest2_Pest1_Txt_Sexo.TabIndex = 11;
+            this.Pest2_Pest1_Txt_Sexo.TextChanged += new System.EventHandler(this.Pest2_Pest1_Txt_Sexo_TextChanged);
+            this.Pest2_Pest1_Txt_Sexo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Pest1_Txt_Sexo_KeyPress);
             // 
             // label28
             // 

@@ -370,6 +370,23 @@ where CodAlumno='{2}'", EdadAlum11, EdadCronologica11, CodAlumno11);
 
             this.cnx.Close();
         }
+
+
+        public void updateAlumnos(string SexoAlum, string DireccionAlum, string TelfijoAlum, string CelAlumno, 
+            string EscolaridadAlum, string InstProceAlumno, string InstDondeEstaIncluido, int CodAlumno)
+        {
+            this.sql = string.Format(@"update alumnos set SexoAlum='{0}',DireccionAlum='{1}',TelfijoAlum='{2}',
+CelAlumno='{3}',EscolaridadAlum='{4}',InstProceAlumno='{5}',
+InstDondeEstaIncluido='{6}' where CodAlumno='{7}'", SexoAlum, DireccionAlum, TelfijoAlum, CelAlumno, EscolaridadAlum,
+InstProceAlumno, InstDondeEstaIncluido, CodAlumno);
+            this.cmd = new MySqlCommand(this.sql, this.cnx);
+            this.cnx.Open();
+            MySqlDataReader Reg = null;
+            Reg = this.cmd.ExecuteReader();
+
+            this.cnx.Close();
+        }
+
        
 
     }

@@ -283,6 +283,70 @@ namespace APOAUTIS.Clases
             catch { }
             this.cnx.Close();
         }
+        public bool VerificarDuplicidadNombreID()
+        {
+            if(VerificarDuplicidadID()==true && VerificarDuplicidadNombre() == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
+        }
+        public bool VerificarDuplicidadNombre()
+        {
+            this.sql = string.Format(@"select * from responsables where NomComRes='{0}'", NomResp);
+            this.cmd = new MySqlCommand(this.sql, this.cnx);
+            this.cnx.Open();
+            bool l = false;
+            MySqlDataReader Reg = null;
+            Reg = this.cmd.ExecuteReader();
+
+            if (Reg.Read())
+            {
+
+                this.cnx.Close();
+                l= false;
+
+            }
+            else
+            {
+                this.cnx.Close();
+
+                l= true;
+            }
+
+            this.cnx.Close();
+            return l;
+        }
+        public bool VerificarDuplicidadID()
+        {
+            this.sql = string.Format(@"select * from responsables where NumIdRes='{0}'", idResp);
+            this.cmd = new MySqlCommand(this.sql, this.cnx);
+            this.cnx.Open();
+            bool l = false;
+            MySqlDataReader Reg = null;
+            Reg = this.cmd.ExecuteReader();
+
+            if (Reg.Read())
+            {
+
+                this.cnx.Close();
+                l = false;
+
+            }
+            else
+            {
+                this.cnx.Close();
+
+                l = true;
+            }
+
+            this.cnx.Close();
+            return l;
+        }
 
         public void insertResponsableAlumno(int alumno, int responsable)
         {
