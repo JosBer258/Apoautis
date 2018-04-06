@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace APOAUTIS.Clases
 {
-    class C_MontoMens : Conexion
+    class C_MontoFactura : Conexion
     {
         private string var_nom_alumno;
         private string var_resp_nombres;
@@ -154,19 +154,40 @@ namespace APOAUTIS.Clases
         public void Fun_CalcularMensualidad()
         {
             double Var_Total;
+            double Var_SalarioMin1= 8448.40;
+            double Var_SalarioMin2= 16896.80;
+            double Var_SalarioMin3=25345.20;
+            double Var_SalarioMin4=33793.60;
+            double Var_SalarioMin5=42242.00;
+
             Var_Total = (Double)Convert.ToDecimal(Var_total_ingresos);
 
-            this.sql = string.Format("select cargorangoinic, cargvalmensul from cuota  where  '{0}' > cargorangoinic order by CAST(cargorangoinic as DECIMAL(10, 2)) desc limit 1;", Var_Total);
-            this.cnx.Open();
-            this.cmd = new MySql.Data.MySqlClient.MySqlCommand(this.sql, this.cnx);
-            MySql.Data.MySqlClient.MySqlDataReader Reg = null;
-            Reg = this.cmd.ExecuteReader();
-
-            if (Reg.Read())
+            if(Var_Total< Var_SalarioMin1)
             {
-                Var_mensualidad = (float) Convert.ToDouble(Reg["cargvalmensul"].ToString());
+                Var_mensualidad = 50;
+            }else
+                if(Var_Total >= Var_SalarioMin1  && Var_Total < Var_SalarioMin2)
+                    {
+                                Var_mensualidad = 100;
+                    }else
+                if(Var_Total >= Var_SalarioMin2 && Var_Total < Var_SalarioMin3)
+                {
+                    Var_mensualidad = 200;
+                }else
+                if (Var_Total >= Var_SalarioMin3 && Var_Total < Var_SalarioMin4)
+                     {
+                            Var_mensualidad = 300;
+                       }else
+                if (Var_Total >= Var_SalarioMin4 && Var_Total < Var_SalarioMin5)
+                    {
+                            Var_mensualidad = 400;
+                    }
+            else
+            {
+                Var_mensualidad = 500;
             }
-            this.cnx.Close();
+
+
 
         }
 

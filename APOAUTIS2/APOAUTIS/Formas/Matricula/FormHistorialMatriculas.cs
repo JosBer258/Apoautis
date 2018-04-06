@@ -81,29 +81,5 @@ namespace APOAUTIS.Formas.Matricula
             Cmb_Anno.SelectedIndex = -1;
             Cl_Historial.Fun_MostrarTodos(DGV_Show);
         }
-
-        private void Txt_NombreEstudiante_TextChanged(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(Txt_NombreEstudiante.Text))
-            {
-                Cl_Historial.Fun_MostrarTodos(DGV_Show);
-            }
-            else
-            {
-                Cl_Historial.Var_nom_filtro = Txt_NombreEstudiante.Text;
-                Cl_Historial.Fun_MostrarPorNombre(DGV_Show);
-            }
-            
-        }
-
-        private void Cmb_Anno_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (Cmb_Anno.SelectedIndex == -1) {
-                Cl_Historial.Fun_MostrarTodos(DGV_Show);
-            } else {
-                Cl_Historial.Var_anio_busqueda =  (int) Convert.ToDouble( Cmb_Anno.Text);
-                Cl_Historial.Fun_MostrarPorYear(DGV_Show);
-            }
-        }
     }
 }

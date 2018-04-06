@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.Bttn_Out = new System.Windows.Forms.Button();
             this.DGV_Data = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Rad_New = new System.Windows.Forms.RadioButton();
             this.Rad_Update = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Cmb_Estado = new System.Windows.Forms.ComboBox();
             this.Bttn_OK = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.Bttn_Clean = new System.Windows.Forms.Button();
@@ -45,11 +42,11 @@
             this.Txt_NameUser = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.Txt_PasdUser = new System.Windows.Forms.TextBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Cmb_Estado = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Data)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // Bttn_Out
@@ -69,16 +66,11 @@
             this.DGV_Data.AllowUserToDeleteRows = false;
             this.DGV_Data.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGV_Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Data.EnableHeadersVisualStyles = false;
             this.DGV_Data.Location = new System.Drawing.Point(14, 155);
             this.DGV_Data.Name = "DGV_Data";
             this.DGV_Data.ReadOnly = true;
             this.DGV_Data.Size = new System.Drawing.Size(551, 201);
             this.DGV_Data.TabIndex = 124;
-            this.DGV_Data.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Data_CellContentClick);
-            this.DGV_Data.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Data_CellContentDoubleClick);
-            this.DGV_Data.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Data_CellDoubleClick);
-            this.DGV_Data.SelectionChanged += new System.EventHandler(this.DGV_Data_SelectionChanged);
             // 
             // groupBox2
             // 
@@ -104,7 +96,6 @@
             this.Rad_New.TabStop = true;
             this.Rad_New.Text = "Agregar un \r\nNuevo\r\nUsuario\r\n";
             this.Rad_New.UseVisualStyleBackColor = true;
-            this.Rad_New.CheckedChanged += new System.EventHandler(this.Rad_New_CheckedChanged);
             // 
             // Rad_Update
             // 
@@ -116,7 +107,6 @@
             this.Rad_Update.TabStop = true;
             this.Rad_Update.Text = "Actualizar datos\r\nde Usuario";
             this.Rad_Update.UseVisualStyleBackColor = true;
-            this.Rad_Update.CheckedChanged += new System.EventHandler(this.Rad_Update_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -140,26 +130,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información de Usuario";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 105);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 119;
-            this.label1.Text = "Estado";
-            // 
-            // Cmb_Estado
-            // 
-            this.Cmb_Estado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Cmb_Estado.FormattingEnabled = true;
-            this.Cmb_Estado.Location = new System.Drawing.Point(130, 105);
-            this.Cmb_Estado.Name = "Cmb_Estado";
-            this.Cmb_Estado.Size = new System.Drawing.Size(143, 21);
-            this.Cmb_Estado.TabIndex = 118;
-            this.Cmb_Estado.SelectedIndexChanged += new System.EventHandler(this.Cmb_Estado_SelectedIndexChanged);
             // 
             // Bttn_OK
             // 
@@ -195,7 +165,6 @@
             // 
             // Txt_CodUser
             // 
-            this.Txt_CodUser.Enabled = false;
             this.Txt_CodUser.Location = new System.Drawing.Point(130, 30);
             this.Txt_CodUser.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Txt_CodUser.Name = "Txt_CodUser";
@@ -217,11 +186,9 @@
             // 
             this.Txt_NameUser.Location = new System.Drawing.Point(130, 55);
             this.Txt_NameUser.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.Txt_NameUser.MaxLength = 45;
             this.Txt_NameUser.Name = "Txt_NameUser";
             this.Txt_NameUser.Size = new System.Drawing.Size(143, 20);
             this.Txt_NameUser.TabIndex = 111;
-            this.Txt_NameUser.TextChanged += new System.EventHandler(this.Txt_NameUser_TextChanged);
             this.Txt_NameUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_NameUser_KeyPress);
             // 
             // label19
@@ -238,17 +205,30 @@
             // 
             this.Txt_PasdUser.Location = new System.Drawing.Point(130, 80);
             this.Txt_PasdUser.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.Txt_PasdUser.MaxLength = 20;
             this.Txt_PasdUser.Name = "Txt_PasdUser";
             this.Txt_PasdUser.Size = new System.Drawing.Size(143, 20);
             this.Txt_PasdUser.TabIndex = 113;
             this.Txt_PasdUser.UseSystemPasswordChar = true;
-            this.Txt_PasdUser.TextChanged += new System.EventHandler(this.Txt_PasdUser_TextChanged);
             this.Txt_PasdUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_PasdUser_KeyPress);
             // 
-            // errorProvider1
+            // Cmb_Estado
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.Cmb_Estado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Cmb_Estado.FormattingEnabled = true;
+            this.Cmb_Estado.Location = new System.Drawing.Point(130, 105);
+            this.Cmb_Estado.Name = "Cmb_Estado";
+            this.Cmb_Estado.Size = new System.Drawing.Size(143, 21);
+            this.Cmb_Estado.TabIndex = 118;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 105);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.TabIndex = 119;
+            this.label1.Text = "Estado";
             // 
             // FormUsuario
             // 
@@ -271,7 +251,6 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -294,6 +273,5 @@
         private System.Windows.Forms.TextBox Txt_PasdUser;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox Cmb_Estado;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
