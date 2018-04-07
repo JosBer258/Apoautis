@@ -37,18 +37,33 @@ namespace APOAUTIS.Formas.Matricula
         }
 
         public void Fun_CargarDatos(int Var_Codigo, string Var_Nombre)
-        {
+        {try
+            {
                 Cl_Mon.Var_cod_nom = Var_Codigo;
                 Cl_Mon.Var_nom_alumno = Var_Nombre;
+
+                Txt_NombreAlumno.Text = Cl_Mon.Var_nom_alumno;
                 Cl_Mon.Fun_ExtraerResponsables();
+                Txt_Responsable.Text = Cl_Mon.Var_resp_nombres;
                 Cl_Mon.Fun_ExtraerTotalMen();
                 Cl_Mon.Fun_CalcularMensualidad();
                 Txt_Mensualidad.Text = Cl_Mon.Var_mensualidad.ToString();
                 Txt_TotalIngreso.Text = Cl_Mon.Var_total_ingresos;
-                Txt_NombreAlumno.Text = Cl_Mon.Var_nom_alumno;
-                Txt_Responsable.Text = Cl_Mon.Var_resp_nombres;
+            }catch(System.Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+            /*
                 
-   }
+                Cl_Mon.Fun_ExtraerTotalMen();
+                Cl_Mon.Fun_CalcularMensualidad();
+                Txt_Mensualidad.Text = Cl_Mon.Var_mensualidad.ToString();
+                Txt_TotalIngreso.Text = Cl_Mon.Var_total_ingresos;
+
+               */
+
+        }
 
         private void Radio_Agregar_CheckedChanged(object sender, EventArgs e)
         {
