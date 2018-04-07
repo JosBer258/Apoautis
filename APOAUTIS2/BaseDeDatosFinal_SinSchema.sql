@@ -1,5 +1,3 @@
-﻿CREATE DATABASE  IF NOT EXISTS `mydb` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `mydb`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: localhost    Database: mydb
@@ -82,7 +80,7 @@ CREATE TABLE `alumnos` (
 
 LOCK TABLES `alumnos` WRITE;
 /*!40000 ALTER TABLE `alumnos` DISABLE KEYS */;
-INSERT INTO `alumnos` VALUES (1,'Ricardo Mejia','Hospital San Felipe','1995-12-12',22,'Año:22 Mes:4 Dia:0','M','0801199712333','Col. Domingo Azul','6756','123213','Primaria','Colon','St. John','Apo-Autis',4,'azucar','22222'),(2,'Manola','Seguro Social','1992-06-19',25,'Año:25 Mes:10 Dia:-6','F','0801199712444','Col.LasUvas','22222222','11111111','Universidad','Atlantida','Summer Hill','ApoAutis',4,'bancatlan','111'),(3,'pablo','pablo','1997-02-02',21,'Año:21 Mes:2 Dia:8','M','0801199712555','REs.Ae','43554654','5654666','Primaria','Choloma','Summer Hill','Apo-Autis',4,'mendoza','111');
+INSERT INTO `alumnos` VALUES (1,'Ricardo Mejia','Hospital San Felipe','1995-12-12',22,'Año:22 Mes:4 Dia:0','M','0801199712333','Col. Domingo Azul','6756','123213','Primaria','Colon','St. John','Apo-Autis',4,'azucar','22222'),(2,'Manola','Seguro Social','1992-06-19',25,'Año:25 Mes:10 Dia:-6','M','0801199712444','Col.LasUvas','22222222','11111111','Universidad','Atlantida','Summer Hill','ApoAutis',4,'bancatlan','111jjjjjnn'),(3,'pablo','pablo','1997-02-02',21,'Año:21 Mes:2 Dia:8','M','0801199712555','REs.Ae','43554654','5654666','Primaria','Choloma','Summer Hill','Apo-Autis',4,'mendoza','111');
 /*!40000 ALTER TABLE `alumnos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -547,7 +545,7 @@ CREATE TABLE `ingreso` (
   PRIMARY KEY (`CodLogin`),
   KEY `CodUsuario_idx` (`CodUsuario`),
   CONSTRAINT `CodUsuario` FOREIGN KEY (`CodUsuario`) REFERENCES `usuarios` (`CodUsuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -556,8 +554,31 @@ CREATE TABLE `ingreso` (
 
 LOCK TABLES `ingreso` WRITE;
 /*!40000 ALTER TABLE `ingreso` DISABLE KEYS */;
-INSERT INTO `ingreso` VALUES (1,6,4),(2,6,5),(3,6,6),(5,6,7),(6,6,8),(7,6,9),(8,6,10),(9,6,11),(10,6,12);
+INSERT INTO `ingreso` VALUES (1,6,4),(2,6,5),(3,6,6),(5,6,7),(6,6,8),(7,6,9),(8,6,10),(9,6,11),(10,6,12),(11,6,13);
 /*!40000 ALTER TABLE `ingreso` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `jornada`
+--
+
+DROP TABLE IF EXISTS `jornada`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `jornada` (
+  `cod_jornada` int(11) NOT NULL AUTO_INCREMENT,
+  `descripcion` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`cod_jornada`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `jornada`
+--
+
+LOCK TABLES `jornada` WRITE;
+/*!40000 ALTER TABLE `jornada` DISABLE KEYS */;
+/*!40000 ALTER TABLE `jornada` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -600,13 +621,14 @@ DROP TABLE IF EXISTS `matricula`;
 CREATE TABLE `matricula` (
   `CodMatricula` int(11) NOT NULL AUTO_INCREMENT,
   `Alumnos_CodAlumno` int(11) NOT NULL,
-  `Jornada` varchar(45) DEFAULT NULL,
+  `Cod_jornada` int(11) DEFAULT NULL,
   `AnioIngreso` varchar(45) DEFAULT NULL,
   `RecibioEvalu` varchar(45) DEFAULT NULL,
   `Observaciones` varchar(45) DEFAULT NULL,
   `Entrevistador` varchar(45) DEFAULT NULL,
   `CuotaPago` varchar(45) DEFAULT NULL,
   `FechaIngreso` date DEFAULT NULL,
+  `Cod_Tipo` int(11) DEFAULT NULL,
   PRIMARY KEY (`CodMatricula`,`Alumnos_CodAlumno`),
   KEY `fk_Matricula_Alumnos1_idx` (`Alumnos_CodAlumno`),
   CONSTRAINT `fk_Matricula_Alumnos1` FOREIGN KEY (`Alumnos_CodAlumno`) REFERENCES `alumnos` (`CodAlumno`) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -619,7 +641,7 @@ CREATE TABLE `matricula` (
 
 LOCK TABLES `matricula` WRITE;
 /*!40000 ALTER TABLE `matricula` DISABLE KEYS */;
-INSERT INTO `matricula` VALUES (3,1,'matutina','1997','si','ninguna','pancho','300','1997-12-12'),(4,2,'vespertina','1999','no','azulito','marta','300','1999-11-11');
+INSERT INTO `matricula` VALUES (3,1,0,'1997','si','ninguna','pancho','300','1997-12-12',NULL),(4,2,0,'1999','no','azulito','marta','300','1999-11-11',NULL);
 /*!40000 ALTER TABLE `matricula` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -746,8 +768,31 @@ CREATE TABLE `responsables` (
 
 LOCK TABLES `responsables` WRITE;
 /*!40000 ALTER TABLE `responsables` DISABLE KEYS */;
-INSERT INTO `responsables` VALUES (1,'PEdra',9090909,'Col.Los arires','espiritu libre','nada','amapala','9999999','22222222','444444444','a@yahoo.com',6),(2,'Azulita',43534,'dfgdfgf','fdgdfgfd','fgdgdfgdf','fdgdgdf','gfdgdf','gfdfgdf','gdfgdf','gfdgfd',6),(3,'MEngana',5645654,'ffff','ffff','ffff','ffff','ffffg','hhhfgh','hfghgft','tttttt',6),(5,'cvvvdf',78768,'gdf','gfdg','gfdg','Si, azil','gdf','fgdg','gfdgdf','fdgdf',6),(6,'gfhfg',45345,'ghfhg','ghfhgf','ghfhgf','Si, ghfgh','gfhfg','hgfhgf','hfghgf','hgfhgfgh',6),(7,'gfhfgu',453456,'ghfhg','ghfhgf','ghfhgf','Si, ghfgh','gfhfg','hgfhgf','hfghgf','hgfhgfgh',6),(8,'MEngana',45,'fdgdf','gfdfg','gfdfg',', reter5435','4543','5345','54345','dgdfg',6),(9,'MEngana',5,'fdgdf','fgdf','fgdf','Si, sfd','4','4','4','dfg',6),(10,'MEngana',56,'fgbdf','gd','gd','Si, fdgdf','675','645','654','gfd',6),(11,'MEnganas',564,'dsfds','sdfsd','sdfsd','Si, dsfds','432','423','4324','dsfsd',6),(12,'qw',4543,'fdgdfg','dfgdg','dfgdg','No,No Trabaja','5654','3534','534','345',6),(13,'pablo',21222,'fdsfsd','dsfds','dsfds','Si, matricol','333','333','333','dfds',6),(14,'rr',44,'fdg','fg','fg','No,No Trabaja','45','54','4','fgdf',6),(15,'rre',441,'fdg','fg','fg','No,No Trabaja','45','54','4','fgdf',6),(17,'qqq',444,'gfdgdf55','gfd','gfd','Si, fdgfd','565','6546','654','fgdf',6),(18,'re',4,'4','df','df','Si, g','3','3','3','f',6),(19,'ree',433,'4','df','df','Si, g','3','3','3','f',6),(20,'gf',666,'rty','ghfg','ghfg','Si, gfhgf','66','66','66','hgf',6),(21,'gft',665,'rty','ghfg','ghfg','Si, gfhgf','66','66','66','hgf',6),(22,'gftjh',6659,'rty','ghfg','ghfg','Si, gfhgf','66','66','66','hgf',6),(23,'ttt',555,'tyyrt','tetret','tetret','Si, fgdfg','55','55','55','44',6);
+INSERT INTO `responsables` VALUES (1,'PEdra',9090909,'Col.Los arires','espiritu libre','nada','Si, kjh','999998888','222227777','123456789','a@yahoo.com',7),(2,'Azulita',43534,'dfgdfgf','fdgdfgfd','fgdgdfgdf','Si, fdgdgdf','gfdgdf8888','3333333333','22222222222','gfdgfd',6),(3,'1',2,'a','d','ffff','No, d','d9999999999','d0000000000','9','dd',6),(5,'cvvvdf',78768,'gdf','gfdg','gfdg','Si, azil','gdf11111111','fgdg2222222','gfdgdf22222','fdgdf',6),(6,'gfhfg',45345,'ghfhg','ghfhgf','ghfhgf','No, ','22222222222','hgfhgf33322','','hgfhgfgh',6),(7,'gfhfgu',453456,'ghfhg','ghfhgf','ghfhgf','Si, ghfgh','gfhfg','hgfhgf','hfghgf','hgfhgfgh',6),(8,'MEngana',45,'fdgdf','gfdfg','gfdfg',', reter5435','4543','5345','54345','dgdfg',6),(9,'MEngana',5,'fdgdf','fgdf','fgdf','Si, sfd','4','4','4','dfg',6),(10,'MEngana',56,'fgbdf','gd','gd','Si, fdgdf','675','645','654','gfd',6),(11,'MEnganas',564,'dsfds','sdfsd','sdfsd','Si, dsfds','432','423','4324','dsfsd',6),(12,'qw',4543,'fdgdfg','dfgdg','dfgdg','No,No Trabaja','5654','3534','534','345',6),(13,'pablo',21222,'fdsfsd','dsfds','dsfds','Si, matricol','333','333','333','dfds',6),(14,'rr',44,'fdg','fg','fg','No,No Trabaja','45','54','4','fgdf',6),(15,'rre',441,'fdg','fg','fg','No,No Trabaja','45','54','4','fgdf',6),(17,'qqq',444,'gfdgdf55','gfd','gfd','Si, fdgfd','565','6546','654','fgdf',6),(18,'re',4,'4','df','df','Si, g','3','3','3','f',6),(19,'ree',433,'4','df','df','Si, g','3','3','3','f',6),(20,'gf',666,'rty','ghfg','ghfg','Si, gfhgf','66','66','66','hgf',6),(21,'gft',665,'rty','ghfg','ghfg','Si, gfhgf','66','66','66','hgf',6),(22,'gftjh',6659,'rty','ghfg','ghfg','Si, gfhgf','66','66','66','hgf',6),(23,'ttt',555,'tyyrt','tetret','tetret','Si, fgdfg','55','55','55','44',6);
 /*!40000 ALTER TABLE `responsables` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tipo_matricula`
+--
+
+DROP TABLE IF EXISTS `tipo_matricula`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tipo_matricula` (
+  `Cod_Tipo` int(11) NOT NULL AUTO_INCREMENT,
+  `Descripcion` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`Cod_Tipo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tipo_matricula`
+--
+
+LOCK TABLES `tipo_matricula` WRITE;
+/*!40000 ALTER TABLE `tipo_matricula` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tipo_matricula` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -783,7 +828,14 @@ DROP TABLE IF EXISTS `tiposatencion`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tiposatencion` (
   `Alumnos_CodAlumno` int(11) NOT NULL,
-  `IncluExclu` varchar(45) DEFAULT NULL,
+  `Aten_grupal` varchar(5) DEFAULT NULL,
+  `Aten_pre_vocacional` varchar(5) DEFAULT NULL,
+  `Aten_vocacional` varchar(5) DEFAULT NULL,
+  `Aten_Escolar` varchar(5) DEFAULT NULL,
+  `Aten_Individual` varchar(5) DEFAULT NULL,
+  `Aten_distancia` varchar(5) DEFAULT NULL,
+  `Teraia_domicilio` varchar(5) DEFAULT NULL,
+  `Atencion_fisica` varchar(5) DEFAULT NULL,
   KEY `fk_TiposAtencion_Alumnos1_idx` (`Alumnos_CodAlumno`),
   CONSTRAINT `fk_TiposAtencion_Alumnos1` FOREIGN KEY (`Alumnos_CodAlumno`) REFERENCES `alumnos` (`CodAlumno`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -811,7 +863,7 @@ CREATE TABLE `usuarios` (
   `ClaveUsuaio` varchar(180) DEFAULT NULL,
   `CodigoEstado` int(11) DEFAULT NULL,
   PRIMARY KEY (`CodUsuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -820,7 +872,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (4,'HMarta','pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=',1),(5,'CManolo','pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=',1),(6,'WRaul','pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=',3),(7,'GMarcos','pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=',1),(8,'EMartin','pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=',1),(9,'QWesty','pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=',1),(10,'WEmilio','pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=',2),(11,'EDario','pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=',1),(12,'MAdriana','3j1Dyq0r08TwYi/GDe7NBrNKDyWoDjC4H+BRo8VHmbs=',1);
+INSERT INTO `usuarios` VALUES (4,'HMarta','pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=',1),(5,'CManolo','pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=',1),(6,'WRaul','pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=',3),(7,'GMarcos','pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=',1),(8,'EMartin','pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=',1),(9,'QWesty','pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=',1),(10,'WEmilio','pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=',2),(11,'EDario','pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=',1),(12,'MAdriana','3j1Dyq0r08TwYi/GDe7NBrNKDyWoDjC4H+BRo8VHmbs=',1),(13,'MRPSP','FeKw08M4keuw8e9gnsQZQgwg4yDOlMZfvIwzEkSOsiU=',3);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -871,14 +923,6 @@ LOCK TABLES `vidadiaria` WRITE;
 /*!40000 ALTER TABLE `vidadiaria` DISABLE KEYS */;
 /*!40000 ALTER TABLE `vidadiaria` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Dumping events for database 'mydb'
---
-
---
--- Dumping routines for database 'mydb'
---
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -889,4 +933,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-07  8:49:01
+-- Dump completed on 2018-04-07 12:21:18
