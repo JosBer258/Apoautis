@@ -31,6 +31,8 @@ namespace APOAUTIS.Clases
         private string EnfermedadesPadeciFamilia;
         private string LugaresAtencionMedica;
         private double GastosMEdicos;
+        private string EmergLugar;
+        private string EmergTelefono;
         private int estadoAlumno;
 
         public int CodAlumno11 {
@@ -109,6 +111,9 @@ namespace APOAUTIS.Clases
             }
         }
 
+        public string EmergLugar1 { get { return EmergLugar; } set { EmergLugar = value; } }
+        public string EmergTelefono1 { get { return  EmergTelefono; } set { EmergTelefono = value; } }
+
         public void ingresoAlumnos()
         {
             this.sql = string.Format(@"INSERT INTO alumnos
@@ -134,7 +139,7 @@ namespace APOAUTIS.Clases
                 this.sql = string.Format(@"select A.CodAlumno,A.NomAlumno,
 A.LugarNaciAlum,A.FechaNaciAlum,A.EdadAlum,A.EdadCronologica,
 A.SexoAlum,A.IdAlum,A.DireccionAlum,A.TelFijoAlum,A.CelAlumno,A.EscolaridadAlum,
-A.LugarOrigAlum,A.InstProceAlumno,A.InstDondeEstaIncluido from Alumnos as A
+A.LugarOrigAlum,A.InstProceAlumno,A.InstDondeEstaIncluido,A.Estado,A.EmergLugar,A.EmergTelefono from Alumnos as A
 where A.NomAlumno like'%{0}%'", NomAlumno11);
             }
             else if(a==2)
@@ -142,7 +147,7 @@ where A.NomAlumno like'%{0}%'", NomAlumno11);
                 this.sql = string.Format(@"select A.CodAlumno,A.NomAlumno,
 A.LugarNaciAlum,A.FechaNaciAlum,A.EdadAlum,A.EdadCronologica,
 A.SexoAlum,A.IdAlum,A.DireccionAlum,A.TelFijoAlum,A.CelAlumno,A.EscolaridadAlum,
-A.LugarOrigAlum,A.InstProceAlumno,A.InstDondeEstaIncluido from Alumnos as A
+A.LugarOrigAlum,A.InstProceAlumno,A.InstDondeEstaIncluido,A.Estado,A.EmergLugar,A.EmergTelefono from Alumnos as A
 where A.CodAlumno like'%{0}%'", CodAlumno11);
             }
             else
@@ -150,7 +155,7 @@ where A.CodAlumno like'%{0}%'", CodAlumno11);
                 this.sql = string.Format(@"select A.CodAlumno,A.NomAlumno,
 A.LugarNaciAlum,A.FechaNaciAlum,A.EdadAlum,A.EdadCronologica,
 A.SexoAlum,A.IdAlum,A.DireccionAlum,A.TelFijoAlum,A.CelAlumno,A.EscolaridadAlum,
-A.LugarOrigAlum,A.InstProceAlumno,A.InstDondeEstaIncluido from Alumnos as A
+A.LugarOrigAlum,A.InstProceAlumno,A.InstDondeEstaIncluido,A.Estado,A.EmergLugar,A.EmergTelefono from Alumnos as A
 where A.IdAlum like'%{0}%'", IdAlum11);
             }
             this.cmd = new MySqlCommand(this.sql, this.cnx);
@@ -175,6 +180,9 @@ where A.IdAlum like'%{0}%'", IdAlum11);
                 LugarOrigAlum11 = (Reg["LugarOrigAlum"].ToString());
                 InstProceAlumno11 = (Reg["InstProceAlumno"].ToString());
                 InstDondeEstaIncluido11 = (Reg["InstDondeEstaIncluido"].ToString());
+                EstadoAlumno = Convert.ToInt32(Reg["Estado"].ToString());
+                EmergLugar1 = (Reg["EmergLugar"].ToString());
+                EmergTelefono1 = (Reg["EmergTelefono"].ToString());
                 this.cnx.Close();
                 VerificarYear();
 
@@ -231,7 +239,10 @@ as 'Edad Cronologica',
 A.SexoAlum as 'Sexo', A.IdAlum as 'Identidad', A.DireccionAlum as 'Direccion', A.TelFijoAlum as 'Telefono fijo', 
 A.CelAlumno as 'Celular', A.EscolaridadAlum as 'Escolaridad',
 A.LugarOrigAlum as 'Lugar de Origen', A.InstProceAlumno as 'Instituto de Procedencia', A.InstDondeEstaIncluido 
-as 'Intituto donde esta incluido' from alumnos as A", ccnx);
+as 'Intituto donde esta incluido' , B.DescripcionEstado as 'Estado',A.EmergLugar as 'Lugar en Caso de Emergencia',   
+A.EmergTelefono as 'Telefono de Emergencia' from alumnos as A inner join estados as B
+on A.Estado=B.CodEstado
+order by CodAlumno", ccnx);
                 dt = new DataTable();
                 DataAdapter.Fill(dt);
                 dgv.DataSource = dt;
@@ -288,8 +299,11 @@ as 'Edad Cronologica',
 A.SexoAlum as 'Sexo', A.IdAlum as 'Identidad', A.DireccionAlum as 'Direccion', A.TelFijoAlum as 'Telefono fijo', 
 A.CelAlumno as 'Celular', A.EscolaridadAlum as 'Escolaridad',
 A.LugarOrigAlum as 'Lugar de Origen', A.InstProceAlumno as 'Instituto de Procedencia', A.InstDondeEstaIncluido 
-as 'Intituto donde esta incluido' from alumnos as A
-where A.NomAlumno like'%{0}%'", busq);
+as 'Intituto donde esta incluido' , B.DescripcionEstado as 'Estado',A.EmergLugar as 'Lugar en Caso de Emergencia',   
+A.EmergTelefono as 'Telefono de Emergencia' from alumnos as A inner join estados as B
+on A.Estado=B.CodEstado
+where A.NomAlumno like'%{0}%'
+order by CodAlumno", busq);
                 this.cmd = new MySqlCommand(this.sql, this.cnx);
                 this.DataAdapter = new MySqlDataAdapter(this.cmd);
                 this.dt = new DataTable();
@@ -321,8 +335,11 @@ as 'Edad Cronologica',
 A.SexoAlum as 'Sexo', A.IdAlum as 'Identidad', A.DireccionAlum as 'Direccion', A.TelFijoAlum as 'Telefono fijo', 
 A.CelAlumno as 'Celular', A.EscolaridadAlum as 'Escolaridad',
 A.LugarOrigAlum as 'Lugar de Origen', A.InstProceAlumno as 'Instituto de Procedencia', A.InstDondeEstaIncluido 
-as 'Intituto donde esta incluido' from alumnos as A
-where A.IdAlum like '%{0}%'", busq);
+as 'Intituto donde esta incluido' , B.DescripcionEstado as 'Estado',A.EmergLugar as 'Lugar en Caso de Emergencia',   
+A.EmergTelefono as 'Telefono de Emergencia' from alumnos as A inner join estados as B
+on A.Estado=B.CodEstado
+where A.IdAlum like '%{0}%'
+order by CodAlumno", busq);
                 this.cmd = new MySqlCommand(this.sql, this.cnx);
                 this.DataAdapter = new MySqlDataAdapter(this.cmd);
                 this.dt = new DataTable();
@@ -341,10 +358,10 @@ where A.IdAlum like '%{0}%'", busq);
 
 
 
-        public void GenerarEstado(ComboBox Com_Roles)
+        public void GenerarEstado(ComboBox Com_Roles, int estado)
         {
             cnx.Open();
-            sql = string.Format(@"select CodEstado, DescripcionEstado from estados where CodtipoEstado=2");
+            sql = string.Format(@"select CodEstado, DescripcionEstado from estados where CodtipoEstado='{0}'",estado);
             cmd = new MySqlCommand(sql, cnx);
             DataAdapter = new MySqlDataAdapter(cmd);
             dt = new DataTable();
@@ -405,12 +422,13 @@ where CodAlumno='{2}'", EdadAlum11, EdadCronologica11, CodAlumno11);
 
 
         public void updateAlumnos(string SexoAlum, string DireccionAlum, string TelfijoAlum, string CelAlumno, 
-            string EscolaridadAlum, string InstProceAlumno, string InstDondeEstaIncluido, int CodAlumno)
+            string EscolaridadAlum, string InstProceAlumno, string InstDondeEstaIncluido,
+            int estado, string emerlugar, string emertelefono,int CodAlumno)
         {
             this.sql = string.Format(@"update alumnos set SexoAlum='{0}',DireccionAlum='{1}',TelfijoAlum='{2}',
 CelAlumno='{3}',EscolaridadAlum='{4}',InstProceAlumno='{5}',
-InstDondeEstaIncluido='{6}' where CodAlumno='{7}'", SexoAlum, DireccionAlum, TelfijoAlum, CelAlumno, EscolaridadAlum,
-InstProceAlumno, InstDondeEstaIncluido, CodAlumno);
+InstDondeEstaIncluido='{6}', Estado='{7}',EmergLugar='{8}',EmergTelefono='{9}' where CodAlumno='{10}'", SexoAlum, DireccionAlum, TelfijoAlum, CelAlumno, EscolaridadAlum,
+InstProceAlumno, InstDondeEstaIncluido, estado, emerlugar, emertelefono, CodAlumno);
             this.cmd = new MySqlCommand(this.sql, this.cnx);
             this.cnx.Open();
             MySqlDataReader Reg = null;

@@ -243,13 +243,17 @@ namespace APOAUTIS.Clases
                                                     R.TelCasaRes as 'Telefono de Casa',
                                                     R.TelCelRes as 'Telefono Celular',
                                                     R.TelTrabajoRes as 'Telefono de Trabajo',
-                                                    R.CorreoRes as 'Correo' 
-                                                    FROM responsables as R
+                                                    R.CorreoRes as 'Correo' ,
+                                                    D.TipoResponsable as'Tipo de Reponsable',
+                                                    A.DescripcionEstado as 'Estado'
+                                                    FROM estados as A inner join responsables as R
+                                                    on A.CodEstado=R.Estado
                                                     inner join `alumnos/responsables` as B
-                                                    on R.CodResp =B.CodResp inner join
+                                                    on R.CodResp =B.CodResp inner join tiporesponsable as
+                                                    D on B.Cod_TipoResp = D.CodTipoRespo inner join
                                                     alumnos as C
                                                     on B.CodAlumno=C.CodAlumno
-                                                    where C.CodAlumno=" + codR, ccnx);
+                                                    where C.CodAlumno=" + codR+" order by R.CodResp", ccnx);
                 dt = new DataTable();
                 DataAdapter.Fill(dt);
                 dgv.DataSource = dt;
@@ -268,9 +272,9 @@ namespace APOAUTIS.Clases
             try
             {
                 this.sql = string.Format(@"insert into responsables values (0,'{0}','{1}','{2}','{3}',
-                                    '{4}','{5}','{6}','{7}','{8}','{9}')",
+                                    '{4}','{5}','{6}','{7}','{8}','{9}','{10}')",
                                             nomResp, idResp, domResp, profResp, profResp, lugTrab,
-                                            telCasResp, telCelResp, telTrabResp, corrResp);
+                                            telCasResp, telCelResp, telTrabResp, corrResp,EstResp);
 
 
                 this.cmd = new MySqlCommand(this.sql, this.cnx);
@@ -348,10 +352,26 @@ namespace APOAUTIS.Clases
             return l;
         }
 
-        public void insertResponsableAlumno(int alumno, int responsable)
+        public void GenerarEstado(ComboBox Com_Roles)
         {
-            this.sql = string.Format(@"insert into `alumnos/responsables` values ('{0}','{1}')",
-                                        alumno, responsable);
+            cnx.Open();
+            sql = string.Format(@"select CodTipoRespo, TipoResponsable from tiporesponsable ");
+            cmd = new MySqlCommand(sql, cnx);
+            DataAdapter = new MySqlDataAdapter(cmd);
+            dt = new DataTable();
+            DataAdapter.Fill(dt);
+            cnx.Close();
+
+            Com_Roles.ValueMember = "CodTipoRespo";
+            Com_Roles.DisplayMember = "TipoResponsable";
+            Com_Roles.DataSource = dt;
+        }
+
+
+        public void insertResponsableAlumno(int alumno, int responsable, int tiporesponsable)
+        {
+            this.sql = string.Format(@"insert into `alumnos/responsables` values ('{0}','{1}','{2}')",
+                                        alumno, responsable, tiporesponsable);
 
             this.cmd = new MySqlCommand(this.sql, this.cnx);
             this.cnx.Open();
