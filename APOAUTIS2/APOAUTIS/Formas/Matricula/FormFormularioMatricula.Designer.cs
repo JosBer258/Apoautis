@@ -150,9 +150,6 @@
             this.Pest1_Cmb_Jornada.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Pest1_Cmb_Jornada.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest1_Cmb_Jornada.FormattingEnabled = true;
-            this.Pest1_Cmb_Jornada.Items.AddRange(new object[] {
-            "Matutina",
-            "Pespertina"});
             this.Pest1_Cmb_Jornada.Location = new System.Drawing.Point(534, 136);
             this.Pest1_Cmb_Jornada.Name = "Pest1_Cmb_Jornada";
             this.Pest1_Cmb_Jornada.Size = new System.Drawing.Size(173, 26);
@@ -391,9 +388,6 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Primer Ingreso",
-            "Reingreso"});
             this.comboBox1.Location = new System.Drawing.Point(186, 24);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(173, 26);

@@ -131,6 +131,35 @@ namespace APOAUTIS.Clases
             Reg = this.cmd.ExecuteReader();
             this.cnx.Close();
         }
+        public void GenerarJornada(ComboBox Com_Jornada)
+        {
+            cnx.Open();
+            sql = string.Format(@"select cod_jornada, descripcion from jornada");
+            cmd = new MySqlCommand(sql, cnx);
+            DataAdapter = new MySqlDataAdapter(cmd);
+            dt = new DataTable();
+            DataAdapter.Fill(dt);
+            cnx.Close();
+
+            Com_Jornada.ValueMember = "cod_jornada";
+            Com_Jornada.DisplayMember = "descripcion";
+            Com_Jornada.DataSource = dt;
+        }
+
+        public void GenerarTipoMatricula(ComboBox Com_TipoMatricula)
+        {
+            cnx.Open();
+            sql = string.Format(@"select Cod_Tipo, Descripcion from tipo_matricula");
+            cmd = new MySqlCommand(sql, cnx);
+            DataAdapter = new MySqlDataAdapter(cmd);
+            dt = new DataTable();
+            DataAdapter.Fill(dt);
+            cnx.Close();
+
+            Com_TipoMatricula.ValueMember = "Cod_Tipo";
+            Com_TipoMatricula.DisplayMember = "Descripcion";
+            Com_TipoMatricula.DataSource = dt;
+        }
 
         public void FillAlumnosPest2Por(int a)
         {
