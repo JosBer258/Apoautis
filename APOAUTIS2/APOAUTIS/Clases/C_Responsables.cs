@@ -251,7 +251,9 @@ namespace APOAUTIS.Clases
 		                                            A.EscolaridadAlum as 'Escolaridad',
 		                                            A.LugarOrigAlum as 'Lugar de Origen',
 		                                            A.InstProceAlumno as 'Instituto de Procedencia',
-		                                            A.InstDondeEstaIncluido as 'Instituto Donde Esta Incluido' 
+		                                            A.InstDondeEstaIncluido as 'Instituto Donde Esta Incluido',
+                                                    A.EmergLugar as 'Lugar en Caso de Emergencia',
+                                                    A.EmergTelefono as 'Telefono de Emergencia' 
 		                                            FROM responsables as R
 		                                            INNER JOIN `alumnos/responsables` as AR 
 		                                            ON R.CodResp = AR.CodResp 
