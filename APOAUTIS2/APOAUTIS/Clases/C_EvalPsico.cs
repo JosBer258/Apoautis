@@ -162,7 +162,7 @@ namespace APOAUTIS.Clases
                                         VALUES
                                         ('{0}','{1}', '{2}','{3}', '{4}',
                                         '{5}', '{6}','{7}', '{8}','{9}');",
-                                        0, fechEval, impDiag, nomEval, fechNac,  edad, 
+                                        0, fechEval, impDiag, nomEval, fechNac, edad,
                                         sexo, respEval, telEval, obsEval);
 
             this.cmd = new MySqlCommand(this.sql, this.cnx);
@@ -315,7 +315,7 @@ namespace APOAUTIS.Clases
 
             string query = "SELECT (MAX( CodEvaluacion ) + 1) as CodEvaluacion FROM evaluacion";
             MySqlCommand comando = new MySqlCommand(query, cnx);
-                
+
             MySqlDataReader reader = comando.ExecuteReader();
 
             while (reader.Read() == true)
@@ -327,17 +327,17 @@ namespace APOAUTIS.Clases
             reader.Close();
             cnx.Close();
             return cdg;
-            }
+        }
 
         public void validarSoloNumeros(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
-               e.Handled = true;
+                e.Handled = true;
             }
         }
-        
-        
-                
+
+
+
     }
 }

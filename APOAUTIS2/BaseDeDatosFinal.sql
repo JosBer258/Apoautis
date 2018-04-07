@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `mydb` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `mydb`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: localhost    Database: mydb
@@ -31,7 +33,7 @@ CREATE TABLE `acontecimientomedco` (
   PRIMARY KEY (`CodAcontecimiento`,`Alumnos_CodAlumno`),
   KEY `fk_AcontecimientoMedco_Alumnos1_idx` (`Alumnos_CodAlumno`),
   CONSTRAINT `fk_AcontecimientoMedco_Alumnos1` FOREIGN KEY (`Alumnos_CodAlumno`) REFERENCES `alumnos` (`CodAlumno`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,6 +42,7 @@ CREATE TABLE `acontecimientomedco` (
 
 LOCK TABLES `acontecimientomedco` WRITE;
 /*!40000 ALTER TABLE `acontecimientomedco` DISABLE KEYS */;
+INSERT INTO `acontecimientomedco` VALUES (1,1,'ayer','citymall','aspirina'),(2,2,'hoy','cascadasmall','futball');
 /*!40000 ALTER TABLE `acontecimientomedco` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -54,7 +57,7 @@ CREATE TABLE `alumnos` (
   `CodAlumno` int(11) NOT NULL AUTO_INCREMENT,
   `NomAlumno` varchar(45) DEFAULT NULL,
   `LugarNaciAlum` varchar(60) DEFAULT NULL,
-  `FechaNaciAlum` datetime DEFAULT NULL,
+  `FechaNaciAlum` date DEFAULT NULL,
   `EdadAlum` int(11) DEFAULT NULL,
   `EdadCronologica` varchar(45) DEFAULT NULL,
   `SexoAlum` varchar(45) DEFAULT NULL,
@@ -66,8 +69,11 @@ CREATE TABLE `alumnos` (
   `LugarOrigAlum` varchar(45) DEFAULT NULL,
   `InstProceAlumno` varchar(45) DEFAULT NULL,
   `InstDondeEstaIncluido` varchar(45) DEFAULT NULL,
+  `Estado` int(11) DEFAULT NULL,
+  `EmergLugar` varchar(55) DEFAULT NULL,
+  `EmergTelefono` varchar(55) DEFAULT NULL,
   PRIMARY KEY (`CodAlumno`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -76,6 +82,7 @@ CREATE TABLE `alumnos` (
 
 LOCK TABLES `alumnos` WRITE;
 /*!40000 ALTER TABLE `alumnos` DISABLE KEYS */;
+INSERT INTO `alumnos` VALUES (1,'Ricardo Mejia','Hospital San Felipe','1995-12-12',22,'Año:22 Mes:4 Dia:0','M','0801199712333','Col. Domingo Azul','6756','123213','Primaria','Colon','St. John','Apo-Autis',4,'azucar','22222'),(2,'Manola','Seguro Social','1992-06-19',25,'Año:25 Mes:10 Dia:-6','M','0801199712444','Col.LasUvas','22222222','11111111','Universidad','Atlantida','Summer Hill','ApoAutis',4,'bancatlan','111jjjjjnn'),(3,'pablo','pablo','1997-02-02',21,'Año:21 Mes:2 Dia:8','M','0801199712555','REs.Ae','43554654','5654666','Primaria','Choloma','Summer Hill','Apo-Autis',4,'mendoza','111');
 /*!40000 ALTER TABLE `alumnos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -89,6 +96,7 @@ DROP TABLE IF EXISTS `alumnos/responsables`;
 CREATE TABLE `alumnos/responsables` (
   `CodAlumno` int(11) NOT NULL,
   `CodResp` int(11) NOT NULL,
+  `Cod_TipoResp` int(11) DEFAULT NULL,
   PRIMARY KEY (`CodAlumno`,`CodResp`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -99,6 +107,7 @@ CREATE TABLE `alumnos/responsables` (
 
 LOCK TABLES `alumnos/responsables` WRITE;
 /*!40000 ALTER TABLE `alumnos/responsables` DISABLE KEYS */;
+INSERT INTO `alumnos/responsables` VALUES (1,1,1),(1,2,1),(1,6,2),(1,7,2),(1,13,2),(1,14,2),(1,15,1),(1,17,3),(2,3,3),(2,8,3),(2,9,3),(2,10,3),(2,11,3),(2,18,3),(3,12,2),(3,16,3),(3,19,1),(3,20,1),(3,21,2),(3,22,3),(3,23,3);
 /*!40000 ALTER TABLE `alumnos/responsables` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -155,6 +164,7 @@ CREATE TABLE `anamnesis` (
 
 LOCK TABLES `anamnesis` WRITE;
 /*!40000 ALTER TABLE `anamnesis` DISABLE KEYS */;
+INSERT INTO `anamnesis` VALUES (1,'mundial','12 dias','12 kg','azulito','azulon','gordo');
 /*!40000 ALTER TABLE `anamnesis` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -354,7 +364,7 @@ CREATE TABLE `estados` (
 
 LOCK TABLES `estados` WRITE;
 /*!40000 ALTER TABLE `estados` DISABLE KEYS */;
-INSERT INTO `estados` VALUES (1,1,'Usuario-Activo'),(1,2,'Usuario-Inactivo');
+INSERT INTO `estados` VALUES (1,1,'Usuario-Activo'),(1,2,'Usuario-Inactivo'),(1,3,'SuperUsuario'),(2,4,'Alumno-Activo'),(2,5,'Alumno-Inactivo'),(3,6,'Activo-Responsable'),(3,7,'Inactivo-Responsable');
 /*!40000 ALTER TABLE `estados` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -396,13 +406,17 @@ DROP TABLE IF EXISTS `evaluacion`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `evaluacion` (
   `CodEvaluacion` int(11) NOT NULL AUTO_INCREMENT,
-  `Alumnos_CodAlumno` int(11) NOT NULL,
-  `FechaEvaluacion` datetime DEFAULT NULL,
+  `FechaEvaluacion` date DEFAULT NULL,
   `ImpresionDiagnos` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`CodEvaluacion`),
-  KEY `fk_Evaluacion_Alumnos1_idx` (`Alumnos_CodAlumno`),
-  CONSTRAINT `fk_Evaluacion_Alumnos1` FOREIGN KEY (`Alumnos_CodAlumno`) REFERENCES `alumnos` (`CodAlumno`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `NombreEvaluado` varchar(45) DEFAULT NULL,
+  `FechaNaci` varchar(45) DEFAULT NULL,
+  `Sexo` varchar(45) DEFAULT NULL,
+  `Responsable` varchar(45) DEFAULT NULL,
+  `Telefono` varchar(45) DEFAULT NULL,
+  `Observaciones` varchar(45) DEFAULT NULL,
+  `Edad` int(11) DEFAULT NULL,
+  PRIMARY KEY (`CodEvaluacion`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -411,6 +425,7 @@ CREATE TABLE `evaluacion` (
 
 LOCK TABLES `evaluacion` WRITE;
 /*!40000 ALTER TABLE `evaluacion` DISABLE KEYS */;
+INSERT INTO `evaluacion` VALUES (1,'2012-02-02','TEA','Pepito Perez','2009-02-02','Masculino','Ana Lanza','99887766','Yoro',8),(2,'2018-03-28','TEA','Geovana','1995-05-14','Femenino','Ingrid Ordonez','22334455',':V',22);
 /*!40000 ALTER TABLE `evaluacion` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -439,6 +454,7 @@ CREATE TABLE `historialmedico` (
 
 LOCK TABLES `historialmedico` WRITE;
 /*!40000 ALTER TABLE `historialmedico` DISABLE KEYS */;
+INSERT INTO `historialmedico` VALUES (1,'Si','Si','Hospital Mario Mendoza ','Cancer',12000),(2,'Si','Si','Unicah','Neumonia',1000000);
 /*!40000 ALTER TABLE `historialmedico` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -531,7 +547,7 @@ CREATE TABLE `ingreso` (
   PRIMARY KEY (`CodLogin`),
   KEY `CodUsuario_idx` (`CodUsuario`),
   CONSTRAINT `CodUsuario` FOREIGN KEY (`CodUsuario`) REFERENCES `usuarios` (`CodUsuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -540,8 +556,31 @@ CREATE TABLE `ingreso` (
 
 LOCK TABLES `ingreso` WRITE;
 /*!40000 ALTER TABLE `ingreso` DISABLE KEYS */;
-INSERT INTO `ingreso` VALUES (1,6,4),(2,6,5),(3,6,6),(5,6,7),(6,6,8),(7,6,9);
+INSERT INTO `ingreso` VALUES (1,6,4),(2,6,5),(3,6,6),(5,6,7),(6,6,8),(7,6,9),(8,6,10),(9,6,11),(10,6,12),(11,6,13);
 /*!40000 ALTER TABLE `ingreso` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `jornada`
+--
+
+DROP TABLE IF EXISTS `jornada`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `jornada` (
+  `cod_jornada` int(11) NOT NULL AUTO_INCREMENT,
+  `descripcion` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`cod_jornada`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `jornada`
+--
+
+LOCK TABLES `jornada` WRITE;
+/*!40000 ALTER TABLE `jornada` DISABLE KEYS */;
+/*!40000 ALTER TABLE `jornada` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -584,17 +623,18 @@ DROP TABLE IF EXISTS `matricula`;
 CREATE TABLE `matricula` (
   `CodMatricula` int(11) NOT NULL AUTO_INCREMENT,
   `Alumnos_CodAlumno` int(11) NOT NULL,
-  `Jornada` varchar(45) DEFAULT NULL,
+  `Cod_jornada` int(11) DEFAULT NULL,
   `AnioIngreso` varchar(45) DEFAULT NULL,
   `RecibioEvalu` varchar(45) DEFAULT NULL,
-  `Fecha` datetime DEFAULT NULL,
   `Observaciones` varchar(45) DEFAULT NULL,
   `Entrevistador` varchar(45) DEFAULT NULL,
   `CuotaPago` varchar(45) DEFAULT NULL,
+  `FechaIngreso` date DEFAULT NULL,
+  `Cod_Tipo` int(11) DEFAULT NULL,
   PRIMARY KEY (`CodMatricula`,`Alumnos_CodAlumno`),
   KEY `fk_Matricula_Alumnos1_idx` (`Alumnos_CodAlumno`),
   CONSTRAINT `fk_Matricula_Alumnos1` FOREIGN KEY (`Alumnos_CodAlumno`) REFERENCES `alumnos` (`CodAlumno`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -603,6 +643,7 @@ CREATE TABLE `matricula` (
 
 LOCK TABLES `matricula` WRITE;
 /*!40000 ALTER TABLE `matricula` DISABLE KEYS */;
+INSERT INTO `matricula` VALUES (3,1,0,'1997','si','ninguna','pancho','300','1997-12-12',NULL),(4,2,0,'1999','no','azulito','marta','300','1999-11-11',NULL);
 /*!40000 ALTER TABLE `matricula` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -709,7 +750,7 @@ DROP TABLE IF EXISTS `responsables`;
 CREATE TABLE `responsables` (
   `CodResp` int(11) NOT NULL AUTO_INCREMENT,
   `NomComRes` varchar(45) DEFAULT NULL,
-  `NumIdRes` int(11) DEFAULT NULL,
+  `NumIdRes` int(14) DEFAULT NULL,
   `DomicilioRes` varchar(45) DEFAULT NULL,
   `ProfecionRes` varchar(45) DEFAULT NULL,
   `OficioRes` varchar(150) DEFAULT NULL,
@@ -718,8 +759,9 @@ CREATE TABLE `responsables` (
   `TelCelRes` varchar(45) DEFAULT NULL,
   `TelTrabajoRes` varchar(45) DEFAULT NULL,
   `CorreoRes` varchar(45) DEFAULT NULL,
+  `Estado` int(11) DEFAULT NULL,
   PRIMARY KEY (`CodResp`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -728,7 +770,31 @@ CREATE TABLE `responsables` (
 
 LOCK TABLES `responsables` WRITE;
 /*!40000 ALTER TABLE `responsables` DISABLE KEYS */;
+INSERT INTO `responsables` VALUES (1,'PEdra',9090909,'Col.Los arires','espiritu libre','nada','Si, kjh','999998888','222227777','123456789','a@yahoo.com',7),(2,'Azulita',43534,'dfgdfgf','fdgdfgfd','fgdgdfgdf','Si, fdgdgdf','gfdgdf8888','3333333333','22222222222','gfdgfd',6),(3,'1',2,'a','d','ffff','No, d','d9999999999','d0000000000','9','dd',6),(5,'cvvvdf',78768,'gdf','gfdg','gfdg','Si, azil','gdf11111111','fgdg2222222','gfdgdf22222','fdgdf',6),(6,'gfhfg',45345,'ghfhg','ghfhgf','ghfhgf','No, ','22222222222','hgfhgf33322','','hgfhgfgh',6),(7,'gfhfgu',453456,'ghfhg','ghfhgf','ghfhgf','Si, ghfgh','gfhfg','hgfhgf','hfghgf','hgfhgfgh',6),(8,'MEngana',45,'fdgdf','gfdfg','gfdfg',', reter5435','4543','5345','54345','dgdfg',6),(9,'MEngana',5,'fdgdf','fgdf','fgdf','Si, sfd','4','4','4','dfg',6),(10,'MEngana',56,'fgbdf','gd','gd','Si, fdgdf','675','645','654','gfd',6),(11,'MEnganas',564,'dsfds','sdfsd','sdfsd','Si, dsfds','432','423','4324','dsfsd',6),(12,'qw',4543,'fdgdfg','dfgdg','dfgdg','No,No Trabaja','5654','3534','534','345',6),(13,'pablo',21222,'fdsfsd','dsfds','dsfds','Si, matricol','333','333','333','dfds',6),(14,'rr',44,'fdg','fg','fg','No,No Trabaja','45','54','4','fgdf',6),(15,'rre',441,'fdg','fg','fg','No,No Trabaja','45','54','4','fgdf',6),(17,'qqq',444,'gfdgdf55','gfd','gfd','Si, fdgfd','565','6546','654','fgdf',6),(18,'re',4,'4','df','df','Si, g','3','3','3','f',6),(19,'ree',433,'4','df','df','Si, g','3','3','3','f',6),(20,'gf',666,'rty','ghfg','ghfg','Si, gfhgf','66','66','66','hgf',6),(21,'gft',665,'rty','ghfg','ghfg','Si, gfhgf','66','66','66','hgf',6),(22,'gftjh',6659,'rty','ghfg','ghfg','Si, gfhgf','66','66','66','hgf',6),(23,'ttt',555,'tyyrt','tetret','tetret','Si, fgdfg','55','55','55','44',6);
 /*!40000 ALTER TABLE `responsables` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tipo_matricula`
+--
+
+DROP TABLE IF EXISTS `tipo_matricula`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tipo_matricula` (
+  `Cod_Tipo` int(11) NOT NULL AUTO_INCREMENT,
+  `Descripcion` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`Cod_Tipo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tipo_matricula`
+--
+
+LOCK TABLES `tipo_matricula` WRITE;
+/*!40000 ALTER TABLE `tipo_matricula` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tipo_matricula` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -741,11 +807,8 @@ DROP TABLE IF EXISTS `tiporesponsable`;
 CREATE TABLE `tiporesponsable` (
   `CodTipoRespo` int(11) NOT NULL AUTO_INCREMENT,
   `TipoResponsable` varchar(45) DEFAULT NULL,
-  `Responsables_CodResp` int(11) NOT NULL,
-  PRIMARY KEY (`CodTipoRespo`),
-  KEY `fk_TipoResponsable_Responsables1_idx` (`Responsables_CodResp`),
-  CONSTRAINT `fk_TipoResponsable_Responsables1` FOREIGN KEY (`Responsables_CodResp`) REFERENCES `responsables` (`CodResp`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`CodTipoRespo`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -754,6 +817,7 @@ CREATE TABLE `tiporesponsable` (
 
 LOCK TABLES `tiporesponsable` WRITE;
 /*!40000 ALTER TABLE `tiporesponsable` DISABLE KEYS */;
+INSERT INTO `tiporesponsable` VALUES (1,'Padre'),(2,'Madre'),(3,'Otros');
 /*!40000 ALTER TABLE `tiporesponsable` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -766,7 +830,14 @@ DROP TABLE IF EXISTS `tiposatencion`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tiposatencion` (
   `Alumnos_CodAlumno` int(11) NOT NULL,
-  `IncluExclu` varchar(45) DEFAULT NULL,
+  `Aten_grupal` varchar(5) DEFAULT NULL,
+  `Aten_pre_vocacional` varchar(5) DEFAULT NULL,
+  `Aten_vocacional` varchar(5) DEFAULT NULL,
+  `Aten_Escolar` varchar(5) DEFAULT NULL,
+  `Aten_Individual` varchar(5) DEFAULT NULL,
+  `Aten_distancia` varchar(5) DEFAULT NULL,
+  `Teraia_domicilio` varchar(5) DEFAULT NULL,
+  `Atencion_fisica` varchar(5) DEFAULT NULL,
   KEY `fk_TiposAtencion_Alumnos1_idx` (`Alumnos_CodAlumno`),
   CONSTRAINT `fk_TiposAtencion_Alumnos1` FOREIGN KEY (`Alumnos_CodAlumno`) REFERENCES `alumnos` (`CodAlumno`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -794,7 +865,7 @@ CREATE TABLE `usuarios` (
   `ClaveUsuaio` varchar(180) DEFAULT NULL,
   `CodigoEstado` int(11) DEFAULT NULL,
   PRIMARY KEY (`CodUsuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -803,7 +874,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (4,'Az','pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=',1),(5,'lolo','pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=',1),(6,'Azul','pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=',1),(7,'manolo','pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=',1),(8,'qq','pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=',1),(9,'arnoldito','pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=',1);
+INSERT INTO `usuarios` VALUES (4,'HMarta','pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=',1),(5,'CManolo','pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=',1),(6,'WRaul','pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=',3),(7,'GMarcos','pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=',1),(8,'EMartin','pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=',1),(9,'QWesty','pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=',1),(10,'WEmilio','pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=',2),(11,'EDario','pmWkWSBCL51Bfkhn79xPuKBKHz//H6B+mY6G9/eieuM=',1),(12,'MAdriana','3j1Dyq0r08TwYi/GDe7NBrNKDyWoDjC4H+BRo8VHmbs=',1),(13,'MRPSP','FeKw08M4keuw8e9gnsQZQgwg4yDOlMZfvIwzEkSOsiU=',3);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -854,14 +925,6 @@ LOCK TABLES `vidadiaria` WRITE;
 /*!40000 ALTER TABLE `vidadiaria` DISABLE KEYS */;
 /*!40000 ALTER TABLE `vidadiaria` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Dumping events for database 'mydb'
---
-
---
--- Dumping routines for database 'mydb'
---
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -872,4 +935,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-01 15:24:20
+-- Dump completed on 2018-04-07 12:20:02

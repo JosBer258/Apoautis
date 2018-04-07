@@ -1,5 +1,6 @@
 ﻿using APOAUTIS.Clases;
 using APOAUTIS.Formas.Alumnos;
+using APOAUTIS.Formas.Entrevista_Padres;
 using APOAUTIS.Formas.Matricula;
 using APOAUTIS.Formas.Responsables;
 using APOAUTIS.Formas.Usuarios;
@@ -150,6 +151,12 @@ namespace APOAUTIS.Formas.Ingreso
         {
             FormRangoMensualidad Mens = new FormRangoMensualidad();
             Mens.ShowDialog();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Prueba a= new Prueba();
+            a.ShowDialog();
         }
     }
 }

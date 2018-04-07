@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-
 namespace APOAUTIS.Formas.Responsables
 {
     public partial class FormMantenimientoResponsable : Form
@@ -31,8 +30,9 @@ namespace APOAUTIS.Formas.Responsables
         private void FormMantenimientoResponsable_Load(object sender, EventArgs e)
         {
             cResp.Fill_DGV_Resp(DGV_ShowResponsables);
+            cResp.GenerarEstadoResp(cmbEstResp);
             cmbTrabResp.SelectedIndex = 0;
-            
+           
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -63,14 +63,20 @@ namespace APOAUTIS.Formas.Responsables
             txtTelCelResp.Text = row.Cells["Telefono Celular"].Value.ToString();
             txtTelTrabResp.Text = row.Cells["Telefono de Trabajo"].Value.ToString();
             string tmp = row.Cells["Trabajo"].Value.ToString();
+            string est = row.Cells["Estado"].Value.ToString();
             txtCorrResp.Text = row.Cells["Correo"].Value.ToString();
             txtProfResp.Text = row.Cells["Profesion"].Value.ToString();
             cResp.Fill_DGV_Alum(DGV_ShowAlumnosResp, row.Cells["Codigo de Responsable"].Value.ToString());
 
+            if (est.ToUpperInvariant().Contains("INACTIVO") == true) { cmbEstResp.SelectedIndex = 1; } else { cmbEstResp.SelectedIndex = 0; }
+
+            if (tmp.ToUpperInvariant().Contains("SI, ") == true) { cmbTrabResp.SelectedIndex = 0; } else { cmbTrabResp.SelectedIndex = 1; }
+
             string tmp2 = tmp.Replace("Si,", String.Empty);
             tmp2 = tmp.Replace("No,", String.Empty);
             txtLugResp.Text = tmp2.Trim();
-            
+            tmp2 = txtLugResp.Text.Replace("Si,", String.Empty);
+            txtLugResp.Text = tmp2.Trim();
             MessageBox.Show("Datos Cargados","");
             
             
@@ -143,20 +149,14 @@ namespace APOAUTIS.Formas.Responsables
             }
         }
 
-
-
-
-        /// <summary>
-        /// ///////////////////
-        /// </summary>
-        /// 
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         public void limpiarTxtBox()
         {
             txtCodResp.Text = string.Empty;
             txtNomResp.Text = string.Empty;
             txtDomResp.Text = string.Empty;
-            txtEdadResp.Text = string.Empty;
             txtIdResp.Text = string.Empty;
             txtTelCasResp.Text = string.Empty;
             txtTelCelResp.Text = string.Empty;
@@ -202,12 +202,11 @@ namespace APOAUTIS.Formas.Responsables
                         cResp.TelCasResp = txtTelCasResp.Text;
                         cResp.TelCelResp = txtTelCelResp.Text;
                         cResp.TelTrabResp = txtTelTrabResp.Text;
-                        cResp.IdResp = Convert.ToInt32(txtIdResp.Text);
+                        cResp.IdResp = (int)Convert.ToDouble(txtIdResp.Text);
                         cResp.LugTrab = cmbTrabResp.SelectedItem.ToString() + ", " + txtLugResp.Text;
                         cResp.ProfResp = txtProfResp.Text;
-                        //cResp.EdadResp = Convert.ToInt32(txtEdadResp.Text);
                         cResp.CorrResp = txtCorrResp.Text;
-
+                        cResp.EstResp = Convert.ToInt32(cmbEstResp.SelectedValue);
                         cResp.updateResp();
                         cResp.Fill_DGV_Resp(DGV_ShowResponsables);
                         cResp.msjUpdateCorrecto();
@@ -244,12 +243,16 @@ namespace APOAUTIS.Formas.Responsables
                             cResp.TelCasResp = txtTelCasResp.Text;
                             cResp.TelCelResp = txtTelCelResp.Text;
                             cResp.TelTrabResp = txtTelTrabResp.Text;
-                            cResp.IdResp = Convert.ToInt32(txtIdResp.Text);
-                            cResp.LugTrab = cmbTrabResp.SelectedItem.ToString() + ", " + txtLugResp.Text;
+                            cResp.IdResp =(int) Convert.ToDouble(txtIdResp.Text);
                             cResp.ProfResp = txtProfResp.Text;
-                            //cResp.EdadResp = Convert.ToInt32(txtEdadResp.Text);
                             cResp.CorrResp = txtCorrResp.Text;
 
+                            cResp.LugTrab = cmbTrabResp.SelectedItem.ToString() + ", " + txtLugResp.Text;
+
+                            if (cmbEstResp.SelectedItem.ToString().ToUpperInvariant().Contains("INACTIVO") == true)
+                            { cResp.EstResp = 7; }
+                            else { cResp.EstResp = 6; }
+                            cResp.EstResp = Convert.ToInt32(cmbEstResp.SelectedValue);
                             cResp.updateResp();
                             cResp.Fill_DGV_Resp(DGV_ShowResponsables);
                             cResp.msjUpdateCorrecto();

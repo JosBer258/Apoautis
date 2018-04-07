@@ -38,6 +38,7 @@
             this.historialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ingresosGastosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.montoMatriculaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rangoDeMensualidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alumnosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.responsablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entrevistaDePadresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,7 +52,6 @@
             this.mydbDataSet = new APOAUTIS.mydbDataSet();
             this.alumnosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.rangoDeMensualidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mydbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alumnosBindingSource)).BeginInit();
@@ -132,6 +132,13 @@
             this.montoMatriculaToolStripMenuItem.Size = new System.Drawing.Size(295, 22);
             this.montoMatriculaToolStripMenuItem.Text = "Monto Matricula";
             this.montoMatriculaToolStripMenuItem.Click += new System.EventHandler(this.montoMatriculaToolStripMenuItem_Click);
+            // 
+            // rangoDeMensualidadesToolStripMenuItem
+            // 
+            this.rangoDeMensualidadesToolStripMenuItem.Name = "rangoDeMensualidadesToolStripMenuItem";
+            this.rangoDeMensualidadesToolStripMenuItem.Size = new System.Drawing.Size(295, 22);
+            this.rangoDeMensualidadesToolStripMenuItem.Text = "Rango de mensualidades";
+            this.rangoDeMensualidadesToolStripMenuItem.Click += new System.EventHandler(this.rangoDeMensualidadesToolStripMenuItem_Click);
             // 
             // alumnosToolStripMenuItem
             // 
@@ -228,13 +235,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(358, 351);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // rangoDeMensualidadesToolStripMenuItem
-            // 
-            this.rangoDeMensualidadesToolStripMenuItem.Name = "rangoDeMensualidadesToolStripMenuItem";
-            this.rangoDeMensualidadesToolStripMenuItem.Size = new System.Drawing.Size(295, 22);
-            this.rangoDeMensualidadesToolStripMenuItem.Text = "Rango de mensualidades";
-            this.rangoDeMensualidadesToolStripMenuItem.Click += new System.EventHandler(this.rangoDeMensualidadesToolStripMenuItem_Click);
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FormMenuPrincipal
             // 

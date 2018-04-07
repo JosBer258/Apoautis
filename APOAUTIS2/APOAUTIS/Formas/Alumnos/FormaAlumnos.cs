@@ -58,6 +58,18 @@ namespace APOAUTIS.Formas.Alumnos
             }
 
         }
+
+        private void limpieza(GroupBox groupBox1)
+        {
+            
+            var boxe1 = groupBox1.Controls.OfType<TextBox>();
+            foreach (var box in boxe1)
+            {
+                box.Text = string.Empty;
+
+            }
+
+        }
         public FormaAlumnos()
         {
             InitializeComponent();
@@ -67,7 +79,7 @@ namespace APOAUTIS.Formas.Alumnos
         {
             alumno.Fun_Show(Pest1_Dgv_BsqAlm);
             Pest1_Radio_Alumno.Checked = true;
-            alumno.GenerarEstado(Pest2_Pest1_Cmb_Estado);
+            
             alumno.VerificarYear();
             validacionMenu(Pest2_Pest3_Grupo_Encargados);
             validacionMenu(Pest2_Pest1_GrupoGeneral);
@@ -175,8 +187,14 @@ namespace APOAUTIS.Formas.Alumnos
                 Pest2_Pest1_Txt_Escolaridad.Text = Convert.ToString(alumno.EscolaridadAlum11);
                 Pest2_Pest1_Txt_Direccion.Text = Convert.ToString(alumno.DireccionAlum11);
                 Pest2_Pest1_Txt_Instituto.Text = Convert.ToString(alumno.InstDondeEstaIncluido11);
+                alumno.GenerarEstado(Pest2_Pest1_Cmb_Estado, 2);
+                Pest2_Pest1_Cmb_Estado.SelectedValue = alumno.EstadoAlumno;
+                Pest2_Pest1_Txt_TelefonoEmergencia.Text = alumno.EmergTelefono1;
+                textBox1Pest2_Pest1_Txt_lugarEmergencia.Text = alumno.EmergLugar1;
                 alumno.MostrarAcontecimientos(Pest2_Pest2_DGV_AconMed);
                 alumno.llenarDatosHistoriaMedico();
+                alumno.GenerarEstado(Pest2_Pest3_Cmb_Estado, 3);
+                resp.GenerarEstado(Pest2_Pest3_Cmb_TipoResponsable);
 
                 Pest2_Pest2_Txt_Medicamentos.Text = Convert.ToString(alumno.UsoMedicamentos1);
                 Pest2_Pest2_Txt_Alergias.Text = Convert.ToString(alumno.ExistenciaAlergias1);
@@ -186,7 +204,10 @@ namespace APOAUTIS.Formas.Alumnos
                
                 resp.Fill_DGV_Resp_Por_Alumno(Pest2_Pest3_DGV_MuestraEncargados, alumno.CodAlumno11);
                 Pest2_Pest3_Txt_Codigo.Text= Convert.ToString(resp.ObtenerUltimoCodigoResponsable());
+                Vacios(Pest2_Pest1_GrupoGeneral);
+                limpieza(Pest1_Grupo_OpcionesBusqueda);
                 MessageBox.Show("Listo");
+                
                
             }
         }
@@ -195,7 +216,7 @@ namespace APOAUTIS.Formas.Alumnos
         {
            
 
-            if (alumno.CodAlumno11 > 0)
+            if (Pest2_Pest1_Txt_Codigo.Text != string.Empty)
             {
                 if (Vacios(Pest2_Pest3_Grupo_Encargados) == true)
                 {
@@ -220,10 +241,13 @@ namespace APOAUTIS.Formas.Alumnos
                     resp.TelCelResp = Pest2_Pest3_Txt_TelefonoCelular.Text;
                     resp.TelTrabResp = Pest2_Pest3_Txt_TelefonoTrabajo.Text;
                     resp.CorrResp = Pest2_Pest3_Txt_EdadAnos.Text;
+                    resp.EstResp = Convert.ToInt32(Pest2_Pest3_Cmb_Estado.SelectedValue);
+
                     if (resp.VerificarDuplicidadNombreID() == true)
                     {
                         resp.insertResponsable();
-                        resp.insertResponsableAlumno(alumno.CodAlumno11, Convert.ToInt32(Pest2_Pest3_Txt_Codigo.Text));
+                        resp.insertResponsableAlumno(Convert.ToInt32(Pest2_Pest1_Txt_Codigo.Text), Convert.ToInt32(Pest2_Pest3_Txt_Codigo.Text), 
+                            Convert.ToInt32(Pest2_Pest3_Cmb_TipoResponsable.SelectedValue));
                         MessageBox.Show("Ingresado Exitosamente");
                         resp.Fill_DGV_Resp_Por_Alumno(Pest2_Pest3_DGV_MuestraEncargados, alumno.CodAlumno11);
                         Pest2_Pest3_Txt_Codigo.Text = Convert.ToString(resp.ObtenerUltimoCodigoResponsable());
@@ -305,15 +329,19 @@ namespace APOAUTIS.Formas.Alumnos
         private void Pest2_Pest1_Bttn_Aceptar_Click(object sender, EventArgs e)
         {
 
-            if (alumno.CodAlumno11 > 0)
+            if (Pest2_Pest1_Txt_Codigo.Text!=string.Empty)
             {
                 if (Vacios(Pest2_Pest1_GrupoGeneral) == true)
                 {
-                    
+
+                   
+
                     alumno.updateAlumnos(Pest2_Pest1_Txt_Sexo.Text, Pest2_Pest1_Txt_Direccion.Text,
                         Pest2_Pest1_Txt_TelefonoFijo.Text, Pest2_Pest1_Txt_Celular.Text, Pest2_Pest1_Txt_Escolaridad.Text
                         , Pest2_Pest1_Txt_InstiProcedencia.Text, Pest2_Pest1_Txt_Instituto.Text,
-                        alumno.CodAlumno11);
+                         Convert.ToInt32(Pest2_Pest1_Cmb_Estado.SelectedValue),
+                         textBox1Pest2_Pest1_Txt_lugarEmergencia.Text,
+                         Pest2_Pest1_Txt_TelefonoEmergencia.Text,alumno.CodAlumno11);
                     MessageBox.Show("Ingresado Exitosamente");
                     alumno.Fun_Show(Pest1_Dgv_BsqAlm);
 
@@ -372,6 +400,51 @@ namespace APOAUTIS.Formas.Alumnos
         private void tabPage2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Pest2_Pest3_Bttn_Limpiar_Click(object sender, EventArgs e)
+        {
+            if( Pest2_Pest1_Txt_Codigo.Text!=string.Empty)
+            {
+                limpieza(Pest2_Pest3_Grupo_Encargados);
+                Pest2_Pest3_Txt_Codigo.Text = Convert.ToString(resp.ObtenerUltimoCodigoResponsable());
+            }
+            else
+            {
+                limpieza(Pest2_Pest3_Grupo_Encargados);
+                Pest2_Pest3_DGV_MuestraEncargados.DataSource = null;
+                Pest2_Pest3_Cmb_Estado.DataSource = null;
+                Pest2_Pest3_Cmb_TipoResponsable.DataSource = null;
+            }
+        }
+
+        private void Pest2_Pest1_Bttn_Limpiar_Click(object sender, EventArgs e)
+        {
+            limpieza(Pest2_Pest1_GrupoGeneral);
+        }
+
+        private void Pest2_Pest1_Txt_Codigo_TextChanged(object sender, EventArgs e)
+        {
+            if (Pest2_Pest1_Txt_Codigo.Text == string.Empty)
+            {
+                Pest2_Pest3_DGV_MuestraEncargados.DataSource = null;
+                Pest2_Pest2_DGV_AconMed.DataSource=null;
+                Pest2_Pest3_Cmb_Estado.DataSource = null;
+                Pest2_Pest1_Cmb_Estado.DataSource = null;
+                Pest2_Pest3_Cmb_TipoResponsable.DataSource = null;
+                limpieza(Pest2_Pest2_Grupo_Historial);
+                limpieza(Pest2_Pest3_Grupo_Encargados);
+            }
+        }
+
+        private void textBox1Pest2_Pest1_Txt_lugarEmergencia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.ValidarID(sender, e);
+        }
+
+        private void Pest2_Pest1_Txt_TelefonoEmergencia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.ValidarID(sender, e);
         }
     }
 }
