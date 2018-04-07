@@ -1359,6 +1359,7 @@ namespace APOAUTIS.Clases
 
             if (Reg.Read())
             {
+
                 Var_duracion_periodo_gestacion = Reg["DuracionGestacion"].ToString();
                 Var_tipo_familia = Reg["TipoFamilia"].ToString();
                 Var_peso_al_nacer = Reg["PesoAlNacer"].ToString();
@@ -1366,6 +1367,17 @@ namespace APOAUTIS.Clases
                 Var_datos_relevantes_perinatales = Reg["DatosPerinatales"].ToString();
                 Var_datos_relevantes_postnatales = Reg["DatosPostnatales"].ToString();
                 Set_peso_al_nacer(Reg["PesoAlNacer"].ToString());
+            }
+            else
+            {
+
+                Var_duracion_periodo_gestacion = "";
+                Var_tipo_familia = "";
+                Var_peso_al_nacer = "";
+                Var_datos_relevantes_prenatales = "";
+                Var_datos_relevantes_perinatales = "";
+                Var_datos_relevantes_postnatales = "";
+                Set_peso_al_nacer("");
             }
             this.cnx.Close();
    
@@ -1484,7 +1496,7 @@ where A.CodAlumno   = '{0}'", Var_codigo_alumno);
             Var_general_resp = "";
             int ContadorFil = 1;
 
-            this.sql = string.Format("select C.NomComRes as 'Responsable' from alumnos as A inner join alumnos_responsables as B on A.CodAlumno = B.CodAlumno inner join responsables as C on B.CodResp = C.CodResp where A.CodAlumno = '{0}'", Var_codigo_alumno);
+            this.sql = string.Format("select C.NomComRes as 'Responsable' from alumnos as A inner join `alumnos/responsables` as B on A.CodAlumno = B.CodAlumno inner join responsables as C on B.CodResp = C.CodResp where A.CodAlumno = '{0}'", Var_codigo_alumno);
             this.cnx.Open();
             this.cmd = new MySql.Data.MySqlClient.MySqlCommand(this.sql, this.cnx);
             MySql.Data.MySqlClient.MySqlDataReader Reg = null;
