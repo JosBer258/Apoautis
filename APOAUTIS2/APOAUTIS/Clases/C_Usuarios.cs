@@ -375,7 +375,7 @@ this.Var_oportunidades, this.Var_cod_user);
         public void GenerarEstado(ComboBox Com_Roles)
         {
             cnx.Open();
-            sql = string.Format(@"select CodEstado, DescripcionEstado from estados");
+            sql = string.Format(@"select CodEstado, DescripcionEstado from estados where CodTipoEstado = '1' ");
             cmd = new MySqlCommand(sql, cnx);
             DataAdapter = new MySqlDataAdapter(cmd);
             dt = new DataTable();

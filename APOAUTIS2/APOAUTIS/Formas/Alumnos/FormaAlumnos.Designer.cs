@@ -54,6 +54,10 @@
             this.Pest2_Pest1_Txt_AIngreso = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
             this.Pest2_Pest1_GrupoGeneral = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.Pest2_Pest1_Txt_TelefonoEmergencia = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1Pest2_Pest1_Txt_lugarEmergencia = new System.Windows.Forms.TextBox();
             this.Pest2_Pest1_Cmb_Estado = new System.Windows.Forms.ComboBox();
             this.label29 = new System.Windows.Forms.Label();
             this.Pest2_Pest1_Txt_InstiProcedencia = new System.Windows.Forms.TextBox();
@@ -102,6 +106,8 @@
             this.Pest2_Pest3_Grupo_MuestraDatosEncargado = new System.Windows.Forms.GroupBox();
             this.Pest2_Pest3_DGV_MuestraEncargados = new System.Windows.Forms.DataGridView();
             this.Pest2_Pest3_Grupo_Encargados = new System.Windows.Forms.GroupBox();
+            this.Pest2_Pest3_Cmb_TipoResponsable = new System.Windows.Forms.ComboBox();
+            this.label40 = new System.Windows.Forms.Label();
             this.Pest2_Pest3_Cmb_Estado = new System.Windows.Forms.ComboBox();
             this.Pest2_Pest3_Cmb_Trabaja = new System.Windows.Forms.ComboBox();
             this.Pest2_Pest3_Txt_EdadAnos = new System.Windows.Forms.TextBox();
@@ -130,12 +136,6 @@
             this.label39 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.textBox1Pest2_Pest1_Txt_lugarEmergencia = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Pest2_Pest1_Txt_TelefonoEmergencia = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.Pest2_Pest3_Cmb_TipoResponsable = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.Pest1_Grupo_OpcionesBusqueda.SuspendLayout();
@@ -457,6 +457,38 @@
             this.Pest2_Pest1_GrupoGeneral.TabIndex = 0;
             this.Pest2_Pest1_GrupoGeneral.TabStop = false;
             this.Pest2_Pest1_GrupoGeneral.Text = "Datos Generales";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(526, 174);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(162, 13);
+            this.label12.TabIndex = 33;
+            this.label12.Text = "Tel en caso de Emergencia";
+            // 
+            // Pest2_Pest1_Txt_TelefonoEmergencia
+            // 
+            this.Pest2_Pest1_Txt_TelefonoEmergencia.Location = new System.Drawing.Point(526, 190);
+            this.Pest2_Pest1_Txt_TelefonoEmergencia.Name = "Pest2_Pest1_Txt_TelefonoEmergencia";
+            this.Pest2_Pest1_Txt_TelefonoEmergencia.Size = new System.Drawing.Size(168, 20);
+            this.Pest2_Pest1_Txt_TelefonoEmergencia.TabIndex = 32;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(524, 132);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(176, 13);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Lugar en caso de Emergencia";
+            // 
+            // textBox1Pest2_Pest1_Txt_lugarEmergencia
+            // 
+            this.textBox1Pest2_Pest1_Txt_lugarEmergencia.Location = new System.Drawing.Point(527, 148);
+            this.textBox1Pest2_Pest1_Txt_lugarEmergencia.Name = "textBox1Pest2_Pest1_Txt_lugarEmergencia";
+            this.textBox1Pest2_Pest1_Txt_lugarEmergencia.Size = new System.Drawing.Size(168, 20);
+            this.textBox1Pest2_Pest1_Txt_lugarEmergencia.TabIndex = 30;
             // 
             // Pest2_Pest1_Cmb_Estado
             // 
@@ -927,6 +959,24 @@
             this.Pest2_Pest3_Grupo_Encargados.TabStop = false;
             this.Pest2_Pest3_Grupo_Encargados.Text = "Datos de los Encargados";
             // 
+            // Pest2_Pest3_Cmb_TipoResponsable
+            // 
+            this.Pest2_Pest3_Cmb_TipoResponsable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Pest2_Pest3_Cmb_TipoResponsable.FormattingEnabled = true;
+            this.Pest2_Pest3_Cmb_TipoResponsable.Location = new System.Drawing.Point(269, 193);
+            this.Pest2_Pest3_Cmb_TipoResponsable.Name = "Pest2_Pest3_Cmb_TipoResponsable";
+            this.Pest2_Pest3_Cmb_TipoResponsable.Size = new System.Drawing.Size(130, 21);
+            this.Pest2_Pest3_Cmb_TipoResponsable.TabIndex = 30;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(132, 196);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(127, 13);
+            this.label40.TabIndex = 29;
+            this.label40.Text = "Tipo de Responsable";
+            // 
             // Pest2_Pest3_Cmb_Estado
             // 
             this.Pest2_Pest3_Cmb_Estado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1136,7 +1186,7 @@
             // Pest2_Pest3_Txt_ID
             // 
             this.Pest2_Pest3_Txt_ID.Location = new System.Drawing.Point(241, 82);
-            this.Pest2_Pest3_Txt_ID.MaxLength = 11;
+            this.Pest2_Pest3_Txt_ID.MaxLength = 14;
             this.Pest2_Pest3_Txt_ID.Name = "Pest2_Pest3_Txt_ID";
             this.Pest2_Pest3_Txt_ID.Size = new System.Drawing.Size(158, 20);
             this.Pest2_Pest3_Txt_ID.TabIndex = 3;
@@ -1182,56 +1232,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // textBox1Pest2_Pest1_Txt_lugarEmergencia
-            // 
-            this.textBox1Pest2_Pest1_Txt_lugarEmergencia.Location = new System.Drawing.Point(527, 148);
-            this.textBox1Pest2_Pest1_Txt_lugarEmergencia.Name = "textBox1Pest2_Pest1_Txt_lugarEmergencia";
-            this.textBox1Pest2_Pest1_Txt_lugarEmergencia.Size = new System.Drawing.Size(168, 20);
-            this.textBox1Pest2_Pest1_Txt_lugarEmergencia.TabIndex = 30;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(524, 132);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 13);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "Lugar en caso de Emergencia";
-            // 
-            // Pest2_Pest1_Txt_TelefonoEmergencia
-            // 
-            this.Pest2_Pest1_Txt_TelefonoEmergencia.Location = new System.Drawing.Point(526, 190);
-            this.Pest2_Pest1_Txt_TelefonoEmergencia.Name = "Pest2_Pest1_Txt_TelefonoEmergencia";
-            this.Pest2_Pest1_Txt_TelefonoEmergencia.Size = new System.Drawing.Size(168, 20);
-            this.Pest2_Pest1_Txt_TelefonoEmergencia.TabIndex = 32;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(526, 174);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(162, 13);
-            this.label12.TabIndex = 33;
-            this.label12.Text = "Tel en caso de Emergencia";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(132, 196);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(127, 13);
-            this.label40.TabIndex = 29;
-            this.label40.Text = "Tipo de Responsable";
-            // 
-            // Pest2_Pest3_Cmb_TipoResponsable
-            // 
-            this.Pest2_Pest3_Cmb_TipoResponsable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Pest2_Pest3_Cmb_TipoResponsable.FormattingEnabled = true;
-            this.Pest2_Pest3_Cmb_TipoResponsable.Location = new System.Drawing.Point(269, 193);
-            this.Pest2_Pest3_Cmb_TipoResponsable.Name = "Pest2_Pest3_Cmb_TipoResponsable";
-            this.Pest2_Pest3_Cmb_TipoResponsable.Size = new System.Drawing.Size(130, 21);
-            this.Pest2_Pest3_Cmb_TipoResponsable.TabIndex = 30;
             // 
             // FormaAlumnos
             // 
