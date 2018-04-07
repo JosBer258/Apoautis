@@ -63,17 +63,17 @@ namespace APOAUTIS.Formas.Alumnos
                 }
                 else if (Accion == "Vista_Entrevista")
                 {
-                    VistaEntrevistaPadres Form_Ent = new VistaEntrevistaPadres();
+                    VistaEntrevistaPadres Form_Ent = Owner as VistaEntrevistaPadres;
                     Form_Ent.Fun_ExtraerDatos((int)Convert.ToDouble(row.Cells["Codigo"].Value.ToString()),
                     row.Cells["Nombre del Alumno"].Value.ToString());
-                    Form_Ent.Fun_MostrarDatosAnamnesis();
+   
                 }
                 else if (Accion == "PP")
                 {
                    Prueba Form_Ent = new Prueba();
                     Form_Ent.Fun_ExtraerDatos((int)Convert.ToDouble(row.Cells["Codigo"].Value.ToString()),
                     row.Cells["Nombre del Alumno"].Value.ToString());
-                    Form_Ent.Fun_MostrarDatosAnamnesis();
+             
                 }
 
                 this.Close();
@@ -103,17 +103,17 @@ namespace APOAUTIS.Formas.Alumnos
                 }
                 else if (Accion == "Vista_Entrevista")
                 {
-                    VistaEntrevistaPadres Form_Ent = new VistaEntrevistaPadres();
+                    VistaEntrevistaPadres Form_Ent = Owner as VistaEntrevistaPadres;
                     Form_Ent.Fun_ExtraerDatos((int)Convert.ToDouble(row.Cells["Codigo"].Value.ToString()),
                     row.Cells["Nombre del Alumno"].Value.ToString());
-                    Form_Ent.Fun_MostrarDatosAnamnesis();
+
                 }
                 else if (Accion == "PP")
                 {
                     Prueba Form_Ent = new Prueba();
                     Form_Ent.Fun_ExtraerDatos((int)Convert.ToDouble(row.Cells["Codigo"].Value.ToString()),
                     row.Cells["Nombre del Alumno"].Value.ToString());
-                    Form_Ent.Fun_MostrarDatosAnamnesis();
+   
                 }
 
 

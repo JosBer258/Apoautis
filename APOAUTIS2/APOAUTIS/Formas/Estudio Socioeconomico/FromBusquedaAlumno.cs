@@ -21,10 +21,5 @@ namespace APOAUTIS.Formas.Estudio_Socioeconomico
         {
             this.Close();
         }
-
-        private void DGV_Show_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

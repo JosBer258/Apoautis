@@ -37,12 +37,6 @@ namespace APOAUTIS
         {
             FromBusquedaAlumno frmBusqEstSoc = new FromBusquedaAlumno();
             frmBusqEstSoc.ShowDialog();
-            
-        }
-
-        private void textBox66_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -71,7 +71,6 @@
             this.DGV_Show.Name = "DGV_Show";
             this.DGV_Show.Size = new System.Drawing.Size(552, 332);
             this.DGV_Show.TabIndex = 8;
-            this.DGV_Show.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Show_CellContentClick);
             // 
             // FromBusquedaAlumno
             // 
