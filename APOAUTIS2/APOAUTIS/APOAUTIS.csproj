@@ -55,18 +55,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\C_Alumnos.cs" />
+    <Compile Include="Clases\C_BusqMatricula.cs" />
     <Compile Include="Clases\C_EntrePadres.cs" />
-    <Compile Include="Clases\C_IngGast.cs" />
     <Compile Include="Clases\C_EvalPsico.cs" />
+    <Compile Include="Clases\C_IngGast.cs" />
     <Compile Include="Clases\C_Login.cs" />
     <Compile Include="Clases\C_Matricula.cs" />
     <Compile Include="Clases\C_MontoMens.cs" />
     <Compile Include="Clases\C_MuestraHistorialMatricu.cs" />
+    <Compile Include="Clases\C_Responsables.cs" />
     <Compile Include="Clases\C_SalarioMensaulidad.cs" />
     <Compile Include="Clases\C_ShowAlum.cs" />
-    <Compile Include="Clases\C_Responsables.cs" />
     <Compile Include="Clases\C_Usuarios.cs" />
     <Compile Include="Clases\C_Validaciones.cs" />
+    <Compile Include="Clases\C_VistaEntrevistaPadres.cs" />
     <Compile Include="Clases\DataGirdView.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Formas\Alumnos\FormGlobalShowAlum.cs">
@@ -86,6 +88,12 @@
     </Compile>
     <Compile Include="Formas\Estudio Socioeconomico\FromBusquedaAlumno.Designer.cs">
       <DependentUpon>FromBusquedaAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Ingreso\Prueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Ingreso\Prueba.Designer.cs">
+      <DependentUpon>Prueba.cs</DependentUpon>
     </Compile>
     <Compile Include="Formas\Manuales\FormManual.cs">
       <SubType>Form</SubType>
@@ -116,6 +124,12 @@
     </Compile>
     <Compile Include="Formas\Matricula\FormRangoMensualidad.Designer.cs">
       <DependentUpon>FormRangoMensualidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Matricula\Form_BusqMatricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Matricula\Form_BusqMatricula.Designer.cs">
+      <DependentUpon>Form_BusqMatricula.cs</DependentUpon>
     </Compile>
     <Compile Include="Formas\Responsables\FormMantenimientoResponsable.cs">
       <SubType>Form</SubType>
@@ -211,6 +225,9 @@
     <EmbeddedResource Include="Formas\Estudio Socioeconomico\FromBusquedaAlumno.resx">
       <DependentUpon>FromBusquedaAlumno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Ingreso\Prueba.resx">
+      <DependentUpon>Prueba.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formas\Manuales\FormManual.resx">
       <DependentUpon>FormManual.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Matricula\FormRangoMensualidad.resx">
       <DependentUpon>FormRangoMensualidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Matricula\Form_BusqMatricula.resx">
+      <DependentUpon>Form_BusqMatricula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Responsables\FormMantenimientoResponsable.resx">
       <DependentUpon>FormMantenimientoResponsable.cs</DependentUpon>

@@ -1,0 +1,9 @@
+//Agregue la tabla de cuotas, esta no esta relacionada con nada 
+
+CREATE TABLE `mydb`.`cuota` (
+  `CodMens` INT NOT NULL,
+  `RangoInicial` FLOAT NULL,
+  `RangoFinal` FLOAT NULL,
+  `ValorMensualidad` FLOAT NULL,
+  PRIMARY KEY (`CodMens`));
+

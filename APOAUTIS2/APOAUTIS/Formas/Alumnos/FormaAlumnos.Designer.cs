@@ -470,9 +470,11 @@
             // Pest2_Pest1_Txt_TelefonoEmergencia
             // 
             this.Pest2_Pest1_Txt_TelefonoEmergencia.Location = new System.Drawing.Point(526, 190);
+            this.Pest2_Pest1_Txt_TelefonoEmergencia.MaxLength = 10;
             this.Pest2_Pest1_Txt_TelefonoEmergencia.Name = "Pest2_Pest1_Txt_TelefonoEmergencia";
             this.Pest2_Pest1_Txt_TelefonoEmergencia.Size = new System.Drawing.Size(168, 20);
             this.Pest2_Pest1_Txt_TelefonoEmergencia.TabIndex = 32;
+            this.Pest2_Pest1_Txt_TelefonoEmergencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Pest1_Txt_TelefonoEmergencia_KeyPress);
             // 
             // label1
             // 
@@ -486,9 +488,11 @@
             // textBox1Pest2_Pest1_Txt_lugarEmergencia
             // 
             this.textBox1Pest2_Pest1_Txt_lugarEmergencia.Location = new System.Drawing.Point(527, 148);
+            this.textBox1Pest2_Pest1_Txt_lugarEmergencia.MaxLength = 54;
             this.textBox1Pest2_Pest1_Txt_lugarEmergencia.Name = "textBox1Pest2_Pest1_Txt_lugarEmergencia";
             this.textBox1Pest2_Pest1_Txt_lugarEmergencia.Size = new System.Drawing.Size(168, 20);
             this.textBox1Pest2_Pest1_Txt_lugarEmergencia.TabIndex = 30;
+            this.textBox1Pest2_Pest1_Txt_lugarEmergencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1Pest2_Pest1_Txt_lugarEmergencia_KeyPress);
             // 
             // Pest2_Pest1_Cmb_Estado
             // 
@@ -511,6 +515,7 @@
             // Pest2_Pest1_Txt_InstiProcedencia
             // 
             this.Pest2_Pest1_Txt_InstiProcedencia.Location = new System.Drawing.Point(152, 187);
+            this.Pest2_Pest1_Txt_InstiProcedencia.MaxLength = 45;
             this.Pest2_Pest1_Txt_InstiProcedencia.Name = "Pest2_Pest1_Txt_InstiProcedencia";
             this.Pest2_Pest1_Txt_InstiProcedencia.Size = new System.Drawing.Size(138, 20);
             this.Pest2_Pest1_Txt_InstiProcedencia.TabIndex = 27;
@@ -528,6 +533,7 @@
             // Pest2_Pest1_Txt_Celular
             // 
             this.Pest2_Pest1_Txt_Celular.Location = new System.Drawing.Point(396, 139);
+            this.Pest2_Pest1_Txt_Celular.MaxLength = 10;
             this.Pest2_Pest1_Txt_Celular.Name = "Pest2_Pest1_Txt_Celular";
             this.Pest2_Pest1_Txt_Celular.Size = new System.Drawing.Size(104, 20);
             this.Pest2_Pest1_Txt_Celular.TabIndex = 25;
@@ -545,6 +551,7 @@
             // Pest2_Pest1_Txt_Instituto
             // 
             this.Pest2_Pest1_Txt_Instituto.Location = new System.Drawing.Point(527, 109);
+            this.Pest2_Pest1_Txt_Instituto.MaxLength = 45;
             this.Pest2_Pest1_Txt_Instituto.Name = "Pest2_Pest1_Txt_Instituto";
             this.Pest2_Pest1_Txt_Instituto.Size = new System.Drawing.Size(163, 20);
             this.Pest2_Pest1_Txt_Instituto.TabIndex = 23;
@@ -562,6 +569,7 @@
             // Pest2_Pest1_Txt_Escolaridad
             // 
             this.Pest2_Pest1_Txt_Escolaridad.Location = new System.Drawing.Point(395, 165);
+            this.Pest2_Pest1_Txt_Escolaridad.MaxLength = 30;
             this.Pest2_Pest1_Txt_Escolaridad.Name = "Pest2_Pest1_Txt_Escolaridad";
             this.Pest2_Pest1_Txt_Escolaridad.Size = new System.Drawing.Size(104, 20);
             this.Pest2_Pest1_Txt_Escolaridad.TabIndex = 21;
@@ -579,6 +587,7 @@
             // Pest2_Pest1_Txt_TelefonoFijo
             // 
             this.Pest2_Pest1_Txt_TelefonoFijo.Location = new System.Drawing.Point(396, 35);
+            this.Pest2_Pest1_Txt_TelefonoFijo.MaxLength = 10;
             this.Pest2_Pest1_Txt_TelefonoFijo.Name = "Pest2_Pest1_Txt_TelefonoFijo";
             this.Pest2_Pest1_Txt_TelefonoFijo.Size = new System.Drawing.Size(104, 20);
             this.Pest2_Pest1_Txt_TelefonoFijo.TabIndex = 19;
@@ -596,6 +605,7 @@
             // Pest2_Pest1_Txt_Direccion
             // 
             this.Pest2_Pest1_Txt_Direccion.Location = new System.Drawing.Point(526, 50);
+            this.Pest2_Pest1_Txt_Direccion.MaxLength = 45;
             this.Pest2_Pest1_Txt_Direccion.Multiline = true;
             this.Pest2_Pest1_Txt_Direccion.Name = "Pest2_Pest1_Txt_Direccion";
             this.Pest2_Pest1_Txt_Direccion.Size = new System.Drawing.Size(165, 42);
@@ -632,6 +642,7 @@
             // 
             this.Pest2_Pest1_Txt_Identidad.Enabled = false;
             this.Pest2_Pest1_Txt_Identidad.Location = new System.Drawing.Point(396, 87);
+            this.Pest2_Pest1_Txt_Identidad.MaxLength = 14;
             this.Pest2_Pest1_Txt_Identidad.Name = "Pest2_Pest1_Txt_Identidad";
             this.Pest2_Pest1_Txt_Identidad.Size = new System.Drawing.Size(104, 20);
             this.Pest2_Pest1_Txt_Identidad.TabIndex = 13;
