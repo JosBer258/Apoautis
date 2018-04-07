@@ -436,5 +436,15 @@ namespace APOAUTIS.Formas.Alumnos
                 limpieza(Pest2_Pest3_Grupo_Encargados);
             }
         }
+
+        private void textBox1Pest2_Pest1_Txt_lugarEmergencia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.ValidarID(sender, e);
+        }
+
+        private void Pest2_Pest1_Txt_TelefonoEmergencia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.ValidarID(sender, e);
+        }
     }
 }

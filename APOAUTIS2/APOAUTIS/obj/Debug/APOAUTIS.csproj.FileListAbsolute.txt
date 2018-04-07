@@ -195,3 +195,4 @@ C:\Users\Josias\Pictures\APOAUTIS2\APOAUTIS\bin\Debug\APOAUTIS.pdb
 C:\Users\Josias\Pictures\APOAUTIS2\APOAUTIS\bin\Debug\Interop.AcroPDFLib.dll
 C:\Users\Josias\Pictures\APOAUTIS2\APOAUTIS\bin\Debug\AxInterop.AcroPDFLib.dll
 C:\Users\Josias\Pictures\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Matricula.Form_BusqMatricula.resources
+C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Matricula.Form_BusqMatricula.resources

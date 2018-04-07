@@ -30,8 +30,9 @@ namespace APOAUTIS.Formas.Responsables
         private void FormMantenimientoResponsable_Load(object sender, EventArgs e)
         {
             cResp.Fill_DGV_Resp(DGV_ShowResponsables);
+            cResp.GenerarEstadoResp(cmbEstResp);
             cmbTrabResp.SelectedIndex = 0;
-            cmbEstResp.SelectedIndex = 0;
+           
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -201,11 +202,11 @@ namespace APOAUTIS.Formas.Responsables
                         cResp.TelCasResp = txtTelCasResp.Text;
                         cResp.TelCelResp = txtTelCelResp.Text;
                         cResp.TelTrabResp = txtTelTrabResp.Text;
-                        cResp.IdResp = txtIdResp.Text;
+                        cResp.IdResp = (int)Convert.ToDouble(txtIdResp.Text);
                         cResp.LugTrab = cmbTrabResp.SelectedItem.ToString() + ", " + txtLugResp.Text;
                         cResp.ProfResp = txtProfResp.Text;
                         cResp.CorrResp = txtCorrResp.Text;
-
+                        cResp.EstResp = Convert.ToInt32(cmbEstResp.SelectedValue);
                         cResp.updateResp();
                         cResp.Fill_DGV_Resp(DGV_ShowResponsables);
                         cResp.msjUpdateCorrecto();
@@ -242,7 +243,7 @@ namespace APOAUTIS.Formas.Responsables
                             cResp.TelCasResp = txtTelCasResp.Text;
                             cResp.TelCelResp = txtTelCelResp.Text;
                             cResp.TelTrabResp = txtTelTrabResp.Text;
-                            cResp.IdResp = txtIdResp.Text;
+                            cResp.IdResp =(int) Convert.ToDouble(txtIdResp.Text);
                             cResp.ProfResp = txtProfResp.Text;
                             cResp.CorrResp = txtCorrResp.Text;
 
@@ -251,7 +252,7 @@ namespace APOAUTIS.Formas.Responsables
                             if (cmbEstResp.SelectedItem.ToString().ToUpperInvariant().Contains("INACTIVO") == true)
                             { cResp.EstResp = 7; }
                             else { cResp.EstResp = 6; }
-
+                            cResp.EstResp = Convert.ToInt32(cmbEstResp.SelectedValue);
                             cResp.updateResp();
                             cResp.Fill_DGV_Resp(DGV_ShowResponsables);
                             cResp.msjUpdateCorrecto();
