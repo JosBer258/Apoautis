@@ -15,6 +15,11 @@ namespace APOAUTIS.Formas.Estudio_Socioeconomico
 {
     public partial class FromBusquedaAlumno : Form
     {
+
+
+        C_Validaciones Cl_Valid = new C_Validaciones();
+        public string Accion;
+
         public FromBusquedaAlumno()
         {
             InitializeComponent();
@@ -43,9 +48,18 @@ namespace APOAUTIS.Formas.Estudio_Socioeconomico
         private void btm_buscar_Click(object sender, EventArgs e)
         {
             DGV_Show.DataSource = Clases.C_EstudioSocioMetodos.Buscar(Txt_FiltroAlumno.Text);
+           /* DGV_Show.DataSource = Clases.C_EstudioSocioMetodos.Buscar(Txt_FiltroAlumno.Text);
+            DGV_Show.DataSource = Clases.C_EstudioSocioMetodos.Buscar(Txt_FiltroAlumno.Text);
+            DGV_Show.DataSource = Clases.C_EstudioSocioMetodos.Buscar(Txt_FiltroAlumno.Text);
+            */
+
+
+
         }
-   
+        public static C_responsablesMadre madreSeleccionado { get; set; }
         public static C_DatosGenerales AlumnoSeleccionado { get;  set; }
+        public static C_responsablePadre padreSeleccionado { get; set; }
+        public static C_ResponsablesOtro otrorespSeleccionado { get; set; }
 
         private void btm_Aceptar_Click(object sender, EventArgs e)
         {
@@ -55,10 +69,26 @@ namespace APOAUTIS.Formas.Estudio_Socioeconomico
                     double cod = Convert.ToDouble(DGV_Show.CurrentRow.Cells[0].Value);
                 AlumnoSeleccionado = C_EstudioSocioMetodos.ObtenerDatosGenerales(cod);
 
-                    this.Close();
+                double cod2 = Convert.ToDouble(DGV_Show.CurrentRow.Cells[0].Value);
+                madreSeleccionado = C_EstudioSocioMetodos.ObtenerMadre(cod2);
+
+                double cod3 = Convert.ToDouble(DGV_Show.CurrentRow.Cells[0].Value);
+                padreSeleccionado = C_EstudioSocioMetodos.ObtenerPadre(cod3);
+
+                double cod4 = Convert.ToDouble(DGV_Show.CurrentRow.Cells[0].Value);
+                otrorespSeleccionado = C_EstudioSocioMetodos.ObtenerOtro(cod4);
+
+
+                this.Close();
                 }
                 else
                     MessageBox.Show("debe de seleccionar una fila");
             }
+
+
+
+
+
+
     }
 }

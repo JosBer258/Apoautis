@@ -174,7 +174,7 @@
             this.txt_EsSo_cine_SaludRecre = new System.Windows.Forms.TextBox();
             this.combox_EsSo_Cine_SaludRecre = new System.Windows.Forms.ComboBox();
             this.label61 = new System.Windows.Forms.Label();
-            this.textBox56 = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_Playa_SaludRecre = new System.Windows.Forms.TextBox();
             this.combox_EsSo_Playa_SaludRecre = new System.Windows.Forms.ComboBox();
             this.label60 = new System.Windows.Forms.Label();
             this.txt_EsSo_OtrosLugares_SaludRecre = new System.Windows.Forms.TextBox();
@@ -186,7 +186,7 @@
             this.txt_EsSo_Parques_SaludRecre = new System.Windows.Forms.TextBox();
             this.combox_EsSo_Parques_SaludRecre = new System.Windows.Forms.ComboBox();
             this.label57 = new System.Windows.Forms.Label();
-            this.chekbox_EsSo_GastoMedi_SaludRecre = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_GastoMedi_SaludRecre = new System.Windows.Forms.TextBox();
             this.label56 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.chekbox_EsSo_NingunaEnfer_SaludRecre = new System.Windows.Forms.CheckBox();
@@ -207,17 +207,17 @@
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.rbtm_EsSo_Madera_InfoVivien = new System.Windows.Forms.RadioButton();
             this.rbtm_EsSo_OtroMaterPiso_InfoVivien = new System.Windows.Forms.RadioButton();
-            this.radioButton11 = new System.Windows.Forms.RadioButton();
+            this.rbtm_EsSo_MaderaPiso_InfoVivien = new System.Windows.Forms.RadioButton();
             this.rbtm_EsSo_CEramica_InfoVivien = new System.Windows.Forms.RadioButton();
             this.label64 = new System.Windows.Forms.Label();
             this.txt_EsSo_OtroMaterPiso_InfoVivien = new System.Windows.Forms.TextBox();
             this.rbtm_EsSo_Propia_InfoVivien = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.rbtm_EsSo_LabrilloPiso_InfoVivien = new System.Windows.Forms.RadioButton();
             this.rbtm_EsSo_Alquilada_InfoVivien = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.rbtm_EsSo_cementoPiso_InfoVivien = new System.Windows.Forms.RadioButton();
             this.rbtm_EsSo_OtroCaracte_InfoVivien = new System.Windows.Forms.RadioButton();
             this.rbtm_EsSo_Tierra_InfoVivien = new System.Windows.Forms.RadioButton();
-            this.txt_EsSo_OtroCaracte_InfoVivien = new System.Windows.Forms.TextBox();
+            this.txt_EsSo_OtraTenencia_InfoVivien = new System.Windows.Forms.TextBox();
             this.label66 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
             this.txt_EsSo_OtroMaterial_InfoVivien = new System.Windows.Forms.TextBox();
@@ -273,7 +273,7 @@
             this.tabEstSocioEco.Location = new System.Drawing.Point(12, 12);
             this.tabEstSocioEco.Name = "tabEstSocioEco";
             this.tabEstSocioEco.SelectedIndex = 0;
-            this.tabEstSocioEco.Size = new System.Drawing.Size(712, 570);
+            this.tabEstSocioEco.Size = new System.Drawing.Size(711, 571);
             this.tabEstSocioEco.TabIndex = 0;
             // 
             // DatosGenerales
@@ -288,7 +288,7 @@
             this.DatosGenerales.Location = new System.Drawing.Point(4, 22);
             this.DatosGenerales.Name = "DatosGenerales";
             this.DatosGenerales.Padding = new System.Windows.Forms.Padding(3);
-            this.DatosGenerales.Size = new System.Drawing.Size(704, 544);
+            this.DatosGenerales.Size = new System.Drawing.Size(703, 545);
             this.DatosGenerales.TabIndex = 0;
             this.DatosGenerales.Text = "Datos Generales";
             this.DatosGenerales.UseVisualStyleBackColor = true;
@@ -339,11 +339,12 @@
             // 
             // txt_EsSo_lugar_DatosGe
             // 
-            this.txt_EsSo_lugar_DatosGe.Location = new System.Drawing.Point(126, 64);
+            this.txt_EsSo_lugar_DatosGe.Location = new System.Drawing.Point(56, 64);
             this.txt_EsSo_lugar_DatosGe.Name = "txt_EsSo_lugar_DatosGe";
-            this.txt_EsSo_lugar_DatosGe.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_lugar_DatosGe.Size = new System.Drawing.Size(170, 20);
             this.txt_EsSo_lugar_DatosGe.TabIndex = 34;
             this.txt_EsSo_lugar_DatosGe.TextChanged += new System.EventHandler(this.txt_EsSo_lugar_TextChanged);
+            this.txt_EsSo_lugar_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_lugar_DatosGe_KeyPress);
             // 
             // txt_EsSo_PersonaEntre_DatosGe
             // 
@@ -351,6 +352,7 @@
             this.txt_EsSo_PersonaEntre_DatosGe.Name = "txt_EsSo_PersonaEntre_DatosGe";
             this.txt_EsSo_PersonaEntre_DatosGe.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_PersonaEntre_DatosGe.TabIndex = 38;
+            this.txt_EsSo_PersonaEntre_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_PersonaEntre_DatosGe_KeyPress);
             // 
             // label69
             // 
@@ -486,6 +488,7 @@
             // 
             // txt_EsSo_LugarTrabPadre_forma
             // 
+            this.txt_EsSo_LugarTrabPadre_forma.Enabled = false;
             this.txt_EsSo_LugarTrabPadre_forma.Location = new System.Drawing.Point(336, 71);
             this.txt_EsSo_LugarTrabPadre_forma.Name = "txt_EsSo_LugarTrabPadre_forma";
             this.txt_EsSo_LugarTrabPadre_forma.Size = new System.Drawing.Size(100, 20);
@@ -502,6 +505,7 @@
             // 
             // txt_EsSo_OficioPadre_forma
             // 
+            this.txt_EsSo_OficioPadre_forma.Enabled = false;
             this.txt_EsSo_OficioPadre_forma.Location = new System.Drawing.Point(337, 19);
             this.txt_EsSo_OficioPadre_forma.Name = "txt_EsSo_OficioPadre_forma";
             this.txt_EsSo_OficioPadre_forma.Size = new System.Drawing.Size(100, 20);
@@ -522,6 +526,7 @@
             this.txt_EsSo_DomiciPadre_DatosGe.Name = "txt_EsSo_DomiciPadre_DatosGe";
             this.txt_EsSo_DomiciPadre_DatosGe.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_DomiciPadre_DatosGe.TabIndex = 18;
+            this.txt_EsSo_DomiciPadre_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_DomiciPadre_DatosGe_KeyPress);
             // 
             // label23
             // 
@@ -541,6 +546,7 @@
             // 
             // txt_EsSo_NomPadre_DatosGe
             // 
+            this.txt_EsSo_NomPadre_DatosGe.Enabled = false;
             this.txt_EsSo_NomPadre_DatosGe.Location = new System.Drawing.Point(117, 19);
             this.txt_EsSo_NomPadre_DatosGe.Name = "txt_EsSo_NomPadre_DatosGe";
             this.txt_EsSo_NomPadre_DatosGe.Size = new System.Drawing.Size(100, 20);
@@ -578,6 +584,7 @@
             // 
             // txt_EsSo_SexoAlum_DatosGe
             // 
+            this.txt_EsSo_SexoAlum_DatosGe.Enabled = false;
             this.txt_EsSo_SexoAlum_DatosGe.Location = new System.Drawing.Point(318, 71);
             this.txt_EsSo_SexoAlum_DatosGe.Name = "txt_EsSo_SexoAlum_DatosGe";
             this.txt_EsSo_SexoAlum_DatosGe.Size = new System.Drawing.Size(100, 20);
@@ -595,6 +602,7 @@
             // 
             // txt_EsSo_IdentiEst_DatosGe
             // 
+            this.txt_EsSo_IdentiEst_DatosGe.Enabled = false;
             this.txt_EsSo_IdentiEst_DatosGe.Location = new System.Drawing.Point(317, 97);
             this.txt_EsSo_IdentiEst_DatosGe.Name = "txt_EsSo_IdentiEst_DatosGe";
             this.txt_EsSo_IdentiEst_DatosGe.Size = new System.Drawing.Size(100, 20);
@@ -612,6 +620,7 @@
             // 
             // txt_EsSo_EdadEst_DatosGe
             // 
+            this.txt_EsSo_EdadEst_DatosGe.Enabled = false;
             this.txt_EsSo_EdadEst_DatosGe.Location = new System.Drawing.Point(119, 97);
             this.txt_EsSo_EdadEst_DatosGe.Name = "txt_EsSo_EdadEst_DatosGe";
             this.txt_EsSo_EdadEst_DatosGe.Size = new System.Drawing.Size(100, 20);
@@ -628,6 +637,7 @@
             // 
             // txt_EsSo_FechaNa_DatosGe
             // 
+            this.txt_EsSo_FechaNa_DatosGe.Enabled = false;
             this.txt_EsSo_FechaNa_DatosGe.Location = new System.Drawing.Point(119, 71);
             this.txt_EsSo_FechaNa_DatosGe.Name = "txt_EsSo_FechaNa_DatosGe";
             this.txt_EsSo_FechaNa_DatosGe.Size = new System.Drawing.Size(100, 20);
@@ -644,6 +654,7 @@
             // 
             // txt_EsSo_LugarNaci_DatosGe
             // 
+            this.txt_EsSo_LugarNaci_DatosGe.Enabled = false;
             this.txt_EsSo_LugarNaci_DatosGe.Location = new System.Drawing.Point(119, 45);
             this.txt_EsSo_LugarNaci_DatosGe.Name = "txt_EsSo_LugarNaci_DatosGe";
             this.txt_EsSo_LugarNaci_DatosGe.Size = new System.Drawing.Size(298, 20);
@@ -660,6 +671,7 @@
             // 
             // txt_EsSo_NombreEst_DatosGe
             // 
+            this.txt_EsSo_NombreEst_DatosGe.Enabled = false;
             this.txt_EsSo_NombreEst_DatosGe.Location = new System.Drawing.Point(119, 19);
             this.txt_EsSo_NombreEst_DatosGe.Name = "txt_EsSo_NombreEst_DatosGe";
             this.txt_EsSo_NombreEst_DatosGe.Size = new System.Drawing.Size(298, 20);
@@ -696,7 +708,7 @@
             // 
             // btm_EsSo_Siguiente_DatosGe
             // 
-            this.btm_EsSo_Siguiente_DatosGe.Location = new System.Drawing.Point(572, 53);
+            this.btm_EsSo_Siguiente_DatosGe.Location = new System.Drawing.Point(562, 59);
             this.btm_EsSo_Siguiente_DatosGe.Name = "btm_EsSo_Siguiente_DatosGe";
             this.btm_EsSo_Siguiente_DatosGe.Size = new System.Drawing.Size(91, 23);
             this.btm_EsSo_Siguiente_DatosGe.TabIndex = 44;
@@ -719,6 +731,8 @@
             this.txt_EsSo_NomEncarg_DatosGe.Name = "txt_EsSo_NomEncarg_DatosGe";
             this.txt_EsSo_NomEncarg_DatosGe.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_NomEncarg_DatosGe.TabIndex = 33;
+            this.txt_EsSo_NomEncarg_DatosGe.TextChanged += new System.EventHandler(this.txt_EsSo_NomEncarg_DatosGe_TextChanged);
+            this.txt_EsSo_NomEncarg_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_NomEncarg_DatosGe_KeyPress);
             // 
             // label30
             // 
@@ -735,6 +749,8 @@
             this.txt_EsSo_ParentescoEncar_DatosGe.Name = "txt_EsSo_ParentescoEncar_DatosGe";
             this.txt_EsSo_ParentescoEncar_DatosGe.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_ParentescoEncar_DatosGe.TabIndex = 34;
+            this.txt_EsSo_ParentescoEncar_DatosGe.TextChanged += new System.EventHandler(this.txt_EsSo_ParentescoEncar_DatosGe_TextChanged);
+            this.txt_EsSo_ParentescoEncar_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_ParentescoEncar_DatosGe_KeyPress);
             // 
             // txt_EsSo_OficioEncarg_DatosGe
             // 
@@ -742,6 +758,7 @@
             this.txt_EsSo_OficioEncarg_DatosGe.Name = "txt_EsSo_OficioEncarg_DatosGe";
             this.txt_EsSo_OficioEncarg_DatosGe.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_OficioEncarg_DatosGe.TabIndex = 40;
+            this.txt_EsSo_OficioEncarg_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_OficioEncarg_DatosGe_KeyPress);
             // 
             // label29
             // 
@@ -838,6 +855,7 @@
             // 
             // txt_EsSo_CelMadre_DatosGe
             // 
+            this.txt_EsSo_CelMadre_DatosGe.Enabled = false;
             this.txt_EsSo_CelMadre_DatosGe.Location = new System.Drawing.Point(562, 45);
             this.txt_EsSo_CelMadre_DatosGe.Name = "txt_EsSo_CelMadre_DatosGe";
             this.txt_EsSo_CelMadre_DatosGe.Size = new System.Drawing.Size(100, 20);
@@ -849,6 +867,7 @@
             this.txt_EsSo_TelCasaMadre_DatosGe.Name = "txt_EsSo_TelCasaMadre_DatosGe";
             this.txt_EsSo_TelCasaMadre_DatosGe.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_TelCasaMadre_DatosGe.TabIndex = 27;
+            this.txt_EsSo_TelCasaMadre_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_TelCasaMadre_DatosGe_KeyPress);
             // 
             // label15
             // 
@@ -891,6 +910,7 @@
             // 
             // txt_EsSo_LugarTrabMadre_forma
             // 
+            this.txt_EsSo_LugarTrabMadre_forma.Enabled = false;
             this.txt_EsSo_LugarTrabMadre_forma.Location = new System.Drawing.Point(336, 71);
             this.txt_EsSo_LugarTrabMadre_forma.Name = "txt_EsSo_LugarTrabMadre_forma";
             this.txt_EsSo_LugarTrabMadre_forma.Size = new System.Drawing.Size(100, 20);
@@ -907,6 +927,7 @@
             // 
             // txt_EsSo_OficioMadre_forma
             // 
+            this.txt_EsSo_OficioMadre_forma.Enabled = false;
             this.txt_EsSo_OficioMadre_forma.Location = new System.Drawing.Point(337, 19);
             this.txt_EsSo_OficioMadre_forma.Name = "txt_EsSo_OficioMadre_forma";
             this.txt_EsSo_OficioMadre_forma.Size = new System.Drawing.Size(100, 20);
@@ -927,6 +948,7 @@
             this.txt_EsSo_DomiciMadre_DatosGe.Name = "txt_EsSo_DomiciMadre_DatosGe";
             this.txt_EsSo_DomiciMadre_DatosGe.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_DomiciMadre_DatosGe.TabIndex = 18;
+            this.txt_EsSo_DomiciMadre_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_DomiciMadre_DatosGe_KeyPress);
             // 
             // label10
             // 
@@ -946,6 +968,7 @@
             // 
             // txt_EsSo_NomMadre_DatosGe
             // 
+            this.txt_EsSo_NomMadre_DatosGe.Enabled = false;
             this.txt_EsSo_NomMadre_DatosGe.Location = new System.Drawing.Point(117, 19);
             this.txt_EsSo_NomMadre_DatosGe.Name = "txt_EsSo_NomMadre_DatosGe";
             this.txt_EsSo_NomMadre_DatosGe.Size = new System.Drawing.Size(100, 20);
@@ -982,7 +1005,7 @@
             this.InformacionFamilia.Location = new System.Drawing.Point(4, 22);
             this.InformacionFamilia.Name = "InformacionFamilia";
             this.InformacionFamilia.Padding = new System.Windows.Forms.Padding(3);
-            this.InformacionFamilia.Size = new System.Drawing.Size(704, 544);
+            this.InformacionFamilia.Size = new System.Drawing.Size(703, 545);
             this.InformacionFamilia.TabIndex = 1;
             this.InformacionFamilia.Text = "Informacion de la familia";
             this.InformacionFamilia.UseVisualStyleBackColor = true;
@@ -1252,6 +1275,7 @@
             this.txt_EsSo_IngreTotales_InfoFami.Name = "txt_EsSo_IngreTotales_InfoFami";
             this.txt_EsSo_IngreTotales_InfoFami.Size = new System.Drawing.Size(148, 20);
             this.txt_EsSo_IngreTotales_InfoFami.TabIndex = 35;
+            this.txt_EsSo_IngreTotales_InfoFami.TextChanged += new System.EventHandler(this.txt_EsSo_IngreTotales_InfoFami_TextChanged);
             // 
             // label43
             // 
@@ -1277,6 +1301,7 @@
             this.txt_EsSo_IngreOtros_InfoFami.Name = "txt_EsSo_IngreOtros_InfoFami";
             this.txt_EsSo_IngreOtros_InfoFami.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_IngreOtros_InfoFami.TabIndex = 32;
+            this.txt_EsSo_IngreOtros_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_IngreOtros_InfoFami_KeyPress);
             // 
             // label41
             // 
@@ -1293,6 +1318,7 @@
             this.txt_EsSo_IngrePencion_InfoFami.Name = "txt_EsSo_IngrePencion_InfoFami";
             this.txt_EsSo_IngrePencion_InfoFami.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_IngrePencion_InfoFami.TabIndex = 30;
+            this.txt_EsSo_IngrePencion_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_IngrePencion_InfoFami_KeyPress);
             // 
             // txt_EsSo_IngreHijo_InfoFami
             // 
@@ -1300,6 +1326,7 @@
             this.txt_EsSo_IngreHijo_InfoFami.Name = "txt_EsSo_IngreHijo_InfoFami";
             this.txt_EsSo_IngreHijo_InfoFami.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_IngreHijo_InfoFami.TabIndex = 29;
+            this.txt_EsSo_IngreHijo_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_IngreHijo_InfoFami_KeyPress);
             // 
             // label42
             // 
@@ -1325,6 +1352,7 @@
             this.txt_EsSo_IngreMadre_InfoFami.Name = "txt_EsSo_IngreMadre_InfoFami";
             this.txt_EsSo_IngreMadre_InfoFami.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_IngreMadre_InfoFami.TabIndex = 26;
+            this.txt_EsSo_IngreMadre_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_IngreMadre_InfoFami_KeyPress);
             // 
             // label38
             // 
@@ -1341,6 +1369,7 @@
             this.txt_EsSo_IngrePadre_InfoFami.Name = "txt_EsSo_IngrePadre_InfoFami";
             this.txt_EsSo_IngrePadre_InfoFami.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_IngrePadre_InfoFami.TabIndex = 24;
+            this.txt_EsSo_IngrePadre_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_IngrePadre_InfoFami_KeyPress);
             // 
             // txt_EsSo_IngreAbue_InfoFami
             // 
@@ -1349,6 +1378,7 @@
             this.txt_EsSo_IngreAbue_InfoFami.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_IngreAbue_InfoFami.TabIndex = 23;
             this.txt_EsSo_IngreAbue_InfoFami.TextChanged += new System.EventHandler(this.txt_EsSo_IngreAbue_InfoFami_TextChanged);
+            this.txt_EsSo_IngreAbue_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_IngreAbue_InfoFami_KeyPress);
             // 
             // label39
             // 
@@ -1365,6 +1395,7 @@
             this.txt_EsSo_TotalTraba_InfoFami.Name = "txt_EsSo_TotalTraba_InfoFami";
             this.txt_EsSo_TotalTraba_InfoFami.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_TotalTraba_InfoFami.TabIndex = 13;
+            this.txt_EsSo_TotalTraba_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_TotalTraba_InfoFami_KeyPress);
             // 
             // combox_EsSo_CuantosFami_InfoFami
             // 
@@ -1399,6 +1430,8 @@
             this.txt_EsSo_CuantosHijos_InfoFami.Name = "txt_EsSo_CuantosHijos_InfoFami";
             this.txt_EsSo_CuantosHijos_InfoFami.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_CuantosHijos_InfoFami.TabIndex = 9;
+            this.txt_EsSo_CuantosHijos_InfoFami.TextChanged += new System.EventHandler(this.txt_EsSo_CuantosHijos_InfoFami_TextChanged);
+            this.txt_EsSo_CuantosHijos_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_CuantosHijos_InfoFami_KeyPress);
             // 
             // txt_EsSo_MasHijos_InfoFami
             // 
@@ -1406,6 +1439,7 @@
             this.txt_EsSo_MasHijos_InfoFami.Name = "txt_EsSo_MasHijos_InfoFami";
             this.txt_EsSo_MasHijos_InfoFami.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_MasHijos_InfoFami.TabIndex = 8;
+            this.txt_EsSo_MasHijos_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_MasHijos_InfoFami_KeyPress);
             // 
             // txt_EsSo_HabitantesCasa_InfoFami
             // 
@@ -1413,6 +1447,8 @@
             this.txt_EsSo_HabitantesCasa_InfoFami.Name = "txt_EsSo_HabitantesCasa_InfoFami";
             this.txt_EsSo_HabitantesCasa_InfoFami.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_HabitantesCasa_InfoFami.TabIndex = 7;
+            this.txt_EsSo_HabitantesCasa_InfoFami.TextChanged += new System.EventHandler(this.txt_EsSo_HabitantesCasa_InfoFami_TextChanged);
+            this.txt_EsSo_HabitantesCasa_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_HabitantesCasa_InfoFami_KeyPress);
             // 
             // label36
             // 
@@ -1484,13 +1520,13 @@
             this.SaludRecreacion.Controls.Add(this.label71);
             this.SaludRecreacion.Controls.Add(this.label70);
             this.SaludRecreacion.Controls.Add(this.groupBox9);
-            this.SaludRecreacion.Controls.Add(this.chekbox_EsSo_GastoMedi_SaludRecre);
+            this.SaludRecreacion.Controls.Add(this.txt_EsSo_GastoMedi_SaludRecre);
             this.SaludRecreacion.Controls.Add(this.label56);
             this.SaludRecreacion.Controls.Add(this.groupBox8);
             this.SaludRecreacion.Controls.Add(this.groupBox7);
             this.SaludRecreacion.Location = new System.Drawing.Point(4, 22);
             this.SaludRecreacion.Name = "SaludRecreacion";
-            this.SaludRecreacion.Size = new System.Drawing.Size(704, 544);
+            this.SaludRecreacion.Size = new System.Drawing.Size(703, 545);
             this.SaludRecreacion.TabIndex = 3;
             this.SaludRecreacion.Text = "Atencion en Salud y Recreacion";
             this.SaludRecreacion.UseVisualStyleBackColor = true;
@@ -1512,6 +1548,7 @@
             this.txt_EsSo_Aporbado_SaludRecre.Name = "txt_EsSo_Aporbado_SaludRecre";
             this.txt_EsSo_Aporbado_SaludRecre.Size = new System.Drawing.Size(208, 20);
             this.txt_EsSo_Aporbado_SaludRecre.TabIndex = 12;
+            this.txt_EsSo_Aporbado_SaludRecre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Aporbado_SaludRecre_KeyPress);
             // 
             // label71
             // 
@@ -1543,7 +1580,7 @@
             this.groupBox9.Controls.Add(this.txt_EsSo_cine_SaludRecre);
             this.groupBox9.Controls.Add(this.combox_EsSo_Cine_SaludRecre);
             this.groupBox9.Controls.Add(this.label61);
-            this.groupBox9.Controls.Add(this.textBox56);
+            this.groupBox9.Controls.Add(this.txt_EsSo_Playa_SaludRecre);
             this.groupBox9.Controls.Add(this.combox_EsSo_Playa_SaludRecre);
             this.groupBox9.Controls.Add(this.label60);
             this.groupBox9.Controls.Add(this.txt_EsSo_OtrosLugares_SaludRecre);
@@ -1579,11 +1616,16 @@
             this.txt_EsSo_CentrosCom_SaludRecre.Name = "txt_EsSo_CentrosCom_SaludRecre";
             this.txt_EsSo_CentrosCom_SaludRecre.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_CentrosCom_SaludRecre.TabIndex = 20;
+            this.txt_EsSo_CentrosCom_SaludRecre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_CentrosCom_SaludRecre_KeyPress);
+            this.txt_EsSo_CentrosCom_SaludRecre.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_EsSo_CentrosCom_SaludRecre_KeyUp);
             // 
             // combox_EsSo_CentrosCom_SaludRecre
             // 
             this.combox_EsSo_CentrosCom_SaludRecre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combox_EsSo_CentrosCom_SaludRecre.FormattingEnabled = true;
+            this.combox_EsSo_CentrosCom_SaludRecre.Items.AddRange(new object[] {
+            "Si",
+            "No"});
             this.combox_EsSo_CentrosCom_SaludRecre.Location = new System.Drawing.Point(121, 59);
             this.combox_EsSo_CentrosCom_SaludRecre.Name = "combox_EsSo_CentrosCom_SaludRecre";
             this.combox_EsSo_CentrosCom_SaludRecre.Size = new System.Drawing.Size(49, 21);
@@ -1604,11 +1646,15 @@
             this.txt_EsSo_Museos_SaludRecre.Name = "txt_EsSo_Museos_SaludRecre";
             this.txt_EsSo_Museos_SaludRecre.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_Museos_SaludRecre.TabIndex = 17;
+            this.txt_EsSo_Museos_SaludRecre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Museos_SaludRecre_KeyPress);
             // 
             // combox_EsSo_Museos_SaludRecre
             // 
             this.combox_EsSo_Museos_SaludRecre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combox_EsSo_Museos_SaludRecre.FormattingEnabled = true;
+            this.combox_EsSo_Museos_SaludRecre.Items.AddRange(new object[] {
+            "Si",
+            "No"});
             this.combox_EsSo_Museos_SaludRecre.Location = new System.Drawing.Point(121, 85);
             this.combox_EsSo_Museos_SaludRecre.Name = "combox_EsSo_Museos_SaludRecre";
             this.combox_EsSo_Museos_SaludRecre.Size = new System.Drawing.Size(49, 21);
@@ -1629,11 +1675,15 @@
             this.txt_EsSo_cine_SaludRecre.Name = "txt_EsSo_cine_SaludRecre";
             this.txt_EsSo_cine_SaludRecre.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_cine_SaludRecre.TabIndex = 14;
+            this.txt_EsSo_cine_SaludRecre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_cine_SaludRecre_KeyPress);
             // 
             // combox_EsSo_Cine_SaludRecre
             // 
             this.combox_EsSo_Cine_SaludRecre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combox_EsSo_Cine_SaludRecre.FormattingEnabled = true;
+            this.combox_EsSo_Cine_SaludRecre.Items.AddRange(new object[] {
+            "Si",
+            "No"});
             this.combox_EsSo_Cine_SaludRecre.Location = new System.Drawing.Point(121, 111);
             this.combox_EsSo_Cine_SaludRecre.Name = "combox_EsSo_Cine_SaludRecre";
             this.combox_EsSo_Cine_SaludRecre.Size = new System.Drawing.Size(49, 21);
@@ -1648,17 +1698,21 @@
             this.label61.TabIndex = 12;
             this.label61.Text = "Cine";
             // 
-            // textBox56
+            // txt_EsSo_Playa_SaludRecre
             // 
-            this.textBox56.Location = new System.Drawing.Point(418, 59);
-            this.textBox56.Name = "textBox56";
-            this.textBox56.Size = new System.Drawing.Size(100, 20);
-            this.textBox56.TabIndex = 11;
+            this.txt_EsSo_Playa_SaludRecre.Location = new System.Drawing.Point(418, 59);
+            this.txt_EsSo_Playa_SaludRecre.Name = "txt_EsSo_Playa_SaludRecre";
+            this.txt_EsSo_Playa_SaludRecre.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_Playa_SaludRecre.TabIndex = 11;
+            this.txt_EsSo_Playa_SaludRecre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Playa_SaludRecre_KeyPress);
             // 
             // combox_EsSo_Playa_SaludRecre
             // 
             this.combox_EsSo_Playa_SaludRecre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combox_EsSo_Playa_SaludRecre.FormattingEnabled = true;
+            this.combox_EsSo_Playa_SaludRecre.Items.AddRange(new object[] {
+            "Si",
+            "No"});
             this.combox_EsSo_Playa_SaludRecre.Location = new System.Drawing.Point(363, 59);
             this.combox_EsSo_Playa_SaludRecre.Name = "combox_EsSo_Playa_SaludRecre";
             this.combox_EsSo_Playa_SaludRecre.Size = new System.Drawing.Size(49, 21);
@@ -1679,11 +1733,15 @@
             this.txt_EsSo_OtrosLugares_SaludRecre.Name = "txt_EsSo_OtrosLugares_SaludRecre";
             this.txt_EsSo_OtrosLugares_SaludRecre.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_OtrosLugares_SaludRecre.TabIndex = 8;
+            this.txt_EsSo_OtrosLugares_SaludRecre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_OtrosLugares_SaludRecre_KeyPress);
             // 
             // combox_EsSo_OtrosLugares_SaludRecre
             // 
             this.combox_EsSo_OtrosLugares_SaludRecre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combox_EsSo_OtrosLugares_SaludRecre.FormattingEnabled = true;
+            this.combox_EsSo_OtrosLugares_SaludRecre.Items.AddRange(new object[] {
+            "Si",
+            "No"});
             this.combox_EsSo_OtrosLugares_SaludRecre.Location = new System.Drawing.Point(363, 85);
             this.combox_EsSo_OtrosLugares_SaludRecre.Name = "combox_EsSo_OtrosLugares_SaludRecre";
             this.combox_EsSo_OtrosLugares_SaludRecre.Size = new System.Drawing.Size(49, 21);
@@ -1704,11 +1762,15 @@
             this.txt_EsSo_Balnearios_SaludRecre.Name = "txt_EsSo_Balnearios_SaludRecre";
             this.txt_EsSo_Balnearios_SaludRecre.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_Balnearios_SaludRecre.TabIndex = 5;
+            this.txt_EsSo_Balnearios_SaludRecre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Balnearios_SaludRecre_KeyPress);
             // 
             // combox_EsSo_Balnearios_SaludRecre
             // 
             this.combox_EsSo_Balnearios_SaludRecre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combox_EsSo_Balnearios_SaludRecre.FormattingEnabled = true;
+            this.combox_EsSo_Balnearios_SaludRecre.Items.AddRange(new object[] {
+            "Si",
+            "No"});
             this.combox_EsSo_Balnearios_SaludRecre.Location = new System.Drawing.Point(363, 33);
             this.combox_EsSo_Balnearios_SaludRecre.Name = "combox_EsSo_Balnearios_SaludRecre";
             this.combox_EsSo_Balnearios_SaludRecre.Size = new System.Drawing.Size(49, 21);
@@ -1729,11 +1791,15 @@
             this.txt_EsSo_Parques_SaludRecre.Name = "txt_EsSo_Parques_SaludRecre";
             this.txt_EsSo_Parques_SaludRecre.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_Parques_SaludRecre.TabIndex = 2;
+            this.txt_EsSo_Parques_SaludRecre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Parques_SaludRecre_KeyPress);
             // 
             // combox_EsSo_Parques_SaludRecre
             // 
             this.combox_EsSo_Parques_SaludRecre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combox_EsSo_Parques_SaludRecre.FormattingEnabled = true;
+            this.combox_EsSo_Parques_SaludRecre.Items.AddRange(new object[] {
+            "Si",
+            "No"});
             this.combox_EsSo_Parques_SaludRecre.Location = new System.Drawing.Point(121, 33);
             this.combox_EsSo_Parques_SaludRecre.Name = "combox_EsSo_Parques_SaludRecre";
             this.combox_EsSo_Parques_SaludRecre.Size = new System.Drawing.Size(49, 21);
@@ -1748,12 +1814,14 @@
             this.label57.TabIndex = 0;
             this.label57.Text = "Parques";
             // 
-            // chekbox_EsSo_GastoMedi_SaludRecre
+            // txt_EsSo_GastoMedi_SaludRecre
             // 
-            this.chekbox_EsSo_GastoMedi_SaludRecre.Location = new System.Drawing.Point(176, 136);
-            this.chekbox_EsSo_GastoMedi_SaludRecre.Name = "chekbox_EsSo_GastoMedi_SaludRecre";
-            this.chekbox_EsSo_GastoMedi_SaludRecre.Size = new System.Drawing.Size(208, 20);
-            this.chekbox_EsSo_GastoMedi_SaludRecre.TabIndex = 8;
+            this.txt_EsSo_GastoMedi_SaludRecre.Location = new System.Drawing.Point(176, 136);
+            this.txt_EsSo_GastoMedi_SaludRecre.Name = "txt_EsSo_GastoMedi_SaludRecre";
+            this.txt_EsSo_GastoMedi_SaludRecre.Size = new System.Drawing.Size(208, 20);
+            this.txt_EsSo_GastoMedi_SaludRecre.TabIndex = 8;
+            this.txt_EsSo_GastoMedi_SaludRecre.TextChanged += new System.EventHandler(this.txt_EsSo_GastoMedi_SaludRecre_TextChanged);
+            this.txt_EsSo_GastoMedi_SaludRecre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_GastoMedi_SaludRecre_KeyPress);
             // 
             // label56
             // 
@@ -1787,6 +1855,7 @@
             this.chekbox_EsSo_NingunaEnfer_SaludRecre.TabIndex = 4;
             this.chekbox_EsSo_NingunaEnfer_SaludRecre.Text = "Ninguna";
             this.chekbox_EsSo_NingunaEnfer_SaludRecre.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_NingunaEnfer_SaludRecre.CheckedChanged += new System.EventHandler(this.chekbox_EsSo_NingunaEnfer_SaludRecre_CheckedChanged);
             // 
             // chekbox_EsSo_OtraEnfer_SaludRecre
             // 
@@ -1797,6 +1866,7 @@
             this.chekbox_EsSo_OtraEnfer_SaludRecre.TabIndex = 3;
             this.chekbox_EsSo_OtraEnfer_SaludRecre.Text = "Otra";
             this.chekbox_EsSo_OtraEnfer_SaludRecre.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_OtraEnfer_SaludRecre.CheckedChanged += new System.EventHandler(this.chekbox_EsSo_OtraEnfer_SaludRecre_CheckedChanged);
             // 
             // chekbox_EsSo_InfecRespi_SaludRecre
             // 
@@ -1807,6 +1877,7 @@
             this.chekbox_EsSo_InfecRespi_SaludRecre.TabIndex = 2;
             this.chekbox_EsSo_InfecRespi_SaludRecre.Text = "Infecciones Respiratorias";
             this.chekbox_EsSo_InfecRespi_SaludRecre.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_InfecRespi_SaludRecre.CheckedChanged += new System.EventHandler(this.chekbox_EsSo_InfecRespi_SaludRecre_CheckedChanged);
             // 
             // chekbox_EsSo_HiperTensi_SaludRecre
             // 
@@ -1817,6 +1888,7 @@
             this.chekbox_EsSo_HiperTensi_SaludRecre.TabIndex = 1;
             this.chekbox_EsSo_HiperTensi_SaludRecre.Text = "Hipertension";
             this.chekbox_EsSo_HiperTensi_SaludRecre.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_HiperTensi_SaludRecre.CheckedChanged += new System.EventHandler(this.chekbox_EsSo_HiperTensi_SaludRecre_CheckedChanged);
             // 
             // chekbox_EsSo_Diabetes_SaludRecre
             // 
@@ -1827,6 +1899,7 @@
             this.chekbox_EsSo_Diabetes_SaludRecre.TabIndex = 0;
             this.chekbox_EsSo_Diabetes_SaludRecre.Text = "Diabetes";
             this.chekbox_EsSo_Diabetes_SaludRecre.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_Diabetes_SaludRecre.CheckedChanged += new System.EventHandler(this.chekbox_EsSo_Diabetes_SaludRecre_CheckedChanged);
             // 
             // groupBox7
             // 
@@ -1852,6 +1925,7 @@
             this.chekbox_EsSo_OtroSalud_SaludRecre.TabIndex = 5;
             this.chekbox_EsSo_OtroSalud_SaludRecre.Text = "Otro";
             this.chekbox_EsSo_OtroSalud_SaludRecre.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_OtroSalud_SaludRecre.CheckedChanged += new System.EventHandler(this.chekbox_EsSo_OtroSalud_SaludRecre_CheckedChanged);
             // 
             // chekbox_EsSo_ClinicaPart_SaludRecre
             // 
@@ -1862,6 +1936,7 @@
             this.chekbox_EsSo_ClinicaPart_SaludRecre.TabIndex = 4;
             this.chekbox_EsSo_ClinicaPart_SaludRecre.Text = "Clinica Particular";
             this.chekbox_EsSo_ClinicaPart_SaludRecre.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_ClinicaPart_SaludRecre.CheckedChanged += new System.EventHandler(this.chekbox_EsSo_ClinicaPart_SaludRecre_CheckedChanged);
             // 
             // chekbox_EsSo_CentroSalud_SaludRecre
             // 
@@ -1872,6 +1947,7 @@
             this.chekbox_EsSo_CentroSalud_SaludRecre.TabIndex = 3;
             this.chekbox_EsSo_CentroSalud_SaludRecre.Text = "Centro de Salud";
             this.chekbox_EsSo_CentroSalud_SaludRecre.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_CentroSalud_SaludRecre.CheckedChanged += new System.EventHandler(this.chekbox_EsSo_CentroSalud_SaludRecre_CheckedChanged);
             // 
             // chekbox_EsSo_HospiSanfe_SaludRecre
             // 
@@ -1882,6 +1958,7 @@
             this.chekbox_EsSo_HospiSanfe_SaludRecre.TabIndex = 2;
             this.chekbox_EsSo_HospiSanfe_SaludRecre.Text = "Hospital San Felipe";
             this.chekbox_EsSo_HospiSanfe_SaludRecre.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_HospiSanfe_SaludRecre.CheckedChanged += new System.EventHandler(this.chekbox_EsSo_HospiSanfe_SaludRecre_CheckedChanged);
             // 
             // chekbox_EsSo_HospEscu_SaludRecre
             // 
@@ -1892,6 +1969,7 @@
             this.chekbox_EsSo_HospEscu_SaludRecre.TabIndex = 1;
             this.chekbox_EsSo_HospEscu_SaludRecre.Text = "Hospital Escuela";
             this.chekbox_EsSo_HospEscu_SaludRecre.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_HospEscu_SaludRecre.CheckedChanged += new System.EventHandler(this.chekbox_EsSo_HospEscu_SaludRecre_CheckedChanged);
             // 
             // chekbox_EsSo_ihss_SaludRecre
             // 
@@ -1902,6 +1980,7 @@
             this.chekbox_EsSo_ihss_SaludRecre.TabIndex = 0;
             this.chekbox_EsSo_ihss_SaludRecre.Text = "IHSS";
             this.chekbox_EsSo_ihss_SaludRecre.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_ihss_SaludRecre.CheckedChanged += new System.EventHandler(this.chekbox_EsSo_ihss_SaludRecre_CheckedChanged);
             // 
             // InformacionVivienda
             // 
@@ -1912,7 +1991,7 @@
             this.InformacionVivienda.Controls.Add(this.groupBox10);
             this.InformacionVivienda.Location = new System.Drawing.Point(4, 22);
             this.InformacionVivienda.Name = "InformacionVivienda";
-            this.InformacionVivienda.Size = new System.Drawing.Size(704, 544);
+            this.InformacionVivienda.Size = new System.Drawing.Size(703, 545);
             this.InformacionVivienda.TabIndex = 5;
             this.InformacionVivienda.Text = "Informacion Vivienda";
             this.InformacionVivienda.UseVisualStyleBackColor = true;
@@ -1943,17 +2022,17 @@
             // 
             this.groupBox12.Controls.Add(this.rbtm_EsSo_Madera_InfoVivien);
             this.groupBox12.Controls.Add(this.rbtm_EsSo_OtroMaterPiso_InfoVivien);
-            this.groupBox12.Controls.Add(this.radioButton11);
+            this.groupBox12.Controls.Add(this.rbtm_EsSo_MaderaPiso_InfoVivien);
             this.groupBox12.Controls.Add(this.rbtm_EsSo_CEramica_InfoVivien);
             this.groupBox12.Controls.Add(this.label64);
             this.groupBox12.Controls.Add(this.txt_EsSo_OtroMaterPiso_InfoVivien);
             this.groupBox12.Controls.Add(this.rbtm_EsSo_Propia_InfoVivien);
-            this.groupBox12.Controls.Add(this.radioButton7);
+            this.groupBox12.Controls.Add(this.rbtm_EsSo_LabrilloPiso_InfoVivien);
             this.groupBox12.Controls.Add(this.rbtm_EsSo_Alquilada_InfoVivien);
-            this.groupBox12.Controls.Add(this.radioButton8);
+            this.groupBox12.Controls.Add(this.rbtm_EsSo_cementoPiso_InfoVivien);
             this.groupBox12.Controls.Add(this.rbtm_EsSo_OtroCaracte_InfoVivien);
             this.groupBox12.Controls.Add(this.rbtm_EsSo_Tierra_InfoVivien);
-            this.groupBox12.Controls.Add(this.txt_EsSo_OtroCaracte_InfoVivien);
+            this.groupBox12.Controls.Add(this.txt_EsSo_OtraTenencia_InfoVivien);
             this.groupBox12.Controls.Add(this.label66);
             this.groupBox12.Controls.Add(this.label65);
             this.groupBox12.Controls.Add(this.txt_EsSo_OtroMaterial_InfoVivien);
@@ -1977,6 +2056,7 @@
             this.rbtm_EsSo_Madera_InfoVivien.TabStop = true;
             this.rbtm_EsSo_Madera_InfoVivien.Text = "Madera";
             this.rbtm_EsSo_Madera_InfoVivien.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_Madera_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_Madera_InfoVivien_CheckedChanged);
             // 
             // rbtm_EsSo_OtroMaterPiso_InfoVivien
             // 
@@ -1988,17 +2068,19 @@
             this.rbtm_EsSo_OtroMaterPiso_InfoVivien.TabStop = true;
             this.rbtm_EsSo_OtroMaterPiso_InfoVivien.Text = "Otro";
             this.rbtm_EsSo_OtroMaterPiso_InfoVivien.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_OtroMaterPiso_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_OtroMaterPiso_InfoVivien_CheckedChanged);
             // 
-            // radioButton11
+            // rbtm_EsSo_MaderaPiso_InfoVivien
             // 
-            this.radioButton11.AutoSize = true;
-            this.radioButton11.Location = new System.Drawing.Point(94, 236);
-            this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(61, 17);
-            this.radioButton11.TabIndex = 34;
-            this.radioButton11.TabStop = true;
-            this.radioButton11.Text = "Madera";
-            this.radioButton11.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_MaderaPiso_InfoVivien.AutoSize = true;
+            this.rbtm_EsSo_MaderaPiso_InfoVivien.Location = new System.Drawing.Point(94, 236);
+            this.rbtm_EsSo_MaderaPiso_InfoVivien.Name = "rbtm_EsSo_MaderaPiso_InfoVivien";
+            this.rbtm_EsSo_MaderaPiso_InfoVivien.Size = new System.Drawing.Size(61, 17);
+            this.rbtm_EsSo_MaderaPiso_InfoVivien.TabIndex = 34;
+            this.rbtm_EsSo_MaderaPiso_InfoVivien.TabStop = true;
+            this.rbtm_EsSo_MaderaPiso_InfoVivien.Text = "Madera";
+            this.rbtm_EsSo_MaderaPiso_InfoVivien.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_MaderaPiso_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_MaderaPiso_InfoVivien_CheckedChanged);
             // 
             // rbtm_EsSo_CEramica_InfoVivien
             // 
@@ -2010,6 +2092,7 @@
             this.rbtm_EsSo_CEramica_InfoVivien.TabStop = true;
             this.rbtm_EsSo_CEramica_InfoVivien.Text = "Ceramica";
             this.rbtm_EsSo_CEramica_InfoVivien.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_CEramica_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_CEramica_InfoVivien_CheckedChanged);
             // 
             // label64
             // 
@@ -2026,6 +2109,7 @@
             this.txt_EsSo_OtroMaterPiso_InfoVivien.Name = "txt_EsSo_OtroMaterPiso_InfoVivien";
             this.txt_EsSo_OtroMaterPiso_InfoVivien.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_OtroMaterPiso_InfoVivien.TabIndex = 32;
+            this.txt_EsSo_OtroMaterPiso_InfoVivien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_OtroMaterPiso_InfoVivien_KeyPress);
             // 
             // rbtm_EsSo_Propia_InfoVivien
             // 
@@ -2037,17 +2121,19 @@
             this.rbtm_EsSo_Propia_InfoVivien.TabStop = true;
             this.rbtm_EsSo_Propia_InfoVivien.Text = "Propia";
             this.rbtm_EsSo_Propia_InfoVivien.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_Propia_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_Propia_InfoVivien_CheckedChanged);
             // 
-            // radioButton7
+            // rbtm_EsSo_LabrilloPiso_InfoVivien
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(159, 213);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(58, 17);
-            this.radioButton7.TabIndex = 31;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "Ladrillo";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_LabrilloPiso_InfoVivien.AutoSize = true;
+            this.rbtm_EsSo_LabrilloPiso_InfoVivien.Location = new System.Drawing.Point(159, 213);
+            this.rbtm_EsSo_LabrilloPiso_InfoVivien.Name = "rbtm_EsSo_LabrilloPiso_InfoVivien";
+            this.rbtm_EsSo_LabrilloPiso_InfoVivien.Size = new System.Drawing.Size(58, 17);
+            this.rbtm_EsSo_LabrilloPiso_InfoVivien.TabIndex = 31;
+            this.rbtm_EsSo_LabrilloPiso_InfoVivien.TabStop = true;
+            this.rbtm_EsSo_LabrilloPiso_InfoVivien.Text = "Ladrillo";
+            this.rbtm_EsSo_LabrilloPiso_InfoVivien.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_LabrilloPiso_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_LabrilloPiso_InfoVivien_CheckedChanged);
             // 
             // rbtm_EsSo_Alquilada_InfoVivien
             // 
@@ -2059,17 +2145,19 @@
             this.rbtm_EsSo_Alquilada_InfoVivien.TabStop = true;
             this.rbtm_EsSo_Alquilada_InfoVivien.Text = "Alquilada";
             this.rbtm_EsSo_Alquilada_InfoVivien.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_Alquilada_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_Alquilada_InfoVivien_CheckedChanged);
             // 
-            // radioButton8
+            // rbtm_EsSo_cementoPiso_InfoVivien
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(94, 213);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(67, 17);
-            this.radioButton8.TabIndex = 30;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "Cemento";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_cementoPiso_InfoVivien.AutoSize = true;
+            this.rbtm_EsSo_cementoPiso_InfoVivien.Location = new System.Drawing.Point(94, 213);
+            this.rbtm_EsSo_cementoPiso_InfoVivien.Name = "rbtm_EsSo_cementoPiso_InfoVivien";
+            this.rbtm_EsSo_cementoPiso_InfoVivien.Size = new System.Drawing.Size(67, 17);
+            this.rbtm_EsSo_cementoPiso_InfoVivien.TabIndex = 30;
+            this.rbtm_EsSo_cementoPiso_InfoVivien.TabStop = true;
+            this.rbtm_EsSo_cementoPiso_InfoVivien.Text = "Cemento";
+            this.rbtm_EsSo_cementoPiso_InfoVivien.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_cementoPiso_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_cementoPiso_InfoVivien_CheckedChanged);
             // 
             // rbtm_EsSo_OtroCaracte_InfoVivien
             // 
@@ -2081,6 +2169,7 @@
             this.rbtm_EsSo_OtroCaracte_InfoVivien.TabStop = true;
             this.rbtm_EsSo_OtroCaracte_InfoVivien.Text = "Otro";
             this.rbtm_EsSo_OtroCaracte_InfoVivien.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_OtroCaracte_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_OtroCaracte_InfoVivien_CheckedChanged);
             // 
             // rbtm_EsSo_Tierra_InfoVivien
             // 
@@ -2092,13 +2181,15 @@
             this.rbtm_EsSo_Tierra_InfoVivien.TabStop = true;
             this.rbtm_EsSo_Tierra_InfoVivien.Text = "Tierra";
             this.rbtm_EsSo_Tierra_InfoVivien.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_Tierra_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_Tierra_InfoVivien_CheckedChanged);
             // 
-            // txt_EsSo_OtroCaracte_InfoVivien
+            // txt_EsSo_OtraTenencia_InfoVivien
             // 
-            this.txt_EsSo_OtroCaracte_InfoVivien.Location = new System.Drawing.Point(70, 65);
-            this.txt_EsSo_OtroCaracte_InfoVivien.Name = "txt_EsSo_OtroCaracte_InfoVivien";
-            this.txt_EsSo_OtroCaracte_InfoVivien.Size = new System.Drawing.Size(100, 20);
-            this.txt_EsSo_OtroCaracte_InfoVivien.TabIndex = 22;
+            this.txt_EsSo_OtraTenencia_InfoVivien.Location = new System.Drawing.Point(70, 65);
+            this.txt_EsSo_OtraTenencia_InfoVivien.Name = "txt_EsSo_OtraTenencia_InfoVivien";
+            this.txt_EsSo_OtraTenencia_InfoVivien.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_OtraTenencia_InfoVivien.TabIndex = 22;
+            this.txt_EsSo_OtraTenencia_InfoVivien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.e);
             // 
             // label66
             // 
@@ -2124,6 +2215,8 @@
             this.txt_EsSo_OtroMaterial_InfoVivien.Name = "txt_EsSo_OtroMaterial_InfoVivien";
             this.txt_EsSo_OtroMaterial_InfoVivien.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_OtroMaterial_InfoVivien.TabIndex = 27;
+            this.txt_EsSo_OtroMaterial_InfoVivien.TextChanged += new System.EventHandler(this.txt_EsSo_OtroMaterial_InfoVivien_TextChanged);
+            this.txt_EsSo_OtroMaterial_InfoVivien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_OtroMaterial_InfoVivien_KeyPress);
             // 
             // rbtm_EsSo_Ladrillo_InfoVivien
             // 
@@ -2135,6 +2228,7 @@
             this.rbtm_EsSo_Ladrillo_InfoVivien.TabStop = true;
             this.rbtm_EsSo_Ladrillo_InfoVivien.Text = "Ladrillo";
             this.rbtm_EsSo_Ladrillo_InfoVivien.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_Ladrillo_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_Ladrillo_InfoVivien_CheckedChanged);
             // 
             // rbtm_EsSo_OtroMaterial_InfoVivien
             // 
@@ -2146,6 +2240,7 @@
             this.rbtm_EsSo_OtroMaterial_InfoVivien.TabStop = true;
             this.rbtm_EsSo_OtroMaterial_InfoVivien.Text = "Otros";
             this.rbtm_EsSo_OtroMaterial_InfoVivien.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_OtroMaterial_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_OtroMaterial_InfoVivien_CheckedChanged);
             // 
             // rbtm_EsSo_Bloque_InfoVivien
             // 
@@ -2157,6 +2252,7 @@
             this.rbtm_EsSo_Bloque_InfoVivien.TabStop = true;
             this.rbtm_EsSo_Bloque_InfoVivien.Text = "Bloque";
             this.rbtm_EsSo_Bloque_InfoVivien.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_Bloque_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_Bloque_InfoVivien_CheckedChanged);
             // 
             // groupBox11
             // 
@@ -2179,6 +2275,7 @@
             this.txt_EsSo_OtroServicio_InfoVivien.Name = "txt_EsSo_OtroServicio_InfoVivien";
             this.txt_EsSo_OtroServicio_InfoVivien.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_OtroServicio_InfoVivien.TabIndex = 21;
+            this.txt_EsSo_OtroServicio_InfoVivien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_OtroServicio_InfoVivien_KeyPress);
             // 
             // chekbox_EsSo_Telefono_InfoVivien
             // 
@@ -2189,6 +2286,7 @@
             this.chekbox_EsSo_Telefono_InfoVivien.TabIndex = 20;
             this.chekbox_EsSo_Telefono_InfoVivien.Text = "Telefono";
             this.chekbox_EsSo_Telefono_InfoVivien.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_Telefono_InfoVivien.CheckedChanged += new System.EventHandler(this.chekbox_EsSo_Telefono_InfoVivien_CheckedChanged);
             // 
             // chekbox_EsSo_OtrosServ_InfoVivien
             // 
@@ -2199,6 +2297,7 @@
             this.chekbox_EsSo_OtrosServ_InfoVivien.TabIndex = 19;
             this.chekbox_EsSo_OtrosServ_InfoVivien.Text = "Otros";
             this.chekbox_EsSo_OtrosServ_InfoVivien.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_OtrosServ_InfoVivien.CheckedChanged += new System.EventHandler(this.chekbox_EsSo_OtrosServ_InfoVivien_CheckedChanged);
             // 
             // chekbox_EsSo_Alcantari_InfoVivien
             // 
@@ -2209,6 +2308,7 @@
             this.chekbox_EsSo_Alcantari_InfoVivien.TabIndex = 18;
             this.chekbox_EsSo_Alcantari_InfoVivien.Text = "Alcantarillado";
             this.chekbox_EsSo_Alcantari_InfoVivien.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_Alcantari_InfoVivien.CheckedChanged += new System.EventHandler(this.chekbox_EsSo_Alcantari_InfoVivien_CheckedChanged);
             // 
             // chekbox_EsSo_Agua_InfoVivien
             // 
@@ -2219,6 +2319,7 @@
             this.chekbox_EsSo_Agua_InfoVivien.TabIndex = 17;
             this.chekbox_EsSo_Agua_InfoVivien.Text = "Agua potable";
             this.chekbox_EsSo_Agua_InfoVivien.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_Agua_InfoVivien.CheckedChanged += new System.EventHandler(this.chekbox_EsSo_Agua_InfoVivien_CheckedChanged);
             // 
             // chekbox_EsSo_Energia_InfoVivien
             // 
@@ -2229,6 +2330,7 @@
             this.chekbox_EsSo_Energia_InfoVivien.TabIndex = 16;
             this.chekbox_EsSo_Energia_InfoVivien.Text = "Energia electrica";
             this.chekbox_EsSo_Energia_InfoVivien.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_Energia_InfoVivien.CheckedChanged += new System.EventHandler(this.chekbox_EsSo_Energia_InfoVivien_CheckedChanged);
             // 
             // groupBox10
             // 
@@ -2259,6 +2361,7 @@
             this.chekbox_EsSo_AireAcon_InfoVivien.TabIndex = 16;
             this.chekbox_EsSo_AireAcon_InfoVivien.Text = "Aire acondicionado";
             this.chekbox_EsSo_AireAcon_InfoVivien.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_AireAcon_InfoVivien.CheckedChanged += new System.EventHandler(this.chekbox_EsSo_AireAcon_InfoVivien_CheckedChanged);
             // 
             // chekbox_EsSo_Microondas_InfoVivien
             // 
@@ -2269,6 +2372,7 @@
             this.chekbox_EsSo_Microondas_InfoVivien.TabIndex = 15;
             this.chekbox_EsSo_Microondas_InfoVivien.Text = "Microondas";
             this.chekbox_EsSo_Microondas_InfoVivien.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_Microondas_InfoVivien.CheckedChanged += new System.EventHandler(this.chekbox_EsSo_Microondas_InfoVivien_CheckedChanged);
             // 
             // chekbox_EsSo_Automovil_InfoVivien
             // 
@@ -2279,6 +2383,7 @@
             this.chekbox_EsSo_Automovil_InfoVivien.TabIndex = 14;
             this.chekbox_EsSo_Automovil_InfoVivien.Text = "Automovil";
             this.chekbox_EsSo_Automovil_InfoVivien.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_Automovil_InfoVivien.CheckedChanged += new System.EventHandler(this.chekbox_EsSo_Automovil_InfoVivien_CheckedChanged);
             // 
             // chekbox_EsSo_Estufa_InfoVivien
             // 
@@ -2289,6 +2394,7 @@
             this.chekbox_EsSo_Estufa_InfoVivien.TabIndex = 13;
             this.chekbox_EsSo_Estufa_InfoVivien.Text = "Estufa de gas o electrica";
             this.chekbox_EsSo_Estufa_InfoVivien.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_Estufa_InfoVivien.CheckedChanged += new System.EventHandler(this.chekbox_EsSo_Estufa_InfoVivien_CheckedChanged);
             // 
             // chekbox_EsSo_Refri_InfoVivien
             // 
@@ -2299,6 +2405,7 @@
             this.chekbox_EsSo_Refri_InfoVivien.TabIndex = 12;
             this.chekbox_EsSo_Refri_InfoVivien.Text = "Refrigerador";
             this.chekbox_EsSo_Refri_InfoVivien.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_Refri_InfoVivien.CheckedChanged += new System.EventHandler(this.chekbox_EsSo_Refri_InfoVivien_CheckedChanged);
             // 
             // chekbox_EsSo_Ventila_nfoVivien
             // 
@@ -2309,6 +2416,7 @@
             this.chekbox_EsSo_Ventila_nfoVivien.TabIndex = 11;
             this.chekbox_EsSo_Ventila_nfoVivien.Text = "Ventilador";
             this.chekbox_EsSo_Ventila_nfoVivien.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_Ventila_nfoVivien.CheckedChanged += new System.EventHandler(this.chekbox_EsSo_Ventila_nfoVivien_CheckedChanged);
             // 
             // chekbox_EsSo_Compu_InfoVivien
             // 
@@ -2319,6 +2427,7 @@
             this.chekbox_EsSo_Compu_InfoVivien.TabIndex = 10;
             this.chekbox_EsSo_Compu_InfoVivien.Text = "Computadora";
             this.chekbox_EsSo_Compu_InfoVivien.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_Compu_InfoVivien.CheckedChanged += new System.EventHandler(this.chekbox_EsSo_Compu_InfoVivien_CheckedChanged);
             // 
             // chekbox_EsSo_Lavadora_InfoVivien
             // 
@@ -2329,6 +2438,7 @@
             this.chekbox_EsSo_Lavadora_InfoVivien.TabIndex = 9;
             this.chekbox_EsSo_Lavadora_InfoVivien.Text = "Lavadora";
             this.chekbox_EsSo_Lavadora_InfoVivien.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_Lavadora_InfoVivien.CheckedChanged += new System.EventHandler(this.chekbox_EsSo_Lavadora_InfoVivien_CheckedChanged);
             // 
             // chekbox_EsSo_Ducha_InfoVivien
             // 
@@ -2339,6 +2449,7 @@
             this.chekbox_EsSo_Ducha_InfoVivien.TabIndex = 8;
             this.chekbox_EsSo_Ducha_InfoVivien.Text = "Calentador (ducha)";
             this.chekbox_EsSo_Ducha_InfoVivien.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_Ducha_InfoVivien.CheckedChanged += new System.EventHandler(this.chekbox_EsSo_Ducha_InfoVivien_CheckedChanged);
             // 
             // chekbox_EsSo_EquipoSoni_InfoVivien
             // 
@@ -2349,6 +2460,7 @@
             this.chekbox_EsSo_EquipoSoni_InfoVivien.TabIndex = 7;
             this.chekbox_EsSo_EquipoSoni_InfoVivien.Text = "Equipo de sonido";
             this.chekbox_EsSo_EquipoSoni_InfoVivien.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_EquipoSoni_InfoVivien.CheckedChanged += new System.EventHandler(this.chekbox_EsSo_EquipoSoni_InfoVivien_CheckedChanged);
             // 
             // chekbox_EsSo_Tele_InfoVivien
             // 
@@ -2359,6 +2471,7 @@
             this.chekbox_EsSo_Tele_InfoVivien.TabIndex = 6;
             this.chekbox_EsSo_Tele_InfoVivien.Text = "Television";
             this.chekbox_EsSo_Tele_InfoVivien.UseVisualStyleBackColor = true;
+            this.chekbox_EsSo_Tele_InfoVivien.CheckedChanged += new System.EventHandler(this.chekbox_EsSo_Tele_InfoVivien_CheckedChanged);
             // 
             // FormaEstSocEco
             // 
@@ -2528,7 +2641,7 @@
         private System.Windows.Forms.TextBox txt_EsSo_Agua_InfoFami;
         private System.Windows.Forms.TextBox txt_EsSo_Energia_InfoFami;
         private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.TextBox chekbox_EsSo_GastoMedi_SaludRecre;
+        private System.Windows.Forms.TextBox txt_EsSo_GastoMedi_SaludRecre;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.CheckBox chekbox_EsSo_NingunaEnfer_SaludRecre;
@@ -2563,17 +2676,17 @@
         private System.Windows.Forms.CheckBox chekbox_EsSo_Energia_InfoVivien;
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.RadioButton rbtm_EsSo_OtroMaterPiso_InfoVivien;
-        private System.Windows.Forms.RadioButton radioButton11;
+        private System.Windows.Forms.RadioButton rbtm_EsSo_MaderaPiso_InfoVivien;
         private System.Windows.Forms.RadioButton rbtm_EsSo_CEramica_InfoVivien;
         private System.Windows.Forms.Label label64;
         private System.Windows.Forms.TextBox txt_EsSo_OtroMaterPiso_InfoVivien;
         private System.Windows.Forms.RadioButton rbtm_EsSo_Propia_InfoVivien;
-        private System.Windows.Forms.RadioButton radioButton7;
+        private System.Windows.Forms.RadioButton rbtm_EsSo_LabrilloPiso_InfoVivien;
         private System.Windows.Forms.RadioButton rbtm_EsSo_Alquilada_InfoVivien;
-        private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.RadioButton rbtm_EsSo_cementoPiso_InfoVivien;
         private System.Windows.Forms.RadioButton rbtm_EsSo_OtroCaracte_InfoVivien;
         private System.Windows.Forms.RadioButton rbtm_EsSo_Tierra_InfoVivien;
-        private System.Windows.Forms.TextBox txt_EsSo_OtroCaracte_InfoVivien;
+        private System.Windows.Forms.TextBox txt_EsSo_OtraTenencia_InfoVivien;
         private System.Windows.Forms.Label label66;
         private System.Windows.Forms.Label label65;
         private System.Windows.Forms.TextBox txt_EsSo_OtroMaterial_InfoVivien;
@@ -2599,7 +2712,7 @@
         private System.Windows.Forms.TextBox txt_EsSo_cine_SaludRecre;
         private System.Windows.Forms.ComboBox combox_EsSo_Cine_SaludRecre;
         private System.Windows.Forms.Label label61;
-        private System.Windows.Forms.TextBox textBox56;
+        private System.Windows.Forms.TextBox txt_EsSo_Playa_SaludRecre;
         private System.Windows.Forms.ComboBox combox_EsSo_Playa_SaludRecre;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.TextBox txt_EsSo_OtrosLugares_SaludRecre;

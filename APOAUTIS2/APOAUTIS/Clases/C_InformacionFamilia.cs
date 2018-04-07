@@ -34,34 +34,7 @@ namespace APOAUTIS.Clases
         private double OtrosGastos;
         private double TotalGastos;
 
-        public C_InformacionFamilia(int codAlumno1, int personasHabitan1, string tieneMasHijos1, string habitanOtrosFamiliares1, int mienEnTotal1, int cuantosMiembrosTrabajan1, double ingresoAbuela1, double ingresoMadre1, double ingresoPadre1, double ingresoHijo1, double pension1, double otrosIngresos1, double totalIngresos1, double gastosEnergia1, double gastoAgua1, double gastoTel1, double gastoComida1, double gastoTransp1, double gastoSalub1, double gastoEduca1, double gastoGaso1, double gastoRpa1, double gastoVivienda1, double otrosGastos1, double totalGastos1)
-        {
-            CodAlumno1 = codAlumno1;
-            PersonasHabitan1 = personasHabitan1;
-            TieneMasHijos1 = tieneMasHijos1;
-            HabitanOtrosFamiliares1 = habitanOtrosFamiliares1;
-            MienEnTotal1 = mienEnTotal1;
-            CuantosMiembrosTrabajan1 = cuantosMiembrosTrabajan1;
-            IngresoAbuela1 = ingresoAbuela1;
-            IngresoMadre1 = ingresoMadre1;
-            IngresoPadre1 = ingresoPadre1;
-            IngresoHijo1 = ingresoHijo1;
-            Pension1 = pension1;
-            OtrosIngresos1 = otrosIngresos1;
-            TotalIngresos1 = totalIngresos1;
-            GastosEnergia1 = gastosEnergia1;
-            GastoAgua1 = gastoAgua1;
-            GastoTel1 = gastoTel1;
-            GastoComida1 = gastoComida1;
-            GastoTransp1 = gastoTransp1;
-            GastoSalub1 = gastoSalub1;
-            GastoEduca1 = gastoEduca1;
-            GastoGaso1 = gastoGaso1;
-            GastoRpa1 = gastoRpa1;
-            GastoVivienda1 = gastoVivienda1;
-            OtrosGastos1 = otrosGastos1;
-            TotalGastos1 = totalGastos1;
-        }
+      
 
         public C_InformacionFamilia()
         {
@@ -391,5 +364,36 @@ namespace APOAUTIS.Clases
                 TotalGastos = value;
             }
         }
+
+
+        public C_InformacionFamilia(int codAlumno1, int personasHabitan1, string tieneMasHijos1, string habitanOtrosFamiliares1, int mienEnTotal1, int cuantosMiembrosTrabajan1, double ingresoAbuela1, double ingresoMadre1, double ingresoPadre1, double ingresoHijo1, double pension1, double otrosIngresos1, double totalIngresos1, double gastosEnergia1, double gastoAgua1, double gastoTel1, double gastoComida1, double gastoTransp1, double gastoSalub1, double gastoEduca1, double gastoGaso1, double gastoRpa1, double gastoVivienda1, double otrosGastos1, double totalGastos1)
+        {
+            CodAlumno1 = codAlumno1;
+            PersonasHabitan1 = personasHabitan1;
+            TieneMasHijos1 = tieneMasHijos1;
+            HabitanOtrosFamiliares1 = habitanOtrosFamiliares1;
+            MienEnTotal1 = mienEnTotal1;
+            CuantosMiembrosTrabajan1 = cuantosMiembrosTrabajan1;
+            IngresoAbuela1 = ingresoAbuela1;
+            IngresoMadre1 = ingresoMadre1;
+            IngresoPadre1 = ingresoPadre1;
+            IngresoHijo1 = ingresoHijo1;
+            Pension1 = pension1;
+            OtrosIngresos1 = otrosIngresos1;
+            TotalIngresos1 = totalIngresos1;
+            GastosEnergia1 = gastosEnergia1;
+            GastoAgua1 = gastoAgua1;
+            GastoTel1 = gastoTel1;
+            GastoComida1 = gastoComida1;
+            GastoTransp1 = gastoTransp1;
+            GastoSalub1 = gastoSalub1;
+            GastoEduca1 = gastoEduca1;
+            GastoGaso1 = gastoGaso1;
+            GastoRpa1 = gastoRpa1;
+            GastoVivienda1 = gastoVivienda1;
+            OtrosGastos1 = otrosGastos1;
+            TotalGastos1 = totalGastos1;
+        }
+
     }
 }

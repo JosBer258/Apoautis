@@ -120,3 +120,4 @@ C:\Users\Gerald\Documents\SistemaApoautis\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\
 C:\Users\Gerald\Documents\SistemaApoautis\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Manuales.FormManual.resources
 C:\Users\Gerald\Documents\SistemaApoautis\Apoautis\APOAUTIS2\APOAUTIS\bin\Debug\Interop.AcroPDFLib.dll
 C:\Users\Gerald\Documents\SistemaApoautis\Apoautis\APOAUTIS2\APOAUTIS\bin\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\Gerald\Documents\SistemaApoautis\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Estudio_Socioeconomico.FormBusquedaResponsables.resources

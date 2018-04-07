@@ -103,7 +103,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(686, 433);
+            this.ClientSize = new System.Drawing.Size(689, 426);
             this.ControlBox = false;
             this.Controls.Add(this.btm_Aceptar);
             this.Controls.Add(this.btm_buscar);
