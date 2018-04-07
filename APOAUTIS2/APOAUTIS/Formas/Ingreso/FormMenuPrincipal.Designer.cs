@@ -205,8 +205,8 @@
             // evaluacionPsicoToolStripMenuItem
             // 
             this.evaluacionPsicoToolStripMenuItem.Name = "evaluacionPsicoToolStripMenuItem";
-            this.evaluacionPsicoToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.evaluacionPsicoToolStripMenuItem.Text = "Evaluacion Psico";
+            this.evaluacionPsicoToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.evaluacionPsicoToolStripMenuItem.Text = "Evaluacion Psicodiagnostica";
             this.evaluacionPsicoToolStripMenuItem.Click += new System.EventHandler(this.evaluacionPsicoToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem

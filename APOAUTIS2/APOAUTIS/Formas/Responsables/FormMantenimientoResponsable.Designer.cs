@@ -44,6 +44,7 @@
             this.cmbTrabResp = new System.Windows.Forms.ComboBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtTelTrabResp = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();

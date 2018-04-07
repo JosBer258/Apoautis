@@ -1,0 +1,33 @@
+ALTER TABLE `mydb`.`matricula` 
+CHANGE COLUMN `Fecha` `Fecha` DATE NOT NULL ,
+ADD COLUMN `MarDesc` VARCHAR(19) NULL AFTER `CuotaPago`;
+
+
+ALTER TABLE `mydb`.`alumnos` 
+ADD COLUMN `EmergLugar` VARCHAR(65) NULL AFTER `InstDondeEstaIncluido`,
+ADD COLUMN `EmergTelefono` VARCHAR(45) NULL AFTER `EmergLugar`;
+
+
+
+ALTER TABLE `mydb`.`alumnos_responsables` 
+ADD COLUMN `Cod_TipoResp` INT NULL AFTER `CodResp`;
+
+
+
+ALTER TABLE `mydb`.`tiporesponsable` 
+DROP FOREIGN KEY `fk_TipoResponsable_Responsables1`;
+ALTER TABLE `mydb`.`tiporesponsable` 
+DROP COLUMN `Responsables_CodResp`,
+DROP INDEX `fk_TipoResponsable_Responsables1_idx` ;
+
+ALTER TABLE `mydb`.`tiposatencion` 
+DROP COLUMN `IncluExclu`,
+ADD COLUMN `Aten_grupal` VARCHAR(5) NULL AFTER `Alumnos_CodAlumno`,
+ADD COLUMN `Aten_pre_vocacional` VARCHAR(5) NULL AFTER `Aten_grupal`,
+ADD COLUMN `Aten_vocacional` VARCHAR(5) NULL AFTER `Aten_pre_vocacional`,
+ADD COLUMN `Aten_Escolar` VARCHAR(5) NULL AFTER `Aten_vocacional`,
+ADD COLUMN `Aten_Individual` VARCHAR(5) NULL AFTER `Aten_Escolar`,
+ADD COLUMN `Aten_distancia` VARCHAR(5) NULL AFTER `Aten_Individual`,
+ADD COLUMN `Teraia_domicilio` VARCHAR(5) NULL AFTER `Aten_distancia`,
+ADD COLUMN `Atencion_fisica` VARCHAR(5) NULL AFTER `Teraia_domicilio`;
+
