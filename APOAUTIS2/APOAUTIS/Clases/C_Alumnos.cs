@@ -31,6 +31,7 @@ namespace APOAUTIS.Clases
         private string EnfermedadesPadeciFamilia;
         private string LugaresAtencionMedica;
         private double GastosMEdicos;
+        private int estadoAlumno;
 
         public int CodAlumno11 {
             get { return CodAlumno1; }
@@ -93,6 +94,37 @@ namespace APOAUTIS.Clases
 
         public string ExistenciaAlergias1 { get { return ExistenciaAlergias; }
             set { ExistenciaAlergias = value; }
+        }
+
+        public int EstadoAlumno
+        {
+            get
+            {
+                return estadoAlumno;
+            }
+
+            set
+            {
+                estadoAlumno = value;
+            }
+        }
+
+        public void ingresoAlumnos()
+        {
+            this.sql = string.Format(@"INSERT INTO alumnos
+                                        (NomAlumno, LugarNaciAlum, FechaNaciAlum, DireccionAlum,
+                                        TelFijoAlum, CelAlumno, InstProceAlumno, Estado)
+                                        VALUES
+                                        ('{0}','{1}', '{2}','{3}', '{4}',
+                                        '{5}', '{6}','{7}');",
+                                        NomAlumno11, LugarNaciAlum11, FechaNaciAlum11, DireccionAlum11, TelFijoAlum11, CelAlumno11,
+                                        InstProceAlumno11, 4);
+
+            this.cmd = new MySqlCommand(this.sql, this.cnx);
+            this.cnx.Open();
+            MySqlDataReader Reg = null;
+            Reg = this.cmd.ExecuteReader();
+            this.cnx.Close();
         }
 
         public void FillAlumnosPest2Por(int a)

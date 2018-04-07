@@ -368,5 +368,10 @@ namespace APOAUTIS.Formas.Alumnos
         {
             val.ValidarNombres_SoloLetras(sender, e);
         }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
