@@ -30,8 +30,7 @@
         {
             this.tabMatricula = new System.Windows.Forms.TabControl();
             this.Pest_DatosGenerales = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.Pest1_Bttn_BuscarAlumnos = new System.Windows.Forms.Button();
             this.Pest1_Txt_Jornada = new System.Windows.Forms.TextBox();
             this.Pest_txtNumeroMatricula = new System.Windows.Forms.TextBox();
             this.Pest1_Bttn_Siguiente = new System.Windows.Forms.Button();
@@ -89,7 +88,6 @@
             this.label22 = new System.Windows.Forms.Label();
             this.Pest3_Txt_TelefonoPadre = new System.Windows.Forms.TextBox();
             this.Pest_DatosAdicionales = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
             this.Pest4_Txt_Entrevistador = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
             this.Pest4_Txt_Fecha = new System.Windows.Forms.TextBox();
@@ -102,7 +100,6 @@
             this.label30 = new System.Windows.Forms.Label();
             this.Pest4_Txt_DireccionPorEmergencias = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.Pest1_Bttn_BuscarAlumnos = new System.Windows.Forms.Button();
             this.Bttn_Cancelar = new System.Windows.Forms.Button();
             this.tabMatricula.SuspendLayout();
             this.Pest_DatosGenerales.SuspendLayout();
@@ -121,7 +118,7 @@
             this.tabMatricula.Controls.Add(this.Pest_DatosResponsable);
             this.tabMatricula.Controls.Add(this.Pest_DatosAdicionales);
             this.tabMatricula.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabMatricula.Location = new System.Drawing.Point(12, 72);
+            this.tabMatricula.Location = new System.Drawing.Point(12, 12);
             this.tabMatricula.Name = "tabMatricula";
             this.tabMatricula.SelectedIndex = 0;
             this.tabMatricula.Size = new System.Drawing.Size(728, 360);
@@ -129,8 +126,7 @@
             // 
             // Pest_DatosGenerales
             // 
-            this.Pest_DatosGenerales.Controls.Add(this.textBox1);
-            this.Pest_DatosGenerales.Controls.Add(this.label8);
+            this.Pest_DatosGenerales.Controls.Add(this.Pest1_Bttn_BuscarAlumnos);
             this.Pest_DatosGenerales.Controls.Add(this.Pest1_Txt_Jornada);
             this.Pest_DatosGenerales.Controls.Add(this.Pest_txtNumeroMatricula);
             this.Pest_DatosGenerales.Controls.Add(this.Pest1_Bttn_Siguiente);
@@ -162,48 +158,39 @@
             this.Pest_DatosGenerales.Text = "Datos Generales";
             this.Pest_DatosGenerales.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // Pest1_Bttn_BuscarAlumnos
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(206, 143);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(141, 22);
-            this.textBox1.TabIndex = 27;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(41, 146);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(151, 16);
-            this.label8.TabIndex = 26;
-            this.label8.Text = "Lugar de Nacimiento";
+            this.Pest1_Bttn_BuscarAlumnos.Location = new System.Drawing.Point(47, 17);
+            this.Pest1_Bttn_BuscarAlumnos.Name = "Pest1_Bttn_BuscarAlumnos";
+            this.Pest1_Bttn_BuscarAlumnos.Size = new System.Drawing.Size(117, 51);
+            this.Pest1_Bttn_BuscarAlumnos.TabIndex = 26;
+            this.Pest1_Bttn_BuscarAlumnos.Text = "Buscar por Alumno";
+            this.Pest1_Bttn_BuscarAlumnos.UseVisualStyleBackColor = true;
+            this.Pest1_Bttn_BuscarAlumnos.Click += new System.EventHandler(this.button5_Click);
             // 
             // Pest1_Txt_Jornada
             // 
             this.Pest1_Txt_Jornada.Enabled = false;
             this.Pest1_Txt_Jornada.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest1_Txt_Jornada.Location = new System.Drawing.Point(568, 209);
+            this.Pest1_Txt_Jornada.Location = new System.Drawing.Point(206, 269);
             this.Pest1_Txt_Jornada.Name = "Pest1_Txt_Jornada";
-            this.Pest1_Txt_Jornada.Size = new System.Drawing.Size(133, 22);
+            this.Pest1_Txt_Jornada.Size = new System.Drawing.Size(141, 22);
             this.Pest1_Txt_Jornada.TabIndex = 25;
             // 
             // Pest_txtNumeroMatricula
             // 
             this.Pest_txtNumeroMatricula.Enabled = false;
             this.Pest_txtNumeroMatricula.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest_txtNumeroMatricula.Location = new System.Drawing.Point(206, 47);
+            this.Pest_txtNumeroMatricula.Location = new System.Drawing.Point(74, 74);
             this.Pest_txtNumeroMatricula.Name = "Pest_txtNumeroMatricula";
-            this.Pest_txtNumeroMatricula.Size = new System.Drawing.Size(141, 22);
+            this.Pest_txtNumeroMatricula.Size = new System.Drawing.Size(100, 22);
             this.Pest_txtNumeroMatricula.TabIndex = 0;
             // 
             // Pest1_Bttn_Siguiente
             // 
-            this.Pest1_Bttn_Siguiente.Location = new System.Drawing.Point(568, 269);
+            this.Pest1_Bttn_Siguiente.Location = new System.Drawing.Point(623, 269);
             this.Pest1_Bttn_Siguiente.Name = "Pest1_Bttn_Siguiente";
-            this.Pest1_Bttn_Siguiente.Size = new System.Drawing.Size(133, 51);
+            this.Pest1_Bttn_Siguiente.Size = new System.Drawing.Size(91, 48);
             this.Pest1_Bttn_Siguiente.TabIndex = 24;
             this.Pest1_Bttn_Siguiente.Text = "Siguiente";
             this.Pest1_Bttn_Siguiente.UseVisualStyleBackColor = true;
@@ -213,7 +200,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(41, 47);
+            this.label1.Location = new System.Drawing.Point(44, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 16);
             this.label1.TabIndex = 1;
@@ -223,7 +210,7 @@
             // 
             this.Pest1_Txt_LugarNacimiento.Enabled = false;
             this.Pest1_Txt_LugarNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest1_Txt_LugarNacimiento.Location = new System.Drawing.Point(206, 76);
+            this.Pest1_Txt_LugarNacimiento.Location = new System.Drawing.Point(206, 135);
             this.Pest1_Txt_LugarNacimiento.Name = "Pest1_Txt_LugarNacimiento";
             this.Pest1_Txt_LugarNacimiento.Size = new System.Drawing.Size(141, 22);
             this.Pest1_Txt_LugarNacimiento.TabIndex = 23;
@@ -232,7 +219,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(360, 209);
+            this.label2.Location = new System.Drawing.Point(45, 275);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 16);
             this.label2.TabIndex = 2;
@@ -242,7 +229,7 @@
             // 
             this.Pest1_Txt_RecibioEvaluacion.Enabled = false;
             this.Pest1_Txt_RecibioEvaluacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest1_Txt_RecibioEvaluacion.Location = new System.Drawing.Point(568, 143);
+            this.Pest1_Txt_RecibioEvaluacion.Location = new System.Drawing.Point(568, 170);
             this.Pest1_Txt_RecibioEvaluacion.Name = "Pest1_Txt_RecibioEvaluacion";
             this.Pest1_Txt_RecibioEvaluacion.Size = new System.Drawing.Size(133, 22);
             this.Pest1_Txt_RecibioEvaluacion.TabIndex = 22;
@@ -251,7 +238,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(360, 146);
+            this.label12.Location = new System.Drawing.Point(360, 173);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(143, 16);
             this.label12.TabIndex = 21;
@@ -261,17 +248,17 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(41, 111);
+            this.label3.Location = new System.Drawing.Point(41, 106);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(144, 16);
+            this.label3.Size = new System.Drawing.Size(163, 16);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Nombre del Alumno\r\n";
+            this.label3.Text = "Nombre del Educando";
             // 
             // Pest1_Txt_AnoIngreso
             // 
             this.Pest1_Txt_AnoIngreso.Enabled = false;
             this.Pest1_Txt_AnoIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest1_Txt_AnoIngreso.Location = new System.Drawing.Point(568, 111);
+            this.Pest1_Txt_AnoIngreso.Location = new System.Drawing.Point(568, 138);
             this.Pest1_Txt_AnoIngreso.Name = "Pest1_Txt_AnoIngreso";
             this.Pest1_Txt_AnoIngreso.Size = new System.Drawing.Size(133, 22);
             this.Pest1_Txt_AnoIngreso.TabIndex = 20;
@@ -280,7 +267,7 @@
             // 
             this.Pest1_Txt_NombreEstudiante.Enabled = false;
             this.Pest1_Txt_NombreEstudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest1_Txt_NombreEstudiante.Location = new System.Drawing.Point(206, 108);
+            this.Pest1_Txt_NombreEstudiante.Location = new System.Drawing.Point(206, 103);
             this.Pest1_Txt_NombreEstudiante.Name = "Pest1_Txt_NombreEstudiante";
             this.Pest1_Txt_NombreEstudiante.Size = new System.Drawing.Size(141, 22);
             this.Pest1_Txt_NombreEstudiante.TabIndex = 5;
@@ -289,7 +276,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(360, 114);
+            this.label11.Location = new System.Drawing.Point(360, 141);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(211, 16);
             this.label11.TabIndex = 19;
@@ -299,17 +286,17 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(41, 79);
+            this.label4.Location = new System.Drawing.Point(41, 138);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(129, 16);
+            this.label4.Size = new System.Drawing.Size(151, 16);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Tipo de Matricula\r\n";
+            this.label4.Text = "Lugar de Nacimiento";
             // 
             // Pest1_Txt_Instituto
             // 
             this.Pest1_Txt_Instituto.Enabled = false;
             this.Pest1_Txt_Instituto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest1_Txt_Instituto.Location = new System.Drawing.Point(568, 79);
+            this.Pest1_Txt_Instituto.Location = new System.Drawing.Point(568, 106);
             this.Pest1_Txt_Instituto.Name = "Pest1_Txt_Instituto";
             this.Pest1_Txt_Instituto.Size = new System.Drawing.Size(133, 22);
             this.Pest1_Txt_Instituto.TabIndex = 18;
@@ -318,7 +305,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(41, 178);
+            this.label5.Location = new System.Drawing.Point(41, 170);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(155, 16);
             this.label5.TabIndex = 7;
@@ -328,7 +315,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(360, 82);
+            this.label10.Location = new System.Drawing.Point(360, 109);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(191, 16);
             this.label10.TabIndex = 17;
@@ -338,7 +325,7 @@
             // 
             this.Pest1_Txt_FechaNacimiento.Enabled = false;
             this.Pest1_Txt_FechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest1_Txt_FechaNacimiento.Location = new System.Drawing.Point(206, 175);
+            this.Pest1_Txt_FechaNacimiento.Location = new System.Drawing.Point(206, 167);
             this.Pest1_Txt_FechaNacimiento.Name = "Pest1_Txt_FechaNacimiento";
             this.Pest1_Txt_FechaNacimiento.Size = new System.Drawing.Size(141, 22);
             this.Pest1_Txt_FechaNacimiento.TabIndex = 8;
@@ -347,7 +334,7 @@
             // 
             this.Pest1_Txt_Celular.Enabled = false;
             this.Pest1_Txt_Celular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest1_Txt_Celular.Location = new System.Drawing.Point(568, 47);
+            this.Pest1_Txt_Celular.Location = new System.Drawing.Point(568, 74);
             this.Pest1_Txt_Celular.Name = "Pest1_Txt_Celular";
             this.Pest1_Txt_Celular.Size = new System.Drawing.Size(133, 22);
             this.Pest1_Txt_Celular.TabIndex = 16;
@@ -356,7 +343,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(41, 210);
+            this.label6.Location = new System.Drawing.Point(41, 202);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(144, 16);
             this.label6.TabIndex = 9;
@@ -366,7 +353,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(360, 50);
+            this.label9.Location = new System.Drawing.Point(360, 77);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(57, 16);
             this.label9.TabIndex = 15;
@@ -376,7 +363,7 @@
             // 
             this.Pest1_Txt_DireccionCompleta.Enabled = false;
             this.Pest1_Txt_DireccionCompleta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest1_Txt_DireccionCompleta.Location = new System.Drawing.Point(206, 207);
+            this.Pest1_Txt_DireccionCompleta.Location = new System.Drawing.Point(206, 199);
             this.Pest1_Txt_DireccionCompleta.Multiline = true;
             this.Pest1_Txt_DireccionCompleta.Name = "Pest1_Txt_DireccionCompleta";
             this.Pest1_Txt_DireccionCompleta.Size = new System.Drawing.Size(141, 64);
@@ -386,7 +373,7 @@
             // 
             this.Pest1_Txt_TelefonoFijo.Enabled = false;
             this.Pest1_Txt_TelefonoFijo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest1_Txt_TelefonoFijo.Location = new System.Drawing.Point(568, 175);
+            this.Pest1_Txt_TelefonoFijo.Location = new System.Drawing.Point(568, 202);
             this.Pest1_Txt_TelefonoFijo.Name = "Pest1_Txt_TelefonoFijo";
             this.Pest1_Txt_TelefonoFijo.Size = new System.Drawing.Size(133, 22);
             this.Pest1_Txt_TelefonoFijo.TabIndex = 12;
@@ -395,7 +382,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(360, 175);
+            this.label7.Location = new System.Drawing.Point(360, 202);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(100, 16);
             this.label7.TabIndex = 11;
@@ -417,9 +404,9 @@
             // 
             // Pest2_Bttn_Siguiente
             // 
-            this.Pest2_Bttn_Siguiente.Location = new System.Drawing.Point(568, 270);
+            this.Pest2_Bttn_Siguiente.Location = new System.Drawing.Point(623, 270);
             this.Pest2_Bttn_Siguiente.Name = "Pest2_Bttn_Siguiente";
-            this.Pest2_Bttn_Siguiente.Size = new System.Drawing.Size(133, 51);
+            this.Pest2_Bttn_Siguiente.Size = new System.Drawing.Size(91, 51);
             this.Pest2_Bttn_Siguiente.TabIndex = 35;
             this.Pest2_Bttn_Siguiente.Text = "Siguiente";
             this.Pest2_Bttn_Siguiente.UseVisualStyleBackColor = true;
@@ -563,9 +550,9 @@
             // 
             // Pest3_Bttn_Siguiente
             // 
-            this.Pest3_Bttn_Siguiente.Location = new System.Drawing.Point(568, 266);
+            this.Pest3_Bttn_Siguiente.Location = new System.Drawing.Point(624, 268);
             this.Pest3_Bttn_Siguiente.Name = "Pest3_Bttn_Siguiente";
-            this.Pest3_Bttn_Siguiente.Size = new System.Drawing.Size(133, 52);
+            this.Pest3_Bttn_Siguiente.Size = new System.Drawing.Size(91, 52);
             this.Pest3_Bttn_Siguiente.TabIndex = 25;
             this.Pest3_Bttn_Siguiente.Text = "Siguiente";
             this.Pest3_Bttn_Siguiente.UseVisualStyleBackColor = true;
@@ -749,7 +736,6 @@
             // 
             // Pest_DatosAdicionales
             // 
-            this.Pest_DatosAdicionales.Controls.Add(this.button1);
             this.Pest_DatosAdicionales.Controls.Add(this.Pest4_Txt_Entrevistador);
             this.Pest_DatosAdicionales.Controls.Add(this.label35);
             this.Pest_DatosAdicionales.Controls.Add(this.Pest4_Txt_Fecha);
@@ -769,20 +755,10 @@
             this.Pest_DatosAdicionales.Text = "Datos Adicionales";
             this.Pest_DatosAdicionales.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(568, 275);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 51);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "Finalizar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // Pest4_Txt_Entrevistador
             // 
             this.Pest4_Txt_Entrevistador.Enabled = false;
-            this.Pest4_Txt_Entrevistador.Location = new System.Drawing.Point(337, 266);
+            this.Pest4_Txt_Entrevistador.Location = new System.Drawing.Point(332, 285);
             this.Pest4_Txt_Entrevistador.Name = "Pest4_Txt_Entrevistador";
             this.Pest4_Txt_Entrevistador.Size = new System.Drawing.Size(179, 21);
             this.Pest4_Txt_Entrevistador.TabIndex = 13;
@@ -790,7 +766,7 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(243, 269);
+            this.label35.Location = new System.Drawing.Point(238, 288);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(91, 15);
             this.label35.TabIndex = 12;
@@ -799,7 +775,7 @@
             // Pest4_Txt_Fecha
             // 
             this.Pest4_Txt_Fecha.Enabled = false;
-            this.Pest4_Txt_Fecha.Location = new System.Drawing.Point(83, 269);
+            this.Pest4_Txt_Fecha.Location = new System.Drawing.Point(78, 288);
             this.Pest4_Txt_Fecha.Name = "Pest4_Txt_Fecha";
             this.Pest4_Txt_Fecha.Size = new System.Drawing.Size(136, 21);
             this.Pest4_Txt_Fecha.TabIndex = 11;
@@ -807,7 +783,7 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(31, 269);
+            this.label34.Location = new System.Drawing.Point(26, 288);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(46, 15);
             this.label34.TabIndex = 10;
@@ -820,7 +796,7 @@
             this.Pest4_TxtBox_Observaciones.Multiline = true;
             this.Pest4_TxtBox_Observaciones.Name = "Pest4_TxtBox_Observaciones";
             this.Pest4_TxtBox_Observaciones.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Pest4_TxtBox_Observaciones.Size = new System.Drawing.Size(665, 95);
+            this.Pest4_TxtBox_Observaciones.Size = new System.Drawing.Size(665, 115);
             this.Pest4_TxtBox_Observaciones.TabIndex = 9;
             // 
             // label33
@@ -883,23 +859,12 @@
             this.label29.TabIndex = 0;
             this.label29.Text = "Direccion donde se puede localizar en caso de emergencia";
             // 
-            // Pest1_Bttn_BuscarAlumnos
-            // 
-            this.Pest1_Bttn_BuscarAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest1_Bttn_BuscarAlumnos.Location = new System.Drawing.Point(12, 12);
-            this.Pest1_Bttn_BuscarAlumnos.Name = "Pest1_Bttn_BuscarAlumnos";
-            this.Pest1_Bttn_BuscarAlumnos.Size = new System.Drawing.Size(341, 51);
-            this.Pest1_Bttn_BuscarAlumnos.TabIndex = 26;
-            this.Pest1_Bttn_BuscarAlumnos.Text = "Buscar Matricula";
-            this.Pest1_Bttn_BuscarAlumnos.UseVisualStyleBackColor = true;
-            this.Pest1_Bttn_BuscarAlumnos.Click += new System.EventHandler(this.button5_Click);
-            // 
             // Bttn_Cancelar
             // 
             this.Bttn_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bttn_Cancelar.Location = new System.Drawing.Point(584, 444);
+            this.Bttn_Cancelar.Location = new System.Drawing.Point(639, 378);
             this.Bttn_Cancelar.Name = "Bttn_Cancelar";
-            this.Bttn_Cancelar.Size = new System.Drawing.Size(133, 51);
+            this.Bttn_Cancelar.Size = new System.Drawing.Size(91, 48);
             this.Bttn_Cancelar.TabIndex = 27;
             this.Bttn_Cancelar.Text = "Cancelar";
             this.Bttn_Cancelar.UseVisualStyleBackColor = true;
@@ -910,15 +875,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(758, 507);
+            this.ClientSize = new System.Drawing.Size(758, 429);
             this.ControlBox = false;
-            this.Controls.Add(this.Pest1_Bttn_BuscarAlumnos);
             this.Controls.Add(this.Bttn_Cancelar);
             this.Controls.Add(this.tabMatricula);
             this.Name = "VistaMatricula";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Vista de Matricula";
-            this.Load += new System.EventHandler(this.VistaMatricula_Load);
             this.tabMatricula.ResumeLayout(false);
             this.Pest_DatosGenerales.ResumeLayout(false);
             this.Pest_DatosGenerales.PerformLayout();
@@ -1012,8 +975,5 @@
         private System.Windows.Forms.TextBox Pest4_Txt_DireccionPorEmergencias;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Button Bttn_Cancelar;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label8;
     }
 }

@@ -26,53 +26,57 @@ namespace APOAUTIS.Formas.Matricula
 
         private void Bttn_BusquedaDeAlumno_Click(object sender, EventArgs e)
         {
-          }
+          
+            AddOwnedForm(F_ShowAlum);
+            F_ShowAlum.Accion = "Monto";
+            F_ShowAlum.ShowDialog();
+        }
 
         private void FormMontoMatricula_Load(object sender, EventArgs e)
         {
-            Gruop_Busqueda.Enabled = true;
+            Radio_Agregar.Checked = true;
             Cl_Mon.Fun_MuestraDatosGen(DGV_Show);
             var blankContextMenu = new ContextMenuStrip();
             Txt_Filtro_Matricula.ContextMenuStrip = blankContextMenu;
         }
 
         public void Fun_CargarDatos(int Var_Codigo, string Var_Nombre)
-        {try
-            {
+        {
                 Cl_Mon.Var_cod_nom = Var_Codigo;
                 Cl_Mon.Var_nom_alumno = Var_Nombre;
-
-                Txt_NombreAlumno.Text = Cl_Mon.Var_nom_alumno;
                 Cl_Mon.Fun_ExtraerResponsables();
+                Cl_Mon.Fun_ExtraerTotalMen();
+                Cl_Mon.Fun_CalcularMensualidad();
+                Txt_Mensualidad.Text = Cl_Mon.Var_mensualidad.ToString();
+                Txt_TotalIngreso.Text = Cl_Mon.Var_total_ingresos;
+                Txt_NombreAlumno.Text = Cl_Mon.Var_nom_alumno;
                 Txt_Responsable.Text = Cl_Mon.Var_resp_nombres;
-                Cl_Mon.Fun_ExtraerTotalMen();
-                Cl_Mon.Fun_CalcularMensualidad();
-                Txt_Mensualidad.Text = Cl_Mon.Var_mensualidad.ToString();
-                Txt_TotalIngreso.Text = Cl_Mon.Var_total_ingresos;
-            }catch(System.Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-
-            /*
                 
-                Cl_Mon.Fun_ExtraerTotalMen();
-                Cl_Mon.Fun_CalcularMensualidad();
-                Txt_Mensualidad.Text = Cl_Mon.Var_mensualidad.ToString();
-                Txt_TotalIngreso.Text = Cl_Mon.Var_total_ingresos;
-
-               */
-
-        }
+   }
 
         private void Radio_Agregar_CheckedChanged(object sender, EventArgs e)
         {
-           
+            if (Radio_Agregar.Checked == true)
+            {
+                Gruop_Busqueda.Enabled = false;
+                Bttn_BusquedaDeAlumno.Enabled = true;
+                Fun_Limpiar();
+            }
+            else
+            {
+                Gruop_Busqueda.Enabled = true;
+                Bttn_BusquedaDeAlumno.Enabled = false;
+            }
         }
 
         private void Radio_Actualizar_CheckedChanged(object sender, EventArgs e)
         {
-           
+            if (Radio_Actualizar.Checked == true)
+            {
+                Gruop_Busqueda.Enabled = true;
+                Bttn_BusquedaDeAlumno.Enabled = false;
+                Fun_Limpiar();
+            }
         }
 
         private void Bttn_Salir_Click(object sender, EventArgs e)
@@ -159,7 +163,7 @@ namespace APOAUTIS.Formas.Matricula
                     (int)Convert.ToDouble(row.Cells["Codigo de Alumno"].Value.ToString()),
                     row.Cells["Nombre de Alumno"].Value.ToString());
             }
-            catch (Exception) {}
+            catch (Exception) { }
         }
 
         private void Txt_Filtro_Matricula_KeyPress(object sender, KeyPressEventArgs e)

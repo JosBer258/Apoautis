@@ -1,6 +1,4 @@
-﻿using APOAUTIS.Clases;
-using APOAUTIS.Formas.Alumnos;
-using APOAUTIS.Formas.Entrevista_Padres;
+﻿using APOAUTIS.Formas.Alumnos;
 using APOAUTIS.Formas.Matricula;
 using APOAUTIS.Formas.Responsables;
 using APOAUTIS.Formas.Usuarios;
@@ -22,11 +20,6 @@ namespace APOAUTIS.Formas.Ingreso
         {
             InitializeComponent();
         }
-        private static int state;
-
-        public int State { get {  return state; }
-            set { state = value; }
-        }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -40,12 +33,7 @@ namespace APOAUTIS.Formas.Ingreso
 
         private void FormMenuPrincipal_Load(object sender, EventArgs e)
         {
-
            
-            if (State != 3)
-            {
-                usuariosToolStripMenuItem.Visible = false;
-            }
         }
 
         private void alumnosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -151,12 +139,6 @@ namespace APOAUTIS.Formas.Ingreso
         {
             FormRangoMensualidad Mens = new FormRangoMensualidad();
             Mens.ShowDialog();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            Prueba a= new Prueba();
-            a.ShowDialog();
         }
     }
 }

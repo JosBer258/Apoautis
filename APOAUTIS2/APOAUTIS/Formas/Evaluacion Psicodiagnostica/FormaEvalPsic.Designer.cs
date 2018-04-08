@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.DGV_Evaluaciones = new System.Windows.Forms.DataGridView();
-            this.radBusqFech = new System.Windows.Forms.RadioButton();
-            this.radBusqNom = new System.Windows.Forms.RadioButton();
-            this.txtBusqNom = new System.Windows.Forms.TextBox();
-            this.dateBusqFech = new System.Windows.Forms.DateTimePicker();
-            this.btnAceptar = new System.Windows.Forms.Button();
-            this.btnLimpiar = new System.Windows.Forms.Button();
-            this.cmbSexo = new System.Windows.Forms.ComboBox();
-            this.txtCodEval = new System.Windows.Forms.TextBox();
-            this.txtObs = new System.Windows.Forms.TextBox();
-            this.txtImpDiag = new System.Windows.Forms.TextBox();
-            this.txtTel = new System.Windows.Forms.TextBox();
-            this.txtResp = new System.Windows.Forms.TextBox();
-            this.txtEdad = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.DGV_Show = new System.Windows.Forms.DataGridView();
+            this.Radio_Busq_FechaIngreso = new System.Windows.Forms.RadioButton();
+            this.Radio_Busq_Nombre = new System.Windows.Forms.RadioButton();
+            this.Busq_Txt_Nombre = new System.Windows.Forms.TextBox();
+            this.Busq_Date_FechaRealizacion = new System.Windows.Forms.DateTimePicker();
+            this.Bttn_Ok = new System.Windows.Forms.Button();
+            this.Bttn_Limpiar = new System.Windows.Forms.Button();
+            this.Cmb_Sexo = new System.Windows.Forms.ComboBox();
+            this.Txt_CodigoEvaluacion = new System.Windows.Forms.TextBox();
+            this.Txt_Observaciones = new System.Windows.Forms.TextBox();
+            this.Txt_ImpresionDiagnostico = new System.Windows.Forms.TextBox();
+            this.Txt_Telefono = new System.Windows.Forms.TextBox();
+            this.Txt_Responsable = new System.Windows.Forms.TextBox();
+            this.Txt_Edad = new System.Windows.Forms.TextBox();
+            this.Txt_FechaNacimiento = new System.Windows.Forms.TextBox();
+            this.Txt_NombreCompleto = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -54,177 +55,150 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Grupo_IngresoResultado = new System.Windows.Forms.GroupBox();
-            this.dateFechNac = new System.Windows.Forms.DateTimePicker();
-            this.dateFechEval = new System.Windows.Forms.DateTimePicker();
+            this.Date_FechaEvaluacion = new System.Windows.Forms.DateTimePicker();
             this.Grupo_Busqueda = new System.Windows.Forms.GroupBox();
-            this.radTodas = new System.Windows.Forms.RadioButton();
-            this.txtBusqOB = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtBusqID = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.radBusqImpObs = new System.Windows.Forms.RadioButton();
-            this.radObs = new System.Windows.Forms.RadioButton();
-            this.txtBusqObs = new System.Windows.Forms.TextBox();
-            this.radImpDiag = new System.Windows.Forms.RadioButton();
-            this.txtBusqImpDiag = new System.Windows.Forms.TextBox();
             this.Bttn_Salir = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Evaluaciones)).BeginInit();
+            this.Radio_Busq_ImpresionDiagnos = new System.Windows.Forms.RadioButton();
+            this.Busq_Txt_ImpresionDiagnostica = new System.Windows.Forms.TextBox();
+            this.Radio_Busq_Observaciones = new System.Windows.Forms.RadioButton();
+            this.Busq_Txt_Observaciones = new System.Windows.Forms.TextBox();
+            this.Radio_Busq_ImpresionYObservaciones = new System.Windows.Forms.RadioButton();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Busq_Txt_Diagnosti_Conjunto = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.Busq_Txt_Observaciones_Conjunto = new System.Windows.Forms.TextBox();
+            this.Radio_Busq_TodasPruebas = new System.Windows.Forms.RadioButton();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Show)).BeginInit();
             this.Grupo_IngresoResultado.SuspendLayout();
             this.Grupo_Busqueda.SuspendLayout();
             this.SuspendLayout();
             // 
-            // DGV_Evaluaciones
+            // DGV_Show
             // 
-            this.DGV_Evaluaciones.AllowUserToAddRows = false;
-            this.DGV_Evaluaciones.AllowUserToDeleteRows = false;
-            this.DGV_Evaluaciones.AllowUserToResizeColumns = false;
-            this.DGV_Evaluaciones.AllowUserToResizeRows = false;
-            this.DGV_Evaluaciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.DGV_Evaluaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Evaluaciones.Location = new System.Drawing.Point(6, 131);
-            this.DGV_Evaluaciones.MultiSelect = false;
-            this.DGV_Evaluaciones.Name = "DGV_Evaluaciones";
-            this.DGV_Evaluaciones.ReadOnly = true;
-            this.DGV_Evaluaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Evaluaciones.Size = new System.Drawing.Size(829, 197);
-            this.DGV_Evaluaciones.TabIndex = 6;
+            this.DGV_Show.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Show.Location = new System.Drawing.Point(6, 131);
+            this.DGV_Show.Name = "DGV_Show";
+            this.DGV_Show.Size = new System.Drawing.Size(829, 197);
+            this.DGV_Show.TabIndex = 6;
             // 
-            // radBusqFech
+            // Radio_Busq_FechaIngreso
             // 
-            this.radBusqFech.AutoSize = true;
-            this.radBusqFech.Location = new System.Drawing.Point(17, 56);
-            this.radBusqFech.Name = "radBusqFech";
-            this.radBusqFech.Size = new System.Drawing.Size(129, 30);
-            this.radBusqFech.TabIndex = 5;
-            this.radBusqFech.Text = "Buscar por Fecha \r\nde Evaluacion";
-            this.radBusqFech.UseVisualStyleBackColor = true;
-            this.radBusqFech.CheckedChanged += new System.EventHandler(this.radBusqFech_CheckedChanged);
+            this.Radio_Busq_FechaIngreso.AutoSize = true;
+            this.Radio_Busq_FechaIngreso.Location = new System.Drawing.Point(17, 56);
+            this.Radio_Busq_FechaIngreso.Name = "Radio_Busq_FechaIngreso";
+            this.Radio_Busq_FechaIngreso.Size = new System.Drawing.Size(129, 30);
+            this.Radio_Busq_FechaIngreso.TabIndex = 5;
+            this.Radio_Busq_FechaIngreso.TabStop = true;
+            this.Radio_Busq_FechaIngreso.Text = "Buscar por Fecha \r\nde Evaluacion";
+            this.Radio_Busq_FechaIngreso.UseVisualStyleBackColor = true;
             // 
-            // radBusqNom
+            // Radio_Busq_Nombre
             // 
-            this.radBusqNom.AutoSize = true;
-            this.radBusqNom.Location = new System.Drawing.Point(16, 34);
-            this.radBusqNom.Name = "radBusqNom";
-            this.radBusqNom.Size = new System.Drawing.Size(133, 17);
-            this.radBusqNom.TabIndex = 4;
-            this.radBusqNom.Text = "Buscar por Nombre";
-            this.radBusqNom.UseVisualStyleBackColor = true;
-            this.radBusqNom.CheckedChanged += new System.EventHandler(this.radBusqNom_CheckedChanged);
+            this.Radio_Busq_Nombre.AutoSize = true;
+            this.Radio_Busq_Nombre.Location = new System.Drawing.Point(16, 34);
+            this.Radio_Busq_Nombre.Name = "Radio_Busq_Nombre";
+            this.Radio_Busq_Nombre.Size = new System.Drawing.Size(133, 17);
+            this.Radio_Busq_Nombre.TabIndex = 4;
+            this.Radio_Busq_Nombre.TabStop = true;
+            this.Radio_Busq_Nombre.Text = "Buscar por Nombre";
+            this.Radio_Busq_Nombre.UseVisualStyleBackColor = true;
             // 
-            // txtBusqNom
+            // Busq_Txt_Nombre
             // 
-            this.txtBusqNom.Enabled = false;
-            this.txtBusqNom.Location = new System.Drawing.Point(152, 33);
-            this.txtBusqNom.Name = "txtBusqNom";
-            this.txtBusqNom.Size = new System.Drawing.Size(169, 20);
-            this.txtBusqNom.TabIndex = 1;
-            this.txtBusqNom.TextChanged += new System.EventHandler(this.txtBusqNom_TextChanged);
-            this.txtBusqNom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBusqNom_KeyPress);
+            this.Busq_Txt_Nombre.Location = new System.Drawing.Point(152, 33);
+            this.Busq_Txt_Nombre.Name = "Busq_Txt_Nombre";
+            this.Busq_Txt_Nombre.Size = new System.Drawing.Size(169, 20);
+            this.Busq_Txt_Nombre.TabIndex = 1;
             // 
-            // dateBusqFech
+            // Busq_Date_FechaRealizacion
             // 
-            this.dateBusqFech.Enabled = false;
-            this.dateBusqFech.Location = new System.Drawing.Point(152, 59);
-            this.dateBusqFech.Name = "dateBusqFech";
-            this.dateBusqFech.Size = new System.Drawing.Size(170, 20);
-            this.dateBusqFech.TabIndex = 0;
-            this.dateBusqFech.ValueChanged += new System.EventHandler(this.dateBusqFech_ValueChanged);
+            this.Busq_Date_FechaRealizacion.Location = new System.Drawing.Point(152, 59);
+            this.Busq_Date_FechaRealizacion.Name = "Busq_Date_FechaRealizacion";
+            this.Busq_Date_FechaRealizacion.Size = new System.Drawing.Size(170, 20);
+            this.Busq_Date_FechaRealizacion.TabIndex = 0;
             // 
-            // btnAceptar
+            // Bttn_Ok
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(717, 176);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(118, 40);
-            this.btnAceptar.TabIndex = 90;
-            this.btnAceptar.Text = "Ingresar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.Bttn_Ok_Click);
+            this.Bttn_Ok.Location = new System.Drawing.Point(717, 176);
+            this.Bttn_Ok.Name = "Bttn_Ok";
+            this.Bttn_Ok.Size = new System.Drawing.Size(118, 40);
+            this.Bttn_Ok.TabIndex = 90;
+            this.Bttn_Ok.Text = "OK";
+            this.Bttn_Ok.UseVisualStyleBackColor = true;
             // 
-            // btnLimpiar
+            // Bttn_Limpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(573, 176);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(118, 40);
-            this.btnLimpiar.TabIndex = 89;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            this.Bttn_Limpiar.Location = new System.Drawing.Point(573, 176);
+            this.Bttn_Limpiar.Name = "Bttn_Limpiar";
+            this.Bttn_Limpiar.Size = new System.Drawing.Size(118, 40);
+            this.Bttn_Limpiar.TabIndex = 89;
+            this.Bttn_Limpiar.Text = "Limpiar";
+            this.Bttn_Limpiar.UseVisualStyleBackColor = true;
             // 
-            // cmbSexo
+            // Cmb_Sexo
             // 
-            this.cmbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSexo.FormattingEnabled = true;
-            this.cmbSexo.Items.AddRange(new object[] {
-            "Femenino",
-            "Masculino"});
-            this.cmbSexo.Location = new System.Drawing.Point(600, 33);
-            this.cmbSexo.Name = "cmbSexo";
-            this.cmbSexo.Size = new System.Drawing.Size(116, 21);
-            this.cmbSexo.TabIndex = 67;
+            this.Cmb_Sexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Cmb_Sexo.FormattingEnabled = true;
+            this.Cmb_Sexo.Location = new System.Drawing.Point(600, 33);
+            this.Cmb_Sexo.Name = "Cmb_Sexo";
+            this.Cmb_Sexo.Size = new System.Drawing.Size(116, 21);
+            this.Cmb_Sexo.TabIndex = 67;
             // 
-            // txtCodEval
+            // Txt_CodigoEvaluacion
             // 
-            this.txtCodEval.Enabled = false;
-            this.txtCodEval.Location = new System.Drawing.Point(178, 30);
-            this.txtCodEval.MaxLength = 10;
-            this.txtCodEval.Name = "txtCodEval";
-            this.txtCodEval.Size = new System.Drawing.Size(109, 20);
-            this.txtCodEval.TabIndex = 66;
-            this.txtCodEval.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodEval_KeyPress);
+            this.Txt_CodigoEvaluacion.Location = new System.Drawing.Point(178, 30);
+            this.Txt_CodigoEvaluacion.Name = "Txt_CodigoEvaluacion";
+            this.Txt_CodigoEvaluacion.Size = new System.Drawing.Size(109, 20);
+            this.Txt_CodigoEvaluacion.TabIndex = 66;
             // 
-            // txtObs
+            // Txt_Observaciones
             // 
-            this.txtObs.Location = new System.Drawing.Point(600, 137);
-            this.txtObs.MaxLength = 45;
-            this.txtObs.Name = "txtObs";
-            this.txtObs.Size = new System.Drawing.Size(235, 20);
-            this.txtObs.TabIndex = 64;
-            this.txtObs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtObs_KeyPress);
+            this.Txt_Observaciones.Location = new System.Drawing.Point(600, 137);
+            this.Txt_Observaciones.Name = "Txt_Observaciones";
+            this.Txt_Observaciones.Size = new System.Drawing.Size(235, 20);
+            this.Txt_Observaciones.TabIndex = 64;
             // 
-            // txtImpDiag
+            // Txt_ImpresionDiagnostico
             // 
-            this.txtImpDiag.Location = new System.Drawing.Point(600, 111);
-            this.txtImpDiag.MaxLength = 45;
-            this.txtImpDiag.Name = "txtImpDiag";
-            this.txtImpDiag.Size = new System.Drawing.Size(235, 20);
-            this.txtImpDiag.TabIndex = 62;
-            this.txtImpDiag.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtImpDiag_KeyPress);
+            this.Txt_ImpresionDiagnostico.Location = new System.Drawing.Point(600, 111);
+            this.Txt_ImpresionDiagnostico.Name = "Txt_ImpresionDiagnostico";
+            this.Txt_ImpresionDiagnostico.Size = new System.Drawing.Size(235, 20);
+            this.Txt_ImpresionDiagnostico.TabIndex = 62;
             // 
-            // txtTel
+            // Txt_Telefono
             // 
-            this.txtTel.Location = new System.Drawing.Point(600, 85);
-            this.txtTel.MaxLength = 11;
-            this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(235, 20);
-            this.txtTel.TabIndex = 60;
-            this.txtTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTel_KeyPress);
+            this.Txt_Telefono.Location = new System.Drawing.Point(600, 85);
+            this.Txt_Telefono.Name = "Txt_Telefono";
+            this.Txt_Telefono.Size = new System.Drawing.Size(235, 20);
+            this.Txt_Telefono.TabIndex = 60;
             // 
-            // txtResp
+            // Txt_Responsable
             // 
-            this.txtResp.Location = new System.Drawing.Point(600, 59);
-            this.txtResp.MaxLength = 45;
-            this.txtResp.Name = "txtResp";
-            this.txtResp.Size = new System.Drawing.Size(235, 20);
-            this.txtResp.TabIndex = 58;
-            this.txtResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtResp_KeyPress);
+            this.Txt_Responsable.Location = new System.Drawing.Point(600, 59);
+            this.Txt_Responsable.Name = "Txt_Responsable";
+            this.Txt_Responsable.Size = new System.Drawing.Size(235, 20);
+            this.Txt_Responsable.TabIndex = 58;
             // 
-            // txtEdad
+            // Txt_Edad
             // 
-            this.txtEdad.Location = new System.Drawing.Point(177, 134);
-            this.txtEdad.MaxLength = 3;
-            this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Size = new System.Drawing.Size(235, 20);
-            this.txtEdad.TabIndex = 54;
-            this.txtEdad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEdad_KeyPress);
+            this.Txt_Edad.Location = new System.Drawing.Point(177, 134);
+            this.Txt_Edad.Name = "Txt_Edad";
+            this.Txt_Edad.Size = new System.Drawing.Size(235, 20);
+            this.Txt_Edad.TabIndex = 54;
             // 
-            // txtNombre
+            // Txt_FechaNacimiento
             // 
-            this.txtNombre.Location = new System.Drawing.Point(178, 56);
-            this.txtNombre.MaxLength = 45;
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(235, 20);
-            this.txtNombre.TabIndex = 48;
-            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
+            this.Txt_FechaNacimiento.Location = new System.Drawing.Point(178, 108);
+            this.Txt_FechaNacimiento.Name = "Txt_FechaNacimiento";
+            this.Txt_FechaNacimiento.Size = new System.Drawing.Size(235, 20);
+            this.Txt_FechaNacimiento.TabIndex = 52;
+            // 
+            // Txt_NombreCompleto
+            // 
+            this.Txt_NombreCompleto.Location = new System.Drawing.Point(178, 56);
+            this.Txt_NombreCompleto.Name = "Txt_NombreCompleto";
+            this.Txt_NombreCompleto.Size = new System.Drawing.Size(235, 20);
+            this.Txt_NombreCompleto.TabIndex = 48;
             // 
             // label12
             // 
@@ -318,24 +292,24 @@
             // 
             // Grupo_IngresoResultado
             // 
-            this.Grupo_IngresoResultado.Controls.Add(this.dateFechNac);
-            this.Grupo_IngresoResultado.Controls.Add(this.dateFechEval);
-            this.Grupo_IngresoResultado.Controls.Add(this.btnAceptar);
-            this.Grupo_IngresoResultado.Controls.Add(this.btnLimpiar);
-            this.Grupo_IngresoResultado.Controls.Add(this.txtCodEval);
+            this.Grupo_IngresoResultado.Controls.Add(this.Date_FechaEvaluacion);
+            this.Grupo_IngresoResultado.Controls.Add(this.Bttn_Ok);
+            this.Grupo_IngresoResultado.Controls.Add(this.Bttn_Limpiar);
+            this.Grupo_IngresoResultado.Controls.Add(this.Txt_CodigoEvaluacion);
             this.Grupo_IngresoResultado.Controls.Add(this.label12);
-            this.Grupo_IngresoResultado.Controls.Add(this.txtNombre);
-            this.Grupo_IngresoResultado.Controls.Add(this.cmbSexo);
+            this.Grupo_IngresoResultado.Controls.Add(this.Txt_NombreCompleto);
+            this.Grupo_IngresoResultado.Controls.Add(this.Cmb_Sexo);
             this.Grupo_IngresoResultado.Controls.Add(this.label1);
-            this.Grupo_IngresoResultado.Controls.Add(this.txtObs);
+            this.Grupo_IngresoResultado.Controls.Add(this.Txt_FechaNacimiento);
+            this.Grupo_IngresoResultado.Controls.Add(this.Txt_Observaciones);
             this.Grupo_IngresoResultado.Controls.Add(this.label4);
-            this.Grupo_IngresoResultado.Controls.Add(this.txtImpDiag);
+            this.Grupo_IngresoResultado.Controls.Add(this.Txt_ImpresionDiagnostico);
             this.Grupo_IngresoResultado.Controls.Add(this.label2);
-            this.Grupo_IngresoResultado.Controls.Add(this.txtEdad);
-            this.Grupo_IngresoResultado.Controls.Add(this.txtTel);
+            this.Grupo_IngresoResultado.Controls.Add(this.Txt_Edad);
+            this.Grupo_IngresoResultado.Controls.Add(this.Txt_Telefono);
             this.Grupo_IngresoResultado.Controls.Add(this.label3);
             this.Grupo_IngresoResultado.Controls.Add(this.label5);
-            this.Grupo_IngresoResultado.Controls.Add(this.txtResp);
+            this.Grupo_IngresoResultado.Controls.Add(this.Txt_Responsable);
             this.Grupo_IngresoResultado.Controls.Add(this.label6);
             this.Grupo_IngresoResultado.Controls.Add(this.label8);
             this.Grupo_IngresoResultado.Controls.Add(this.label13);
@@ -345,150 +319,38 @@
             this.Grupo_IngresoResultado.Size = new System.Drawing.Size(841, 222);
             this.Grupo_IngresoResultado.TabIndex = 91;
             this.Grupo_IngresoResultado.TabStop = false;
-            this.Grupo_IngresoResultado.Text = "Ingresar Resultados de Evaluacion";
+            this.Grupo_IngresoResultado.Text = "Ingresar Resultados de Prueba";
             // 
-            // dateFechNac
+            // Date_FechaEvaluacion
             // 
-            this.dateFechNac.Location = new System.Drawing.Point(177, 108);
-            this.dateFechNac.Name = "dateFechNac";
-            this.dateFechNac.Size = new System.Drawing.Size(236, 20);
-            this.dateFechNac.TabIndex = 91;
-            // 
-            // dateFechEval
-            // 
-            this.dateFechEval.CustomFormat = "yyyy-MM-dd";
-            this.dateFechEval.Location = new System.Drawing.Point(177, 82);
-            this.dateFechEval.Name = "dateFechEval";
-            this.dateFechEval.Size = new System.Drawing.Size(236, 20);
-            this.dateFechEval.TabIndex = 67;
+            this.Date_FechaEvaluacion.Location = new System.Drawing.Point(177, 82);
+            this.Date_FechaEvaluacion.Name = "Date_FechaEvaluacion";
+            this.Date_FechaEvaluacion.Size = new System.Drawing.Size(236, 20);
+            this.Date_FechaEvaluacion.TabIndex = 67;
             // 
             // Grupo_Busqueda
             // 
-            this.Grupo_Busqueda.Controls.Add(this.radTodas);
-            this.Grupo_Busqueda.Controls.Add(this.txtBusqOB);
+            this.Grupo_Busqueda.Controls.Add(this.Radio_Busq_TodasPruebas);
+            this.Grupo_Busqueda.Controls.Add(this.Busq_Txt_Observaciones_Conjunto);
             this.Grupo_Busqueda.Controls.Add(this.label10);
-            this.Grupo_Busqueda.Controls.Add(this.txtBusqID);
+            this.Grupo_Busqueda.Controls.Add(this.Busq_Txt_Diagnosti_Conjunto);
             this.Grupo_Busqueda.Controls.Add(this.label9);
-            this.Grupo_Busqueda.Controls.Add(this.radBusqImpObs);
-            this.Grupo_Busqueda.Controls.Add(this.radObs);
-            this.Grupo_Busqueda.Controls.Add(this.txtBusqObs);
-            this.Grupo_Busqueda.Controls.Add(this.radImpDiag);
-            this.Grupo_Busqueda.Controls.Add(this.txtBusqImpDiag);
-            this.Grupo_Busqueda.Controls.Add(this.DGV_Evaluaciones);
-            this.Grupo_Busqueda.Controls.Add(this.radBusqNom);
-            this.Grupo_Busqueda.Controls.Add(this.txtBusqNom);
-            this.Grupo_Busqueda.Controls.Add(this.dateBusqFech);
-            this.Grupo_Busqueda.Controls.Add(this.radBusqFech);
+            this.Grupo_Busqueda.Controls.Add(this.Radio_Busq_ImpresionYObservaciones);
+            this.Grupo_Busqueda.Controls.Add(this.Radio_Busq_Observaciones);
+            this.Grupo_Busqueda.Controls.Add(this.Busq_Txt_Observaciones);
+            this.Grupo_Busqueda.Controls.Add(this.Radio_Busq_ImpresionDiagnos);
+            this.Grupo_Busqueda.Controls.Add(this.Busq_Txt_ImpresionDiagnostica);
+            this.Grupo_Busqueda.Controls.Add(this.DGV_Show);
+            this.Grupo_Busqueda.Controls.Add(this.Radio_Busq_Nombre);
+            this.Grupo_Busqueda.Controls.Add(this.Busq_Txt_Nombre);
+            this.Grupo_Busqueda.Controls.Add(this.Busq_Date_FechaRealizacion);
+            this.Grupo_Busqueda.Controls.Add(this.Radio_Busq_FechaIngreso);
             this.Grupo_Busqueda.Location = new System.Drawing.Point(12, 252);
             this.Grupo_Busqueda.Name = "Grupo_Busqueda";
             this.Grupo_Busqueda.Size = new System.Drawing.Size(841, 334);
             this.Grupo_Busqueda.TabIndex = 92;
             this.Grupo_Busqueda.TabStop = false;
             this.Grupo_Busqueda.Text = "Opciones de Busqueda";
-            // 
-            // radTodas
-            // 
-            this.radTodas.AutoSize = true;
-            this.radTodas.Checked = true;
-            this.radTodas.Location = new System.Drawing.Point(648, 34);
-            this.radTodas.Name = "radTodas";
-            this.radTodas.Size = new System.Drawing.Size(159, 17);
-            this.radTodas.TabIndex = 16;
-            this.radTodas.TabStop = true;
-            this.radTodas.Text = "Todas las evaluaciones";
-            this.radTodas.UseVisualStyleBackColor = true;
-            this.radTodas.CheckedChanged += new System.EventHandler(this.radioButton6_CheckedChanged);
-            // 
-            // txtBusqOB
-            // 
-            this.txtBusqOB.Enabled = false;
-            this.txtBusqOB.Location = new System.Drawing.Point(468, 94);
-            this.txtBusqOB.Name = "txtBusqOB";
-            this.txtBusqOB.Size = new System.Drawing.Size(162, 20);
-            this.txtBusqOB.TabIndex = 15;
-            this.txtBusqOB.TextChanged += new System.EventHandler(this.txtBusqOB_TextChanged);
-            this.txtBusqOB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBusqOB_KeyPress);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(361, 98);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(101, 13);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "y Observaciones";
-            // 
-            // txtBusqID
-            // 
-            this.txtBusqID.Enabled = false;
-            this.txtBusqID.Location = new System.Drawing.Point(250, 93);
-            this.txtBusqID.Name = "txtBusqID";
-            this.txtBusqID.Size = new System.Drawing.Size(105, 20);
-            this.txtBusqID.TabIndex = 13;
-            this.txtBusqID.TextChanged += new System.EventHandler(this.txtBusqID_TextChanged);
-            this.txtBusqID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBusqID_KeyPress);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(112, 96);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(132, 13);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Impresion Diagnostica";
-            // 
-            // radBusqImpObs
-            // 
-            this.radBusqImpObs.AutoSize = true;
-            this.radBusqImpObs.Location = new System.Drawing.Point(12, 94);
-            this.radBusqImpObs.Name = "radBusqImpObs";
-            this.radBusqImpObs.Size = new System.Drawing.Size(103, 17);
-            this.radBusqImpObs.TabIndex = 11;
-            this.radBusqImpObs.Text = "Busqueda por";
-            this.radBusqImpObs.UseVisualStyleBackColor = true;
-            this.radBusqImpObs.CheckedChanged += new System.EventHandler(this.radBusqImpObs_CheckedChanged);
-            // 
-            // radObs
-            // 
-            this.radObs.AutoSize = true;
-            this.radObs.Location = new System.Drawing.Point(340, 60);
-            this.radObs.Name = "radObs";
-            this.radObs.Size = new System.Drawing.Size(109, 17);
-            this.radObs.TabIndex = 10;
-            this.radObs.Text = "Observaciones";
-            this.radObs.UseVisualStyleBackColor = true;
-            this.radObs.CheckedChanged += new System.EventHandler(this.radObs_CheckedChanged);
-            // 
-            // txtBusqObs
-            // 
-            this.txtBusqObs.Enabled = false;
-            this.txtBusqObs.Location = new System.Drawing.Point(491, 59);
-            this.txtBusqObs.Name = "txtBusqObs";
-            this.txtBusqObs.Size = new System.Drawing.Size(139, 20);
-            this.txtBusqObs.TabIndex = 9;
-            this.txtBusqObs.TextChanged += new System.EventHandler(this.txtBusqObs_TextChanged);
-            this.txtBusqObs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBusqObs_KeyPress);
-            // 
-            // radImpDiag
-            // 
-            this.radImpDiag.AutoSize = true;
-            this.radImpDiag.Location = new System.Drawing.Point(339, 32);
-            this.radImpDiag.Name = "radImpDiag";
-            this.radImpDiag.Size = new System.Drawing.Size(150, 17);
-            this.radImpDiag.TabIndex = 8;
-            this.radImpDiag.Text = "Impresion Diagnostica";
-            this.radImpDiag.UseVisualStyleBackColor = true;
-            this.radImpDiag.CheckedChanged += new System.EventHandler(this.radImpDiag_CheckedChanged);
-            // 
-            // txtBusqImpDiag
-            // 
-            this.txtBusqImpDiag.Enabled = false;
-            this.txtBusqImpDiag.Location = new System.Drawing.Point(490, 31);
-            this.txtBusqImpDiag.Name = "txtBusqImpDiag";
-            this.txtBusqImpDiag.Size = new System.Drawing.Size(140, 20);
-            this.txtBusqImpDiag.TabIndex = 7;
-            this.txtBusqImpDiag.TextChanged += new System.EventHandler(this.txtBusqImpDiag_TextChanged);
-            this.txtBusqImpDiag.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBusqImpDiag_KeyPress);
             // 
             // Bttn_Salir
             // 
@@ -500,6 +362,97 @@
             this.Bttn_Salir.UseVisualStyleBackColor = true;
             this.Bttn_Salir.Click += new System.EventHandler(this.button2_Click);
             // 
+            // Radio_Busq_ImpresionDiagnos
+            // 
+            this.Radio_Busq_ImpresionDiagnos.AutoSize = true;
+            this.Radio_Busq_ImpresionDiagnos.Location = new System.Drawing.Point(339, 32);
+            this.Radio_Busq_ImpresionDiagnos.Name = "Radio_Busq_ImpresionDiagnos";
+            this.Radio_Busq_ImpresionDiagnos.Size = new System.Drawing.Size(150, 17);
+            this.Radio_Busq_ImpresionDiagnos.TabIndex = 8;
+            this.Radio_Busq_ImpresionDiagnos.TabStop = true;
+            this.Radio_Busq_ImpresionDiagnos.Text = "Impresion Diagnostica";
+            this.Radio_Busq_ImpresionDiagnos.UseVisualStyleBackColor = true;
+            // 
+            // Busq_Txt_ImpresionDiagnostica
+            // 
+            this.Busq_Txt_ImpresionDiagnostica.Location = new System.Drawing.Point(490, 31);
+            this.Busq_Txt_ImpresionDiagnostica.Name = "Busq_Txt_ImpresionDiagnostica";
+            this.Busq_Txt_ImpresionDiagnostica.Size = new System.Drawing.Size(105, 20);
+            this.Busq_Txt_ImpresionDiagnostica.TabIndex = 7;
+            // 
+            // Radio_Busq_Observaciones
+            // 
+            this.Radio_Busq_Observaciones.AutoSize = true;
+            this.Radio_Busq_Observaciones.Location = new System.Drawing.Point(340, 60);
+            this.Radio_Busq_Observaciones.Name = "Radio_Busq_Observaciones";
+            this.Radio_Busq_Observaciones.Size = new System.Drawing.Size(109, 17);
+            this.Radio_Busq_Observaciones.TabIndex = 10;
+            this.Radio_Busq_Observaciones.TabStop = true;
+            this.Radio_Busq_Observaciones.Text = "Observaciones";
+            this.Radio_Busq_Observaciones.UseVisualStyleBackColor = true;
+            // 
+            // Busq_Txt_Observaciones
+            // 
+            this.Busq_Txt_Observaciones.Location = new System.Drawing.Point(491, 59);
+            this.Busq_Txt_Observaciones.Name = "Busq_Txt_Observaciones";
+            this.Busq_Txt_Observaciones.Size = new System.Drawing.Size(105, 20);
+            this.Busq_Txt_Observaciones.TabIndex = 9;
+            // 
+            // Radio_Busq_ImpresionYObservaciones
+            // 
+            this.Radio_Busq_ImpresionYObservaciones.AutoSize = true;
+            this.Radio_Busq_ImpresionYObservaciones.Location = new System.Drawing.Point(12, 94);
+            this.Radio_Busq_ImpresionYObservaciones.Name = "Radio_Busq_ImpresionYObservaciones";
+            this.Radio_Busq_ImpresionYObservaciones.Size = new System.Drawing.Size(103, 17);
+            this.Radio_Busq_ImpresionYObservaciones.TabIndex = 11;
+            this.Radio_Busq_ImpresionYObservaciones.TabStop = true;
+            this.Radio_Busq_ImpresionYObservaciones.Text = "Busqueda por";
+            this.Radio_Busq_ImpresionYObservaciones.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(112, 96);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(132, 13);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Impresion Diagnostica";
+            // 
+            // Busq_Txt_Diagnosti_Conjunto
+            // 
+            this.Busq_Txt_Diagnosti_Conjunto.Location = new System.Drawing.Point(250, 93);
+            this.Busq_Txt_Diagnosti_Conjunto.Name = "Busq_Txt_Diagnosti_Conjunto";
+            this.Busq_Txt_Diagnosti_Conjunto.Size = new System.Drawing.Size(105, 20);
+            this.Busq_Txt_Diagnosti_Conjunto.TabIndex = 13;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(361, 98);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(101, 13);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "y Observaciones";
+            // 
+            // Busq_Txt_Observaciones_Conjunto
+            // 
+            this.Busq_Txt_Observaciones_Conjunto.Location = new System.Drawing.Point(463, 94);
+            this.Busq_Txt_Observaciones_Conjunto.Name = "Busq_Txt_Observaciones_Conjunto";
+            this.Busq_Txt_Observaciones_Conjunto.Size = new System.Drawing.Size(133, 20);
+            this.Busq_Txt_Observaciones_Conjunto.TabIndex = 15;
+            // 
+            // Radio_Busq_TodasPruebas
+            // 
+            this.Radio_Busq_TodasPruebas.AutoSize = true;
+            this.Radio_Busq_TodasPruebas.Location = new System.Drawing.Point(648, 34);
+            this.Radio_Busq_TodasPruebas.Name = "Radio_Busq_TodasPruebas";
+            this.Radio_Busq_TodasPruebas.Size = new System.Drawing.Size(129, 17);
+            this.Radio_Busq_TodasPruebas.TabIndex = 16;
+            this.Radio_Busq_TodasPruebas.TabStop = true;
+            this.Radio_Busq_TodasPruebas.Text = "Todas las pruebas";
+            this.Radio_Busq_TodasPruebas.UseVisualStyleBackColor = true;
+            this.Radio_Busq_TodasPruebas.CheckedChanged += new System.EventHandler(this.radioButton6_CheckedChanged);
+            // 
             // FormaEvalPsic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -510,12 +463,10 @@
             this.Controls.Add(this.Grupo_Busqueda);
             this.Controls.Add(this.Grupo_IngresoResultado);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormaEvalPsic";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Evaluacion Psicodiagnostica";
-            this.Load += new System.EventHandler(this.FormaEvalPsic_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Evaluaciones)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Show)).EndInit();
             this.Grupo_IngresoResultado.ResumeLayout(false);
             this.Grupo_IngresoResultado.PerformLayout();
             this.Grupo_Busqueda.ResumeLayout(false);
@@ -525,21 +476,22 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView DGV_Evaluaciones;
-        private System.Windows.Forms.RadioButton radBusqFech;
-        private System.Windows.Forms.RadioButton radBusqNom;
-        private System.Windows.Forms.TextBox txtBusqNom;
-        private System.Windows.Forms.DateTimePicker dateBusqFech;
-        private System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.Button btnLimpiar;
-        private System.Windows.Forms.ComboBox cmbSexo;
-        private System.Windows.Forms.TextBox txtCodEval;
-        private System.Windows.Forms.TextBox txtObs;
-        private System.Windows.Forms.TextBox txtImpDiag;
-        private System.Windows.Forms.TextBox txtTel;
-        private System.Windows.Forms.TextBox txtResp;
-        private System.Windows.Forms.TextBox txtEdad;
-        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.DataGridView DGV_Show;
+        private System.Windows.Forms.RadioButton Radio_Busq_FechaIngreso;
+        private System.Windows.Forms.RadioButton Radio_Busq_Nombre;
+        private System.Windows.Forms.TextBox Busq_Txt_Nombre;
+        private System.Windows.Forms.DateTimePicker Busq_Date_FechaRealizacion;
+        private System.Windows.Forms.Button Bttn_Ok;
+        private System.Windows.Forms.Button Bttn_Limpiar;
+        private System.Windows.Forms.ComboBox Cmb_Sexo;
+        private System.Windows.Forms.TextBox Txt_CodigoEvaluacion;
+        private System.Windows.Forms.TextBox Txt_Observaciones;
+        private System.Windows.Forms.TextBox Txt_ImpresionDiagnostico;
+        private System.Windows.Forms.TextBox Txt_Telefono;
+        private System.Windows.Forms.TextBox Txt_Responsable;
+        private System.Windows.Forms.TextBox Txt_Edad;
+        private System.Windows.Forms.TextBox Txt_FechaNacimiento;
+        private System.Windows.Forms.TextBox Txt_NombreCompleto;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label5;
@@ -551,19 +503,18 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox Grupo_IngresoResultado;
-        private System.Windows.Forms.DateTimePicker dateFechEval;
+        private System.Windows.Forms.DateTimePicker Date_FechaEvaluacion;
         private System.Windows.Forms.GroupBox Grupo_Busqueda;
-        private System.Windows.Forms.RadioButton radTodas;
-        private System.Windows.Forms.TextBox txtBusqOB;
+        private System.Windows.Forms.RadioButton Radio_Busq_TodasPruebas;
+        private System.Windows.Forms.TextBox Busq_Txt_Observaciones_Conjunto;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtBusqID;
+        private System.Windows.Forms.TextBox Busq_Txt_Diagnosti_Conjunto;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.RadioButton radBusqImpObs;
-        private System.Windows.Forms.RadioButton radObs;
-        private System.Windows.Forms.TextBox txtBusqObs;
-        private System.Windows.Forms.RadioButton radImpDiag;
-        private System.Windows.Forms.TextBox txtBusqImpDiag;
+        private System.Windows.Forms.RadioButton Radio_Busq_ImpresionYObservaciones;
+        private System.Windows.Forms.RadioButton Radio_Busq_Observaciones;
+        private System.Windows.Forms.TextBox Busq_Txt_Observaciones;
+        private System.Windows.Forms.RadioButton Radio_Busq_ImpresionDiagnos;
+        private System.Windows.Forms.TextBox Busq_Txt_ImpresionDiagnostica;
         private System.Windows.Forms.Button Bttn_Salir;
-        private System.Windows.Forms.DateTimePicker dateFechNac;
     }
 }
