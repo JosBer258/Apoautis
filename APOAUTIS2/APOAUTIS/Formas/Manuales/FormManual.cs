@@ -26,5 +26,13 @@ namespace APOAUTIS.Formas.Manuales
         {PDF_Local.src = (Application.StartupPath + @"\Manual\Manual_Usuario.pdf");
 
         }
+<<<<<<< HEAD
+=======
+
+        private void PDF_Local_OnError(object sender, EventArgs e)
+        {
+
+        }
+>>>>>>> master
     }
 }

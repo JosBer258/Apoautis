@@ -1,0 +1,11 @@
+ALTER TABLE `mydb`.`cuota` 
+CHANGE COLUMN `RangoInicial` `cargocat` INT(10) NULL DEFAULT NULL ,
+CHANGE COLUMN `RangoFinal` `cargnumsalar` INT NULL DEFAULT NULL ,
+CHANGE COLUMN `ValorMensualidad` `cargorangoinic` FLOAT NULL DEFAULT NULL ,
+ADD COLUMN `cargvalmensul` FLOAT NULL AFTER `cargorangoinic`;
+
+
+ALTER TABLE `mydb`.`entrevistapadres` 
+ADD COLUMN `Lugar` VARCHAR(45) NULL AFTER `Alumnos_CodAlumno`,
+ADD COLUMN `Fecha` VARCHAR(45) NULL AFTER `Lugar`;
+

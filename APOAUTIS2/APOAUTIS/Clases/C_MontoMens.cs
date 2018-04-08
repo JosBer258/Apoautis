@@ -114,7 +114,7 @@ namespace APOAUTIS.Clases
             Var_resp_nombres = "";
             int ContadorFil=1;
 
-            this.sql = string.Format("select C.NomComRes as 'Responsable' from alumnos as A inner join alumnos_responsables as B on A.CodAlumno = B.CodAlumno inner join responsables as C on B.CodResp = C.CodResp where A.CodAlumno = '{0}'", Var_cod_nom);
+            this.sql = string.Format("select C.NomComRes as 'Responsable' from alumnos as A inner join `alumnos/responsables` as B on A.CodAlumno = B.CodAlumno inner join responsables as C on B.CodResp = C.CodResp where A.CodAlumno = '{0}'", Var_cod_nom);
             this.cnx.Open();
             this.cmd = new MySql.Data.MySqlClient.MySqlCommand(this.sql, this.cnx);
             MySql.Data.MySqlClient.MySqlDataReader Reg = null;
@@ -210,7 +210,7 @@ namespace APOAUTIS.Clases
         public void Fun_MuestraDatosGen(DataGridView Dvg_MuestraDatos)
         {
             cnx.Open();
-            sql = string.Format("select B.CodMatricula as 'Codigo Matricula', A.CodAlumno as 'Codigo de Alumno', A.NomAlumno as 'Nombre de Alumno', B.Jornada as 'Jornada', B.AnioIngreso as 'Año de Ingreso',B.CuotaPago as 'Cuota de pago' from alumnos as A inner join matricula as B on A.CodAlumno = B.Alumnos_CodAlumno order by B.CodMatricula desc ");
+            sql = string.Format("select B.CodMatricula as 'Codigo Matricula',B.FechaIngreso as 'Fecha de realizacion', A.CodAlumno as 'Codigo de Alumno', A.NomAlumno as 'Nombre de Alumno', B.AnioIngreso as 'Año de Ingreso',B.CuotaPago as 'Cuota de pago' from alumnos as A inner join matricula as B on A.CodAlumno = B.Alumnos_CodAlumno order by B.CodMatricula desc ");
             cmd = new MySql.Data.MySqlClient.MySqlCommand(sql, cnx);
             DataAdapter = new MySql.Data.MySqlClient.MySqlDataAdapter(cmd);
             dt = new System.Data.DataTable();
@@ -222,7 +222,7 @@ namespace APOAUTIS.Clases
         public void Fun_MuestraDatosPorAlum(DataGridView Var_Show)
         {
             cnx.Open();
-            sql = string.Format("select B.CodMatricula as 'Codigo Matricula', A.CodAlumno as 'Codigo de Alumno', A.NomAlumno as 'Nombre de Alumno', B.Jornada as 'Jornada', B.AnioIngreso as 'Año de Ingreso',B.CuotaPago as 'Cuota de pago' from alumnos as A inner join matricula as B on A.CodAlumno = B.Alumnos_CodAlumno where A.NomAlumno like '%{0}%' order by B.CodMatricula desc ", Var_filtro_nom_cliente);
+            sql = string.Format("select B.CodMatricula as 'Codigo Matricula',B.FechaIngreso as 'Fecha de realizacion', A.CodAlumno as 'Codigo de Alumno', A.NomAlumno as 'Nombre de Alumno', B.AnioIngreso as 'Año de Ingreso',B.CuotaPago as 'Cuota de pago' from alumnos as A inner join matricula as B on A.CodAlumno = B.Alumnos_CodAlumno where A.NomAlumno like '%{0}%' order by B.CodMatricula desc ", Var_filtro_nom_cliente);
             cmd = new MySql.Data.MySqlClient.MySqlCommand(sql, cnx);
             DataAdapter = new MySql.Data.MySqlClient.MySqlDataAdapter(cmd);
             dt = new System.Data.DataTable();
