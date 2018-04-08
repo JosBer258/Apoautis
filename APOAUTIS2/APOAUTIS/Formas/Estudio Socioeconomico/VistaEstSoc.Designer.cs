@@ -280,6 +280,7 @@
             this.textBox66.Name = "textBox66";
             this.textBox66.Size = new System.Drawing.Size(100, 20);
             this.textBox66.TabIndex = 34;
+            this.textBox66.TextChanged += new System.EventHandler(this.textBox66_TextChanged);
             // 
             // label69
             // 

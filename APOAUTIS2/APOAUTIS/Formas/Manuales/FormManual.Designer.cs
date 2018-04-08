@@ -42,10 +42,6 @@
             this.PDF_Local.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("PDF_Local.OcxState")));
             this.PDF_Local.Size = new System.Drawing.Size(846, 498);
             this.PDF_Local.TabIndex = 0;
-<<<<<<< HEAD
-=======
-            this.PDF_Local.OnError += new System.EventHandler(this.PDF_Local_OnError);
->>>>>>> master
             // 
             // Bttn_Aceptar
             // 

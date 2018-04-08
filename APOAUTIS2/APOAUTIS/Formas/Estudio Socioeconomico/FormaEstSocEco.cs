@@ -1,5 +1,4 @@
-﻿using APOAUTIS.Formas.Matricula;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using APOAUTIS.Formas.Estudio_Socioeconomico;
 
 namespace APOAUTIS
 {
@@ -53,7 +53,6 @@ namespace APOAUTIS
              Formas.Matricula.FormMontoMatricula Monto = new Formas.Matricula.FormMontoMatricula();
             Monto.ShowDialog();
         }
-<<<<<<< HEAD
 
         private void textBox65_TextChanged(object sender, EventArgs e)
         {
@@ -139,7 +138,5 @@ namespace APOAUTIS
         {
 
         }
-=======
->>>>>>> master
     }
 }
