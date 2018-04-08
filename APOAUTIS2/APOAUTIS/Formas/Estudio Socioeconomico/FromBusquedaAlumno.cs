@@ -26,6 +26,7 @@ namespace APOAUTIS.Formas.Estudio_Socioeconomico
         {
             this.Close();
         }
+<<<<<<< HEAD
 
         private void DGV_Show_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -96,5 +97,7 @@ namespace APOAUTIS.Formas.Estudio_Socioeconomico
             }
 
     
+=======
+>>>>>>> master
     }
 }
