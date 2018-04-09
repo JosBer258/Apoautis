@@ -324,13 +324,13 @@ namespace APOAUTIS.Clases
 
         public void Fun_MostrarTodos(System.Windows.Forms.DataGridView Var_MuestraDatos)
         {
-            sql = string.Format(@"select B.CodMatricula as 'Codigo Matricula', B.MarDesc as 'Tipo de matricula',
-            B.Fecha as 'Fecha de realizacion',A.CodAlumno as 'Codigo de Alumno', 
+            sql = string.Format(@"select B.CodMatricula as 'Codigo Matricula',
+            B.FechaIngreso as 'Fecha de realizacion',A.CodAlumno as 'Codigo de Alumno', 
             A.IdAlum as 'No. Identidad',A.NomAlumno as 'Nombre de Alumno', 
-            A.SexoAlum as 'Genero', B.Jornada as 'Jornada', B.AnioIngreso as 'Año de Ingreso', 
+            A.SexoAlum as 'Genero', B.AnioIngreso as 'Año de Ingreso', 
             B.Entrevistador as 'Entrevistador', B.CuotaPago as 'Cuota de pago' 
             from alumnos as A inner join matricula as B on A.CodAlumno = B.Alumnos_CodAlumno 
-            order by B.Fecha desc ; ");
+            order by B.FechaIngreso desc ; ");
             cnx.Open();
             cmd = new MySqlCommand(sql, cnx);
             DataAdapter = new MySqlDataAdapter(cmd);
@@ -342,14 +342,14 @@ namespace APOAUTIS.Clases
 
         public void Fun_MostrarPorFecha(System.Windows.Forms.DataGridView Var_MuestraDatos)
         {
-            sql = string.Format(@"select B.CodMatricula as 'Codigo Matricula', B.MarDesc as 'Tipo de matricula',
-            B.Fecha as 'Fecha de realizacion',A.CodAlumno as 'Codigo de Alumno', 
+            sql = string.Format(@"select B.CodMatricula as 'Codigo Matricula',
+            B.FechaIngreso as 'Fecha de realizacion',A.CodAlumno as 'Codigo de Alumno', 
             A.IdAlum as 'No. Identidad',A.NomAlumno as 'Nombre de Alumno', 
-            A.SexoAlum as 'Genero', B.Jornada as 'Jornada', B.AnioIngreso as 'Año de Ingreso', 
+            A.SexoAlum as 'Genero',  B.AnioIngreso as 'Año de Ingreso', 
             B.Entrevistador as 'Entrevistador', B.CuotaPago as 'Cuota de pago' 
             from alumnos as A inner join matricula as B on A.CodAlumno = B.Alumnos_CodAlumno 
-            where year(B.Fecha)='{0}'
-            order by B.Fecha desc ; ", Var_fecha_busq);
+            where year(B.FechaIngreso)='{0}'
+            order by B.FechaIngreso desc ; ", Var_fecha_busq);
             cnx.Open();
             cmd = new MySqlCommand(sql, cnx);
             DataAdapter = new MySqlDataAdapter(cmd);
@@ -362,7 +362,7 @@ namespace APOAUTIS.Clases
 
         public void Fun_ExtraerAñoMaximo()
         {
-            sql = string.Format("select max(year(fecha)) as 'Anio' from matricula;");
+            sql = string.Format("select max(year(FechaIngreso)) as 'Anio' from matricula;");
             cnx.Open();
             cmd = new MySql.Data.MySqlClient.MySqlCommand(sql, cnx);
             MySql.Data.MySqlClient.MySqlDataReader Reg = cmd.ExecuteReader();
@@ -375,7 +375,7 @@ namespace APOAUTIS.Clases
 
         public void Fun_ExtraerAñoMinimo()
         {
-            sql = string.Format("select min(year(fecha)) as 'Anio' from matricula;");
+            sql = string.Format("select min(year(FechaIngreso)) as 'Anio' from matricula;");
             cnx.Open();
             cmd = new MySql.Data.MySqlClient.MySqlCommand(sql, cnx);
             MySql.Data.MySqlClient.MySqlDataReader Reg = cmd.ExecuteReader();
@@ -405,7 +405,6 @@ namespace APOAUTIS.Clases
             MySql.Data.MySqlClient.MySqlDataReader Reg = cmd.ExecuteReader();
             if (Reg.Read())
             {
-                Var_DG_TipoMatricula = Reg["MarDesc"].ToString();
                 Var_Alum_Nombre = Reg["NomAlumno"].ToString();
                 Var_Alum_lugarnacimiento = Reg["LugarNaciAlum"].ToString();
                 Var_Alum_fechanacimiento = Reg["FechaNaciAlum"].ToString();
@@ -416,11 +415,11 @@ namespace APOAUTIS.Clases
                 Var_DG_annioingreso = Reg["AnioIngreso"].ToString();
                 Var_DG_recibioevaluacion = Reg["RecibioEvalu"].ToString();
                 Var_Alum_telefonofijo = Reg["TelFijoAlum"].ToString();
-                Var_DG_Jornada = Reg["Jornada"].ToString();
+          
                 Var_Alum_direcionemergencia = Reg["EmergLugar"].ToString();
                 Var_Alum_telefonoemergencia = Reg["EmergTelefono"].ToString();
                 Var_DG_Observaciones = Reg["Observaciones"].ToString();
-                Var_DG_Fecha = Reg["Fecha"].ToString();
+                Var_DG_Fecha = Reg["FechaIngreso"].ToString();
                 Var_DG_Entrevistador = Reg["Entrevistador"].ToString();
                 Var_Alum_IntitutoIncl = Reg["InstDondeEstaIncluido"].ToString();
             }
