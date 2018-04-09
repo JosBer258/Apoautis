@@ -64,6 +64,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtCodResp = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cmbParentesco = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_ShowResponsables)).BeginInit();
@@ -127,12 +129,12 @@
             this.DGV_ShowResponsables.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.DGV_ShowResponsables.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DGV_ShowResponsables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_ShowResponsables.Location = new System.Drawing.Point(10, 99);
+            this.DGV_ShowResponsables.Location = new System.Drawing.Point(10, 70);
             this.DGV_ShowResponsables.MultiSelect = false;
             this.DGV_ShowResponsables.Name = "DGV_ShowResponsables";
             this.DGV_ShowResponsables.ReadOnly = true;
             this.DGV_ShowResponsables.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_ShowResponsables.Size = new System.Drawing.Size(746, 292);
+            this.DGV_ShowResponsables.Size = new System.Drawing.Size(746, 321);
             this.DGV_ShowResponsables.TabIndex = 28;
             this.DGV_ShowResponsables.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_ShowResponsables_CellDoubleClick);
             // 
@@ -167,7 +169,7 @@
             this.Pest1_Grupo_ShowAlumno.Size = new System.Drawing.Size(755, 138);
             this.Pest1_Grupo_ShowAlumno.TabIndex = 4;
             this.Pest1_Grupo_ShowAlumno.TabStop = false;
-            this.Pest1_Grupo_ShowAlumno.Text = "Alumnos bajo su cuidado";
+            this.Pest1_Grupo_ShowAlumno.Text = "Todos los alumnos bajo su cuidado";
             // 
             // DGV_ShowAlumnosResp
             // 
@@ -189,6 +191,8 @@
             // 
             // Pest1_Grupo_DatosEncargado
             // 
+            this.Pest1_Grupo_DatosEncargado.Controls.Add(this.cmbParentesco);
+            this.Pest1_Grupo_DatosEncargado.Controls.Add(this.label13);
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.txtCorrResp);
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.label12);
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.cmbEstResp);
@@ -494,6 +498,30 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo";
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(39, 198);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(87, 16);
+            this.label13.TabIndex = 31;
+            this.label13.Text = "Parentesco";
+            // 
+            // cmbParentesco
+            // 
+            this.cmbParentesco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbParentesco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbParentesco.FormattingEnabled = true;
+            this.cmbParentesco.Items.AddRange(new object[] {
+            "Padre",
+            "Madre",
+            "Otro"});
+            this.cmbParentesco.Location = new System.Drawing.Point(189, 198);
+            this.cmbParentesco.Name = "cmbParentesco";
+            this.cmbParentesco.Size = new System.Drawing.Size(158, 24);
+            this.cmbParentesco.TabIndex = 32;
+            // 
             // FormMantenimientoResponsable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -559,5 +587,7 @@
         private System.Windows.Forms.Label label12;
         public System.Windows.Forms.TextBox txtBusqResp;
         public System.Windows.Forms.DataGridView DGV_ShowResponsables;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cmbParentesco;
     }
 }

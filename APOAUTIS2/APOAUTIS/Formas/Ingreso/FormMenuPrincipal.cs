@@ -126,8 +126,10 @@ namespace APOAUTIS.Formas.Ingreso
 
         private void responsablesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormMantenimientoResponsable Resp = new FormMantenimientoResponsable();
-            Resp.ShowDialog();
+            /*FormMantenimientoResponsable Resp = new FormMantenimientoResponsable();
+            Resp.ShowDialog();*/
+            FormAlumDeResp AlumResp = new FormAlumDeResp();
+            AlumResp.ShowDialog();
         }
 
         private void pruebasToolStripMenuItem_Click(object sender, EventArgs e)

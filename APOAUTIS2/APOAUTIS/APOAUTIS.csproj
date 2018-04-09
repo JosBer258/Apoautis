@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\C_AlumDeResp.cs" />
     <Compile Include="Clases\C_Alumnos.cs" />
     <Compile Include="Clases\C_EntrePadres.cs" />
     <Compile Include="Clases\C_EvalPsico.cs" />
@@ -102,6 +103,12 @@
     </Compile>
     <Compile Include="Formas\Matricula\FormMontoMatricula.Designer.cs">
       <DependentUpon>FormMontoMatricula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Responsables\FormAlumDeResp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Responsables\FormAlumDeResp.Designer.cs">
+      <DependentUpon>FormAlumDeResp.cs</DependentUpon>
     </Compile>
     <Compile Include="Formas\Responsables\FormMantenimientoResponsable.cs">
       <SubType>Form</SubType>
@@ -205,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Matricula\FormMontoMatricula.resx">
       <DependentUpon>FormMontoMatricula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Responsables\FormAlumDeResp.resx">
+      <DependentUpon>FormAlumDeResp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Responsables\FormMantenimientoResponsable.resx">
       <DependentUpon>FormMantenimientoResponsable.cs</DependentUpon>

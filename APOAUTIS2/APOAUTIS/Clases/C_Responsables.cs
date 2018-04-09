@@ -212,31 +212,33 @@ namespace APOAUTIS.Clases
             }
         }
 
-        public void Fill_DGV_Resp(DataGridView dgv)
+        public void Fill_DGV_Resp(DataGridView dgv, string CodA)
         {
-
             cnx.Open();
             try
             {
                 DataAdapter = new MySqlDataAdapter(@"SELECT A.CodResp as 'Codigo de Responsable',
-                                                    B.DescripcionEstado as 'Estado',
-                                                    D.TipoResponsable as 'Parentesco',
-                                                    A.NomComRes as 'Nombre Completo', 
-                                                    A.NumIdRes as 'Numero de Identidad', 
-                                                    A.DomicilioRes as 'Domicilio',
-                                                    A.ProfecionRes as 'Profesion',
-                                                    A.LugarTrabajoRes as 'Trabajo',
-                                                    A.TelCasaRes as 'Telefono de Casa',
-                                                    A.TelCelRes as 'Telefono Celular',
-                                                    A.TelTrabajoRes as 'Telefono de Trabajo',
-                                                    A.CorreoRes as 'Correo'
-                                                    FROM tiporesponsable as D
-                                                    inner join `alumnos/responsables` as C
-                                                    on D.CodTipoRespo = C.Cod_TipoResp
-                                                    inner join responsables as A
-                                                    on C.CodResp = A.CodResp
-                                                    inner join Estados as B
-                                                    on A.Estado = B.CodEstado;", ccnx);
+				                                    B.DescripcionEstado as 'Estado',
+				                                    D.TipoResponsable as 'Parentesco',
+				                                    A.NomComRes as 'Nombre Completo', 
+				                                    A.NumIdRes as 'Numero de Identidad', 
+				                                    A.DomicilioRes as 'Domicilio',
+				                                    A.ProfecionRes as 'Profesion',
+				                                    A.LugarTrabajoRes as 'Trabajo',
+				                                    A.TelCasaRes as 'Telefono de Casa',
+				                                    A.TelCelRes as 'Telefono Celular',
+				                                    A.TelTrabajoRes as 'Telefono de Trabajo',
+				                                    A.CorreoRes as 'Correo'
+				                                    FROM tiporesponsable as D
+				                                    inner join `alumnos/responsables` as C
+				                                    on D.CodTipoRespo = C.Cod_TipoResp
+                                                    inner join alumnos as E
+                                                    on C.CodAlumno = E.CodAlumno
+				                                    inner join responsables as A
+				                                    on C.CodResp = A.CodResp
+				                                    inner join Estados as B
+				                                    on A.Estado = B.CodEstado
+                                                    WHERE E.CodAlumno = " + CodA, ccnx);
                 dt = new DataTable();
                 DataAdapter.Fill(dt);
                 dgv.DataSource = dt;

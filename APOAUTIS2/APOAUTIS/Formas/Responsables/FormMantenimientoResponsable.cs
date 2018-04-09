@@ -16,6 +16,20 @@ namespace APOAUTIS.Formas.Responsables
         Clases.C_Validaciones Val = new Clases.C_Validaciones();
         Clases.C_Responsables cResp = new Clases.C_Responsables();
         
+        private static string codA;
+
+        public static string CodigA
+        {
+            get
+            {
+                return codA;
+            }
+
+            set
+            {
+                codA = value;
+            }
+        }
 
         public FormMantenimientoResponsable()
         {
@@ -29,9 +43,11 @@ namespace APOAUTIS.Formas.Responsables
 
         private void FormMantenimientoResponsable_Load(object sender, EventArgs e)
         {
-            cResp.Fill_DGV_Resp(DGV_ShowResponsables);
+            cResp.Fill_DGV_Resp(DGV_ShowResponsables, CodigA);
+            MessageBox.Show(CodigA, "El codigo es");
             cmbTrabResp.SelectedIndex = 0;
             cmbEstResp.SelectedIndex = 0;
+            cmbParentesco.SelectedIndex = 0;
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -207,7 +223,7 @@ namespace APOAUTIS.Formas.Responsables
                         cResp.CorrResp = txtCorrResp.Text;
 
                         cResp.updateResp();
-                        cResp.Fill_DGV_Resp(DGV_ShowResponsables);
+                        cResp.Fill_DGV_Resp(DGV_ShowResponsables, CodigA);
                         cResp.msjUpdateCorrecto();
                         limpiarTxtBox();
                     }
@@ -253,7 +269,7 @@ namespace APOAUTIS.Formas.Responsables
                             else { cResp.EstResp = 6; }
 
                             cResp.updateResp();
-                            cResp.Fill_DGV_Resp(DGV_ShowResponsables);
+                            cResp.Fill_DGV_Resp(DGV_ShowResponsables, CodigA);
                             cResp.msjUpdateCorrecto();
                             limpiarTxtBox();
                         }
