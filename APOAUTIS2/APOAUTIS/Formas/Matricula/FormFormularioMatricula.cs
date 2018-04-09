@@ -59,7 +59,7 @@ namespace APOAUTIS
                 {
                 } else
                 {
-                    cMatri.Tipo_Matricula1 = comboBox1.SelectedItem.ToString();
+                    cMatri.Tipo_Matricula1 = Convert.ToInt16(comboBox1.SelectedValue.ToString());
                     cMatri.CodMatricula1 = Convert.ToInt32(Pest1_txtNumeroMatricula.Text);
                     cAlum.NomAlumno11 = Pest1_Txt_NomEducador.Text;
                     cAlum.LugarNaciAlum11 = Pest1_Txt_LugarNacimiento.Text;
@@ -70,12 +70,12 @@ namespace APOAUTIS
                     cAlum.DireccionAlum11 = Pest1_Txt_DireccionCompleta.Text;
                     cAlum.TelFijoAlum11 = Pest1_Txt_TelefonoFijo.Text;
                     cAlum.CelAlumno11 = Pest1_Txt_Celular.Text;
-                    cMatri.Jornada1 = Pest1_Cmb_Jornada.SelectedItem.ToString();
+                    cMatri.Jornada1 = Convert.ToInt16(Pest1_Cmb_Jornada.SelectedValue.ToString());
                     cMatri.RecibioEvalu1 = Pest1_Cmb_Recibio.SelectedItem.ToString();
                     cAlum.InstProceAlumno11 = Pest1_Txt_InstProced.Text;
 
-                    string a = DateTime.Parse(Pest1_Txt_AnoIngreso.Text).ToString("yyyy-MM-dd");
-                    cMatri.FechaIngreso1 = Convert.ToString(a);
+                  
+                    cMatri.FechaIngreso1 = Pest1_Txt_AnoIngreso.Text; 
 
                     tabMatricula.SelectedTab = tabPage2;
 
@@ -92,6 +92,9 @@ namespace APOAUTIS
             
             Pest1_txtNumeroMatricula.Text = Convert.ToString( cMatri.GenerarCod());
             Pest1_txtNumeroMatricula.Enabled = false;
+
+            cAlum.GenerarJornada(Pest1_Cmb_Jornada);
+            cAlum.GenerarTipoMatricula(comboBox1);
         }
 
         private void button2_Click(object sender, EventArgs e)

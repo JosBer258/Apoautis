@@ -11,14 +11,14 @@ namespace APOAUTIS.Clases
     {
         private int CodMatricula;
         private int Alumnos_CodAlumno;
-        private string Jornada;
+        private int Jornada;
         private string AnioIngreso;
         private string RecibioEvalu;
         private string Observaciones;
         private string Entrevistador;
         private string CuotaPago;
         private string FechaIngreso;
-        private string Tipo_Matricula;
+        private int Tipo_Matricula;
 
         public int CodMatricula1
         {
@@ -46,7 +46,7 @@ namespace APOAUTIS.Clases
             }
         }
 
-        public string Jornada1
+        public int Jornada1
         {
             get
             {
@@ -126,7 +126,7 @@ namespace APOAUTIS.Clases
 
        
 
-        public string Tipo_Matricula1
+        public int Tipo_Matricula1
         {
             get
             {
@@ -156,11 +156,11 @@ namespace APOAUTIS.Clases
         {
             
             this.sql = string.Format(@"INSERT INTO matricula
-                                        (Alumnos_CodAlumno, Jornada, AnioIngreso, RecibioEvalu,
-                                        FechaIngreso)
+                                        (Alumnos_CodAlumno, cod_jornada, AnioIngreso, RecibioEvalu,
+                                        FechaIngreso, Cod_Tipo)
                                         VALUES
-                                        ('{0}','{1}', '{2}','{3}', '{4}');",
-                                        Alumnos_CodAlumno1, Jornada1, AnioIngreso1, RecibioEvalu1, FechaIngreso1);
+                                        ('{0}','{1}', '{2}','{3}', '{4}', '{5});",
+                                        Alumnos_CodAlumno1, Jornada1, AnioIngreso1, RecibioEvalu1, FechaIngreso1, Tipo_Matricula1);
 
             this.cmd = new MySqlCommand(this.sql, this.cnx);
             this.cnx.Open();

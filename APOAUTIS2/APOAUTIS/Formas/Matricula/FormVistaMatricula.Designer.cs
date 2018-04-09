@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaMatricula));
             this.tabMatricula = new System.Windows.Forms.TabControl();
             this.Pest_DatosGenerales = new System.Windows.Forms.TabPage();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -104,6 +105,8 @@
             this.label29 = new System.Windows.Forms.Label();
             this.Pest1_Bttn_BuscarAlumnos = new System.Windows.Forms.Button();
             this.Bttn_Cancelar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.tabMatricula.SuspendLayout();
             this.Pest_DatosGenerales.SuspendLayout();
             this.Pest_TiposAtencion.SuspendLayout();
@@ -112,6 +115,8 @@
             this.Pest3_Grupo_DatosMadre.SuspendLayout();
             this.Pest3_Grupo_DatosPadre.SuspendLayout();
             this.Pest_DatosAdicionales.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabMatricula
@@ -121,10 +126,10 @@
             this.tabMatricula.Controls.Add(this.Pest_DatosResponsable);
             this.tabMatricula.Controls.Add(this.Pest_DatosAdicionales);
             this.tabMatricula.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabMatricula.Location = new System.Drawing.Point(12, 72);
+            this.tabMatricula.Location = new System.Drawing.Point(12, 110);
             this.tabMatricula.Name = "tabMatricula";
             this.tabMatricula.SelectedIndex = 0;
-            this.tabMatricula.Size = new System.Drawing.Size(728, 360);
+            this.tabMatricula.Size = new System.Drawing.Size(1211, 429);
             this.tabMatricula.TabIndex = 26;
             // 
             // Pest_DatosGenerales
@@ -157,7 +162,7 @@
             this.Pest_DatosGenerales.Location = new System.Drawing.Point(4, 24);
             this.Pest_DatosGenerales.Name = "Pest_DatosGenerales";
             this.Pest_DatosGenerales.Padding = new System.Windows.Forms.Padding(3);
-            this.Pest_DatosGenerales.Size = new System.Drawing.Size(720, 332);
+            this.Pest_DatosGenerales.Size = new System.Drawing.Size(1203, 401);
             this.Pest_DatosGenerales.TabIndex = 0;
             this.Pest_DatosGenerales.Text = "Datos Generales";
             this.Pest_DatosGenerales.UseVisualStyleBackColor = true;
@@ -885,39 +890,66 @@
             // 
             // Pest1_Bttn_BuscarAlumnos
             // 
+            this.Pest1_Bttn_BuscarAlumnos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Pest1_Bttn_BuscarAlumnos.BackgroundImage")));
+            this.Pest1_Bttn_BuscarAlumnos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Pest1_Bttn_BuscarAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Pest1_Bttn_BuscarAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest1_Bttn_BuscarAlumnos.Location = new System.Drawing.Point(12, 12);
+            this.Pest1_Bttn_BuscarAlumnos.ForeColor = System.Drawing.SystemColors.Control;
+            this.Pest1_Bttn_BuscarAlumnos.Location = new System.Drawing.Point(16, 0);
             this.Pest1_Bttn_BuscarAlumnos.Name = "Pest1_Bttn_BuscarAlumnos";
-            this.Pest1_Bttn_BuscarAlumnos.Size = new System.Drawing.Size(341, 51);
+            this.Pest1_Bttn_BuscarAlumnos.Size = new System.Drawing.Size(114, 92);
             this.Pest1_Bttn_BuscarAlumnos.TabIndex = 26;
-            this.Pest1_Bttn_BuscarAlumnos.Text = "Buscar Matricula";
             this.Pest1_Bttn_BuscarAlumnos.UseVisualStyleBackColor = true;
             this.Pest1_Bttn_BuscarAlumnos.Click += new System.EventHandler(this.button5_Click);
             // 
             // Bttn_Cancelar
             // 
+            this.Bttn_Cancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Bttn_Cancelar.BackgroundImage")));
+            this.Bttn_Cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Bttn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Bttn_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bttn_Cancelar.Location = new System.Drawing.Point(584, 444);
+            this.Bttn_Cancelar.ForeColor = System.Drawing.SystemColors.Control;
+            this.Bttn_Cancelar.Location = new System.Drawing.Point(16, 5);
             this.Bttn_Cancelar.Name = "Bttn_Cancelar";
-            this.Bttn_Cancelar.Size = new System.Drawing.Size(133, 51);
+            this.Bttn_Cancelar.Size = new System.Drawing.Size(114, 105);
             this.Bttn_Cancelar.TabIndex = 27;
-            this.Bttn_Cancelar.Text = "Cancelar";
             this.Bttn_Cancelar.UseVisualStyleBackColor = true;
             this.Bttn_Cancelar.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.Controls.Add(this.Bttn_Cancelar);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 536);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1235, 129);
+            this.panel1.TabIndex = 28;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.Pest1_Bttn_BuscarAlumnos);
+            this.panel2.Controls.Add(this.tabMatricula);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1235, 542);
+            this.panel2.TabIndex = 29;
             // 
             // VistaMatricula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(758, 507);
+            this.ClientSize = new System.Drawing.Size(1235, 665);
             this.ControlBox = false;
-            this.Controls.Add(this.Pest1_Bttn_BuscarAlumnos);
-            this.Controls.Add(this.Bttn_Cancelar);
-            this.Controls.Add(this.tabMatricula);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Name = "VistaMatricula";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Vista de Matricula";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.VistaMatricula_Load);
             this.tabMatricula.ResumeLayout(false);
             this.Pest_DatosGenerales.ResumeLayout(false);
@@ -933,6 +965,8 @@
             this.Pest3_Grupo_DatosPadre.PerformLayout();
             this.Pest_DatosAdicionales.ResumeLayout(false);
             this.Pest_DatosAdicionales.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1015,5 +1049,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
