@@ -155,8 +155,7 @@ namespace APOAUTIS.Formas.Ingreso
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Prueba a= new Prueba();
-            a.ShowDialog();
+
         }
     }
 }

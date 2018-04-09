@@ -191,21 +191,21 @@
             // ingresoToolStripMenuItem1
             // 
             this.ingresoToolStripMenuItem1.Name = "ingresoToolStripMenuItem1";
-            this.ingresoToolStripMenuItem1.Size = new System.Drawing.Size(146, 22);
+            this.ingresoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.ingresoToolStripMenuItem1.Text = "Ingreso";
             this.ingresoToolStripMenuItem1.Click += new System.EventHandler(this.ingresoToolStripMenuItem1_Click);
             // 
             // vistaToolStripMenuItem1
             // 
             this.vistaToolStripMenuItem1.Name = "vistaToolStripMenuItem1";
-            this.vistaToolStripMenuItem1.Size = new System.Drawing.Size(146, 22);
+            this.vistaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.vistaToolStripMenuItem1.Text = "Vista";
             this.vistaToolStripMenuItem1.Click += new System.EventHandler(this.vistaToolStripMenuItem1_Click);
             // 
             // evaluacionPsicoToolStripMenuItem
             // 
             this.evaluacionPsicoToolStripMenuItem.Name = "evaluacionPsicoToolStripMenuItem";
-            this.evaluacionPsicoToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.evaluacionPsicoToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
             this.evaluacionPsicoToolStripMenuItem.Text = "Evaluacion Psicodiagnostica";
             this.evaluacionPsicoToolStripMenuItem.Click += new System.EventHandler(this.evaluacionPsicoToolStripMenuItem_Click);
             // 
@@ -229,10 +229,12 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(46, 56);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 29);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(358, 351);
+            this.pictureBox1.Size = new System.Drawing.Size(539, 550);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -242,7 +244,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.ClientSize = new System.Drawing.Size(1223, 495);
+            this.ClientSize = new System.Drawing.Size(1223, 600);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);

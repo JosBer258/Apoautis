@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsuario));
             this.Bttn_Out = new System.Windows.Forms.Button();
             this.DGV_Data = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -46,34 +47,43 @@
             this.label19 = new System.Windows.Forms.Label();
             this.Txt_PasdUser = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Data)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Bttn_Out
             // 
-            this.Bttn_Out.Location = new System.Drawing.Point(462, 372);
+            this.Bttn_Out.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Bttn_Out.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Bttn_Out.BackgroundImage")));
+            this.Bttn_Out.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Bttn_Out.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Bttn_Out.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Bttn_Out.Location = new System.Drawing.Point(491, 267);
             this.Bttn_Out.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Bttn_Out.Name = "Bttn_Out";
-            this.Bttn_Out.Size = new System.Drawing.Size(103, 33);
+            this.Bttn_Out.Size = new System.Drawing.Size(74, 72);
             this.Bttn_Out.TabIndex = 121;
-            this.Bttn_Out.Text = "Salir";
-            this.Bttn_Out.UseVisualStyleBackColor = true;
+            this.Bttn_Out.UseVisualStyleBackColor = false;
             this.Bttn_Out.Click += new System.EventHandler(this.Bttn_Out_Click);
             // 
             // DGV_Data
             // 
             this.DGV_Data.AllowUserToAddRows = false;
             this.DGV_Data.AllowUserToDeleteRows = false;
+            this.DGV_Data.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DGV_Data.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGV_Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Data.EnableHeadersVisualStyles = false;
-            this.DGV_Data.Location = new System.Drawing.Point(14, 155);
+            this.DGV_Data.Location = new System.Drawing.Point(14, 18);
             this.DGV_Data.Name = "DGV_Data";
             this.DGV_Data.ReadOnly = true;
-            this.DGV_Data.Size = new System.Drawing.Size(551, 201);
+            this.DGV_Data.Size = new System.Drawing.Size(551, 240);
             this.DGV_Data.TabIndex = 124;
             this.DGV_Data.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Data_CellContentClick);
             this.DGV_Data.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Data_CellContentDoubleClick);
@@ -250,15 +260,24 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.Bttn_Out);
+            this.panel2.Controls.Add(this.DGV_Data);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 155);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(576, 352);
+            this.panel2.TabIndex = 126;
+            // 
             // FormUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(579, 415);
+            this.ClientSize = new System.Drawing.Size(576, 507);
             this.ControlBox = false;
-            this.Controls.Add(this.Bttn_Out);
-            this.Controls.Add(this.DGV_Data);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -272,6 +291,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -295,5 +315,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox Cmb_Estado;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

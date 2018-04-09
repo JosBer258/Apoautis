@@ -110,5 +110,10 @@ namespace APOAUTIS
         {
             val.ValidarPassword(sender,e);
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

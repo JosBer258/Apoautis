@@ -107,7 +107,13 @@ namespace APOAUTIS.Clases
 
         public void Fun_MostrarTodos(System.Windows.Forms.DataGridView Var_MuestraDatos)
         {
-            sql = string.Format("select B.CodMatricula as 'Codigo Matricula', B.FechaIngreso as 'Fecha de realizacion',A.CodAlumno as 'Codigo de Alumno', A.IdAlum as 'No. Identidad',A.NomAlumno as 'Nombre de Alumno', A.SexoAlum as 'Genero', B.AnioIngreso as 'Año de Ingreso', B.Entrevistador as 'Entrevistador', B.CuotaPago as 'Cuota de pago' from alumnos as A inner join matricula as B on A.CodAlumno = B.Alumnos_CodAlumno order by A.NomAlumno and B.CodMatricula desc ; ");
+            sql = string.Format(@"select B.CodMatricula as 'Codigo Matricula',B.FechaIngreso as 'Fecha de realizacion', D.Descripcion as 'Matricula',C.descripcion as 'Jornada',
+A.CodAlumno as 'Codigo de Alumno',
+A.IdAlum as 'No. Identidad', A.NomAlumno as 'Nombre de Alumno', 
+B.AnioIngreso as 'Año de Ingreso', B.Entrevistador as 'Entrevistador', B.CuotaPago as 'Cuota de pago' from alumnos 
+as A inner join matricula as B on A.CodAlumno = B.Alumnos_CodAlumno inner join jornada as C
+on B.Cod_jornada=C.cod_jornada inner join tipo_matricula as D on B.Cod_Tipo=D.Cod_Tipo
+order by A.NomAlumno and B.CodMatricula desc ; ");
             cnx.Open();
             cmd = new MySqlCommand(sql, cnx);
             DataAdapter = new MySqlDataAdapter(cmd);
@@ -119,7 +125,12 @@ namespace APOAUTIS.Clases
 
         public void Fun_MostrarPorNombre(System.Windows.Forms.DataGridView Var_MuestraDatos)
         {
-            sql = string.Format("select B.CodMatricula as 'Codigo Matricula',B.FechaIngreso as 'Fecha de realizacion',A.CodAlumno as 'Codigo de Alumno', A.IdAlum as 'No. Identidad',A.NomAlumno as 'Nombre de Alumno', A.SexoAlum as 'Genero', B.AnioIngreso as 'Año de Ingreso', B.Entrevistador as 'Entrevistador', B.CuotaPago as 'Cuota de pago' from alumnos as A inner join matricula as B on A.CodAlumno = B.Alumnos_CodAlumno  where A.NomAlumno like '%{0}%' order by A.NomAlumno and B.CodMatricula desc ; ", Var_nom_filtro);
+            sql = string.Format(@"select B.CodMatricula as 'Codigo Matricula',B.FechaIngreso as 'Fecha de realizacion', D.Descripcion as 'Matricula',C.descripcion as 'Jornada',
+A.CodAlumno as 'Codigo de Alumno',A.IdAlum as 'No. Identidad', A.NomAlumno as 'Nombre de Alumno', 
+B.AnioIngreso as 'Año de Ingreso', B.Entrevistador as 'Entrevistador', B.CuotaPago as 'Cuota de pago' from alumnos 
+as A inner join matricula as B on A.CodAlumno = B.Alumnos_CodAlumno inner join jornada as C
+on B.Cod_jornada=C.cod_jornada inner join tipo_matricula as D on B.Cod_Tipo=D.Cod_Tipo
+where A.NomAlumno like '%{0}%' order by A.NomAlumno and B.CodMatricula desc ; ", Var_nom_filtro);
             cnx.Open();
             cmd = new MySqlCommand(sql, cnx);
             DataAdapter = new MySqlDataAdapter(cmd);
@@ -133,10 +144,13 @@ namespace APOAUTIS.Clases
 
         public void Fun_MostrarPorYear(System.Windows.Forms.DataGridView Var_MuestraDatos)
         {
-            sql = string.Format(@"select B.CodMatricula as 'Codigo Matricula',A.CodAlumno as 'Codigo de Alumno', 
-A.IdAlum as 'No. Identidad', A.NomAlumno as 'Nombre de Alumno', A.SexoAlum as 'Genero', B.Jornada as 'Jornada', 
+            sql = string.Format(@"select B.CodMatricula as 'Codigo Matricula',B.FechaIngreso as 'Fecha de realizacion', D.Descripcion as 'Matricula',C.descripcion as 'Jornada',
+A.CodAlumno as 'Codigo de Alumno',
+A.IdAlum as 'No. Identidad', A.NomAlumno as 'Nombre de Alumno', 
 B.AnioIngreso as 'Año de Ingreso', B.Entrevistador as 'Entrevistador', B.CuotaPago as 'Cuota de pago' from alumnos 
-as A inner join matricula as B on A.CodAlumno = B.Alumnos_CodAlumno where YEAR(B.Fecha) = '{0}' 
+as A inner join matricula as B on A.CodAlumno = B.Alumnos_CodAlumno inner join jornada as C
+on B.Cod_jornada=C.cod_jornada inner join tipo_matricula as D on B.Cod_Tipo=D.Cod_Tipo
+ where YEAR(B.FechaIngreso) = '{0}' 
 order by A.NomAlumno and B.CodMatricula desc ; ", Var_anio_busqueda);
             cnx.Open();
             cmd = new MySqlCommand(sql, cnx);
