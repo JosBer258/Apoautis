@@ -169,8 +169,17 @@ where A.IdAlum like'%{0}%'", IdAlum11);
                 NomAlumno11 = (Reg["NomAlumno"].ToString());
                 LugarNaciAlum11 = (Reg["LugarNaciAlum"].ToString());
                 FechaNaciAlum11 = (Reg["FechaNaciAlum"].ToString());
-                EdadAlum11 = Convert.ToInt32((Reg["EdadAlum"].ToString()));
-                EdadCronologica11 = (Reg["EdadCronologica"].ToString());
+                if((Reg["EdadAlum"].ToString())==string.Empty || Reg["EdadCronologica"].ToString()==string.Empty)
+                {
+                    EdadAlum11 = 0;
+                    EdadCronologica11 = "0";
+                }
+                else
+                {
+                    EdadAlum11 = Convert.ToInt32((Reg["EdadAlum"].ToString()));
+                    EdadCronologica11 = (Reg["EdadCronologica"].ToString());
+                }
+               
                 SexoAlum11 = (Reg["SexoAlum"].ToString());
                 IdAlum11 = (Reg["IdAlum"].ToString());
                 DireccionAlum11 = (Reg["DireccionAlum"].ToString());

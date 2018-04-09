@@ -331,21 +331,32 @@ namespace APOAUTIS.Formas.Alumnos
 
             if (Pest2_Pest1_Txt_Codigo.Text!=string.Empty)
             {
-                if (Vacios(Pest2_Pest1_GrupoGeneral) == true)
+                Vacios(Pest2_Pest1_GrupoGeneral);
+                if (Pest2_Pest1_Txt_Identidad.Text!=string.Empty)
                 {
+                    if (Vacios(Pest2_Pest1_GrupoGeneral) == true)
+                    {
 
-                   
 
-                    alumno.updateAlumnos(Pest2_Pest1_Txt_Sexo.Text, Pest2_Pest1_Txt_Direccion.Text,
-                        Pest2_Pest1_Txt_TelefonoFijo.Text, Pest2_Pest1_Txt_Celular.Text, Pest2_Pest1_Txt_Escolaridad.Text
-                        , Pest2_Pest1_Txt_InstiProcedencia.Text, Pest2_Pest1_Txt_Instituto.Text,
-                         Convert.ToInt32(Pest2_Pest1_Cmb_Estado.SelectedValue),
-                         textBox1Pest2_Pest1_Txt_lugarEmergencia.Text,
-                         Pest2_Pest1_Txt_TelefonoEmergencia.Text,alumno.CodAlumno11);
-                    MessageBox.Show("Ingresado Exitosamente");
-                    alumno.Fun_Show(Pest1_Dgv_BsqAlm);
+
+                        alumno.updateAlumnos(Pest2_Pest1_Txt_Sexo.Text, Pest2_Pest1_Txt_Direccion.Text,
+                            Pest2_Pest1_Txt_TelefonoFijo.Text, Pest2_Pest1_Txt_Celular.Text, Pest2_Pest1_Txt_Escolaridad.Text
+                            , Pest2_Pest1_Txt_InstiProcedencia.Text, Pest2_Pest1_Txt_Instituto.Text,
+                             Convert.ToInt32(Pest2_Pest1_Cmb_Estado.SelectedValue),
+                             textBox1Pest2_Pest1_Txt_lugarEmergencia.Text,
+                             Pest2_Pest1_Txt_TelefonoEmergencia.Text, alumno.CodAlumno11);
+                        MessageBox.Show("Ingresado Exitosamente");
+                        alumno.Fun_Show(Pest1_Dgv_BsqAlm);
+
+                    }
 
                 }
+                else
+                {
+                    MessageBox.Show("El alumno no posee identidad, por favor vuelva a otros " +
+                   "formularios y complete la informacion del alumno", "Warning");
+                }
+                
             }
             else
             {
@@ -439,7 +450,7 @@ namespace APOAUTIS.Formas.Alumnos
 
         private void textBox1Pest2_Pest1_Txt_lugarEmergencia_KeyPress(object sender, KeyPressEventArgs e)
         {
-            val.ValidarID(sender, e);
+            val.ValirLetrasYEspacios_Direccion(sender, e, textBox1Pest2_Pest1_Txt_lugarEmergencia);
         }
 
         private void Pest2_Pest1_Txt_TelefonoEmergencia_KeyPress(object sender, KeyPressEventArgs e)
