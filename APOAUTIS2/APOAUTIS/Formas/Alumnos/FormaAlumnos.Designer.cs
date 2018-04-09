@@ -344,6 +344,9 @@
             // 
             this.Pest2_Pest1_Cmb_RecEvaluacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Pest2_Pest1_Cmb_RecEvaluacion.FormattingEnabled = true;
+            this.Pest2_Pest1_Cmb_RecEvaluacion.Items.AddRange(new object[] {
+            "SI",
+            "NO"});
             this.Pest2_Pest1_Cmb_RecEvaluacion.Location = new System.Drawing.Point(528, 34);
             this.Pest2_Pest1_Cmb_RecEvaluacion.Name = "Pest2_Pest1_Cmb_RecEvaluacion";
             this.Pest2_Pest1_Cmb_RecEvaluacion.Size = new System.Drawing.Size(86, 21);

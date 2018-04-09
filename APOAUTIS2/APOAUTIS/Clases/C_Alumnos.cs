@@ -381,6 +381,20 @@ order by CodAlumno", busq);
             Com_Roles.DisplayMember = "DescripcionEstado";
             Com_Roles.DataSource = dt;
         }
+        public void GenerarJornada(ComboBox Com_Roles)
+        {
+            cnx.Open();
+            sql = string.Format(@"select cod_jornada, descripcion from jornada");
+            cmd = new MySqlCommand(sql, cnx);
+            DataAdapter = new MySqlDataAdapter(cmd);
+            dt = new DataTable();
+            DataAdapter.Fill(dt);
+            cnx.Close();
+
+            Com_Roles.ValueMember = "cod_jornada";
+            Com_Roles.DisplayMember = "descripcion";
+            Com_Roles.DataSource = dt;
+        }
 
         public DateTime ne;
         public string w;

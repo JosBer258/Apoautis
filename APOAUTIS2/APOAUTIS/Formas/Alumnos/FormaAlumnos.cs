@@ -79,11 +79,11 @@ namespace APOAUTIS.Formas.Alumnos
         {
             alumno.Fun_Show(Pest1_Dgv_BsqAlm);
             Pest1_Radio_Alumno.Checked = true;
-            
             alumno.VerificarYear();
             validacionMenu(Pest2_Pest3_Grupo_Encargados);
             validacionMenu(Pest2_Pest1_GrupoGeneral);
-            Pest2_Pest3_Cmb_Trabaja.SelectedIndex = 0;
+            Pest2_Pest3_Cmb_Trabaja.SelectedIndex = -1;
+            Pest2_Pest1_Cmb_RecEvaluacion.SelectedIndex = -1;
 
 
         }
@@ -194,7 +194,9 @@ namespace APOAUTIS.Formas.Alumnos
                 alumno.MostrarAcontecimientos(Pest2_Pest2_DGV_AconMed);
                 alumno.llenarDatosHistoriaMedico();
                 alumno.GenerarEstado(Pest2_Pest3_Cmb_Estado, 3);
+                alumno.GenerarJornada(Pest2_Pest1_Cmb_Jornada);
                 resp.GenerarEstado(Pest2_Pest3_Cmb_TipoResponsable);
+                Pest2_Pest3_Cmb_Trabaja.SelectedIndex = 0;
 
                 Pest2_Pest2_Txt_Medicamentos.Text = Convert.ToString(alumno.UsoMedicamentos1);
                 Pest2_Pest2_Txt_Alergias.Text = Convert.ToString(alumno.ExistenciaAlergias1);
@@ -426,6 +428,9 @@ namespace APOAUTIS.Formas.Alumnos
                 Pest2_Pest3_DGV_MuestraEncargados.DataSource = null;
                 Pest2_Pest3_Cmb_Estado.DataSource = null;
                 Pest2_Pest3_Cmb_TipoResponsable.DataSource = null;
+                Pest2_Pest3_Cmb_Trabaja.SelectedIndex = -1;
+                Pest2_Pest1_Cmb_Jornada.DataSource=null;
+                Pest2_Pest1_Cmb_RecEvaluacion.SelectedIndex = -1;
             }
         }
 
@@ -443,8 +448,11 @@ namespace APOAUTIS.Formas.Alumnos
                 Pest2_Pest3_Cmb_Estado.DataSource = null;
                 Pest2_Pest1_Cmb_Estado.DataSource = null;
                 Pest2_Pest3_Cmb_TipoResponsable.DataSource = null;
+                Pest2_Pest3_Cmb_Trabaja.SelectedIndex = -1;
                 limpieza(Pest2_Pest2_Grupo_Historial);
                 limpieza(Pest2_Pest3_Grupo_Encargados);
+                Pest2_Pest1_Cmb_Jornada.DataSource = null;
+                Pest2_Pest1_Cmb_RecEvaluacion.SelectedIndex = -1;
             }
         }
 
