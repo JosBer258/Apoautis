@@ -100,6 +100,12 @@ namespace APOAUTIS
         private void button1_Click(object sender, EventArgs e)
         {
             tabEstSocioEco.SelectedTab = InformacionFamilia;
+
+            if (Var_codigoAlumno == 0)
+            {
+                MessageBox.Show("Debe buscar un alumno para continuar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -117,17 +123,17 @@ namespace APOAUTIS
             this.Hide();
             // string strDate = dateTimePicker1.Value.ToString("yyyy/MM/dd");
             // DateTime varFeInicio = Convert.toDatetime(dtpFeInicio.Text);
-            
+            Var_codigoAlumno = C_datos.CodAlumno;
+
+            /*
+
             
 
-            Var_codigoAlumno = C_datos.CodAlumno;
-            
-            
             Clases.C_EstudioSocioEc estudioSocio = new Clases.C_EstudioSocioEc();
             estudioSocio.CodEstudioSocio = Var_codigoAlumno;
             estudioSocio.CodAlumno= Var_codigoAlumno;
             estudioSocio.LugarEntrevista = txt_EsSo_lugar_DatosGe.Text.Trim();
-            estudioSocio.FechaEntrevista = Convert.ToDateTime(dateTimePicker1.Value.Year + "/" + dateTimePicker1.Value.Month + "/" + dateTimePicker1.Value.Day); //Convert.ToDateTime(dateTimePicker1.Text);
+            estudioSocio.FechaEntrevista = Convert.ToString(dateTimePicker1.Value.Year + "/" + dateTimePicker1.Value.Month + "/" + dateTimePicker1.Value.Day); //Convert.ToDateTime(dateTimePicker1.Text);
             estudioSocio.PersonaEntrevis =  txt_EsSo_PersonaEntre_DatosGe.Text;
             estudioSocio.EntrevistadoPor1 = txt_EsSo_Aporbado_SaludRecre.Text.Trim();
 
@@ -204,7 +210,7 @@ namespace APOAUTIS
             madreresp.CodResp = var_respM;
             madreresp.IdResp = Convert.ToInt32(txt_EsSo_IdentMadre_DatosGe.Text);
             madreresp.DomicilioResp = Convert.ToString(txt_EsSo_DomiciMadre_DatosGe);
-            madreresp.LugarTrabRes= Convert.ToString(Combox_EsSo_TrabajaMadre_forma.Text +"");
+            madreresp.LugarTrabRes= Convert.ToString(Combox_EsSo_TrabajaMadre_forma.Text);
             madreresp.TelefonoCasaResp = Convert.ToString(txt_EsSo_TelCasaMadre_DatosGe.Text);
             madreresp.TelefonoCasaResp = Convert.ToString(txt_EsSo_TelTrabMadre_DatosGe.Text);
 
@@ -218,49 +224,99 @@ namespace APOAUTIS
             padreresp.CodResp = var_respP;
             padreresp.IdResp = Convert.ToInt32(txt_EsSo_IdentMadre_DatosGe.Text);
             padreresp.DomicilioResp = Convert.ToString(txt_EsSo_DomiciMadre_DatosGe);
-            padreresp.LugarTrabRes = Convert.ToString(Combox_EsSo_TrabajaMadre_forma.Text + "");
+            padreresp.LugarTrabRes = Convert.ToString(Combox_EsSo_TrabajaMadre_forma.Text);
             padreresp.TelefonoCasaResp = Convert.ToString(txt_EsSo_TelCasaMadre_DatosGe.Text);
             padreresp.TelefonoCasaResp = Convert.ToString(txt_EsSo_TelTrabMadre_DatosGe.Text);
 
             int resultado7 = Clases.C_EstudioSocioMetodos.AgregarPadre(padreresp);
 
-
-            var_respM = otroresp.CodRespOtro;
-
-            Clases.C_ResponsablesOtro Otroresp = new Clases.C_ResponsablesOtro();
-            Otroresp.CodRespOtro = var_respO;
-            Otroresp.NomRespOtro= txt_EsSo_NomEncarg_DatosGe.Text;
-            Otroresp.Parentesco= txt_EsSo_ParentescoEncar_DatosGe.Text;
-            Otroresp.Edad = Convert.ToInt32(txt_EsSo_EdadEncarg_DatosGe.Text);
-            Otroresp.Telefono = Convert.ToString(txt_EsSo_TelEncarg_DatosGe);
-            Otroresp.Profesion = txt_EsSo_OficioEncarg_DatosGe.Text;
-
-            int resultado8 = Clases.C_EstudioSocioMetodos.AgregarOtro(Otroresp);
-            /*
-            if (resultado8 > 0)
-            {
-                MessageBox.Show("Estudio SocioEconomico Ingresado Exitosamente", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("No se pudo guardar ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-
             */
-            Clases.C_LugaresRecreacion recreacion = new Clases.C_LugaresRecreacion();
-            recreacion.CodAlumno = Var_codigoAlumno;
-            recreacion.Parques= Convert.ToString(combox_EsSo_Parques_SaludRecre.Text + "" + txt_EsSo_Parques_SaludRecre.Text );
-            recreacion.CentrosComerciales = Convert.ToString(combox_EsSo_CentrosCom_SaludRecre.Text + "" + txt_EsSo_CentrosCom_SaludRecre.Text);
-            recreacion.Museos = Convert.ToString(combox_EsSo_Museos_SaludRecre.Text + "" + txt_EsSo_Museos_SaludRecre.Text);
-            recreacion.Cine = Convert.ToString(combox_EsSo_Cine_SaludRecre.Text + "" + txt_EsSo_cine_SaludRecre.Text);
-            recreacion.Balnearios = Convert.ToString(combox_EsSo_Balnearios_SaludRecre.Text + "" + txt_EsSo_Balnearios_SaludRecre.Text);
-            recreacion.Playa = Convert.ToString(combox_EsSo_Playa_SaludRecre.Text + "" + txt_EsSo_Playa_SaludRecre.Text);
-            recreacion.Otros = Convert.ToString(txt_EsSo_OtrosLugares_SaludRecre.Text + "" + combox_EsSo_OtrosLugares_SaludRecre.Text);
+            /*
+           Clases.C_EstudioSocioMetodos.ObtenerOtro();
 
-            int resultado4 = Clases.C_EstudioSocioMetodos.AgregarLugaresRecreacion(recreacion);
+           var_respO = otroresp.CodRespOtro;
 
 
+           Clases.C_ResponsablesOtro Otroresp = new Clases.C_ResponsablesOtro();
+           Otroresp.CodRespOtro = var_respO+1;
+           Otroresp.NomRespOtro= txt_EsSo_NomEncarg_DatosGe.Text;
+           Otroresp.Telefono = Convert.ToString(txt_EsSo_TelEncarg_DatosGe);
+           Otroresp.Profesion = txt_EsSo_OficioEncarg_DatosGe.Text;
 
+           int resultado8 = Clases.C_EstudioSocioMetodos.AgregarOtro(Otroresp);
+
+
+
+
+           if (resultado8 > 0)
+           {
+               MessageBox.Show("Estudio SocioEconomico Ingresado Exitosamente", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           }
+           else
+           {
+               MessageBox.Show("nuevo responsable  ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+           }
+
+
+
+
+           Clases.C_ResponsablesOtro tiporesp = new Clases.C_ResponsablesOtro();
+           Otroresp.CodRespOtro = var_respO + 1;
+           tiporesp.Parentesco= txt_EsSo_ParentescoEncar_DatosGe.Text;
+           tiporesp.Edad = Convert.ToInt32(txt_EsSo_EdadEncarg_DatosGe.Text);
+
+
+           int resultado9 = Clases.C_EstudioSocioMetodos.AgregarOtroResp(tiporesp);
+
+
+
+
+           if (resultado9 > 0)
+           {
+               MessageBox.Show("tipo resp ", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           }
+           else
+           {
+               MessageBox.Show("otro tipo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+           }
+
+           Clases.C_ResponsablesOtro tipor = new Clases.C_ResponsablesOtro();
+
+           tipor.CodRespOtro = var_respO + 1;
+           tipor.CodAlumno= Var_codigoAlumno;
+
+
+           int resultado10 = Clases.C_EstudioSocioMetodos.AgregarOtroTipo(tipor);
+
+
+
+
+           if (resultado10 > 0)
+           {
+               MessageBox.Show("tipo resp ", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           }
+           else
+           {
+               MessageBox.Show("otro tipo alumres", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+           }
+
+
+
+
+           Clases.C_LugaresRecreacion recreacion = new Clases.C_LugaresRecreacion();
+           recreacion.CodAlumno = Var_codigoAlumno;
+           recreacion.Parques= Convert.ToString(combox_EsSo_Parques_SaludRecre.Text + "" + txt_EsSo_Parques_SaludRecre.Text );
+           recreacion.CentrosComerciales = Convert.ToString(combox_EsSo_CentrosCom_SaludRecre.Text + "" + txt_EsSo_CentrosCom_SaludRecre.Text);
+           recreacion.Museos = Convert.ToString(combox_EsSo_Museos_SaludRecre.Text + "" + txt_EsSo_Museos_SaludRecre.Text);
+           recreacion.Cine = Convert.ToString(combox_EsSo_Cine_SaludRecre.Text + "" + txt_EsSo_cine_SaludRecre.Text);
+           recreacion.Balnearios = Convert.ToString(combox_EsSo_Balnearios_SaludRecre.Text + "" + txt_EsSo_Balnearios_SaludRecre.Text);
+           recreacion.Playa = Convert.ToString(combox_EsSo_Playa_SaludRecre.Text + "" + txt_EsSo_Playa_SaludRecre.Text);
+           recreacion.Otros = Convert.ToString(txt_EsSo_OtrosLugares_SaludRecre.Text + "" + combox_EsSo_OtrosLugares_SaludRecre.Text);
+
+           int resultado4 = Clases.C_EstudioSocioMetodos.AgregarLugaresRecreacion(recreacion);
+
+
+    */
             Clases.C_InformacionVivienda vivienda = new Clases.C_InformacionVivienda();
             vivienda.CodAlumno = Var_codigoAlumno;
             vivienda.Tenencia= Convert.ToString(rb_propia + "" + rb_alquilada + "" +rb_otraTenencia +"" + txt_EsSo_OtraTenencia_InfoVivien.Text);
@@ -272,7 +328,7 @@ namespace APOAUTIS
 
             int resultado5 = Clases.C_EstudioSocioMetodos.AgregarInfovivienda(vivienda);
 
-      
+     
     
             
         }
@@ -290,7 +346,7 @@ namespace APOAUTIS
 
         private void txt_EsSo_lugar_TextChanged(object sender, EventArgs e)
         {
-       
+
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -358,10 +414,10 @@ namespace APOAUTIS
                 txt_EsSo_CelPadre_DatosGe.Text = FromBusquedaAlumno.padreSeleccionado.TelefonoCasaResp;
             }
 
-
+  
             if (FromBusquedaAlumno.otrorespSeleccionado != null)
             {
-                madrep.CodAlumno = FromBusquedaAlumno.madreSeleccionado.CodAlumno;
+                otroresp.CodAlumno = FromBusquedaAlumno.otrorespSeleccionado.CodAlumno;
 
 
                 txt_EsSo_NomEncarg_DatosGe.Text = FromBusquedaAlumno.otrorespSeleccionado.NomRespOtro;
@@ -372,7 +428,7 @@ namespace APOAUTIS
             }
 
 
-
+    
 
 
 
@@ -553,11 +609,15 @@ namespace APOAUTIS
             if (rbtm_EsSo_OtroCaracte_InfoVivien.Checked)
             {
                 rb_otraTenencia = "Otro tipo de tenencia";
+                txt_EsSo_OtraTenencia_InfoVivien.Enabled = true;
             }
             else 
             {
                 rb_otraTenencia = "";
+                txt_EsSo_OtraTenencia_InfoVivien.Enabled = false;
             }
+
+
         }
 
         private void rbtm_EsSo_Ladrillo_InfoVivien_CheckedChanged(object sender, EventArgs e)
@@ -600,11 +660,13 @@ namespace APOAUTIS
         {
             if (rbtm_EsSo_OtroMaterial_InfoVivien.Checked)
             {
-                cont_otro = "Otro tipo material de construccion";
+                cont_otro = "Otro tipo material de construccion, ";
+                txt_EsSo_OtroMaterial_InfoVivien.Enabled = true;
             }
             else
             {
                 cont_otro = "";
+                txt_EsSo_OtroMaterial_InfoVivien.Enabled = false;
             }
         }
 
@@ -675,10 +737,13 @@ namespace APOAUTIS
             if (rbtm_EsSo_OtroMaterPiso_InfoVivien.Checked)
             {
                 piso_otro = "Otro tipo material de piso";
+                txt_EsSo_OtroMaterPiso_InfoVivien.Enabled = true;
             }
             else
             {
                 piso_otro = "";
+                txt_EsSo_OtroMaterPiso_InfoVivien.Enabled = false;
+
             }
         }
 
@@ -735,10 +800,13 @@ namespace APOAUTIS
             if (chekbox_EsSo_OtrosServ_InfoVivien.Checked)
             {
                 otroServicio = "Otros servicios";
+                txt_EsSo_OtroServicio_InfoVivien.Enabled = true;
             }
             else
             {
                 otroServicio = "";
+                txt_EsSo_OtroServicio_InfoVivien.Enabled = false;
+
             }
         }
 
@@ -1066,7 +1134,12 @@ namespace APOAUTIS
 
         private void txt_EsSo_IngreTotales_InfoFami_TextChanged(object sender, EventArgs e)
         {
-          //  txt_EsSo_IngreTotales_InfoFami.Text =Convert.ToString(txt_EsSo_IngreOtros_InfoFami.Text);
+            //  txt_EsSo_IngreTotales_InfoFami.Text =Convert.ToString(txt_EsSo_IngreOtros_InfoFami.Text);
+
+           // txt_EsSo_IngreTotales_InfoFami.Text = Convert.ToString(txt_EsSo_IngreAbue_InfoFami.Text+txt_EsSo_IngreHijo_InfoFami.Text+txt_EsSo_IngrePadre_InfoFami.Text+txt_EsSo_IngreMadre_InfoFami.Text+txt_EsSo_IngrePencion_InfoFami.Text+txt_EsSo_IngreOtros_InfoFami.Text);
+
+
+
         }
 
         private void txt_EsSo_HabitantesCasa_InfoFami_TextChanged(object sender, EventArgs e)
@@ -1111,7 +1184,7 @@ namespace APOAUTIS
         private void txt_EsSo_DomiciPadre_DatosGe_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar != Convert.ToChar(Keys.Back) && !Char.IsLetter(e.KeyChar) && e.KeyChar != Convert.ToChar(Keys.Enter)
-             && e.KeyChar != Convert.ToChar(Keys.Space))
+                && e.KeyChar != Convert.ToChar(Keys.Space))
             {
 
                 e.Handled = true;
@@ -1125,7 +1198,12 @@ namespace APOAUTIS
 
         private void txt_EsSo_NomEncarg_DatosGe_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (e.KeyChar != Convert.ToChar(Keys.Back) && !Char.IsLetter(e.KeyChar) && e.KeyChar != Convert.ToChar(Keys.Enter)
+    && e.KeyChar != Convert.ToChar(Keys.Space))
+            {
 
+                e.Handled = true;
+            }
         }
 
         private void txt_EsSo_ParentescoEncar_DatosGe_TextChanged(object sender, EventArgs e)
@@ -1155,7 +1233,94 @@ namespace APOAUTIS
 
         private void txt_EsSo_TelCasaMadre_DatosGe_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (char.IsDigit(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back))
+            {
+                e.Handled = false;
+            }
+            else if ((e.KeyChar == '-') && (!txt_EsSo_CelMadre_DatosGe.Text.Contains("-")))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void combox_EsSo_CuantosFami_InfoFami_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(combox_EsSo_CuantosFami_InfoFami.Text == "No")
+            {
+                txt_EsSo_CuantosFamil_InfoFami.Enabled = false;
+            }
+        }
+
+        private void combox_EsSo_Parques_SaludRecre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (combox_EsSo_Parques_SaludRecre.Text == "No")
+            {
+                txt_EsSo_Parques_SaludRecre.Enabled = false;
+            }
+
+        }
+
+        private void combox_EsSo_CentrosCom_SaludRecre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (combox_EsSo_CentrosCom_SaludRecre.Text == "No")
+            {
+                txt_EsSo_CentrosCom_SaludRecre.Enabled = false;
+            }
+
+        }
+
+        private void combox_EsSo_Museos_SaludRecre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (combox_EsSo_Museos_SaludRecre.Text == "No")
+            {
+       
+                   txt_EsSo_Museos_SaludRecre.Enabled = false;
+            }
+
+        }
+
+        private void combox_EsSo_Cine_SaludRecre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (combox_EsSo_Cine_SaludRecre.Text == "No")
+            {
+                txt_EsSo_cine_SaludRecre.Enabled = false;
+            }
+
+        }
+
+        private void combox_EsSo_Balnearios_SaludRecre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (combox_EsSo_Balnearios_SaludRecre.Text == "No")
+            {
+                txt_EsSo_Balnearios_SaludRecre.Enabled = false;
+            }
+
+        }
+
+        private void combox_EsSo_Playa_SaludRecre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (combox_EsSo_Playa_SaludRecre.Text == "No")
+            {
+                txt_EsSo_Playa_SaludRecre.Enabled = false;
+            }
+
+        }
+
+        private void combox_EsSo_OtrosLugares_SaludRecre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (combox_EsSo_OtrosLugares_SaludRecre.Text == "No")
+            {
+                txt_EsSo_OtrosLugares_SaludRecre.Enabled = false;
+            }
 
         }
     }
-}
+
+
+
+    }
+

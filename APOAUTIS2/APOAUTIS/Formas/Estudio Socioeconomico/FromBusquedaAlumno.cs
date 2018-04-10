@@ -48,10 +48,8 @@ namespace APOAUTIS.Formas.Estudio_Socioeconomico
         private void btm_buscar_Click(object sender, EventArgs e)
         {
             DGV_Show.DataSource = Clases.C_EstudioSocioMetodos.Buscar(Txt_FiltroAlumno.Text);
-           /* DGV_Show.DataSource = Clases.C_EstudioSocioMetodos.Buscar(Txt_FiltroAlumno.Text);
-            DGV_Show.DataSource = Clases.C_EstudioSocioMetodos.Buscar(Txt_FiltroAlumno.Text);
-            DGV_Show.DataSource = Clases.C_EstudioSocioMetodos.Buscar(Txt_FiltroAlumno.Text);
-            */
+
+
 
 
 
@@ -74,10 +72,10 @@ namespace APOAUTIS.Formas.Estudio_Socioeconomico
 
                 double cod3 = Convert.ToDouble(DGV_Show.CurrentRow.Cells[0].Value);
                 padreSeleccionado = C_EstudioSocioMetodos.ObtenerPadre(cod3);
-
+                /*
                 double cod4 = Convert.ToDouble(DGV_Show.CurrentRow.Cells[0].Value);
                 otrorespSeleccionado = C_EstudioSocioMetodos.ObtenerOtro(cod4);
-
+                */
 
                 this.Close();
                 }

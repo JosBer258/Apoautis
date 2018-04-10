@@ -14,7 +14,7 @@ namespace APOAUTIS.Clases
         private int codEstudioSocio;
         private int codAlumno;
         private string lugarEntrevista;
-        private DateTime fechaEntrevista;
+        private string fechaEntrevista;
         private string personaEntrevis;
         private string EntrevistadoPor;
 
@@ -39,7 +39,7 @@ namespace APOAUTIS.Clases
             }
         }
 
-        public DateTime FechaEntrevista
+        public string FechaEntrevista
         {
             get
             {
@@ -105,7 +105,7 @@ namespace APOAUTIS.Clases
         }
 
 
-        public C_EstudioSocioEc(string lugarEntrevista, DateTime fechaEntrevista, string personaEntrevis, string entrevistadoPor1, int codAlumno, int codEstudioSocio)
+        public C_EstudioSocioEc(string lugarEntrevista, string fechaEntrevista, string personaEntrevis, string entrevistadoPor1, int codAlumno, int codEstudioSocio)
         {
             LugarEntrevista = lugarEntrevista;
             FechaEntrevista = fechaEntrevista;

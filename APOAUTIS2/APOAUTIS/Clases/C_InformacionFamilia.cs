@@ -11,6 +11,7 @@ namespace APOAUTIS.Clases
         private int CodAlumno;
         private int PersonasHabitan;
         private string TieneMasHijos;
+        private int cuantoshijosmas;
         private string HabitanOtrosFamiliares;
         private int MienEnTotal;
         private int CuantosMiembrosTrabajan;
@@ -365,12 +366,25 @@ namespace APOAUTIS.Clases
             }
         }
 
+        public int Cuantoshijosmas
+        {
+            get
+            {
+                return cuantoshijosmas;
+            }
 
-        public C_InformacionFamilia(int codAlumno1, int personasHabitan1, string tieneMasHijos1, string habitanOtrosFamiliares1, int mienEnTotal1, int cuantosMiembrosTrabajan1, double ingresoAbuela1, double ingresoMadre1, double ingresoPadre1, double ingresoHijo1, double pension1, double otrosIngresos1, double totalIngresos1, double gastosEnergia1, double gastoAgua1, double gastoTel1, double gastoComida1, double gastoTransp1, double gastoSalub1, double gastoEduca1, double gastoGaso1, double gastoRpa1, double gastoVivienda1, double otrosGastos1, double totalGastos1)
+            set
+            {
+                cuantoshijosmas = value;
+            }
+        }
+
+        public C_InformacionFamilia(int codAlumno1, int personasHabitan1, string tieneMasHijos1,int cuantoshijosmas,string habitanOtrosFamiliares1, int mienEnTotal1, int cuantosMiembrosTrabajan1, double ingresoAbuela1, double ingresoMadre1, double ingresoPadre1, double ingresoHijo1, double pension1, double otrosIngresos1, double totalIngresos1, double gastosEnergia1, double gastoAgua1, double gastoTel1, double gastoComida1, double gastoTransp1, double gastoSalub1, double gastoEduca1, double gastoGaso1, double gastoRpa1, double gastoVivienda1, double otrosGastos1, double totalGastos1)
         {
             CodAlumno1 = codAlumno1;
             PersonasHabitan1 = personasHabitan1;
             TieneMasHijos1 = tieneMasHijos1;
+            Cuantoshijosmas=cuantoshijosmas;
             HabitanOtrosFamiliares1 = habitanOtrosFamiliares1;
             MienEnTotal1 = mienEnTotal1;
             CuantosMiembrosTrabajan1 = cuantosMiembrosTrabajan1;

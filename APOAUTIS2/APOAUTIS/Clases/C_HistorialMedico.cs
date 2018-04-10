@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace APOAUTIS.Clases
 {
-    class C_HistorialMedico
+   public class C_HistorialMedico
     {
         private int codigoAlum;
         private string LugaresRecibeAtencion;

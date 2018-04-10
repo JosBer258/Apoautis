@@ -170,6 +170,7 @@
             this.Pest1_Txt_NomEducador.Size = new System.Drawing.Size(187, 24);
             this.Pest1_Txt_NomEducador.TabIndex = 5;
             this.Pest1_Txt_NomEducador.TextChanged += new System.EventHandler(this.Pest1_Txt_NomEducador_TextChanged);
+            this.Pest1_Txt_NomEducador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest1_Txt_NomEducador_KeyPress);
             // 
             // label4
             // 

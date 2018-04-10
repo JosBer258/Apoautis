@@ -202,28 +202,30 @@
             this.chekbox_EsSo_HospEscu_SaludRecre = new System.Windows.Forms.CheckBox();
             this.chekbox_EsSo_ihss_SaludRecre = new System.Windows.Forms.CheckBox();
             this.InformacionVivienda = new System.Windows.Forms.TabPage();
-            this.btm_EsSo_MontoMatri_InfoVivien = new System.Windows.Forms.Button();
-            this.btm_EsSo_Finalizar_InfoVivien = new System.Windows.Forms.Button();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.rbtm_EsSo_Madera_InfoVivien = new System.Windows.Forms.RadioButton();
-            this.rbtm_EsSo_OtroMaterPiso_InfoVivien = new System.Windows.Forms.RadioButton();
-            this.rbtm_EsSo_MaderaPiso_InfoVivien = new System.Windows.Forms.RadioButton();
-            this.rbtm_EsSo_CEramica_InfoVivien = new System.Windows.Forms.RadioButton();
-            this.label64 = new System.Windows.Forms.Label();
-            this.txt_EsSo_OtroMaterPiso_InfoVivien = new System.Windows.Forms.TextBox();
-            this.rbtm_EsSo_Propia_InfoVivien = new System.Windows.Forms.RadioButton();
-            this.rbtm_EsSo_LabrilloPiso_InfoVivien = new System.Windows.Forms.RadioButton();
-            this.rbtm_EsSo_Alquilada_InfoVivien = new System.Windows.Forms.RadioButton();
-            this.rbtm_EsSo_cementoPiso_InfoVivien = new System.Windows.Forms.RadioButton();
-            this.rbtm_EsSo_OtroCaracte_InfoVivien = new System.Windows.Forms.RadioButton();
-            this.rbtm_EsSo_Tierra_InfoVivien = new System.Windows.Forms.RadioButton();
-            this.txt_EsSo_OtraTenencia_InfoVivien = new System.Windows.Forms.TextBox();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.label66 = new System.Windows.Forms.Label();
+            this.rbtm_EsSo_OtroMaterPiso_InfoVivien = new System.Windows.Forms.RadioButton();
+            this.rbtm_EsSo_Tierra_InfoVivien = new System.Windows.Forms.RadioButton();
+            this.rbtm_EsSo_MaderaPiso_InfoVivien = new System.Windows.Forms.RadioButton();
+            this.rbtm_EsSo_cementoPiso_InfoVivien = new System.Windows.Forms.RadioButton();
+            this.rbtm_EsSo_CEramica_InfoVivien = new System.Windows.Forms.RadioButton();
+            this.rbtm_EsSo_LabrilloPiso_InfoVivien = new System.Windows.Forms.RadioButton();
+            this.txt_EsSo_OtroMaterPiso_InfoVivien = new System.Windows.Forms.TextBox();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.rbtm_EsSo_Madera_InfoVivien = new System.Windows.Forms.RadioButton();
             this.label65 = new System.Windows.Forms.Label();
             this.txt_EsSo_OtroMaterial_InfoVivien = new System.Windows.Forms.TextBox();
             this.rbtm_EsSo_Ladrillo_InfoVivien = new System.Windows.Forms.RadioButton();
             this.rbtm_EsSo_OtroMaterial_InfoVivien = new System.Windows.Forms.RadioButton();
             this.rbtm_EsSo_Bloque_InfoVivien = new System.Windows.Forms.RadioButton();
+            this.btm_EsSo_MontoMatri_InfoVivien = new System.Windows.Forms.Button();
+            this.btm_EsSo_Finalizar_InfoVivien = new System.Windows.Forms.Button();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.label64 = new System.Windows.Forms.Label();
+            this.rbtm_EsSo_OtroCaracte_InfoVivien = new System.Windows.Forms.RadioButton();
+            this.txt_EsSo_OtraTenencia_InfoVivien = new System.Windows.Forms.TextBox();
+            this.rbtm_EsSo_Alquilada_InfoVivien = new System.Windows.Forms.RadioButton();
+            this.rbtm_EsSo_Propia_InfoVivien = new System.Windows.Forms.RadioButton();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.txt_EsSo_OtroServicio_InfoVivien = new System.Windows.Forms.TextBox();
             this.chekbox_EsSo_Telefono_InfoVivien = new System.Windows.Forms.CheckBox();
@@ -259,6 +261,8 @@
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.InformacionVivienda.SuspendLayout();
+            this.groupBox14.SuspendLayout();
+            this.groupBox15.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -435,6 +439,7 @@
             // 
             // txt_EsSo_CelPadre_DatosGe
             // 
+            this.txt_EsSo_CelPadre_DatosGe.Enabled = false;
             this.txt_EsSo_CelPadre_DatosGe.Location = new System.Drawing.Point(562, 45);
             this.txt_EsSo_CelPadre_DatosGe.Name = "txt_EsSo_CelPadre_DatosGe";
             this.txt_EsSo_CelPadre_DatosGe.Size = new System.Drawing.Size(100, 20);
@@ -470,8 +475,8 @@
             this.combox_EsSo_TrabajaPadre_forma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combox_EsSo_TrabajaPadre_forma.FormattingEnabled = true;
             this.combox_EsSo_TrabajaPadre_forma.Items.AddRange(new object[] {
-            "Si",
-            "No"});
+            "\"Si, \"",
+            "\"No, \""});
             this.combox_EsSo_TrabajaPadre_forma.Location = new System.Drawing.Point(336, 45);
             this.combox_EsSo_TrabajaPadre_forma.Name = "combox_EsSo_TrabajaPadre_forma";
             this.combox_EsSo_TrabajaPadre_forma.Size = new System.Drawing.Size(101, 21);
@@ -620,6 +625,7 @@
             // 
             // txt_EsSo_EdadEst_DatosGe
             // 
+            this.txt_EsSo_EdadEst_DatosGe.AcceptsReturn = true;
             this.txt_EsSo_EdadEst_DatosGe.Enabled = false;
             this.txt_EsSo_EdadEst_DatosGe.Location = new System.Drawing.Point(119, 97);
             this.txt_EsSo_EdadEst_DatosGe.Name = "txt_EsSo_EdadEst_DatosGe";
@@ -892,8 +898,8 @@
             this.Combox_EsSo_TrabajaMadre_forma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Combox_EsSo_TrabajaMadre_forma.FormattingEnabled = true;
             this.Combox_EsSo_TrabajaMadre_forma.Items.AddRange(new object[] {
-            "Si",
-            "no"});
+            "\"Si, \"",
+            "\"No, \""});
             this.Combox_EsSo_TrabajaMadre_forma.Location = new System.Drawing.Point(336, 45);
             this.Combox_EsSo_TrabajaMadre_forma.Name = "Combox_EsSo_TrabajaMadre_forma";
             this.Combox_EsSo_TrabajaMadre_forma.Size = new System.Drawing.Size(101, 21);
@@ -1409,6 +1415,7 @@
             this.combox_EsSo_CuantosFami_InfoFami.Name = "combox_EsSo_CuantosFami_InfoFami";
             this.combox_EsSo_CuantosFami_InfoFami.Size = new System.Drawing.Size(88, 21);
             this.combox_EsSo_CuantosFami_InfoFami.TabIndex = 12;
+            this.combox_EsSo_CuantosFami_InfoFami.SelectedIndexChanged += new System.EventHandler(this.combox_EsSo_CuantosFami_InfoFami_SelectedIndexChanged);
             // 
             // txt_EsSo_TotalMiemb_InfoFami
             // 
@@ -1630,6 +1637,7 @@
             this.combox_EsSo_CentrosCom_SaludRecre.Name = "combox_EsSo_CentrosCom_SaludRecre";
             this.combox_EsSo_CentrosCom_SaludRecre.Size = new System.Drawing.Size(49, 21);
             this.combox_EsSo_CentrosCom_SaludRecre.TabIndex = 19;
+            this.combox_EsSo_CentrosCom_SaludRecre.SelectedIndexChanged += new System.EventHandler(this.combox_EsSo_CentrosCom_SaludRecre_SelectedIndexChanged);
             // 
             // label63
             // 
@@ -1659,6 +1667,7 @@
             this.combox_EsSo_Museos_SaludRecre.Name = "combox_EsSo_Museos_SaludRecre";
             this.combox_EsSo_Museos_SaludRecre.Size = new System.Drawing.Size(49, 21);
             this.combox_EsSo_Museos_SaludRecre.TabIndex = 16;
+            this.combox_EsSo_Museos_SaludRecre.SelectedIndexChanged += new System.EventHandler(this.combox_EsSo_Museos_SaludRecre_SelectedIndexChanged);
             // 
             // label62
             // 
@@ -1688,6 +1697,7 @@
             this.combox_EsSo_Cine_SaludRecre.Name = "combox_EsSo_Cine_SaludRecre";
             this.combox_EsSo_Cine_SaludRecre.Size = new System.Drawing.Size(49, 21);
             this.combox_EsSo_Cine_SaludRecre.TabIndex = 13;
+            this.combox_EsSo_Cine_SaludRecre.SelectedIndexChanged += new System.EventHandler(this.combox_EsSo_Cine_SaludRecre_SelectedIndexChanged);
             // 
             // label61
             // 
@@ -1717,6 +1727,7 @@
             this.combox_EsSo_Playa_SaludRecre.Name = "combox_EsSo_Playa_SaludRecre";
             this.combox_EsSo_Playa_SaludRecre.Size = new System.Drawing.Size(49, 21);
             this.combox_EsSo_Playa_SaludRecre.TabIndex = 10;
+            this.combox_EsSo_Playa_SaludRecre.SelectedIndexChanged += new System.EventHandler(this.combox_EsSo_Playa_SaludRecre_SelectedIndexChanged);
             // 
             // label60
             // 
@@ -1746,6 +1757,7 @@
             this.combox_EsSo_OtrosLugares_SaludRecre.Name = "combox_EsSo_OtrosLugares_SaludRecre";
             this.combox_EsSo_OtrosLugares_SaludRecre.Size = new System.Drawing.Size(49, 21);
             this.combox_EsSo_OtrosLugares_SaludRecre.TabIndex = 7;
+            this.combox_EsSo_OtrosLugares_SaludRecre.SelectedIndexChanged += new System.EventHandler(this.combox_EsSo_OtrosLugares_SaludRecre_SelectedIndexChanged);
             // 
             // label59
             // 
@@ -1775,6 +1787,7 @@
             this.combox_EsSo_Balnearios_SaludRecre.Name = "combox_EsSo_Balnearios_SaludRecre";
             this.combox_EsSo_Balnearios_SaludRecre.Size = new System.Drawing.Size(49, 21);
             this.combox_EsSo_Balnearios_SaludRecre.TabIndex = 4;
+            this.combox_EsSo_Balnearios_SaludRecre.SelectedIndexChanged += new System.EventHandler(this.combox_EsSo_Balnearios_SaludRecre_SelectedIndexChanged);
             // 
             // label58
             // 
@@ -1804,6 +1817,7 @@
             this.combox_EsSo_Parques_SaludRecre.Name = "combox_EsSo_Parques_SaludRecre";
             this.combox_EsSo_Parques_SaludRecre.Size = new System.Drawing.Size(49, 21);
             this.combox_EsSo_Parques_SaludRecre.TabIndex = 1;
+            this.combox_EsSo_Parques_SaludRecre.SelectedIndexChanged += new System.EventHandler(this.combox_EsSo_Parques_SaludRecre_SelectedIndexChanged);
             // 
             // label57
             // 
@@ -1984,6 +1998,8 @@
             // 
             // InformacionVivienda
             // 
+            this.InformacionVivienda.Controls.Add(this.groupBox14);
+            this.InformacionVivienda.Controls.Add(this.groupBox15);
             this.InformacionVivienda.Controls.Add(this.btm_EsSo_MontoMatri_InfoVivien);
             this.InformacionVivienda.Controls.Add(this.btm_EsSo_Finalizar_InfoVivien);
             this.InformacionVivienda.Controls.Add(this.groupBox12);
@@ -1995,6 +2011,193 @@
             this.InformacionVivienda.TabIndex = 5;
             this.InformacionVivienda.Text = "Informacion Vivienda";
             this.InformacionVivienda.UseVisualStyleBackColor = true;
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.label66);
+            this.groupBox14.Controls.Add(this.rbtm_EsSo_OtroMaterPiso_InfoVivien);
+            this.groupBox14.Controls.Add(this.rbtm_EsSo_Tierra_InfoVivien);
+            this.groupBox14.Controls.Add(this.rbtm_EsSo_MaderaPiso_InfoVivien);
+            this.groupBox14.Controls.Add(this.rbtm_EsSo_cementoPiso_InfoVivien);
+            this.groupBox14.Controls.Add(this.rbtm_EsSo_CEramica_InfoVivien);
+            this.groupBox14.Controls.Add(this.rbtm_EsSo_LabrilloPiso_InfoVivien);
+            this.groupBox14.Controls.Add(this.txt_EsSo_OtroMaterPiso_InfoVivien);
+            this.groupBox14.Location = new System.Drawing.Point(11, 232);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(223, 115);
+            this.groupBox14.TabIndex = 34;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "Caracteristicas de la vivienda";
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Location = new System.Drawing.Point(22, 13);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(84, 13);
+            this.label66.TabIndex = 28;
+            this.label66.Text = "Material de piso:";
+            // 
+            // rbtm_EsSo_OtroMaterPiso_InfoVivien
+            // 
+            this.rbtm_EsSo_OtroMaterPiso_InfoVivien.AutoSize = true;
+            this.rbtm_EsSo_OtroMaterPiso_InfoVivien.Location = new System.Drawing.Point(25, 82);
+            this.rbtm_EsSo_OtroMaterPiso_InfoVivien.Name = "rbtm_EsSo_OtroMaterPiso_InfoVivien";
+            this.rbtm_EsSo_OtroMaterPiso_InfoVivien.Size = new System.Drawing.Size(45, 17);
+            this.rbtm_EsSo_OtroMaterPiso_InfoVivien.TabIndex = 35;
+            this.rbtm_EsSo_OtroMaterPiso_InfoVivien.TabStop = true;
+            this.rbtm_EsSo_OtroMaterPiso_InfoVivien.Text = "Otro";
+            this.rbtm_EsSo_OtroMaterPiso_InfoVivien.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_OtroMaterPiso_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_OtroMaterPiso_InfoVivien_CheckedChanged);
+            // 
+            // rbtm_EsSo_Tierra_InfoVivien
+            // 
+            this.rbtm_EsSo_Tierra_InfoVivien.AutoSize = true;
+            this.rbtm_EsSo_Tierra_InfoVivien.Location = new System.Drawing.Point(25, 36);
+            this.rbtm_EsSo_Tierra_InfoVivien.Name = "rbtm_EsSo_Tierra_InfoVivien";
+            this.rbtm_EsSo_Tierra_InfoVivien.Size = new System.Drawing.Size(52, 17);
+            this.rbtm_EsSo_Tierra_InfoVivien.TabIndex = 29;
+            this.rbtm_EsSo_Tierra_InfoVivien.TabStop = true;
+            this.rbtm_EsSo_Tierra_InfoVivien.Text = "Tierra";
+            this.rbtm_EsSo_Tierra_InfoVivien.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_Tierra_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_Tierra_InfoVivien_CheckedChanged);
+            // 
+            // rbtm_EsSo_MaderaPiso_InfoVivien
+            // 
+            this.rbtm_EsSo_MaderaPiso_InfoVivien.AutoSize = true;
+            this.rbtm_EsSo_MaderaPiso_InfoVivien.Location = new System.Drawing.Point(100, 59);
+            this.rbtm_EsSo_MaderaPiso_InfoVivien.Name = "rbtm_EsSo_MaderaPiso_InfoVivien";
+            this.rbtm_EsSo_MaderaPiso_InfoVivien.Size = new System.Drawing.Size(61, 17);
+            this.rbtm_EsSo_MaderaPiso_InfoVivien.TabIndex = 34;
+            this.rbtm_EsSo_MaderaPiso_InfoVivien.TabStop = true;
+            this.rbtm_EsSo_MaderaPiso_InfoVivien.Text = "Madera";
+            this.rbtm_EsSo_MaderaPiso_InfoVivien.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_MaderaPiso_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_MaderaPiso_InfoVivien_CheckedChanged);
+            // 
+            // rbtm_EsSo_cementoPiso_InfoVivien
+            // 
+            this.rbtm_EsSo_cementoPiso_InfoVivien.AutoSize = true;
+            this.rbtm_EsSo_cementoPiso_InfoVivien.Location = new System.Drawing.Point(86, 36);
+            this.rbtm_EsSo_cementoPiso_InfoVivien.Name = "rbtm_EsSo_cementoPiso_InfoVivien";
+            this.rbtm_EsSo_cementoPiso_InfoVivien.Size = new System.Drawing.Size(67, 17);
+            this.rbtm_EsSo_cementoPiso_InfoVivien.TabIndex = 30;
+            this.rbtm_EsSo_cementoPiso_InfoVivien.TabStop = true;
+            this.rbtm_EsSo_cementoPiso_InfoVivien.Text = "Cemento";
+            this.rbtm_EsSo_cementoPiso_InfoVivien.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_cementoPiso_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_cementoPiso_InfoVivien_CheckedChanged);
+            // 
+            // rbtm_EsSo_CEramica_InfoVivien
+            // 
+            this.rbtm_EsSo_CEramica_InfoVivien.AutoSize = true;
+            this.rbtm_EsSo_CEramica_InfoVivien.Location = new System.Drawing.Point(25, 59);
+            this.rbtm_EsSo_CEramica_InfoVivien.Name = "rbtm_EsSo_CEramica_InfoVivien";
+            this.rbtm_EsSo_CEramica_InfoVivien.Size = new System.Drawing.Size(69, 17);
+            this.rbtm_EsSo_CEramica_InfoVivien.TabIndex = 33;
+            this.rbtm_EsSo_CEramica_InfoVivien.TabStop = true;
+            this.rbtm_EsSo_CEramica_InfoVivien.Text = "Ceramica";
+            this.rbtm_EsSo_CEramica_InfoVivien.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_CEramica_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_CEramica_InfoVivien_CheckedChanged);
+            // 
+            // rbtm_EsSo_LabrilloPiso_InfoVivien
+            // 
+            this.rbtm_EsSo_LabrilloPiso_InfoVivien.AutoSize = true;
+            this.rbtm_EsSo_LabrilloPiso_InfoVivien.Location = new System.Drawing.Point(165, 36);
+            this.rbtm_EsSo_LabrilloPiso_InfoVivien.Name = "rbtm_EsSo_LabrilloPiso_InfoVivien";
+            this.rbtm_EsSo_LabrilloPiso_InfoVivien.Size = new System.Drawing.Size(58, 17);
+            this.rbtm_EsSo_LabrilloPiso_InfoVivien.TabIndex = 31;
+            this.rbtm_EsSo_LabrilloPiso_InfoVivien.TabStop = true;
+            this.rbtm_EsSo_LabrilloPiso_InfoVivien.Text = "Ladrillo";
+            this.rbtm_EsSo_LabrilloPiso_InfoVivien.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_LabrilloPiso_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_LabrilloPiso_InfoVivien_CheckedChanged);
+            // 
+            // txt_EsSo_OtroMaterPiso_InfoVivien
+            // 
+            this.txt_EsSo_OtroMaterPiso_InfoVivien.Location = new System.Drawing.Point(76, 82);
+            this.txt_EsSo_OtroMaterPiso_InfoVivien.Name = "txt_EsSo_OtroMaterPiso_InfoVivien";
+            this.txt_EsSo_OtroMaterPiso_InfoVivien.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_OtroMaterPiso_InfoVivien.TabIndex = 32;
+            this.txt_EsSo_OtroMaterPiso_InfoVivien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_OtroMaterPiso_InfoVivien_KeyPress);
+            // 
+            // groupBox15
+            // 
+            this.groupBox15.Controls.Add(this.rbtm_EsSo_Madera_InfoVivien);
+            this.groupBox15.Controls.Add(this.label65);
+            this.groupBox15.Controls.Add(this.txt_EsSo_OtroMaterial_InfoVivien);
+            this.groupBox15.Controls.Add(this.rbtm_EsSo_Ladrillo_InfoVivien);
+            this.groupBox15.Controls.Add(this.rbtm_EsSo_OtroMaterial_InfoVivien);
+            this.groupBox15.Controls.Add(this.rbtm_EsSo_Bloque_InfoVivien);
+            this.groupBox15.Location = new System.Drawing.Point(11, 124);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(223, 93);
+            this.groupBox15.TabIndex = 34;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "Caracteristicas de la vivienda";
+            // 
+            // rbtm_EsSo_Madera_InfoVivien
+            // 
+            this.rbtm_EsSo_Madera_InfoVivien.AutoSize = true;
+            this.rbtm_EsSo_Madera_InfoVivien.Location = new System.Drawing.Point(142, 35);
+            this.rbtm_EsSo_Madera_InfoVivien.Name = "rbtm_EsSo_Madera_InfoVivien";
+            this.rbtm_EsSo_Madera_InfoVivien.Size = new System.Drawing.Size(61, 17);
+            this.rbtm_EsSo_Madera_InfoVivien.TabIndex = 36;
+            this.rbtm_EsSo_Madera_InfoVivien.TabStop = true;
+            this.rbtm_EsSo_Madera_InfoVivien.Text = "Madera";
+            this.rbtm_EsSo_Madera_InfoVivien.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_Madera_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_Madera_InfoVivien_CheckedChanged);
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Location = new System.Drawing.Point(6, 19);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(126, 13);
+            this.label65.TabIndex = 23;
+            this.label65.Text = "Material de construccion:";
+            // 
+            // txt_EsSo_OtroMaterial_InfoVivien
+            // 
+            this.txt_EsSo_OtroMaterial_InfoVivien.Location = new System.Drawing.Point(65, 59);
+            this.txt_EsSo_OtroMaterial_InfoVivien.Name = "txt_EsSo_OtroMaterial_InfoVivien";
+            this.txt_EsSo_OtroMaterial_InfoVivien.Size = new System.Drawing.Size(100, 20);
+            this.txt_EsSo_OtroMaterial_InfoVivien.TabIndex = 27;
+            this.txt_EsSo_OtroMaterial_InfoVivien.TextChanged += new System.EventHandler(this.txt_EsSo_OtroMaterial_InfoVivien_TextChanged);
+            this.txt_EsSo_OtroMaterial_InfoVivien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_OtroMaterial_InfoVivien_KeyPress);
+            // 
+            // rbtm_EsSo_Ladrillo_InfoVivien
+            // 
+            this.rbtm_EsSo_Ladrillo_InfoVivien.AutoSize = true;
+            this.rbtm_EsSo_Ladrillo_InfoVivien.Location = new System.Drawing.Point(9, 35);
+            this.rbtm_EsSo_Ladrillo_InfoVivien.Name = "rbtm_EsSo_Ladrillo_InfoVivien";
+            this.rbtm_EsSo_Ladrillo_InfoVivien.Size = new System.Drawing.Size(58, 17);
+            this.rbtm_EsSo_Ladrillo_InfoVivien.TabIndex = 24;
+            this.rbtm_EsSo_Ladrillo_InfoVivien.TabStop = true;
+            this.rbtm_EsSo_Ladrillo_InfoVivien.Text = "Ladrillo";
+            this.rbtm_EsSo_Ladrillo_InfoVivien.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_Ladrillo_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_Ladrillo_InfoVivien_CheckedChanged);
+            // 
+            // rbtm_EsSo_OtroMaterial_InfoVivien
+            // 
+            this.rbtm_EsSo_OtroMaterial_InfoVivien.AutoSize = true;
+            this.rbtm_EsSo_OtroMaterial_InfoVivien.Location = new System.Drawing.Point(9, 59);
+            this.rbtm_EsSo_OtroMaterial_InfoVivien.Name = "rbtm_EsSo_OtroMaterial_InfoVivien";
+            this.rbtm_EsSo_OtroMaterial_InfoVivien.Size = new System.Drawing.Size(50, 17);
+            this.rbtm_EsSo_OtroMaterial_InfoVivien.TabIndex = 26;
+            this.rbtm_EsSo_OtroMaterial_InfoVivien.TabStop = true;
+            this.rbtm_EsSo_OtroMaterial_InfoVivien.Text = "Otros";
+            this.rbtm_EsSo_OtroMaterial_InfoVivien.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_OtroMaterial_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_OtroMaterial_InfoVivien_CheckedChanged);
+            // 
+            // rbtm_EsSo_Bloque_InfoVivien
+            // 
+            this.rbtm_EsSo_Bloque_InfoVivien.AutoSize = true;
+            this.rbtm_EsSo_Bloque_InfoVivien.Location = new System.Drawing.Point(70, 35);
+            this.rbtm_EsSo_Bloque_InfoVivien.Name = "rbtm_EsSo_Bloque_InfoVivien";
+            this.rbtm_EsSo_Bloque_InfoVivien.Size = new System.Drawing.Size(58, 17);
+            this.rbtm_EsSo_Bloque_InfoVivien.TabIndex = 25;
+            this.rbtm_EsSo_Bloque_InfoVivien.TabStop = true;
+            this.rbtm_EsSo_Bloque_InfoVivien.Text = "Bloque";
+            this.rbtm_EsSo_Bloque_InfoVivien.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_Bloque_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_Bloque_InfoVivien_CheckedChanged);
             // 
             // btm_EsSo_MontoMatri_InfoVivien
             // 
@@ -2020,149 +2223,31 @@
             // 
             // groupBox12
             // 
-            this.groupBox12.Controls.Add(this.rbtm_EsSo_Madera_InfoVivien);
-            this.groupBox12.Controls.Add(this.rbtm_EsSo_OtroMaterPiso_InfoVivien);
-            this.groupBox12.Controls.Add(this.rbtm_EsSo_MaderaPiso_InfoVivien);
-            this.groupBox12.Controls.Add(this.rbtm_EsSo_CEramica_InfoVivien);
             this.groupBox12.Controls.Add(this.label64);
-            this.groupBox12.Controls.Add(this.txt_EsSo_OtroMaterPiso_InfoVivien);
-            this.groupBox12.Controls.Add(this.rbtm_EsSo_Propia_InfoVivien);
-            this.groupBox12.Controls.Add(this.rbtm_EsSo_LabrilloPiso_InfoVivien);
-            this.groupBox12.Controls.Add(this.rbtm_EsSo_Alquilada_InfoVivien);
-            this.groupBox12.Controls.Add(this.rbtm_EsSo_cementoPiso_InfoVivien);
             this.groupBox12.Controls.Add(this.rbtm_EsSo_OtroCaracte_InfoVivien);
-            this.groupBox12.Controls.Add(this.rbtm_EsSo_Tierra_InfoVivien);
             this.groupBox12.Controls.Add(this.txt_EsSo_OtraTenencia_InfoVivien);
-            this.groupBox12.Controls.Add(this.label66);
-            this.groupBox12.Controls.Add(this.label65);
-            this.groupBox12.Controls.Add(this.txt_EsSo_OtroMaterial_InfoVivien);
-            this.groupBox12.Controls.Add(this.rbtm_EsSo_Ladrillo_InfoVivien);
-            this.groupBox12.Controls.Add(this.rbtm_EsSo_OtroMaterial_InfoVivien);
-            this.groupBox12.Controls.Add(this.rbtm_EsSo_Bloque_InfoVivien);
+            this.groupBox12.Controls.Add(this.rbtm_EsSo_Alquilada_InfoVivien);
+            this.groupBox12.Controls.Add(this.rbtm_EsSo_Propia_InfoVivien);
             this.groupBox12.Location = new System.Drawing.Point(11, 20);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(223, 300);
+            this.groupBox12.Size = new System.Drawing.Size(223, 93);
             this.groupBox12.TabIndex = 33;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Caracteristicas de la vivienda";
             // 
-            // rbtm_EsSo_Madera_InfoVivien
-            // 
-            this.rbtm_EsSo_Madera_InfoVivien.AutoSize = true;
-            this.rbtm_EsSo_Madera_InfoVivien.Location = new System.Drawing.Point(152, 120);
-            this.rbtm_EsSo_Madera_InfoVivien.Name = "rbtm_EsSo_Madera_InfoVivien";
-            this.rbtm_EsSo_Madera_InfoVivien.Size = new System.Drawing.Size(61, 17);
-            this.rbtm_EsSo_Madera_InfoVivien.TabIndex = 36;
-            this.rbtm_EsSo_Madera_InfoVivien.TabStop = true;
-            this.rbtm_EsSo_Madera_InfoVivien.Text = "Madera";
-            this.rbtm_EsSo_Madera_InfoVivien.UseVisualStyleBackColor = true;
-            this.rbtm_EsSo_Madera_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_Madera_InfoVivien_CheckedChanged);
-            // 
-            // rbtm_EsSo_OtroMaterPiso_InfoVivien
-            // 
-            this.rbtm_EsSo_OtroMaterPiso_InfoVivien.AutoSize = true;
-            this.rbtm_EsSo_OtroMaterPiso_InfoVivien.Location = new System.Drawing.Point(19, 259);
-            this.rbtm_EsSo_OtroMaterPiso_InfoVivien.Name = "rbtm_EsSo_OtroMaterPiso_InfoVivien";
-            this.rbtm_EsSo_OtroMaterPiso_InfoVivien.Size = new System.Drawing.Size(45, 17);
-            this.rbtm_EsSo_OtroMaterPiso_InfoVivien.TabIndex = 35;
-            this.rbtm_EsSo_OtroMaterPiso_InfoVivien.TabStop = true;
-            this.rbtm_EsSo_OtroMaterPiso_InfoVivien.Text = "Otro";
-            this.rbtm_EsSo_OtroMaterPiso_InfoVivien.UseVisualStyleBackColor = true;
-            this.rbtm_EsSo_OtroMaterPiso_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_OtroMaterPiso_InfoVivien_CheckedChanged);
-            // 
-            // rbtm_EsSo_MaderaPiso_InfoVivien
-            // 
-            this.rbtm_EsSo_MaderaPiso_InfoVivien.AutoSize = true;
-            this.rbtm_EsSo_MaderaPiso_InfoVivien.Location = new System.Drawing.Point(94, 236);
-            this.rbtm_EsSo_MaderaPiso_InfoVivien.Name = "rbtm_EsSo_MaderaPiso_InfoVivien";
-            this.rbtm_EsSo_MaderaPiso_InfoVivien.Size = new System.Drawing.Size(61, 17);
-            this.rbtm_EsSo_MaderaPiso_InfoVivien.TabIndex = 34;
-            this.rbtm_EsSo_MaderaPiso_InfoVivien.TabStop = true;
-            this.rbtm_EsSo_MaderaPiso_InfoVivien.Text = "Madera";
-            this.rbtm_EsSo_MaderaPiso_InfoVivien.UseVisualStyleBackColor = true;
-            this.rbtm_EsSo_MaderaPiso_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_MaderaPiso_InfoVivien_CheckedChanged);
-            // 
-            // rbtm_EsSo_CEramica_InfoVivien
-            // 
-            this.rbtm_EsSo_CEramica_InfoVivien.AutoSize = true;
-            this.rbtm_EsSo_CEramica_InfoVivien.Location = new System.Drawing.Point(19, 236);
-            this.rbtm_EsSo_CEramica_InfoVivien.Name = "rbtm_EsSo_CEramica_InfoVivien";
-            this.rbtm_EsSo_CEramica_InfoVivien.Size = new System.Drawing.Size(69, 17);
-            this.rbtm_EsSo_CEramica_InfoVivien.TabIndex = 33;
-            this.rbtm_EsSo_CEramica_InfoVivien.TabStop = true;
-            this.rbtm_EsSo_CEramica_InfoVivien.Text = "Ceramica";
-            this.rbtm_EsSo_CEramica_InfoVivien.UseVisualStyleBackColor = true;
-            this.rbtm_EsSo_CEramica_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_CEramica_InfoVivien_CheckedChanged);
-            // 
             // label64
             // 
             this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(16, 27);
+            this.label64.Location = new System.Drawing.Point(22, 16);
             this.label64.Name = "label64";
             this.label64.Size = new System.Drawing.Size(55, 13);
             this.label64.TabIndex = 2;
             this.label64.Text = "Tenencia:";
             // 
-            // txt_EsSo_OtroMaterPiso_InfoVivien
-            // 
-            this.txt_EsSo_OtroMaterPiso_InfoVivien.Location = new System.Drawing.Point(70, 259);
-            this.txt_EsSo_OtroMaterPiso_InfoVivien.Name = "txt_EsSo_OtroMaterPiso_InfoVivien";
-            this.txt_EsSo_OtroMaterPiso_InfoVivien.Size = new System.Drawing.Size(100, 20);
-            this.txt_EsSo_OtroMaterPiso_InfoVivien.TabIndex = 32;
-            this.txt_EsSo_OtroMaterPiso_InfoVivien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_OtroMaterPiso_InfoVivien_KeyPress);
-            // 
-            // rbtm_EsSo_Propia_InfoVivien
-            // 
-            this.rbtm_EsSo_Propia_InfoVivien.AutoSize = true;
-            this.rbtm_EsSo_Propia_InfoVivien.Location = new System.Drawing.Point(19, 43);
-            this.rbtm_EsSo_Propia_InfoVivien.Name = "rbtm_EsSo_Propia_InfoVivien";
-            this.rbtm_EsSo_Propia_InfoVivien.Size = new System.Drawing.Size(55, 17);
-            this.rbtm_EsSo_Propia_InfoVivien.TabIndex = 3;
-            this.rbtm_EsSo_Propia_InfoVivien.TabStop = true;
-            this.rbtm_EsSo_Propia_InfoVivien.Text = "Propia";
-            this.rbtm_EsSo_Propia_InfoVivien.UseVisualStyleBackColor = true;
-            this.rbtm_EsSo_Propia_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_Propia_InfoVivien_CheckedChanged);
-            // 
-            // rbtm_EsSo_LabrilloPiso_InfoVivien
-            // 
-            this.rbtm_EsSo_LabrilloPiso_InfoVivien.AutoSize = true;
-            this.rbtm_EsSo_LabrilloPiso_InfoVivien.Location = new System.Drawing.Point(159, 213);
-            this.rbtm_EsSo_LabrilloPiso_InfoVivien.Name = "rbtm_EsSo_LabrilloPiso_InfoVivien";
-            this.rbtm_EsSo_LabrilloPiso_InfoVivien.Size = new System.Drawing.Size(58, 17);
-            this.rbtm_EsSo_LabrilloPiso_InfoVivien.TabIndex = 31;
-            this.rbtm_EsSo_LabrilloPiso_InfoVivien.TabStop = true;
-            this.rbtm_EsSo_LabrilloPiso_InfoVivien.Text = "Ladrillo";
-            this.rbtm_EsSo_LabrilloPiso_InfoVivien.UseVisualStyleBackColor = true;
-            this.rbtm_EsSo_LabrilloPiso_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_LabrilloPiso_InfoVivien_CheckedChanged);
-            // 
-            // rbtm_EsSo_Alquilada_InfoVivien
-            // 
-            this.rbtm_EsSo_Alquilada_InfoVivien.AutoSize = true;
-            this.rbtm_EsSo_Alquilada_InfoVivien.Location = new System.Drawing.Point(80, 43);
-            this.rbtm_EsSo_Alquilada_InfoVivien.Name = "rbtm_EsSo_Alquilada_InfoVivien";
-            this.rbtm_EsSo_Alquilada_InfoVivien.Size = new System.Drawing.Size(68, 17);
-            this.rbtm_EsSo_Alquilada_InfoVivien.TabIndex = 4;
-            this.rbtm_EsSo_Alquilada_InfoVivien.TabStop = true;
-            this.rbtm_EsSo_Alquilada_InfoVivien.Text = "Alquilada";
-            this.rbtm_EsSo_Alquilada_InfoVivien.UseVisualStyleBackColor = true;
-            this.rbtm_EsSo_Alquilada_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_Alquilada_InfoVivien_CheckedChanged);
-            // 
-            // rbtm_EsSo_cementoPiso_InfoVivien
-            // 
-            this.rbtm_EsSo_cementoPiso_InfoVivien.AutoSize = true;
-            this.rbtm_EsSo_cementoPiso_InfoVivien.Location = new System.Drawing.Point(94, 213);
-            this.rbtm_EsSo_cementoPiso_InfoVivien.Name = "rbtm_EsSo_cementoPiso_InfoVivien";
-            this.rbtm_EsSo_cementoPiso_InfoVivien.Size = new System.Drawing.Size(67, 17);
-            this.rbtm_EsSo_cementoPiso_InfoVivien.TabIndex = 30;
-            this.rbtm_EsSo_cementoPiso_InfoVivien.TabStop = true;
-            this.rbtm_EsSo_cementoPiso_InfoVivien.Text = "Cemento";
-            this.rbtm_EsSo_cementoPiso_InfoVivien.UseVisualStyleBackColor = true;
-            this.rbtm_EsSo_cementoPiso_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_cementoPiso_InfoVivien_CheckedChanged);
-            // 
             // rbtm_EsSo_OtroCaracte_InfoVivien
             // 
             this.rbtm_EsSo_OtroCaracte_InfoVivien.AutoSize = true;
-            this.rbtm_EsSo_OtroCaracte_InfoVivien.Location = new System.Drawing.Point(19, 66);
+            this.rbtm_EsSo_OtroCaracte_InfoVivien.Location = new System.Drawing.Point(25, 55);
             this.rbtm_EsSo_OtroCaracte_InfoVivien.Name = "rbtm_EsSo_OtroCaracte_InfoVivien";
             this.rbtm_EsSo_OtroCaracte_InfoVivien.Size = new System.Drawing.Size(45, 17);
             this.rbtm_EsSo_OtroCaracte_InfoVivien.TabIndex = 5;
@@ -2171,88 +2256,37 @@
             this.rbtm_EsSo_OtroCaracte_InfoVivien.UseVisualStyleBackColor = true;
             this.rbtm_EsSo_OtroCaracte_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_OtroCaracte_InfoVivien_CheckedChanged);
             // 
-            // rbtm_EsSo_Tierra_InfoVivien
-            // 
-            this.rbtm_EsSo_Tierra_InfoVivien.AutoSize = true;
-            this.rbtm_EsSo_Tierra_InfoVivien.Location = new System.Drawing.Point(19, 213);
-            this.rbtm_EsSo_Tierra_InfoVivien.Name = "rbtm_EsSo_Tierra_InfoVivien";
-            this.rbtm_EsSo_Tierra_InfoVivien.Size = new System.Drawing.Size(52, 17);
-            this.rbtm_EsSo_Tierra_InfoVivien.TabIndex = 29;
-            this.rbtm_EsSo_Tierra_InfoVivien.TabStop = true;
-            this.rbtm_EsSo_Tierra_InfoVivien.Text = "Tierra";
-            this.rbtm_EsSo_Tierra_InfoVivien.UseVisualStyleBackColor = true;
-            this.rbtm_EsSo_Tierra_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_Tierra_InfoVivien_CheckedChanged);
-            // 
             // txt_EsSo_OtraTenencia_InfoVivien
             // 
-            this.txt_EsSo_OtraTenencia_InfoVivien.Location = new System.Drawing.Point(70, 65);
+            this.txt_EsSo_OtraTenencia_InfoVivien.Location = new System.Drawing.Point(76, 54);
             this.txt_EsSo_OtraTenencia_InfoVivien.Name = "txt_EsSo_OtraTenencia_InfoVivien";
             this.txt_EsSo_OtraTenencia_InfoVivien.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_OtraTenencia_InfoVivien.TabIndex = 22;
             this.txt_EsSo_OtraTenencia_InfoVivien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.e);
             // 
-            // label66
+            // rbtm_EsSo_Alquilada_InfoVivien
             // 
-            this.label66.AutoSize = true;
-            this.label66.Location = new System.Drawing.Point(16, 190);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(84, 13);
-            this.label66.TabIndex = 28;
-            this.label66.Text = "Material de piso:";
+            this.rbtm_EsSo_Alquilada_InfoVivien.AutoSize = true;
+            this.rbtm_EsSo_Alquilada_InfoVivien.Location = new System.Drawing.Point(86, 32);
+            this.rbtm_EsSo_Alquilada_InfoVivien.Name = "rbtm_EsSo_Alquilada_InfoVivien";
+            this.rbtm_EsSo_Alquilada_InfoVivien.Size = new System.Drawing.Size(68, 17);
+            this.rbtm_EsSo_Alquilada_InfoVivien.TabIndex = 4;
+            this.rbtm_EsSo_Alquilada_InfoVivien.TabStop = true;
+            this.rbtm_EsSo_Alquilada_InfoVivien.Text = "Alquilada";
+            this.rbtm_EsSo_Alquilada_InfoVivien.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_Alquilada_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_Alquilada_InfoVivien_CheckedChanged);
             // 
-            // label65
+            // rbtm_EsSo_Propia_InfoVivien
             // 
-            this.label65.AutoSize = true;
-            this.label65.Location = new System.Drawing.Point(16, 104);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(126, 13);
-            this.label65.TabIndex = 23;
-            this.label65.Text = "Material de construccion:";
-            // 
-            // txt_EsSo_OtroMaterial_InfoVivien
-            // 
-            this.txt_EsSo_OtroMaterial_InfoVivien.Location = new System.Drawing.Point(75, 144);
-            this.txt_EsSo_OtroMaterial_InfoVivien.Name = "txt_EsSo_OtroMaterial_InfoVivien";
-            this.txt_EsSo_OtroMaterial_InfoVivien.Size = new System.Drawing.Size(100, 20);
-            this.txt_EsSo_OtroMaterial_InfoVivien.TabIndex = 27;
-            this.txt_EsSo_OtroMaterial_InfoVivien.TextChanged += new System.EventHandler(this.txt_EsSo_OtroMaterial_InfoVivien_TextChanged);
-            this.txt_EsSo_OtroMaterial_InfoVivien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_OtroMaterial_InfoVivien_KeyPress);
-            // 
-            // rbtm_EsSo_Ladrillo_InfoVivien
-            // 
-            this.rbtm_EsSo_Ladrillo_InfoVivien.AutoSize = true;
-            this.rbtm_EsSo_Ladrillo_InfoVivien.Location = new System.Drawing.Point(19, 120);
-            this.rbtm_EsSo_Ladrillo_InfoVivien.Name = "rbtm_EsSo_Ladrillo_InfoVivien";
-            this.rbtm_EsSo_Ladrillo_InfoVivien.Size = new System.Drawing.Size(58, 17);
-            this.rbtm_EsSo_Ladrillo_InfoVivien.TabIndex = 24;
-            this.rbtm_EsSo_Ladrillo_InfoVivien.TabStop = true;
-            this.rbtm_EsSo_Ladrillo_InfoVivien.Text = "Ladrillo";
-            this.rbtm_EsSo_Ladrillo_InfoVivien.UseVisualStyleBackColor = true;
-            this.rbtm_EsSo_Ladrillo_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_Ladrillo_InfoVivien_CheckedChanged);
-            // 
-            // rbtm_EsSo_OtroMaterial_InfoVivien
-            // 
-            this.rbtm_EsSo_OtroMaterial_InfoVivien.AutoSize = true;
-            this.rbtm_EsSo_OtroMaterial_InfoVivien.Location = new System.Drawing.Point(19, 144);
-            this.rbtm_EsSo_OtroMaterial_InfoVivien.Name = "rbtm_EsSo_OtroMaterial_InfoVivien";
-            this.rbtm_EsSo_OtroMaterial_InfoVivien.Size = new System.Drawing.Size(50, 17);
-            this.rbtm_EsSo_OtroMaterial_InfoVivien.TabIndex = 26;
-            this.rbtm_EsSo_OtroMaterial_InfoVivien.TabStop = true;
-            this.rbtm_EsSo_OtroMaterial_InfoVivien.Text = "Otros";
-            this.rbtm_EsSo_OtroMaterial_InfoVivien.UseVisualStyleBackColor = true;
-            this.rbtm_EsSo_OtroMaterial_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_OtroMaterial_InfoVivien_CheckedChanged);
-            // 
-            // rbtm_EsSo_Bloque_InfoVivien
-            // 
-            this.rbtm_EsSo_Bloque_InfoVivien.AutoSize = true;
-            this.rbtm_EsSo_Bloque_InfoVivien.Location = new System.Drawing.Point(80, 120);
-            this.rbtm_EsSo_Bloque_InfoVivien.Name = "rbtm_EsSo_Bloque_InfoVivien";
-            this.rbtm_EsSo_Bloque_InfoVivien.Size = new System.Drawing.Size(58, 17);
-            this.rbtm_EsSo_Bloque_InfoVivien.TabIndex = 25;
-            this.rbtm_EsSo_Bloque_InfoVivien.TabStop = true;
-            this.rbtm_EsSo_Bloque_InfoVivien.Text = "Bloque";
-            this.rbtm_EsSo_Bloque_InfoVivien.UseVisualStyleBackColor = true;
-            this.rbtm_EsSo_Bloque_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_Bloque_InfoVivien_CheckedChanged);
+            this.rbtm_EsSo_Propia_InfoVivien.AutoSize = true;
+            this.rbtm_EsSo_Propia_InfoVivien.Location = new System.Drawing.Point(25, 32);
+            this.rbtm_EsSo_Propia_InfoVivien.Name = "rbtm_EsSo_Propia_InfoVivien";
+            this.rbtm_EsSo_Propia_InfoVivien.Size = new System.Drawing.Size(55, 17);
+            this.rbtm_EsSo_Propia_InfoVivien.TabIndex = 3;
+            this.rbtm_EsSo_Propia_InfoVivien.TabStop = true;
+            this.rbtm_EsSo_Propia_InfoVivien.Text = "Propia";
+            this.rbtm_EsSo_Propia_InfoVivien.UseVisualStyleBackColor = true;
+            this.rbtm_EsSo_Propia_InfoVivien.CheckedChanged += new System.EventHandler(this.rbtm_EsSo_Propia_InfoVivien_CheckedChanged);
             // 
             // groupBox11
             // 
@@ -2477,7 +2511,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(724, 582);
+            this.ClientSize = new System.Drawing.Size(952, 582);
             this.Controls.Add(this.tabEstSocioEco);
             this.Name = "FormaEstSocEco";
             this.Text = " ";
@@ -2509,6 +2543,10 @@
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.InformacionVivienda.ResumeLayout(false);
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox14.PerformLayout();
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox15.PerformLayout();
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
             this.groupBox11.ResumeLayout(false);
@@ -2737,5 +2775,7 @@
         private System.Windows.Forms.TextBox txt_EsSo_SexoAlum_DatosGe;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.GroupBox groupBox15;
     }
 }

@@ -46,6 +46,7 @@
             this.btm_Aceptar_responsables.TabIndex = 19;
             this.btm_Aceptar_responsables.Text = "Aceptar";
             this.btm_Aceptar_responsables.UseVisualStyleBackColor = true;
+            this.btm_Aceptar_responsables.Click += new System.EventHandler(this.btm_Aceptar_responsables_Click);
             // 
             // btm_buscar_responsable
             // 

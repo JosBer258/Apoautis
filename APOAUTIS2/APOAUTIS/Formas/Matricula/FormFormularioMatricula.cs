@@ -78,5 +78,10 @@ namespace APOAUTIS
         {
 
         }
+
+        private void Pest1_Txt_NomEducador_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 }

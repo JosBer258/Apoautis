@@ -21,6 +21,7 @@ namespace APOAUTIS.Clases
         private DateTime fecha_NacAlumno;
         private string lugarNacAlumno;
         private string sexoAlumno;
+        private string personaEntrevistada;
 
         public int CodAlumno
         {
@@ -113,16 +114,26 @@ namespace APOAUTIS.Clases
             }
         }
 
+        public string PersonaEntrevistada
+        {
+            get
+            {
+                return personaEntrevistada;
+            }
 
-
-
+            set
+            {
+                personaEntrevistada = value;
+            }
+        }
 
         public C_DatosGenerales()
         {
         }
 
-        public C_DatosGenerales(int codAlumno, double idAlumno, string nombreAlumno, int edadAlumno, DateTime fecha_NacAlumno, string lugarNacAlumno, string sexoAlumno)
+        public C_DatosGenerales(int codAlumno, double idAlumno, string nombreAlumno, int edadAlumno, DateTime fecha_NacAlumno, string lugarNacAlumno, string sexoAlumno, string personaEntrevistada)
         {
+
             CodAlumno = codAlumno;
             IdAlumno = idAlumno;
             NombreAlumno = nombreAlumno;
@@ -130,6 +141,7 @@ namespace APOAUTIS.Clases
             Fecha_NacAlumno = fecha_NacAlumno;
             LugarNacAlumno = lugarNacAlumno;
             SexoAlumno = sexoAlumno;
+            PersonaEntrevistada =  personaEntrevistada;
         }
     }
 }

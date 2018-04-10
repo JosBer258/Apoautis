@@ -14,12 +14,15 @@ namespace APOAUTIS.Clases
         private string parentesco;
         private int edad;
         private string telefono;
+        private string telcasa;
+        private string cel;
         private string profesion;
         private string oficio;
         private int tipoResp;
 
-        public C_ResponsablesOtro(int codAlumno, int codRespOtro, string nomRespOtro, string parentesco, int edad, string telefono, string profesion, string oficio, int tipoResp)
+        public C_ResponsablesOtro(int codAlumno, int codRespOtro, string nomRespOtro, string parentesco, int edad, string telefono, string profesion, string oficio, int tipoResp, string telcasa,string cel)
         {
+
             CodAlumno = codAlumno;
             CodRespOtro = codRespOtro;
             NomRespOtro = nomRespOtro;
@@ -29,7 +32,9 @@ namespace APOAUTIS.Clases
             Profesion = profesion;
             Oficio = oficio;
             TipoResp = tipoResp;
-        }
+            Telcasa=telcasa;
+            Cel=cel;
+    }
 
         public C_ResponsablesOtro()
         {
@@ -149,6 +154,32 @@ namespace APOAUTIS.Clases
             set
             {
                 tipoResp = value;
+            }
+        }
+
+        public string Telcasa
+        {
+            get
+            {
+                return telcasa;
+            }
+
+            set
+            {
+                telcasa = value;
+            }
+        }
+
+        public string Cel
+        {
+            get
+            {
+                return cel;
+            }
+
+            set
+            {
+                cel = value;
             }
         }
     }
