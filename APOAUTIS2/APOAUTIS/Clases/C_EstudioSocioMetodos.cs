@@ -20,7 +20,7 @@ namespace APOAUTIS.Clases
         {
             MySqlConnection conectar = new MySqlConnection("server=127.0.0.1; database=mydb; Uid=root; pwd=123456;");
 
-            conectar.Open();
+             conectar.Open();
             return conectar;
         }
 

@@ -612,7 +612,7 @@
             this.txt_EsSo_IdentiEst_DatosGe.Name = "txt_EsSo_IdentiEst_DatosGe";
             this.txt_EsSo_IdentiEst_DatosGe.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_IdentiEst_DatosGe.TabIndex = 9;
-            this.txt_EsSo_IdentiEst_DatosGe.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.txt_EsSo_IdentiEst_DatosGe.TextChanged += new System.EventHandler(this.txt_EsSo_IdentiEst_DatosGe_TextChanged);
             // 
             // label5
             // 
@@ -631,6 +631,7 @@
             this.txt_EsSo_EdadEst_DatosGe.Name = "txt_EsSo_EdadEst_DatosGe";
             this.txt_EsSo_EdadEst_DatosGe.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_EdadEst_DatosGe.TabIndex = 7;
+            this.txt_EsSo_EdadEst_DatosGe.TextChanged += new System.EventHandler(this.txt_EsSo_EdadEst_DatosGe_TextChanged);
             // 
             // label4
             // 
@@ -648,6 +649,7 @@
             this.txt_EsSo_FechaNa_DatosGe.Name = "txt_EsSo_FechaNa_DatosGe";
             this.txt_EsSo_FechaNa_DatosGe.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_FechaNa_DatosGe.TabIndex = 5;
+            this.txt_EsSo_FechaNa_DatosGe.TextChanged += new System.EventHandler(this.txt_EsSo_FechaNa_DatosGe_TextChanged);
             // 
             // label3
             // 
@@ -665,6 +667,7 @@
             this.txt_EsSo_LugarNaci_DatosGe.Name = "txt_EsSo_LugarNaci_DatosGe";
             this.txt_EsSo_LugarNaci_DatosGe.Size = new System.Drawing.Size(298, 20);
             this.txt_EsSo_LugarNaci_DatosGe.TabIndex = 3;
+            this.txt_EsSo_LugarNaci_DatosGe.TextChanged += new System.EventHandler(this.txt_EsSo_LugarNaci_DatosGe_TextChanged);
             // 
             // label2
             // 
@@ -682,6 +685,7 @@
             this.txt_EsSo_NombreEst_DatosGe.Name = "txt_EsSo_NombreEst_DatosGe";
             this.txt_EsSo_NombreEst_DatosGe.Size = new System.Drawing.Size(298, 20);
             this.txt_EsSo_NombreEst_DatosGe.TabIndex = 1;
+            this.txt_EsSo_NombreEst_DatosGe.TextChanged += new System.EventHandler(this.txt_EsSo_NombreEst_DatosGe_TextChanged);
             // 
             // label1
             // 
@@ -2568,15 +2572,10 @@
         private System.Windows.Forms.TabPage SaludRecreacion;
         private System.Windows.Forms.TabPage InformacionVivienda;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txt_EsSo_IdentiEst_DatosGe;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txt_EsSo_EdadEst_DatosGe;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt_EsSo_FechaNa_DatosGe;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_EsSo_LugarNaci_DatosGe;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txt_EsSo_NombreEst_DatosGe;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txt_EsSo_TelTrabMadre_DatosGe;
@@ -2772,10 +2771,19 @@
         private System.Windows.Forms.Button btm_EsSo_BuscarAlumno_DatosGe;
         private System.Windows.Forms.TextBox txt_EsSo_Aporbado_SaludRecre;
         private System.Windows.Forms.Label label71;
+<<<<<<< HEAD
         private System.Windows.Forms.TextBox txt_EsSo_SexoAlum_DatosGe;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.GroupBox groupBox14;
         private System.Windows.Forms.GroupBox groupBox15;
+=======
+        public System.Windows.Forms.TextBox txt_EsSo_IdentiEst_DatosGe;
+        public System.Windows.Forms.TextBox txt_EsSo_EdadEst_DatosGe;
+        public System.Windows.Forms.TextBox txt_EsSo_FechaNa_DatosGe;
+        public System.Windows.Forms.TextBox txt_EsSo_LugarNaci_DatosGe;
+        public System.Windows.Forms.TextBox txt_EsSo_NombreEst_DatosGe;
+        public System.Windows.Forms.TextBox txt_EsSo_SexoAlum_DatosGe;
+>>>>>>> master
     }
 }
