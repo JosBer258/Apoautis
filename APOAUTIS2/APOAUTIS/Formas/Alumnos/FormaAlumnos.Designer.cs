@@ -351,6 +351,7 @@
             this.Pest2_Pest1_Cmb_RecEvaluacion.Name = "Pest2_Pest1_Cmb_RecEvaluacion";
             this.Pest2_Pest1_Cmb_RecEvaluacion.Size = new System.Drawing.Size(86, 21);
             this.Pest2_Pest1_Cmb_RecEvaluacion.TabIndex = 20;
+            this.Pest2_Pest1_Cmb_RecEvaluacion.SelectedIndexChanged += new System.EventHandler(this.Pest2_Pest1_Cmb_RecEvaluacion_SelectedIndexChanged);
             // 
             // Pest2_Pest1_Txt_Observaciones
             // 
@@ -358,6 +359,7 @@
             this.Pest2_Pest1_Txt_Observaciones.Name = "Pest2_Pest1_Txt_Observaciones";
             this.Pest2_Pest1_Txt_Observaciones.Size = new System.Drawing.Size(127, 20);
             this.Pest2_Pest1_Txt_Observaciones.TabIndex = 19;
+            this.Pest2_Pest1_Txt_Observaciones.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Pest1_Txt_Observaciones_KeyPress);
             // 
             // label34
             // 
@@ -370,6 +372,7 @@
             // 
             // Pest2_Pest1_Txt_FechaIngreso
             // 
+            this.Pest2_Pest1_Txt_FechaIngreso.Enabled = false;
             this.Pest2_Pest1_Txt_FechaIngreso.Location = new System.Drawing.Point(528, 62);
             this.Pest2_Pest1_Txt_FechaIngreso.Name = "Pest2_Pest1_Txt_FechaIngreso";
             this.Pest2_Pest1_Txt_FechaIngreso.Size = new System.Drawing.Size(127, 20);
@@ -404,6 +407,7 @@
             // 
             // Pest2_Pest1_Txt_AIngreso
             // 
+            this.Pest2_Pest1_Txt_AIngreso.Enabled = false;
             this.Pest2_Pest1_Txt_AIngreso.Location = new System.Drawing.Point(229, 69);
             this.Pest2_Pest1_Txt_AIngreso.Name = "Pest2_Pest1_Txt_AIngreso";
             this.Pest2_Pest1_Txt_AIngreso.Size = new System.Drawing.Size(125, 20);
@@ -1012,6 +1016,7 @@
             this.Pest2_Pest3_Cmb_Trabaja.Name = "Pest2_Pest3_Cmb_Trabaja";
             this.Pest2_Pest3_Cmb_Trabaja.Size = new System.Drawing.Size(101, 21);
             this.Pest2_Pest3_Cmb_Trabaja.TabIndex = 27;
+            this.Pest2_Pest3_Cmb_Trabaja.SelectedIndexChanged += new System.EventHandler(this.Pest2_Pest3_Cmb_Trabaja_SelectedIndexChanged);
             // 
             // Pest2_Pest3_Txt_EdadAnos
             // 

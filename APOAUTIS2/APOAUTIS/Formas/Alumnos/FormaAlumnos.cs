@@ -197,6 +197,26 @@ namespace APOAUTIS.Formas.Alumnos
                 alumno.GenerarJornada(Pest2_Pest1_Cmb_Jornada);
                 resp.GenerarEstado(Pest2_Pest3_Cmb_TipoResponsable);
                 Pest2_Pest3_Cmb_Trabaja.SelectedIndex = 0;
+                alumno.llenarDatosMatricula(Convert.ToInt32(Pest2_Pest1_Txt_Codigo.Text));
+                if (alumno.CodMatricula <= 0)
+                {
+                    Pest2_Pest1_GrupoMatricula.Enabled = false;
+                    limpieza(Pest2_Pest1_GrupoMatricula);
+                    Pest2_Pest1_Cmb_Jornada.DataSource = null;
+                    Pest2_Pest1_Cmb_RecEvaluacion.SelectedIndex = -1;
+
+
+                }
+                else
+                {
+                    Pest2_Pest1_GrupoMatricula.Enabled = true;
+                    Pest2_Pest1_Cmb_Jornada.SelectedValue = alumno.Jornada;
+                    Pest2_Pest1_Cmb_RecEvaluacion.SelectedItem = alumno.RecibioEvalu.ToUpper();
+                    Pest2_Pest1_Txt_FechaIngreso.Text = alumno.FechaIngreso;
+                    Pest2_Pest1_Txt_Observaciones.Text = alumno.Observaciones;
+                    Pest2_Pest1_Txt_AIngreso.Text = alumno.AnioIngreso;
+                }
+              
 
                 Pest2_Pest2_Txt_Medicamentos.Text = Convert.ToString(alumno.UsoMedicamentos1);
                 Pest2_Pest2_Txt_Alergias.Text = Convert.ToString(alumno.ExistenciaAlergias1);
@@ -341,14 +361,42 @@ namespace APOAUTIS.Formas.Alumnos
 
 
 
-                        alumno.updateAlumnos(Pest2_Pest1_Txt_Sexo.Text, Pest2_Pest1_Txt_Direccion.Text,
-                            Pest2_Pest1_Txt_TelefonoFijo.Text, Pest2_Pest1_Txt_Celular.Text, Pest2_Pest1_Txt_Escolaridad.Text
-                            , Pest2_Pest1_Txt_InstiProcedencia.Text, Pest2_Pest1_Txt_Instituto.Text,
-                             Convert.ToInt32(Pest2_Pest1_Cmb_Estado.SelectedValue),
-                             textBox1Pest2_Pest1_Txt_lugarEmergencia.Text,
-                             Pest2_Pest1_Txt_TelefonoEmergencia.Text, alumno.CodAlumno11);
-                        MessageBox.Show("Ingresado Exitosamente");
-                        alumno.Fun_Show(Pest1_Dgv_BsqAlm);
+                      
+                       
+                            if (alumno.CodMatricula <= 0)
+                            {
+                                alumno.updateAlumnos(Pest2_Pest1_Txt_Sexo.Text, Pest2_Pest1_Txt_Direccion.Text,
+                          Pest2_Pest1_Txt_TelefonoFijo.Text, Pest2_Pest1_Txt_Celular.Text, Pest2_Pest1_Txt_Escolaridad.Text
+                          , Pest2_Pest1_Txt_InstiProcedencia.Text, Pest2_Pest1_Txt_Instituto.Text,
+                           Convert.ToInt32(Pest2_Pest1_Cmb_Estado.SelectedValue),
+                           textBox1Pest2_Pest1_Txt_lugarEmergencia.Text,
+                           Pest2_Pest1_Txt_TelefonoEmergencia.Text, alumno.CodAlumno11);
+                            MessageBox.Show("Ingresado Exitosamente");
+                            alumno.Fun_Show(Pest1_Dgv_BsqAlm);
+                        }
+                            else if(Pest2_Pest1_GrupoMatricula.Enabled == true && Vacios(Pest2_Pest1_GrupoMatricula) == true &&
+                                alumno.CodMatricula > 0)
+                            {
+                                alumno.updateMatricula(Convert.ToInt32(Pest2_Pest1_Cmb_Jornada.SelectedValue),
+                                Pest2_Pest1_Cmb_RecEvaluacion.SelectedItem.ToString(), Pest2_Pest1_Txt_Observaciones.Text
+                                , alumno.CodAlumno11);
+                            alumno.updateAlumnos(Pest2_Pest1_Txt_Sexo.Text, Pest2_Pest1_Txt_Direccion.Text,
+                          Pest2_Pest1_Txt_TelefonoFijo.Text, Pest2_Pest1_Txt_Celular.Text, Pest2_Pest1_Txt_Escolaridad.Text
+                          , Pest2_Pest1_Txt_InstiProcedencia.Text, Pest2_Pest1_Txt_Instituto.Text,
+                           Convert.ToInt32(Pest2_Pest1_Cmb_Estado.SelectedValue),
+                           textBox1Pest2_Pest1_Txt_lugarEmergencia.Text,
+                           Pest2_Pest1_Txt_TelefonoEmergencia.Text, alumno.CodAlumno11);
+                            errorProvider1.SetError(Pest2_Pest1_GrupoMatricula, "");
+                            MessageBox.Show("Ingresado Exitosamente");
+                            alumno.Fun_Show(Pest1_Dgv_BsqAlm);
+                        }
+                        else if (Pest2_Pest1_GrupoMatricula.Enabled == true && Vacios(Pest2_Pest1_GrupoMatricula) == false &&
+                            alumno.CodMatricula > 0)
+                        {
+                            errorProvider1.SetError(Pest2_Pest1_GrupoMatricula, "Por Favor, LLene los campos restantes");
+                        }
+
+
 
                     }
 
@@ -437,6 +485,7 @@ namespace APOAUTIS.Formas.Alumnos
         private void Pest2_Pest1_Bttn_Limpiar_Click(object sender, EventArgs e)
         {
             limpieza(Pest2_Pest1_GrupoGeneral);
+            limpieza(Pest2_Pest1_GrupoMatricula);
         }
 
         private void Pest2_Pest1_Txt_Codigo_TextChanged(object sender, EventArgs e)
@@ -464,6 +513,31 @@ namespace APOAUTIS.Formas.Alumnos
         private void Pest2_Pest1_Txt_TelefonoEmergencia_KeyPress(object sender, KeyPressEventArgs e)
         {
             val.ValidarID(sender, e);
+        }
+
+        private void Pest2_Pest1_Cmb_RecEvaluacion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Pest2_Pest3_Cmb_Trabaja_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Pest2_Pest3_Cmb_Trabaja.SelectedIndex == 1)
+            {
+                Pest2_Pest3_Txt_LugarTrabajo.Enabled = false;
+                Pest2_Pest3_Txt_LugarTrabajo.Text = "No trabaja";
+
+            }
+            else
+            {
+                Pest2_Pest3_Txt_LugarTrabajo.Enabled = true;
+                Pest2_Pest3_Txt_LugarTrabajo.Clear();
+            }
+        }
+
+        private void Pest2_Pest1_Txt_Observaciones_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            val.ValidarNombres_SoloLetras(sender, e);
         }
     }
 }
