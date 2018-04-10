@@ -73,6 +73,7 @@
             this.Txt_FiltroAlumno.Name = "Txt_FiltroAlumno";
             this.Txt_FiltroAlumno.Size = new System.Drawing.Size(385, 24);
             this.Txt_FiltroAlumno.TabIndex = 10;
+            this.Txt_FiltroAlumno.TextChanged += new System.EventHandler(this.Txt_FiltroAlumno_TextChanged);
             // 
             // label1
             // 

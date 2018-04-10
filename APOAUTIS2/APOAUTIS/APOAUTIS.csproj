@@ -117,6 +117,12 @@
     <Compile Include="Formas\Responsables\FormMantenimientoResponsable.Designer.cs">
       <DependentUpon>FormMantenimientoResponsable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formas\Responsables\FormResponsables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Responsables\FormResponsables.Designer.cs">
+      <DependentUpon>FormResponsables.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmBusquedaMatricula.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Responsables\FormMantenimientoResponsable.resx">
       <DependentUpon>FormMantenimientoResponsable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Responsables\FormResponsables.resx">
+      <DependentUpon>FormResponsables.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBusquedaMatricula.resx">
       <DependentUpon>FrmBusquedaMatricula.cs</DependentUpon>

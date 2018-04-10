@@ -1,6 +1,6 @@
 ﻿namespace APOAUTIS.Formas.Responsables
 {
-    partial class FormMantenimientoResponsable
+    partial class FormResponsables
     {
         /// <summary>
         /// Required designer variable.
@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSalir = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txtBusqResp = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.DGV_ShowResponsables = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Pest1_Grupo_ShowAlumno = new System.Windows.Forms.GroupBox();
+            this.DGV_ShowAlumnosResp = new System.Windows.Forms.DataGridView();
             this.Pest1_Grupo_DatosEncargado = new System.Windows.Forms.GroupBox();
-            this.cmbParentesco = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.txtCorrResp = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.cmbEstResp = new System.Windows.Forms.ComboBox();
@@ -66,19 +67,10 @@
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_ShowResponsables)).BeginInit();
             this.tabPage2.SuspendLayout();
+            this.Pest1_Grupo_ShowAlumno.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_ShowAlumnosResp)).BeginInit();
             this.Pest1_Grupo_DatosEncargado.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(688, 379);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(99, 35);
-            this.btnSalir.TabIndex = 31;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.Bttn_Salir_Click);
             // 
             // tabControl1
             // 
@@ -88,19 +80,39 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(779, 361);
-            this.tabControl1.TabIndex = 30;
+            this.tabControl1.Size = new System.Drawing.Size(775, 449);
+            this.tabControl1.TabIndex = 31;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.txtBusqResp);
+            this.tabPage1.Controls.Add(this.label14);
             this.tabPage1.Controls.Add(this.DGV_ShowResponsables);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(771, 335);
+            this.tabPage1.Size = new System.Drawing.Size(767, 423);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Busqueda de Responsable";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // txtBusqResp
+            // 
+            this.txtBusqResp.Location = new System.Drawing.Point(174, 35);
+            this.txtBusqResp.Name = "txtBusqResp";
+            this.txtBusqResp.Size = new System.Drawing.Size(365, 20);
+            this.txtBusqResp.TabIndex = 30;
+            this.txtBusqResp.TextChanged += new System.EventHandler(this.txtBusqResp_TextChanged);
+            this.txtBusqResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBusqResp_KeyPress_1);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(32, 38);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(136, 13);
+            this.label14.TabIndex = 29;
+            this.label14.Text = "Busqueda por Nombre:";
             // 
             // DGV_ShowResponsables
             // 
@@ -111,30 +123,58 @@
             this.DGV_ShowResponsables.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.DGV_ShowResponsables.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DGV_ShowResponsables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_ShowResponsables.Location = new System.Drawing.Point(6, 20);
+            this.DGV_ShowResponsables.Location = new System.Drawing.Point(10, 83);
             this.DGV_ShowResponsables.MultiSelect = false;
             this.DGV_ShowResponsables.Name = "DGV_ShowResponsables";
             this.DGV_ShowResponsables.ReadOnly = true;
             this.DGV_ShowResponsables.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_ShowResponsables.Size = new System.Drawing.Size(746, 295);
+            this.DGV_ShowResponsables.Size = new System.Drawing.Size(746, 308);
             this.DGV_ShowResponsables.TabIndex = 28;
             this.DGV_ShowResponsables.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_ShowResponsables_CellDoubleClick);
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.Pest1_Grupo_ShowAlumno);
             this.tabPage2.Controls.Add(this.Pest1_Grupo_DatosEncargado);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(771, 335);
+            this.tabPage2.Size = new System.Drawing.Size(767, 423);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Datos de Responsable";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // Pest1_Grupo_ShowAlumno
+            // 
+            this.Pest1_Grupo_ShowAlumno.Controls.Add(this.DGV_ShowAlumnosResp);
+            this.Pest1_Grupo_ShowAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest1_Grupo_ShowAlumno.Location = new System.Drawing.Point(6, 275);
+            this.Pest1_Grupo_ShowAlumno.Name = "Pest1_Grupo_ShowAlumno";
+            this.Pest1_Grupo_ShowAlumno.Size = new System.Drawing.Size(755, 138);
+            this.Pest1_Grupo_ShowAlumno.TabIndex = 4;
+            this.Pest1_Grupo_ShowAlumno.TabStop = false;
+            this.Pest1_Grupo_ShowAlumno.Text = "Todos los alumnos bajo su cuidado";
+            // 
+            // DGV_ShowAlumnosResp
+            // 
+            this.DGV_ShowAlumnosResp.AllowUserToAddRows = false;
+            this.DGV_ShowAlumnosResp.AllowUserToDeleteRows = false;
+            this.DGV_ShowAlumnosResp.AllowUserToResizeColumns = false;
+            this.DGV_ShowAlumnosResp.AllowUserToResizeRows = false;
+            this.DGV_ShowAlumnosResp.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DGV_ShowAlumnosResp.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.DGV_ShowAlumnosResp.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.DGV_ShowAlumnosResp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_ShowAlumnosResp.Location = new System.Drawing.Point(6, 19);
+            this.DGV_ShowAlumnosResp.MultiSelect = false;
+            this.DGV_ShowAlumnosResp.Name = "DGV_ShowAlumnosResp";
+            this.DGV_ShowAlumnosResp.ReadOnly = true;
+            this.DGV_ShowAlumnosResp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGV_ShowAlumnosResp.Size = new System.Drawing.Size(743, 113);
+            this.DGV_ShowAlumnosResp.TabIndex = 2;
+            // 
             // Pest1_Grupo_DatosEncargado
             // 
-            this.Pest1_Grupo_DatosEncargado.Controls.Add(this.cmbParentesco);
-            this.Pest1_Grupo_DatosEncargado.Controls.Add(this.label13);
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.txtCorrResp);
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.label12);
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.cmbEstResp);
@@ -169,30 +209,6 @@
             this.Pest1_Grupo_DatosEncargado.TabStop = false;
             this.Pest1_Grupo_DatosEncargado.Text = "Datos de los Encargados";
             // 
-            // cmbParentesco
-            // 
-            this.cmbParentesco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbParentesco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbParentesco.FormattingEnabled = true;
-            this.cmbParentesco.Items.AddRange(new object[] {
-            "Padre",
-            "Madre",
-            "Otro"});
-            this.cmbParentesco.Location = new System.Drawing.Point(189, 198);
-            this.cmbParentesco.Name = "cmbParentesco";
-            this.cmbParentesco.Size = new System.Drawing.Size(158, 24);
-            this.cmbParentesco.TabIndex = 32;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(39, 198);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(87, 16);
-            this.label13.TabIndex = 31;
-            this.label13.Text = "Parentesco";
-            // 
             // txtCorrResp
             // 
             this.txtCorrResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -201,7 +217,7 @@
             this.txtCorrResp.Name = "txtCorrResp";
             this.txtCorrResp.Size = new System.Drawing.Size(158, 22);
             this.txtCorrResp.TabIndex = 30;
-            this.txtCorrResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorrResp_KeyPress);
+            this.txtCorrResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorrResp_KeyPress_1);
             // 
             // label12
             // 
@@ -238,7 +254,7 @@
             this.cmbTrabResp.Name = "cmbTrabResp";
             this.cmbTrabResp.Size = new System.Drawing.Size(101, 24);
             this.cmbTrabResp.TabIndex = 27;
-            this.cmbTrabResp.SelectedIndexChanged += new System.EventHandler(this.cmbTrabResp_SelectedIndexChanged);
+            this.cmbTrabResp.SelectedIndexChanged += new System.EventHandler(this.cmbTrabResp_SelectedIndexChanged_1);
             // 
             // btnLimpiar
             // 
@@ -249,7 +265,7 @@
             this.btnLimpiar.TabIndex = 24;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click_1);
             // 
             // btnAceptar
             // 
@@ -280,7 +296,7 @@
             this.txtTelTrabResp.Name = "txtTelTrabResp";
             this.txtTelTrabResp.Size = new System.Drawing.Size(193, 22);
             this.txtTelTrabResp.TabIndex = 21;
-            this.txtTelTrabResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelTrabResp_KeyPress);
+            this.txtTelTrabResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelTrabResp_KeyPress_1);
             // 
             // label8
             // 
@@ -300,7 +316,7 @@
             this.txtTelCelResp.Name = "txtTelCelResp";
             this.txtTelCelResp.Size = new System.Drawing.Size(193, 22);
             this.txtTelCelResp.TabIndex = 19;
-            this.txtTelCelResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelCelResp_KeyPress);
+            this.txtTelCelResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelCelResp_KeyPress_1);
             // 
             // label9
             // 
@@ -320,7 +336,7 @@
             this.txtDomResp.Name = "txtDomResp";
             this.txtDomResp.Size = new System.Drawing.Size(158, 22);
             this.txtDomResp.TabIndex = 17;
-            this.txtDomResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDomResp_KeyPress);
+            this.txtDomResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDomResp_KeyPress_1);
             // 
             // label10
             // 
@@ -340,7 +356,7 @@
             this.txtProfResp.Name = "txtProfResp";
             this.txtProfResp.Size = new System.Drawing.Size(158, 22);
             this.txtProfResp.TabIndex = 15;
-            this.txtProfResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProfResp_KeyPress);
+            this.txtProfResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProfResp_KeyPress_1);
             // 
             // label11
             // 
@@ -360,7 +376,7 @@
             this.txtTelCasResp.Name = "txtTelCasResp";
             this.txtTelCasResp.Size = new System.Drawing.Size(193, 22);
             this.txtTelCasResp.TabIndex = 11;
-            this.txtTelCasResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelCasResp_KeyPress);
+            this.txtTelCasResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelCasResp_KeyPress_1);
             // 
             // label6
             // 
@@ -380,7 +396,7 @@
             this.txtLugResp.Name = "txtLugResp";
             this.txtLugResp.Size = new System.Drawing.Size(193, 22);
             this.txtLugResp.TabIndex = 9;
-            this.txtLugResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLugResp_KeyPress);
+            this.txtLugResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLugResp_KeyPress_1);
             // 
             // label5
             // 
@@ -411,7 +427,6 @@
             this.txtNomResp.Name = "txtNomResp";
             this.txtNomResp.Size = new System.Drawing.Size(158, 22);
             this.txtNomResp.TabIndex = 5;
-            this.txtNomResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNomResp_KeyPress);
             // 
             // label3
             // 
@@ -432,7 +447,6 @@
             this.txtIdResp.Name = "txtIdResp";
             this.txtIdResp.Size = new System.Drawing.Size(158, 22);
             this.txtIdResp.TabIndex = 3;
-            this.txtIdResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdResp_KeyPress);
             // 
             // label2
             // 
@@ -464,24 +478,22 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo";
             // 
-            // FormMantenimientoResponsable
+            // FormResponsables
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(803, 425);
-            this.ControlBox = false;
-            this.Controls.Add(this.btnSalir);
+            this.ClientSize = new System.Drawing.Size(793, 470);
             this.Controls.Add(this.tabControl1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "FormMantenimientoResponsable";
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "Mantenimiento de Responsable";
-            this.Load += new System.EventHandler(this.FormMantenimientoResponsable_Load);
+            this.Name = "FormResponsables";
+            this.Text = "Mantenimiento Responsables";
+            this.Load += new System.EventHandler(this.FormResponsables_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_ShowResponsables)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            this.Pest1_Grupo_ShowAlumno.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_ShowAlumnosResp)).EndInit();
             this.Pest1_Grupo_DatosEncargado.ResumeLayout(false);
             this.Pest1_Grupo_DatosEncargado.PerformLayout();
             this.ResumeLayout(false);
@@ -490,39 +502,40 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TextBox txtBusqResp;
+        private System.Windows.Forms.Label label14;
+        public System.Windows.Forms.DataGridView DGV_ShowResponsables;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.GroupBox Pest1_Grupo_ShowAlumno;
+        private System.Windows.Forms.DataGridView DGV_ShowAlumnosResp;
         private System.Windows.Forms.GroupBox Pest1_Grupo_DatosEncargado;
+        public System.Windows.Forms.TextBox txtCorrResp;
+        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cmbEstResp;
         private System.Windows.Forms.ComboBox cmbTrabResp;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Label label7;
+        public System.Windows.Forms.TextBox txtTelTrabResp;
         private System.Windows.Forms.Label label8;
+        public System.Windows.Forms.TextBox txtTelCelResp;
         private System.Windows.Forms.Label label9;
+        public System.Windows.Forms.TextBox txtDomResp;
         private System.Windows.Forms.Label label10;
+        public System.Windows.Forms.TextBox txtProfResp;
         private System.Windows.Forms.Label label11;
+        public System.Windows.Forms.TextBox txtTelCasResp;
         private System.Windows.Forms.Label label6;
+        public System.Windows.Forms.TextBox txtLugResp;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.TextBox txtCodResp;
-        public System.Windows.Forms.TextBox txtTelTrabResp;
-        public System.Windows.Forms.TextBox txtTelCelResp;
-        public System.Windows.Forms.TextBox txtDomResp;
-        public System.Windows.Forms.TextBox txtProfResp;
-        public System.Windows.Forms.TextBox txtTelCasResp;
-        public System.Windows.Forms.TextBox txtLugResp;
         public System.Windows.Forms.TextBox txtNomResp;
+        private System.Windows.Forms.Label label3;
         public System.Windows.Forms.TextBox txtIdResp;
-        public System.Windows.Forms.TextBox txtCorrResp;
-        private System.Windows.Forms.Label label12;
-        public System.Windows.Forms.DataGridView DGV_ShowResponsables;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox cmbParentesco;
+        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.TextBox txtCodResp;
+        private System.Windows.Forms.Label label1;
     }
 }

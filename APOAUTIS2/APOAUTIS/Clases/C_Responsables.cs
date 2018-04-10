@@ -27,6 +27,8 @@ namespace APOAUTIS.Clases
         private string telTrabResp;
         private string corrResp;
         private string tipoResp;
+        private string parentesco;
+        private static int abrir;
      
         public int CodResp
         {
@@ -212,6 +214,63 @@ namespace APOAUTIS.Clases
             }
         }
 
+        public string Parentesco
+        {
+            get
+            {
+                return parentesco;
+            }
+
+            set
+            {
+                parentesco = value;
+            }
+        }
+
+        public static int Abrir1
+        {
+            get
+            {
+                return abrir;
+            }
+
+            set
+            {
+                abrir = value;
+            }
+        }
+
+        public void cargarTodosResp(DataGridView dgv)
+        {
+            cnx.Open();
+            try
+            {
+                DataAdapter = new MySqlDataAdapter(@"SELECT A.CodResp as 'Codigo de Responsable',
+					                                    B.DescripcionEstado as 'Estado',
+					                                    A.NomComRes as 'Nombre Completo', 
+					                                    A.NumIdRes as 'Numero de Identidad', 
+					                                    A.DomicilioRes as 'Domicilio',
+					                                    A.ProfecionRes as 'Profesion',
+					                                    A.LugarTrabajoRes as 'Trabajo',
+					                                    A.TelCasaRes as 'Telefono de Casa',
+					                                    A.TelCelRes as 'Telefono Celular',
+					                                    A.TelTrabajoRes as 'Telefono de Trabajo',
+					                                    A.CorreoRes as 'Correo' 
+					                                    FROM responsables as A
+                                                        inner join Estados as B
+                                                        on A.Estado = B.CodEstado;", ccnx);
+                dt = new DataTable();
+                DataAdapter.Fill(dt);
+                dgv.DataSource = dt;
+
+            }
+            catch
+            {
+
+            }
+            cnx.Close();
+        }
+
         public void Fill_DGV_Resp(DataGridView dgv, string CodA)
         {
             cnx.Open();
@@ -343,6 +402,20 @@ namespace APOAUTIS.Clases
            
         }
 
+        public void updateParentesco(string CodigT, int codResp, string CodigA)
+        {
+            this.sql = string.Format(@"UPDATE `alumnos/responsables` SET Cod_TipoResp = '{0}'
+                                        WHERE CodResp = '{1}' AND CodAlumno = '{2}'",
+                                        CodigT, codResp, CodigA);//////////////////
+
+            this.cmd = new MySqlCommand(this.sql, this.cnx);
+            this.cnx.Open();
+            MySqlDataReader Reg = null;
+            Reg = this.cmd.ExecuteReader();
+            this.cnx.Close();
+
+        }
+
         public void msjUpdateCorrecto()
         {
             MessageBox.Show("Los datos se han actualizado correctamente","Datos Actualizados");
@@ -356,7 +429,6 @@ namespace APOAUTIS.Clases
             fResp.txtCodResp.Text = string.Empty;
             fResp.txtNomResp.Text = string.Empty;
             fResp.txtDomResp.Text = string.Empty;
-            //fResp.txtEdadResp.Text = string.Empty;
             fResp.txtIdResp.Text = string.Empty;
             fResp.txtTelCasResp.Text = string.Empty;
             fResp.txtTelCelResp.Text = string.Empty;
@@ -376,22 +448,3 @@ namespace APOAUTIS.Clases
     }
 }
 
-/*
-
-En BD
-OFICIO Y PROFESION SON LO MISMO
-# de ID debe ser STRING
-??CAMPO DE EDAD EN RESPONSABLES
-??LUGAR DE ORIGEN en Alumnos
-Quitar UNIQ # DE CEL
-COD DE EVAL AUTO
-
-MAX LENGTH DE TODOS LOS TEXTBOXES
-MOSTRAR COD DE EVAL AUTOINC
-SOLO NUMEROS NO DIGITOS
-
-**SI del trabajo
-CORREO DEBE ACEPTAR GUION BAJO
-Que se cambie a no el combobox
-
-*/

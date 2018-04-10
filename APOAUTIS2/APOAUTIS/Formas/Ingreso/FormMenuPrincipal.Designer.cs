@@ -49,6 +49,8 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mydbDataSet = new APOAUTIS.mydbDataSet();
             this.alumnosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buscarPorRespnsableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarPorAlumnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mydbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alumnosBindingSource)).BeginInit();
@@ -137,6 +139,9 @@
             // 
             // responsablesToolStripMenuItem
             // 
+            this.responsablesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.buscarPorRespnsableToolStripMenuItem,
+            this.buscarPorAlumnoToolStripMenuItem});
             this.responsablesToolStripMenuItem.Name = "responsablesToolStripMenuItem";
             this.responsablesToolStripMenuItem.Size = new System.Drawing.Size(94, 22);
             this.responsablesToolStripMenuItem.Text = "Responsables";
@@ -214,6 +219,20 @@
             this.alumnosBindingSource.DataMember = "alumnos";
             this.alumnosBindingSource.DataSource = this.mydbDataSet;
             // 
+            // buscarPorRespnsableToolStripMenuItem
+            // 
+            this.buscarPorRespnsableToolStripMenuItem.Name = "buscarPorRespnsableToolStripMenuItem";
+            this.buscarPorRespnsableToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.buscarPorRespnsableToolStripMenuItem.Text = "Buscar por Respnsable";
+            this.buscarPorRespnsableToolStripMenuItem.Click += new System.EventHandler(this.buscarPorRespnsableToolStripMenuItem_Click);
+            // 
+            // buscarPorAlumnoToolStripMenuItem
+            // 
+            this.buscarPorAlumnoToolStripMenuItem.Name = "buscarPorAlumnoToolStripMenuItem";
+            this.buscarPorAlumnoToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.buscarPorAlumnoToolStripMenuItem.Text = "Buscar por Alumno";
+            this.buscarPorAlumnoToolStripMenuItem.Click += new System.EventHandler(this.buscarPorAlumnoToolStripMenuItem_Click);
+            // 
             // FormMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,5 +279,7 @@
         private System.Windows.Forms.ToolStripMenuItem ingresosGastosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem montoMatriculaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem responsablesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarPorRespnsableToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarPorAlumnoToolStripMenuItem;
     }
 }

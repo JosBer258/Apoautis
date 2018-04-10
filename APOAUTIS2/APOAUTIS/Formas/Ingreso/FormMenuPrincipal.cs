@@ -126,15 +126,26 @@ namespace APOAUTIS.Formas.Ingreso
 
         private void responsablesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*FormMantenimientoResponsable Resp = new FormMantenimientoResponsable();
-            Resp.ShowDialog();*/
-            FormAlumDeResp AlumResp = new FormAlumDeResp();
-            AlumResp.ShowDialog();
+                       
         }
 
         private void pruebasToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buscarPorAlumnoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAlumDeResp AlumResp = new FormAlumDeResp();
+            AlumResp.ShowDialog();
+            //APOAUTIS.Clases.C_Responsables.Abrir1 = 1;
+        }
+
+        private void buscarPorRespnsableToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormResponsables Resp = new FormResponsables();
+            Resp.ShowDialog();
+            //APOAUTIS.Clases.C_Responsables.Abrir1 = 0;
         }
     }
 }

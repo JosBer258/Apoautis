@@ -107,3 +107,4 @@ C:\Users\Geovana\Desktop\SW\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Vista
 C:\Users\Geovana\Desktop\SW\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.VistaMatricula.resources
 C:\Users\Geovana\Desktop\SW\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.csproj.GenerateResource.Cache
 C:\Users\Geovana\Desktop\SW\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Responsables.FormAlumDeResp.resources
+C:\Users\Geovana\Desktop\SW\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Responsables.FormResponsables.resources
