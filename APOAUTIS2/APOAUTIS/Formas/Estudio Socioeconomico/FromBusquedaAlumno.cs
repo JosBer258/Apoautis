@@ -47,7 +47,6 @@ namespace APOAUTIS.Formas.Estudio_Socioeconomico
                         estudio.txt_EsSo_LugarNaci_DatosGe.Text = DGV_Show.CurrentRow.Cells[2].Value.ToString();
                         estudio.txt_EsSo_FechaNa_DatosGe.Text = DGV_Show.CurrentRow.Cells[3].Value.ToString();
                         estudio.txt_EsSo_EdadEst_DatosGe.Text = DGV_Show.CurrentRow.Cells[4].Value.ToString();
-                        estudio.txt_EsSo_SexoAlum_DatosGe.Text = DGV_Show.CurrentRow.Cells[5].Value.ToString();
 
 
 
@@ -91,11 +90,11 @@ namespace APOAUTIS.Formas.Estudio_Socioeconomico
         {
 
 
-            
-            /*
-                if (DGV_Show.SelectedRows.Count == 1)
-                {
-                    double cod = Convert.ToDouble(DGV_Show.CurrentRow.Cells[0].Value);
+
+
+            if (DGV_Show.SelectedRows.Count == 1)
+            {
+                double cod = Convert.ToDouble(DGV_Show.CurrentRow.Cells[0].Value);
                 AlumnoSeleccionado = C_EstudioSocioMetodos.ObtenerDatosGenerales(cod);
 
                 double cod2 = Convert.ToDouble(DGV_Show.CurrentRow.Cells[0].Value);
@@ -105,26 +104,14 @@ namespace APOAUTIS.Formas.Estudio_Socioeconomico
                 padreSeleccionado = C_EstudioSocioMetodos.ObtenerPadre(cod3);
                 /*
                 double cod4 = Convert.ToDouble(DGV_Show.CurrentRow.Cells[0].Value);
-                otrorespSeleccionado = C_EstudioSocioMetodos.ObtenerOtro(cod4);
+                otrorespSeleccionado = C_EstudioSocioMetodos.ObtenerOtroResp(cod);
                 */
-
                 this.Close();
-                }
-
-                else
-                    MessageBox.Show("debe de seleccionar una fila");
-
-                */
             }
 
-<<<<<<< HEAD
 
 
+        }
 
-
-
-=======
-    
->>>>>>> master
     }
 }

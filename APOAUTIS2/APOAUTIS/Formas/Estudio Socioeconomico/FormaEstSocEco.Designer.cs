@@ -2771,19 +2771,17 @@
         private System.Windows.Forms.Button btm_EsSo_BuscarAlumno_DatosGe;
         private System.Windows.Forms.TextBox txt_EsSo_Aporbado_SaludRecre;
         private System.Windows.Forms.Label label71;
-<<<<<<< HEAD
+
         private System.Windows.Forms.TextBox txt_EsSo_SexoAlum_DatosGe;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.GroupBox groupBox14;
         private System.Windows.Forms.GroupBox groupBox15;
-=======
         public System.Windows.Forms.TextBox txt_EsSo_IdentiEst_DatosGe;
         public System.Windows.Forms.TextBox txt_EsSo_EdadEst_DatosGe;
         public System.Windows.Forms.TextBox txt_EsSo_FechaNa_DatosGe;
         public System.Windows.Forms.TextBox txt_EsSo_LugarNaci_DatosGe;
         public System.Windows.Forms.TextBox txt_EsSo_NombreEst_DatosGe;
-        public System.Windows.Forms.TextBox txt_EsSo_SexoAlum_DatosGe;
->>>>>>> master
+
     }
 }

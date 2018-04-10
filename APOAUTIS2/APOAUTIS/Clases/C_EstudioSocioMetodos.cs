@@ -377,7 +377,7 @@ namespace APOAUTIS.Clases
             C_ResponsablesOtro otro = new C_ResponsablesOtro();
             MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
 
-            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT t.CodResp FROM `alumnos/responsables` t WHERE t.CodResp = ( SELECT MAX(CodResp)  FROM `alumnos/responsables`)"), conexion);
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT t.CodResp FROM responsables t WHERE t.CodResp = ( SELECT MAX(CodResp)  FROM responsables)"), conexion);
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
             {

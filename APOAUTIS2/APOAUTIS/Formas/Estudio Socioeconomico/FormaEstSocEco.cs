@@ -231,7 +231,7 @@ namespace APOAUTIS
             int resultado7 = Clases.C_EstudioSocioMetodos.AgregarPadre(padreresp);
 
             */
-            /*
+            
            Clases.C_EstudioSocioMetodos.ObtenerOtro();
 
            var_respO = otroresp.CodRespOtro;
@@ -240,7 +240,7 @@ namespace APOAUTIS
            Clases.C_ResponsablesOtro Otroresp = new Clases.C_ResponsablesOtro();
            Otroresp.CodRespOtro = var_respO+1;
            Otroresp.NomRespOtro= txt_EsSo_NomEncarg_DatosGe.Text;
-           Otroresp.Telefono = Convert.ToString(txt_EsSo_TelEncarg_DatosGe);
+           Otroresp.Telefono = Convert.ToString(txt_EsSo_TelEncarg_DatosGe.Text);
            Otroresp.Profesion = txt_EsSo_OficioEncarg_DatosGe.Text;
 
            int resultado8 = Clases.C_EstudioSocioMetodos.AgregarOtro(Otroresp);
@@ -255,12 +255,34 @@ namespace APOAUTIS
            else
            {
                MessageBox.Show("nuevo responsable  ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
            }
 
 
+            Clases.C_ResponsablesOtro tipor = new Clases.C_ResponsablesOtro();
+
+            tipor.CodRespOtro = var_respO + 1;
+            tipor.CodAlumno = Var_codigoAlumno;
 
 
-           Clases.C_ResponsablesOtro tiporesp = new Clases.C_ResponsablesOtro();
+            int resultado10 = Clases.C_EstudioSocioMetodos.AgregarOtroTipo(tipor);
+
+
+
+
+            if (resultado10 > 0)
+            {
+                MessageBox.Show("tipo resp ", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("otro tipo alumres", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+
+
+            Clases.C_ResponsablesOtro tiporesp = new Clases.C_ResponsablesOtro();
            Otroresp.CodRespOtro = var_respO + 1;
            tiporesp.Parentesco= txt_EsSo_ParentescoEncar_DatosGe.Text;
            tiporesp.Edad = Convert.ToInt32(txt_EsSo_EdadEncarg_DatosGe.Text);
@@ -280,57 +302,39 @@ namespace APOAUTIS
                MessageBox.Show("otro tipo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
            }
 
-           Clases.C_ResponsablesOtro tipor = new Clases.C_ResponsablesOtro();
-
-           tipor.CodRespOtro = var_respO + 1;
-           tipor.CodAlumno= Var_codigoAlumno;
+ 
 
 
-           int resultado10 = Clases.C_EstudioSocioMetodos.AgregarOtroTipo(tipor);
+            /*
 
+            Clases.C_LugaresRecreacion recreacion = new Clases.C_LugaresRecreacion();
+            recreacion.CodAlumno = Var_codigoAlumno;
+            recreacion.Parques= Convert.ToString(combox_EsSo_Parques_SaludRecre.Text + "" + txt_EsSo_Parques_SaludRecre.Text );
+            recreacion.CentrosComerciales = Convert.ToString(combox_EsSo_CentrosCom_SaludRecre.Text + "" + txt_EsSo_CentrosCom_SaludRecre.Text);
+            recreacion.Museos = Convert.ToString(combox_EsSo_Museos_SaludRecre.Text + "" + txt_EsSo_Museos_SaludRecre.Text);
+            recreacion.Cine = Convert.ToString(combox_EsSo_Cine_SaludRecre.Text + "" + txt_EsSo_cine_SaludRecre.Text);
+            recreacion.Balnearios = Convert.ToString(combox_EsSo_Balnearios_SaludRecre.Text + "" + txt_EsSo_Balnearios_SaludRecre.Text);
+            recreacion.Playa = Convert.ToString(combox_EsSo_Playa_SaludRecre.Text + "" + txt_EsSo_Playa_SaludRecre.Text);
+            recreacion.Otros = Convert.ToString(txt_EsSo_OtrosLugares_SaludRecre.Text + "" + combox_EsSo_OtrosLugares_SaludRecre.Text);
 
-
-
-           if (resultado10 > 0)
-           {
-               MessageBox.Show("tipo resp ", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-           }
-           else
-           {
-               MessageBox.Show("otro tipo alumres", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-           }
+            int resultado4 = Clases.C_EstudioSocioMetodos.AgregarLugaresRecreacion(recreacion);
 
 
 
-
-           Clases.C_LugaresRecreacion recreacion = new Clases.C_LugaresRecreacion();
-           recreacion.CodAlumno = Var_codigoAlumno;
-           recreacion.Parques= Convert.ToString(combox_EsSo_Parques_SaludRecre.Text + "" + txt_EsSo_Parques_SaludRecre.Text );
-           recreacion.CentrosComerciales = Convert.ToString(combox_EsSo_CentrosCom_SaludRecre.Text + "" + txt_EsSo_CentrosCom_SaludRecre.Text);
-           recreacion.Museos = Convert.ToString(combox_EsSo_Museos_SaludRecre.Text + "" + txt_EsSo_Museos_SaludRecre.Text);
-           recreacion.Cine = Convert.ToString(combox_EsSo_Cine_SaludRecre.Text + "" + txt_EsSo_cine_SaludRecre.Text);
-           recreacion.Balnearios = Convert.ToString(combox_EsSo_Balnearios_SaludRecre.Text + "" + txt_EsSo_Balnearios_SaludRecre.Text);
-           recreacion.Playa = Convert.ToString(combox_EsSo_Playa_SaludRecre.Text + "" + txt_EsSo_Playa_SaludRecre.Text);
-           recreacion.Otros = Convert.ToString(txt_EsSo_OtrosLugares_SaludRecre.Text + "" + combox_EsSo_OtrosLugares_SaludRecre.Text);
-
-           int resultado4 = Clases.C_EstudioSocioMetodos.AgregarLugaresRecreacion(recreacion);
+             Clases.C_InformacionVivienda vivienda = new Clases.C_InformacionVivienda();
+             vivienda.CodAlumno = Var_codigoAlumno;
+             vivienda.Tenencia= Convert.ToString(rb_propia + "" + rb_alquilada + "" +rb_otraTenencia +"" + txt_EsSo_OtraTenencia_InfoVivien.Text);
+             vivienda.MaterialConst = Convert.ToString(const_ladrillo+ ""+ cont_bloque+ "" + cont_madera+""+ cont_otro+ "" + txt_EsSo_OtroMaterial_InfoVivien.Text);
+             vivienda.MaterialPiso = Convert.ToString(piso_tierra + "" + piso_cemento+""+piso_ladrillo+ ""+piso_ceramica+ ""+piso_madera+ "" + piso_otro +"" + txt_EsSo_OtroMaterPiso_InfoVivien.Text);
+             vivienda.ServicioBasicos = Convert.ToString(energia + "" +agua + "" +telefono + "" +alcantarillado + "" +otroServicio + "" + txt_EsSo_OtroServicio_InfoVivien.Text);
+             vivienda.DisponeDe = Convert.ToString(television + "" +telefono + "" +refrigerador + "" +Estufa + "" +ducha + "" +lavadora + "" +auto + "" +micro + "" +compu + "" +ventilador + "" +aire );
 
 
-    */
-            Clases.C_InformacionVivienda vivienda = new Clases.C_InformacionVivienda();
-            vivienda.CodAlumno = Var_codigoAlumno;
-            vivienda.Tenencia= Convert.ToString(rb_propia + "" + rb_alquilada + "" +rb_otraTenencia +"" + txt_EsSo_OtraTenencia_InfoVivien.Text);
-            vivienda.MaterialConst = Convert.ToString(const_ladrillo+ ""+ cont_bloque+ "" + cont_madera+""+ cont_otro+ "" + txt_EsSo_OtroMaterial_InfoVivien.Text);
-            vivienda.MaterialPiso = Convert.ToString(piso_tierra + "" + piso_cemento+""+piso_ladrillo+ ""+piso_ceramica+ ""+piso_madera+ "" + piso_otro +"" + txt_EsSo_OtroMaterPiso_InfoVivien.Text);
-            vivienda.ServicioBasicos = Convert.ToString(energia + "" +agua + "" +telefono + "" +alcantarillado + "" +otroServicio + "" + txt_EsSo_OtroServicio_InfoVivien.Text);
-            vivienda.DisponeDe = Convert.ToString(television + "" +telefono + "" +refrigerador + "" +Estufa + "" +ducha + "" +lavadora + "" +auto + "" +micro + "" +compu + "" +ventilador + "" +aire );
-   
+             int resultado5 = Clases.C_EstudioSocioMetodos.AgregarInfovivienda(vivienda);
 
-            int resultado5 = Clases.C_EstudioSocioMetodos.AgregarInfovivienda(vivienda);
+             */
 
-     
-    
-            
+
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -378,15 +382,6 @@ namespace APOAUTIS
         private void btm_EsSo_BuscarAlumno_DatosGe_Click(object sender, EventArgs e)
         {
 
-
-
-
-
-
-
-
-
-            /*
             FromBusquedaAlumno frmBusqEstSoc = new FromBusquedaAlumno();
             frmBusqEstSoc.ShowDialog();
 
@@ -436,7 +431,7 @@ namespace APOAUTIS
                 txt_EsSo_TelEncarg_DatosGe.Text = FromBusquedaAlumno.otrorespSeleccionado.Telefono;
                 txt_EsSo_ParentescoEncar_DatosGe.Text = FromBusquedaAlumno.otrorespSeleccionado.Parentesco;
             }
-            */
+            
         }
 
         public void txt_EsSo_NombreEst_DatosGe_TextChanged(object sender, EventArgs e)
