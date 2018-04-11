@@ -153,18 +153,6 @@ namespace APOAUTIS.Clases
             }
         }
 
-        public void ValidarGeneroSingleChar(object sender, KeyPressEventArgs e)
-        {
-            if( !(e.KeyChar=='m') && !(e.KeyChar == 'M')&& !(e.KeyChar == 'f') && !(e.KeyChar == 'F')  && e.KeyChar != Convert.ToChar(Keys.Back))
-            {
-                e.Handled = true;
-            }
-            else
-            {
-                e.Handled = false;
-            }
-        }
-
 
         public void NumerosDecimales(object sender, KeyPressEventArgs e, TextBox Text_Prueba)
         {
@@ -354,7 +342,7 @@ namespace APOAUTIS.Clases
 
 
 
-        public bool NoVacio(Form form1)
+        public void NoVacio(Form form1)
         {
             bool txtCompletado = true;
             string MensajeError = "Uno o más textbox estan vacíos";
@@ -368,14 +356,10 @@ namespace APOAUTIS.Clases
                         c.Focus();
                         MessageBox.Show(MensajeError, "Error");
                         break;
-                        return false;
                     }
                 }
             }
-            return true;
         }
-
-
 
     }
 }

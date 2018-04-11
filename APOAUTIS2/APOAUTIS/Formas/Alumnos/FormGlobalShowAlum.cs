@@ -1,6 +1,4 @@
 ﻿using APOAUTIS.Clases;
-using APOAUTIS.Formas.Entrevista_Padres;
-using APOAUTIS.Formas.Ingreso;
 using APOAUTIS.Formas.Matricula;
 using System;
 using System.Collections.Generic;
@@ -55,25 +53,19 @@ namespace APOAUTIS.Formas.Alumnos
             try { 
             DataGridViewRow row = DataGrid_Show.Rows[e.RowIndex];
 
+            if (Accion == "Monto")
+            {
+                FormMontoMatricula Form_Monto = Owner as FormMontoMatricula;
+                Form_Monto.Fun_CargarDatos(
+                    (int)Convert.ToDouble(row.Cells["Codigo"].Value.ToString()),
+                    row.Cells["Nombre del Alumno"].Value.ToString());
+            }
+                else
                 if (Accion == "Gastos")
                 {
                     FormIngresoGastos Form_Ingr = Owner as FormIngresoGastos;
                     Form_Ingr.Fun_CargarDatos((int)Convert.ToDouble(row.Cells["Codigo"].Value.ToString()),
                     row.Cells["Nombre del Alumno"].Value.ToString());
-                }
-                else if (Accion == "Vista_Entrevista")
-                {
-                    VistaEntrevistaPadres Form_Ent = Owner as VistaEntrevistaPadres;
-                    Form_Ent.Fun_ExtraerDatos((int)Convert.ToDouble(row.Cells["Codigo"].Value.ToString()),
-                    row.Cells["Nombre del Alumno"].Value.ToString());
-   
-                }
-                else if (Accion == "PP")
-                {
-                   Prueba Form_Ent = new Prueba();
-                    Form_Ent.Fun_ExtraerDatos((int)Convert.ToDouble(row.Cells["Codigo"].Value.ToString()),
-                    row.Cells["Nombre del Alumno"].Value.ToString());
-             
                 }
 
                 this.Close();
@@ -94,30 +86,23 @@ namespace APOAUTIS.Formas.Alumnos
 
             DataGridViewRow row = DataGrid_Show.Rows[e.RowIndex];
 
-          
+            if (Accion == "Monto")
+            {
+                FormMontoMatricula Form_Monto = Owner as FormMontoMatricula;
+                Form_Monto.Fun_CargarDatos(
+                    (int)Convert.ToDouble(row.Cells["Codigo"].Value.ToString()),
+                    row.Cells["Nombre del Alumno"].Value.ToString());
+                }else
                 if(Accion == "Gastos")
                 {
                     FormIngresoGastos Form_Ingr = Owner as FormIngresoGastos;
                     Form_Ingr.Fun_CargarDatos((int)Convert.ToDouble(row.Cells["Codigo"].Value.ToString()),
                     row.Cells["Nombre del Alumno"].Value.ToString());
                 }
-                else if (Accion == "Vista_Entrevista")
-                {
-                    VistaEntrevistaPadres Form_Ent = Owner as VistaEntrevistaPadres;
-                    Form_Ent.Fun_ExtraerDatos((int)Convert.ToDouble(row.Cells["Codigo"].Value.ToString()),
-                    row.Cells["Nombre del Alumno"].Value.ToString());
-
-                }
-                else if (Accion == "PP")
-                {
-                    Prueba Form_Ent = new Prueba();
-                    Form_Ent.Fun_ExtraerDatos((int)Convert.ToDouble(row.Cells["Codigo"].Value.ToString()),
-                    row.Cells["Nombre del Alumno"].Value.ToString());
-   
-                }
 
 
-                this.Close();
+
+            this.Close();
             }
             catch (Exception) { }
 

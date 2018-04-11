@@ -108,10 +108,6 @@
             this.DGV_Data.ReadOnly = true;
             this.DGV_Data.Size = new System.Drawing.Size(1017, 277);
             this.DGV_Data.TabIndex = 124;
-            this.DGV_Data.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Data_CellContentClick);
-            this.DGV_Data.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Data_CellContentDoubleClick);
-            this.DGV_Data.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Data_CellDoubleClick);
-            this.DGV_Data.SelectionChanged += new System.EventHandler(this.DGV_Data_SelectionChanged);
             // 
             // groupBox2
             // 
@@ -137,7 +133,6 @@
             this.Rad_New.TabStop = true;
             this.Rad_New.Text = "Agregar un \r\nNuevo\r\nUsuario\r\n";
             this.Rad_New.UseVisualStyleBackColor = true;
-            this.Rad_New.CheckedChanged += new System.EventHandler(this.Rad_New_CheckedChanged);
             // 
             // Rad_Update
             // 
@@ -149,7 +144,6 @@
             this.Rad_Update.TabStop = true;
             this.Rad_Update.Text = "Actualizar datos\r\nde Usuario";
             this.Rad_Update.UseVisualStyleBackColor = true;
-            this.Rad_Update.CheckedChanged += new System.EventHandler(this.Rad_Update_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -282,11 +276,9 @@
             this.Txt_NameUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_NameUser.Location = new System.Drawing.Point(156, 66);
             this.Txt_NameUser.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.Txt_NameUser.MaxLength = 45;
             this.Txt_NameUser.Name = "Txt_NameUser";
             this.Txt_NameUser.Size = new System.Drawing.Size(216, 21);
             this.Txt_NameUser.TabIndex = 111;
-            this.Txt_NameUser.TextChanged += new System.EventHandler(this.Txt_NameUser_TextChanged);
             this.Txt_NameUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_NameUser_KeyPress);
             // 
             // label19
@@ -305,17 +297,20 @@
             this.Txt_PasdUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_PasdUser.Location = new System.Drawing.Point(156, 92);
             this.Txt_PasdUser.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.Txt_PasdUser.MaxLength = 20;
             this.Txt_PasdUser.Name = "Txt_PasdUser";
             this.Txt_PasdUser.Size = new System.Drawing.Size(216, 21);
             this.Txt_PasdUser.TabIndex = 113;
             this.Txt_PasdUser.UseSystemPasswordChar = true;
-            this.Txt_PasdUser.TextChanged += new System.EventHandler(this.Txt_PasdUser_TextChanged);
             this.Txt_PasdUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_PasdUser_KeyPress);
             // 
-            // errorProvider1
+            // Cmb_Estado
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.Cmb_Estado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Cmb_Estado.FormattingEnabled = true;
+            this.Cmb_Estado.Location = new System.Drawing.Point(130, 105);
+            this.Cmb_Estado.Name = "Cmb_Estado";
+            this.Cmb_Estado.Size = new System.Drawing.Size(143, 21);
+            this.Cmb_Estado.TabIndex = 118;
             // 
             // panel2
             // 

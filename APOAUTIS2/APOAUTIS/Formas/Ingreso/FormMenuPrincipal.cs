@@ -23,11 +23,6 @@ namespace APOAUTIS.Formas.Ingreso
         {
             InitializeComponent();
         }
-        private static int state;
-
-        public int State { get {  return state; }
-            set { state = value; }
-        }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -41,12 +36,7 @@ namespace APOAUTIS.Formas.Ingreso
 
         private void FormMenuPrincipal_Load(object sender, EventArgs e)
         {
-
            
-            if (State != 3)
-            {
-                usuariosToolStripMenuItem.Visible = false;
-            }
         }
 
         private void alumnosToolStripMenuItem_Click(object sender, EventArgs e)

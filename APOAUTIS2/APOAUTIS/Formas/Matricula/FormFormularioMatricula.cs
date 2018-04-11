@@ -199,12 +199,12 @@ namespace APOAUTIS
             Ent.ShowDialog();
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void Pest1_Txt_NomEducador_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void Pest1_Txt_NomEducador_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Convert.ToInt32(comboBox1.SelectedValue) == 1)
             {

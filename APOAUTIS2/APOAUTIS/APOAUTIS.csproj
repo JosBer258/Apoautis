@@ -56,23 +56,28 @@
   <ItemGroup>
     <Compile Include="Clases\C_AlumDeResp.cs" />
     <Compile Include="Clases\C_Alumnos.cs" />
-    <Compile Include="Clases\C_BusqMatricula.cs" />
     <Compile Include="Clases\C_EntrePadres.cs" />
-    <Compile Include="Clases\C_EvalPsico.cs" />
+    <Compile Include="Clases\C_EstudioSocioMetodos.cs" />
+    <Compile Include="Clases\C_HistorialMedico.cs" />
+    <Compile Include="Clases\C_InformacionFamilia.cs" />
+    <Compile Include="Clases\C_InformacionVivienda.cs" />
     <Compile Include="Clases\C_IngGast.cs" />
     <Compile Include="Clases\C_Login.cs" />
     <Compile Include="Clases\C_Mantenimiento.cs" />
     <Compile Include="Clases\C_Matricula.cs" />
     <Compile Include="Clases\C_MontoMens.cs" />
     <Compile Include="Clases\C_MuestraHistorialMatricu.cs" />
-    <Compile Include="Clases\C_Responsables.cs" />
+    <Compile Include="Clases\C_responsablePadre.cs" />
+    <Compile Include="Clases\C_responsablesMadre.cs" />
+    <Compile Include="Clases\C_ResponsablesOtro.cs" />
     <Compile Include="Clases\C_SalarioMensaulidad.cs" />
     <Compile Include="Clases\C_ShowAlum.cs" />
     <Compile Include="Clases\C_Tipos_Atencion.cs" />
     <Compile Include="Clases\C_Usuarios.cs" />
     <Compile Include="Clases\C_Validaciones.cs" />
-    <Compile Include="Clases\C_VistaEntrevistaPadres.cs" />
     <Compile Include="Clases\DataGirdView.cs" />
+    <Compile Include="Clases\C_DatosGenerales.cs" />
+    <Compile Include="Clases\C_EstudioSocioEc.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Formas\Alumnos\FormGlobalShowAlum.cs">
       <SubType>Form</SubType>
@@ -85,6 +90,12 @@
     </Compile>
     <Compile Include="Formas\Entrevista Padres\FrmBusquedaEntPadres.Designer.cs">
       <DependentUpon>FrmBusquedaEntPadres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Estudio Socioeconomico\FormBusquedaResponsables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Estudio Socioeconomico\FormBusquedaResponsables.Designer.cs">
+      <DependentUpon>FormBusquedaResponsables.cs</DependentUpon>
     </Compile>
     <Compile Include="Formas\Estudio Socioeconomico\FromBusquedaAlumno.cs">
       <SubType>Form</SubType>
@@ -248,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Entrevista Padres\FrmBusquedaEntPadres.resx">
       <DependentUpon>FrmBusquedaEntPadres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Estudio Socioeconomico\FormBusquedaResponsables.resx">
+      <DependentUpon>FormBusquedaResponsables.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Estudio Socioeconomico\FromBusquedaAlumno.resx">
       <DependentUpon>FromBusquedaAlumno.cs</DependentUpon>

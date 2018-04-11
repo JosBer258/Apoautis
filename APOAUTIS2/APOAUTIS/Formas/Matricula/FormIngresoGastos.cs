@@ -87,14 +87,9 @@ namespace APOAUTIS.Formas.Matricula
             {
                 errorProvider1.SetError(Txt_OpcionBusqueda, "");
             }
-            try
-            {
-                Fun_IngresarCambios();
-                Fun_Limpiar();
-            }catch(System.Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+
+            Fun_IngresarCambios();
+            Fun_Limpiar();
 
         }
 

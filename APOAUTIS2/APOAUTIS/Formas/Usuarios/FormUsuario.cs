@@ -1,10 +1,8 @@
 ﻿using APOAUTIS.Clases;
-using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.Common;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -27,68 +25,16 @@ namespace APOAUTIS.Formas.Usuarios
         {
             this.Close();
         }
-        private bool Vacios(object sender, EventArgs e)
-        {
-     
-            int s = 0;
 
-            var boxesx = groupBox1.Controls.OfType<TextBox>();
-            foreach (var box in boxesx)
-            {
-                if (string.IsNullOrWhiteSpace(box.Text))
-                {
-                    errorProvider1.SetError(box, "Please fill the required field");
-                    s++;
-                }
-                else
-                {
-                    errorProvider1.SetError(box, "");
-                }
-
-            }
-            if (s > 0)
-                return false;
-            else
-            {
-
-                return true;
-            }
-
-        }
-        private void validacionMenu()
-        {
-            var blankContextMenu = new ContextMenuStrip();
-            var boxe1 = groupBox1.Controls.OfType<TextBox>();
-            foreach (var box in boxe1)
-            {
-                box.ContextMenuStrip = blankContextMenu;
-
-            }
-
-        }
         private void Bttn_Clean_Click(object sender, EventArgs e)
         {
-            if (Rad_New.Checked == true)
-            {
-                Txt_NameUser.Clear();
-                Txt_PasdUser.Clear();
-            }
-            else
-            {
-                Txt_NameUser.Clear();
-                Txt_PasdUser.Clear();
-                Txt_CodUser.Clear();
 
-            }
         }
 
         private void FormUsuario_Load(object sender, EventArgs e)
         {
-            Txt_CodUser.Text = Convert.ToString(User.ObtenerUltimoCodigoUsuario());
             User.Fun_Show(DGV_Data);
-            User.GenerarEstado(Cmb_Estado);
-            validacionMenu();
-            Rad_New.Checked = true;
+            Rad_Update.Checked = true;
         }
 
         private void Txt_NameUser_KeyPress(object sender, KeyPressEventArgs e)
@@ -103,58 +49,11 @@ namespace APOAUTIS.Formas.Usuarios
 
         private void Bttn_OK_Click(object sender, EventArgs e)
         {
-            /*  User.Var_cont_user = Val.EncriptarContraseña(Txt_PasdUser.Text);
-              User.Var_nom_user = Txt_NameUser.Text;
+            User.Var_cont_user = Val.EncriptarContraseña(Txt_PasdUser.Text);
+            User.Var_nom_user = Txt_NameUser.Text;
 
-              User.Fun_New();*/
-            //User.Fun_Ins();
-            if (Rad_New.Checked == true)
-            {
-                if (Vacios(sender, e) == true)
-                {
-
-                    User.AddNomUsuario1 = Txt_NameUser.Text;
-                    User.AddPassword1 = Txt_PasdUser.Text;
-                    User.AddCodUser1 = Convert.ToInt32(Txt_CodUser.Text);
-                    if (User.RevisionDeExistencia() == true)
-                    {
-                        errorProvider1.SetError(Txt_NameUser, "Ya Existe el nombre registrado en la base de datos");
-                    }
-                    else
-                    {
-                        User.Fun_New();
-                        User.Fun_Show(DGV_Data);
-                        MessageBox.Show("Ingresado Correctamente");
-                        Txt_CodUser.Text = Convert.ToString(User.ObtenerUltimoCodigoUsuario());
-                        Txt_NameUser.Clear();
-                        Txt_PasdUser.Clear();
-                    }
-                }
-                
-            }
-            else
-            {
-                if (Vacios(sender, e) == true)
-                {
-
-                    User.AddNomUsuario1 = Txt_NameUser.Text;
-                    User.AddPassword1 = Txt_PasdUser.Text;
-                    User.AddCodUser1 = Convert.ToInt32(Txt_CodUser.Text);
-                    User.AddEstado1 = Convert.ToInt32(Cmb_Estado.SelectedValue.ToString());
-                    if (User.AddEstado1 == 1 || User.AddEstado1 == 3)
-                    {
-                        User.RestablecerIntentos2();
-                    }
-
-                    User.updateUsuario();
-                        User.Fun_Show(DGV_Data);
-                        MessageBox.Show("Ingresado Correctamente");
-                        
-                    
-                }
-
-            }
-            
+            User.Fun_New();
+            User.Fun_Show(DGV_Data);
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

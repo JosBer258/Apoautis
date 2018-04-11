@@ -150,7 +150,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(151, 16);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Numero de Matricula";
+            this.label1.Text = "No.";
             // 
             // label2
             // 
@@ -218,7 +218,6 @@
             this.Pest1_Txt_DireccionCompleta.Name = "Pest1_Txt_DireccionCompleta";
             this.Pest1_Txt_DireccionCompleta.Size = new System.Drawing.Size(183, 61);
             this.Pest1_Txt_DireccionCompleta.TabIndex = 10;
-            this.Pest1_Txt_DireccionCompleta.TextChanged += new System.EventHandler(this.Pest1_Txt_DireccionCompleta_TextChanged);
             // 
             // label6
             // 
@@ -1231,6 +1230,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox Pest1_Txt_InstProced;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox Pest1_Txt_AnoIngreso;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox Pest1_Txt_Celular;
         private System.Windows.Forms.Label label11;

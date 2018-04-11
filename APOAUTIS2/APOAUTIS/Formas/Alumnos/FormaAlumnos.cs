@@ -16,60 +16,7 @@ namespace APOAUTIS.Formas.Alumnos
     public partial class FormaAlumnos : Form
     {
         C_Alumnos alumno = new C_Alumnos();
-        C_Responsables resp = new C_Responsables();
-        C_Validaciones val = new C_Validaciones();
 
-        private bool Vacios(GroupBox groupBox1)
-        {
-
-            int s = 0;
-
-            var boxesx = groupBox1.Controls.OfType<TextBox>();
-            foreach (var box in boxesx)
-            {
-                if (string.IsNullOrWhiteSpace(box.Text))
-                {
-                    errorProvider1.SetError(box, "Please fill the required field");
-                    s++;
-                }
-                else
-                {
-                    errorProvider1.SetError(box, "");
-                }
-
-            }
-            if (s > 0)
-                return false;
-            else
-            {
-
-                return true;
-            }
-
-        }
-        private void validacionMenu(GroupBox groupBox1)
-        {
-            var blankContextMenu = new ContextMenuStrip();
-            var boxe1 = groupBox1.Controls.OfType<TextBox>();
-            foreach (var box in boxe1)
-            {
-                box.ContextMenuStrip = blankContextMenu;
-
-            }
-
-        }
-
-        private void limpieza(GroupBox groupBox1)
-        {
-            
-            var boxe1 = groupBox1.Controls.OfType<TextBox>();
-            foreach (var box in boxe1)
-            {
-                box.Text = string.Empty;
-
-            }
-
-        }
         public FormaAlumnos()
         {
             InitializeComponent();
@@ -101,27 +48,6 @@ namespace APOAUTIS.Formas.Alumnos
 
         private void Pest1_Txt_BusquedaPorNombre_TextChanged(object sender, EventArgs e)
         {
-            if(Pest1_Txt_BusquedaPorNombre.Text == string.Empty)
-            {
-                alumno.Fun_Show(Pest1_Dgv_BsqAlm);
-            }
-            else
-            {
-                alumno.BusquedaCargarDatosNombre(Pest1_Dgv_BsqAlm, Pest1_Txt_BusquedaPorNombre.Text);
-            }
-            
-        }
-
-        private void Pest1_Txt_ID_TextChanged(object sender, EventArgs e)
-        {
-            if (Pest1_Txt_ID.Text == string.Empty)
-            {
-                alumno.Fun_Show(Pest1_Dgv_BsqAlm);
-            }
-            else
-            {
-                alumno.BusquedaCargarDatosIdentidad(Pest1_Dgv_BsqAlm, Pest1_Txt_ID.Text);
-            }
 
         }
 
