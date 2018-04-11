@@ -380,7 +380,25 @@ namespace APOAUTIS.Clases
 
         public void updateResp()
         {
-            this.sql = string.Format(@"UPDATE responsables SET NomComRes = '{0}',
+            if(idResp == "")
+            {
+                this.sql = string.Format(@"UPDATE responsables SET NomComRes = '{0}',
+                                    DomicilioRes = '{1}', 
+                                    ProfecionRes = '{2}',
+                                    LugarTrabajoRes = '{3}', 
+                                    TelCasaRes = '{4}',
+                                    TelCelRes = '{5}',
+                                    TelTrabajoRes = '{6}',
+                                    CorreoRes = '{7}',
+                                    Estado = '{8}'
+                                    WHERE CodResp = '{9}'",
+                                        nomResp, domResp, profResp, lugTrab,
+                                        telCasResp, telCelResp, telTrabResp, corrResp, estResp, codResp);
+            }
+            else
+            {
+              
+                    this.sql = string.Format(@"UPDATE responsables SET NomComRes = '{0}',
                                     NumIdRes = '{1}',
                                     DomicilioRes = '{2}', 
                                     ProfecionRes = '{3}',
@@ -391,8 +409,11 @@ namespace APOAUTIS.Clases
                                     CorreoRes = '{8}',
                                     Estado = '{9}'
                                     WHERE CodResp = '{10}'",
-                                        nomResp, idResp, domResp, profResp, lugTrab,
-                                        telCasResp, telCelResp, telTrabResp, corrResp, estResp, codResp);
+                                            nomResp, idResp, domResp, profResp, lugTrab,
+                                            telCasResp, telCelResp, telTrabResp, corrResp, estResp, codResp);
+                
+            }
+            
 
                 this.cmd = new MySqlCommand(this.sql, this.cnx);
                 this.cnx.Open();
@@ -444,7 +465,9 @@ namespace APOAUTIS.Clases
                 e.Handled = true;
             }
         }
-              
+
+        
+
     }
 }
 

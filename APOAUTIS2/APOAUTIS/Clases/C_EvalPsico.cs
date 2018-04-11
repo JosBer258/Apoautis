@@ -17,7 +17,7 @@ namespace APOAUTIS.Clases
         private string fechEval;
         private string fechNac;
         private string nomEval;
-        private int edad;
+        private float edad;
         private string impDiag;
         private string sexo;
         private string respEval;
@@ -76,7 +76,7 @@ namespace APOAUTIS.Clases
             }
         }
 
-        public int Edad
+        public float Edad
         {
             get
             {
@@ -336,8 +336,15 @@ namespace APOAUTIS.Clases
                e.Handled = true;
             }
         }
-        
-        
-                
+
+        public void validarDecimal(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '-')
+            {
+                e.Handled = true;
+            }
+        }
+
+
     }
 }

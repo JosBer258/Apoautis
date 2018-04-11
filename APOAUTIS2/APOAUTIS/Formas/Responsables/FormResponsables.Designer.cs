@@ -485,7 +485,7 @@
             this.ClientSize = new System.Drawing.Size(793, 470);
             this.Controls.Add(this.tabControl1);
             this.Name = "FormResponsables";
-            this.Text = "Mantenimiento Responsables";
+            this.Text = "Mantenimiento de Responsables";
             this.Load += new System.EventHandler(this.FormResponsables_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

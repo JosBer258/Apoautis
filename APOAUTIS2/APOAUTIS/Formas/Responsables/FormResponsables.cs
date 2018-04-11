@@ -137,7 +137,7 @@ namespace APOAUTIS.Formas.Responsables
                 if (txtCodResp.Text == string.Empty
                     || txtNomResp.Text == string.Empty
                     || txtDomResp.Text == string.Empty
-                    || txtIdResp.Text == string.Empty
+                    //|| txtIdResp.Text == string.Empty
                     || txtProfResp.Text == string.Empty
                     || txtLugResp.Text == string.Empty
                     || txtTelCasResp.Text == string.Empty
@@ -187,7 +187,7 @@ namespace APOAUTIS.Formas.Responsables
                     if (txtCodResp.Text == string.Empty
                     || txtNomResp.Text == string.Empty
                     || txtDomResp.Text == string.Empty
-                    || txtIdResp.Text == string.Empty
+                    //|| txtIdResp.Text == string.Empty
                     || txtProfResp.Text == string.Empty
                     || txtTelCasResp.Text == string.Empty
                     || txtTelCelResp.Text == string.Empty

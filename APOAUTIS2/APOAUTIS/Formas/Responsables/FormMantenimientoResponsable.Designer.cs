@@ -476,7 +476,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormMantenimientoResponsable";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "Mantenimiento de Responsable";
+            this.Text = "Mantenimiento de Responsables";
             this.Load += new System.EventHandler(this.FormMantenimientoResponsable_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
