@@ -271,8 +271,10 @@ namespace APOAUTIS.Formas.Alumnos
                         resp.insertResponsableAlumno(Convert.ToInt32(Pest2_Pest1_Txt_Codigo.Text), Convert.ToInt32(Pest2_Pest3_Txt_Codigo.Text), 
                             Convert.ToInt32(Pest2_Pest3_Cmb_TipoResponsable.SelectedValue));
                         MessageBox.Show("Ingresado Exitosamente");
+                        limpieza(Pest2_Pest3_Grupo_Encargados);
                         resp.Fill_DGV_Resp_Por_Alumno(Pest2_Pest3_DGV_MuestraEncargados, alumno.CodAlumno11);
                         Pest2_Pest3_Txt_Codigo.Text = Convert.ToString(resp.ObtenerUltimoCodigoResponsable());
+                        
                     }
                     else
                     {
@@ -526,10 +528,14 @@ namespace APOAUTIS.Formas.Alumnos
             {
                 Pest2_Pest3_Txt_LugarTrabajo.Enabled = false;
                 Pest2_Pest3_Txt_LugarTrabajo.Text = "No trabaja";
+                Pest2_Pest3_Txt_TelefonoTrabajo.Text = "No trabaja";
+                Pest2_Pest3_Txt_TelefonoTrabajo.Enabled = false;
 
             }
             else
             {
+                Pest2_Pest3_Txt_TelefonoTrabajo.Clear();
+                Pest2_Pest3_Txt_TelefonoTrabajo.Enabled = true;
                 Pest2_Pest3_Txt_LugarTrabajo.Enabled = true;
                 Pest2_Pest3_Txt_LugarTrabajo.Clear();
             }
