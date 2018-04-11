@@ -34,6 +34,12 @@ namespace APOAUTIS.Clases
         private string EmergLugar;
         private string EmergTelefono;
         private int estadoAlumno;
+        private int codMatricula;
+        private int jornada;
+        private string observaciones;
+        private string fechaIngreso;
+        private string recibioEvalu;
+        private string anioIngreso;
 
 
         private string var_NombreResp;
@@ -188,6 +194,22 @@ namespace APOAUTIS.Clases
             }
         }
 
+        public int CodMatricula { get { return codMatricula; }
+        set { codMatricula = value; }
+    }
+    public int Jornada { get { return jornada; }
+set { jornada = value; }}
+        public string Observaciones { get { return observaciones; }
+set { observaciones = value; }}
+set { fechaIngreso = value; }}
+        public string FechaIngreso { get { return fechaIngreso; }
+        public string RecibioEvalu { get { return recibioEvalu; }
+set { recibioEvalu = value; }}
+
+        public string AnioIngreso { get { return anioIngreso; }
+            set { anioIngreso = value; }
+        }
+
         public void ingresoAlumnos()
         {
             this.sql = string.Format(@"INSERT INTO alumnos
@@ -242,7 +264,7 @@ namespace APOAUTIS.Clases
                 this.sql = string.Format(@"select A.CodAlumno,A.NomAlumno,
 A.LugarNaciAlum,A.FechaNaciAlum,A.EdadAlum,A.EdadCronologica,
 A.SexoAlum,A.IdAlum,A.DireccionAlum,A.TelFijoAlum,A.CelAlumno,A.EscolaridadAlum,
-A.LugarOrigAlum,A.InstProceAlumno,A.InstDondeEstaIncluido,A.Estado,A.EmergLugar,A.EmergTelefono from Alumnos as A
+A.LugarOrigAlum,A.InstProceAlumno,A.InstDondeEstaIncluido,A.Estado,A.EmergLugar,A.EmergTelefono from Alumnos as A 
 where A.NomAlumno like'%{0}%'", NomAlumno11);
             }
             else if(a==2)
@@ -250,7 +272,7 @@ where A.NomAlumno like'%{0}%'", NomAlumno11);
                 this.sql = string.Format(@"select A.CodAlumno,A.NomAlumno,
 A.LugarNaciAlum,A.FechaNaciAlum,A.EdadAlum,A.EdadCronologica,
 A.SexoAlum,A.IdAlum,A.DireccionAlum,A.TelFijoAlum,A.CelAlumno,A.EscolaridadAlum,
-A.LugarOrigAlum,A.InstProceAlumno,A.InstDondeEstaIncluido,A.Estado,A.EmergLugar,A.EmergTelefono from Alumnos as A
+A.LugarOrigAlum,A.InstProceAlumno,A.InstDondeEstaIncluido,A.Estado,A.EmergLugar,A.EmergTelefono from Alumnos as A 
 where A.CodAlumno like'%{0}%'", CodAlumno11);
             }
             else
@@ -258,7 +280,7 @@ where A.CodAlumno like'%{0}%'", CodAlumno11);
                 this.sql = string.Format(@"select A.CodAlumno,A.NomAlumno,
 A.LugarNaciAlum,A.FechaNaciAlum,A.EdadAlum,A.EdadCronologica,
 A.SexoAlum,A.IdAlum,A.DireccionAlum,A.TelFijoAlum,A.CelAlumno,A.EscolaridadAlum,
-A.LugarOrigAlum,A.InstProceAlumno,A.InstDondeEstaIncluido,A.Estado,A.EmergLugar,A.EmergTelefono from Alumnos as A
+A.LugarOrigAlum,A.InstProceAlumno,A.InstDondeEstaIncluido,A.Estado,A.EmergLugar,A.EmergTelefono from Alumnos as A 
 where A.IdAlum like'%{0}%'", IdAlum11);
             }
             this.cmd = new MySqlCommand(this.sql, this.cnx);
@@ -272,8 +294,17 @@ where A.IdAlum like'%{0}%'", IdAlum11);
                 NomAlumno11 = (Reg["NomAlumno"].ToString());
                 LugarNaciAlum11 = (Reg["LugarNaciAlum"].ToString());
                 FechaNaciAlum11 = (Reg["FechaNaciAlum"].ToString());
-                EdadAlum11 = Convert.ToInt32((Reg["EdadAlum"].ToString()));
-                EdadCronologica11 = (Reg["EdadCronologica"].ToString());
+                if((Reg["EdadAlum"].ToString())==string.Empty || Reg["EdadCronologica"].ToString()==string.Empty)
+                {
+                    EdadAlum11 = 0;
+                    EdadCronologica11 = "0";
+                }
+                else
+                {
+                    EdadAlum11 = Convert.ToInt32((Reg["EdadAlum"].ToString()));
+                    EdadCronologica11 = (Reg["EdadCronologica"].ToString());
+                }
+               
                 SexoAlum11 = (Reg["SexoAlum"].ToString());
                 IdAlum11 = (Reg["IdAlum"].ToString());
                 DireccionAlum11 = (Reg["DireccionAlum"].ToString());
@@ -286,8 +317,10 @@ where A.IdAlum like'%{0}%'", IdAlum11);
                 EstadoAlumno = Convert.ToInt32(Reg["Estado"].ToString());
                 EmergLugar1 = (Reg["EmergLugar"].ToString());
                 EmergTelefono1 = (Reg["EmergTelefono"].ToString());
+              
                 this.cnx.Close();
                 VerificarYear();
+                
 
             }
             else
@@ -296,10 +329,60 @@ where A.IdAlum like'%{0}%'", IdAlum11);
             }
 
             this.cnx.Close();
-           
-
+            
         }
 
+
+        public void updateMatricula(int JJornada, string RRecibioEvalu, string OObservaciones, int CCodalumno)
+        {
+            
+            this.sql = string.Format(@"update matricula set Cod_jornada ='{0}', RecibioEvalu='{1}', Observaciones='{2}'
+where Alumnos_CodAlumno like'%{3}%'", JJornada, RRecibioEvalu, OObservaciones, CCodalumno);
+            this.cmd = new MySqlCommand(this.sql, this.cnx);
+            this.cnx.Open();
+            MySqlDataReader Reg = null;
+            Reg = this.cmd.ExecuteReader();
+
+            this.cnx.Close();
+        }
+
+
+        public void llenarDatosMatricula(int CCodAlumno11)
+        {
+
+            
+
+            this.sql = string.Format(@"select B.CodMatricula,B.Alumnos_CodAlumno,B.Cod_jornada,B.AnioIngreso,
+B.RecibioEvalu,B.Observaciones,B.FechaIngreso from matricula as B
+where B.Alumnos_CodAlumno ='{0}'", CCodAlumno11);
+            this.cmd = new MySqlCommand(this.sql, this.cnx);
+            this.cnx.Open();
+            MySqlDataReader Reg = null;
+            Reg = this.cmd.ExecuteReader();
+
+            if (Reg.Read())
+            {
+               
+                    CodMatricula = Convert.ToInt32(Reg["CodMatricula"].ToString());
+                    Jornada = Convert.ToInt32(Reg["Cod_jornada"].ToString());
+                    Observaciones = (Reg["Observaciones"].ToString());
+                    FechaIngreso = (Reg["FechaIngreso"].ToString());
+                    RecibioEvalu = ((Reg["RecibioEvalu"].ToString()));
+                    AnioIngreso = (Reg["AnioIngreso"].ToString());
+                
+        
+                this.cnx.Close();
+
+
+            }
+            else
+            {
+                CodMatricula = 0;
+            }
+            this.cnx.Close();
+
+        }
+        
         public void llenarDatosHistoriaMedico()
         {
 
@@ -473,6 +556,20 @@ order by CodAlumno", busq);
 
             Com_Roles.ValueMember = "CodEstado";
             Com_Roles.DisplayMember = "DescripcionEstado";
+            Com_Roles.DataSource = dt;
+        }
+        public void GenerarJornada(ComboBox Com_Roles)
+        {
+            cnx.Open();
+            sql = string.Format(@"select cod_jornada, descripcion from jornada");
+            cmd = new MySqlCommand(sql, cnx);
+            DataAdapter = new MySqlDataAdapter(cmd);
+            dt = new DataTable();
+            DataAdapter.Fill(dt);
+            cnx.Close();
+
+            Com_Roles.ValueMember = "cod_jornada";
+            Com_Roles.DisplayMember = "descripcion";
             Com_Roles.DataSource = dt;
         }
 
