@@ -189,6 +189,8 @@ namespace APOAUTIS.Clases
 
                 return (ultimo);
             }
+
+
         public int GenerarCod()
         {
             int ultimo = 0;
@@ -209,5 +211,54 @@ namespace APOAUTIS.Clases
 
             return (ultimo);
         }
+
+
+        public bool VerificarCod(int Cod)
+        {
+            bool Var_Ver=false;
+
+            this.sql = string.Format(@"select * from matricula where CodMatricula='{0}';", Cod);
+
+            this.cmd = new MySqlCommand(this.sql, this.cnx);
+            this.cnx.Open();
+            MySqlDataReader Reg = null;
+            Reg = this.cmd.ExecuteReader();
+
+            if (Reg.Read())
+            {
+                Var_Ver = true;
+            }
+            this.cnx.Close();
+
+
+            return (Var_Ver);
+        }
+
+
+        public void Fun_IngresarTiposAtencion(int FV_CodAlumno)
+        {
+            Alumnos_CodAlumno = FV_CodAlumno;
+            CuotaPago="0";
+
+            this.sql = string.Format(@"insert into matricula values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}');", 
+                CodMatricula1, Alumnos_CodAlumno1, Jornada1, AnioIngreso1, RecibioEvalu1, Observaciones1, Entrevistador1, CuotaPago1,
+                FechaIngreso1, Tipo_Matricula1);
+            this.cnx.Open();
+            this.cmd = new MySql.Data.MySqlClient.MySqlCommand(this.sql, this.cnx);
+            int Reg = this.cmd.ExecuteNonQuery();
+        
+
+            if (Reg > 0)
+            {
+            }
+            else
+            {
+
+            }
+            this.cnx.Close();
+
+        }
+
+
     }
 }

@@ -66,6 +66,7 @@
     <Compile Include="Clases\C_Responsables.cs" />
     <Compile Include="Clases\C_SalarioMensaulidad.cs" />
     <Compile Include="Clases\C_ShowAlum.cs" />
+    <Compile Include="Clases\C_Tipos_Atencion.cs" />
     <Compile Include="Clases\C_Usuarios.cs" />
     <Compile Include="Clases\C_Validaciones.cs" />
     <Compile Include="Clases\C_VistaEntrevistaPadres.cs" />
@@ -94,6 +95,18 @@
     </Compile>
     <Compile Include="Formas\Ingreso\Prueba.Designer.cs">
       <DependentUpon>Prueba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Mantenimiento\FormJornada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Mantenimiento\FormJornada.Designer.cs">
+      <DependentUpon>FormJornada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Mantenimiento\FormTipoMatricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Mantenimiento\FormTipoMatricula.Designer.cs">
+      <DependentUpon>FormTipoMatricula.cs</DependentUpon>
     </Compile>
     <Compile Include="Formas\Manuales\FormManual.cs">
       <SubType>Form</SubType>
@@ -227,6 +240,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Ingreso\Prueba.resx">
       <DependentUpon>Prueba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Mantenimiento\FormJornada.resx">
+      <DependentUpon>FormJornada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Mantenimiento\FormTipoMatricula.resx">
+      <DependentUpon>FormTipoMatricula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Manuales\FormManual.resx">
       <DependentUpon>FormManual.cs</DependentUpon>
