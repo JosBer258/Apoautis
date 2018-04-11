@@ -29,7 +29,7 @@ namespace APOAUTIS.Clases
         private string tipoResp;
         private string parentesco;
         private static int abrir;
-     
+
 
         private int idResp;
         /*
@@ -322,7 +322,7 @@ namespace APOAUTIS.Clases
             }
             catch
             {
-                
+
 
             }
             cnx.Close();
@@ -398,7 +398,7 @@ namespace APOAUTIS.Clases
 
         public void updateResp()
         {
-            if(idResp == "")
+            if (string.IsNullOrEmpty(idResp.ToString()))
             {
                 this.sql = string.Format(@"UPDATE responsables SET NomComRes = '{0}',
                                     DomicilioRes = '{1}', 
@@ -415,8 +415,8 @@ namespace APOAUTIS.Clases
             }
             else
             {
-              
-                    this.sql = string.Format(@"UPDATE responsables SET NomComRes = '{0}',
+
+                this.sql = string.Format(@"UPDATE responsables SET NomComRes = '{0}',
                                     NumIdRes = '{1}',
                                     DomicilioRes = '{2}', 
                                     ProfecionRes = '{3}',
@@ -427,15 +427,16 @@ namespace APOAUTIS.Clases
                                     CorreoRes = '{8}',
                                     Estado = '{9}'
                                     WHERE CodResp = '{10}'",
-                                        nomResp, idResp, domResp, profResp, lugTrab,
-                                        telCasResp, telCelResp, telTrabResp, corrResp, EstResp, codResp);
+                                    nomResp, idResp, domResp, profResp, lugTrab,
+                                    telCasResp, telCelResp, telTrabResp, corrResp, EstResp, codResp);
 
-            this.cmd = new MySqlCommand(this.sql, this.cnx);
-            this.cnx.Open();
-            MySqlDataReader Reg = null;
-            Reg = this.cmd.ExecuteReader();
-            this.cnx.Close();
+                this.cmd = new MySqlCommand(this.sql, this.cnx);
+                this.cnx.Open();
+                MySqlDataReader Reg = null;
+                Reg = this.cmd.ExecuteReader();
+                this.cnx.Close();
 
+            }
         }
 
         public void updateParentesco(string CodigT, int codResp, string CodigA)
@@ -703,6 +704,7 @@ namespace APOAUTIS.Clases
 
 
     }
+}
 
 /*
 

@@ -202,3 +202,5 @@ C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug
 C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Mantenimiento.FormTipoMatricula.resources
 C:\Users\Geovana\Desktop\SW\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Responsables.FormAlumDeResp.resources
 C:\Users\Geovana\Desktop\SW\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Responsables.FormResponsables.resources
+C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Responsables.FormAlumDeResp.resources
+C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Responsables.FormResponsables.resources

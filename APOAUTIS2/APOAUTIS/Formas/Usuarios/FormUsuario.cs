@@ -329,5 +329,10 @@ where A.NomUsuario = '{0}' ", Nomuser);
                 }
             }
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

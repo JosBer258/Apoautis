@@ -539,5 +539,10 @@ namespace APOAUTIS.Formas.Alumnos
         {
             val.ValidarNombres_SoloLetras(sender, e);
         }
+
+        private void Pest2_Pest3_Grupo_Encargados_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -163,7 +163,7 @@ namespace APOAUTIS.Formas.Responsables
                         cResp.TelCasResp = txtTelCasResp.Text;
                         cResp.TelCelResp = txtTelCelResp.Text;
                         cResp.TelTrabResp = txtTelTrabResp.Text;
-                        cResp.IdResp = txtIdResp.Text;
+                        cResp.IdResp = Convert.ToInt32(txtIdResp.Text);
                         cResp.LugTrab = cmbTrabResp.SelectedItem.ToString() + ", " + txtLugResp.Text;
                         cResp.ProfResp = txtProfResp.Text;
                         cResp.CorrResp = txtCorrResp.Text;
@@ -209,7 +209,7 @@ namespace APOAUTIS.Formas.Responsables
                             cResp.TelCasResp = txtTelCasResp.Text;
                             cResp.TelCelResp = txtTelCelResp.Text;
                             cResp.TelTrabResp = txtTelTrabResp.Text;
-                            cResp.IdResp = txtIdResp.Text;
+                            cResp.IdResp = Convert.ToInt32(txtIdResp.Text);
                             cResp.ProfResp = txtProfResp.Text;
                             cResp.CorrResp = txtCorrResp.Text;
 

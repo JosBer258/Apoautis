@@ -150,8 +150,7 @@
             // responsablesToolStripMenuItem
             // 
             this.responsablesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.buscarPorRespnsableToolStripMenuItem,
-            this.buscarPorAlumnoToolStripMenuItem});
+            });
             this.responsablesToolStripMenuItem.Name = "responsablesToolStripMenuItem";
             this.responsablesToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.responsablesToolStripMenuItem.Text = "Responsables";
