@@ -12,6 +12,9 @@ namespace APOAUTIS
 {
     public partial class FormaEvalPsic : Form
     {
+        Clases.C_Validaciones Val = new Clases.C_Validaciones();
+        Clases.C_EvalPsico cEval = new Clases.C_EvalPsico();
+
         public FormaEvalPsic()
         {
             InitializeComponent();
@@ -68,17 +71,65 @@ namespace APOAUTIS
 
         private void radioButton6_CheckedChanged(object sender, EventArgs e)
         {
+            if (radTodas.Checked == true)
+            {
+                txtBusqNom.Enabled = false;
+                txtBusqImpDiag.Enabled = false;
+                txtBusqObs.Enabled = false;
+                txtBusqID.Enabled = false;
+                txtBusqOB.Enabled = false;
+                dateBusqFech.Enabled = false;
 
+                txtBusqNom.Text = string.Empty;
+                txtBusqImpDiag.Text = string.Empty;
+                txtBusqObs.Text = string.Empty;
+                txtBusqID.Text = string.Empty;
+                txtBusqOB.Text = string.Empty;
+                dateBusqFech.Text = string.Empty;
+
+                cEval.Fill_DGV_Eval(DGV_Evaluaciones);
+            }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void radBusqNom_CheckedChanged(object sender, EventArgs e)
         {
-            this.Close();
+            if(radBusqNom.Checked == true)
+            {
+                txtBusqNom.Enabled = true;
+                txtBusqImpDiag.Enabled = false;
+                txtBusqObs.Enabled = false;
+                txtBusqID.Enabled = false;
+                txtBusqOB.Enabled = false;
+                dateBusqFech.Enabled = false;
+
+                txtBusqNom.Text = string.Empty;
+                txtBusqImpDiag.Text = string.Empty;
+                txtBusqObs.Text = string.Empty;
+                txtBusqID.Text = string.Empty;
+                txtBusqOB.Text = string.Empty;
+                dateBusqFech.Text = string.Empty;
+            }
+            
         }
 
-        private void Bttn_Ok_Click(object sender, EventArgs e)
+        private void radImpDiag_CheckedChanged(object sender, EventArgs e)
         {
+            if (radImpDiag.Checked == true)
+            {
+                txtBusqNom.Enabled = false;
+                txtBusqImpDiag.Enabled = true;
+                txtBusqObs.Enabled = false;
+                txtBusqID.Enabled = false;
+                txtBusqOB.Enabled = false;
+                dateBusqFech.Enabled = false;
 
+                txtBusqNom.Text = string.Empty;
+                txtBusqImpDiag.Text = string.Empty;
+                txtBusqObs.Text = string.Empty;
+                txtBusqID.Text = string.Empty;
+                txtBusqOB.Text = string.Empty;
+                dateBusqFech.Text = string.Empty;
+            }
         }
 
         private void radObs_CheckedChanged(object sender, EventArgs e)

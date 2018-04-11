@@ -55,6 +55,10 @@
             this.Pest2_Pest1_Txt_AIngreso = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
             this.Pest2_Pest1_GrupoGeneral = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.Pest2_Pest1_Txt_TelefonoEmergencia = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1Pest2_Pest1_Txt_lugarEmergencia = new System.Windows.Forms.TextBox();
             this.Pest2_Pest1_Cmb_Estado = new System.Windows.Forms.ComboBox();
             this.label29 = new System.Windows.Forms.Label();
             this.Pest2_Pest1_Txt_InstiProcedencia = new System.Windows.Forms.TextBox();
@@ -89,23 +93,23 @@
             this.Pest2_Pest2_Grupo_AcontMedico = new System.Windows.Forms.GroupBox();
             this.Pest2_Pest2_DGV_AconMed = new System.Windows.Forms.DataGridView();
             this.Pest2_Pest2_Grupo_Historial = new System.Windows.Forms.GroupBox();
+            this.Pest2_Pest2_Txt_Medicamentos = new System.Windows.Forms.TextBox();
+            this.Pest2_Pest2_Txt_Alergias = new System.Windows.Forms.TextBox();
             this.Pest2_Pest2_Txt_GastaMedic = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.Pest2_Pest2_Txt_EnferPadSuFam = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.Pest2_Pest2_Txt_LugRecAtencMedica = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.Pest2_Pest2_Cmb_TienAlergias = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.Pest2_Pest2_Cmb_UsaMedic = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.Pest2_Pest3_Grupo_MuestraDatosEncargado = new System.Windows.Forms.GroupBox();
             this.Pest2_Pest3_DGV_MuestraEncargados = new System.Windows.Forms.DataGridView();
             this.Pest2_Pest3_Grupo_Encargados = new System.Windows.Forms.GroupBox();
-            this.Pest2_Pest3_Radio_Actualizar = new System.Windows.Forms.RadioButton();
+            this.Pest2_Pest3_Cmb_TipoResponsable = new System.Windows.Forms.ComboBox();
+            this.label40 = new System.Windows.Forms.Label();
             this.Pest2_Pest3_Cmb_Estado = new System.Windows.Forms.ComboBox();
-            this.Pest2_Pest3_Radio_Nuevo = new System.Windows.Forms.RadioButton();
             this.Pest2_Pest3_Cmb_Trabaja = new System.Windows.Forms.ComboBox();
             this.Pest2_Pest3_Txt_EdadAnos = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -155,6 +159,7 @@
             this.Pest2_Pest3_Grupo_MuestraDatosEncargado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pest2_Pest3_DGV_MuestraEncargados)).BeginInit();
             this.Pest2_Pest3_Grupo_Encargados.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -203,15 +208,19 @@
             this.Pest1_Txt_ID.Name = "Pest1_Txt_ID";
             this.Pest1_Txt_ID.Size = new System.Drawing.Size(318, 21);
             this.Pest1_Txt_ID.TabIndex = 26;
+            this.Pest1_Txt_ID.TextChanged += new System.EventHandler(this.Pest1_Txt_ID_TextChanged);
+            this.Pest1_Txt_ID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest1_Txt_ID_KeyPress);
             // 
             // Pest1_Txt_BusquedaPorNombre
             // 
             this.Pest1_Txt_BusquedaPorNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest1_Txt_BusquedaPorNombre.Location = new System.Drawing.Point(276, 42);
+            this.Pest1_Txt_BusquedaPorNombre.MaxLength = 45;
             this.Pest1_Txt_BusquedaPorNombre.Name = "Pest1_Txt_BusquedaPorNombre";
             this.Pest1_Txt_BusquedaPorNombre.Size = new System.Drawing.Size(318, 21);
             this.Pest1_Txt_BusquedaPorNombre.TabIndex = 23;
             this.Pest1_Txt_BusquedaPorNombre.TextChanged += new System.EventHandler(this.Pest1_Txt_BusquedaPorNombre_TextChanged);
+            this.Pest1_Txt_BusquedaPorNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest1_Txt_BusquedaPorNombre_KeyPress);
             // 
             // Pest1_Radio_ID
             // 
@@ -236,6 +245,7 @@
             this.Pest1_Radio_Alumno.TabStop = true;
             this.Pest1_Radio_Alumno.Text = "Busqueda por nombre del alumno: ";
             this.Pest1_Radio_Alumno.UseVisualStyleBackColor = true;
+            this.Pest1_Radio_Alumno.CheckedChanged += new System.EventHandler(this.Pest1_Radio_Alumno_CheckedChanged);
             // 
             // Pest1_Dgv_BsqAlm
             // 
@@ -247,6 +257,7 @@
             this.Pest1_Dgv_BsqAlm.ReadOnly = true;
             this.Pest1_Dgv_BsqAlm.Size = new System.Drawing.Size(1112, 369);
             this.Pest1_Dgv_BsqAlm.TabIndex = 0;
+            this.Pest1_Dgv_BsqAlm.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Pest1_Dgv_BsqAlm_CellDoubleClick);
             // 
             // tabPage2
             // 
@@ -258,6 +269,7 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Informacion del Alumno";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // tabControl2
             // 
@@ -312,6 +324,7 @@
             this.Pest2_Pest1_Bttn_Limpiar.Size = new System.Drawing.Size(99, 98);
             this.Pest2_Pest1_Bttn_Limpiar.TabIndex = 4;
             this.Pest2_Pest1_Bttn_Limpiar.UseVisualStyleBackColor = true;
+            this.Pest2_Pest1_Bttn_Limpiar.Click += new System.EventHandler(this.Pest2_Pest1_Bttn_Limpiar_Click);
             // 
             // Pest2_Pest1_GrupoMatricula
             // 
@@ -435,6 +448,10 @@
             // 
             // Pest2_Pest1_GrupoGeneral
             // 
+            this.Pest2_Pest1_GrupoGeneral.Controls.Add(this.label12);
+            this.Pest2_Pest1_GrupoGeneral.Controls.Add(this.Pest2_Pest1_Txt_TelefonoEmergencia);
+            this.Pest2_Pest1_GrupoGeneral.Controls.Add(this.label1);
+            this.Pest2_Pest1_GrupoGeneral.Controls.Add(this.textBox1Pest2_Pest1_Txt_lugarEmergencia);
             this.Pest2_Pest1_GrupoGeneral.Controls.Add(this.Pest2_Pest1_Cmb_Estado);
             this.Pest2_Pest1_GrupoGeneral.Controls.Add(this.label29);
             this.Pest2_Pest1_GrupoGeneral.Controls.Add(this.Pest2_Pest1_Txt_InstiProcedencia);
@@ -533,6 +550,7 @@
             this.Pest2_Pest1_Txt_InstiProcedencia.Name = "Pest2_Pest1_Txt_InstiProcedencia";
             this.Pest2_Pest1_Txt_InstiProcedencia.Size = new System.Drawing.Size(172, 20);
             this.Pest2_Pest1_Txt_InstiProcedencia.TabIndex = 27;
+            this.Pest2_Pest1_Txt_InstiProcedencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Pest1_Txt_InstiProcedencia_KeyPress);
             // 
             // label30
             // 
@@ -550,6 +568,7 @@
             this.Pest2_Pest1_Txt_Celular.Name = "Pest2_Pest1_Txt_Celular";
             this.Pest2_Pest1_Txt_Celular.Size = new System.Drawing.Size(169, 20);
             this.Pest2_Pest1_Txt_Celular.TabIndex = 25;
+            this.Pest2_Pest1_Txt_Celular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Pest1_Txt_Celular_KeyPress);
             // 
             // label31
             // 
@@ -567,6 +586,7 @@
             this.Pest2_Pest1_Txt_Instituto.Name = "Pest2_Pest1_Txt_Instituto";
             this.Pest2_Pest1_Txt_Instituto.Size = new System.Drawing.Size(254, 20);
             this.Pest2_Pest1_Txt_Instituto.TabIndex = 23;
+            this.Pest2_Pest1_Txt_Instituto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Pest1_Txt_Instituto_KeyPress);
             // 
             // label32
             // 
@@ -584,6 +604,7 @@
             this.Pest2_Pest1_Txt_Escolaridad.Name = "Pest2_Pest1_Txt_Escolaridad";
             this.Pest2_Pest1_Txt_Escolaridad.Size = new System.Drawing.Size(169, 20);
             this.Pest2_Pest1_Txt_Escolaridad.TabIndex = 21;
+            this.Pest2_Pest1_Txt_Escolaridad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Pest1_Txt_Escolaridad_KeyPress);
             // 
             // label33
             // 
@@ -601,6 +622,7 @@
             this.Pest2_Pest1_Txt_TelefonoFijo.Name = "Pest2_Pest1_Txt_TelefonoFijo";
             this.Pest2_Pest1_Txt_TelefonoFijo.Size = new System.Drawing.Size(169, 20);
             this.Pest2_Pest1_Txt_TelefonoFijo.TabIndex = 19;
+            this.Pest2_Pest1_Txt_TelefonoFijo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Pest1_Txt_TelefonoFijo_KeyPress);
             // 
             // label24
             // 
@@ -619,6 +641,7 @@
             this.Pest2_Pest1_Txt_Direccion.Name = "Pest2_Pest1_Txt_Direccion";
             this.Pest2_Pest1_Txt_Direccion.Size = new System.Drawing.Size(256, 42);
             this.Pest2_Pest1_Txt_Direccion.TabIndex = 17;
+            this.Pest2_Pest1_Txt_Direccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Pest1_Txt_Direccion_KeyPress);
             // 
             // label25
             // 
@@ -671,6 +694,8 @@
             this.Pest2_Pest1_Txt_Sexo.Name = "Pest2_Pest1_Txt_Sexo";
             this.Pest2_Pest1_Txt_Sexo.Size = new System.Drawing.Size(169, 20);
             this.Pest2_Pest1_Txt_Sexo.TabIndex = 11;
+            this.Pest2_Pest1_Txt_Sexo.TextChanged += new System.EventHandler(this.Pest2_Pest1_Txt_Sexo_TextChanged);
+            this.Pest2_Pest1_Txt_Sexo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Pest1_Txt_Sexo_KeyPress);
             // 
             // label28
             // 
@@ -722,6 +747,7 @@
             this.Pest2_Pest1_Txt_Codigo.Name = "Pest2_Pest1_Txt_Codigo";
             this.Pest2_Pest1_Txt_Codigo.Size = new System.Drawing.Size(104, 20);
             this.Pest2_Pest1_Txt_Codigo.TabIndex = 5;
+            this.Pest2_Pest1_Txt_Codigo.TextChanged += new System.EventHandler(this.Pest2_Pest1_Txt_Codigo_TextChanged);
             // 
             // label21
             // 
@@ -803,15 +829,15 @@
             // 
             // Pest2_Pest2_Grupo_Historial
             // 
+            this.Pest2_Pest2_Grupo_Historial.Controls.Add(this.Pest2_Pest2_Txt_Medicamentos);
+            this.Pest2_Pest2_Grupo_Historial.Controls.Add(this.Pest2_Pest2_Txt_Alergias);
             this.Pest2_Pest2_Grupo_Historial.Controls.Add(this.Pest2_Pest2_Txt_GastaMedic);
             this.Pest2_Pest2_Grupo_Historial.Controls.Add(this.label18);
             this.Pest2_Pest2_Grupo_Historial.Controls.Add(this.Pest2_Pest2_Txt_EnferPadSuFam);
             this.Pest2_Pest2_Grupo_Historial.Controls.Add(this.label17);
             this.Pest2_Pest2_Grupo_Historial.Controls.Add(this.Pest2_Pest2_Txt_LugRecAtencMedica);
             this.Pest2_Pest2_Grupo_Historial.Controls.Add(this.label16);
-            this.Pest2_Pest2_Grupo_Historial.Controls.Add(this.Pest2_Pest2_Cmb_TienAlergias);
             this.Pest2_Pest2_Grupo_Historial.Controls.Add(this.label15);
-            this.Pest2_Pest2_Grupo_Historial.Controls.Add(this.Pest2_Pest2_Cmb_UsaMedic);
             this.Pest2_Pest2_Grupo_Historial.Controls.Add(this.label14);
             this.Pest2_Pest2_Grupo_Historial.Location = new System.Drawing.Point(6, 20);
             this.Pest2_Pest2_Grupo_Historial.Name = "Pest2_Pest2_Grupo_Historial";
@@ -895,15 +921,6 @@
             this.label16.TabIndex = 5;
             this.label16.Text = "Lugares que recibe \r\natencion medica";
             // 
-            // Pest2_Pest2_Cmb_TienAlergias
-            // 
-            this.Pest2_Pest2_Cmb_TienAlergias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Pest2_Pest2_Cmb_TienAlergias.FormattingEnabled = true;
-            this.Pest2_Pest2_Cmb_TienAlergias.Location = new System.Drawing.Point(260, 69);
-            this.Pest2_Pest2_Cmb_TienAlergias.Name = "Pest2_Pest2_Cmb_TienAlergias";
-            this.Pest2_Pest2_Cmb_TienAlergias.Size = new System.Drawing.Size(106, 21);
-            this.Pest2_Pest2_Cmb_TienAlergias.TabIndex = 3;
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -913,15 +930,6 @@
             this.label15.Size = new System.Drawing.Size(125, 16);
             this.label15.TabIndex = 4;
             this.label15.Text = "¿Tiene alergias?";
-            // 
-            // Pest2_Pest2_Cmb_UsaMedic
-            // 
-            this.Pest2_Pest2_Cmb_UsaMedic.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Pest2_Pest2_Cmb_UsaMedic.FormattingEnabled = true;
-            this.Pest2_Pest2_Cmb_UsaMedic.Location = new System.Drawing.Point(260, 37);
-            this.Pest2_Pest2_Cmb_UsaMedic.Name = "Pest2_Pest2_Cmb_UsaMedic";
-            this.Pest2_Pest2_Cmb_UsaMedic.Size = new System.Drawing.Size(106, 21);
-            this.Pest2_Pest2_Cmb_UsaMedic.TabIndex = 0;
             // 
             // label14
             // 
@@ -973,7 +981,6 @@
             this.Pest2_Pest3_Grupo_Encargados.Controls.Add(this.Pest2_Pest3_Cmb_TipoResponsable);
             this.Pest2_Pest3_Grupo_Encargados.Controls.Add(this.label40);
             this.Pest2_Pest3_Grupo_Encargados.Controls.Add(this.Pest2_Pest3_Cmb_Estado);
-            this.Pest2_Pest3_Grupo_Encargados.Controls.Add(this.Pest2_Pest3_Radio_Nuevo);
             this.Pest2_Pest3_Grupo_Encargados.Controls.Add(this.Pest2_Pest3_Cmb_Trabaja);
             this.Pest2_Pest3_Grupo_Encargados.Controls.Add(this.Pest2_Pest3_Txt_EdadAnos);
             this.Pest2_Pest3_Grupo_Encargados.Controls.Add(this.label13);
@@ -1007,7 +1014,7 @@
             this.Pest2_Pest3_Grupo_Encargados.Text = "Datos de los Encargados";
             this.Pest2_Pest3_Grupo_Encargados.Enter += new System.EventHandler(this.Pest2_Pest3_Grupo_Encargados_Enter);
             // 
-            // Pest2_Pest3_Radio_Actualizar
+            // Pest2_Pest3_Cmb_TipoResponsable
             // 
             this.Pest2_Pest3_Cmb_TipoResponsable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Pest2_Pest3_Cmb_TipoResponsable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1038,17 +1045,6 @@
             this.Pest2_Pest3_Cmb_Estado.Size = new System.Drawing.Size(101, 24);
             this.Pest2_Pest3_Cmb_Estado.TabIndex = 28;
             // 
-            // Pest2_Pest3_Radio_Nuevo
-            // 
-            this.Pest2_Pest3_Radio_Nuevo.AutoSize = true;
-            this.Pest2_Pest3_Radio_Nuevo.Location = new System.Drawing.Point(6, 74);
-            this.Pest2_Pest3_Radio_Nuevo.Name = "Pest2_Pest3_Radio_Nuevo";
-            this.Pest2_Pest3_Radio_Nuevo.Size = new System.Drawing.Size(62, 17);
-            this.Pest2_Pest3_Radio_Nuevo.TabIndex = 29;
-            this.Pest2_Pest3_Radio_Nuevo.TabStop = true;
-            this.Pest2_Pest3_Radio_Nuevo.Text = "Nuevo";
-            this.Pest2_Pest3_Radio_Nuevo.UseVisualStyleBackColor = true;
-            // 
             // Pest2_Pest3_Cmb_Trabaja
             // 
             this.Pest2_Pest3_Cmb_Trabaja.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1067,9 +1063,11 @@
             // 
             this.Pest2_Pest3_Txt_EdadAnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest2_Pest3_Txt_EdadAnos.Location = new System.Drawing.Point(241, 160);
+            this.Pest2_Pest3_Txt_EdadAnos.MaxLength = 45;
             this.Pest2_Pest3_Txt_EdadAnos.Name = "Pest2_Pest3_Txt_EdadAnos";
             this.Pest2_Pest3_Txt_EdadAnos.Size = new System.Drawing.Size(158, 22);
             this.Pest2_Pest3_Txt_EdadAnos.TabIndex = 26;
+            this.Pest2_Pest3_Txt_EdadAnos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Pest3_Txt_EdadAnos_KeyPress);
             // 
             // label13
             // 
@@ -1079,7 +1077,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(55, 16);
             this.label13.TabIndex = 25;
-            this.label13.Text = "Edad (Años)";
+            this.label13.Text = "Correo";
             // 
             // Pest2_Pest3_Bttn_Limpiar
             // 
@@ -1093,6 +1091,7 @@
             this.Pest2_Pest3_Bttn_Limpiar.Size = new System.Drawing.Size(102, 97);
             this.Pest2_Pest3_Bttn_Limpiar.TabIndex = 24;
             this.Pest2_Pest3_Bttn_Limpiar.UseVisualStyleBackColor = true;
+            this.Pest2_Pest3_Bttn_Limpiar.Click += new System.EventHandler(this.Pest2_Pest3_Bttn_Limpiar_Click);
             // 
             // Pest2_Pest3_Bttn_Aceptar
             // 
@@ -1106,6 +1105,7 @@
             this.Pest2_Pest3_Bttn_Aceptar.Size = new System.Drawing.Size(102, 97);
             this.Pest2_Pest3_Bttn_Aceptar.TabIndex = 5;
             this.Pest2_Pest3_Bttn_Aceptar.UseVisualStyleBackColor = true;
+            this.Pest2_Pest3_Bttn_Aceptar.Click += new System.EventHandler(this.Pest2_Pest3_Bttn_Aceptar_Click);
             // 
             // label7
             // 
@@ -1125,6 +1125,7 @@
             this.Pest2_Pest3_Txt_TelefonoTrabajo.Name = "Pest2_Pest3_Txt_TelefonoTrabajo";
             this.Pest2_Pest3_Txt_TelefonoTrabajo.Size = new System.Drawing.Size(154, 22);
             this.Pest2_Pest3_Txt_TelefonoTrabajo.TabIndex = 21;
+            this.Pest2_Pest3_Txt_TelefonoTrabajo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Pest3_Txt_TelefonoTrabajo_KeyPress);
             // 
             // label8
             // 
@@ -1144,6 +1145,7 @@
             this.Pest2_Pest3_Txt_TelefonoCelular.Name = "Pest2_Pest3_Txt_TelefonoCelular";
             this.Pest2_Pest3_Txt_TelefonoCelular.Size = new System.Drawing.Size(154, 22);
             this.Pest2_Pest3_Txt_TelefonoCelular.TabIndex = 19;
+            this.Pest2_Pest3_Txt_TelefonoCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Pest3_Txt_TelefonoCelular_KeyPress);
             // 
             // label9
             // 
@@ -1159,9 +1161,11 @@
             // 
             this.Pest2_Pest3_Txt_Domicilio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest2_Pest3_Txt_Domicilio.Location = new System.Drawing.Point(241, 108);
+            this.Pest2_Pest3_Txt_Domicilio.MaxLength = 45;
             this.Pest2_Pest3_Txt_Domicilio.Name = "Pest2_Pest3_Txt_Domicilio";
             this.Pest2_Pest3_Txt_Domicilio.Size = new System.Drawing.Size(158, 22);
             this.Pest2_Pest3_Txt_Domicilio.TabIndex = 17;
+            this.Pest2_Pest3_Txt_Domicilio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Pest3_Txt_Domicilio_KeyPress);
             // 
             // label10
             // 
@@ -1177,9 +1181,11 @@
             // 
             this.Pest2_Pest3_Txt_ProfecionUOficio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest2_Pest3_Txt_ProfecionUOficio.Location = new System.Drawing.Point(241, 134);
+            this.Pest2_Pest3_Txt_ProfecionUOficio.MaxLength = 45;
             this.Pest2_Pest3_Txt_ProfecionUOficio.Name = "Pest2_Pest3_Txt_ProfecionUOficio";
             this.Pest2_Pest3_Txt_ProfecionUOficio.Size = new System.Drawing.Size(158, 22);
             this.Pest2_Pest3_Txt_ProfecionUOficio.TabIndex = 15;
+            this.Pest2_Pest3_Txt_ProfecionUOficio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Pest3_Txt_ProfecionUOficio_KeyPress);
             // 
             // label11
             // 
@@ -1199,6 +1205,7 @@
             this.Pest2_Pest3_Txt_TelefonoCasa.Name = "Pest2_Pest3_Txt_TelefonoCasa";
             this.Pest2_Pest3_Txt_TelefonoCasa.Size = new System.Drawing.Size(154, 22);
             this.Pest2_Pest3_Txt_TelefonoCasa.TabIndex = 11;
+            this.Pest2_Pest3_Txt_TelefonoCasa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Pest3_Txt_TelefonoCasa_KeyPress);
             // 
             // label6
             // 
@@ -1218,6 +1225,7 @@
             this.Pest2_Pest3_Txt_LugarTrabajo.Name = "Pest2_Pest3_Txt_LugarTrabajo";
             this.Pest2_Pest3_Txt_LugarTrabajo.Size = new System.Drawing.Size(154, 22);
             this.Pest2_Pest3_Txt_LugarTrabajo.TabIndex = 9;
+            this.Pest2_Pest3_Txt_LugarTrabajo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Pest3_Txt_LugarTrabajo_KeyPress);
             // 
             // label5
             // 
@@ -1243,9 +1251,11 @@
             // 
             this.Pest2_Pest3_Txt_Completo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest2_Pest3_Txt_Completo.Location = new System.Drawing.Point(241, 56);
+            this.Pest2_Pest3_Txt_Completo.MaxLength = 45;
             this.Pest2_Pest3_Txt_Completo.Name = "Pest2_Pest3_Txt_Completo";
             this.Pest2_Pest3_Txt_Completo.Size = new System.Drawing.Size(158, 22);
             this.Pest2_Pest3_Txt_Completo.TabIndex = 5;
+            this.Pest2_Pest3_Txt_Completo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Pest3_Txt_Completo_KeyPress);
             // 
             // label3
             // 
@@ -1261,9 +1271,11 @@
             // 
             this.Pest2_Pest3_Txt_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest2_Pest3_Txt_ID.Location = new System.Drawing.Point(241, 82);
+            this.Pest2_Pest3_Txt_ID.MaxLength = 14;
             this.Pest2_Pest3_Txt_ID.Name = "Pest2_Pest3_Txt_ID";
             this.Pest2_Pest3_Txt_ID.Size = new System.Drawing.Size(158, 22);
             this.Pest2_Pest3_Txt_ID.TabIndex = 3;
+            this.Pest2_Pest3_Txt_ID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Pest3_Txt_ID_KeyPress);
             // 
             // label2
             // 
@@ -1397,6 +1409,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Pest2_Pest3_DGV_MuestraEncargados)).EndInit();
             this.Pest2_Pest3_Grupo_Encargados.ResumeLayout(false);
             this.Pest2_Pest3_Grupo_Encargados.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1465,16 +1478,12 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox Pest2_Pest2_Txt_LugRecAtencMedica;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ComboBox Pest2_Pest2_Cmb_TienAlergias;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox Pest2_Pest2_Cmb_UsaMedic;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.GroupBox Pest2_Pest3_Grupo_MuestraDatosEncargado;
         private System.Windows.Forms.DataGridView Pest2_Pest3_DGV_MuestraEncargados;
         private System.Windows.Forms.GroupBox Pest2_Pest3_Grupo_Encargados;
-        private System.Windows.Forms.RadioButton Pest2_Pest3_Radio_Actualizar;
-        private System.Windows.Forms.RadioButton Pest2_Pest3_Radio_Nuevo;
         private System.Windows.Forms.ComboBox Pest2_Pest3_Cmb_Estado;
         private System.Windows.Forms.ComboBox Pest2_Pest3_Cmb_Trabaja;
         private System.Windows.Forms.TextBox Pest2_Pest3_Txt_EdadAnos;

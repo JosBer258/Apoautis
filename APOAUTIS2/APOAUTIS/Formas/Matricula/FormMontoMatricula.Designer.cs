@@ -49,9 +49,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.DGV_Show = new System.Windows.Forms.DataGridView();
             this.Txt_Filtro_Matricula = new System.Windows.Forms.TextBox();
-            this.Gruop_Opciones = new System.Windows.Forms.GroupBox();
-            this.Radio_Agregar = new System.Windows.Forms.RadioButton();
-            this.Radio_Actualizar = new System.Windows.Forms.RadioButton();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -60,7 +57,6 @@
             this.Gruop_MuestraDatos.SuspendLayout();
             this.Gruop_Busqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Show)).BeginInit();
-            this.Gruop_Opciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -86,6 +82,7 @@
             this.Gruop_MuestraDatos.Controls.Add(this.Bttn_Limpiar);
             this.Gruop_MuestraDatos.Controls.Add(this.label5);
             this.Gruop_MuestraDatos.Controls.Add(this.label4);
+            this.Gruop_MuestraDatos.Controls.Add(this.Bttn_Aceptar);
             this.Gruop_MuestraDatos.Controls.Add(this.label3);
             this.Gruop_MuestraDatos.Controls.Add(this.label2);
             this.Gruop_MuestraDatos.Controls.Add(this.label1);
@@ -94,7 +91,7 @@
             this.Gruop_MuestraDatos.Controls.Add(this.Txt_TotalIngreso);
             this.Gruop_MuestraDatos.Controls.Add(this.Txt_NombreAlumno);
             this.Gruop_MuestraDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gruop_MuestraDatos.Location = new System.Drawing.Point(161, 12);
+            this.Gruop_MuestraDatos.Location = new System.Drawing.Point(12, 12);
             this.Gruop_MuestraDatos.Name = "Gruop_MuestraDatos";
             this.Gruop_MuestraDatos.Size = new System.Drawing.Size(724, 135);
             this.Gruop_MuestraDatos.TabIndex = 15;
@@ -207,7 +204,6 @@
             this.Txt_Responsable.ReadOnly = true;
             this.Txt_Responsable.Size = new System.Drawing.Size(273, 20);
             this.Txt_Responsable.TabIndex = 3;
-            this.Txt_Responsable.TextChanged += new System.EventHandler(this.Txt_Responsable_TextChanged);
             // 
             // Txt_TotalIngreso
             // 
@@ -281,42 +277,6 @@
             this.Txt_Filtro_Matricula.TextChanged += new System.EventHandler(this.Txt_Filtro_Matricula_TextChanged);
             this.Txt_Filtro_Matricula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Filtro_Matricula_KeyPress);
             // 
-            // Gruop_Opciones
-            // 
-            this.Gruop_Opciones.Controls.Add(this.Radio_Agregar);
-            this.Gruop_Opciones.Controls.Add(this.Radio_Actualizar);
-            this.Gruop_Opciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gruop_Opciones.Location = new System.Drawing.Point(12, 12);
-            this.Gruop_Opciones.Name = "Gruop_Opciones";
-            this.Gruop_Opciones.Size = new System.Drawing.Size(143, 150);
-            this.Gruop_Opciones.TabIndex = 14;
-            this.Gruop_Opciones.TabStop = false;
-            this.Gruop_Opciones.Text = "Opciones";
-            // 
-            // Radio_Agregar
-            // 
-            this.Radio_Agregar.AutoSize = true;
-            this.Radio_Agregar.Location = new System.Drawing.Point(34, 95);
-            this.Radio_Agregar.Name = "Radio_Agregar";
-            this.Radio_Agregar.Size = new System.Drawing.Size(69, 17);
-            this.Radio_Agregar.TabIndex = 1;
-            this.Radio_Agregar.TabStop = true;
-            this.Radio_Agregar.Text = "Agregar";
-            this.Radio_Agregar.UseVisualStyleBackColor = true;
-            this.Radio_Agregar.CheckedChanged += new System.EventHandler(this.Radio_Agregar_CheckedChanged);
-            // 
-            // Radio_Actualizar
-            // 
-            this.Radio_Actualizar.AutoSize = true;
-            this.Radio_Actualizar.Location = new System.Drawing.Point(34, 41);
-            this.Radio_Actualizar.Name = "Radio_Actualizar";
-            this.Radio_Actualizar.Size = new System.Drawing.Size(81, 17);
-            this.Radio_Actualizar.TabIndex = 0;
-            this.Radio_Actualizar.TabStop = true;
-            this.Radio_Actualizar.Text = "Actualizar";
-            this.Radio_Actualizar.UseVisualStyleBackColor = true;
-            this.Radio_Actualizar.CheckedChanged += new System.EventHandler(this.Radio_Actualizar_CheckedChanged);
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
@@ -377,7 +337,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Gruop_MuestraDatos);
             this.Controls.Add(this.Gruop_Busqueda);
-            this.Controls.Add(this.Gruop_Opciones);
             this.Name = "FormMontoMatricula";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = " Monto de Matricula";
@@ -387,8 +346,6 @@
             this.Gruop_Busqueda.ResumeLayout(false);
             this.Gruop_Busqueda.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Show)).EndInit();
-            this.Gruop_Opciones.ResumeLayout(false);
-            this.Gruop_Opciones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -415,10 +372,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView DGV_Show;
         private System.Windows.Forms.TextBox Txt_Filtro_Matricula;
-        private System.Windows.Forms.GroupBox Gruop_Opciones;
-        private System.Windows.Forms.RadioButton Radio_Agregar;
-        private System.Windows.Forms.RadioButton Radio_Actualizar;
-        private System.Windows.Forms.Button Bttn_BusquedaDeAlumno;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;

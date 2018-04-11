@@ -71,26 +71,26 @@ namespace APOAUTIS.Clases
 
         public void Fun_ExtraerAñoMaximo()
         {
-            sql = string.Format("select AnioIngreso from matricula order by AnioIngreso desc limit 1;");
+            sql = string.Format("select max(year(FechaIngreso)) as 'Anio' from matricula;");
             cnx.Open();
             cmd = new MySql.Data.MySqlClient.MySqlCommand(sql, cnx);
             MySql.Data.MySqlClient.MySqlDataReader Reg = cmd.ExecuteReader();
             if (Reg.Read())
             {
-                Var_anio_final = (int) Convert.ToDouble(Reg["AnioIngreso"].ToString());
+                Var_anio_final = (int) Convert.ToDouble(Reg["Anio"].ToString());
             }
             cnx.Close();
         }
 
         public void Fun_ExtraerAñoMinimo()
         {
-            sql = string.Format("select AnioIngreso from matricula order by AnioIngreso limit 1;");
+            sql = string.Format("select min(year(FechaIngreso)) as 'Anio' from matricula;");
             cnx.Open();
             cmd = new MySql.Data.MySqlClient.MySqlCommand(sql, cnx);
             MySql.Data.MySqlClient.MySqlDataReader Reg = cmd.ExecuteReader();
             if (Reg.Read())
             {
-                Var_anio_primario = (int)Convert.ToDouble(Reg["AnioIngreso"].ToString());
+                Var_anio_primario = (int)Convert.ToDouble(Reg["Anio"].ToString());
             }
             cnx.Close();
         }

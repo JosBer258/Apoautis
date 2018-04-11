@@ -114,7 +114,7 @@ namespace APOAUTIS.Clases
             Var_resp_nombres = "";
             int ContadorFil=1;
 
-            this.sql = string.Format("select C.NomComRes as 'Responsable' from alumnos as A inner join alumnos_responsables as B on A.CodAlumno = B.CodAlumno inner join responsables as C on B.CodResp = C.CodResp where A.CodAlumno = '{0}'", Var_cod_nom);
+            this.sql = string.Format("select C.NomComRes as 'Responsable' from alumnos as A inner join `alumnos/responsables` as B on A.CodAlumno = B.CodAlumno inner join responsables as C on B.CodResp = C.CodResp where A.CodAlumno = '{0}'", Var_cod_nom);
             this.cnx.Open();
             this.cmd = new MySql.Data.MySqlClient.MySqlCommand(this.sql, this.cnx);
             MySql.Data.MySqlClient.MySqlDataReader Reg = null;

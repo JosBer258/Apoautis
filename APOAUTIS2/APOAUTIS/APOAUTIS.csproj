@@ -63,11 +63,13 @@
     <Compile Include="Clases\C_InformacionVivienda.cs" />
     <Compile Include="Clases\C_IngGast.cs" />
     <Compile Include="Clases\C_Login.cs" />
+    <Compile Include="Clases\C_LugaresRecreacion.cs" />
     <Compile Include="Clases\C_Mantenimiento.cs" />
     <Compile Include="Clases\C_Matricula.cs" />
     <Compile Include="Clases\C_MontoMens.cs" />
     <Compile Include="Clases\C_MuestraHistorialMatricu.cs" />
     <Compile Include="Clases\C_responsablePadre.cs" />
+    <Compile Include="Clases\C_Responsables.cs" />
     <Compile Include="Clases\C_responsablesMadre.cs" />
     <Compile Include="Clases\C_ResponsablesOtro.cs" />
     <Compile Include="Clases\C_SalarioMensaulidad.cs" />
@@ -102,12 +104,6 @@
     </Compile>
     <Compile Include="Formas\Estudio Socioeconomico\FromBusquedaAlumno.Designer.cs">
       <DependentUpon>FromBusquedaAlumno.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formas\Ingreso\Prueba.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formas\Ingreso\Prueba.Designer.cs">
-      <DependentUpon>Prueba.cs</DependentUpon>
     </Compile>
     <Compile Include="Formas\Mantenimiento\FormJornada.cs">
       <SubType>Form</SubType>
@@ -265,9 +261,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Estudio Socioeconomico\FromBusquedaAlumno.resx">
       <DependentUpon>FromBusquedaAlumno.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formas\Ingreso\Prueba.resx">
-      <DependentUpon>Prueba.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Mantenimiento\FormJornada.resx">
       <DependentUpon>FormJornada.cs</DependentUpon>

@@ -44,24 +44,24 @@
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.Pest1_Txt_TelefonoTrabajo = new System.Windows.Forms.TextBox();
+            this.txtTelTrabResp = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.Pest1_Txt_Celular = new System.Windows.Forms.TextBox();
+            this.txtTelCelResp = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.Pest1_Txt_Domicilio = new System.Windows.Forms.TextBox();
+            this.txtDomResp = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.Pest1_Txt_Profesion = new System.Windows.Forms.TextBox();
+            this.txtProfResp = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.Pest1_Txt_TelefonoCasa = new System.Windows.Forms.TextBox();
+            this.txtTelCasResp = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.Pest1_Txt_LugarTrabajo = new System.Windows.Forms.TextBox();
+            this.txtLugResp = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.Pest1_Txt_Nombre = new System.Windows.Forms.TextBox();
+            this.txtNomResp = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.Pest1_Txt_ID = new System.Windows.Forms.TextBox();
+            this.txtIdResp = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.Pest1_Txt_Cod = new System.Windows.Forms.TextBox();
+            this.txtCodResp = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
@@ -69,13 +69,13 @@
             this.label16 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Pest1_DGV_ShowResponsables)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_ShowResponsables)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.Pest1_Grupo_DatosEncargado.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Bttn_Salir
+            // btnSalir
             // 
             this.btnSalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSalir.BackgroundImage")));
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -144,7 +144,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1005, 404);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Datos del responsable";
+            this.tabPage2.Text = "Datos de Responsable";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // Pest1_Grupo_DatosEncargado
@@ -160,24 +160,24 @@
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.btnLimpiar);
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.btnAceptar);
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.label7);
-            this.Pest1_Grupo_DatosEncargado.Controls.Add(this.Pest1_Txt_TelefonoTrabajo);
+            this.Pest1_Grupo_DatosEncargado.Controls.Add(this.txtTelTrabResp);
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.label8);
-            this.Pest1_Grupo_DatosEncargado.Controls.Add(this.Pest1_Txt_Celular);
+            this.Pest1_Grupo_DatosEncargado.Controls.Add(this.txtTelCelResp);
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.label9);
-            this.Pest1_Grupo_DatosEncargado.Controls.Add(this.Pest1_Txt_Domicilio);
+            this.Pest1_Grupo_DatosEncargado.Controls.Add(this.txtDomResp);
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.label10);
-            this.Pest1_Grupo_DatosEncargado.Controls.Add(this.Pest1_Txt_Profesion);
+            this.Pest1_Grupo_DatosEncargado.Controls.Add(this.txtProfResp);
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.label11);
-            this.Pest1_Grupo_DatosEncargado.Controls.Add(this.Pest1_Txt_TelefonoCasa);
+            this.Pest1_Grupo_DatosEncargado.Controls.Add(this.txtTelCasResp);
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.label6);
-            this.Pest1_Grupo_DatosEncargado.Controls.Add(this.Pest1_Txt_LugarTrabajo);
+            this.Pest1_Grupo_DatosEncargado.Controls.Add(this.txtLugResp);
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.label5);
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.label4);
-            this.Pest1_Grupo_DatosEncargado.Controls.Add(this.Pest1_Txt_Nombre);
+            this.Pest1_Grupo_DatosEncargado.Controls.Add(this.txtNomResp);
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.label3);
-            this.Pest1_Grupo_DatosEncargado.Controls.Add(this.Pest1_Txt_ID);
+            this.Pest1_Grupo_DatosEncargado.Controls.Add(this.txtIdResp);
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.label2);
-            this.Pest1_Grupo_DatosEncargado.Controls.Add(this.Pest1_Txt_Cod);
+            this.Pest1_Grupo_DatosEncargado.Controls.Add(this.txtCodResp);
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.label1);
             this.Pest1_Grupo_DatosEncargado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest1_Grupo_DatosEncargado.Location = new System.Drawing.Point(35, 28);
@@ -221,7 +221,7 @@
             this.txtCorrResp.TabIndex = 30;
             this.txtCorrResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorrResp_KeyPress);
             // 
-            // Pest1_Cmb_Trabaja
+            // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -231,7 +231,7 @@
             this.label12.TabIndex = 29;
             this.label12.Text = "Correo";
             // 
-            // Pest1_Txt_Edad
+            // cmbEstResp
             // 
             this.cmbEstResp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -244,7 +244,7 @@
             this.cmbEstResp.Size = new System.Drawing.Size(212, 26);
             this.cmbEstResp.TabIndex = 28;
             // 
-            // label13
+            // cmbTrabResp
             // 
             this.cmbTrabResp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTrabResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -258,7 +258,7 @@
             this.cmbTrabResp.TabIndex = 27;
             this.cmbTrabResp.SelectedIndexChanged += new System.EventHandler(this.cmbTrabResp_SelectedIndexChanged);
             // 
-            // Pest1_Bttn_Limpiar
+            // btnLimpiar
             // 
             this.btnLimpiar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.BackgroundImage")));
             this.btnLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -272,7 +272,7 @@
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
-            // Pest1_Bttn_Aceptar
+            // btnAceptar
             // 
             this.btnAceptar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAceptar.BackgroundImage")));
             this.btnAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -296,7 +296,7 @@
             this.label7.TabIndex = 22;
             this.label7.Text = "Estado";
             // 
-            // Pest1_Txt_TelefonoTrabajo
+            // txtTelTrabResp
             // 
             this.txtTelTrabResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelTrabResp.Location = new System.Drawing.Point(198, 292);
@@ -316,7 +316,7 @@
             this.label8.TabIndex = 20;
             this.label8.Text = "Telefono del trabajo";
             // 
-            // Pest1_Txt_Celular
+            // txtTelCelResp
             // 
             this.txtTelCelResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelCelResp.Location = new System.Drawing.Point(198, 264);
@@ -336,7 +336,7 @@
             this.label9.TabIndex = 18;
             this.label9.Text = "Telefono celular";
             // 
-            // Pest1_Txt_Domicilio
+            // txtDomResp
             // 
             this.txtDomResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDomResp.Location = new System.Drawing.Point(198, 116);
@@ -356,7 +356,7 @@
             this.label10.TabIndex = 16;
             this.label10.Text = "Domicilio";
             // 
-            // Pest1_Txt_Profesion
+            // txtProfResp
             // 
             this.txtProfResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProfResp.Location = new System.Drawing.Point(198, 142);
@@ -376,7 +376,7 @@
             this.label11.TabIndex = 14;
             this.label11.Text = "Profesion u Oficio";
             // 
-            // Pest1_Txt_TelefonoCasa
+            // txtTelCasResp
             // 
             this.txtTelCasResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelCasResp.Location = new System.Drawing.Point(198, 236);
@@ -394,9 +394,9 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(115, 18);
             this.label6.TabIndex = 10;
-            this.label6.Text = "Telefono su casa";
+            this.label6.Text = "Telefono casa";
             // 
-            // Pest1_Txt_LugarTrabajo
+            // txtLugResp
             // 
             this.txtLugResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLugResp.Location = new System.Drawing.Point(572, 113);
@@ -426,7 +426,7 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "¿Trabaja?";
             // 
-            // Pest1_Txt_Nombre
+            // txtNomResp
             // 
             this.txtNomResp.Enabled = false;
             this.txtNomResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -447,7 +447,7 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Nombre completo";
             // 
-            // Pest1_Txt_ID
+            // txtIdResp
             // 
             this.txtIdResp.Enabled = false;
             this.txtIdResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -468,7 +468,7 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Numero de ID";
             // 
-            // Pest1_Txt_Cod
+            // txtCodResp
             // 
             this.txtCodResp.Enabled = false;
             this.txtCodResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -537,6 +537,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormMantenimientoResponsable";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Mantenimiento de Responsables";
@@ -555,38 +556,25 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Bttn_Salir;
+        private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.DataGridView Pest1_DGV_ShowResponsables;
-        private System.Windows.Forms.TextBox Pest1_Txt_FiltroBusqueda;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox Pest1_Grupo_DatosEncargado;
-        private System.Windows.Forms.ComboBox Pest1_Cmb_Estado;
-        private System.Windows.Forms.ComboBox Pest1_Cmb_Trabaja;
-        private System.Windows.Forms.TextBox Pest1_Txt_Edad;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button Pest1_Bttn_Limpiar;
-        private System.Windows.Forms.Button Pest1_Bttn_Aceptar;
+        private System.Windows.Forms.ComboBox cmbEstResp;
+        private System.Windows.Forms.ComboBox cmbTrabResp;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox Pest1_Txt_TelefonoTrabajo;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox Pest1_Txt_Celular;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox Pest1_Txt_Domicilio;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox Pest1_Txt_Profesion;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox Pest1_Txt_TelefonoCasa;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox Pest1_Txt_LugarTrabajo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox Pest1_Txt_Nombre;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox Pest1_Txt_ID;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox Pest1_Txt_Cod;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox txtCodResp;
         public System.Windows.Forms.TextBox txtTelTrabResp;

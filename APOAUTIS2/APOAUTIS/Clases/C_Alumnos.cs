@@ -447,7 +447,16 @@ A.Alumnos_CodAlumno=B.CodAlumno where B.CodAlumno like'%{0}%'", CodAlumno11);
             cnx.Open();
             try
             {
-                DataAdapter = new MySqlDataAdapter(@"select * from alumnos", ccnx);
+                DataAdapter = new MySqlDataAdapter(@"select A.CodAlumno as'Codigo de Alumno', A.NomAlumno as 'Nombre completo',
+A.LugarNaciAlum as 'Lugar de Nacimiento', A.FechaNaciAlum as 'Fecha de Nacimiento', A.EdadAlum as 'Edad', A.EdadCronologica
+as 'Edad Cronologica',
+A.SexoAlum as 'Sexo', A.IdAlum as 'Identidad', A.DireccionAlum as 'Direccion', A.TelFijoAlum as 'Telefono fijo', 
+A.CelAlumno as 'Celular', A.EscolaridadAlum as 'Escolaridad',
+A.LugarOrigAlum as 'Lugar de Origen', A.InstProceAlumno as 'Instituto de Procedencia', A.InstDondeEstaIncluido 
+as 'Intituto donde esta incluido' , B.DescripcionEstado as 'Estado',A.EmergLugar as 'Lugar en Caso de Emergencia',   
+A.EmergTelefono as 'Telefono de Emergencia' from alumnos as A inner join estados as B
+on A.Estado=B.CodEstado
+order by CodAlumno", ccnx);
                 dt = new DataTable();
                 DataAdapter.Fill(dt);
                 dgv.DataSource = dt;
@@ -459,9 +468,14 @@ A.Alumnos_CodAlumno=B.CodAlumno where B.CodAlumno like'%{0}%'", CodAlumno11);
             }
             cnx.Close();
         }
+        public void MostrarAcontecimientos(DataGridView dgv)
+        {
+            cnx.Open();
+            try
+            {
 
+                
 
-        
 
                 this.sql = string.Format
                (@"select B.NomAlumno as 'Nombre Alumno',B.SexoAlum as 'Sexo',B.EdadAlum as 'Edad',
@@ -805,3 +819,6 @@ NomAlumno11, LugarNaciAlum11, FechaNaciAlum11, EdadAlum11, DireccionAlum11, TelF
 
     }
 }
+
+        
+    

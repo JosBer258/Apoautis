@@ -147,15 +147,5 @@ namespace APOAUTIS
             FormaEstSocEco Est = new FormaEstSocEco();
             Est.ShowDialog();
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button11_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

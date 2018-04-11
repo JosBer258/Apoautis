@@ -95,6 +95,7 @@
             this.Txt_Contrasenna.TabIndex = 121;
             this.Txt_Contrasenna.Text = "123";
             this.Txt_Contrasenna.UseSystemPasswordChar = true;
+            this.Txt_Contrasenna.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Contrasenna_KeyPress);
             // 
             // label19
             // 
@@ -117,7 +118,8 @@
             this.Txt_NombreUsuario.Name = "Txt_NombreUsuario";
             this.Txt_NombreUsuario.Size = new System.Drawing.Size(248, 26);
             this.Txt_NombreUsuario.TabIndex = 119;
-            this.Txt_NombreUsuario.Text = "root";
+            this.Txt_NombreUsuario.Text = "WRaul";
+            this.Txt_NombreUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_NombreUsuario_KeyPress);
             // 
             // label20
             // 
