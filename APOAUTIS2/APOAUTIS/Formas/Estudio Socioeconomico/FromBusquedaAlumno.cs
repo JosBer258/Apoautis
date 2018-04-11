@@ -84,7 +84,7 @@ namespace APOAUTIS.Formas.Estudio_Socioeconomico
         public static C_responsablesMadre madreSeleccionado { get; set; }
         public static C_DatosGenerales AlumnoSeleccionado { get;  set; }
         public static C_responsablePadre padreSeleccionado { get; set; }
-        public static C_ResponsablesOtro otrorespSeleccionado { get; set; }
+
 
         private void btm_Aceptar_Click(object sender, EventArgs e)
         {
@@ -102,10 +102,7 @@ namespace APOAUTIS.Formas.Estudio_Socioeconomico
 
                 double cod3 = Convert.ToDouble(DGV_Show.CurrentRow.Cells[0].Value);
                 padreSeleccionado = C_EstudioSocioMetodos.ObtenerPadre(cod3);
-                /*
-                double cod4 = Convert.ToDouble(DGV_Show.CurrentRow.Cells[0].Value);
-                otrorespSeleccionado = C_EstudioSocioMetodos.ObtenerOtroResp(cod);
-                */
+
                 this.Close();
             }
 

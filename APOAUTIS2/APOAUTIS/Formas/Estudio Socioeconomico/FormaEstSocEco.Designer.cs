@@ -427,6 +427,7 @@
             this.txt_EsSo_TelTrabPadre_DatosGe.Name = "txt_EsSo_TelTrabPadre_DatosGe";
             this.txt_EsSo_TelTrabPadre_DatosGe.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_TelTrabPadre_DatosGe.TabIndex = 30;
+            this.txt_EsSo_TelTrabPadre_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_TelTrabPadre_DatosGe_KeyPress);
             // 
             // label17
             // 
@@ -444,6 +445,7 @@
             this.txt_EsSo_CelPadre_DatosGe.Name = "txt_EsSo_CelPadre_DatosGe";
             this.txt_EsSo_CelPadre_DatosGe.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_CelPadre_DatosGe.TabIndex = 28;
+            this.txt_EsSo_CelPadre_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_CelPadre_DatosGe_KeyPress);
             // 
             // txt_EsSo_TelCAsaPadre_DatosGe
             // 
@@ -451,6 +453,7 @@
             this.txt_EsSo_TelCAsaPadre_DatosGe.Name = "txt_EsSo_TelCAsaPadre_DatosGe";
             this.txt_EsSo_TelCAsaPadre_DatosGe.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_TelCAsaPadre_DatosGe.TabIndex = 27;
+            this.txt_EsSo_TelCAsaPadre_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_TelCAsaPadre_DatosGe_KeyPress);
             // 
             // label18
             // 
@@ -548,6 +551,7 @@
             this.txt_EsSo_IdentPadre_DatosGe.Name = "txt_EsSo_IdentPadre_DatosGe";
             this.txt_EsSo_IdentPadre_DatosGe.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_IdentPadre_DatosGe.TabIndex = 16;
+            this.txt_EsSo_IdentPadre_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_IdentPadre_DatosGe_KeyPress);
             // 
             // txt_EsSo_NomPadre_DatosGe
             // 
@@ -794,6 +798,7 @@
             this.txt_EsSo_EdadEncarg_DatosGe.Name = "txt_EsSo_EdadEncarg_DatosGe";
             this.txt_EsSo_EdadEncarg_DatosGe.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_EdadEncarg_DatosGe.TabIndex = 36;
+            this.txt_EsSo_EdadEncarg_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_EdadEncarg_DatosGe_KeyPress);
             // 
             // txt_EsSo_TelEncarg_DatosGe
             // 
@@ -801,6 +806,7 @@
             this.txt_EsSo_TelEncarg_DatosGe.Name = "txt_EsSo_TelEncarg_DatosGe";
             this.txt_EsSo_TelEncarg_DatosGe.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_TelEncarg_DatosGe.TabIndex = 38;
+            this.txt_EsSo_TelEncarg_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_TelEncarg_DatosGe_KeyPress);
             // 
             // label28
             // 
@@ -853,6 +859,7 @@
             this.txt_EsSo_TelTrabMadre_DatosGe.Name = "txt_EsSo_TelTrabMadre_DatosGe";
             this.txt_EsSo_TelTrabMadre_DatosGe.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_TelTrabMadre_DatosGe.TabIndex = 30;
+            this.txt_EsSo_TelTrabMadre_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_TelTrabMadre_DatosGe_KeyPress);
             // 
             // label14
             // 
@@ -870,6 +877,7 @@
             this.txt_EsSo_CelMadre_DatosGe.Name = "txt_EsSo_CelMadre_DatosGe";
             this.txt_EsSo_CelMadre_DatosGe.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_CelMadre_DatosGe.TabIndex = 28;
+            this.txt_EsSo_CelMadre_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_CelMadre_DatosGe_KeyPress);
             // 
             // txt_EsSo_TelCasaMadre_DatosGe
             // 
@@ -975,6 +983,7 @@
             this.txt_EsSo_IdentMadre_DatosGe.Name = "txt_EsSo_IdentMadre_DatosGe";
             this.txt_EsSo_IdentMadre_DatosGe.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_IdentMadre_DatosGe.TabIndex = 16;
+            this.txt_EsSo_IdentMadre_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_IdentMadre_DatosGe_KeyPress);
             // 
             // txt_EsSo_NomMadre_DatosGe
             // 
@@ -1070,6 +1079,7 @@
             this.txt_EsSo_TotalGastos_InfoFami.Name = "txt_EsSo_TotalGastos_InfoFami";
             this.txt_EsSo_TotalGastos_InfoFami.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_TotalGastos_InfoFami.TabIndex = 45;
+            this.txt_EsSo_TotalGastos_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_TotalGastos_InfoFami_KeyPress);
             // 
             // label52
             // 
@@ -1095,6 +1105,7 @@
             this.txt_EsSo_Otros_InfoFami.Name = "txt_EsSo_Otros_InfoFami";
             this.txt_EsSo_Otros_InfoFami.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_Otros_InfoFami.TabIndex = 42;
+            this.txt_EsSo_Otros_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Otros_InfoFami_KeyPress);
             // 
             // label54
             // 
@@ -1111,6 +1122,7 @@
             this.txt_EsSo_Alquiler_InfoFami.Name = "txt_EsSo_Alquiler_InfoFami";
             this.txt_EsSo_Alquiler_InfoFami.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_Alquiler_InfoFami.TabIndex = 40;
+            this.txt_EsSo_Alquiler_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Alquiler_InfoFami_KeyPress);
             // 
             // txt_EsSo_Vestime_InfoFami
             // 
@@ -1118,6 +1130,7 @@
             this.txt_EsSo_Vestime_InfoFami.Name = "txt_EsSo_Vestime_InfoFami";
             this.txt_EsSo_Vestime_InfoFami.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_Vestime_InfoFami.TabIndex = 39;
+            this.txt_EsSo_Vestime_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Vestime_InfoFami_KeyPress);
             // 
             // label55
             // 
@@ -1134,6 +1147,7 @@
             this.txt_EsSo_Combus_InfoFami.Name = "txt_EsSo_Combus_InfoFami";
             this.txt_EsSo_Combus_InfoFami.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_Combus_InfoFami.TabIndex = 37;
+            this.txt_EsSo_Combus_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Combus_InfoFami_KeyPress);
             // 
             // label51
             // 
@@ -1150,6 +1164,7 @@
             this.txt_EsSo_Alimentos_InfoFami.Name = "txt_EsSo_Alimentos_InfoFami";
             this.txt_EsSo_Alimentos_InfoFami.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_Alimentos_InfoFami.TabIndex = 35;
+            this.txt_EsSo_Alimentos_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Alimentos_InfoFami_KeyPress);
             // 
             // label44
             // 
@@ -1175,6 +1190,7 @@
             this.txt_EsSo_Educa_InfoFami.Name = "txt_EsSo_Educa_InfoFami";
             this.txt_EsSo_Educa_InfoFami.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_Educa_InfoFami.TabIndex = 32;
+            this.txt_EsSo_Educa_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Educa_InfoFami_KeyPress);
             // 
             // label46
             // 
@@ -1191,6 +1207,7 @@
             this.txt_EsSo_Salud_InfoFami.Name = "txt_EsSo_Salud_InfoFami";
             this.txt_EsSo_Salud_InfoFami.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_Salud_InfoFami.TabIndex = 30;
+            this.txt_EsSo_Salud_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Salud_InfoFami_KeyPress);
             // 
             // txt_EsSo_Transp_InfoFami
             // 
@@ -1198,6 +1215,7 @@
             this.txt_EsSo_Transp_InfoFami.Name = "txt_EsSo_Transp_InfoFami";
             this.txt_EsSo_Transp_InfoFami.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_Transp_InfoFami.TabIndex = 29;
+            this.txt_EsSo_Transp_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Transp_InfoFami_KeyPress);
             // 
             // label47
             // 
@@ -1223,6 +1241,7 @@
             this.txt_EsSo_Telefono_InfoFami.Name = "txt_EsSo_Telefono_InfoFami";
             this.txt_EsSo_Telefono_InfoFami.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_Telefono_InfoFami.TabIndex = 26;
+            this.txt_EsSo_Telefono_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Telefono_InfoFami_KeyPress);
             // 
             // label49
             // 
@@ -1239,6 +1258,7 @@
             this.txt_EsSo_Agua_InfoFami.Name = "txt_EsSo_Agua_InfoFami";
             this.txt_EsSo_Agua_InfoFami.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_Agua_InfoFami.TabIndex = 24;
+            this.txt_EsSo_Agua_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Agua_InfoFami_KeyPress);
             // 
             // txt_EsSo_Energia_InfoFami
             // 
@@ -1246,6 +1266,7 @@
             this.txt_EsSo_Energia_InfoFami.Name = "txt_EsSo_Energia_InfoFami";
             this.txt_EsSo_Energia_InfoFami.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_Energia_InfoFami.TabIndex = 23;
+            this.txt_EsSo_Energia_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Energia_InfoFami_KeyPress);
             // 
             // label50
             // 
@@ -1286,6 +1307,7 @@
             this.txt_EsSo_IngreTotales_InfoFami.Size = new System.Drawing.Size(148, 20);
             this.txt_EsSo_IngreTotales_InfoFami.TabIndex = 35;
             this.txt_EsSo_IngreTotales_InfoFami.TextChanged += new System.EventHandler(this.txt_EsSo_IngreTotales_InfoFami_TextChanged);
+            this.txt_EsSo_IngreTotales_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_IngreTotales_InfoFami_KeyPress);
             // 
             // label43
             // 
@@ -1427,6 +1449,7 @@
             this.txt_EsSo_TotalMiemb_InfoFami.Name = "txt_EsSo_TotalMiemb_InfoFami";
             this.txt_EsSo_TotalMiemb_InfoFami.Size = new System.Drawing.Size(74, 20);
             this.txt_EsSo_TotalMiemb_InfoFami.TabIndex = 11;
+            this.txt_EsSo_TotalMiemb_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_TotalMiemb_InfoFami_KeyPress);
             // 
             // txt_EsSo_CuantosFamil_InfoFami
             // 
@@ -1434,6 +1457,7 @@
             this.txt_EsSo_CuantosFamil_InfoFami.Name = "txt_EsSo_CuantosFamil_InfoFami";
             this.txt_EsSo_CuantosFamil_InfoFami.Size = new System.Drawing.Size(100, 20);
             this.txt_EsSo_CuantosFamil_InfoFami.TabIndex = 10;
+            this.txt_EsSo_CuantosFamil_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_CuantosFamil_InfoFami_KeyPress);
             // 
             // txt_EsSo_CuantosHijos_InfoFami
             // 

@@ -13,7 +13,7 @@ namespace APOAUTIS.Clases
     {
 
 
-
+        int codigo = 0;
 
 
         public static MySqlConnection ObtenerConexion()
@@ -372,16 +372,23 @@ namespace APOAUTIS.Clases
 
         }
 
-        public static C_ResponsablesOtro ObtenerOtro()
+        public static C_ResponsablesOtro ObtenerOtroResp(double cod)
         {
             C_ResponsablesOtro otro = new C_ResponsablesOtro();
             MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
 
-            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT t.CodResp FROM responsables t WHERE t.CodResp = ( SELECT MAX(CodResp)  FROM responsables)"), conexion);
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT b.CodAlumno,a.CodResp,d.ParentescoEncarg, d.Edad, a.NomComRes,a.ProfecionRes,a.TelCelRes, b.Cod_TipoResp FROM   encargadootrofamiliar as d INNER JOIN  responsables as a   on d.Responsables_CodResp  = a.CodResp  INNER JOIN  `alumnos/responsables`  as b ON a.CodResp = b.CodResp  INNER JOIN alumnos as c ON b.CodAlumno= c.CodAlumno where b.Cod_TipoResp='3' and  c.CodAlumno= '{0}'", cod), conexion);
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
             {
-                otro.CodRespOtro = _reader.GetInt32(0);
+                otro.CodAlumno = _reader.GetInt32(0);
+                otro.CodRespOtro = _reader.GetInt32(1);
+                otro.Parentesco = _reader.GetString(2);
+                otro.Edad = _reader.GetInt32(3);
+                otro.NomRespOtro = _reader.GetString(4);
+                otro.Profesion = _reader.GetString(5);
+                otro.Cel = _reader.GetString(6);
+                otro.TipoResp = _reader.GetInt32(7);
 
             }
 
@@ -390,6 +397,27 @@ namespace APOAUTIS.Clases
 
         }
 
+        public static C_ResponsablesOtro ObtenerOtro()
+        {
+            C_ResponsablesOtro otro = new C_ResponsablesOtro();
+            MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
+
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT max(CodResp) FROM responsables"), conexion);
+            MySqlDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+                otro.CodRespOtro = _reader.GetInt32(0);
+
+            }
+
+
+            conexion.Close();
+            return otro;
+
+        }
+
+        
+        
         
 
             public static C_HistorialMedico ObtenerHistorialMedico(double cod)
@@ -438,30 +466,7 @@ namespace APOAUTIS.Clases
 
         }
 
-        public static C_ResponsablesOtro ObtenerOtroResp(double cod)
-        {
-            C_ResponsablesOtro otro = new C_ResponsablesOtro();
-            MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
 
-            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT b.CodAlumno,a.CodResp,d.ParentescoEncarg, d.Edad, a.NomComRes,a.ProfecionRes,a.TelCelRes, b.Cod_TipoResp FROM   encargadootrofamiliar as d INNER JOIN  responsables as a   on d.Responsables_CodResp  = a.CodResp  INNER JOIN  `alumnos/responsables`  as b ON a.CodResp = b.CodResp  INNER JOIN alumnos as c ON b.CodAlumno= c.CodAlumno where b.Cod_TipoResp='3' and  c.CodAlumno= '{0}'",cod), conexion);
-            MySqlDataReader _reader = _comando.ExecuteReader();
-            while (_reader.Read())
-            {
-                otro.CodAlumno = _reader.GetInt32(0);
-                otro.CodRespOtro = _reader.GetInt32(1);
-                otro.Parentesco = _reader.GetString(2);
-                otro.Edad= _reader.GetInt32(3);
-                otro.NomRespOtro = _reader.GetString(4);
-                otro.Profesion = _reader.GetString(5);
-                otro.Cel= _reader.GetString(6);
-                otro.TipoResp = _reader.GetInt32(7);
-
-            }
-
-            conexion.Close();
-            return otro;
-
-        }
 
 
         public static C_InformacionVivienda ObtenerInfoVivienda(double cod)
