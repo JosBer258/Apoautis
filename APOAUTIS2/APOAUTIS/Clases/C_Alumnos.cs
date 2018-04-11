@@ -194,22 +194,50 @@ namespace APOAUTIS.Clases
             }
         }
 
-        public int CodMatricula { get { return codMatricula; }
-        set { codMatricula = value; }
-    }
-    public int Jornada { get { return jornada; }
-set { jornada = value; }}
-        public string Observaciones { get { return observaciones; }
-set { observaciones = value; }}
-set { fechaIngreso = value; }}
-        public string FechaIngreso { get { return fechaIngreso; }
-        public string RecibioEvalu { get { return recibioEvalu; }
-set { recibioEvalu = value; }}
-
-        public string AnioIngreso { get { return anioIngreso; }
-            set { anioIngreso = value; }
+        public int CodMatricula
+        {
+            get { return codMatricula; }
+            set { codMatricula = value; }
         }
 
+        public int Jornada
+        {
+            get { return jornada; }
+            set { jornada = value; }
+        }
+
+        public string Observaciones
+        {
+            get { return observaciones; }
+            set { observaciones = value; }
+        }
+
+        public string AnioIngreso
+        {
+            get { return anioIngreso; }
+            set { anioIngreso = value; }
+        }
+        public string RecibioEvalu
+        {
+            get { return recibioEvalu; }
+            set { recibioEvalu = value; }
+        }
+
+        public string FechaIngreso
+        {
+            get { return fechaIngreso; }
+            set { fechaIngreso = value; }
+        }
+        /*
+
+            
+                
+        
+                
+                
+
+               
+        */
         public void ingresoAlumnos()
         {
             this.sql = string.Format(@"INSERT INTO alumnos
@@ -558,7 +586,7 @@ order by CodAlumno", busq);
             Com_Roles.DisplayMember = "DescripcionEstado";
             Com_Roles.DataSource = dt;
         }
-        public void GenerarJornada(ComboBox Com_Roles)
+        /*public void GenerarJornada(ComboBox Com_Roles)
         {
             cnx.Open();
             sql = string.Format(@"select cod_jornada, descripcion from jornada");
@@ -571,7 +599,7 @@ order by CodAlumno", busq);
             Com_Roles.ValueMember = "cod_jornada";
             Com_Roles.DisplayMember = "descripcion";
             Com_Roles.DataSource = dt;
-        }
+        }*/
 
         public DateTime ne;
         public string w;

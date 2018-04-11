@@ -198,3 +198,5 @@ C:\Users\Josias\Pictures\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Matricula.
 C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Matricula.Form_BusqMatricula.resources
 C:\Users\ROHEZU\Pictures\ApoAutis Sistema\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Ingreso.Prueba.resources
 C:\Users\ROHEZU\Pictures\ApoAutis Sistema\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Matricula.Form_BusqMatricula.resources
+C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Mantenimiento.FormJornada.resources
+C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Mantenimiento.FormTipoMatricula.resources
