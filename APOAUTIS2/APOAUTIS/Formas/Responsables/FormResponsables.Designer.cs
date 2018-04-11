@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormResponsables));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.txtBusqResp = new System.Windows.Forms.TextBox();
@@ -63,6 +64,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtCodResp = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_ShowResponsables)).BeginInit();
@@ -70,17 +76,21 @@
             this.Pest1_Grupo_ShowAlumno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_ShowAlumnosResp)).BeginInit();
             this.Pest1_Grupo_DatosEncargado.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(775, 449);
+            this.tabControl1.Size = new System.Drawing.Size(1013, 430);
             this.tabControl1.TabIndex = 31;
             // 
             // tabPage1
@@ -91,7 +101,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(767, 423);
+            this.tabPage1.Size = new System.Drawing.Size(1005, 404);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Busqueda de Responsable";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -120,15 +130,19 @@
             this.DGV_ShowResponsables.AllowUserToDeleteRows = false;
             this.DGV_ShowResponsables.AllowUserToResizeColumns = false;
             this.DGV_ShowResponsables.AllowUserToResizeRows = false;
+            this.DGV_ShowResponsables.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DGV_ShowResponsables.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGV_ShowResponsables.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.DGV_ShowResponsables.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DGV_ShowResponsables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_ShowResponsables.Location = new System.Drawing.Point(10, 83);
+            this.DGV_ShowResponsables.Location = new System.Drawing.Point(21, 75);
             this.DGV_ShowResponsables.MultiSelect = false;
             this.DGV_ShowResponsables.Name = "DGV_ShowResponsables";
             this.DGV_ShowResponsables.ReadOnly = true;
             this.DGV_ShowResponsables.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_ShowResponsables.Size = new System.Drawing.Size(746, 308);
+            this.DGV_ShowResponsables.Size = new System.Drawing.Size(959, 305);
             this.DGV_ShowResponsables.TabIndex = 28;
             this.DGV_ShowResponsables.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_ShowResponsables_CellDoubleClick);
             // 
@@ -139,18 +153,21 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(767, 423);
+            this.tabPage2.Size = new System.Drawing.Size(1005, 404);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Datos de Responsable";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // Pest1_Grupo_ShowAlumno
             // 
+            this.Pest1_Grupo_ShowAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Pest1_Grupo_ShowAlumno.Controls.Add(this.DGV_ShowAlumnosResp);
             this.Pest1_Grupo_ShowAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest1_Grupo_ShowAlumno.Location = new System.Drawing.Point(6, 275);
+            this.Pest1_Grupo_ShowAlumno.Location = new System.Drawing.Point(6, 248);
             this.Pest1_Grupo_ShowAlumno.Name = "Pest1_Grupo_ShowAlumno";
-            this.Pest1_Grupo_ShowAlumno.Size = new System.Drawing.Size(755, 138);
+            this.Pest1_Grupo_ShowAlumno.Size = new System.Drawing.Size(975, 141);
             this.Pest1_Grupo_ShowAlumno.TabIndex = 4;
             this.Pest1_Grupo_ShowAlumno.TabStop = false;
             this.Pest1_Grupo_ShowAlumno.Text = "Todos los alumnos bajo su cuidado";
@@ -161,20 +178,25 @@
             this.DGV_ShowAlumnosResp.AllowUserToDeleteRows = false;
             this.DGV_ShowAlumnosResp.AllowUserToResizeColumns = false;
             this.DGV_ShowAlumnosResp.AllowUserToResizeRows = false;
-            this.DGV_ShowAlumnosResp.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DGV_ShowAlumnosResp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DGV_ShowAlumnosResp.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGV_ShowAlumnosResp.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DGV_ShowAlumnosResp.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DGV_ShowAlumnosResp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_ShowAlumnosResp.Location = new System.Drawing.Point(6, 19);
+            this.DGV_ShowAlumnosResp.Location = new System.Drawing.Point(29, 24);
             this.DGV_ShowAlumnosResp.MultiSelect = false;
             this.DGV_ShowAlumnosResp.Name = "DGV_ShowAlumnosResp";
             this.DGV_ShowAlumnosResp.ReadOnly = true;
             this.DGV_ShowAlumnosResp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_ShowAlumnosResp.Size = new System.Drawing.Size(743, 113);
+            this.DGV_ShowAlumnosResp.Size = new System.Drawing.Size(922, 100);
             this.DGV_ShowAlumnosResp.TabIndex = 2;
             // 
             // Pest1_Grupo_DatosEncargado
             // 
+            this.Pest1_Grupo_DatosEncargado.Controls.Add(this.label16);
+            this.Pest1_Grupo_DatosEncargado.Controls.Add(this.label15);
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.txtCorrResp);
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.label12);
             this.Pest1_Grupo_DatosEncargado.Controls.Add(this.cmbEstResp);
@@ -204,7 +226,7 @@
             this.Pest1_Grupo_DatosEncargado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest1_Grupo_DatosEncargado.Location = new System.Drawing.Point(6, 6);
             this.Pest1_Grupo_DatosEncargado.Name = "Pest1_Grupo_DatosEncargado";
-            this.Pest1_Grupo_DatosEncargado.Size = new System.Drawing.Size(755, 263);
+            this.Pest1_Grupo_DatosEncargado.Size = new System.Drawing.Size(975, 225);
             this.Pest1_Grupo_DatosEncargado.TabIndex = 3;
             this.Pest1_Grupo_DatosEncargado.TabStop = false;
             this.Pest1_Grupo_DatosEncargado.Text = "Datos de los Encargados";
@@ -258,23 +280,29 @@
             // 
             // btnLimpiar
             // 
+            this.btnLimpiar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.BackgroundImage")));
+            this.btnLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(528, 208);
+            this.btnLimpiar.ForeColor = System.Drawing.Color.Snow;
+            this.btnLimpiar.Location = new System.Drawing.Point(860, 28);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(99, 35);
+            this.btnLimpiar.Size = new System.Drawing.Size(99, 96);
             this.btnLimpiar.TabIndex = 24;
-            this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click_1);
             // 
             // btnAceptar
             // 
+            this.btnAceptar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAceptar.BackgroundImage")));
+            this.btnAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(633, 208);
+            this.btnAceptar.ForeColor = System.Drawing.Color.Snow;
+            this.btnAceptar.Location = new System.Drawing.Point(755, 28);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(99, 35);
+            this.btnAceptar.Size = new System.Drawing.Size(99, 96);
             this.btnAceptar.TabIndex = 5;
-            this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
@@ -478,11 +506,66 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.btnSalir);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 448);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1037, 122);
+            this.panel1.TabIndex = 32;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(48, 102);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(37, 15);
+            this.label13.TabIndex = 32;
+            this.label13.Text = "Salir";
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSalir.BackgroundImage")));
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnSalir.Location = new System.Drawing.Point(16, 3);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(100, 96);
+            this.btnSalir.TabIndex = 31;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(778, 127);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(55, 15);
+            this.label15.TabIndex = 33;
+            this.label15.Text = "Aceptar";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(884, 127);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(56, 15);
+            this.label16.TabIndex = 34;
+            this.label16.Text = "Limpiar";
+            // 
             // FormResponsables
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(793, 470);
+            this.ClientSize = new System.Drawing.Size(1037, 570);
+            this.ControlBox = false;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
             this.Name = "FormResponsables";
             this.Text = "Mantenimiento de Responsables";
@@ -496,6 +579,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.DGV_ShowAlumnosResp)).EndInit();
             this.Pest1_Grupo_DatosEncargado.ResumeLayout(false);
             this.Pest1_Grupo_DatosEncargado.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -537,5 +622,10 @@
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox txtCodResp;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
     }
 }

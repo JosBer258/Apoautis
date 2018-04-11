@@ -1,6 +1,7 @@
 ﻿using APOAUTIS.Clases;
 using APOAUTIS.Formas.Alumnos;
 using APOAUTIS.Formas.Entrevista_Padres;
+using APOAUTIS.Formas.Mantenimiento;
 using APOAUTIS.Formas.Matricula;
 using APOAUTIS.Formas.Responsables;
 using APOAUTIS.Formas.Usuarios;
@@ -169,6 +170,35 @@ namespace APOAUTIS.Formas.Ingreso
             FormResponsables Resp = new FormResponsables();
             Resp.ShowDialog();
             //APOAUTIS.Clases.C_Responsables.Abrir1 = 0;
+        }
+
+        private void busquedaPorAlumnoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAlumDeResp AlumResp = new FormAlumDeResp();
+            AlumResp.ShowDialog();
+        }
+
+        private void bUSQUEDAPORRESPONSABLEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormResponsables Resp = new FormResponsables();
+            Resp.ShowDialog();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void tiposDeJornadaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormJornada Jornada = new FormJornada();
+            Jornada.ShowDialog();
+        }
+
+        private void tiposDeMatriculaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTipoMatricula Mat = new FormTipoMatricula();
+            Mat.ShowDialog();
         }
     }
 }
