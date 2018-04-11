@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\C_AlumDeResp.cs" />
     <Compile Include="Clases\C_Alumnos.cs" />
     <Compile Include="Clases\C_BusqMatricula.cs" />
     <Compile Include="Clases\C_EntrePadres.cs" />
@@ -144,11 +145,23 @@
     <Compile Include="Formas\Matricula\Form_BusqMatricula.Designer.cs">
       <DependentUpon>Form_BusqMatricula.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formas\Responsables\FormAlumDeResp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Responsables\FormAlumDeResp.Designer.cs">
+      <DependentUpon>FormAlumDeResp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formas\Responsables\FormMantenimientoResponsable.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formas\Responsables\FormMantenimientoResponsable.Designer.cs">
       <DependentUpon>FormMantenimientoResponsable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Responsables\FormResponsables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Responsables\FormResponsables.Designer.cs">
+      <DependentUpon>FormResponsables.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmBusquedaMatricula.cs">
       <SubType>Form</SubType>
@@ -265,8 +278,14 @@
     <EmbeddedResource Include="Formas\Matricula\Form_BusqMatricula.resx">
       <DependentUpon>Form_BusqMatricula.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Responsables\FormAlumDeResp.resx">
+      <DependentUpon>FormAlumDeResp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formas\Responsables\FormMantenimientoResponsable.resx">
       <DependentUpon>FormMantenimientoResponsable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Responsables\FormResponsables.resx">
+      <DependentUpon>FormResponsables.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBusquedaMatricula.resx">
       <DependentUpon>FrmBusquedaMatricula.cs</DependentUpon>

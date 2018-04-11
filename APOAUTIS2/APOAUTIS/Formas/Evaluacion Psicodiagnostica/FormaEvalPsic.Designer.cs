@@ -211,7 +211,7 @@
             // txtEdad
             // 
             this.txtEdad.Location = new System.Drawing.Point(177, 134);
-            this.txtEdad.MaxLength = 3;
+            this.txtEdad.MaxLength = 5;
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(235, 20);
             this.txtEdad.TabIndex = 54;

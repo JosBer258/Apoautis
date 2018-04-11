@@ -50,8 +50,8 @@ namespace APOAUTIS
 
         private void button5_Click(object sender, EventArgs e)
         {
-            FormMontoMatricula Monto = new FormMontoMatricula();
-            Monto.ShowDialog();
+            /*FormMontoMatricula Monto = new FormMontoMatricula();
+            Monto.ShowDialog();*/
         }
     }
 }

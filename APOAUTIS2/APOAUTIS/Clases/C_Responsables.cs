@@ -26,6 +26,10 @@ namespace APOAUTIS.Clases
         private string telCelResp;
         private string telTrabResp;
         private string corrResp;
+        private string tipoResp;
+        private string parentesco;
+        private static int abrir;
+     
 
         private int idResp;
         /*
@@ -214,9 +218,47 @@ namespace APOAUTIS.Clases
             }
         }
 
-        public void Fill_DGV_Resp(DataGridView dgv)
+        public string TipoResp
         {
+            get
+            {
+                return tipoResp;
+            }
 
+            set
+            {
+                tipoResp = value;
+            }
+        }
+
+        public string Parentesco
+        {
+            get
+            {
+                return parentesco;
+            }
+
+            set
+            {
+                parentesco = value;
+            }
+        }
+
+        public static int Abrir1
+        {
+            get
+            {
+                return abrir;
+            }
+
+            set
+            {
+                abrir = value;
+            }
+        }
+
+        public void cargarTodosResp(DataGridView dgv)
+        {
             cnx.Open();
             try
             {
@@ -233,7 +275,7 @@ namespace APOAUTIS.Clases
 					                                    A.CorreoRes as 'Correo' 
 					                                    FROM responsables as A
                                                         inner join Estados as B
-                                                        on A.Estado = B.CodEstado", ccnx);
+                                                        on A.Estado = B.CodEstado;", ccnx);
                 dt = new DataTable();
                 DataAdapter.Fill(dt);
                 dgv.DataSource = dt;
@@ -241,6 +283,46 @@ namespace APOAUTIS.Clases
             }
             catch
             {
+
+            }
+            cnx.Close();
+        }
+
+        public void Fill_DGV_Resp(DataGridView dgv, string CodA)
+        {
+            cnx.Open();
+            try
+            {
+                DataAdapter = new MySqlDataAdapter(@"SELECT A.CodResp as 'Codigo de Responsable',
+				                                    B.DescripcionEstado as 'Estado',
+				                                    D.TipoResponsable as 'Parentesco',
+				                                    A.NomComRes as 'Nombre Completo', 
+				                                    A.NumIdRes as 'Numero de Identidad', 
+				                                    A.DomicilioRes as 'Domicilio',
+				                                    A.ProfecionRes as 'Profesion',
+				                                    A.LugarTrabajoRes as 'Trabajo',
+				                                    A.TelCasaRes as 'Telefono de Casa',
+				                                    A.TelCelRes as 'Telefono Celular',
+				                                    A.TelTrabajoRes as 'Telefono de Trabajo',
+				                                    A.CorreoRes as 'Correo'
+				                                    FROM tiporesponsable as D
+				                                    inner join `alumnos/responsables` as C
+				                                    on D.CodTipoRespo = C.Cod_TipoResp
+                                                    inner join alumnos as E
+                                                    on C.CodAlumno = E.CodAlumno
+				                                    inner join responsables as A
+				                                    on C.CodResp = A.CodResp
+				                                    inner join Estados as B
+				                                    on A.Estado = B.CodEstado
+                                                    WHERE E.CodAlumno = " + CodA, ccnx);
+                dt = new DataTable();
+                DataAdapter.Fill(dt);
+                dgv.DataSource = dt;
+
+            }
+            catch
+            {
+                
 
             }
             cnx.Close();
@@ -267,7 +349,9 @@ namespace APOAUTIS.Clases
 		                                            A.EscolaridadAlum as 'Escolaridad',
 		                                            A.LugarOrigAlum as 'Lugar de Origen',
 		                                            A.InstProceAlumno as 'Instituto de Procedencia',
-		                                            A.InstDondeEstaIncluido as 'Instituto Donde Esta Incluido' 
+		                                            A.InstDondeEstaIncluido as 'Instituto Donde Esta Incluido',
+                                                    A.EmergLugar as 'Lugar en Caso de Emergencia',
+                                                    A.EmergTelefono as 'Telefono de Emergencia' 
 		                                            FROM responsables as R
 		                                            INNER JOIN `alumnos/responsables` as AR 
 		                                            ON R.CodResp = AR.CodResp 
@@ -314,7 +398,25 @@ namespace APOAUTIS.Clases
 
         public void updateResp()
         {
-            this.sql = string.Format(@"UPDATE responsables SET NomComRes = '{0}',
+            if(idResp == "")
+            {
+                this.sql = string.Format(@"UPDATE responsables SET NomComRes = '{0}',
+                                    DomicilioRes = '{1}', 
+                                    ProfecionRes = '{2}',
+                                    LugarTrabajoRes = '{3}', 
+                                    TelCasaRes = '{4}',
+                                    TelCelRes = '{5}',
+                                    TelTrabajoRes = '{6}',
+                                    CorreoRes = '{7}',
+                                    Estado = '{8}'
+                                    WHERE CodResp = '{9}'",
+                                        nomResp, domResp, profResp, lugTrab,
+                                        telCasResp, telCelResp, telTrabResp, corrResp, estResp, codResp);
+            }
+            else
+            {
+              
+                    this.sql = string.Format(@"UPDATE responsables SET NomComRes = '{0}',
                                     NumIdRes = '{1}',
                                     DomicilioRes = '{2}', 
                                     ProfecionRes = '{3}',
@@ -327,6 +429,20 @@ namespace APOAUTIS.Clases
                                     WHERE CodResp = '{10}'",
                                         nomResp, idResp, domResp, profResp, lugTrab,
                                         telCasResp, telCelResp, telTrabResp, corrResp, EstResp, codResp);
+
+            this.cmd = new MySqlCommand(this.sql, this.cnx);
+            this.cnx.Open();
+            MySqlDataReader Reg = null;
+            Reg = this.cmd.ExecuteReader();
+            this.cnx.Close();
+
+        }
+
+        public void updateParentesco(string CodigT, int codResp, string CodigA)
+        {
+            this.sql = string.Format(@"UPDATE `alumnos/responsables` SET Cod_TipoResp = '{0}'
+                                        WHERE CodResp = '{1}' AND CodAlumno = '{2}'",
+                                        CodigT, codResp, CodigA);//////////////////
 
             this.cmd = new MySqlCommand(this.sql, this.cnx);
             this.cnx.Open();
@@ -349,7 +465,6 @@ namespace APOAUTIS.Clases
             fResp.txtCodResp.Text = string.Empty;
             fResp.txtNomResp.Text = string.Empty;
             fResp.txtDomResp.Text = string.Empty;
-            //fResp.txtEdadResp.Text = string.Empty;
             fResp.txtIdResp.Text = string.Empty;
             fResp.txtTelCasResp.Text = string.Empty;
             fResp.txtTelCelResp.Text = string.Empty;
@@ -589,36 +704,22 @@ namespace APOAUTIS.Clases
 
     }
 
-
-
-
-
-    }
 /*
 
 En BD
 OFICIO Y PROFESION SON LO MISMO
 # de ID debe ser STRING
 ??CAMPO DE EDAD EN RESPONSABLES
-??LUGAR DE ORIGEN
+??LUGAR DE ORIGEN en Alumnos
 Quitar UNIQ # DE CEL
-
-** CORREO DEBE ACEPTAR GUION BAJO
-
-CLICK DERECHO
-* VALIDAR ESPACIOS
-* VALIDAR FECHA DE NACIMIENTO
-** Que se cambie a no el combobox
+COD DE EVAL AUTO
 
 MAX LENGTH DE TODOS LOS TEXTBOXES
-VALIDAR FECHA
 MOSTRAR COD DE EVAL AUTOINC
 SOLO NUMEROS NO DIGITOS
-COD DE EVAL AUTO
-QUITAR VALIDACIONES DE TXT COD, NOM E ID
-UNIQ # DE ID
-UNIQ COD
-SI del trabajo
 
+**SI del trabajo
+CORREO DEBE ACEPTAR GUION BAJO
+Que se cambie a no el combobox
 
 */

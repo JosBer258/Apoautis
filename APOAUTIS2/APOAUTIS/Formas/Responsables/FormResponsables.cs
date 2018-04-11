@@ -8,125 +8,92 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace APOAUTIS.Formas.Responsables
 {
-    public partial class FormMantenimientoResponsable : Form
+    public partial class FormResponsables : Form
     {
-        Clases.C_Validaciones Val = new Clases.C_Validaciones();
-        Clases.C_Responsables cResp = new Clases.C_Responsables();
-        
-        private static string codA;
-
-        public static string CodigA
-        {
-            get
-            {
-                return codA;
-            }
-
-            set
-            {
-                codA = value;
-            }
-        }
-
-        public FormMantenimientoResponsable()
+        public FormResponsables()
         {
             InitializeComponent();
         }
 
-        private void Bttn_Salir_Click(object sender, EventArgs e)
+        Clases.C_Validaciones Val = new Clases.C_Validaciones();
+        Clases.C_Responsables cResp = new Clases.C_Responsables();
+        
+        private void FormResponsables_Load(object sender, EventArgs e)
         {
-            this.Close();
-        }
-
-        private void FormMantenimientoResponsable_Load(object sender, EventArgs e)
-        {
-            cResp.Fill_DGV_Resp(DGV_ShowResponsables, CodigA);
-            
-            cResp.GenerarEstadoResp(cmbEstResp);
+            cResp.cargarTodosResp(DGV_ShowResponsables);
             cmbTrabResp.SelectedIndex = 0;
             cmbEstResp.SelectedIndex = 0;
-            cmbParentesco.SelectedIndex = 0;
-        }
-
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
-            limpiarTxtBox();
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            validacionVacios();            
+            validacionVacios();
         }
 
         private void txtBusqResp_TextChanged(object sender, EventArgs e)
         {
+            cResp.DGV_Busq(DGV_ShowResponsables, txtBusqResp.Text);
 
         }
 
         private void DGV_ShowResponsables_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            cargarDatos(e);        
-         }        
-
-        private void txtBusqResp_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Val.ValidarNombres_SoloLetras(sender,e);
+            cargarDatos(e);
         }
 
-        private void txtNomResp_KeyPress(object sender, KeyPressEventArgs e)
+        private void btnLimpiar_Click_1(object sender, EventArgs e)
         {
-            
+            limpiarTxtBox();
         }
 
-        private void txtCorrResp_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Val.ValidarCorreoIngreso(sender,e,txtCorrResp);
-        }
-
-        private void txtIdResp_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            
-        }
-
-        private void txtDomResp_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtDomResp_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             Val.ValirLetrasYEspacios_Direccion(sender, e, txtDomResp);
         }
 
-        private void txtProfResp_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtProfResp_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             Val.ValidarNombres_SoloLetras(sender, e);
         }
 
-        private void txtLugResp_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtCorrResp_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            Val.ValidarCorreoIngreso(sender, e, txtCorrResp);
+        }
+
+        private void txtLugResp_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             Val.ValirLetrasYEspacios_Direccion(sender, e, txtLugResp);
         }
 
-        private void txtTelCasResp_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            cResp.validarSoloNumeros(sender,e);
-        }
-        
-        private void txtTelCelResp_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtTelCasResp_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             cResp.validarSoloNumeros(sender, e);
         }
 
-        private void txtTelTrabResp_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtTelCelResp_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             cResp.validarSoloNumeros(sender, e);
         }
-        
+
+        private void txtTelTrabResp_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            cResp.validarSoloNumeros(sender, e);
+        }
+
+        private void txtBusqResp_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            Val.ValidarNombres_SoloLetras(sender, e);
+        }
+
         private void txtBusqResp_TextChanged_1(object sender, EventArgs e)
         {
-          
+            cResp.DGV_Busq(DGV_ShowResponsables, txtBusqResp.Text);
         }
 
-        private void cmbTrabResp_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbTrabResp_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if (cmbTrabResp.SelectedItem.ToString().Equals("No"))
             {
@@ -157,19 +124,20 @@ namespace APOAUTIS.Formas.Responsables
             txtLugResp.Text = string.Empty;
             txtCorrResp.Text = string.Empty;
             txtProfResp.Text = string.Empty;
-            
-            
+            txtBusqResp.Text = string.Empty;
+            DGV_ShowAlumnosResp.DataSource = null;
+            DGV_ShowAlumnosResp.Rows.Clear();
         }
 
         private void validacionVacios()
         {
-            
+
             if (cmbTrabResp.SelectedItem.ToString().Equals("Si"))
             {
                 if (txtCodResp.Text == string.Empty
                     || txtNomResp.Text == string.Empty
                     || txtDomResp.Text == string.Empty
-                    || txtIdResp.Text == string.Empty
+                    //|| txtIdResp.Text == string.Empty
                     || txtProfResp.Text == string.Empty
                     || txtLugResp.Text == string.Empty
                     || txtTelCasResp.Text == string.Empty
@@ -195,13 +163,17 @@ namespace APOAUTIS.Formas.Responsables
                         cResp.TelCasResp = txtTelCasResp.Text;
                         cResp.TelCelResp = txtTelCelResp.Text;
                         cResp.TelTrabResp = txtTelTrabResp.Text;
-                        cResp.IdResp = (int)Convert.ToDouble(txtIdResp.Text);
+                        cResp.IdResp = txtIdResp.Text;
                         cResp.LugTrab = cmbTrabResp.SelectedItem.ToString() + ", " + txtLugResp.Text;
                         cResp.ProfResp = txtProfResp.Text;
                         cResp.CorrResp = txtCorrResp.Text;
 
+                        if (cmbEstResp.SelectedItem.ToString().ToUpperInvariant().Contains("INACTIVO") == true)
+                        { cResp.EstResp = 7; }
+                        else { cResp.EstResp = 6; }
+
                         cResp.updateResp();
-                        cResp.Fill_DGV_Resp(DGV_ShowResponsables, CodigA);
+                        cResp.cargarTodosResp(DGV_ShowResponsables);
 
                         cResp.msjUpdateCorrecto();
                         limpiarTxtBox();
@@ -215,7 +187,7 @@ namespace APOAUTIS.Formas.Responsables
                     if (txtCodResp.Text == string.Empty
                     || txtNomResp.Text == string.Empty
                     || txtDomResp.Text == string.Empty
-                    || txtIdResp.Text == string.Empty
+                    //|| txtIdResp.Text == string.Empty
                     || txtProfResp.Text == string.Empty
                     || txtTelCasResp.Text == string.Empty
                     || txtTelCelResp.Text == string.Empty
@@ -237,10 +209,10 @@ namespace APOAUTIS.Formas.Responsables
                             cResp.TelCasResp = txtTelCasResp.Text;
                             cResp.TelCelResp = txtTelCelResp.Text;
                             cResp.TelTrabResp = txtTelTrabResp.Text;
-                            cResp.IdResp =(int) Convert.ToDouble(txtIdResp.Text);
+                            cResp.IdResp = txtIdResp.Text;
                             cResp.ProfResp = txtProfResp.Text;
                             cResp.CorrResp = txtCorrResp.Text;
-                            
+
                             cResp.LugTrab = cmbTrabResp.SelectedItem.ToString() + ", " + txtLugResp.Text;
 
                             if (cmbEstResp.SelectedItem.ToString().ToUpperInvariant().Contains("INACTIVO") == true)
@@ -248,7 +220,7 @@ namespace APOAUTIS.Formas.Responsables
                             else { cResp.EstResp = 6; }
 
                             cResp.updateResp();
-                            cResp.Fill_DGV_Resp(DGV_ShowResponsables, CodigA);
+                            cResp.cargarTodosResp(DGV_ShowResponsables);
 
                             cResp.msjUpdateCorrecto();
                             limpiarTxtBox();
@@ -273,20 +245,16 @@ namespace APOAUTIS.Formas.Responsables
             string est = row.Cells["Estado"].Value.ToString();
             txtCorrResp.Text = row.Cells["Correo"].Value.ToString();
             txtProfResp.Text = row.Cells["Profesion"].Value.ToString();
-            string par = row.Cells["Parentesco"].Value.ToString();
             
+            cResp.Fill_DGV_Alum(DGV_ShowAlumnosResp, row.Cells["Codigo de Responsable"].Value.ToString());
 
-            if (est.ToUpperInvariant().Contains("INACTIVO") == true) { cmbEstResp.SelectedIndex = 1; } else { cmbEstResp.SelectedIndex = 0; }
+            if (tmp.ToUpperInvariant().Contains("SI, ") == true)
+            { cmbTrabResp.SelectedIndex = 0; }
+            else { cmbTrabResp.SelectedIndex = 1; }
 
-            if (tmp.ToUpperInvariant().Contains("SI, ") == true) { cmbTrabResp.SelectedIndex = 0; } else { cmbTrabResp.SelectedIndex = 1; }
-
-            if (par.ToUpperInvariant().Contains("PADRE") == true) { cmbParentesco.SelectedIndex = 0; }
-            else
-            {
-                if (par.ToUpperInvariant().Contains("MADRE")) { cmbParentesco.SelectedIndex = 1; }
-                else { if (par.ToUpperInvariant().Contains("OTRO")) { cmbParentesco.SelectedIndex = 1; } }
-            }
-
+            if (est.ToUpperInvariant().Contains("INACTIVO") == true)
+            { cmbEstResp.SelectedIndex = 1; }
+            else { cmbEstResp.SelectedIndex = 0; }
 
             string tmp2 = tmp.Replace("Si,", String.Empty);
             tmp2 = tmp.Replace("No,", String.Empty);
@@ -296,5 +264,6 @@ namespace APOAUTIS.Formas.Responsables
             MessageBox.Show("Datos Cargados", "");
         }
 
+        
     }
 }
