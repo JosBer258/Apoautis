@@ -45,7 +45,7 @@ namespace APOAUTIS
                     cEval.CodEval = Convert.ToInt32(txtCodEval.Text);
                     cEval.NomEval = txtNombre.Text;
                     cEval.FechNac = DateTime.Parse(dateFechNac.Text).ToString("yyyy-MM-dd");
-                    cEval.Edad = float.Parse(txtEdad.Text);
+                    cEval.Edad = Convert.ToInt32(txtEdad.Text);
                     cEval.Sexo = cmbSexo.SelectedItem.ToString();
                     cEval.RespEval = txtResp.Text;
                     cEval.TelEval = txtTel.Text;
@@ -277,9 +277,7 @@ namespace APOAUTIS
 
         private void txtEdad_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //cEval.validarSoloNumeros(sender, e);
-            Val.NumerosDecimales(sender, e, txtEdad);
-            //cEval.validarDecimal(sender, e);
+            cEval.validarSoloNumeros(sender, e);
         }
 
         private void txtResp_KeyPress(object sender, KeyPressEventArgs e)

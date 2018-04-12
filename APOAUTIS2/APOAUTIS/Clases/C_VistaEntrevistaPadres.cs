@@ -1380,7 +1380,7 @@ namespace APOAUTIS.Clases
                 Set_peso_al_nacer("");
             }
             this.cnx.Close();
-
+   
         }
 
 
@@ -1445,7 +1445,7 @@ where A.CodAlumno   = '{0}'", Var_codigo_alumno);
                 Var_rasgos_normalconsuhijo = Reg["DescribaDiaNormal"].ToString();
                 Var_rasgos_quisieramencionarentrevista = Reg["DetalleFueraEntre"].ToString();
 
-
+                
 
                 Var_reaciona_cortecabello = Reg["CorteCabello"].ToString();
                 Var_corteuñas = Reg["CorteUnas"].ToString();
@@ -1557,6 +1557,6 @@ where A.CodAlumno   = '{0}'", Var_codigo_alumno);
                 Var_rasgos_miradavacio = Reg["MiradaAlVacio"].ToString();
             }
             this.cnx.Close();
-        }
+            }
     }
 }

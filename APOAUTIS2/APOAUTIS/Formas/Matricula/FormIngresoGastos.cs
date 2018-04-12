@@ -424,11 +424,6 @@ namespace APOAUTIS.Formas.Matricula
             FormManual Manual = new FormManual();
             Manual.ShowDialog();
         }
-
-        private void Txt_OpcionBusqueda_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
     
 }

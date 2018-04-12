@@ -27,12 +27,12 @@ namespace APOAUTIS
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            tabMatricula.SelectedTab = Pest_DatosResponsable;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-         
+            tabMatricula.SelectedTab = Pest_DatosAdicionales;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -49,13 +49,10 @@ namespace APOAUTIS
 
         public void Fun_ExtraerEscencial(int FV_CodMat, int FV_CodAlum, string FV_NomAlumno)
         {
-            Fun_Limpiar();
-            Pest_txtNumeroMatricula.Text = FV_CodMat.ToString();
-            Pest1_Txt_NombreEstudiante.Text = FV_NomAlumno;
+           Pest_txtNumeroMatricula.Text = FV_CodMat.ToString();
+           Pest1_Txt_NombreEstudiante.Text = FV_NomAlumno;
 
             C_BusqMatricula Cl_Busq = new C_BusqMatricula();
-            C_Tipos_Atencion Cl_Tipo = new C_Tipos_Atencion();
-
             Cl_Busq.Var_Alum_CodAlumno = (int)Convert.ToDouble(FV_CodAlum);
             Cl_Busq.Var_Mat_CodMatricula = (int)Convert.ToDouble(FV_CodMat);
             Cl_Busq.Fun_ExtraerDatos_Mat_Alumno();
@@ -77,122 +74,11 @@ namespace APOAUTIS
             Pest4_Txt_Fecha.Text = Cl_Busq.Var_DG_Fecha;
             Pest4_Txt_Entrevistador.Text = Cl_Busq.Var_DG_Entrevistador;
 
-            Pest1_Txt_Jornada.Text = Cl_Busq.Fun_Conseguir_jorm();
-            Pest1_Txt_LugarNacimiento.Text = Cl_Busq.Var_DG_TipoMatricula;
-
-            Cl_Busq.Fun_UsaMedicamento();
-            Pest4_Txt_UsaMedicamentos.Text = Cl_Busq.Var_Usa_medicamentos;
-
-
-            Cl_Tipo.Fun_BuscarTipos(Cl_Busq.Var_Alum_CodAlumno);
-
-
-            Fun_Comb(comboBox_atencion_fisica, Cl_Tipo.Var_Combo_AtensionFisica);
-
-
-            Fun_Comb(comboBox_atencion_grupal, Cl_Tipo.Var_Combo_AtencionGrupal);
-
-            Fun_Comb(comboBox_atencion_prevocacional, Cl_Tipo.Var_Combo_AtencionPreVocacional);
-
-            Fun_Comb(comboBox_atencion_terapia_domicilio, Cl_Tipo.Var_Combo_TerapiaDomicilio);
-
-            Fun_Comb(comboBox_atencion_vocacional, Cl_Tipo.Var_Combo_AtencionVocacional);
-
-            Fun_Comb(comboBox_atension_distancia, Cl_Tipo.Var_Combo_Distancia);
-            Fun_Comb(comboBox_atension_escolar, Cl_Tipo.Var_Combo_Escolar);
-            Fun_Comb(comboBox_atension_individual, Cl_Tipo.Var_Combo_Individual);
-
-            if (Cl_Busq.Fun_ExtraerResponsables(Cl_Busq.Var_Alum_CodAlumno, 1))
-            {
-                Pest3_Txt_NombrePadre.Text= Cl_Busq.Var_nombre;
-                Pest3_Txt_ProfesionPadre.Text = Cl_Busq.Var_profesion;
-                Pest3_Txt_LugarPadre.Text = Cl_Busq.Var_lugar;
-                Pest3_Txt_TelefonoPadre.Text = Cl_Busq.Var_telefono;
-            }
-
-            if (Cl_Busq.Fun_ExtraerResponsables(Cl_Busq.Var_Alum_CodAlumno, 2))
-            {
-                Pest3_Txt_NombreMadre.Text = Cl_Busq.Var_nombre;
-                Pest3_Txt_ProfesionMadre.Text = Cl_Busq.Var_profesion;
-                Pest3_Txt_LugarMadre.Text = Cl_Busq.Var_lugar;
-                Pest3_Txt_TelefonoMadre.Text = Cl_Busq.Var_telefono;
-            }
 
         }
-        
-        private void Fun_Limpiar()
-        {
-
-            Pest3_Txt_NombrePadre.Text = string.Empty;
-            Pest3_Txt_ProfesionPadre.Text = string.Empty;
-            Pest3_Txt_LugarPadre.Text = string.Empty;
-            Pest3_Txt_TelefonoPadre.Text = string.Empty;
-            Pest3_Txt_NombreMadre.Text = string.Empty;
-            Pest3_Txt_ProfesionMadre.Text = string.Empty;
-            Pest3_Txt_LugarMadre.Text = string.Empty;
-            Pest3_Txt_TelefonoMadre.Text = string.Empty;
-            Pest1_Txt_LugarNacimiento.Text = string.Empty;
-            textBox1.Text = string.Empty;
-            Pest1_Txt_FechaNacimiento.Text = string.Empty;
-            Pest1_Txt_DireccionCompleta.Text = string.Empty;
-            Pest1_Txt_Celular.Text = string.Empty;
-            Pest1_Txt_Instituto.Text = string.Empty;
-            Pest1_Txt_AnoIngreso.Text = string.Empty;
-            Pest1_Txt_RecibioEvaluacion.Text = string.Empty;
-            Pest1_Txt_TelefonoFijo.Text = string.Empty;
-            Pest1_Txt_Jornada.Text = string.Empty;
-            Pest2_Pest_NombreInstituto.Text = string.Empty;
-            Pest4_Txt_DireccionPorEmergencias.Text = string.Empty;
-            Pest4_Txt_TelefonoPorEmergencia.Text = string.Empty;
-            Pest4_TxtBox_Observaciones.Text = string.Empty;
-            Pest4_Txt_Fecha.Text = string.Empty;
-            Pest4_Txt_Entrevistador.Text = string.Empty;
-            Pest1_Txt_Jornada.Text = string.Empty;
-            Pest1_Txt_LugarNacimiento.Text = string.Empty;
-
-        }
-
-
-        private void Fun_Comb(ComboBox FV_C, string FV_Var_Aten)
-        {
-            if (FV_Var_Aten == "Si")
-            {
-                FV_C.SelectedIndex = 0;
-            }
-            else
-            {
-                FV_C.SelectedIndex = 1;
-            }
-        }
-        
         private void VistaMatricula_Load(object sender, EventArgs e)
         {
            
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Pest_TiposAtencion_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label26_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Pest3_Txt_NombrePadre_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

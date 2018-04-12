@@ -42,14 +42,6 @@ namespace APOAUTIS.Clases
         private string anioIngreso;
 
 
-        private string var_NombreResp;
-        private string var_LugarTrabajo;
-        private string var_OficioProfesion;
-        private string var_TelTrabajo;
-        private int var_CodResp;
-
- 
-
         public int CodAlumno11 {
             get { return CodAlumno1; }
             set { CodAlumno1 = value; }
@@ -129,115 +121,22 @@ namespace APOAUTIS.Clases
         public string EmergLugar1 { get { return EmergLugar; } set { EmergLugar = value; } }
         public string EmergTelefono1 { get { return  EmergTelefono; } set { EmergTelefono = value; } }
 
-        public string Var_NombreResp
-        {
-            get
-            {
-                return var_NombreResp;
-            }
+        public int CodMatricula { get { return codMatricula; }
+        set { codMatricula = value; }
+    }
+    public int Jornada { get { return jornada; }
+set { jornada = value; }}
+        public string Observaciones { get { return observaciones; }
+set { observaciones = value; }}
+        public string FechaIngreso { get { return fechaIngreso; }
+set { fechaIngreso = value; }}
+        public string RecibioEvalu { get { return recibioEvalu; }
+set { recibioEvalu = value; }}
 
-            set
-            {
-                var_NombreResp = value;
-            }
-        }
-
-        public string Var_LugarTrabajo
-        {
-            get
-            {
-                return var_LugarTrabajo;
-            }
-
-            set
-            {
-                var_LugarTrabajo = value;
-            }
-        }
-
-        public string Var_OficioProfesion
-        {
-            get
-            {
-                return var_OficioProfesion;
-            }
-
-            set
-            {
-                var_OficioProfesion = value;
-            }
-        }
-
-        public string Var_TelTrabajo
-        {
-            get
-            {
-                return var_TelTrabajo;
-            }
-
-            set
-            {
-                var_TelTrabajo = value;
-            }
-        }
-
-        public int Var_CodResp
-        {
-            get
-            {
-                return var_CodResp;
-            }
-
-            set
-            {
-                var_CodResp = value;
-            }
-        }
-
-        public int CodMatricula
-        {
-            get { return codMatricula; }
-            set { codMatricula = value; }
-        }
-
-        public int Jornada
-        {
-            get { return jornada; }
-            set { jornada = value; }
-        }
-
-        public string Observaciones
-        {
-            get { return observaciones; }
-            set { observaciones = value; }
-        }
-
-        public string AnioIngreso
-        {
-            get { return anioIngreso; }
+        public string AnioIngreso { get { return anioIngreso; }
             set { anioIngreso = value; }
         }
-        public string RecibioEvalu
-        {
-            get { return recibioEvalu; }
-            set { recibioEvalu = value; }
-        }
 
-        public string FechaIngreso
-        {
-            get { return fechaIngreso; }
-            set { fechaIngreso = value; }
-        }
-        /*
-
-            
-                
-        
-                
-                
-
-               
-        */
         public void ingresoAlumnos()
         {
             this.sql = string.Format(@"INSERT INTO alumnos
@@ -254,35 +153,6 @@ namespace APOAUTIS.Clases
             MySqlDataReader Reg = null;
             Reg = this.cmd.ExecuteReader();
             this.cnx.Close();
-        }
-        public void GenerarJornada(ComboBox Com_Jornada)
-        {
-            cnx.Open();
-            sql = string.Format(@"select cod_jornada, descripcion from jornada");
-            cmd = new MySqlCommand(sql, cnx);
-            DataAdapter = new MySqlDataAdapter(cmd);
-            dt = new DataTable();
-            DataAdapter.Fill(dt);
-            cnx.Close();
-
-            Com_Jornada.ValueMember = "cod_jornada";
-            Com_Jornada.DisplayMember = "descripcion";
-            Com_Jornada.DataSource = dt;
-        }
-
-        public void GenerarTipoMatricula(ComboBox Com_TipoMatricula)
-        {
-            cnx.Open();
-            sql = string.Format(@"select Cod_Tipo, Descripcion from tipo_matricula");
-            cmd = new MySqlCommand(sql, cnx);
-            DataAdapter = new MySqlDataAdapter(cmd);
-            dt = new DataTable();
-            DataAdapter.Fill(dt);
-            cnx.Close();
-
-            Com_TipoMatricula.ValueMember = "Cod_Tipo";
-            Com_TipoMatricula.DisplayMember = "Descripcion";
-            Com_TipoMatricula.DataSource = dt;
         }
 
         public void FillAlumnosPest2Por(int a)
@@ -586,7 +456,7 @@ order by CodAlumno", busq);
             Com_Roles.DisplayMember = "DescripcionEstado";
             Com_Roles.DataSource = dt;
         }
-        /*public void GenerarJornada(ComboBox Com_Roles)
+        public void GenerarJornada(ComboBox Com_Roles)
         {
             cnx.Open();
             sql = string.Format(@"select cod_jornada, descripcion from jornada");
@@ -599,7 +469,7 @@ order by CodAlumno", busq);
             Com_Roles.ValueMember = "cod_jornada";
             Com_Roles.DisplayMember = "descripcion";
             Com_Roles.DataSource = dt;
-        }*/
+        }
 
         public DateTime ne;
         public string w;
@@ -665,157 +535,7 @@ InstProceAlumno, InstDondeEstaIncluido, estado, emerlugar, emertelefono, CodAlum
             this.cnx.Close();
         }
 
-
-
-
-        public void Fun_IngresarAlumno()
-        {
-
-        }
-        public int Fun_ExtraerCodigoAlumno()
-        {
-            int ultimo = 0;
-
-            this.sql = string.Format(@"select CodAlumno from alumnos order by CodAlumno desc limit 1;");
-
-            this.cmd = new MySqlCommand(this.sql, this.cnx);
-            this.cnx.Open();
-            MySqlDataReader Reg = null;
-            Reg = this.cmd.ExecuteReader();
-
-            if (Reg.Read())
-            {
-                ultimo = Convert.ToInt16(Reg["CodAlumno"].ToString()) + 1;
-            }
-            this.cnx.Close();
-
-
-            return (ultimo);
-        }
-
-
-        //****************+
-        public bool Fun_VeriicarNombreAlumno()
-        {
-            bool Var_Ver = false;
-
-            this.sql = string.Format(@"select * from alumnos where NomAlumno='{0}';", NomAlumno11);
-
-            this.cmd = new MySqlCommand(this.sql, this.cnx);
-            this.cnx.Open();
-            MySqlDataReader Reg = null;
-            Reg = this.cmd.ExecuteReader();
-
-            if (Reg.Read())
-            {
-                Var_Ver = true;
-                MessageBox.Show(NomAlumno11);
-            }
-            this.cnx.Close();
-
-
-            return (Var_Ver);
-        }
-
-        public bool Fun_Ingresar_Alumno()
-        {
-            bool Var_Ver = false;
-            
-            this.sql = string.Format(@"insert into alumnos(NomAlumno, LugarNaciAlum, FechaNaciAlum,EdadAlum,DireccionAlum,
-TelFijoAlum,CelAlumno,InstProceAlumno,InstDondeEstaIncluido,EmergLugar,EmergTelefono, Estado ) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}', 4);",
-NomAlumno11, LugarNaciAlum11, FechaNaciAlum11, EdadAlum11, DireccionAlum11, TelFijoAlum11, CelAlumno11, InstProceAlumno11,InstDondeEstaIncluido11, EmergLugar1, EmergTelefono1);
-            this.cnx.Open();
-            this.cmd = new MySql.Data.MySqlClient.MySqlCommand(this.sql, this.cnx);
-            int Reg = this.cmd.ExecuteNonQuery();
-            if (Reg > 0)
-            {
-                MessageBox.Show("Los datos se ingresaron correctamente", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                Var_Ver = true;
-            }
-            else
-            {
-                MessageBox.Show("Ocurrio un error en el ingreso\nPor favor contacte con su supervisor", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Var_Ver = false;
-            }          
-            this.cnx.Close();
-            return Var_Ver;
-        }
-
-
-        public void Fun_Ingresar_Medicamentos(int FV_CodigoAlumo, string FV_Respuesta)
-        {
-            this.sql = string.Format(@"insert into historialmedico(Alumnos_CodAlumno, UsaMedicamentos) values ('{0}','{1}');",
-                FV_CodigoAlumo, FV_Respuesta);
-            this.cnx.Open();
-            this.cmd = new MySql.Data.MySqlClient.MySqlCommand(this.sql, this.cnx);
-            int Reg = this.cmd.ExecuteNonQuery();
-            if (Reg > 0)
-            {
-            }
-            else
-            {
-
-            }
-            this.cnx.Close();
-        }
-
-        
-        public void Fun_IngresarResponsables()
-        {
-            this.sql = string.Format(@"insert into responsables(NomComRes, LugarTrabajoRes, ProfecionRes, OficioRes, TelTrabajoRes)
-                                        values ('{0}','{1}','{2}','{3}','{4}');",
-                Var_NombreResp, Var_LugarTrabajo, Var_OficioProfesion, Var_OficioProfesion, Var_TelTrabajo);
-            this.cnx.Open();
-            this.cmd = new MySql.Data.MySqlClient.MySqlCommand(this.sql, this.cnx);
-            int Reg = this.cmd.ExecuteNonQuery();
-            if (Reg > 0)
-            {
-            }
-            else
-            {
-
-            }
-            this.cnx.Close();
-        }
-
-        public void Fun_Ingresar_Relacion_AlumnoRelac(int FV_CodAlumno, int FV_Relacion)
-        {
-            this.sql = string.Format(@"insert into `alumnos/responsables` values ('{0}','{1}','{2}');", FV_CodAlumno, Var_CodResp,FV_Relacion);
-            this.cnx.Open();
-            this.cmd = new MySql.Data.MySqlClient.MySqlCommand(this.sql, this.cnx);
-            int Reg = this.cmd.ExecuteNonQuery();
-            if (Reg > 0)
-            {
-            }
-            else
-            {
-
-            }
-            this.cnx.Close();
-        }
-
-        public int Fun_ExtraerUltimoCodigo()
-        {
-            int ultimo = 0;
-
-            this.sql = string.Format(@"select CodResp from responsables order by CodResp desc limit 1;;");
-
-            this.cmd = new MySqlCommand(this.sql, this.cnx);
-            this.cnx.Open();
-            MySqlDataReader Reg = null;
-            Reg = this.cmd.ExecuteReader();
-
-            if (Reg.Read())
-            {
-                ultimo = Convert.ToInt16(Reg["CodResp"].ToString());
-            }
-            this.cnx.Close();
-
-
-            return (ultimo);
-        }
-
-
+       
 
     }
 }

@@ -210,13 +210,7 @@ namespace APOAUTIS.Clases
         public void Fun_MuestraDatosGen(DataGridView Dvg_MuestraDatos)
         {
             cnx.Open();
-            sql = string.Format(@"select B.CodMatricula as 'Codigo Matricula',B.FechaIngreso as 'Fecha de realizacion', D.Descripcion as 'Matricula',C.descripcion as 'Jornada',
-A.CodAlumno as 'Codigo de Alumno',
-A.IdAlum as 'No. Identidad', A.NomAlumno as 'Nombre de Alumno', 
-B.AnioIngreso as 'Año de Ingreso', B.Entrevistador as 'Entrevistador', B.CuotaPago as 'Cuota de pago' from alumnos 
-as A inner join matricula as B on A.CodAlumno = B.Alumnos_CodAlumno inner join jornada as C
-on B.Cod_jornada=C.cod_jornada inner join tipo_matricula as D on B.Cod_Tipo=D.Cod_Tipo
-order by B.CodMatricula desc ");
+            sql = string.Format("select B.CodMatricula as 'Codigo Matricula',B.FechaIngreso as 'Fecha de realizacion', A.CodAlumno as 'Codigo de Alumno', A.NomAlumno as 'Nombre de Alumno', B.AnioIngreso as 'Año de Ingreso',B.CuotaPago as 'Cuota de pago' from alumnos as A inner join matricula as B on A.CodAlumno = B.Alumnos_CodAlumno order by B.CodMatricula desc ");
             cmd = new MySql.Data.MySqlClient.MySqlCommand(sql, cnx);
             DataAdapter = new MySql.Data.MySqlClient.MySqlDataAdapter(cmd);
             dt = new System.Data.DataTable();
@@ -228,13 +222,7 @@ order by B.CodMatricula desc ");
         public void Fun_MuestraDatosPorAlum(DataGridView Var_Show)
         {
             cnx.Open();
-            sql = string.Format(@"select B.CodMatricula as 'Codigo Matricula',B.FechaIngreso as 'Fecha de realizacion', D.Descripcion as 'Matricula',C.descripcion as 'Jornada',
-A.CodAlumno as 'Codigo de Alumno',
-A.IdAlum as 'No. Identidad', A.NomAlumno as 'Nombre de Alumno', 
-B.AnioIngreso as 'Año de Ingreso', B.Entrevistador as 'Entrevistador', B.CuotaPago as 'Cuota de pago' from alumnos 
-as A inner join matricula as B on A.CodAlumno = B.Alumnos_CodAlumno inner join jornada as C
-on B.Cod_jornada=C.cod_jornada inner join tipo_matricula as D on B.Cod_Tipo=D.Cod_Tipo
-where A.NomAlumno like '%{0}%' order by B.CodMatricula desc ", Var_filtro_nom_cliente);
+            sql = string.Format("select B.CodMatricula as 'Codigo Matricula',B.FechaIngreso as 'Fecha de realizacion', A.CodAlumno as 'Codigo de Alumno', A.NomAlumno as 'Nombre de Alumno', B.AnioIngreso as 'Año de Ingreso',B.CuotaPago as 'Cuota de pago' from alumnos as A inner join matricula as B on A.CodAlumno = B.Alumnos_CodAlumno where A.NomAlumno like '%{0}%' order by B.CodMatricula desc ", Var_filtro_nom_cliente);
             cmd = new MySql.Data.MySqlClient.MySqlCommand(sql, cnx);
             DataAdapter = new MySql.Data.MySqlClient.MySqlDataAdapter(cmd);
             dt = new System.Data.DataTable();
