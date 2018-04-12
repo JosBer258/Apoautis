@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace APOAUTIS.Clases
 {
-    class C_BusqMatricula: Conexion
+    class C_BusqMatricula : Conexion
     {
         private int var_fecha_busq;
         private int var_anio_maximo;
@@ -322,6 +322,71 @@ namespace APOAUTIS.Clases
             }
         }
 
+        public string Var_Usa_medicamentos
+        {
+            get
+            {
+                return var_Usa_medicamentos;
+            }
+
+            set
+            {
+                var_Usa_medicamentos = value;
+            }
+        }
+
+        public string Var_nombre
+        {
+            get
+            {
+                return var_nombre;
+            }
+
+            set
+            {
+                var_nombre = value;
+            }
+        }
+
+        public string Var_profesion
+        {
+            get
+            {
+                return var_profesion;
+            }
+
+            set
+            {
+                var_profesion = value;
+            }
+        }
+
+        public string Var_lugar
+        {
+            get
+            {
+                return var_lugar;
+            }
+
+            set
+            {
+                var_lugar = value;
+            }
+        }
+
+        public string Var_telefono
+        {
+            get
+            {
+                return var_telefono;
+            }
+
+            set
+            {
+                var_telefono = value;
+            }
+        }
+
         public void Fun_MostrarTodos(System.Windows.Forms.DataGridView Var_MuestraDatos)
         {
             sql = string.Format(@"select B.CodMatricula as 'Codigo Matricula',
@@ -399,6 +464,7 @@ namespace APOAUTIS.Clases
         public void Fun_ExtraerDatos_Mat_Alumno()
         {
             sql = string.Format(@"select * from alumnos as A left join matricula as B on A.CodAlumno=B.Alumnos_CodAlumno
+inner join tipo_matricula as C on C.Cod_Tipo=B.Cod_Tipo inner join jornada as D on D.cod_jornada= B.Cod_jornada
             where A.CodAlumno = '{0}' and B.CodMatricula = '{1}'", Var_Alum_CodAlumno, Var_Mat_CodMatricula);
             cnx.Open();
             cmd = new MySql.Data.MySqlClient.MySqlCommand(sql, cnx);
@@ -415,16 +481,84 @@ namespace APOAUTIS.Clases
                 Var_DG_annioingreso = Reg["AnioIngreso"].ToString();
                 Var_DG_recibioevaluacion = Reg["RecibioEvalu"].ToString();
                 Var_Alum_telefonofijo = Reg["TelFijoAlum"].ToString();
-          
+
                 Var_Alum_direcionemergencia = Reg["EmergLugar"].ToString();
                 Var_Alum_telefonoemergencia = Reg["EmergTelefono"].ToString();
                 Var_DG_Observaciones = Reg["Observaciones"].ToString();
                 Var_DG_Fecha = Reg["FechaIngreso"].ToString();
                 Var_DG_Entrevistador = Reg["Entrevistador"].ToString();
                 Var_Alum_IntitutoIncl = Reg["InstDondeEstaIncluido"].ToString();
+
+                Var_DG_Jornada = Reg["cod_jornada"].ToString();
+                Var_DG_TipoMatricula = Reg["Descripcion"].ToString();
+                
             }
             cnx.Close();
         }
 
+        public string Fun_Conseguir_jorm()
+        {
+            string FV_jornada="";
+
+            sql = string.Format(@"select * from jornada where cod_jornada ='{0}';", Var_DG_Jornada);
+            cnx.Open();
+            cmd = new MySql.Data.MySqlClient.MySqlCommand(sql, cnx);
+            MySql.Data.MySqlClient.MySqlDataReader Reg = cmd.ExecuteReader();
+            if (Reg.Read())
+            {
+                FV_jornada = Reg["descripcion"].ToString();
+              
+            }
+            cnx.Close();
+
+            return FV_jornada;
+        }
+
+
+        private string var_Usa_medicamentos;
+
+        public void Fun_UsaMedicamento()
+        {
+           
+            sql = string.Format(@"select * from historialmedico where Alumnos_CodAlumno='{0}';", Var_Alum_CodAlumno);
+            cnx.Open();
+            cmd = new MySql.Data.MySqlClient.MySqlCommand(sql, cnx);
+            MySql.Data.MySqlClient.MySqlDataReader Reg = cmd.ExecuteReader();
+            if (Reg.Read())
+            {
+                Var_Usa_medicamentos = Reg["UsaMedicamentos"].ToString();
+
+            }
+            cnx.Close();
+
+        }
+
+
+
+        private string var_nombre;
+        private string var_profesion;
+        private string var_lugar;
+        private string var_telefono;
+
+
+        public bool Fun_ExtraerResponsables(int FV_CodAl, int FV_CodigoTipo)
+        {
+            bool Resp = false;
+
+            sql = string.Format(@"select * from responsables as A inner join `alumnos/responsables` as B on A.CodResp=B.CodResp where B.CodAlumno='{0}' and B.Cod_TipoResp='{1}';", FV_CodAl,FV_CodigoTipo);
+            cnx.Open();
+            cmd = new MySql.Data.MySqlClient.MySqlCommand(sql, cnx);
+            MySql.Data.MySqlClient.MySqlDataReader Reg = cmd.ExecuteReader();
+            if (Reg.Read())
+            {
+                Var_nombre = Reg["NomComRes"].ToString();
+                Var_profesion = Reg["ProfecionRes"].ToString();
+                Var_lugar = Reg["LugarTrabajoRes"].ToString();
+                Var_telefono = Reg["TelTrabajoRes"].ToString();
+                Resp = true;
+            }
+            cnx.Close();
+            return Resp;
+        }
     }
 }

@@ -56,8 +56,10 @@
   <ItemGroup>
     <Compile Include="Clases\C_AlumDeResp.cs" />
     <Compile Include="Clases\C_Alumnos.cs" />
+    <Compile Include="Clases\C_BusqMatricula.cs" />
     <Compile Include="Clases\C_EntrePadres.cs" />
     <Compile Include="Clases\C_EstudioSocioMetodos.cs" />
+    <Compile Include="Clases\C_EvalPsico.cs" />
     <Compile Include="Clases\C_HistorialMedico.cs" />
     <Compile Include="Clases\C_InformacionFamilia.cs" />
     <Compile Include="Clases\C_InformacionVivienda.cs" />
@@ -77,6 +79,7 @@
     <Compile Include="Clases\C_Tipos_Atencion.cs" />
     <Compile Include="Clases\C_Usuarios.cs" />
     <Compile Include="Clases\C_Validaciones.cs" />
+    <Compile Include="Clases\C_VistaEntrevistaPadres.cs" />
     <Compile Include="Clases\DataGirdView.cs" />
     <Compile Include="Clases\C_DatosGenerales.cs" />
     <Compile Include="Clases\C_EstudioSocioEc.cs" />
@@ -134,6 +137,12 @@
     </Compile>
     <Compile Include="Formas\Matricula\FormIngresoGastos.Designer.cs">
       <DependentUpon>FormIngresoGastos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Matricula\FormLookFor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Matricula\FormLookFor.Designer.cs">
+      <DependentUpon>FormLookFor.cs</DependentUpon>
     </Compile>
     <Compile Include="Formas\Matricula\FormMontoMatricula.cs">
       <SubType>Form</SubType>
@@ -276,6 +285,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Matricula\FormIngresoGastos.resx">
       <DependentUpon>FormIngresoGastos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Matricula\FormLookFor.resx">
+      <DependentUpon>FormLookFor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Matricula\FormMontoMatricula.resx">
       <DependentUpon>FormMontoMatricula.cs</DependentUpon>

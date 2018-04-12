@@ -29,7 +29,7 @@ namespace APOAUTIS.Formas.Estudio_Socioeconomico
 
         private void btm_buscar_responsable_Click(object sender, EventArgs e)
         {
-            DGV_responsables.DataSource = Clases.C_EstudioSocioMetodos.Buscar(Txt_FiltroResponsable.Text);
+            DGV_responsables.DataSource = Clases.C_EstudioSocioMetodos.BuscarS(Txt_FiltroResponsable.Text);
 
         }
 
@@ -69,6 +69,16 @@ namespace APOAUTIS.Formas.Estudio_Socioeconomico
             }
             else
                 MessageBox.Show("debe de seleccionar una fila");
+        }
+
+        private void DGV_responsables_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void FormBusquedaResponsables_Load(object sender, EventArgs e)
+        {
+
         }
     }
     }

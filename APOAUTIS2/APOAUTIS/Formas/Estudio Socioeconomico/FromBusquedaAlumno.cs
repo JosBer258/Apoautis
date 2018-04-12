@@ -76,10 +76,6 @@ namespace APOAUTIS.Formas.Estudio_Socioeconomico
         {
             DGV_Show.DataSource = Clases.C_EstudioSocioMetodos.Buscar(Txt_FiltroAlumno.Text);
 
-
-
-
-
         }
         public static C_responsablesMadre madreSeleccionado { get; set; }
         public static C_DatosGenerales AlumnoSeleccionado { get;  set; }
@@ -110,5 +106,9 @@ namespace APOAUTIS.Formas.Estudio_Socioeconomico
 
         }
 
+        private void FromBusquedaAlumno_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

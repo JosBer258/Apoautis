@@ -73,18 +73,31 @@
             this.label13 = new System.Windows.Forms.Label();
             this.Pest1_Bttn_Siguiente = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.Pest1_Cmb_Recibio = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Pest4_Txt_TelefonoPorEmergencia = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
             this.Pest4_Txt_Entrevistador = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
             this.Pest4_TxtBox_Observaciones = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
-            this.Pest4_Bttn_Finalizar = new System.Windows.Forms.Button();
-            this.Pest4_Txt_TelefonoPorEmergencia = new System.Windows.Forms.TextBox();
-            this.label35 = new System.Windows.Forms.Label();
-            this.Pest4_Txt_DireccionPorEmergencias = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
+            this.Pest4_Txt_DireccionPorEmergencias = new System.Windows.Forms.TextBox();
+            this.Pest4_Txt_CualesMedic = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.Pest4_Cmb_UsaMedicamentos = new System.Windows.Forms.ComboBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Pest4_Bttn_Finalizar = new System.Windows.Forms.Button();
             this.Pest3_Grupo_DatosMadre = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label43 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.Pest3_Txt_NombreMadre = new System.Windows.Forms.TextBox();
             this.Pest3_Txt_TelefonoMadre = new System.Windows.Forms.TextBox();
@@ -93,8 +106,9 @@
             this.Pest3_Txt_ProfesionMadre = new System.Windows.Forms.TextBox();
             this.Pest3_Txt_LugarMadre = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
             this.Pest3_Grupo_DatosPadre = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
             this.Pest3_Txt_NombrePadre = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -103,35 +117,21 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.Pest3_Txt_TelefonoPadre = new System.Windows.Forms.TextBox();
-            this.Pest4_Txt_CualesMedic = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.Pest4_Cmb_UsaMedicamentos = new System.Windows.Forms.ComboBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.Bttn_Salir = new System.Windows.Forms.Button();
             this.Bttn_Buscar = new System.Windows.Forms.Button();
             this.label38 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label42 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label43 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.Fecha_Actual = new System.Windows.Forms.DateTimePicker();
             this.tabMatricula.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.Pest3_Grupo_DatosMadre.SuspendLayout();
             this.Pest3_Grupo_DatosPadre.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // Pest1_txtNumeroMatricula
@@ -634,6 +634,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Generales";
             // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(173, 116);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(194, 22);
+            this.dateTimePicker2.TabIndex = 22;
+            // 
             // Pest1_Cmb_Recibio
             // 
             this.Pest1_Cmb_Recibio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -665,20 +675,74 @@
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
-            // button1
+            // label40
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(1037, 259);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 120);
-            this.button1.TabIndex = 33;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(1074, 229);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(60, 15);
+            this.label40.TabIndex = 39;
+            this.label40.Text = "Ingresar";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(1044, 382);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(113, 30);
+            this.label39.TabIndex = 38;
+            this.label39.Text = "Ingresar prueba \r\nsocioeconomica";
+            this.label39.Visible = false;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox3.Controls.Add(this.dateTimePicker1);
+            this.groupBox3.Controls.Add(this.Pest4_Txt_TelefonoPorEmergencia);
+            this.groupBox3.Controls.Add(this.label30);
+            this.groupBox3.Controls.Add(this.Pest4_Txt_Entrevistador);
+            this.groupBox3.Controls.Add(this.label29);
+            this.groupBox3.Controls.Add(this.label35);
+            this.groupBox3.Controls.Add(this.Pest4_TxtBox_Observaciones);
+            this.groupBox3.Controls.Add(this.label33);
+            this.groupBox3.Controls.Add(this.label34);
+            this.groupBox3.Controls.Add(this.Pest4_Txt_DireccionPorEmergencias);
+            this.groupBox3.Controls.Add(this.Pest4_Txt_CualesMedic);
+            this.groupBox3.Controls.Add(this.label32);
+            this.groupBox3.Controls.Add(this.Pest4_Cmb_UsaMedicamentos);
+            this.groupBox3.Controls.Add(this.label31);
+            this.groupBox3.Location = new System.Drawing.Point(29, 176);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(973, 256);
+            this.groupBox3.TabIndex = 38;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Datos adicionales";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(200, 224);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(113, 21);
+            this.dateTimePicker1.TabIndex = 36;
+            // 
+            // Pest4_Txt_TelefonoPorEmergencia
+            // 
+            this.Pest4_Txt_TelefonoPorEmergencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest4_Txt_TelefonoPorEmergencia.Location = new System.Drawing.Point(442, 61);
+            this.Pest4_Txt_TelefonoPorEmergencia.Name = "Pest4_Txt_TelefonoPorEmergencia";
+            this.Pest4_Txt_TelefonoPorEmergencia.Size = new System.Drawing.Size(512, 21);
+            this.Pest4_Txt_TelefonoPorEmergencia.TabIndex = 1;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(15, 61);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(383, 15);
+            this.label30.TabIndex = 31;
+            this.label30.Text = "Telefono donde se puede localizar en caso de emergencia";
             // 
             // Pest4_Txt_Entrevistador
             // 
@@ -687,6 +751,26 @@
             this.Pest4_Txt_Entrevistador.Name = "Pest4_Txt_Entrevistador";
             this.Pest4_Txt_Entrevistador.Size = new System.Drawing.Size(296, 21);
             this.Pest4_Txt_Entrevistador.TabIndex = 7;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(15, 34);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(388, 15);
+            this.label29.TabIndex = 30;
+            this.label29.Text = "Direccion donde se puede localizar en caso de emergencia";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(335, 224);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(91, 15);
+            this.label35.TabIndex = 31;
+            this.label35.Text = "Entrevistador";
             // 
             // Pest4_TxtBox_Observaciones
             // 
@@ -707,6 +791,84 @@
             this.label33.TabIndex = 30;
             this.label33.Text = "Observaciones";
             // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(141, 224);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(46, 15);
+            this.label34.TabIndex = 30;
+            this.label34.Text = "Fecha";
+            // 
+            // Pest4_Txt_DireccionPorEmergencias
+            // 
+            this.Pest4_Txt_DireccionPorEmergencias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest4_Txt_DireccionPorEmergencias.Location = new System.Drawing.Point(442, 34);
+            this.Pest4_Txt_DireccionPorEmergencias.Name = "Pest4_Txt_DireccionPorEmergencias";
+            this.Pest4_Txt_DireccionPorEmergencias.Size = new System.Drawing.Size(512, 21);
+            this.Pest4_Txt_DireccionPorEmergencias.TabIndex = 0;
+            // 
+            // Pest4_Txt_CualesMedic
+            // 
+            this.Pest4_Txt_CualesMedic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest4_Txt_CualesMedic.Location = new System.Drawing.Point(442, 86);
+            this.Pest4_Txt_CualesMedic.MaxLength = 70;
+            this.Pest4_Txt_CualesMedic.Multiline = true;
+            this.Pest4_Txt_CualesMedic.Name = "Pest4_Txt_CualesMedic";
+            this.Pest4_Txt_CualesMedic.Size = new System.Drawing.Size(512, 49);
+            this.Pest4_Txt_CualesMedic.TabIndex = 4;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(370, 87);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(51, 15);
+            this.label32.TabIndex = 35;
+            this.label32.Text = "Cuales";
+            // 
+            // Pest4_Cmb_UsaMedicamentos
+            // 
+            this.Pest4_Cmb_UsaMedicamentos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Pest4_Cmb_UsaMedicamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pest4_Cmb_UsaMedicamentos.FormattingEnabled = true;
+            this.Pest4_Cmb_UsaMedicamentos.Items.AddRange(new object[] {
+            "Si",
+            "No"});
+            this.Pest4_Cmb_UsaMedicamentos.Location = new System.Drawing.Point(144, 84);
+            this.Pest4_Cmb_UsaMedicamentos.Name = "Pest4_Cmb_UsaMedicamentos";
+            this.Pest4_Cmb_UsaMedicamentos.Size = new System.Drawing.Size(173, 23);
+            this.Pest4_Cmb_UsaMedicamentos.TabIndex = 3;
+            this.Pest4_Cmb_UsaMedicamentos.SelectedIndexChanged += new System.EventHandler(this.Pest4_Cmb_UsaMedicamentos_SelectedIndexChanged);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(15, 88);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(123, 15);
+            this.label31.TabIndex = 32;
+            this.label31.Text = "Usa medicamento";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Transparent;
+            this.button1.Location = new System.Drawing.Point(1037, 259);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(128, 120);
+            this.button1.TabIndex = 33;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            // 
             // Pest4_Bttn_Finalizar
             // 
             this.Pest4_Bttn_Finalizar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -721,42 +883,6 @@
             this.Pest4_Bttn_Finalizar.TabIndex = 32;
             this.Pest4_Bttn_Finalizar.UseVisualStyleBackColor = false;
             this.Pest4_Bttn_Finalizar.Click += new System.EventHandler(this.Pest4_Bttn_Finalizar_Click);
-            // 
-            // Pest4_Txt_TelefonoPorEmergencia
-            // 
-            this.Pest4_Txt_TelefonoPorEmergencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest4_Txt_TelefonoPorEmergencia.Location = new System.Drawing.Point(442, 61);
-            this.Pest4_Txt_TelefonoPorEmergencia.Name = "Pest4_Txt_TelefonoPorEmergencia";
-            this.Pest4_Txt_TelefonoPorEmergencia.Size = new System.Drawing.Size(512, 21);
-            this.Pest4_Txt_TelefonoPorEmergencia.TabIndex = 1;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(335, 224);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(91, 15);
-            this.label35.TabIndex = 31;
-            this.label35.Text = "Entrevistador";
-            // 
-            // Pest4_Txt_DireccionPorEmergencias
-            // 
-            this.Pest4_Txt_DireccionPorEmergencias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest4_Txt_DireccionPorEmergencias.Location = new System.Drawing.Point(442, 34);
-            this.Pest4_Txt_DireccionPorEmergencias.Name = "Pest4_Txt_DireccionPorEmergencias";
-            this.Pest4_Txt_DireccionPorEmergencias.Size = new System.Drawing.Size(512, 21);
-            this.Pest4_Txt_DireccionPorEmergencias.TabIndex = 0;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(141, 224);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(46, 15);
-            this.label34.TabIndex = 30;
-            this.label34.Text = "Fecha";
             // 
             // Pest3_Grupo_DatosMadre
             // 
@@ -778,6 +904,24 @@
             this.Pest3_Grupo_DatosMadre.TabIndex = 31;
             this.Pest3_Grupo_DatosMadre.TabStop = false;
             this.Pest3_Grupo_DatosMadre.Text = "Datos de la Madre";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(97, 19);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(92, 20);
+            this.textBox2.TabIndex = 10;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(48, 22);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(46, 13);
+            this.label43.TabIndex = 11;
+            this.label43.Text = "Codigo";
             // 
             // label28
             // 
@@ -843,16 +987,6 @@
             this.label26.TabIndex = 13;
             this.label26.Text = "Lugar de Trabajo";
             // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(370, 87);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(51, 15);
-            this.label32.TabIndex = 35;
-            this.label32.Text = "Cuales";
-            // 
             // Pest3_Grupo_DatosPadre
             // 
             this.Pest3_Grupo_DatosPadre.BackColor = System.Drawing.SystemColors.Control;
@@ -873,6 +1007,24 @@
             this.Pest3_Grupo_DatosPadre.TabIndex = 30;
             this.Pest3_Grupo_DatosPadre.TabStop = false;
             this.Pest3_Grupo_DatosPadre.Text = "Datos del Padre";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(97, 19);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(92, 20);
+            this.textBox1.TabIndex = 8;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(48, 22);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(46, 13);
+            this.label42.TabIndex = 9;
+            this.label42.Text = "Codigo";
             // 
             // Pest3_Txt_NombrePadre
             // 
@@ -946,60 +1098,6 @@
             this.Pest3_Txt_TelefonoPadre.Size = new System.Drawing.Size(184, 20);
             this.Pest3_Txt_TelefonoPadre.TabIndex = 3;
             // 
-            // Pest4_Txt_CualesMedic
-            // 
-            this.Pest4_Txt_CualesMedic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest4_Txt_CualesMedic.Location = new System.Drawing.Point(442, 86);
-            this.Pest4_Txt_CualesMedic.MaxLength = 70;
-            this.Pest4_Txt_CualesMedic.Multiline = true;
-            this.Pest4_Txt_CualesMedic.Name = "Pest4_Txt_CualesMedic";
-            this.Pest4_Txt_CualesMedic.Size = new System.Drawing.Size(512, 49);
-            this.Pest4_Txt_CualesMedic.TabIndex = 4;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(15, 34);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(388, 15);
-            this.label29.TabIndex = 30;
-            this.label29.Text = "Direccion donde se puede localizar en caso de emergencia";
-            // 
-            // Pest4_Cmb_UsaMedicamentos
-            // 
-            this.Pest4_Cmb_UsaMedicamentos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Pest4_Cmb_UsaMedicamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest4_Cmb_UsaMedicamentos.FormattingEnabled = true;
-            this.Pest4_Cmb_UsaMedicamentos.Items.AddRange(new object[] {
-            "Si",
-            "No"});
-            this.Pest4_Cmb_UsaMedicamentos.Location = new System.Drawing.Point(144, 84);
-            this.Pest4_Cmb_UsaMedicamentos.Name = "Pest4_Cmb_UsaMedicamentos";
-            this.Pest4_Cmb_UsaMedicamentos.Size = new System.Drawing.Size(173, 23);
-            this.Pest4_Cmb_UsaMedicamentos.TabIndex = 3;
-            this.Pest4_Cmb_UsaMedicamentos.SelectedIndexChanged += new System.EventHandler(this.Pest4_Cmb_UsaMedicamentos_SelectedIndexChanged);
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(15, 61);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(383, 15);
-            this.label30.TabIndex = 31;
-            this.label30.Text = "Telefono donde se puede localizar en caso de emergencia";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(15, 88);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(123, 15);
-            this.label31.TabIndex = 32;
-            this.label31.Text = "Usa medicamento";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -1051,6 +1149,7 @@
             this.Bttn_Buscar.Size = new System.Drawing.Size(69, 61);
             this.Bttn_Buscar.TabIndex = 28;
             this.Bttn_Buscar.UseVisualStyleBackColor = false;
+            this.Bttn_Buscar.Click += new System.EventHandler(this.Bttn_Buscar_Click);
             // 
             // label38
             // 
@@ -1062,48 +1161,6 @@
             this.label38.TabIndex = 29;
             this.label38.Text = "Salir";
             // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox3.Controls.Add(this.dateTimePicker1);
-            this.groupBox3.Controls.Add(this.Pest4_Txt_TelefonoPorEmergencia);
-            this.groupBox3.Controls.Add(this.label30);
-            this.groupBox3.Controls.Add(this.Pest4_Txt_Entrevistador);
-            this.groupBox3.Controls.Add(this.label29);
-            this.groupBox3.Controls.Add(this.label35);
-            this.groupBox3.Controls.Add(this.Pest4_TxtBox_Observaciones);
-            this.groupBox3.Controls.Add(this.label33);
-            this.groupBox3.Controls.Add(this.label34);
-            this.groupBox3.Controls.Add(this.Pest4_Txt_DireccionPorEmergencias);
-            this.groupBox3.Controls.Add(this.Pest4_Txt_CualesMedic);
-            this.groupBox3.Controls.Add(this.label32);
-            this.groupBox3.Controls.Add(this.Pest4_Cmb_UsaMedicamentos);
-            this.groupBox3.Controls.Add(this.label31);
-            this.groupBox3.Location = new System.Drawing.Point(29, 176);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(973, 256);
-            this.groupBox3.TabIndex = 38;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Datos adicionales";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(1044, 382);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(113, 30);
-            this.label39.TabIndex = 38;
-            this.label39.Text = "Ingresar prueba \r\nsocioeconomica";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(1074, 229);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(60, 15);
-            this.label40.TabIndex = 39;
-            this.label40.Text = "Ingresar";
-            // 
             // label41
             // 
             this.label41.AutoSize = true;
@@ -1113,60 +1170,7 @@
             this.label41.Size = new System.Drawing.Size(126, 13);
             this.label41.TabIndex = 30;
             this.label41.Text = "Busqueda de Alumno";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(97, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(92, 20);
-            this.textBox1.TabIndex = 8;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(48, 22);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(46, 13);
-            this.label42.TabIndex = 9;
-            this.label42.Text = "Codigo";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(97, 19);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(92, 20);
-            this.textBox2.TabIndex = 10;
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(48, 22);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(46, 13);
-            this.label43.TabIndex = 11;
-            this.label43.Text = "Codigo";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(200, 224);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(113, 21);
-            this.dateTimePicker1.TabIndex = 36;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(173, 116);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(194, 22);
-            this.dateTimePicker2.TabIndex = 22;
+            this.label41.Click += new System.EventHandler(this.label41_Click);
             // 
             // Fecha_Actual
             // 
@@ -1204,12 +1208,12 @@
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.Pest3_Grupo_DatosMadre.ResumeLayout(false);
             this.Pest3_Grupo_DatosMadre.PerformLayout();
             this.Pest3_Grupo_DatosPadre.ResumeLayout(false);
             this.Pest3_Grupo_DatosPadre.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

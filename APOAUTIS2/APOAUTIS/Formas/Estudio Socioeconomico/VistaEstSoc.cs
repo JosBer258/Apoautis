@@ -49,13 +49,11 @@ namespace APOAUTIS
             tabEstSocioEco.SelectedTab = SaludRecreacion;
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            tabEstSocioEco.SelectedTab = InformacionVivienda;
-        }
+      
 
         private void button5_Click(object sender, EventArgs e)
         {
+
             FormBusquedaResponsables frmBusqEstSoc = new FormBusquedaResponsables();
             frmBusqEstSoc.ShowDialog();
 
@@ -228,6 +226,161 @@ namespace APOAUTIS
         private void textBox50_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void DatosGenerales_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_EsSo_NomMadre_DatosGe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_EsSo_IdentMadre_DatosGe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_EsSo_NomPadre_DatosGe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_EsSo_IdentPadre_DatosGe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_EsSo_DomiciPadre_DatosGe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_EsSo_NomEncarg_DatosGe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_EsSo_ParentescoEncar_DatosGe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_EsSo_TelEncarg_DatosGe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_EsSo_EdadEncarg_DatosGe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_EsSo_OficioEncarg_DatosGe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_EsSo_TelTrabPadre_DatosGe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_EsSo_CelPadre_DatosGe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_EsSo_TelCAsaPadre_DatosGe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_EsSo_OficioPadre_forma_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_EsSo_LugarTrabPadre_forma_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_EsSo_OficioMadre_forma_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_EsSo_PersonaEntre_DatosGe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_fechaEntrevista_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_EsSo_TelCasaMadre_DatosGe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_EsSo_CelMadre_DatosGe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_EsSo_LugarTrabMadre_forma_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_EsSo_TelTrabMadre_DatosGe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_EsSo_EdadEst_DatosGe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_EsSo_FechaNa_DatosGe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_EsSo_LugarNaci_DatosGe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_EsSo_NombreEst_DatosGe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InformacionFamilia_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox6_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VistaEstSoc_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

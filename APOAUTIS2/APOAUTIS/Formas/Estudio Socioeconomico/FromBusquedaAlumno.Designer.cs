@@ -114,6 +114,7 @@
             this.Name = "FromBusquedaAlumno";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "FromBusquedaAlumno";
+            this.Load += new System.EventHandler(this.FromBusquedaAlumno_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Show)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

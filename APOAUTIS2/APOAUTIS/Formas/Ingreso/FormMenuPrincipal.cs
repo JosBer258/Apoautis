@@ -2,6 +2,7 @@
 using APOAUTIS.Formas.Alumnos;
 using APOAUTIS.Formas.Entrevista_Padres;
 using APOAUTIS.Formas.Mantenimiento;
+using APOAUTIS.Formas.Manuales;
 using APOAUTIS.Formas.Matricula;
 using APOAUTIS.Formas.Responsables;
 using APOAUTIS.Formas.Usuarios;
@@ -199,6 +200,12 @@ namespace APOAUTIS.Formas.Ingreso
         {
             FormTipoMatricula Mat = new FormTipoMatricula();
             Mat.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormManual Manual = new FormManual();
+            Manual.ShowDialog();
         }
     }
 }

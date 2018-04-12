@@ -1,4 +1,6 @@
-﻿using System;
+﻿using APOAUTIS.Clases;
+using APOAUTIS.Formas.Alumnos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -276,6 +278,10 @@ namespace APOAUTIS
             
            
         }
+        public void ReIngreso()
+        {
+
+        }
 
         private void Fun_VerificarVariables()
         {
@@ -480,6 +486,103 @@ namespace APOAUTIS
             }else
             {
                 Pest4_Txt_CualesMedic.Enabled = true;
+            }
+        }
+
+        private void label41_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Bttn_Buscar_Click(object sender, EventArgs e)
+        {
+            FormGlobalShowAlum Busq = new FormGlobalShowAlum();
+            AddOwnedForm(Busq);
+            Busq.Accion = "PP";
+            Busq.ShowDialog();
+            
+        }
+
+        public void Fun_ExtraerDatos(int cod, string name)
+        {
+            /*MessageBox.Show("sss");
+
+
+            C_BusqMatricula Cl_Busq = new C_BusqMatricula();
+            C_Tipos_Atencion Cl_Tipo = new C_Tipos_Atencion();
+
+            Cl_Busq.Var_Alum_CodAlumno = (int)Convert.ToDouble(cod);
+           
+            Cl_Busq.Fun_ExtraerDatos_Mat_Alumno();
+
+            Pest1_Txt_LugarNacimiento.Text = Cl_Busq.Var_DG_TipoMatricula;
+            textBox1.Text = Cl_Busq.Var_Alum_lugarnacimiento;
+            dateTimePicker2.Value = Convert.ToDateTime(Cl_Busq.Var_Alum_fechanacimiento);
+            Pest1_Txt_DireccionCompleta.Text = Cl_Busq.Var_Alum_direccioncompleta;
+            Pest1_Txt_Celular.Text = Cl_Busq.Var_Alum_celular;
+            Pest1_Txt_InstProced.Text = Cl_Busq.Var_Alum_instprocedencia;
+            Pest1_Txt_AnoIngreso.Text = Cl_Busq.Var_DG_annioingreso;
+   
+            Pest1_Txt_TelefonoFijo.Text = Cl_Busq.Var_Alum_telefonofijo;
+            
+            Pest2_Pest_NombreInstituto.Text = Cl_Busq.Var_Alum_IntitutoIncl;
+            Pest4_Txt_DireccionPorEmergencias.Text = Cl_Busq.Var_Alum_direcionemergencia;
+            Pest4_Txt_TelefonoPorEmergencia.Text = Cl_Busq.Var_Alum_telefonoemergencia;
+            
+           
+           
+            Pest1_Txt_LugarNacimiento.Text = Cl_Busq.Var_DG_TipoMatricula;
+
+            Cl_Busq.Fun_UsaMedicamento();
+            
+
+
+            Cl_Tipo.Fun_BuscarTipos(Cl_Busq.Var_Alum_CodAlumno);
+
+            /*
+            Fun_Comb(comboBox_atencion_fisica, Cl_Tipo.Var_Combo_AtensionFisica);
+
+
+            Fun_Comb(comboBox_atencion_grupal, Cl_Tipo.Var_Combo_AtencionGrupal);
+
+            Fun_Comb(comboBox_atencion_prevocacional, Cl_Tipo.Var_Combo_AtencionPreVocacional);
+
+            Fun_Comb(comboBox_atencion_terapia_domicilio, Cl_Tipo.Var_Combo_TerapiaDomicilio);
+
+            Fun_Comb(comboBox_atencion_vocacional, Cl_Tipo.Var_Combo_AtencionVocacional);
+
+            Fun_Comb(comboBox_atension_distancia, Cl_Tipo.Var_Combo_Distancia);
+            Fun_Comb(comboBox_atension_escolar, Cl_Tipo.Var_Combo_Escolar);
+            Fun_Comb(comboBox_atension_individual, Cl_Tipo.Var_Combo_Individual);
+
+            if (Cl_Busq.Fun_ExtraerResponsables(Cl_Busq.Var_Alum_CodAlumno, 1))
+            {
+                Pest3_Txt_NombrePadre.Text = Cl_Busq.Var_nombre;
+                Pest3_Txt_ProfesionPadre.Text = Cl_Busq.Var_profesion;
+                Pest3_Txt_LugarPadre.Text = Cl_Busq.Var_lugar;
+                Pest3_Txt_TelefonoPadre.Text = Cl_Busq.Var_telefono;
+            }
+
+            if (Cl_Busq.Fun_ExtraerResponsables(Cl_Busq.Var_Alum_CodAlumno, 2))
+            {
+                Pest3_Txt_NombreMadre.Text = Cl_Busq.Var_nombre;
+                Pest3_Txt_ProfesionMadre.Text = Cl_Busq.Var_profesion;
+                Pest3_Txt_LugarMadre.Text = Cl_Busq.Var_lugar;
+                Pest3_Txt_TelefonoMadre.Text = Cl_Busq.Var_telefono;
+            }*/
+        }
+
+
+
+        private void Fun_Comb(ComboBox FV_C, string FV_Var_Aten)
+        {
+            if (FV_Var_Aten == "Si")
+            {
+                FV_C.SelectedIndex = 0;
+            }
+            else
+            {
+                FV_C.SelectedIndex = 1;
             }
         }
     }

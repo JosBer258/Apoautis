@@ -208,7 +208,7 @@ namespace APOAUTIS
 
             Clases.C_responsablesMadre madreresp = new Clases.C_responsablesMadre();
             madreresp.CodResp = var_respM;
-            madreresp.IdResp = Convert.ToInt32(txt_EsSo_IdentMadre_DatosGe.Text);
+            madreresp.IdResp = (int)Convert.ToDouble(txt_EsSo_IdentMadre_DatosGe.Text);
             madreresp.DomicilioResp = Convert.ToString(txt_EsSo_DomiciMadre_DatosGe);
             madreresp.LugarTrabRes= Convert.ToString(Combox_EsSo_TrabajaMadre_forma.Text);
             madreresp.TelefonoCasaResp = Convert.ToString(txt_EsSo_TelCasaMadre_DatosGe.Text);
@@ -1463,6 +1463,11 @@ namespace APOAUTIS
         private void txt_EsSo_TotalGastos_InfoFami_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validaciones.NumerosDecimales(sender, e, txt_EsSo_TotalGastos_InfoFami);
+        }
+
+        private void FormaEstSocEco_Load(object sender, EventArgs e)
+        {
+
         }
     }
 

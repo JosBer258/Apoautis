@@ -2543,6 +2543,7 @@
             this.Controls.Add(this.tabEstSocioEco);
             this.Name = "FormaEstSocEco";
             this.Text = " ";
+            this.Load += new System.EventHandler(this.FormaEstSocEco_Load);
             this.tabEstSocioEco.ResumeLayout(false);
             this.DatosGenerales.ResumeLayout(false);
             this.DatosGenerales.PerformLayout();

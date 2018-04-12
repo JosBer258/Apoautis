@@ -50,17 +50,20 @@
             this.ingresoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.vistaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.evaluacionPsicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposDeJornadaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposDeMatriculaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mydbDataSet = new APOAUTIS.mydbDataSet();
             this.alumnosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tiposDeJornadaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tiposDeMatriculaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mydbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alumnosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -79,7 +82,7 @@
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1333, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(1370, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -233,6 +236,29 @@
             this.evaluacionPsicoToolStripMenuItem.Text = "Evaluacion Psicodiagnostica";
             this.evaluacionPsicoToolStripMenuItem.Click += new System.EventHandler(this.evaluacionPsicoToolStripMenuItem_Click);
             // 
+            // mantenimientoToolStripMenuItem
+            // 
+            this.mantenimientoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tiposDeJornadaToolStripMenuItem,
+            this.tiposDeMatriculaToolStripMenuItem});
+            this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
+            this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(142, 21);
+            this.mantenimientoToolStripMenuItem.Text = "Mantenimiento";
+            // 
+            // tiposDeJornadaToolStripMenuItem
+            // 
+            this.tiposDeJornadaToolStripMenuItem.Name = "tiposDeJornadaToolStripMenuItem";
+            this.tiposDeJornadaToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.tiposDeJornadaToolStripMenuItem.Text = "Tipos de Jornada";
+            this.tiposDeJornadaToolStripMenuItem.Click += new System.EventHandler(this.tiposDeJornadaToolStripMenuItem_Click);
+            // 
+            // tiposDeMatriculaToolStripMenuItem
+            // 
+            this.tiposDeMatriculaToolStripMenuItem.Name = "tiposDeMatriculaToolStripMenuItem";
+            this.tiposDeMatriculaToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.tiposDeMatriculaToolStripMenuItem.Text = "Tipos de Matricula";
+            this.tiposDeMatriculaToolStripMenuItem.Click += new System.EventHandler(this.tiposDeMatriculaToolStripMenuItem_Click);
+            // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
@@ -263,36 +289,36 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // mantenimientoToolStripMenuItem
+            // button1
             // 
-            this.mantenimientoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tiposDeJornadaToolStripMenuItem,
-            this.tiposDeMatriculaToolStripMenuItem});
-            this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
-            this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(142, 21);
-            this.mantenimientoToolStripMenuItem.Text = "Mantenimiento";
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.Info;
+            this.button1.Location = new System.Drawing.Point(99, 570);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 84);
+            this.button1.TabIndex = 2;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // tiposDeJornadaToolStripMenuItem
+            // panel1
             // 
-            this.tiposDeJornadaToolStripMenuItem.Name = "tiposDeJornadaToolStripMenuItem";
-            this.tiposDeJornadaToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
-            this.tiposDeJornadaToolStripMenuItem.Text = "Tipos de Jornada";
-            this.tiposDeJornadaToolStripMenuItem.Click += new System.EventHandler(this.tiposDeJornadaToolStripMenuItem_Click);
-            // 
-            // tiposDeMatriculaToolStripMenuItem
-            // 
-            this.tiposDeMatriculaToolStripMenuItem.Name = "tiposDeMatriculaToolStripMenuItem";
-            this.tiposDeMatriculaToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
-            this.tiposDeMatriculaToolStripMenuItem.Text = "Tipos de Matricula";
-            this.tiposDeMatriculaToolStripMenuItem.Click += new System.EventHandler(this.tiposDeMatriculaToolStripMenuItem_Click);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(1170, 25);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 724);
+            this.panel1.TabIndex = 3;
             // 
             // FormMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.ClientSize = new System.Drawing.Size(1333, 600);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.ControlBox = false;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.Color.Purple;
@@ -308,6 +334,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.mydbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alumnosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,5 +369,7 @@
         private System.Windows.Forms.ToolStripMenuItem mantenimientoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tiposDeJornadaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tiposDeMatriculaToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

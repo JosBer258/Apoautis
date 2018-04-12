@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using APOAUTIS.Properties;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -18,9 +19,10 @@ namespace APOAUTIS.Clases
 
         public static MySqlConnection ObtenerConexion()
         {
-            MySqlConnection conectar = new MySqlConnection("server=127.0.0.1; database=mydb; Uid=root; pwd=123456;");
+            string CadenadeConexion= Settings.Default.mydbConnectionString; 
+            MySqlConnection conectar = new MySqlConnection(CadenadeConexion);
 
-             conectar.Open();
+   
             return conectar;
         }
 
@@ -29,10 +31,12 @@ namespace APOAUTIS.Clases
         { 
 
             int retorno = 0;
-
+            MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
+            conexion.Open();
             MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO estudiosocioeconomico (CodEstudioSE,Alumnos_CodAlumno, Lugar, Fecha, PersonaEntrevis, RevisaAproPor) values ('{0}','{1}','{2}', '{3}','{4}','{5}')",
-                estudio.CodEstudioSocio,estudio.CodAlumno, estudio.LugarEntrevista, estudio.FechaEntrevista, estudio.PersonaEntrevis,estudio.EntrevistadoPor1), C_EstudioSocioMetodos.ObtenerConexion());
+                estudio.CodEstudioSocio,estudio.CodAlumno, estudio.LugarEntrevista, estudio.FechaEntrevista, estudio.PersonaEntrevis,estudio.EntrevistadoPor1), conexion);
             retorno = comando.ExecuteNonQuery();
+            conexion.Close();
             return retorno;
         }
 
@@ -40,44 +44,52 @@ namespace APOAUTIS.Clases
         {
 
             int retorno = 0;
-
+            MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
+            conexion.Open();
             MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO informacionfamilia (Alumnos_CodAlumno, PersonasHabitan, TienenMasHijos, HabitanOtrosFami, MiemEnTotal, CuantMiembrTrab, IngresoAbuela,IngresoMadre,IngresoPadre, IngresoHijo, Pension, OtrosIngresos, TotalMensLemp, GastoEnergiaElec, GastoAgua, GastoTel, GastoComida, GastoTransp, GastoSalub, GastoEduca, GastoGaso,GastoRopa, GastoVivienda, OtrosGastos,TotalGastos) VALUES ('{0}','{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', '{16}', '{17}', '{18}', '{19}', '{20}', '{21}', '{22}', '{23}', '{24}')",
-            infoFamilia.CodAlumno1,infoFamilia.PersonasHabitan1,infoFamilia.TieneMasHijos1, infoFamilia.HabitanOtrosFamiliares1, infoFamilia.MienEnTotal1,infoFamilia.CuantosMiembrosTrabajan1,infoFamilia.IngresoAbuela1,infoFamilia.IngresoMadre1,infoFamilia.IngresoPadre1,infoFamilia.IngresoHijo1,infoFamilia.Pension1,infoFamilia.OtrosIngresos1,infoFamilia.TotalIngresos1,infoFamilia.GastosEnergia1,infoFamilia.GastoAgua1,infoFamilia.GastoTel1,infoFamilia.GastoComida1,infoFamilia.GastoTransp1,infoFamilia.GastoSalub1,infoFamilia.GastoEduca1,infoFamilia.GastoGaso1,infoFamilia.GastoRpa1,infoFamilia.GastoVivienda1,infoFamilia.OtrosGastos1,infoFamilia.TotalGastos1), C_EstudioSocioMetodos.ObtenerConexion());
+            infoFamilia.CodAlumno1,infoFamilia.PersonasHabitan1,infoFamilia.TieneMasHijos1, infoFamilia.HabitanOtrosFamiliares1, infoFamilia.MienEnTotal1,infoFamilia.CuantosMiembrosTrabajan1,infoFamilia.IngresoAbuela1,infoFamilia.IngresoMadre1,infoFamilia.IngresoPadre1,infoFamilia.IngresoHijo1,infoFamilia.Pension1,infoFamilia.OtrosIngresos1,infoFamilia.TotalIngresos1,infoFamilia.GastosEnergia1,infoFamilia.GastoAgua1,infoFamilia.GastoTel1,infoFamilia.GastoComida1,infoFamilia.GastoTransp1,infoFamilia.GastoSalub1,infoFamilia.GastoEduca1,infoFamilia.GastoGaso1,infoFamilia.GastoRpa1,infoFamilia.GastoVivienda1,infoFamilia.OtrosGastos1,infoFamilia.TotalGastos1), conexion);
             retorno = comando.ExecuteNonQuery();
+            conexion.Close();
             return retorno;
         }
 
         public static int AgregarAtencionMedica(C_HistorialMedico Medico)
         {
-
+            MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
+            conexion.Open();
             int retorno = 0;
 
-            MySqlCommand comando = new MySqlCommand(string.Format("UPDATE historialmedico SET LugaresRecibeAtencionMedica='{0}', EnfermePadecenFamili='{1}', CuantoGastaEnMed='{2}' WHERE Alumnos_CodAlumno='{3}'",Medico.LugaresRecibeAtencion1 ,Medico.EnfermedadesPadeceFamilia1 , Medico.CuantoGastaMedi1, Medico.CodigoAlum), C_EstudioSocioMetodos.ObtenerConexion());
+            MySqlCommand comando = new MySqlCommand(string.Format("UPDATE historialmedico SET LugaresRecibeAtencionMedica='{0}', EnfermePadecenFamili='{1}', CuantoGastaEnMed='{2}' WHERE Alumnos_CodAlumno='{3}'",Medico.LugaresRecibeAtencion1 ,Medico.EnfermedadesPadeceFamilia1 , Medico.CuantoGastaMedi1, Medico.CodigoAlum), conexion);
             retorno = comando.ExecuteNonQuery();
+            conexion.Close();
             return retorno;
 
         }
 
         public static int AgregarLugaresRecreacion(C_LugaresRecreacion recreacion)
         {
-
+            MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
+            conexion.Open();
             int retorno = 0;
 
             MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO lugaresrecreacion (Alumnos_CodAlumno, Parques, CentrosComerciales, Museos, Cine, Balnearios, Playa, Otros) VALUES ('{0}', '{1} ', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}');",
-            recreacion.CodAlumno, recreacion.Parques, recreacion.CentrosComerciales, recreacion.Museos,recreacion.Cine,recreacion.Balnearios,recreacion.Playa,recreacion.Otros), C_EstudioSocioMetodos.ObtenerConexion());
+            recreacion.CodAlumno, recreacion.Parques, recreacion.CentrosComerciales, recreacion.Museos,recreacion.Cine,recreacion.Balnearios,recreacion.Playa,recreacion.Otros), conexion);
             retorno = comando.ExecuteNonQuery();
+            conexion.Close();
             return retorno;
 
         }
 
         public static int AgregarInfovivienda(C_InformacionVivienda vivienda)
         {
-
+            MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
+            conexion.Open();
             int retorno = 0;
 
             MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO informacionvivienda (Alumnos_CodAlumno, Tenencia, MaterialConst, MaterialPiso, ServiciosBacicos, DisponeDe) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}');",
-            vivienda.CodAlumno, vivienda.Tenencia, vivienda.MaterialConst, vivienda.MaterialPiso,vivienda.ServicioBasicos, vivienda.DisponeDe), C_EstudioSocioMetodos.ObtenerConexion());
+            vivienda.CodAlumno, vivienda.Tenencia, vivienda.MaterialConst, vivienda.MaterialPiso,vivienda.ServicioBasicos, vivienda.DisponeDe), conexion);
             retorno = comando.ExecuteNonQuery();
+            conexion.Close();
             return retorno;
 
         }
@@ -85,22 +97,26 @@ namespace APOAUTIS.Clases
         
         public static int AgregarMadre(C_responsablesMadre madre)
         {
-
+            MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
+            conexion.Open();
             int retorno = 0;
 
-            MySqlCommand comando = new MySqlCommand(string.Format("UPDATE responsables SET NumIdRes='{0}', DomicilioRes='{1}', LugarTrabajoRes='{2}', TelCasaRes='{3}',TelTrabajoRes='{4}' WHERE CodResp='{5}'", madre.IdResp, madre.DomicilioResp, madre.LugarTrabRes, madre.TelefonoCasaResp, madre.TrabajoResp,madre.CodResp), C_EstudioSocioMetodos.ObtenerConexion());
+            MySqlCommand comando = new MySqlCommand(string.Format("UPDATE responsables SET NumIdRes='{0}', DomicilioRes='{1}', LugarTrabajoRes='{2}', TelCasaRes='{3}',TelTrabajoRes='{4}' WHERE CodResp='{5}'", madre.IdResp, madre.DomicilioResp, madre.LugarTrabRes, madre.TelefonoCasaResp, madre.TrabajoResp,madre.CodResp), conexion);
             retorno = comando.ExecuteNonQuery();
+            conexion.Close();
             return retorno;
 
         }
 
         public static int AgregarPadre(C_responsablePadre padre)
         {
-
+            MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
+            conexion.Open();
             int retorno = 0;
 
-            MySqlCommand comando = new MySqlCommand(string.Format("UPDATE responsables SET NumIdRes='{0}', DomicilioRes='{1}', LugarTrabajoRes='{2}', TelCasaRes='{3}',TelTrabajoRes='{4}' WHERE CodResp='{5}'", padre.IdResp, padre.DomicilioResp, padre.LugarTrabRes, padre.TelefonoCasaResp, padre.TrabajoResp,padre.CodResp), C_EstudioSocioMetodos.ObtenerConexion());
+            MySqlCommand comando = new MySqlCommand(string.Format("UPDATE responsables SET NumIdRes='{0}', DomicilioRes='{1}', LugarTrabajoRes='{2}', TelCasaRes='{3}',TelTrabajoRes='{4}' WHERE CodResp='{5}'", padre.IdResp, padre.DomicilioResp, padre.LugarTrabRes, padre.TelefonoCasaResp, padre.TrabajoResp,padre.CodResp), conexion);
             retorno = comando.ExecuteNonQuery();
+            conexion.Close();
             return retorno;
 
         }
@@ -108,12 +124,14 @@ namespace APOAUTIS.Clases
 
         public static int AgregarOtroResp(C_ResponsablesOtro otroresp)
         {
-
+            MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
+            conexion.Open();
             int retorno = 0;
 
             MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO encargadootrofamiliar (Responsables_CodResp, ParentescoEncarg, Edad) VALUES ('{0}', '{1}', '{2}');",
-            otroresp.CodRespOtro, otroresp.Parentesco,otroresp.Edad), C_EstudioSocioMetodos.ObtenerConexion());
+            otroresp.CodRespOtro, otroresp.Parentesco,otroresp.Edad), conexion);
             retorno = comando.ExecuteNonQuery();
+            conexion.Close();
             return retorno;
 
         }
@@ -121,12 +139,14 @@ namespace APOAUTIS.Clases
         
         public static int AgregarOtroTipo(C_ResponsablesOtro tipo)
         {
-
+            MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
+            conexion.Open();
             int retorno = 0;
 
             MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO `alumnos/responsables` (CodAlumno, CodResp, Cod_TipoResp) VALUES ('{0}', '{1}', '3');",
-            tipo.CodAlumno,tipo.CodRespOtro), C_EstudioSocioMetodos.ObtenerConexion());
+            tipo.CodAlumno,tipo.CodRespOtro),conexion);
             retorno = comando.ExecuteNonQuery();
+            conexion.Close();
             return retorno;
 
         }
@@ -134,47 +154,103 @@ namespace APOAUTIS.Clases
         {
 
             int retorno = 0;
-
-            MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO responsables (NomComRes, ProfecionRes, TelCelRes) VALUES ('{0}', '{1}', '{2}')", otro.NomRespOtro, otro.Profesion,otro.Telefono), C_EstudioSocioMetodos.ObtenerConexion());
+            MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
+            conexion.Open();
+            MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO responsables (NomComRes, ProfecionRes, TelCelRes) VALUES ('{0}', '{1}', '{2}')", otro.NomRespOtro, otro.Profesion,otro.Telefono), conexion);
             retorno = comando.ExecuteNonQuery();
+            conexion.Close();
             return retorno;
 
         }
 
-        public static List<C_DatosGenerales> Buscar( string nombreAlumno)
+        public static List<C_DatosGenerales> Buscar(string nombreAlumno)
         {
-            List<C_DatosGenerales> lista = new List<C_DatosGenerales>();
-
-            MySqlCommand _comando = new MySqlCommand(String.Format(
-           "SELECT  CodAlumno,IdAlum,nomAlumno, LugarNaciAlum, FechaNaciAlum, EdadAlum, SexoAlum FROM alumnos  where  NomAlumno = '{0}'",
-            nombreAlumno), C_EstudioSocioMetodos.ObtenerConexion());
-            MySqlDataReader _reader = _comando.ExecuteReader();
-            while (_reader.Read())
-            {
-                C_DatosGenerales Estudio = new C_DatosGenerales();
-                Estudio.CodAlumno = _reader.GetInt32(0);
-                Estudio.IdAlumno = _reader.GetDouble(1);
-                Estudio.NombreAlumno = _reader.GetString(2);
-                Estudio.LugarNacAlumno = _reader.GetString(3);
-                Estudio.Fecha_NacAlumno = _reader.GetDateTime(4);
-                Estudio.EdadAlumno = _reader.GetInt32(5);
-                Estudio.SexoAlumno = _reader.GetString(6);
-
-
-
-
-                lista.Add(Estudio);
-            }
             
+            List<C_DatosGenerales> lista = new List<C_DatosGenerales>();
+            MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
+            conexion.Open();
+            try
+            {
+                
+                MySqlCommand _comando = new MySqlCommand(String.Format(
+               "SELECT  CodAlumno,IdAlum,nomAlumno, LugarNaciAlum, FechaNaciAlum, EdadAlum, SexoAlum FROM alumnos  where  NomAlumno like '%{0}%'",
+                nombreAlumno), conexion);
+                MySqlDataReader _reader = _comando.ExecuteReader();
+
+                while (_reader.Read())
+                {
+                    C_DatosGenerales Estudio = new C_DatosGenerales();
+                    Estudio.CodAlumno = _reader.GetInt32(0);
+                    Estudio.IdAlumno = _reader.GetDouble(1);
+                    Estudio.NombreAlumno = _reader.GetString(2);
+                    Estudio.LugarNacAlumno = _reader.GetString(3);
+                    Estudio.Fecha_NacAlumno = _reader.GetDateTime(4);
+                    Estudio.EdadAlumno = _reader.GetInt32(5);
+                    Estudio.SexoAlumno = _reader.GetString(6);
+
+
+
+
+                    lista.Add(Estudio);
+                }
+                
+            }
+            catch (System.Exception ek)
+            {
+                MessageBox.Show(ek.ToString());
+            }
+            conexion.Close();
+            return lista;
+        }
+
+
+        public static List<C_DatosGenerales> BuscarS(string nombreAlumno)
+        {
+
+            List<C_DatosGenerales> lista = new List<C_DatosGenerales>();
+            MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
+            conexion.Open();
+            try
+            {
+
+                MySqlCommand _comando = new MySqlCommand(String.Format(
+               "SELECT  CodAlumno,nomAlumno, LugarNaciAlum, FechaNaciAlum, EdadAlum FROM alumnos  where  NomAlumno like '%{0}%'",
+                nombreAlumno), conexion);
+                MySqlDataReader _reader = _comando.ExecuteReader();
+
+                while (_reader.Read())
+                {
+                    C_DatosGenerales Estudio = new C_DatosGenerales();
+                    Estudio.CodAlumno = _reader.GetInt32(0);
+                   
+                    Estudio.NombreAlumno = _reader.GetString(1);
+                    Estudio.LugarNacAlumno = _reader.GetString(2);
+                    Estudio.Fecha_NacAlumno = _reader.GetDateTime(3);
+                    Estudio.EdadAlumno = _reader.GetInt32(4);
+    
+
+
+
+
+                    lista.Add(Estudio);
+                }
+
+            }
+            catch (System.Exception ek)
+            {
+                MessageBox.Show(ek.ToString());
+            }
+            conexion.Close();
             return lista;
         }
         public static List<C_responsablesMadre> BuscarMadre(string nombreAlumno)
         {
             List<C_responsablesMadre> lista = new List<C_responsablesMadre>();
-
+            MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
+            conexion.Open();
             MySqlCommand _comando = new MySqlCommand(String.Format(
            "SELECT b.CodAlumno,a.CodResp, a.NomComRes, a.NumIdRes, a.DomicilioRes, a.ProfecionRes, a.OficioRes, a.LugarTrabajoRes, a.TelCasaRes, a.TelCelRes, a.TelTrabajoRes, a.CorreoRes, b.Cod_TipoResp  FROM responsables as a INNER JOIN  `alumnos/responsables`  as b ON a.CodResp = b.CodResp  INNER JOIN alumnos as c ON b.CodAlumno= c.CodAlumno where b.Cod_TipoResp='2' and  c.CodAlumno= '{0}'",
-            nombreAlumno), C_EstudioSocioMetodos.ObtenerConexion());
+            nombreAlumno), conexion);
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
             {
@@ -196,6 +272,7 @@ namespace APOAUTIS.Clases
 
                 lista.Add(madre);
             }
+            conexion.Close();
 
             return lista;
         }
@@ -203,10 +280,12 @@ namespace APOAUTIS.Clases
         public static List<C_responsablePadre> BuscarPadre(string nombreAlumno)
         {
             List<C_responsablePadre> lista = new List<C_responsablePadre>();
+            MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
+            conexion.Open();
 
             MySqlCommand _comando = new MySqlCommand(String.Format(
            "SELECT b.CodAlumno,a.CodResp, a.NomComRes, a.NumIdRes, a.DomicilioRes, a.ProfecionRes, a.OficioRes, a.LugarTrabajoRes, a.TelCasaRes, a.TelCelRes, a.TelTrabajoRes, a.CorreoRes, b.Cod_TipoResp  FROM responsables as a INNER JOIN  `alumnos/responsables`  as b ON a.CodResp = b.CodResp  INNER JOIN alumnos as c ON b.CodAlumno= c.CodAlumno where b.Cod_TipoResp='1' and  c.CodAlumno= '{0}'",
-            nombreAlumno), C_EstudioSocioMetodos.ObtenerConexion());
+            nombreAlumno), conexion);
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
             {
@@ -228,17 +307,19 @@ namespace APOAUTIS.Clases
 
                 lista.Add(padre);
             }
-
+            conexion.Close();
             return lista;
         }
 
         public static List<C_ResponsablesOtro> BuscarOtros(string nombreAlumno)
         {
             List<C_ResponsablesOtro> lista = new List<C_ResponsablesOtro>();
+            MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
+            conexion.Open();
 
             MySqlCommand _comando = new MySqlCommand(String.Format(
            "SELECT b.CodAlumno,a.CodResp,d.Edad,d.ParentescoEncarg, a.NomComRes, a.ProfecionRes, a.OficioRes, a.TelCelRes,  b.Cod_TipoResp FROM encargadootrofamiliar as d INNER JOIN responsables as a on d.Responsables_CodResp  = a.CodResp  INNER JOIN   `alumnos/responsables`  as b ON a.CodResp = b.CodResp  INNER JOIN alumnos as c ON  b.CodAlumno = c.CodAlumno  where a.CodResp='3' and  c.CodAlumno='{0}' ",
-            nombreAlumno), C_EstudioSocioMetodos.ObtenerConexion());
+            nombreAlumno), conexion);
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
             {
@@ -257,16 +338,16 @@ namespace APOAUTIS.Clases
                 lista.Add(otro);
             }
 
+            conexion.Close();
             return lista;
         }
-
-        
+    
 
         public static C_EstudioSocioEc ObtenerEstudioSE(double cod)
         {
             C_EstudioSocioEc Estudio = new C_EstudioSocioEc();
             MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
-
+            conexion.Open();
             MySqlCommand _comando = new MySqlCommand(String.Format("SELECT Alumnos_CodAlumno, Lugar, Fecha, PersonaEntrevis, RevisaAproPor FROM estudiosocioeconomico where Alumnos_CodAlumno = '{0}'", cod), conexion);
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
@@ -289,6 +370,7 @@ namespace APOAUTIS.Clases
         {
             C_DatosGenerales Estudio = new C_DatosGenerales();
             MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
+            conexion.Open();
 
             MySqlCommand _comando = new MySqlCommand(String.Format("SELECT  CodAlumno,IdAlum, nomAlumno, LugarNaciAlum, FechaNaciAlum, EdadAlum, SexoAlum FROM alumnos  where CodAlumno= '{0}' ", cod), conexion);
             MySqlDataReader _reader = _comando.ExecuteReader();
@@ -308,13 +390,12 @@ namespace APOAUTIS.Clases
             return Estudio;
 
         }
-
-        
+   
         public static C_responsablesMadre ObtenerMadre(double cod)
         {
             C_responsablesMadre madre = new C_responsablesMadre();
             MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
-
+            conexion.Open();
             MySqlCommand _comando = new MySqlCommand(String.Format("SELECT b.CodAlumno,a.CodResp, a.NomComRes, a.NumIdRes, a.DomicilioRes, a.ProfecionRes, a.OficioRes, a.LugarTrabajoRes, a.TelCasaRes, a.TelCelRes, a.TelTrabajoRes, a.CorreoRes, b.Cod_TipoResp FROM responsables as a INNER JOIN  `alumnos/responsables`  as b ON a.CodResp = b.CodResp  INNER JOIN alumnos as c ON b.CodAlumno= c.CodAlumno where b.Cod_TipoResp='2' and  c.CodAlumno= '{0}'", cod), conexion);
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
@@ -345,7 +426,7 @@ namespace APOAUTIS.Clases
         {
             C_responsablePadre padre = new C_responsablePadre();
             MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
-
+            conexion.Open();
             MySqlCommand _comando = new MySqlCommand(String.Format("SELECT b.CodAlumno,a.CodResp, a.NomComRes, a.NumIdRes, a.DomicilioRes, a.ProfecionRes, a.OficioRes, a.LugarTrabajoRes, a.TelCasaRes, a.TelCelRes, a.TelTrabajoRes, a.CorreoRes, b.Cod_TipoResp FROM responsables as a INNER JOIN  `alumnos/responsables`  as b ON a.CodResp = b.CodResp  INNER JOIN alumnos as c ON b.CodAlumno= c.CodAlumno where b.Cod_TipoResp='1' and  c.CodAlumno= '{0}'", cod), conexion);
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
@@ -376,7 +457,7 @@ namespace APOAUTIS.Clases
         {
             C_ResponsablesOtro otro = new C_ResponsablesOtro();
             MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
-
+            conexion.Open();
             MySqlCommand _comando = new MySqlCommand(String.Format("SELECT b.CodAlumno,a.CodResp,d.ParentescoEncarg, d.Edad, a.NomComRes,a.ProfecionRes,a.TelCelRes, b.Cod_TipoResp FROM   encargadootrofamiliar as d INNER JOIN  responsables as a   on d.Responsables_CodResp  = a.CodResp  INNER JOIN  `alumnos/responsables`  as b ON a.CodResp = b.CodResp  INNER JOIN alumnos as c ON b.CodAlumno= c.CodAlumno where b.Cod_TipoResp='3' and  c.CodAlumno= '{0}'", cod), conexion);
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
@@ -401,7 +482,7 @@ namespace APOAUTIS.Clases
         {
             C_ResponsablesOtro otro = new C_ResponsablesOtro();
             MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
-
+            conexion.Open();
             MySqlCommand _comando = new MySqlCommand(String.Format("SELECT max(CodResp) FROM responsables"), conexion);
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
@@ -415,24 +496,28 @@ namespace APOAUTIS.Clases
             return otro;
 
         }
+     
 
-        
-        
-        
-
-            public static C_HistorialMedico ObtenerHistorialMedico(double cod)
+        public static C_HistorialMedico ObtenerHistorialMedico(double cod)
         {
             C_HistorialMedico medico= new C_HistorialMedico();
             MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
-
+            conexion.Open();
             MySqlCommand _comando = new MySqlCommand(String.Format("SELECT Alumnos_CodAlumno, LugaresRecibeAtencionMedica, EnfermePadecenFamili, CuantoGastaEnMed from historialmedico where Alumnos_CodAlumno = '{0}'", cod), conexion);
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
             {
                 medico.CodigoAlum= _reader.GetInt32(0);
-                medico.LugaresRecibeAtencion1= _reader.GetString(1);
-                medico.EnfermedadesPadeceFamilia1= _reader.GetString(2);
-                medico.CuantoGastaMedi1= _reader.GetDouble(3);
+                medico.LugaresRecibeAtencion1= _reader["LugaresRecibeAtencionMedica"].ToString();
+                medico.EnfermedadesPadeceFamilia1= _reader["EnfermePadecenFamili"].ToString();
+                string Validar;
+                Validar = _reader["CuantoGastaEnMed"].ToString();
+                if (string.IsNullOrEmpty(Validar))
+                {
+                    Validar = "0";
+                }
+
+                medico.CuantoGastaMedi1 =Convert.ToDouble(Validar);
 
             }
 
@@ -445,7 +530,7 @@ namespace APOAUTIS.Clases
         {
             C_LugaresRecreacion recre = new C_LugaresRecreacion();
             MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
-
+            conexion.Open();
             MySqlCommand _comando = new MySqlCommand(String.Format(" SELECT Alumnos_CodAlumno, Parques, CentrosComerciales, Museos, Cine, Balnearios, Playa, Otros from lugaresrecreacion where Alumnos_CodAlumno = '{0}'", cod), conexion);
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
@@ -466,14 +551,11 @@ namespace APOAUTIS.Clases
 
         }
 
-
-
-
         public static C_InformacionVivienda ObtenerInfoVivienda(double cod)
         {
             C_InformacionVivienda vivienda = new C_InformacionVivienda();
             MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
-
+            conexion.Open();
             MySqlCommand _comando = new MySqlCommand(String.Format("SELECT Alumnos_CodAlumno, Tenencia, MaterialConst, MaterialPiso, ServiciosBacicos, DisponeDe from informacionvivienda where Alumnos_CodAlumno ='{0}'", cod), conexion);
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
@@ -495,7 +577,7 @@ namespace APOAUTIS.Clases
         {
             C_InformacionFamilia familia = new C_InformacionFamilia();
             MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
-
+            conexion.Open();
             MySqlCommand _comando = new MySqlCommand(String.Format("SELECT Alumnos_CodAlumno, PersonasHabitan, TienenMasHijos, HabitanOtrosFami, MiemEnTotal, CuantMiembrTrab, IngresoAbuela, IngresoMadre, IngresoPadre, IngresoHijo, Pension, OtrosIngresos, TotalMensLemp,GastoEnergiaElec, GastoAgua, GastoTel, GastoComida, GastoTransp, GastoSalub, GastoEduca, GastoGaso, GastoRopa, GastoVivienda, OtrosGastos, TotalGastos from informacionfamilia where Alumnos_CodAlumno = '{0}'", cod), conexion);
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())

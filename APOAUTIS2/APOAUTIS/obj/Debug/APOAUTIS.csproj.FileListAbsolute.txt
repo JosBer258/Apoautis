@@ -114,7 +114,6 @@ C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug
 C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\AxInterop.AcroPDFLib.dll
 C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.csproj.ResolveComReference.cache
 C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Manuales.FormManual.resources
-C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Ingreso.Prueba.resources
 C:\Users\Josias\Pictures\APOAUTIS2\APOAUTIS\bin\Debug\APOAUTIS.exe.config
 C:\Users\Josias\Pictures\APOAUTIS2\APOAUTIS\obj\Debug\Interop.AcroPDFLib.dll
 C:\Users\Josias\Pictures\APOAUTIS2\APOAUTIS\obj\Debug\AxInterop.AcroPDFLib.dll
@@ -163,3 +162,4 @@ C:\Users\Geovana\Desktop\SW\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Forma
 C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Responsables.FormAlumDeResp.resources
 C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Responsables.FormResponsables.resources
 C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Estudio_Socioeconomico.FormBusquedaResponsables.resources
+C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Matricula.FormLookFor.resources

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -136,6 +137,30 @@ namespace APOAUTIS.Clases
             else
             {
                 
+            }
+            this.cnx.Close();
+
+        }
+
+        public void Fun_BuscarTipos(int FV_Codigo)
+        {
+            this.sql = string.Format(@"select * from tiposatencion where Alumnos_CodAlumno='{0}';", FV_Codigo);
+
+            this.cmd = new MySqlCommand(this.sql, this.cnx);
+            this.cnx.Open();
+            MySqlDataReader Reg = null;
+            Reg = this.cmd.ExecuteReader();
+
+            if (Reg.Read())
+            {
+                Var_Combo_AtencionGrupal = Reg["Aten_grupal"].ToString();
+                Var_Combo_AtencionPreVocacional = Reg["Aten_pre_vocacional"].ToString();
+                Var_Combo_AtencionVocacional = Reg["Aten_vocacional"].ToString();
+                Var_Combo_Escolar = Reg["Aten_Escolar"].ToString();
+                Var_Combo_Individual = Reg["Aten_Individual"].ToString();
+                Var_Combo_Distancia = Reg["Aten_distancia"].ToString();
+                Var_Combo_TerapiaDomicilio = Reg["Teraia_domicilio"].ToString();
+                Var_Combo_AtensionFisica = Reg["Atencion_fisica"].ToString();
             }
             this.cnx.Close();
 

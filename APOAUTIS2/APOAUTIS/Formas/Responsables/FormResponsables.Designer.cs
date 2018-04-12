@@ -38,6 +38,8 @@
             this.Pest1_Grupo_ShowAlumno = new System.Windows.Forms.GroupBox();
             this.DGV_ShowAlumnosResp = new System.Windows.Forms.DataGridView();
             this.Pest1_Grupo_DatosEncargado = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.txtCorrResp = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.cmbEstResp = new System.Windows.Forms.ComboBox();
@@ -67,8 +69,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_ShowResponsables)).BeginInit();
@@ -230,6 +230,26 @@
             this.Pest1_Grupo_DatosEncargado.TabIndex = 3;
             this.Pest1_Grupo_DatosEncargado.TabStop = false;
             this.Pest1_Grupo_DatosEncargado.Text = "Datos de los Encargados";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(884, 127);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(56, 15);
+            this.label16.TabIndex = 34;
+            this.label16.Text = "Limpiar";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(778, 127);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(55, 15);
+            this.label15.TabIndex = 33;
+            this.label15.Text = "Aceptar";
             // 
             // txtCorrResp
             // 
@@ -538,26 +558,7 @@
             this.btnSalir.Size = new System.Drawing.Size(100, 96);
             this.btnSalir.TabIndex = 31;
             this.btnSalir.UseVisualStyleBackColor = true;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(778, 127);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(55, 15);
-            this.label15.TabIndex = 33;
-            this.label15.Text = "Aceptar";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(884, 127);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(56, 15);
-            this.label16.TabIndex = 34;
-            this.label16.Text = "Limpiar";
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // FormResponsables
             // 

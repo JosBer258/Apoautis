@@ -264,6 +264,9 @@ namespace APOAUTIS.Formas.Responsables
             MessageBox.Show("Datos Cargados", "");
         }
 
-        
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

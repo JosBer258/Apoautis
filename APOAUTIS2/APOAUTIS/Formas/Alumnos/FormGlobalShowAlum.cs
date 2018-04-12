@@ -70,10 +70,9 @@ namespace APOAUTIS.Formas.Alumnos
                 }
                 else if (Accion == "PP")
                 {
-                   Prueba Form_Ent = new Prueba();
+                    FrmMatricula Form_Ent = Owner as FrmMatricula;
                     Form_Ent.Fun_ExtraerDatos((int)Convert.ToDouble(row.Cells["Codigo"].Value.ToString()),
                     row.Cells["Nombre del Alumno"].Value.ToString());
-             
                 }
 
                 this.Close();
@@ -110,10 +109,10 @@ namespace APOAUTIS.Formas.Alumnos
                 }
                 else if (Accion == "PP")
                 {
-                    Prueba Form_Ent = new Prueba();
+                    FrmMatricula Form_Ent = Owner as FrmMatricula;
                     Form_Ent.Fun_ExtraerDatos((int)Convert.ToDouble(row.Cells["Codigo"].Value.ToString()),
                     row.Cells["Nombre del Alumno"].Value.ToString());
-   
+
                 }
 
 

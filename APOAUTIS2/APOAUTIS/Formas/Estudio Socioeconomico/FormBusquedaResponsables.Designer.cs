@@ -91,10 +91,11 @@
             // DGV_responsables
             // 
             this.DGV_responsables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_responsables.Location = new System.Drawing.Point(-3, 60);
+            this.DGV_responsables.Location = new System.Drawing.Point(12, 60);
             this.DGV_responsables.Name = "DGV_responsables";
-            this.DGV_responsables.Size = new System.Drawing.Size(662, 332);
+            this.DGV_responsables.Size = new System.Drawing.Size(647, 332);
             this.DGV_responsables.TabIndex = 14;
+            this.DGV_responsables.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_responsables_CellContentClick);
             // 
             // FormBusquedaResponsables
             // 
@@ -109,6 +110,7 @@
             this.Controls.Add(this.DGV_responsables);
             this.Name = "FormBusquedaResponsables";
             this.Text = "FormBusquedaResponsables";
+            this.Load += new System.EventHandler(this.FormBusquedaResponsables_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_responsables)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
