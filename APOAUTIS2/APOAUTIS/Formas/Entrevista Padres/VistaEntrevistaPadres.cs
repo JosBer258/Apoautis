@@ -290,8 +290,8 @@ namespace APOAUTIS
 
         private void Fun_ChekearCheckBox(CheckBox FV_CHK, string FV_Variable)
         {
-            string Var_ValorBien = "1";
-            string Var_Mal = "0";
+            string Var_ValorBien = "si";
+            string Var_Mal = "no";
 
             if(FV_Variable.Equals(Var_Mal) ==true || string.IsNullOrEmpty(FV_Variable))
             {
@@ -409,6 +409,76 @@ namespace APOAUTIS
             textBox1.Text = string.Empty;
             textBox2.Text = string.Empty;
             textBox3.Text = string.Empty;
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label112_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox105_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox10_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label167_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox158_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox159_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label165_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label166_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox156_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label168_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox12_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Pest_DatosGenerales_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

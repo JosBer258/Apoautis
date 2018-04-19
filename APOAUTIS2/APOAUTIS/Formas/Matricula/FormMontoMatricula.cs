@@ -83,12 +83,12 @@ namespace APOAUTIS.Formas.Matricula
         private void Bttn_Calcular_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(Txt_TotalIngreso.Text)) {
-                errorProvider1.SetError(Bttn_Calcular, "Debe ingresar un alumno");
+                errorProvider1.SetError(Txt_NombreAlumno, "Debe ingresar un alumno");
                 return;
             }
             else
             {
-                errorProvider1.SetError(Bttn_Calcular, "");
+                errorProvider1.SetError(Txt_NombreAlumno, "");
             }
 
 
@@ -177,6 +177,11 @@ namespace APOAUTIS.Formas.Matricula
         {
             FormManual Manual = new FormManual();
             Manual.ShowDialog();
+        }
+
+        private void Gruop_MuestraDatos_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
