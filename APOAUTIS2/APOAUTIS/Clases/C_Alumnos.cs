@@ -649,13 +649,13 @@ where CodAlumno='{2}'", EdadAlum11, EdadCronologica11, CodAlumno11);
         }
 
 
-        public void updateAlumnos(string SexoAlum, string DireccionAlum, string TelfijoAlum, string CelAlumno, 
+        public void updateAlumnos(string NomAlumno, string SexoAlum, string IdAlum, string DireccionAlum, string TelfijoAlum, string CelAlumno, 
             string EscolaridadAlum, string InstProceAlumno, string InstDondeEstaIncluido,
             int estado, string emerlugar, string emertelefono,int CodAlumno)
         {
-            this.sql = string.Format(@"update alumnos set SexoAlum='{0}',DireccionAlum='{1}',TelfijoAlum='{2}',
-CelAlumno='{3}',EscolaridadAlum='{4}',InstProceAlumno='{5}',
-InstDondeEstaIncluido='{6}', Estado='{7}',EmergLugar='{8}',EmergTelefono='{9}' where CodAlumno='{10}'", SexoAlum, DireccionAlum, TelfijoAlum, CelAlumno, EscolaridadAlum,
+            this.sql = string.Format(@"update alumnos set NomAlumno ='{0}',SexoAlum='{1}',IdAlum='{2}',DireccionAlum='{3}',TelfijoAlum='{4}',
+CelAlumno='{5}',EscolaridadAlum='{6}',InstProceAlumno='{7}',
+InstDondeEstaIncluido='{8}', Estado='{9}',EmergLugar='{10}',EmergTelefono='{11}' where CodAlumno='{12}'", NomAlumno,SexoAlum, IdAlum ,DireccionAlum, TelfijoAlum, CelAlumno, EscolaridadAlum,
 InstProceAlumno, InstDondeEstaIncluido, estado, emerlugar, emertelefono, CodAlumno);
             this.cmd = new MySqlCommand(this.sql, this.cnx);
             this.cnx.Open();
