@@ -124,6 +124,10 @@
             this.label38 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.Fecha_Actual = new System.Windows.Forms.DateTimePicker();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
             this.tabMatricula.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -138,6 +142,7 @@
             // 
             this.Pest1_txtNumeroMatricula.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest1_txtNumeroMatricula.Location = new System.Drawing.Point(175, 31);
+            this.Pest1_txtNumeroMatricula.MaxLength = 5;
             this.Pest1_txtNumeroMatricula.Name = "Pest1_txtNumeroMatricula";
             this.Pest1_txtNumeroMatricula.Size = new System.Drawing.Size(192, 22);
             this.Pest1_txtNumeroMatricula.TabIndex = 0;
@@ -186,6 +191,7 @@
             // 
             this.Pest1_Txt_NomEducador.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest1_Txt_NomEducador.Location = new System.Drawing.Point(175, 59);
+            this.Pest1_Txt_NomEducador.MaxLength = 40;
             this.Pest1_Txt_NomEducador.Name = "Pest1_Txt_NomEducador";
             this.Pest1_Txt_NomEducador.Size = new System.Drawing.Size(192, 22);
             this.Pest1_Txt_NomEducador.TabIndex = 1;
@@ -214,6 +220,7 @@
             // 
             this.Pest1_Txt_DireccionCompleta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest1_Txt_DireccionCompleta.Location = new System.Drawing.Point(847, 91);
+            this.Pest1_Txt_DireccionCompleta.MaxLength = 40;
             this.Pest1_Txt_DireccionCompleta.Multiline = true;
             this.Pest1_Txt_DireccionCompleta.Name = "Pest1_Txt_DireccionCompleta";
             this.Pest1_Txt_DireccionCompleta.Size = new System.Drawing.Size(183, 61);
@@ -234,6 +241,7 @@
             // 
             this.Pest1_Txt_TelefonoFijo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest1_Txt_TelefonoFijo.Location = new System.Drawing.Point(847, 33);
+            this.Pest1_Txt_TelefonoFijo.MaxLength = 13;
             this.Pest1_Txt_TelefonoFijo.Name = "Pest1_Txt_TelefonoFijo";
             this.Pest1_Txt_TelefonoFijo.Size = new System.Drawing.Size(183, 22);
             this.Pest1_Txt_TelefonoFijo.TabIndex = 8;
@@ -252,6 +260,7 @@
             // 
             this.Pest1_Txt_InstProced.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest1_Txt_InstProced.Location = new System.Drawing.Point(534, 91);
+            this.Pest1_Txt_InstProced.MaxLength = 40;
             this.Pest1_Txt_InstProced.Name = "Pest1_Txt_InstProced";
             this.Pest1_Txt_InstProced.Size = new System.Drawing.Size(183, 22);
             this.Pest1_Txt_InstProced.TabIndex = 6;
@@ -269,9 +278,10 @@
             // Pest1_Txt_AnoIngreso
             // 
             this.Pest1_Txt_AnoIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest1_Txt_AnoIngreso.Location = new System.Drawing.Point(534, 130);
+            this.Pest1_Txt_AnoIngreso.Location = new System.Drawing.Point(173, 153);
+            this.Pest1_Txt_AnoIngreso.MaxLength = 4;
             this.Pest1_Txt_AnoIngreso.Name = "Pest1_Txt_AnoIngreso";
-            this.Pest1_Txt_AnoIngreso.Size = new System.Drawing.Size(183, 22);
+            this.Pest1_Txt_AnoIngreso.Size = new System.Drawing.Size(194, 22);
             this.Pest1_Txt_AnoIngreso.TabIndex = 7;
             // 
             // label10
@@ -288,6 +298,7 @@
             // 
             this.Pest1_Txt_Celular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest1_Txt_Celular.Location = new System.Drawing.Point(847, 61);
+            this.Pest1_Txt_Celular.MaxLength = 13;
             this.Pest1_Txt_Celular.Name = "Pest1_Txt_Celular";
             this.Pest1_Txt_Celular.Size = new System.Drawing.Size(183, 22);
             this.Pest1_Txt_Celular.TabIndex = 9;
@@ -297,7 +308,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(388, 130);
+            this.label11.Location = new System.Drawing.Point(18, 153);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(117, 32);
             this.label11.TabIndex = 19;
@@ -317,6 +328,7 @@
             // 
             this.Pest1_Txt_LugarNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest1_Txt_LugarNacimiento.Location = new System.Drawing.Point(175, 87);
+            this.Pest1_Txt_LugarNacimiento.MaxLength = 40;
             this.Pest1_Txt_LugarNacimiento.Name = "Pest1_Txt_LugarNacimiento";
             this.Pest1_Txt_LugarNacimiento.Size = new System.Drawing.Size(192, 22);
             this.Pest1_Txt_LugarNacimiento.TabIndex = 2;
@@ -378,18 +390,19 @@
             this.groupBox2.Controls.Add(this.Combo_AtencionGrupal);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(22, 217);
+            this.groupBox2.Location = new System.Drawing.Point(22, 256);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1036, 184);
+            this.groupBox2.Size = new System.Drawing.Size(1036, 157);
             this.groupBox2.TabIndex = 27;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tipos de Atencion";
             // 
             // Pest2_Pest_NombreInstituto
             // 
-            this.Pest2_Pest_NombreInstituto.Location = new System.Drawing.Point(385, 131);
+            this.Pest2_Pest_NombreInstituto.Location = new System.Drawing.Point(385, 111);
+            this.Pest2_Pest_NombreInstituto.MaxLength = 40;
             this.Pest2_Pest_NombreInstituto.Name = "Pest2_Pest_NombreInstituto";
-            this.Pest2_Pest_NombreInstituto.Size = new System.Drawing.Size(543, 26);
+            this.Pest2_Pest_NombreInstituto.Size = new System.Drawing.Size(626, 26);
             this.Pest2_Pest_NombreInstituto.TabIndex = 8;
             // 
             // Combo_AtensionFisica
@@ -400,7 +413,7 @@
             this.Combo_AtensionFisica.Items.AddRange(new object[] {
             "Si",
             "No"});
-            this.Combo_AtensionFisica.Location = new System.Drawing.Point(929, 78);
+            this.Combo_AtensionFisica.Location = new System.Drawing.Point(929, 69);
             this.Combo_AtensionFisica.Name = "Combo_AtensionFisica";
             this.Combo_AtensionFisica.Size = new System.Drawing.Size(82, 24);
             this.Combo_AtensionFisica.TabIndex = 7;
@@ -409,7 +422,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(18, 131);
+            this.label20.Location = new System.Drawing.Point(18, 111);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(369, 36);
             this.label20.TabIndex = 39;
@@ -436,7 +449,7 @@
             this.Combo_Distancia.Items.AddRange(new object[] {
             "Si",
             "No"});
-            this.Combo_Distancia.Location = new System.Drawing.Point(641, 78);
+            this.Combo_Distancia.Location = new System.Drawing.Point(641, 69);
             this.Combo_Distancia.Name = "Combo_Distancia";
             this.Combo_Distancia.Size = new System.Drawing.Size(82, 24);
             this.Combo_Distancia.TabIndex = 5;
@@ -458,7 +471,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(741, 81);
+            this.label17.Location = new System.Drawing.Point(741, 72);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(187, 16);
             this.label17.TabIndex = 11;
@@ -482,7 +495,7 @@
             this.Combo_Escolar.Items.AddRange(new object[] {
             "Si",
             "No"});
-            this.Combo_Escolar.Location = new System.Drawing.Point(385, 78);
+            this.Combo_Escolar.Location = new System.Drawing.Point(385, 69);
             this.Combo_Escolar.Name = "Combo_Escolar";
             this.Combo_Escolar.Size = new System.Drawing.Size(82, 24);
             this.Combo_Escolar.TabIndex = 3;
@@ -491,7 +504,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(235, 81);
+            this.label19.Location = new System.Drawing.Point(235, 72);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(125, 16);
             this.label19.TabIndex = 3;
@@ -525,7 +538,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(487, 81);
+            this.label16.Location = new System.Drawing.Point(487, 72);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(148, 16);
             this.label16.TabIndex = 7;
@@ -549,7 +562,7 @@
             this.Combo_AtencionPreVocacional.Items.AddRange(new object[] {
             "Si",
             "No"});
-            this.Combo_AtencionPreVocacional.Location = new System.Drawing.Point(133, 78);
+            this.Combo_AtencionPreVocacional.Location = new System.Drawing.Point(133, 69);
             this.Combo_AtencionPreVocacional.Name = "Combo_AtencionPreVocacional";
             this.Combo_AtencionPreVocacional.Size = new System.Drawing.Size(82, 24);
             this.Combo_AtencionPreVocacional.TabIndex = 1;
@@ -558,7 +571,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(18, 75);
+            this.label14.Location = new System.Drawing.Point(18, 66);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(113, 32);
             this.label14.TabIndex = 2;
@@ -604,6 +617,10 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Controls.Add(this.label45);
+            this.groupBox1.Controls.Add(this.label44);
+            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.dateTimePicker2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.Pest1_Cmb_Recibio);
@@ -629,7 +646,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(22, 17);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1036, 177);
+            this.groupBox1.Size = new System.Drawing.Size(1036, 222);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Generales";
@@ -730,6 +747,7 @@
             // 
             this.Pest4_Txt_TelefonoPorEmergencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest4_Txt_TelefonoPorEmergencia.Location = new System.Drawing.Point(442, 61);
+            this.Pest4_Txt_TelefonoPorEmergencia.MaxLength = 40;
             this.Pest4_Txt_TelefonoPorEmergencia.Name = "Pest4_Txt_TelefonoPorEmergencia";
             this.Pest4_Txt_TelefonoPorEmergencia.Size = new System.Drawing.Size(512, 21);
             this.Pest4_Txt_TelefonoPorEmergencia.TabIndex = 1;
@@ -748,6 +766,7 @@
             // 
             this.Pest4_Txt_Entrevistador.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest4_Txt_Entrevistador.Location = new System.Drawing.Point(442, 224);
+            this.Pest4_Txt_Entrevistador.MaxLength = 40;
             this.Pest4_Txt_Entrevistador.Name = "Pest4_Txt_Entrevistador";
             this.Pest4_Txt_Entrevistador.Size = new System.Drawing.Size(296, 21);
             this.Pest4_Txt_Entrevistador.TabIndex = 7;
@@ -776,6 +795,7 @@
             // 
             this.Pest4_TxtBox_Observaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest4_TxtBox_Observaciones.Location = new System.Drawing.Point(442, 141);
+            this.Pest4_TxtBox_Observaciones.MaxLength = 40;
             this.Pest4_TxtBox_Observaciones.Multiline = true;
             this.Pest4_TxtBox_Observaciones.Name = "Pest4_TxtBox_Observaciones";
             this.Pest4_TxtBox_Observaciones.Size = new System.Drawing.Size(512, 67);
@@ -805,6 +825,7 @@
             // 
             this.Pest4_Txt_DireccionPorEmergencias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest4_Txt_DireccionPorEmergencias.Location = new System.Drawing.Point(442, 34);
+            this.Pest4_Txt_DireccionPorEmergencias.MaxLength = 40;
             this.Pest4_Txt_DireccionPorEmergencias.Name = "Pest4_Txt_DireccionPorEmergencias";
             this.Pest4_Txt_DireccionPorEmergencias.Size = new System.Drawing.Size(512, 21);
             this.Pest4_Txt_DireccionPorEmergencias.TabIndex = 0;
@@ -813,7 +834,7 @@
             // 
             this.Pest4_Txt_CualesMedic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest4_Txt_CualesMedic.Location = new System.Drawing.Point(442, 86);
-            this.Pest4_Txt_CualesMedic.MaxLength = 70;
+            this.Pest4_Txt_CualesMedic.MaxLength = 40;
             this.Pest4_Txt_CualesMedic.Multiline = true;
             this.Pest4_Txt_CualesMedic.Name = "Pest4_Txt_CualesMedic";
             this.Pest4_Txt_CualesMedic.Size = new System.Drawing.Size(512, 49);
@@ -935,6 +956,7 @@
             // Pest3_Txt_NombreMadre
             // 
             this.Pest3_Txt_NombreMadre.Location = new System.Drawing.Point(323, 16);
+            this.Pest3_Txt_NombreMadre.MaxLength = 40;
             this.Pest3_Txt_NombreMadre.Name = "Pest3_Txt_NombreMadre";
             this.Pest3_Txt_NombreMadre.Size = new System.Drawing.Size(299, 20);
             this.Pest3_Txt_NombreMadre.TabIndex = 0;
@@ -942,6 +964,7 @@
             // Pest3_Txt_TelefonoMadre
             // 
             this.Pest3_Txt_TelefonoMadre.Location = new System.Drawing.Point(783, 40);
+            this.Pest3_Txt_TelefonoMadre.MaxLength = 13;
             this.Pest3_Txt_TelefonoMadre.Name = "Pest3_Txt_TelefonoMadre";
             this.Pest3_Txt_TelefonoMadre.Size = new System.Drawing.Size(175, 20);
             this.Pest3_Txt_TelefonoMadre.TabIndex = 3;
@@ -967,6 +990,7 @@
             // Pest3_Txt_ProfesionMadre
             // 
             this.Pest3_Txt_ProfesionMadre.Location = new System.Drawing.Point(323, 40);
+            this.Pest3_Txt_ProfesionMadre.MaxLength = 40;
             this.Pest3_Txt_ProfesionMadre.Name = "Pest3_Txt_ProfesionMadre";
             this.Pest3_Txt_ProfesionMadre.Size = new System.Drawing.Size(299, 20);
             this.Pest3_Txt_ProfesionMadre.TabIndex = 1;
@@ -974,6 +998,7 @@
             // Pest3_Txt_LugarMadre
             // 
             this.Pest3_Txt_LugarMadre.Location = new System.Drawing.Point(783, 12);
+            this.Pest3_Txt_LugarMadre.MaxLength = 40;
             this.Pest3_Txt_LugarMadre.Name = "Pest3_Txt_LugarMadre";
             this.Pest3_Txt_LugarMadre.Size = new System.Drawing.Size(175, 20);
             this.Pest3_Txt_LugarMadre.TabIndex = 2;
@@ -1030,6 +1055,7 @@
             // 
             this.Pest3_Txt_NombrePadre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest3_Txt_NombrePadre.Location = new System.Drawing.Point(323, 19);
+            this.Pest3_Txt_NombrePadre.MaxLength = 40;
             this.Pest3_Txt_NombrePadre.Name = "Pest3_Txt_NombrePadre";
             this.Pest3_Txt_NombrePadre.Size = new System.Drawing.Size(299, 20);
             this.Pest3_Txt_NombrePadre.TabIndex = 0;
@@ -1058,6 +1084,7 @@
             // 
             this.Pest3_Txt_ProfesionPadre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest3_Txt_ProfesionPadre.Location = new System.Drawing.Point(323, 41);
+            this.Pest3_Txt_ProfesionPadre.MaxLength = 40;
             this.Pest3_Txt_ProfesionPadre.Name = "Pest3_Txt_ProfesionPadre";
             this.Pest3_Txt_ProfesionPadre.Size = new System.Drawing.Size(299, 20);
             this.Pest3_Txt_ProfesionPadre.TabIndex = 1;
@@ -1066,6 +1093,7 @@
             // 
             this.Pest3_Txt_LugarPadre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest3_Txt_LugarPadre.Location = new System.Drawing.Point(783, 19);
+            this.Pest3_Txt_LugarPadre.MaxLength = 40;
             this.Pest3_Txt_LugarPadre.Name = "Pest3_Txt_LugarPadre";
             this.Pest3_Txt_LugarPadre.Size = new System.Drawing.Size(184, 20);
             this.Pest3_Txt_LugarPadre.TabIndex = 2;
@@ -1094,6 +1122,7 @@
             // 
             this.Pest3_Txt_TelefonoPadre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest3_Txt_TelefonoPadre.Location = new System.Drawing.Point(783, 44);
+            this.Pest3_Txt_TelefonoPadre.MaxLength = 13;
             this.Pest3_Txt_TelefonoPadre.Name = "Pest3_Txt_TelefonoPadre";
             this.Pest3_Txt_TelefonoPadre.Size = new System.Drawing.Size(184, 20);
             this.Pest3_Txt_TelefonoPadre.TabIndex = 3;
@@ -1179,6 +1208,48 @@
             this.Fecha_Actual.Size = new System.Drawing.Size(200, 20);
             this.Fecha_Actual.TabIndex = 31;
             this.Fecha_Actual.Visible = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(534, 119);
+            this.textBox3.MaxLength = 14;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(183, 22);
+            this.textBox3.TabIndex = 23;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "M",
+            "F"});
+            this.comboBox2.Location = new System.Drawing.Point(534, 147);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(183, 24);
+            this.comboBox2.TabIndex = 24;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Location = new System.Drawing.Point(388, 125);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(103, 16);
+            this.label44.TabIndex = 25;
+            this.label44.Text = "Numero de ID";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Location = new System.Drawing.Point(388, 153);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(140, 16);
+            this.label45.TabIndex = 26;
+            this.label45.Text = "Genero del Alumno";
             // 
             // FrmMatricula
             // 
@@ -1316,6 +1387,10 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker Fecha_Actual;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
 

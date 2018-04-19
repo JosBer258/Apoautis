@@ -293,11 +293,12 @@
             // 
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.Info;
-            this.button1.Location = new System.Drawing.Point(99, 570);
+            this.button1.ForeColor = System.Drawing.SystemColors.Window;
+            this.button1.Location = new System.Drawing.Point(0, 619);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 84);
+            this.button1.Size = new System.Drawing.Size(108, 105);
             this.button1.TabIndex = 2;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -306,9 +307,9 @@
             // 
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(1170, 25);
+            this.panel1.Location = new System.Drawing.Point(1262, 25);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 724);
+            this.panel1.Size = new System.Drawing.Size(108, 724);
             this.panel1.TabIndex = 3;
             // 
             // FormMenuPrincipal

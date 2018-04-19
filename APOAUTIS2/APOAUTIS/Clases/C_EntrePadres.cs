@@ -573,7 +573,7 @@ namespace APOAUTIS.Clases
         }
         public void fun_aconte_academicos(string Int, string Dia)
         {
-            this.sql = string.Format(@"insert into `desarrollosocial/comportamiento`(`Alumnos_CodAlumno`,AceptaBuscaInteraccion, ParticipaEnActividades,IntegradoEnKinder,DesdeCuanIntegrado,QueManifiesSuMaestra,ComoSeDesenvuelve,InteresPArticularJuguete,DescribaDiaNormal) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}')",
+            this.sql = string.Format(@"insert into `desarrollosocial/comportamiento`(Alumnos_CodAlumno,AceptaBuscaInteraccion, ParticipaEnActividades,IntegradoEnKinder,DesdeCuanIntegrado,QueManifiesSuMaestra,ComoSeDesenvuelve,InteresPArticularJuguete,DescribaDiaNormal) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')",
             CodAlumno, acepta_busca_interac, parti_actividades, integrado_kinder, desde_cuando, manifiesta_comportamiento_escuela, deseenvuelve_escuela, Int, Dia);
 
             this.cmd = new MySqlCommand(this.sql, this.cnx);
@@ -1543,7 +1543,53 @@ values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}
             }
         }
 
+        public string Fun_ExtraerResponsables(int Cod_Alumno)
+        {
+            string Var_resp_nombres = "";
+            int ContadorFil = 1;
+
+            this.sql = string.Format("select C.NomComRes as 'Responsable' from alumnos as A inner join `alumnos/responsables` as B on A.CodAlumno = B.CodAlumno inner join responsables as C on B.CodResp = C.CodResp where A.CodAlumno = '{0}'", Cod_Alumno);
+            this.cnx.Open();
+            this.cmd = new MySql.Data.MySqlClient.MySqlCommand(this.sql, this.cnx);
+            MySql.Data.MySqlClient.MySqlDataReader Reg = null;
+            Reg = this.cmd.ExecuteReader();
+
+            while (Reg.Read())
+            {
+                if (ContadorFil > 1)
+                {
+                    Var_resp_nombres = Var_resp_nombres + " y " + Reg["Responsable"].ToString();
+                }
+                else
+                {
+                    Var_resp_nombres = Reg["Responsable"].ToString();
+                }
+
+                ContadorFil++;
+            }
+
+            cnx.Close();
+            return Var_resp_nombres;
+        }
 
 
+        public bool Fun_ValidarSIYaExisteEntrevista(int Cod_Alumno)
+        {
+            bool Resp = false;
+
+            this.sql = string.Format("select * from entrevistapadres where Alumnos_CodAlumno = '{0}'", Cod_Alumno);
+            this.cnx.Open();
+            this.cmd = new MySql.Data.MySqlClient.MySqlCommand(this.sql, this.cnx);
+            MySql.Data.MySqlClient.MySqlDataReader Reg = null;
+            Reg = this.cmd.ExecuteReader();
+
+            if (Reg.Read())
+            {
+                Resp = true;
+            }
+
+            cnx.Close();
+            return Resp;
+        }
     }
 }

@@ -62,7 +62,7 @@
             this.Bttn_Salir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Bttn_Salir.Location = new System.Drawing.Point(114, 110);
             this.Bttn_Salir.Name = "Bttn_Salir";
-            this.Bttn_Salir.Size = new System.Drawing.Size(86, 92);
+            this.Bttn_Salir.Size = new System.Drawing.Size(86, 82);
             this.Bttn_Salir.TabIndex = 125;
             this.Bttn_Salir.UseVisualStyleBackColor = false;
             this.Bttn_Salir.Click += new System.EventHandler(this.button2_Click);
@@ -242,6 +242,7 @@
             this.Controls.Add(this.label20);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

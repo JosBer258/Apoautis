@@ -271,8 +271,8 @@ namespace APOAUTIS
             }
             else if (Convert.ToInt32(comboBox1.SelectedValue) == 2)
             {
-                
 
+                ReIngreso();
 
             }
             
@@ -280,7 +280,12 @@ namespace APOAUTIS
         }
         public void ReIngreso()
         {
-
+            if (cMatri.VerificarCod((int)Convert.ToDouble(Pest1_txtNumeroMatricula.Text)) == true)
+            {
+                MessageBox.Show("Ya existe una matricula con ese numero, Ingrese un numero de matricula nuevamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Pest1_txtNumeroMatricula.Focus();
+                return;
+            }
         }
 
         private void Fun_VerificarVariables()
