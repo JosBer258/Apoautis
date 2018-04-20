@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using APOAUTIS.Formas;
 
 namespace APOAUTIS
 {
@@ -18,6 +19,51 @@ namespace APOAUTIS
         public FormaEvalPsic()
         {
             InitializeComponent();
+        }
+
+        private static string rutaArchivo;
+        private static string nomArchivo;
+        private static DataGridView dgv;
+
+        public static string RutaArchivo
+        {
+            get
+            {
+                return rutaArchivo;
+            }
+
+            set
+            {
+                rutaArchivo = value;
+            }
+        }
+
+        public static string NomArchivo
+        {
+            get
+            {
+                return nomArchivo;
+            }
+
+            set
+            {
+                nomArchivo = value;
+            }
+        }
+
+        
+
+        public static DataGridView Dgv
+        {
+            get
+            {
+                return dgv;
+            }
+
+            set
+            {
+                dgv = value;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -272,14 +318,14 @@ namespace APOAUTIS
 
         private void txtFechNac_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //Val.NumerosReales_NegativosOPositivos(sender, e, txtFechNac);
+            
         }
 
         private void txtEdad_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //cEval.validarSoloNumeros(sender, e);
+            
             Val.NumerosDecimales(sender, e, txtEdad);
-            //cEval.validarDecimal(sender, e);
+            
         }
 
         private void txtResp_KeyPress(object sender, KeyPressEventArgs e)
@@ -301,5 +347,28 @@ namespace APOAUTIS
         {
             Val.ValidarNombres_SoloLetras(sender, e);
         }
-    }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+
+            try { 
+                    var dialog = new System.Windows.Forms.FolderBrowserDialog();
+                    System.Windows.Forms.DialogResult result = dialog.ShowDialog();
+                    RutaArchivo = Convert.ToString(dialog.SelectedPath);
+
+                        if (RutaArchivo != "")
+                        {
+                            seleccionNombreArchivo selectNombre = new seleccionNombreArchivo();
+                            selectNombre.Show();
+                            Dgv = DGV_Evaluaciones;
+                        }    
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Mensaje de Error");
+                }
+         }
+            
+   }
 }
+

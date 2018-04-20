@@ -68,6 +68,7 @@
             this.radImpDiag = new System.Windows.Forms.RadioButton();
             this.txtBusqImpDiag = new System.Windows.Forms.TextBox();
             this.Bttn_Salir = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Evaluaciones)).BeginInit();
             this.Grupo_IngresoResultado.SuspendLayout();
             this.Grupo_Busqueda.SuspendLayout();
@@ -364,6 +365,7 @@
             // 
             // Grupo_Busqueda
             // 
+            this.Grupo_Busqueda.Controls.Add(this.btnImprimir);
             this.Grupo_Busqueda.Controls.Add(this.radTodas);
             this.Grupo_Busqueda.Controls.Add(this.txtBusqOB);
             this.Grupo_Busqueda.Controls.Add(this.label10);
@@ -500,6 +502,16 @@
             this.Bttn_Salir.UseVisualStyleBackColor = true;
             this.Bttn_Salir.Click += new System.EventHandler(this.button2_Click);
             // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Location = new System.Drawing.Point(717, 84);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(118, 41);
+            this.btnImprimir.TabIndex = 93;
+            this.btnImprimir.Text = "Imprimir Tabla";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
             // FormaEvalPsic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -525,7 +537,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView DGV_Evaluaciones;
         private System.Windows.Forms.RadioButton radBusqFech;
         private System.Windows.Forms.RadioButton radBusqNom;
         private System.Windows.Forms.TextBox txtBusqNom;
@@ -565,5 +576,7 @@
         private System.Windows.Forms.TextBox txtBusqImpDiag;
         private System.Windows.Forms.Button Bttn_Salir;
         private System.Windows.Forms.DateTimePicker dateFechNac;
+        private System.Windows.Forms.Button btnImprimir;
+        public System.Windows.Forms.DataGridView DGV_Evaluaciones;
     }
 }
