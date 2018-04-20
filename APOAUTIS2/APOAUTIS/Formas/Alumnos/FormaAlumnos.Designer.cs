@@ -41,8 +41,6 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
             this.Pest2_Pest1_Bttn_Aceptar = new System.Windows.Forms.Button();
             this.Pest2_Pest1_Bttn_Limpiar = new System.Windows.Forms.Button();
             this.Pest2_Pest1_GrupoMatricula = new System.Windows.Forms.GroupBox();
@@ -109,8 +107,6 @@
             this.Pest2_Pest3_Grupo_MuestraDatosEncargado = new System.Windows.Forms.GroupBox();
             this.Pest2_Pest3_DGV_MuestraEncargados = new System.Windows.Forms.DataGridView();
             this.Pest2_Pest3_Grupo_Encargados = new System.Windows.Forms.GroupBox();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
             this.Pest2_Pest3_Cmb_TipoResponsable = new System.Windows.Forms.ComboBox();
             this.label40 = new System.Windows.Forms.Label();
             this.Pest2_Pest3_Cmb_Estado = new System.Windows.Forms.ComboBox();
@@ -142,8 +138,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.label41 = new System.Windows.Forms.Label();
-            this.Pest1_Txt_CantidadAlumnosSeleccionados = new System.Windows.Forms.TextBox();
-            this.label46 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.Pest1_Grupo_OpcionesBusqueda.SuspendLayout();
@@ -181,7 +179,7 @@
             this.tabPage1.Controls.Add(this.Pest1_Dgv_BsqAlm);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabPage1.Size = new System.Drawing.Size(1124, 520);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Busqueda";
@@ -190,16 +188,14 @@
             // 
             // Pest1_Grupo_OpcionesBusqueda
             // 
-            this.Pest1_Grupo_OpcionesBusqueda.Controls.Add(this.label46);
             this.Pest1_Grupo_OpcionesBusqueda.Controls.Add(this.Pest1_Txt_ID);
-            this.Pest1_Grupo_OpcionesBusqueda.Controls.Add(this.Pest1_Txt_CantidadAlumnosSeleccionados);
             this.Pest1_Grupo_OpcionesBusqueda.Controls.Add(this.Pest1_Txt_BusquedaPorNombre);
             this.Pest1_Grupo_OpcionesBusqueda.Controls.Add(this.Pest1_Radio_ID);
             this.Pest1_Grupo_OpcionesBusqueda.Controls.Add(this.Pest1_Radio_Alumno);
             this.Pest1_Grupo_OpcionesBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest1_Grupo_OpcionesBusqueda.Location = new System.Drawing.Point(6, 17);
             this.Pest1_Grupo_OpcionesBusqueda.Name = "Pest1_Grupo_OpcionesBusqueda";
-            this.Pest1_Grupo_OpcionesBusqueda.Size = new System.Drawing.Size(923, 122);
+            this.Pest1_Grupo_OpcionesBusqueda.Size = new System.Drawing.Size(623, 122);
             this.Pest1_Grupo_OpcionesBusqueda.TabIndex = 1;
             this.Pest1_Grupo_OpcionesBusqueda.TabStop = false;
             this.Pest1_Grupo_OpcionesBusqueda.Text = "Filtros de Busqueda";
@@ -268,7 +264,7 @@
             this.tabPage2.Controls.Add(this.tabControl2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabPage2.Size = new System.Drawing.Size(1124, 520);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Informacion del Alumno";
@@ -296,29 +292,11 @@
             this.tabPage3.Controls.Add(this.Pest2_Pest1_GrupoGeneral);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabPage3.Size = new System.Drawing.Size(1083, 457);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Datos Generales";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(989, 364);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(47, 13);
-            this.label45.TabIndex = 6;
-            this.label45.Text = "Limpiar";
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(878, 364);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(51, 13);
-            this.label44.TabIndex = 5;
-            this.label44.Text = "Aceptar";
             // 
             // Pest2_Pest1_Bttn_Aceptar
             // 
@@ -693,6 +671,7 @@
             // 
             // Pest2_Pest1_Txt_Identidad
             // 
+            this.Pest2_Pest1_Txt_Identidad.Enabled = false;
             this.Pest2_Pest1_Txt_Identidad.Location = new System.Drawing.Point(480, 87);
             this.Pest2_Pest1_Txt_Identidad.MaxLength = 14;
             this.Pest2_Pest1_Txt_Identidad.Name = "Pest2_Pest1_Txt_Identidad";
@@ -798,6 +777,7 @@
             // 
             // Pest2_Pest1_Txt_NombComp
             // 
+            this.Pest2_Pest1_Txt_NombComp.Enabled = false;
             this.Pest2_Pest1_Txt_NombComp.Location = new System.Drawing.Point(191, 57);
             this.Pest2_Pest1_Txt_NombComp.Name = "Pest2_Pest1_Txt_NombComp";
             this.Pest2_Pest1_Txt_NombComp.Size = new System.Drawing.Size(172, 20);
@@ -818,7 +798,7 @@
             this.tabPage4.Controls.Add(this.Pest2_Pest2_Grupo_Historial);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabPage4.Size = new System.Drawing.Size(1083, 457);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Datos Medicos";
@@ -1033,26 +1013,6 @@
             this.Pest2_Pest3_Grupo_Encargados.TabStop = false;
             this.Pest2_Pest3_Grupo_Encargados.Text = "Datos de los Encargados";
             this.Pest2_Pest3_Grupo_Encargados.Enter += new System.EventHandler(this.Pest2_Pest3_Grupo_Encargados_Enter);
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(951, 119);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(56, 15);
-            this.label43.TabIndex = 32;
-            this.label43.Text = "Limpiar";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(849, 119);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(55, 15);
-            this.label42.TabIndex = 31;
-            this.label42.Text = "Aceptar";
             // 
             // Pest2_Pest3_Cmb_TipoResponsable
             // 
@@ -1374,24 +1334,43 @@
             this.label41.TabIndex = 2;
             this.label41.Text = "Salir";
             // 
-            // Pest1_Txt_CantidadAlumnosSeleccionados
+            // label42
             // 
-            this.Pest1_Txt_CantidadAlumnosSeleccionados.Enabled = false;
-            this.Pest1_Txt_CantidadAlumnosSeleccionados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest1_Txt_CantidadAlumnosSeleccionados.Location = new System.Drawing.Point(679, 81);
-            this.Pest1_Txt_CantidadAlumnosSeleccionados.MaxLength = 45;
-            this.Pest1_Txt_CantidadAlumnosSeleccionados.Name = "Pest1_Txt_CantidadAlumnosSeleccionados";
-            this.Pest1_Txt_CantidadAlumnosSeleccionados.Size = new System.Drawing.Size(213, 21);
-            this.Pest1_Txt_CantidadAlumnosSeleccionados.TabIndex = 27;
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(849, 119);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(55, 15);
+            this.label42.TabIndex = 31;
+            this.label42.Text = "Aceptar";
             // 
-            // label46
+            // label43
             // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(679, 47);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(213, 13);
-            this.label46.TabIndex = 28;
-            this.label46.Text = "Cantidad de Alumnos Seleccionados";
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(951, 119);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(56, 15);
+            this.label43.TabIndex = 32;
+            this.label43.Text = "Limpiar";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(878, 364);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(51, 13);
+            this.label44.TabIndex = 5;
+            this.label44.Text = "Aceptar";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(989, 364);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(47, 13);
+            this.label45.TabIndex = 6;
+            this.label45.Text = "Limpiar";
             // 
             // FormaAlumnos
             // 
@@ -1550,7 +1529,5 @@
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.TextBox Pest1_Txt_CantidadAlumnosSeleccionados;
-        private System.Windows.Forms.Label label46;
     }
 }
