@@ -9,6 +9,12 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
 
+using System.IO;////////
+using System.Reflection;///////
+using iTextSharp.text.pdf;///////
+using iTextSharp.text;///////
+using System.Web;///////
+
 namespace APOAUTIS.Clases
 {
     class C_EvalPsico : Conexion
@@ -344,6 +350,78 @@ namespace APOAUTIS.Clases
                 e.Handled = true;
             }
         }
+
+        public void validarNumerosYLetras(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        public void ExportDataTableToPdf(DataGridView dgvTable, String strPdfPath, string strHeader)
+        {
+            System.IO.FileStream fs = new FileStream(strPdfPath, FileMode.Create, FileAccess.Write, FileShare.None);
+            Document document = new Document();
+            document.SetPageSize(iTextSharp.text.PageSize.A4.Rotate());
+            PdfWriter writer = PdfWriter.GetInstance(document, fs);
+            document.Open();
+
+            //Report Header
+            BaseFont bfntHead = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+            iTextSharp.text.Font fntHead = new iTextSharp.text.Font(bfntHead, 12, 1, iTextSharp.text.BaseColor.BLACK);
+            Paragraph prgHeading = new Paragraph();
+            prgHeading.Alignment = Element.ALIGN_CENTER;
+            prgHeading.Add(new Chunk(strHeader.ToUpper(), fntHead));
+            document.Add(prgHeading);
+
+            //Author
+            Paragraph prgAuthor = new Paragraph();
+            BaseFont btnAuthor = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+            iTextSharp.text.Font fntAuthor = new iTextSharp.text.Font(btnAuthor, 10, 2, iTextSharp.text.BaseColor.BLACK);
+            prgAuthor.Alignment = Element.ALIGN_RIGHT;
+            //prgAuthor.Add(new Chunk("Author : Dotnet Mob", fntAuthor));
+            prgAuthor.Add(new Chunk("\nFecha : " + DateTime.Now.ToShortDateString(), fntAuthor));
+            document.Add(prgAuthor);
+
+            //Add a line separation
+            Paragraph p = new Paragraph(new Chunk(new iTextSharp.text.pdf.draw.LineSeparator(0.0F, 100.0F, iTextSharp.text.BaseColor.BLACK, Element.ALIGN_LEFT, 1)));
+            document.Add(p);
+
+            //Add line break
+            document.Add(new Chunk("\n", fntHead));
+
+            //Write the table
+            PdfPTable table = new PdfPTable(dgvTable.Columns.Count);
+
+            //Table header
+            BaseFont btnColumnHeader = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+            iTextSharp.text.Font fntColumnHeader = new iTextSharp.text.Font(btnColumnHeader, 9, 0, iTextSharp.text.BaseColor.WHITE);
+            for (int i = 0; i < dgvTable.Columns.Count; i++)
+            {
+                PdfPCell cell = new PdfPCell();
+                cell.BackgroundColor = iTextSharp.text.BaseColor.DARK_GRAY;
+                cell.AddElement(new Chunk(dgvTable.Columns[i].HeaderText, fntColumnHeader));
+                table.AddCell(cell);
+            }
+
+            //Table Data
+            BaseFont fntTable = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+            iTextSharp.text.Font fntColumn = new iTextSharp.text.Font(fntTable, 9, 0, iTextSharp.text.BaseColor.BLACK);
+            for (int i = 0; i < dgvTable.Rows.Count; i++)
+            {
+                for (int j = 0; j < dgvTable.Columns.Count; j++)
+                {
+                    table.AddCell(Convert.ToString(dgvTable.Rows[i].Cells[j].Value));
+                    
+                }
+            }
+
+            document.Add(table);
+            document.Close();
+            writer.Close();
+            fs.Close();
+        }//Fin ExportDataTableToPdf
 
 
     }

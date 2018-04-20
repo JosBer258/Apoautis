@@ -72,6 +72,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.btnImprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Evaluaciones)).BeginInit();
             this.Grupo_IngresoResultado.SuspendLayout();
             this.Grupo_Busqueda.SuspendLayout();
@@ -385,6 +386,7 @@
             this.Grupo_Busqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Grupo_Busqueda.Controls.Add(this.btnImprimir);
             this.Grupo_Busqueda.Controls.Add(this.radTodas);
             this.Grupo_Busqueda.Controls.Add(this.txtBusqOB);
             this.Grupo_Busqueda.Controls.Add(this.label10);
@@ -551,6 +553,16 @@
             this.label15.TabIndex = 93;
             this.label15.Text = "Limpiar";
             // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Location = new System.Drawing.Point(717, 84);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(118, 41);
+            this.btnImprimir.TabIndex = 93;
+            this.btnImprimir.Text = "Imprimir Tabla";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
             // FormaEvalPsic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -576,7 +588,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView DGV_Evaluaciones;
         private System.Windows.Forms.RadioButton radBusqFech;
         private System.Windows.Forms.RadioButton radBusqNom;
         private System.Windows.Forms.TextBox txtBusqNom;
@@ -616,6 +627,8 @@
         private System.Windows.Forms.TextBox txtBusqImpDiag;
         private System.Windows.Forms.Button Bttn_Salir;
         private System.Windows.Forms.DateTimePicker dateFechNac;
+        private System.Windows.Forms.Button btnImprimir;
+        public System.Windows.Forms.DataGridView DGV_Evaluaciones;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label11;

@@ -36,6 +36,12 @@
     <StartupObject>APOAUTIS.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\Apo Impresion\Impresion\itextsharp\core\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>..\..\..\Apo Impresion\Impresion\itextsharp\core\itextsharp.pdfa.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -187,6 +193,12 @@
     <Compile Include="Formas\Responsables\FormResponsables.Designer.cs">
       <DependentUpon>FormResponsables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formas\seleccionNombreArchivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\seleccionNombreArchivo.Designer.cs">
+      <DependentUpon>seleccionNombreArchivo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmBusquedaMatricula.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -316,6 +328,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Responsables\FormResponsables.resx">
       <DependentUpon>FormResponsables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\seleccionNombreArchivo.resx">
+      <DependentUpon>seleccionNombreArchivo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBusquedaMatricula.resx">
       <DependentUpon>FrmBusquedaMatricula.cs</DependentUpon>

@@ -164,3 +164,7 @@ C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug
 C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Estudio_Socioeconomico.FormBusquedaResponsables.resources
 C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Matricula.FormLookFor.resources
 C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Matricula.Form_BusqAlumMat.resources
+C:\Users\Geovana\Desktop\SW\Apoautis\APOAUTIS2\APOAUTIS\bin\Debug\itextsharp.dll
+C:\Users\Geovana\Desktop\SW\Apoautis\APOAUTIS2\APOAUTIS\bin\Debug\itextsharp.pdfa.dll
+C:\Users\Geovana\Desktop\SW\Apoautis\APOAUTIS2\APOAUTIS\bin\Debug\itextsharp.xml
+C:\Users\Geovana\Desktop\SW\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.seleccionNombreArchivo.resources
