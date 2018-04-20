@@ -157,10 +157,11 @@ namespace APOAUTIS.Clases
             
             this.sql = string.Format(@"INSERT INTO matricula
                                         (Alumnos_CodAlumno, cod_jornada, AnioIngreso, RecibioEvalu,
-                                        FechaIngreso, Cod_Tipo)
+                                        FechaIngreso, Cod_Tipo, Observaciones, Entrevistador, CuotaPago)
                                         VALUES
-                                        ('{0}','{1}', '{2}','{3}', '{4}', '{5});",
-                                        Alumnos_CodAlumno1, Jornada1, AnioIngreso1, RecibioEvalu1, FechaIngreso1, Tipo_Matricula1);
+                                        ('{0}','{1}', '{2}','{3}', '{4}', '{5}', '{6}','{7}','0');",
+                                        Alumnos_CodAlumno1, Jornada1, AnioIngreso1, RecibioEvalu1, FechaIngreso1, Tipo_Matricula1, Observaciones1, Entrevistador1);
+            
 
             this.cmd = new MySqlCommand(this.sql, this.cnx);
             this.cnx.Open();
@@ -257,6 +258,92 @@ namespace APOAUTIS.Clases
             }
             this.cnx.Close();
 
+        }
+        //*********************************************+
+    
+
+        public void Fun_ActualiResp(string Name, string Profecion_Ofi,string Lugar, string TelTtr, int Cod)
+        {
+            this.sql = string.Format(@"update responsables set NomComRes='{0}', 
+ProfecionRes='{1}',OficioRes='{2}', LugarTrabajoRes='{3}', 
+TelTrabajoRes='{4}' where CodResp ='{5}'",Name, Profecion_Ofi, Profecion_Ofi, Lugar, TelTtr, Cod
+                );
+            this.cnx.Open();
+            this.cmd = new MySql.Data.MySqlClient.MySqlCommand(this.sql, this.cnx);
+            int Reg = this.cmd.ExecuteNonQuery();
+
+
+            if (Reg > 0)
+            {
+            }
+            else
+            {
+
+            }
+            this.cnx.Close();
+        }
+
+
+        public void Fun_ActualiHistoria(string Medicamentos, int Cod_A)
+        {
+            this.sql = string.Format(@"update historialmedico set UsaMedicamentos ='{0}' where Alumnos_CodAlumno ='{1}'", Medicamentos, Cod_A);
+            this.cnx.Open();
+            this.cmd = new MySql.Data.MySqlClient.MySqlCommand(this.sql, this.cnx);
+            int Reg = this.cmd.ExecuteNonQuery();
+
+
+            if (Reg > 0)
+            {
+            }
+            else
+            {
+
+            }
+            this.cnx.Close();
+        }
+
+
+        public void Fun_ActualizAtencion(string Grupa, string prevoca, string voca, string escolar, string atenidi, string distancia, string domicilio, string fisico, int cod)
+        {
+            this.sql = string.Format(@"update tiposatencion
+set Aten_grupal='{0}', Aten_pre_vocacional='{1}', Aten_vocacional='{2}', 
+Aten_Escolar='{3}', Aten_Individual='{4}', Aten_distancia='{5}', Teraia_domicilio='{6}', 
+Atencion_fisica ='{7}'
+where Alumnos_CodAlumno='{8}'
+", Grupa,prevoca, voca, escolar, atenidi, distancia, domicilio, fisico, cod);
+            this.cnx.Open();
+            this.cmd = new MySql.Data.MySqlClient.MySqlCommand(this.sql, this.cnx);
+            int Reg = this.cmd.ExecuteNonQuery();
+
+
+            if (Reg > 0)
+            {
+            }
+            else
+            {
+
+            }
+            this.cnx.Close();
+        }
+
+
+
+        public void Fun_ActualizarAlumno(string TelefonoFijo, string Cellular, string Direc, string Inst, string EmLu, string EmerTelefon, int Cod)
+        {
+            this.sql = string.Format(@"update alumnos set TelFijoAlum='{0}', CelAlumno='{1}', DireccionAlum='{2}', InstDondeEstaIncluido='{3}',EmergLugar='{4}',EmergTelefono='{5}' where CodAlumno='{6}'", TelefonoFijo, Cellular, Direc, Inst, EmLu, EmerTelefon, Cod);
+            this.cnx.Open();
+            this.cmd = new MySql.Data.MySqlClient.MySqlCommand(this.sql, this.cnx);
+            int Reg = this.cmd.ExecuteNonQuery();
+
+
+            if (Reg > 0)
+            {
+            }
+            else
+            {
+
+            }
+            this.cnx.Close();
         }
 
 

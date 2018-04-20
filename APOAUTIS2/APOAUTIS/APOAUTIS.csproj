@@ -70,6 +70,7 @@
     <Compile Include="Clases\C_Matricula.cs" />
     <Compile Include="Clases\C_MontoMens.cs" />
     <Compile Include="Clases\C_MuestraHistorialMatricu.cs" />
+    <Compile Include="Clases\C_ReingresoMatriculaBusq.cs" />
     <Compile Include="Clases\C_responsablePadre.cs" />
     <Compile Include="Clases\C_Responsables.cs" />
     <Compile Include="Clases\C_responsablesMadre.cs" />
@@ -155,6 +156,12 @@
     </Compile>
     <Compile Include="Formas\Matricula\FormRangoMensualidad.Designer.cs">
       <DependentUpon>FormRangoMensualidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Matricula\Form_BusqAlumMat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Matricula\Form_BusqAlumMat.Designer.cs">
+      <DependentUpon>Form_BusqAlumMat.cs</DependentUpon>
     </Compile>
     <Compile Include="Formas\Matricula\Form_BusqMatricula.cs">
       <SubType>Form</SubType>
@@ -294,6 +301,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Matricula\FormRangoMensualidad.resx">
       <DependentUpon>FormRangoMensualidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Matricula\Form_BusqAlumMat.resx">
+      <DependentUpon>Form_BusqAlumMat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Matricula\Form_BusqMatricula.resx">
       <DependentUpon>Form_BusqMatricula.cs</DependentUpon>

@@ -219,6 +219,9 @@ namespace APOAUTIS
             }
 
 
+            Padres.Fun_VerificarYear((int)Convert.ToDouble(row.Cells["Codigo de Alumno"].Value));
+            txtedadcronologica.Text= Padres.V_EdadCronologica;
+
             txtfecha_nacimiento.Text = Convert.ToString(row.Cells["fecha de nacimiento"].Value);
             txtedadcronologica.Text = Convert.ToString(row.Cells["edad cronologica"].Value);
             txtescolaridad.Text = Convert.ToString(row.Cells["escolaridad del alumno"].Value);
@@ -964,6 +967,248 @@ namespace APOAUTIS
         private void txtsaltar_KeyPress(object sender, KeyPressEventArgs e)
         {
             Val.ValirLetrasYEspacios_Direccion(sender, e, txtsaltar);
+        }
+
+        private void txttranstornofamilia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txttranstornofamilia);
+        }
+
+        private void txtmovim_peculiares_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtmovim_peculiares);
+        }
+
+        private void txtbuscainter_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtbuscainter);
+        }
+
+        private void txtactivi_grupo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtactivi_grupo);
+        }
+
+        private void txtsonido_gutu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtsonido_gutu);
+        }
+
+        private void txtsonido_voca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtsonido_voca);
+        }
+
+        private void txtsonido_sil_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtsonido_sil);
+        }
+
+        private void txtdecir_palabra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtdecir_palabra);
+        }
+
+        private void txtcuales_palabras_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtcuales_palabras);
+        }
+
+        private void txtprop_conversa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtprop_conversa);
+        }
+
+        private void txtinteres_tema_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtinteres_tema);
+        }
+
+        private void txthabla_terpersona_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txthabla_terpersona);
+        }
+
+        private void txtoraci_completas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtoraci_completas);
+        }
+
+        private void txtrepetir_palabras_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtrepetir_palabras);
+        }
+
+        private void txtcual_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtcual);
+        }
+
+        private void txtdesde_cuando_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtdesde_cuando);
+        }
+
+        private void txtmanifiesta_escuela_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtmanifiesta_escuela);
+        }
+
+        private void txtdesenvuelve_escuela_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtdesenvuelve_escuela);
+        }
+
+        private void txtcuando_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtcuando);
+        }
+
+        private void txtdonde_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtdonde);
+        }
+
+        private void txtdiag_tratamiento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtdiag_tratamiento);
+        }
+
+        private void txtinteres_particular_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtinteres_particular);
+        }
+
+        private void txtdescriba_doa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtdescriba_doa);
+        }
+
+        private void txtda_normal_porque_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtda_normal_porque);
+        }
+
+        private void txtalgo_mencionar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtalgo_mencionar);
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, textBox2);
+
+        }
+
+        private void txtcoopera_limpiarse_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtcoopera_limpiarse);
+        }
+
+        private void txtuso_inodoro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtuso_inodoro);
+        }
+
+        private void txtedad_controla_esfinter_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtedad_controla_esfinter);
+        }
+
+        private void txtconocer_panal_sucio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtconocer_panal_sucio);
+        }
+
+        private void txtmuestra_signos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtmuestra_signos);
+        }
+
+        private void txtcontrola_esfinter_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtcontrola_esfinter);
+        }
+
+        private void txtropa_preferida_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtropa_preferida);
+        }
+
+        private void txtcoopera_cambiar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtcoopera_cambiar);
+        }
+
+        private void txtbana_solo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtbana_solo);
+        }
+
+        private void txtcoopera_banarse_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtcoopera_banarse);
+        }
+
+        private void txtagrada_banarse_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtagrada_banarse);
+        }
+
+        private void txtcome_no_comestible_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtcome_no_comestible);
+        }
+
+        private void txtedad_come_solo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtedad_come_solo);
+        }
+
+        private void txtcome_solo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtcome_solo);
+
+        }
+
+        private void txtcubierto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtcubierto);
+        }
+
+        private void txtcomida_no_gusta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtcomida_no_gusta);
+        }
+
+        private void txtcomida_favorita_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtcomida_favorita);
+        }
+
+        private void txtduerme_objetoespe_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtduerme_objetoespe);
+        }
+
+        private void txtduerme_toda_noche_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtduerme_toda_noche);
+        }
+
+        private void txthora_levanta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txthora_levanta);
+        }
+
+        private void txthora_acuesta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txthora_acuesta);
+        }
+
+        private void txtduemesolo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtduemesolo);
         }
     }
 }

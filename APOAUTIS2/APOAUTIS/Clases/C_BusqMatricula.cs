@@ -35,6 +35,9 @@ namespace APOAUTIS.Clases
         private string var_DG_Fecha;
         private string var_DG_Entrevistador;
 
+        private string var_genero;
+        private string var_id;
+
 
         public int Var_fecha_busq
         {
@@ -387,6 +390,45 @@ namespace APOAUTIS.Clases
             }
         }
 
+        public string Var_cod
+        {
+            get
+            {
+                return var_cod;
+            }
+
+            set
+            {
+                var_cod = value;
+            }
+        }
+
+        public string Var_genero
+        {
+            get
+            {
+                return var_genero;
+            }
+
+            set
+            {
+                var_genero = value;
+            }
+        }
+
+        public string Var_id
+        {
+            get
+            {
+                return var_id;
+            }
+
+            set
+            {
+                var_id = value;
+            }
+        }
+
         public void Fun_MostrarTodos(System.Windows.Forms.DataGridView Var_MuestraDatos)
         {
             sql = string.Format(@"select B.CodMatricula as 'Codigo Matricula',
@@ -539,7 +581,7 @@ inner join tipo_matricula as C on C.Cod_Tipo=B.Cod_Tipo inner join jornada as D 
         private string var_profesion;
         private string var_lugar;
         private string var_telefono;
-
+        private string var_cod;
 
         public bool Fun_ExtraerResponsables(int FV_CodAl, int FV_CodigoTipo)
         {
@@ -551,6 +593,7 @@ inner join tipo_matricula as C on C.Cod_Tipo=B.Cod_Tipo inner join jornada as D 
             MySql.Data.MySqlClient.MySqlDataReader Reg = cmd.ExecuteReader();
             if (Reg.Read())
             {
+                var_cod = Reg["CodResp"].ToString();
                 Var_nombre = Reg["NomComRes"].ToString();
                 Var_profesion = Reg["ProfecionRes"].ToString();
                 Var_lugar = Reg["LugarTrabajoRes"].ToString();
@@ -559,6 +602,53 @@ inner join tipo_matricula as C on C.Cod_Tipo=B.Cod_Tipo inner join jornada as D 
             }
             cnx.Close();
             return Resp;
+        }
+
+
+
+
+        public void Fun_ExtraerDatos_Alum()
+        {
+            sql = string.Format(@"select * from alumnos  where CodAlumno = '{0}'", Var_Alum_CodAlumno);
+            cnx.Open();
+            cmd = new MySql.Data.MySqlClient.MySqlCommand(sql, cnx);
+            MySql.Data.MySqlClient.MySqlDataReader Reg = cmd.ExecuteReader();
+            if (Reg.Read())
+            {
+                Var_Alum_Nombre = Reg["NomAlumno"].ToString();
+                Var_Alum_lugarnacimiento = Reg["LugarNaciAlum"].ToString();
+                Var_Alum_fechanacimiento = Reg["FechaNaciAlum"].ToString();
+                Var_Alum_direccioncompleta = Reg["DireccionAlum"].ToString();
+                Var_Alum_celular = Reg["CelAlumno"].ToString();
+                Var_Alum_instprocedencia = Reg["InstProceAlumno"].ToString();
+                Var_Alum_telefonofijo = Reg["TelFijoAlum"].ToString();
+                Var_Alum_direcionemergencia = Reg["EmergLugar"].ToString();
+                Var_Alum_telefonoemergencia = Reg["EmergTelefono"].ToString();
+                Var_Alum_IntitutoIncl = Reg["InstDondeEstaIncluido"].ToString();
+                Var_genero = Reg["SexoAlum"].ToString();
+                Var_id = Reg["IdAlum"].ToString();
+
+            }
+            cnx.Close();
+        }
+
+        public int Fun_MostrarAñoIngreso()
+        {
+            int Annio = 0;
+            sql = string.Format(@"select * from matricula where Alumnos_CodAlumno='{0}' order by CodMatricula Asc Limit 1", Var_Alum_CodAlumno);
+
+            cnx.Open();
+            cmd = new MySql.Data.MySqlClient.MySqlCommand(sql, cnx);
+            MySql.Data.MySqlClient.MySqlDataReader Reg = cmd.ExecuteReader();
+            if (Reg.Read())
+            {
+                Annio = Convert.ToInt32(Reg["AnioIngreso"].ToString());
+            }
+            cnx.Close();
+
+
+            return Annio;
+
         }
     }
 }

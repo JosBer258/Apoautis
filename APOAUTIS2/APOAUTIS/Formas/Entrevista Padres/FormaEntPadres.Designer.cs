@@ -349,10 +349,13 @@
             // 
             // dtgalumnos
             // 
+            this.dtgalumnos.AllowUserToAddRows = false;
+            this.dtgalumnos.AllowUserToDeleteRows = false;
             this.dtgalumnos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgalumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgalumnos.Location = new System.Drawing.Point(25, 67);
             this.dtgalumnos.Name = "dtgalumnos";
+            this.dtgalumnos.ReadOnly = true;
             this.dtgalumnos.Size = new System.Drawing.Size(988, 159);
             this.dtgalumnos.TabIndex = 46;
             this.dtgalumnos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgalumnos_CellContentClick);
@@ -991,6 +994,7 @@
             this.txtmovim_peculiares.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtmovim_peculiares.Size = new System.Drawing.Size(313, 103);
             this.txtmovim_peculiares.TabIndex = 8;
+            this.txtmovim_peculiares.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtmovim_peculiares_KeyPress);
             // 
             // label28
             // 
@@ -1022,6 +1026,7 @@
             this.txttranstornofamilia.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txttranstornofamilia.Size = new System.Drawing.Size(314, 92);
             this.txttranstornofamilia.TabIndex = 7;
+            this.txttranstornofamilia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttranstornofamilia_KeyPress);
             // 
             // label30
             // 
@@ -1145,6 +1150,7 @@
             this.txtbuscainter.Name = "txtbuscainter";
             this.txtbuscainter.Size = new System.Drawing.Size(207, 22);
             this.txtbuscainter.TabIndex = 0;
+            this.txtbuscainter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbuscainter_KeyPress);
             // 
             // label19
             // 
@@ -1164,6 +1170,7 @@
             this.txtactivi_grupo.Name = "txtactivi_grupo";
             this.txtactivi_grupo.Size = new System.Drawing.Size(207, 22);
             this.txtactivi_grupo.TabIndex = 1;
+            this.txtactivi_grupo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtactivi_grupo_KeyPress);
             // 
             // Grupo_Lenguaje
             // 
@@ -1202,6 +1209,7 @@
             this.txtsonido_gutu.Name = "txtsonido_gutu";
             this.txtsonido_gutu.Size = new System.Drawing.Size(116, 22);
             this.txtsonido_gutu.TabIndex = 0;
+            this.txtsonido_gutu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsonido_gutu_KeyPress);
             // 
             // txtinteres_tema
             // 
@@ -1213,6 +1221,7 @@
             this.txtinteres_tema.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtinteres_tema.Size = new System.Drawing.Size(486, 76);
             this.txtinteres_tema.TabIndex = 6;
+            this.txtinteres_tema.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtinteres_tema_KeyPress);
             // 
             // txtprop_conversa
             // 
@@ -1224,6 +1233,7 @@
             this.txtprop_conversa.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtprop_conversa.Size = new System.Drawing.Size(485, 66);
             this.txtprop_conversa.TabIndex = 5;
+            this.txtprop_conversa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtprop_conversa_KeyPress);
             // 
             // txtdecir_palabra
             // 
@@ -1233,6 +1243,7 @@
             this.txtdecir_palabra.Name = "txtdecir_palabra";
             this.txtdecir_palabra.Size = new System.Drawing.Size(122, 22);
             this.txtdecir_palabra.TabIndex = 3;
+            this.txtdecir_palabra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdecir_palabra_KeyPress);
             // 
             // txtcuales_palabras
             // 
@@ -1244,6 +1255,7 @@
             this.txtcuales_palabras.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtcuales_palabras.Size = new System.Drawing.Size(481, 55);
             this.txtcuales_palabras.TabIndex = 4;
+            this.txtcuales_palabras.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcuales_palabras_KeyPress);
             // 
             // txtrepetir_palabras
             // 
@@ -1253,6 +1265,7 @@
             this.txtrepetir_palabras.Name = "txtrepetir_palabras";
             this.txtrepetir_palabras.Size = new System.Drawing.Size(233, 22);
             this.txtrepetir_palabras.TabIndex = 9;
+            this.txtrepetir_palabras.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtrepetir_palabras_KeyPress);
             // 
             // txtoraci_completas
             // 
@@ -1262,6 +1275,7 @@
             this.txtoraci_completas.Name = "txtoraci_completas";
             this.txtoraci_completas.Size = new System.Drawing.Size(233, 22);
             this.txtoraci_completas.TabIndex = 8;
+            this.txtoraci_completas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtoraci_completas_KeyPress);
             // 
             // txthabla_terpersona
             // 
@@ -1271,6 +1285,7 @@
             this.txthabla_terpersona.Name = "txthabla_terpersona";
             this.txthabla_terpersona.Size = new System.Drawing.Size(233, 22);
             this.txthabla_terpersona.TabIndex = 7;
+            this.txthabla_terpersona.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txthabla_terpersona_KeyPress);
             // 
             // label39
             // 
@@ -1300,6 +1315,7 @@
             this.txtsonido_sil.Name = "txtsonido_sil";
             this.txtsonido_sil.Size = new System.Drawing.Size(100, 22);
             this.txtsonido_sil.TabIndex = 2;
+            this.txtsonido_sil.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsonido_sil_KeyPress);
             // 
             // label37
             // 
@@ -1319,6 +1335,7 @@
             this.txtsonido_voca.Name = "txtsonido_voca";
             this.txtsonido_voca.Size = new System.Drawing.Size(57, 22);
             this.txtsonido_voca.TabIndex = 1;
+            this.txtsonido_voca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsonido_voca_KeyPress);
             // 
             // label38
             // 
@@ -1452,6 +1469,7 @@
             this.txtdesenvuelve_escuela.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtdesenvuelve_escuela.Size = new System.Drawing.Size(373, 108);
             this.txtdesenvuelve_escuela.TabIndex = 4;
+            this.txtdesenvuelve_escuela.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdesenvuelve_escuela_KeyPress);
             // 
             // txtcual
             // 
@@ -1461,6 +1479,7 @@
             this.txtcual.Name = "txtcual";
             this.txtcual.Size = new System.Drawing.Size(251, 22);
             this.txtcual.TabIndex = 1;
+            this.txtcual.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcual_KeyPress);
             // 
             // label46
             // 
@@ -1491,6 +1510,7 @@
             this.txtmanifiesta_escuela.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtmanifiesta_escuela.Size = new System.Drawing.Size(450, 108);
             this.txtmanifiesta_escuela.TabIndex = 3;
+            this.txtmanifiesta_escuela.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtmanifiesta_escuela_KeyPress);
             // 
             // txtdesde_cuando
             // 
@@ -1500,6 +1520,7 @@
             this.txtdesde_cuando.Name = "txtdesde_cuando";
             this.txtdesde_cuando.Size = new System.Drawing.Size(371, 22);
             this.txtdesde_cuando.TabIndex = 2;
+            this.txtdesde_cuando.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdesde_cuando_KeyPress);
             // 
             // label42
             // 
@@ -1571,6 +1592,7 @@
             this.txtdiag_tratamiento.Name = "txtdiag_tratamiento";
             this.txtdiag_tratamiento.Size = new System.Drawing.Size(210, 22);
             this.txtdiag_tratamiento.TabIndex = 88;
+            this.txtdiag_tratamiento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdiag_tratamiento_KeyPress);
             // 
             // txtcuando
             // 
@@ -1580,6 +1602,7 @@
             this.txtcuando.Name = "txtcuando";
             this.txtcuando.Size = new System.Drawing.Size(210, 22);
             this.txtcuando.TabIndex = 84;
+            this.txtcuando.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcuando_KeyPress);
             // 
             // label91
             // 
@@ -1609,6 +1632,7 @@
             this.txtdonde.Name = "txtdonde";
             this.txtdonde.Size = new System.Drawing.Size(210, 22);
             this.txtdonde.TabIndex = 86;
+            this.txtdonde.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdonde_KeyPress);
             // 
             // label95
             // 
@@ -1690,6 +1714,7 @@
             this.txtcomida_favorita.Name = "txtcomida_favorita";
             this.txtcomida_favorita.Size = new System.Drawing.Size(237, 21);
             this.txtcomida_favorita.TabIndex = 5;
+            this.txtcomida_favorita.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcomida_favorita_KeyPress);
             // 
             // txtduerme_objetoespe
             // 
@@ -1699,6 +1724,7 @@
             this.txtduerme_objetoespe.Name = "txtduerme_objetoespe";
             this.txtduerme_objetoespe.Size = new System.Drawing.Size(237, 21);
             this.txtduerme_objetoespe.TabIndex = 4;
+            this.txtduerme_objetoespe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtduerme_objetoespe_KeyPress);
             // 
             // cmbbana_solo
             // 
@@ -1731,6 +1757,7 @@
             this.txtbana_solo.Name = "txtbana_solo";
             this.txtbana_solo.Size = new System.Drawing.Size(217, 21);
             this.txtbana_solo.TabIndex = 14;
+            this.txtbana_solo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbana_solo_KeyPress);
             // 
             // txtduerme_toda_noche
             // 
@@ -1740,6 +1767,7 @@
             this.txtduerme_toda_noche.Name = "txtduerme_toda_noche";
             this.txtduerme_toda_noche.Size = new System.Drawing.Size(191, 21);
             this.txtduerme_toda_noche.TabIndex = 3;
+            this.txtduerme_toda_noche.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtduerme_toda_noche_KeyPress);
             // 
             // label60
             // 
@@ -1769,6 +1797,7 @@
             this.txtcoopera_banarse.Name = "txtcoopera_banarse";
             this.txtcoopera_banarse.Size = new System.Drawing.Size(146, 21);
             this.txtcoopera_banarse.TabIndex = 12;
+            this.txtcoopera_banarse.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcoopera_banarse_KeyPress);
             // 
             // label50
             // 
@@ -1798,6 +1827,7 @@
             this.txtduemesolo.Name = "txtduemesolo";
             this.txtduemesolo.Size = new System.Drawing.Size(300, 21);
             this.txtduemesolo.TabIndex = 0;
+            this.txtduemesolo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtduemesolo_KeyPress);
             // 
             // txtagrada_banarse
             // 
@@ -1807,6 +1837,7 @@
             this.txtagrada_banarse.Name = "txtagrada_banarse";
             this.txtagrada_banarse.Size = new System.Drawing.Size(146, 21);
             this.txtagrada_banarse.TabIndex = 11;
+            this.txtagrada_banarse.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtagrada_banarse_KeyPress);
             // 
             // label49
             // 
@@ -1836,6 +1867,7 @@
             this.txthora_acuesta.Name = "txthora_acuesta";
             this.txthora_acuesta.Size = new System.Drawing.Size(301, 21);
             this.txthora_acuesta.TabIndex = 1;
+            this.txthora_acuesta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txthora_acuesta_KeyPress);
             // 
             // txtcome_no_comestible
             // 
@@ -1847,6 +1879,7 @@
             this.txtcome_no_comestible.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtcome_no_comestible.Size = new System.Drawing.Size(447, 75);
             this.txtcome_no_comestible.TabIndex = 10;
+            this.txtcome_no_comestible.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcome_no_comestible_KeyPress);
             // 
             // label51
             // 
@@ -1876,6 +1909,7 @@
             this.txthora_levanta.Name = "txthora_levanta";
             this.txthora_levanta.Size = new System.Drawing.Size(301, 21);
             this.txthora_levanta.TabIndex = 2;
+            this.txthora_levanta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txthora_levanta_KeyPress);
             // 
             // txtedad_come_solo
             // 
@@ -1885,6 +1919,7 @@
             this.txtedad_come_solo.Name = "txtedad_come_solo";
             this.txtedad_come_solo.Size = new System.Drawing.Size(262, 21);
             this.txtedad_come_solo.TabIndex = 9;
+            this.txtedad_come_solo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtedad_come_solo_KeyPress);
             // 
             // label52
             // 
@@ -1924,6 +1959,7 @@
             this.txtcubierto.Name = "txtcubierto";
             this.txtcubierto.Size = new System.Drawing.Size(123, 21);
             this.txtcubierto.TabIndex = 8;
+            this.txtcubierto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcubierto_KeyPress);
             // 
             // txtcomida_no_gusta
             // 
@@ -1933,6 +1969,7 @@
             this.txtcomida_no_gusta.Name = "txtcomida_no_gusta";
             this.txtcomida_no_gusta.Size = new System.Drawing.Size(195, 21);
             this.txtcomida_no_gusta.TabIndex = 6;
+            this.txtcomida_no_gusta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcomida_no_gusta_KeyPress);
             // 
             // label54
             // 
@@ -1962,6 +1999,7 @@
             this.txtcome_solo.Name = "txtcome_solo";
             this.txtcome_solo.Size = new System.Drawing.Size(126, 21);
             this.txtcome_solo.TabIndex = 7;
+            this.txtcome_solo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcome_solo_KeyPress);
             // 
             // textBox2
             // 
@@ -1971,6 +2009,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(238, 21);
             this.textBox2.TabIndex = 27;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // label9
             // 
@@ -1990,6 +2029,7 @@
             this.txtuso_inodoro.Name = "txtuso_inodoro";
             this.txtuso_inodoro.Size = new System.Drawing.Size(290, 21);
             this.txtuso_inodoro.TabIndex = 24;
+            this.txtuso_inodoro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtuso_inodoro_KeyPress);
             // 
             // label68
             // 
@@ -2009,6 +2049,7 @@
             this.txtedad_controla_esfinter.Name = "txtedad_controla_esfinter";
             this.txtedad_controla_esfinter.Size = new System.Drawing.Size(290, 21);
             this.txtedad_controla_esfinter.TabIndex = 23;
+            this.txtedad_controla_esfinter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtedad_controla_esfinter_KeyPress);
             // 
             // label67
             // 
@@ -2051,6 +2092,7 @@
             this.txtcoopera_limpiarse.Name = "txtcoopera_limpiarse";
             this.txtcoopera_limpiarse.Size = new System.Drawing.Size(254, 21);
             this.txtcoopera_limpiarse.TabIndex = 26;
+            this.txtcoopera_limpiarse.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcoopera_limpiarse_KeyPress);
             // 
             // label66
             // 
@@ -2083,6 +2125,7 @@
             this.txtconocer_panal_sucio.Name = "txtconocer_panal_sucio";
             this.txtconocer_panal_sucio.Size = new System.Drawing.Size(170, 21);
             this.txtconocer_panal_sucio.TabIndex = 22;
+            this.txtconocer_panal_sucio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtconocer_panal_sucio_KeyPress);
             // 
             // label64
             // 
@@ -2102,6 +2145,7 @@
             this.txtmuestra_signos.Name = "txtmuestra_signos";
             this.txtmuestra_signos.Size = new System.Drawing.Size(192, 21);
             this.txtmuestra_signos.TabIndex = 20;
+            this.txtmuestra_signos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtmuestra_signos_KeyPress);
             // 
             // label63
             // 
@@ -2134,6 +2178,7 @@
             this.txtcontrola_esfinter.Name = "txtcontrola_esfinter";
             this.txtcontrola_esfinter.Size = new System.Drawing.Size(207, 21);
             this.txtcontrola_esfinter.TabIndex = 19;
+            this.txtcontrola_esfinter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcontrola_esfinter_KeyPress);
             // 
             // label48
             // 
@@ -2153,6 +2198,7 @@
             this.txtropa_preferida.Name = "txtropa_preferida";
             this.txtropa_preferida.Size = new System.Drawing.Size(422, 21);
             this.txtropa_preferida.TabIndex = 17;
+            this.txtropa_preferida.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtropa_preferida_KeyPress);
             // 
             // label62
             // 
@@ -2195,6 +2241,7 @@
             this.txtcoopera_cambiar.Name = "txtcoopera_cambiar";
             this.txtcoopera_cambiar.Size = new System.Drawing.Size(137, 21);
             this.txtcoopera_cambiar.TabIndex = 16;
+            this.txtcoopera_cambiar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcoopera_cambiar_KeyPress);
             // 
             // label47
             // 
@@ -2763,6 +2810,7 @@
             this.txtinteres_particular.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtinteres_particular.Size = new System.Drawing.Size(418, 86);
             this.txtinteres_particular.TabIndex = 0;
+            this.txtinteres_particular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtinteres_particular_KeyPress);
             // 
             // txtda_normal_porque
             // 
@@ -2774,6 +2822,7 @@
             this.txtda_normal_porque.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtda_normal_porque.Size = new System.Drawing.Size(418, 104);
             this.txtda_normal_porque.TabIndex = 2;
+            this.txtda_normal_porque.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtda_normal_porque_KeyPress);
             // 
             // txtdescriba_doa
             // 
@@ -2783,6 +2832,7 @@
             this.txtdescriba_doa.Name = "txtdescriba_doa";
             this.txtdescriba_doa.Size = new System.Drawing.Size(337, 22);
             this.txtdescriba_doa.TabIndex = 1;
+            this.txtdescriba_doa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdescriba_doa_KeyPress);
             // 
             // txtalgo_mencionar
             // 
@@ -2794,6 +2844,7 @@
             this.txtalgo_mencionar.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtalgo_mencionar.Size = new System.Drawing.Size(418, 95);
             this.txtalgo_mencionar.TabIndex = 3;
+            this.txtalgo_mencionar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtalgo_mencionar_KeyPress);
             // 
             // button17
             // 

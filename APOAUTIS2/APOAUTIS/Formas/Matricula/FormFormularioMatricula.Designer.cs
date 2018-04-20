@@ -73,6 +73,10 @@
             this.label13 = new System.Windows.Forms.Label();
             this.Pest1_Bttn_Siguiente = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.Pest1_Cmb_Recibio = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -124,10 +128,8 @@
             this.label38 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.Fecha_Actual = new System.Windows.Forms.DateTimePicker();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label46 = new System.Windows.Forms.Label();
             this.tabMatricula.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -146,6 +148,7 @@
             this.Pest1_txtNumeroMatricula.Name = "Pest1_txtNumeroMatricula";
             this.Pest1_txtNumeroMatricula.Size = new System.Drawing.Size(192, 22);
             this.Pest1_txtNumeroMatricula.TabIndex = 0;
+            this.Pest1_txtNumeroMatricula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest1_txtNumeroMatricula_KeyPress);
             // 
             // label1
             // 
@@ -195,6 +198,7 @@
             this.Pest1_Txt_NomEducador.Name = "Pest1_Txt_NomEducador";
             this.Pest1_Txt_NomEducador.Size = new System.Drawing.Size(192, 22);
             this.Pest1_Txt_NomEducador.TabIndex = 1;
+            this.Pest1_Txt_NomEducador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest1_Txt_NomEducador_KeyPress);
             // 
             // label4
             // 
@@ -226,6 +230,7 @@
             this.Pest1_Txt_DireccionCompleta.Size = new System.Drawing.Size(183, 61);
             this.Pest1_Txt_DireccionCompleta.TabIndex = 10;
             this.Pest1_Txt_DireccionCompleta.TextChanged += new System.EventHandler(this.Pest1_Txt_DireccionCompleta_TextChanged);
+            this.Pest1_Txt_DireccionCompleta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest1_Txt_DireccionCompleta_KeyPress);
             // 
             // label6
             // 
@@ -245,6 +250,7 @@
             this.Pest1_Txt_TelefonoFijo.Name = "Pest1_Txt_TelefonoFijo";
             this.Pest1_Txt_TelefonoFijo.Size = new System.Drawing.Size(183, 22);
             this.Pest1_Txt_TelefonoFijo.TabIndex = 8;
+            this.Pest1_Txt_TelefonoFijo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest1_Txt_TelefonoFijo_KeyPress);
             // 
             // label7
             // 
@@ -264,6 +270,7 @@
             this.Pest1_Txt_InstProced.Name = "Pest1_Txt_InstProced";
             this.Pest1_Txt_InstProced.Size = new System.Drawing.Size(183, 22);
             this.Pest1_Txt_InstProced.TabIndex = 6;
+            this.Pest1_Txt_InstProced.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest1_Txt_InstProced_KeyPress);
             // 
             // label9
             // 
@@ -283,6 +290,7 @@
             this.Pest1_Txt_AnoIngreso.Name = "Pest1_Txt_AnoIngreso";
             this.Pest1_Txt_AnoIngreso.Size = new System.Drawing.Size(194, 22);
             this.Pest1_Txt_AnoIngreso.TabIndex = 7;
+            this.Pest1_Txt_AnoIngreso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest1_Txt_AnoIngreso_KeyPress);
             // 
             // label10
             // 
@@ -303,6 +311,7 @@
             this.Pest1_Txt_Celular.Size = new System.Drawing.Size(183, 22);
             this.Pest1_Txt_Celular.TabIndex = 9;
             this.Pest1_Txt_Celular.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
+            this.Pest1_Txt_Celular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest1_Txt_Celular_KeyPress);
             // 
             // label11
             // 
@@ -332,6 +341,7 @@
             this.Pest1_Txt_LugarNacimiento.Name = "Pest1_Txt_LugarNacimiento";
             this.Pest1_Txt_LugarNacimiento.Size = new System.Drawing.Size(192, 22);
             this.Pest1_Txt_LugarNacimiento.TabIndex = 2;
+            this.Pest1_Txt_LugarNacimiento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest1_Txt_LugarNacimiento_KeyPress);
             // 
             // tabMatricula
             // 
@@ -404,6 +414,7 @@
             this.Pest2_Pest_NombreInstituto.Name = "Pest2_Pest_NombreInstituto";
             this.Pest2_Pest_NombreInstituto.Size = new System.Drawing.Size(626, 26);
             this.Pest2_Pest_NombreInstituto.TabIndex = 8;
+            this.Pest2_Pest_NombreInstituto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Pest_NombreInstituto_KeyPress);
             // 
             // Combo_AtensionFisica
             // 
@@ -651,6 +662,49 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Generales";
             // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Location = new System.Drawing.Point(388, 153);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(140, 16);
+            this.label45.TabIndex = 26;
+            this.label45.Text = "Genero del Alumno";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Location = new System.Drawing.Point(388, 125);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(103, 16);
+            this.label44.TabIndex = 25;
+            this.label44.Text = "Numero de ID";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "M",
+            "F"});
+            this.comboBox2.Location = new System.Drawing.Point(534, 147);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(183, 24);
+            this.comboBox2.TabIndex = 24;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(534, 119);
+            this.textBox3.MaxLength = 14;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(183, 22);
+            this.textBox3.TabIndex = 23;
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
+            // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -751,6 +805,7 @@
             this.Pest4_Txt_TelefonoPorEmergencia.Name = "Pest4_Txt_TelefonoPorEmergencia";
             this.Pest4_Txt_TelefonoPorEmergencia.Size = new System.Drawing.Size(512, 21);
             this.Pest4_Txt_TelefonoPorEmergencia.TabIndex = 1;
+            this.Pest4_Txt_TelefonoPorEmergencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest4_Txt_TelefonoPorEmergencia_KeyPress);
             // 
             // label30
             // 
@@ -770,6 +825,7 @@
             this.Pest4_Txt_Entrevistador.Name = "Pest4_Txt_Entrevistador";
             this.Pest4_Txt_Entrevistador.Size = new System.Drawing.Size(296, 21);
             this.Pest4_Txt_Entrevistador.TabIndex = 7;
+            this.Pest4_Txt_Entrevistador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest4_Txt_Entrevistador_KeyPress);
             // 
             // label29
             // 
@@ -800,6 +856,7 @@
             this.Pest4_TxtBox_Observaciones.Name = "Pest4_TxtBox_Observaciones";
             this.Pest4_TxtBox_Observaciones.Size = new System.Drawing.Size(512, 67);
             this.Pest4_TxtBox_Observaciones.TabIndex = 5;
+            this.Pest4_TxtBox_Observaciones.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest4_TxtBox_Observaciones_KeyPress);
             // 
             // label33
             // 
@@ -829,6 +886,7 @@
             this.Pest4_Txt_DireccionPorEmergencias.Name = "Pest4_Txt_DireccionPorEmergencias";
             this.Pest4_Txt_DireccionPorEmergencias.Size = new System.Drawing.Size(512, 21);
             this.Pest4_Txt_DireccionPorEmergencias.TabIndex = 0;
+            this.Pest4_Txt_DireccionPorEmergencias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest4_Txt_DireccionPorEmergencias_KeyPress);
             // 
             // Pest4_Txt_CualesMedic
             // 
@@ -839,6 +897,7 @@
             this.Pest4_Txt_CualesMedic.Name = "Pest4_Txt_CualesMedic";
             this.Pest4_Txt_CualesMedic.Size = new System.Drawing.Size(512, 49);
             this.Pest4_Txt_CualesMedic.TabIndex = 4;
+            this.Pest4_Txt_CualesMedic.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest4_Txt_CualesMedic_KeyPress);
             // 
             // label32
             // 
@@ -960,6 +1019,7 @@
             this.Pest3_Txt_NombreMadre.Name = "Pest3_Txt_NombreMadre";
             this.Pest3_Txt_NombreMadre.Size = new System.Drawing.Size(299, 20);
             this.Pest3_Txt_NombreMadre.TabIndex = 0;
+            this.Pest3_Txt_NombreMadre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest3_Txt_NombreMadre_KeyPress);
             // 
             // Pest3_Txt_TelefonoMadre
             // 
@@ -968,6 +1028,7 @@
             this.Pest3_Txt_TelefonoMadre.Name = "Pest3_Txt_TelefonoMadre";
             this.Pest3_Txt_TelefonoMadre.Size = new System.Drawing.Size(175, 20);
             this.Pest3_Txt_TelefonoMadre.TabIndex = 3;
+            this.Pest3_Txt_TelefonoMadre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest3_Txt_TelefonoMadre_KeyPress);
             // 
             // label27
             // 
@@ -994,6 +1055,7 @@
             this.Pest3_Txt_ProfesionMadre.Name = "Pest3_Txt_ProfesionMadre";
             this.Pest3_Txt_ProfesionMadre.Size = new System.Drawing.Size(299, 20);
             this.Pest3_Txt_ProfesionMadre.TabIndex = 1;
+            this.Pest3_Txt_ProfesionMadre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest3_Txt_ProfesionMadre_KeyPress);
             // 
             // Pest3_Txt_LugarMadre
             // 
@@ -1002,6 +1064,7 @@
             this.Pest3_Txt_LugarMadre.Name = "Pest3_Txt_LugarMadre";
             this.Pest3_Txt_LugarMadre.Size = new System.Drawing.Size(175, 20);
             this.Pest3_Txt_LugarMadre.TabIndex = 2;
+            this.Pest3_Txt_LugarMadre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest3_Txt_LugarMadre_KeyPress);
             // 
             // label26
             // 
@@ -1059,6 +1122,7 @@
             this.Pest3_Txt_NombrePadre.Name = "Pest3_Txt_NombrePadre";
             this.Pest3_Txt_NombrePadre.Size = new System.Drawing.Size(299, 20);
             this.Pest3_Txt_NombrePadre.TabIndex = 0;
+            this.Pest3_Txt_NombrePadre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest3_Txt_NombrePadre_KeyPress);
             // 
             // label21
             // 
@@ -1088,6 +1152,7 @@
             this.Pest3_Txt_ProfesionPadre.Name = "Pest3_Txt_ProfesionPadre";
             this.Pest3_Txt_ProfesionPadre.Size = new System.Drawing.Size(299, 20);
             this.Pest3_Txt_ProfesionPadre.TabIndex = 1;
+            this.Pest3_Txt_ProfesionPadre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest3_Txt_ProfesionPadre_KeyPress);
             // 
             // Pest3_Txt_LugarPadre
             // 
@@ -1097,6 +1162,7 @@
             this.Pest3_Txt_LugarPadre.Name = "Pest3_Txt_LugarPadre";
             this.Pest3_Txt_LugarPadre.Size = new System.Drawing.Size(184, 20);
             this.Pest3_Txt_LugarPadre.TabIndex = 2;
+            this.Pest3_Txt_LugarPadre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest3_Txt_LugarPadre_KeyPress);
             // 
             // label24
             // 
@@ -1126,6 +1192,7 @@
             this.Pest3_Txt_TelefonoPadre.Name = "Pest3_Txt_TelefonoPadre";
             this.Pest3_Txt_TelefonoPadre.Size = new System.Drawing.Size(184, 20);
             this.Pest3_Txt_TelefonoPadre.TabIndex = 3;
+            this.Pest3_Txt_TelefonoPadre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest3_Txt_TelefonoPadre_KeyPress);
             // 
             // label8
             // 
@@ -1184,7 +1251,7 @@
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(43, 657);
+            this.label38.Location = new System.Drawing.Point(47, 657);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(32, 13);
             this.label38.TabIndex = 29;
@@ -1209,47 +1276,29 @@
             this.Fecha_Actual.TabIndex = 31;
             this.Fecha_Actual.Visible = false;
             // 
-            // textBox3
+            // button2
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(534, 119);
-            this.textBox3.MaxLength = 14;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(183, 22);
-            this.textBox3.TabIndex = 23;
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
+            this.button2.Location = new System.Drawing.Point(150, 564);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(103, 95);
+            this.button2.TabIndex = 32;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
-            // comboBox2
+            // label46
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "M",
-            "F"});
-            this.comboBox2.Location = new System.Drawing.Point(534, 147);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(183, 24);
-            this.comboBox2.TabIndex = 24;
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(388, 125);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(103, 16);
-            this.label44.TabIndex = 25;
-            this.label44.Text = "Numero de ID";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(388, 153);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(140, 16);
-            this.label45.TabIndex = 26;
-            this.label45.Text = "Genero del Alumno";
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Location = new System.Drawing.Point(180, 658);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(47, 13);
+            this.label46.TabIndex = 33;
+            this.label46.Text = "Limpiar";
             // 
             // FrmMatricula
             // 
@@ -1257,6 +1306,8 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1219, 678);
             this.ControlBox = false;
+            this.Controls.Add(this.label46);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.Fecha_Actual);
             this.Controls.Add(this.label41);
             this.Controls.Add(this.Bttn_Salir);
@@ -1391,6 +1442,8 @@
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label46;
     }
 }
 

@@ -1537,7 +1537,7 @@ values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}
                 MySqlDataReader Reg = null;
                 Reg = this.cmd.ExecuteReader();
                 this.cnx.Close();
-            }catch(System.Exception ex)
+            } catch (System.Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
@@ -1591,5 +1591,65 @@ values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}
             cnx.Close();
             return Resp;
         }
+
+        public int V_EdadAlumno;
+        public string V_EdadCronologica;
+
+        public DateTime ne;
+        public string w;
+
+        public void Fun_VerificarYear(int FV_Cod)
+        {
+            int F_Edad;
+            string EdadCronoloGica;
+
+            this.sql = string.Format(@"select FechaNaciAlum from alumnos where CodAlumno='{0}'", FV_Cod);
+            this.cmd = new MySqlCommand(this.sql, this.cnx);
+            this.cnx.Open();
+            MySqlDataReader Reg = null;
+            Reg = this.cmd.ExecuteReader();
+
+            if (Reg.Read())
+            {
+
+                ne = DateTime.Parse(Reg["FechaNaciAlum"].ToString());
+                DateTime nacimiento = new DateTime(ne.Year, ne.Month, ne.Day); //Fecha de nacimiento
+                int edad = DateTime.Today.AddTicks(-nacimiento.Ticks).Year - 1;
+                F_Edad = edad;
+                TimeSpan ts = DateTime.Now.Date - ne.Date;
+
+                double Años = ts.Days / 365;
+                double Meses = Convert.ToInt32((ts.Days - (Años * 365)) / 30.4167);
+                double Dias = Convert.ToInt32((ts.Days - (Años * 365)) - (Meses * 30.4167));
+                string str = "Año:" + Años.ToString() + " Mes:" + Meses.ToString() + " Dia:" + Dias.ToString();
+                EdadCronoloGica = str;
+                this.cnx.Close();
+                V_EdadCronologica = EdadCronoloGica;
+                updateEdades(F_Edad, EdadCronoloGica, FV_Cod);
+
+            }
+            else
+            {
+
+            }
+            this.cnx.Close();
+
+        }
+        public void updateEdades(int FV_Edad, string FV_EdadCro, int FV_CodAlu)
+        {
+            this.sql = string.Format(@"update alumnos set EdadAlum ='{0}', EdadCronologica='{1}'
+            where CodAlumno='{2}'", FV_Edad, FV_EdadCro, FV_CodAlu);
+            this.cmd = new MySqlCommand(this.sql, this.cnx);
+            this.cnx.Open();
+            MySqlDataReader Reg = null;
+            Reg = this.cmd.ExecuteReader();
+
+            this.cnx.Close();
+
+            V_EdadAlumno = FV_Edad;
+            V_EdadCronologica = FV_EdadCro;
+        }
+
+
     }
 }

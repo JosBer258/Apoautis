@@ -720,10 +720,10 @@ InstProceAlumno, InstDondeEstaIncluido, estado, emerlugar, emertelefono, CodAlum
         public bool Fun_Ingresar_Alumno()
         {
             bool Var_Ver = false;
-            
+            MessageBox.Show(FechaNaciAlum11);
             this.sql = string.Format(@"insert into alumnos(NomAlumno, LugarNaciAlum, FechaNaciAlum,EdadAlum,DireccionAlum,
-TelFijoAlum,CelAlumno,InstProceAlumno,InstDondeEstaIncluido,EmergLugar,EmergTelefono, Estado ) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}', 4);",
-NomAlumno11, LugarNaciAlum11, FechaNaciAlum11, EdadAlum11, DireccionAlum11, TelFijoAlum11, CelAlumno11, InstProceAlumno11,InstDondeEstaIncluido11, EmergLugar1, EmergTelefono1);
+TelFijoAlum,CelAlumno,InstProceAlumno,InstDondeEstaIncluido,EmergLugar,EmergTelefono, Estado, SexoAlum, IdAlum ) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}', 4, '{11}','{12}');",
+NomAlumno11, LugarNaciAlum11, FechaNaciAlum11, EdadAlum11, DireccionAlum11, TelFijoAlum11, CelAlumno11, InstProceAlumno11,InstDondeEstaIncluido11, EmergLugar1, EmergTelefono1, SexoAlum11,IdAlum11);
             this.cnx.Open();
             this.cmd = new MySql.Data.MySqlClient.MySqlCommand(this.sql, this.cnx);
             int Reg = this.cmd.ExecuteNonQuery();

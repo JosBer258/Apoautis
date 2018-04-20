@@ -115,7 +115,7 @@ namespace APOAUTIS.Clases
             CodEstudioSocio = codEstudioSocio;
         }
 
-
+        
 
     }
 }

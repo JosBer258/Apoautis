@@ -368,8 +368,7 @@ namespace APOAUTIS.Clases
                         c.Focus();
                         MessageBox.Show(MensajeError, "Error");
                         break;
-                        return false;
-                    }
+                     }
                 }
             }
             return true;

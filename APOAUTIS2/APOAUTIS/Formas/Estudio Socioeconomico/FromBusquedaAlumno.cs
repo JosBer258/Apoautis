@@ -74,7 +74,7 @@ namespace APOAUTIS.Formas.Estudio_Socioeconomico
 
         private void btm_buscar_Click(object sender, EventArgs e)
         {
-            DGV_Show.DataSource = Clases.C_EstudioSocioMetodos.Buscar(Txt_FiltroAlumno.Text);
+            DGV_Show.DataSource = Clases.C_EstudioSocioMetodos.BuscarS(Txt_FiltroAlumno.Text);
 
         }
         public static C_responsablesMadre madreSeleccionado { get; set; }

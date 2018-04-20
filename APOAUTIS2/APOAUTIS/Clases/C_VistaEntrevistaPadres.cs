@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -1558,5 +1559,7 @@ where A.CodAlumno   = '{0}'", Var_codigo_alumno);
             }
             this.cnx.Close();
         }
+
+      
     }
 }
