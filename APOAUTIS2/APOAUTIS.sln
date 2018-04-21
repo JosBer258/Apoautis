@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APOAUTIS", "APOAUTIS\APOAUTIS.csproj", "{39310672-3D8D-4ECE-8431-C7E6A182C6DC}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "InstalacionVersion1_0", "InstalacionVersion1_0\InstalacionVersion1_0.vdproj", "{2F743A09-6C17-46F4-9295-C577565A4CA8}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "InstalacionVersion_1.1", "InstalacionVersion_1.1\InstalacionVersion_1.1.vdproj", "{2D95F543-8E64-4957-A7DB-707686BA2841}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,8 @@ Global
 		{39310672-3D8D-4ECE-8431-C7E6A182C6DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39310672-3D8D-4ECE-8431-C7E6A182C6DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39310672-3D8D-4ECE-8431-C7E6A182C6DC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2F743A09-6C17-46F4-9295-C577565A4CA8}.Debug|Any CPU.ActiveCfg = Debug
-		{2F743A09-6C17-46F4-9295-C577565A4CA8}.Release|Any CPU.ActiveCfg = Release
+		{2D95F543-8E64-4957-A7DB-707686BA2841}.Debug|Any CPU.ActiveCfg = Debug
+		{2D95F543-8E64-4957-A7DB-707686BA2841}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -58,6 +58,20 @@ namespace APOAUTIS
             frmBusqEstSoc.ShowDialog();
 
 
+            if (FormBusquedaResponsables.socio != null)
+            {
+                txt_fechaEntrevista.Text = Convert.ToString(FormBusquedaResponsables.socio.FechaEntrevista);
+                txt_EsSo_lugar_DatosGe.Text = FormBusquedaResponsables.socio.LugarEntrevista;
+                txt_EsSo_PersonaEntre_DatosGe.Text = FormBusquedaResponsables.socio.PersonaEntrevis;
+                txt_EsSo_Aporbado_SaludRecre.Text = FormBusquedaResponsables.socio.EntrevistadoPor1;
+            }
+            else
+            {
+                MessageBox.Show("No existe Estudio Socioeconomico de este Alumno","Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
             if (FormBusquedaResponsables.AlumnoSeleccionado != null)
             {
                 C_datos.CodAlumno = FormBusquedaResponsables.AlumnoSeleccionado.CodAlumno;
@@ -82,7 +96,7 @@ namespace APOAUTIS
                     txt_EsSo_CelMadre_DatosGe.Text = FormBusquedaResponsables.madreSeleccionado.TelefonoCasaResp;
                     txt_EsSo_IdentMadre_DatosGe.Text = Convert.ToString(FormBusquedaResponsables.madreSeleccionado.IdResp);
                     txt_EsSo_DomiciMadre_DatosGe.Text =FormBusquedaResponsables.madreSeleccionado.DomicilioResp;
-                    txt_EsSo_LugarTrabMadre_forma.Text = FormBusquedaResponsables.madreSeleccionado.DomicilioResp;
+                    txt_EsSo_LugarTrabMadre_forma.Text = FormBusquedaResponsables.madreSeleccionado.LugarTrabRes;
                     txt_EsSo_TelCasaMadre_DatosGe.Text = Convert.ToString(FormBusquedaResponsables.madreSeleccionado.TelefonoCasaResp);
                     txt_EsSo_TelTrabMadre_DatosGe.Text = Convert.ToString(FormBusquedaResponsables.madreSeleccionado.TrabajoResp);
 
@@ -99,7 +113,7 @@ namespace APOAUTIS
                     txt_EsSo_CelPadre_DatosGe.Text = FormBusquedaResponsables.padreSeleccionado.TelefonoCasaResp;
                     txt_EsSo_IdentPadre_DatosGe.Text = Convert.ToString(FormBusquedaResponsables.padreSeleccionado.IdResp);
                     txt_EsSo_DomiciPadre_DatosGe.Text = FormBusquedaResponsables.padreSeleccionado.DomicilioResp;
-                    txt_EsSo_LugarTrabPadre_forma.Text = FormBusquedaResponsables.padreSeleccionado.DomicilioResp;
+                    txt_EsSo_LugarTrabPadre_forma.Text = FormBusquedaResponsables.padreSeleccionado.LugarTrabRes;
                     txt_EsSo_TelCAsaPadre_DatosGe.Text = Convert.ToString(FormBusquedaResponsables.padreSeleccionado.TelefonoCasaResp);
                     txt_EsSo_TelTrabPadre_DatosGe.Text = Convert.ToString(FormBusquedaResponsables.padreSeleccionado.TrabajoResp);
                 }

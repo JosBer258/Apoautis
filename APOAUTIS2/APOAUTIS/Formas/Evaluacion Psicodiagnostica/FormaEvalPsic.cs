@@ -368,7 +368,11 @@ namespace APOAUTIS
                     MessageBox.Show(ex.Message, "Mensaje de Error");
                 }
          }
-            
-   }
+
+        private void Grupo_Busqueda_Enter(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
 

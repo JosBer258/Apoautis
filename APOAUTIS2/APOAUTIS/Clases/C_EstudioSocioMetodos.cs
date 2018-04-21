@@ -108,6 +108,7 @@ namespace APOAUTIS.Clases
 
         }
 
+
         public static int AgregarPadre(C_responsablePadre padre)
         {
             MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
@@ -150,6 +151,8 @@ namespace APOAUTIS.Clases
             return retorno;
 
         }
+
+
         public static int AgregarOtro(C_ResponsablesOtro otro)
         {
 
@@ -162,6 +165,7 @@ namespace APOAUTIS.Clases
             return retorno;
 
         }
+
 
         public static List<C_DatosGenerales> Buscar(string nombreAlumno)
         {
@@ -245,33 +249,50 @@ namespace APOAUTIS.Clases
         }
         public static List<C_responsablesMadre> BuscarMadre(string nombreAlumno)
         {
-            List<C_responsablesMadre> lista = new List<C_responsablesMadre>();
-            MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
-            conexion.Open();
-            MySqlCommand _comando = new MySqlCommand(String.Format(
-           "SELECT b.CodAlumno,a.CodResp, a.NomComRes, a.NumIdRes, a.DomicilioRes, a.ProfecionRes, a.OficioRes, a.LugarTrabajoRes, a.TelCasaRes, a.TelCelRes, a.TelTrabajoRes, a.CorreoRes, b.Cod_TipoResp  FROM responsables as a INNER JOIN  `alumnos/responsables`  as b ON a.CodResp = b.CodResp  INNER JOIN alumnos as c ON b.CodAlumno= c.CodAlumno where b.Cod_TipoResp='2' and  c.CodAlumno= '{0}'",
-            nombreAlumno), conexion);
-            MySqlDataReader _reader = _comando.ExecuteReader();
-            while (_reader.Read())
-            {
-                C_responsablesMadre madre= new C_responsablesMadre();
-                madre.CodAlumno = _reader.GetInt32(0);
-                madre.CodResp= _reader.GetInt32(1);
-                madre.NombResp = _reader.GetString(2);
-                madre.IdResp = _reader.GetInt32(3);
-                madre.DomicilioResp = _reader.GetString(4);
-                madre.ProfesionResp1 = _reader.GetString(5);
-                madre.OficioREsp = _reader.GetString(6);
-                madre.LugarTrabRes = _reader.GetString(7);
-                madre.TelefonoCasaResp = _reader.GetString(8);
-                madre.CelResp = _reader.GetString(9);
-                madre.TrabajoResp = _reader.GetString(10);
-                madre.CorreoResp= _reader.GetString(11);
-                madre.TipoRes = _reader.GetInt32(12);
+            
+                List<C_responsablesMadre> lista = new List<C_responsablesMadre>();
+                MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
+                conexion.Open();
+                MySqlCommand _comando = new MySqlCommand(String.Format(
+               "SELECT b.CodAlumno,a.CodResp, a.NomComRes, a.NumIdRes, a.DomicilioRes, a.ProfecionRes, a.OficioRes, a.LugarTrabajoRes, a.TelCasaRes, a.TelCelRes, a.TelTrabajoRes, a.CorreoRes, b.Cod_TipoResp  FROM responsables as a INNER JOIN  `alumnos/responsables`  as b ON a.CodResp = b.CodResp  INNER JOIN alumnos as c ON b.CodAlumno= c.CodAlumno where b.Cod_TipoResp='2' and  c.CodAlumno= '{0}'",
+                nombreAlumno), conexion);
+                MySqlDataReader _reader = _comando.ExecuteReader();
+                while (_reader.Read())
+                {
+                try
+                {
+                    C_responsablesMadre madre = new C_responsablesMadre();
+                    madre.CodAlumno = _reader.GetInt32(0);
+                    madre.CodResp = _reader.GetInt32(1);
+                    madre.NombResp = _reader.GetString(2);
+                    if (string.IsNullOrEmpty(_reader.GetInt32(3).ToString()))
+                    {
+                        madre.IdResp = 0;
+                    }else
+                    {
+                        madre.IdResp = _reader.GetInt32(3);
+                    }
+                  
+                    madre.DomicilioResp = _reader.GetString(4);
+                    madre.ProfesionResp1 = _reader.GetString(5);
+                    madre.OficioREsp = _reader.GetString(6);
+                    madre.LugarTrabRes = _reader.GetString(7);
+                    madre.TelefonoCasaResp = _reader.GetString(8);
+                    madre.CelResp = _reader.GetString(9);
+                    madre.TrabajoResp = _reader.GetString(10);
+                    madre.CorreoResp = _reader.GetString(11);
+                    madre.TipoRes = _reader.GetInt32(12);
 
 
-                lista.Add(madre);
-            }
+                    lista.Add(madre);
+                }
+                catch (Exception)
+                {
+
+                }
+                }
+           
+
             conexion.Close();
 
             return lista;
@@ -284,28 +305,37 @@ namespace APOAUTIS.Clases
             conexion.Open();
 
             MySqlCommand _comando = new MySqlCommand(String.Format(
-           "SELECT b.CodAlumno,a.CodResp, a.NomComRes, a.NumIdRes, a.DomicilioRes, a.ProfecionRes, a.OficioRes, a.LugarTrabajoRes, a.TelCasaRes, a.TelCelRes, a.TelTrabajoRes, a.CorreoRes, b.Cod_TipoResp  FROM responsables as a INNER JOIN  `alumnos/responsables`  as b ON a.CodResp = b.CodResp  INNER JOIN alumnos as c ON b.CodAlumno= c.CodAlumno where b.Cod_TipoResp='1' and  c.CodAlumno= '{0}'",
+           @"SELECT b.CodAlumno,a.CodResp, a.NomComRes, a.NumIdRes, a.DomicilioRes, a.ProfecionRes, a.OficioRes, a.LugarTrabajoRes, a.TelCasaRes, a.TelCelRes, a.TelTrabajoRes, a.CorreoRes, b.Cod_TipoResp  FROM responsables as a INNER JOIN  `alumnos/responsables`  as b ON a.CodResp = b.CodResp  INNER JOIN alumnos as c ON b.CodAlumno= c.CodAlumno where b.Cod_TipoResp='1' and  c.CodAlumno= '{0}'",
             nombreAlumno), conexion);
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
             {
-                C_responsablePadre padre = new C_responsablePadre();
-                padre.CodAlumno = _reader.GetInt32(0);
-                padre.CodResp = _reader.GetInt32(1);
-                padre.NombResp = _reader.GetString(2);
-                padre.IdResp = _reader.GetInt32(3);
-                padre.DomicilioResp = _reader.GetString(4);
-                padre.ProfesionResp1 = _reader.GetString(5);
-                padre.OficioREsp = _reader.GetString(6);
-                padre.LugarTrabRes = _reader.GetString(7);
-                padre.TelefonoCasaResp = _reader.GetString(8);
-                padre.CelResp = _reader.GetString(9);
-                padre.TrabajoResp = _reader.GetString(10);
-                padre.CorreoResp = _reader.GetString(11);
-                padre.TipoRes = _reader.GetInt32(12);
+               
+                    C_responsablePadre padre = new C_responsablePadre();
+                    padre.CodAlumno = _reader.GetInt32(0);
+                    padre.CodResp = _reader.GetInt32(1);
+                    padre.NombResp = _reader.GetString(2);
+                    if (string.IsNullOrEmpty(_reader.GetInt32(3).ToString()))
+                    {
+                        padre.IdResp = 0;
+                    }else
+                    {
+                        padre.IdResp = _reader.GetInt32(3);
+                    }
+                  
+                    padre.DomicilioResp = _reader.GetString(4);
+                    padre.ProfesionResp1 = _reader.GetString(5);
+                    padre.OficioREsp = _reader.GetString(6);
+                padre.LugarTrabRes = _reader["LugarTrabajoRes"].ToString();
+                    padre.TelefonoCasaResp = _reader.GetString(8);
+                    padre.CelResp = _reader.GetString(9);
+                    padre.TrabajoResp = _reader.GetString(10);
+                    padre.CorreoResp = _reader.GetString(11);
+                    padre.TipoRes = _reader.GetInt32(12);
 
 
-                lista.Add(padre);
+                    lista.Add(padre);
+               
             }
             conexion.Close();
             return lista;
@@ -323,19 +353,26 @@ namespace APOAUTIS.Clases
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
             {
-                C_ResponsablesOtro otro = new C_ResponsablesOtro();
-                otro.CodAlumno = _reader.GetInt32(0);
-                otro.CodRespOtro = _reader.GetInt32(1);
-                otro.Edad = _reader.GetInt32(2);
-                otro.Parentesco = _reader.GetString(3);
-                otro.NomRespOtro = _reader.GetString(4);
-                otro.Profesion = _reader.GetString(5);
-                otro.Oficio = _reader.GetString(6);
-                otro.Telefono = _reader.GetString(7);
-                otro.TipoResp = _reader.GetInt32(8);
+                try
+                {
+                    C_ResponsablesOtro otro = new C_ResponsablesOtro();
+                    otro.CodAlumno = _reader.GetInt32(0);
+                    otro.CodRespOtro = _reader.GetInt32(1);
+                    otro.Edad = _reader.GetInt32(2);
+                    otro.Parentesco = _reader.GetString(3);
+                    otro.NomRespOtro = _reader.GetString(4);
+                    otro.Profesion = _reader.GetString(5);
+                    otro.Oficio = _reader.GetString(6);
+                    otro.Telefono = _reader.GetString(7);
+                    otro.TipoResp = _reader.GetInt32(8);
 
 
-                lista.Add(otro);
+                    lista.Add(otro);
+                }
+                catch (Exception)
+                {
+
+                }
             }
 
             conexion.Close();
@@ -352,12 +389,18 @@ namespace APOAUTIS.Clases
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
             {
-                Estudio.CodAlumno = _reader.GetInt32(0);
-                Estudio.LugarEntrevista= _reader.GetString(1);
-                Estudio.FechaEntrevista = _reader.GetString(2);
-                Estudio.PersonaEntrevis = _reader.GetString(3);
-                Estudio.EntrevistadoPor1 = _reader.GetString(4);
+                try
+                {
+                    Estudio.CodAlumno = _reader.GetInt32(0);
+                    Estudio.LugarEntrevista = _reader.GetString(1);
+                    Estudio.FechaEntrevista = _reader.GetString(2);
+                    Estudio.PersonaEntrevis = _reader.GetString(3);
+                    Estudio.EntrevistadoPor1 = _reader.GetString(4);
+                }
+                catch (Exception)
+                {
 
+                }
 
             }
 
@@ -376,13 +419,20 @@ namespace APOAUTIS.Clases
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
             {
-                Estudio.CodAlumno = _reader.GetInt32(0);
-                Estudio.IdAlumno= _reader.GetDouble(1);
-                Estudio.NombreAlumno = _reader.GetString(2);
-                Estudio.LugarNacAlumno= _reader.GetString(3);
-                Estudio.Fecha_NacAlumno= _reader.GetDateTime(4);
-                Estudio.EdadAlumno = _reader.GetInt32(5);
-                Estudio.SexoAlumno = _reader.GetString(6);
+                try
+                {
+                    Estudio.CodAlumno = _reader.GetInt32(0);
+                    Estudio.IdAlumno = _reader.GetDouble(1);
+                    Estudio.NombreAlumno = _reader.GetString(2);
+                    Estudio.LugarNacAlumno = _reader.GetString(3);
+                    Estudio.Fecha_NacAlumno = _reader.GetDateTime(4);
+                    Estudio.EdadAlumno = _reader.GetInt32(5);
+                    Estudio.SexoAlumno = _reader.GetString(6);
+                }
+                catch (Exception)
+                {
+
+                }
 
             }
 
@@ -399,21 +449,29 @@ namespace APOAUTIS.Clases
             MySqlCommand _comando = new MySqlCommand(String.Format("SELECT b.CodAlumno,a.CodResp, a.NomComRes, a.NumIdRes, a.DomicilioRes, a.ProfecionRes, a.OficioRes, a.LugarTrabajoRes, a.TelCasaRes, a.TelCelRes, a.TelTrabajoRes, a.CorreoRes, b.Cod_TipoResp FROM responsables as a INNER JOIN  `alumnos/responsables`  as b ON a.CodResp = b.CodResp  INNER JOIN alumnos as c ON b.CodAlumno= c.CodAlumno where b.Cod_TipoResp='2' and  c.CodAlumno= '{0}'", cod), conexion);
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
-            {
-                madre.CodAlumno = _reader.GetInt32(0);
-                madre.CodResp = _reader.GetInt32(1);
-                madre.NombResp = _reader.GetString(2);
-                madre.IdResp = _reader.GetInt32(3);
-                madre.DomicilioResp = _reader.GetString(4);
-                madre.ProfesionResp1 = _reader.GetString(5);
-                madre.OficioREsp = _reader.GetString(6);
-                madre.LugarTrabRes = _reader.GetString(7);
-                madre.TelefonoCasaResp = _reader.GetString(8);
-                madre.CelResp = _reader.GetString(9);
-                madre.TrabajoResp = _reader.GetString(10);
-                madre.CorreoResp = _reader.GetString(11);
-                madre.TipoRes = _reader.GetInt32(12);
+            {try
+                {
+                    madre.CodAlumno = _reader.GetInt32(0);
+                    madre.CodResp = _reader.GetInt32(1);
 
+                
+
+                    madre.NombResp = _reader.GetString(2);
+                    madre.IdResp = _reader.GetInt32(3);
+                    madre.DomicilioResp = _reader.GetString(4);
+                    madre.ProfesionResp1 = _reader.GetString(5);
+                    madre.OficioREsp = _reader.GetString(6);
+                    madre.LugarTrabRes = _reader.GetString(7);
+                    madre.TelefonoCasaResp = _reader.GetString(8);
+                    madre.CelResp = _reader.GetString(9);
+                    madre.TrabajoResp = _reader.GetString(10);
+                    madre.CorreoResp = _reader.GetString(11);
+                    madre.TipoRes = _reader.GetInt32(12);
+                }
+                catch (Exception)
+                {
+
+                }
 
             }
 
@@ -431,20 +489,28 @@ namespace APOAUTIS.Clases
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
             {
-                padre.CodAlumno = _reader.GetInt32(0);
-                padre.CodResp = _reader.GetInt32(1);
-                padre.NombResp = _reader.GetString(2);
-                padre.IdResp = _reader.GetInt32(3);
-                padre.DomicilioResp = _reader.GetString(4);
-                padre.ProfesionResp1 = _reader.GetString(5);
-                padre.OficioREsp = _reader.GetString(6);
-                padre.LugarTrabRes = _reader.GetString(7);
-                padre.TelefonoCasaResp = _reader.GetString(8);
-                padre.CelResp = _reader.GetString(9);
-                padre.TrabajoResp = _reader.GetString(10);
-                padre.CorreoResp = _reader.GetString(11);
-                padre.TipoRes = _reader.GetInt32(12);
+                try
+                {
 
+                    padre.CodAlumno = _reader.GetInt32(0);
+                    padre.CodResp = _reader.GetInt32(1);
+                    
+                    padre.NombResp = _reader.GetString(2);
+                    padre.IdResp = _reader.GetInt32(3);
+                    padre.DomicilioResp = _reader.GetString(4);
+                    padre.ProfesionResp1 = _reader.GetString(5);
+                    padre.OficioREsp = _reader.GetString(6);
+                    padre.LugarTrabRes = _reader.GetString(7);
+                    padre.TelefonoCasaResp = _reader.GetString(8);
+                    padre.CelResp = _reader.GetString(9);
+                    padre.TrabajoResp = _reader.GetString(10);
+                    padre.CorreoResp = _reader.GetString(11);
+                    padre.TipoRes = _reader.GetInt32(12);
+                }
+                catch (Exception)
+                {
+
+                }
 
             }
 
@@ -487,8 +553,14 @@ namespace APOAUTIS.Clases
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
             {
-                otro.CodRespOtro = _reader.GetInt32(0);
+                try
+                {
+                    otro.CodRespOtro =Convert.ToInt32( _reader["CodResp"].ToString()) ;
+                }
+                catch (Exception)
+                {
 
+                }
             }
 
 
@@ -507,18 +579,24 @@ namespace APOAUTIS.Clases
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
             {
-                medico.CodigoAlum= _reader.GetInt32(0);
-                medico.LugaresRecibeAtencion1= _reader["LugaresRecibeAtencionMedica"].ToString();
-                medico.EnfermedadesPadeceFamilia1= _reader["EnfermePadecenFamili"].ToString();
-                string Validar;
-                Validar = _reader["CuantoGastaEnMed"].ToString();
-                if (string.IsNullOrEmpty(Validar))
+                try
                 {
-                    Validar = "0";
+                    medico.CodigoAlum = _reader.GetInt32(0);
+                    medico.LugaresRecibeAtencion1 = _reader["LugaresRecibeAtencionMedica"].ToString();
+                    medico.EnfermedadesPadeceFamilia1 = _reader["EnfermePadecenFamili"].ToString();
+                    string Validar;
+                    Validar = _reader["CuantoGastaEnMed"].ToString();
+                    if (string.IsNullOrEmpty(Validar))
+                    {
+                        Validar = "0";
+                    }
+
+                    medico.CuantoGastaMedi1 = Convert.ToDouble(Validar);
                 }
+                catch (Exception)
+                {
 
-                medico.CuantoGastaMedi1 =Convert.ToDouble(Validar);
-
+                }
             }
 
             conexion.Close();
@@ -531,19 +609,26 @@ namespace APOAUTIS.Clases
             C_LugaresRecreacion recre = new C_LugaresRecreacion();
             MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
             conexion.Open();
-            MySqlCommand _comando = new MySqlCommand(String.Format(" SELECT Alumnos_CodAlumno, Parques, CentrosComerciales, Museos, Cine, Balnearios, Playa, Otros from lugaresrecreacion where Alumnos_CodAlumno = '{0}'", cod), conexion);
+            MySqlCommand _comando = new MySqlCommand(String.Format(@" SELECT Alumnos_CodAlumno, Parques, CentrosComerciales, Museos, Cine, Balnearios, 
+Playa, Otros from lugaresrecreacion where Alumnos_CodAlumno = '{0}'", cod), conexion);
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
             {
-                recre.CodAlumno = _reader.GetInt32(0);
-                recre.Parques = _reader.GetString(1);
-                recre.CentrosComerciales = _reader.GetString(2);
-                recre.Museos = _reader.GetString(3);
-                recre.Cine = _reader.GetString(4);
-                recre.Balnearios = _reader.GetString(5);
-                recre.Playa = _reader.GetString(6);
-                recre.Otros = _reader.GetString(7);
+                try
+                {
+                    recre.CodAlumno = Convert.ToInt32(_reader["Alumnos_CodAlumno"].ToString());
+                    recre.Parques = _reader["Parques"].ToString();
+                    recre.CentrosComerciales =  _reader["CentrosComerciales"].ToString();
+                    recre.Museos =   _reader["Museos"].ToString();
+                    recre.Cine = _reader["Cine"].ToString();
+                    recre.Balnearios =   _reader["Balnearios"].ToString();
+                    recre.Playa =    _reader["Playa"].ToString();
+                    recre.Otros =  _reader["Otros"].ToString();
+                }
+                catch (Exception)
+                {
 
+                }
             }
 
             conexion.Close();
@@ -556,17 +641,23 @@ namespace APOAUTIS.Clases
             C_InformacionVivienda vivienda = new C_InformacionVivienda();
             MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
             conexion.Open();
-            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT Alumnos_CodAlumno, Tenencia, MaterialConst, MaterialPiso, ServiciosBacicos, DisponeDe from informacionvivienda where Alumnos_CodAlumno ='{0}'", cod), conexion);
+            MySqlCommand _comando = new MySqlCommand(String.Format(@"SELECT Alumnos_CodAlumno, Tenencia, MaterialConst, MaterialPiso, ServiciosBacicos, DisponeDe from informacionvivienda where Alumnos_CodAlumno ='{0}'", cod), conexion);
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
             {
-                vivienda.CodAlumno = _reader.GetInt32(0);
-                vivienda.Tenencia = _reader.GetString(1);
-                vivienda.MaterialConst = _reader.GetString(2);
-                vivienda.MaterialPiso= _reader.GetString(3);
-                vivienda.ServicioBasicos = _reader.GetString(4);
-                vivienda.DisponeDe = _reader.GetString(5);
-            }
+                try {
+                    vivienda.CodAlumno =  Convert.ToInt32(_reader["Alumnos_CodAlumno"].ToString());
+                    vivienda.Tenencia = _reader["Tenencia"].ToString();
+                    vivienda.MaterialConst = _reader["MaterialConst"].ToString();
+                    vivienda.MaterialPiso = _reader["MaterialPiso"].ToString();
+                    vivienda.ServicioBasicos = _reader["ServiciosBacicos"].ToString();
+                    vivienda.DisponeDe = _reader["DisponeDe"].ToString();
+                }
+                catch (Exception)
+                {
+
+                }
+                }
 
             conexion.Close();
             return vivienda;
@@ -582,30 +673,37 @@ namespace APOAUTIS.Clases
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
             {
-                familia.CodAlumno1 = _reader.GetInt32(0);
-                familia.PersonasHabitan1 = _reader.GetInt32(1);
-                familia.TieneMasHijos1 = _reader.GetString(2);
-                familia.HabitanOtrosFamiliares1= _reader.GetString(3);
-                familia.CuantosMiembrosTrabajan1 = _reader.GetInt32(4);
-                familia.IngresoAbuela1 = _reader.GetDouble(5);
-                familia.IngresoMadre1 = _reader.GetDouble(6);
-                familia.IngresoPadre1 = _reader.GetDouble(7);
-                familia.IngresoHijo1 = _reader.GetDouble(8);
-                familia.Pension1 = _reader.GetDouble(9);
-                familia.OtrosIngresos1 = _reader.GetDouble(10);
-                familia.TotalIngresos1 = _reader.GetDouble(11);
-                familia.GastosEnergia1 = _reader.GetDouble(12);
-                familia.GastoAgua1 = _reader.GetDouble(13);
-                familia.GastoTel1 = _reader.GetDouble(14);
-                familia.GastoComida1 = _reader.GetDouble(15);
-                familia.GastoTransp1 = _reader.GetDouble(16);
-                familia.GastoSalub1 = _reader.GetDouble(17);
-                familia.GastoEduca1 = _reader.GetDouble(18);
-                familia.GastoGaso1 = _reader.GetDouble(19);
-                familia.GastoRpa1 = _reader.GetDouble(20);
-                familia.GastoVivienda1 = _reader.GetDouble(21);
-                familia.OtrosGastos1 = _reader.GetDouble(22);
-                familia.TotalGastos1 = _reader.GetDouble(23);
+                try
+                {
+                    familia.CodAlumno1 = _reader.GetInt32(0);
+                    familia.PersonasHabitan1 = _reader.GetInt32(1);
+                    familia.TieneMasHijos1 = _reader.GetString(2);
+                    familia.HabitanOtrosFamiliares1 = _reader.GetString(3);
+                    familia.CuantosMiembrosTrabajan1 = _reader.GetInt32(4);
+                    familia.IngresoAbuela1 = _reader.GetDouble(5);
+                    familia.IngresoMadre1 = _reader.GetDouble(6);
+                    familia.IngresoPadre1 = _reader.GetDouble(7);
+                    familia.IngresoHijo1 = _reader.GetDouble(8);
+                    familia.Pension1 = _reader.GetDouble(9);
+                    familia.OtrosIngresos1 = _reader.GetDouble(10);
+                    familia.TotalIngresos1 = _reader.GetDouble(11);
+                    familia.GastosEnergia1 = _reader.GetDouble(12);
+                    familia.GastoAgua1 = _reader.GetDouble(13);
+                    familia.GastoTel1 = _reader.GetDouble(14);
+                    familia.GastoComida1 = _reader.GetDouble(15);
+                    familia.GastoTransp1 = _reader.GetDouble(16);
+                    familia.GastoSalub1 = _reader.GetDouble(17);
+                    familia.GastoEduca1 = _reader.GetDouble(18);
+                    familia.GastoGaso1 = _reader.GetDouble(19);
+                    familia.GastoRpa1 = _reader.GetDouble(20);
+                    familia.GastoVivienda1 = _reader.GetDouble(21);
+                    familia.OtrosGastos1 = _reader.GetDouble(22);
+                    familia.TotalGastos1 = _reader.GetDouble(23);
+                }
+                catch (Exception)
+                {
+
+                }
 
             }
 

@@ -55,9 +55,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Grupo_IngresoResultado = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.Bttn_Salir = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
             this.dateFechNac = new System.Windows.Forms.DateTimePicker();
             this.dateFechEval = new System.Windows.Forms.DateTimePicker();
             this.Grupo_Busqueda = new System.Windows.Forms.GroupBox();
+            this.btnImprimir = new System.Windows.Forms.Button();
             this.radTodas = new System.Windows.Forms.RadioButton();
             this.txtBusqOB = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -68,11 +73,7 @@
             this.txtBusqObs = new System.Windows.Forms.TextBox();
             this.radImpDiag = new System.Windows.Forms.RadioButton();
             this.txtBusqImpDiag = new System.Windows.Forms.TextBox();
-            this.Bttn_Salir = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.btnImprimir = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Evaluaciones)).BeginInit();
             this.Grupo_IngresoResultado.SuspendLayout();
             this.Grupo_Busqueda.SuspendLayout();
@@ -366,6 +367,46 @@
             this.Grupo_IngresoResultado.TabStop = false;
             this.Grupo_IngresoResultado.Text = "Ingresar Resultados de Evaluacion";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(1065, 127);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(32, 13);
+            this.label11.TabIndex = 93;
+            this.label11.Text = "Salir";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(967, 127);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(47, 13);
+            this.label15.TabIndex = 93;
+            this.label15.Text = "Limpiar";
+            // 
+            // Bttn_Salir
+            // 
+            this.Bttn_Salir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Bttn_Salir.BackgroundImage")));
+            this.Bttn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Bttn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Bttn_Salir.ForeColor = System.Drawing.SystemColors.Control;
+            this.Bttn_Salir.Location = new System.Drawing.Point(1034, 36);
+            this.Bttn_Salir.Name = "Bttn_Salir";
+            this.Bttn_Salir.Size = new System.Drawing.Size(87, 85);
+            this.Bttn_Salir.TabIndex = 91;
+            this.Bttn_Salir.UseVisualStyleBackColor = true;
+            this.Bttn_Salir.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(868, 127);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(51, 13);
+            this.label14.TabIndex = 92;
+            this.label14.Text = "Aceptar";
+            // 
             // dateFechNac
             // 
             this.dateFechNac.Location = new System.Drawing.Point(177, 108);
@@ -386,6 +427,7 @@
             this.Grupo_Busqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Grupo_Busqueda.Controls.Add(this.label16);
             this.Grupo_Busqueda.Controls.Add(this.btnImprimir);
             this.Grupo_Busqueda.Controls.Add(this.radTodas);
             this.Grupo_Busqueda.Controls.Add(this.txtBusqOB);
@@ -408,6 +450,20 @@
             this.Grupo_Busqueda.TabIndex = 92;
             this.Grupo_Busqueda.TabStop = false;
             this.Grupo_Busqueda.Text = "Opciones de Busqueda";
+            this.Grupo_Busqueda.Enter += new System.EventHandler(this.Grupo_Busqueda_Enter);
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImprimir.BackgroundImage")));
+            this.btnImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImprimir.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnImprimir.Location = new System.Drawing.Point(1042, 19);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(98, 99);
+            this.btnImprimir.TabIndex = 93;
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // radTodas
             // 
@@ -513,55 +569,14 @@
             this.txtBusqImpDiag.TextChanged += new System.EventHandler(this.txtBusqImpDiag_TextChanged);
             this.txtBusqImpDiag.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBusqImpDiag_KeyPress);
             // 
-            // Bttn_Salir
+            // label16
             // 
-            this.Bttn_Salir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Bttn_Salir.BackgroundImage")));
-            this.Bttn_Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Bttn_Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Bttn_Salir.ForeColor = System.Drawing.SystemColors.Control;
-            this.Bttn_Salir.Location = new System.Drawing.Point(1034, 36);
-            this.Bttn_Salir.Name = "Bttn_Salir";
-            this.Bttn_Salir.Size = new System.Drawing.Size(87, 85);
-            this.Bttn_Salir.TabIndex = 91;
-            this.Bttn_Salir.UseVisualStyleBackColor = true;
-            this.Bttn_Salir.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(1065, 127);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(32, 13);
-            this.label11.TabIndex = 93;
-            this.label11.Text = "Salir";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(868, 127);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(51, 13);
-            this.label14.TabIndex = 92;
-            this.label14.Text = "Aceptar";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(967, 127);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(47, 13);
-            this.label15.TabIndex = 93;
-            this.label15.Text = "Limpiar";
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.Location = new System.Drawing.Point(717, 84);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(118, 41);
-            this.btnImprimir.TabIndex = 93;
-            this.btnImprimir.Text = "Imprimir Tabla";
-            this.btnImprimir.UseVisualStyleBackColor = true;
-            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(1066, 121);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(51, 13);
+            this.label16.TabIndex = 94;
+            this.label16.Text = "Aceptar";
             // 
             // FormaEvalPsic
             // 
@@ -632,5 +647,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label16;
     }
 }

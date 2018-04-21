@@ -174,7 +174,7 @@ namespace APOAUTIS
 
         private void button10_Click_1(object sender, EventArgs e)
         {
-
+            tabEntPadres.SelectedTab = Pest_DatosGenerales;
         }
 
         private void button11_Click_1(object sender, EventArgs e)
@@ -183,7 +183,7 @@ namespace APOAUTIS
             Padres.Donde = txtdonde.Text;
             Padres.Diag_tratamiento = txtdiag_tratamiento.Text;
             Padres.fun_aconte_medicos();
-            Padres.Fun_Show(dtg_medicos);
+            Padres.Fun_Show(dtg_medicos, Padres.CodAlumno);
         }
 
         private void label66_Click(object sender, EventArgs e)
@@ -217,7 +217,7 @@ namespace APOAUTIS
                 MessageBox.Show("El alumno ya tiene registrado una entrevista de padres previamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
+            Padres.Fun_Show(dtg_medicos, Padres.CodAlumno);
 
             Padres.Fun_VerificarYear((int)Convert.ToDouble(row.Cells["Codigo de Alumno"].Value));
             txtedadcronologica.Text= Padres.V_EdadCronologica;
@@ -260,6 +260,8 @@ namespace APOAUTIS
 
         }
 
+
+
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
                     }
@@ -282,8 +284,40 @@ namespace APOAUTIS
                 MessageBox.Show("No existen alumnos selecionado", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            Fun_EstablecerSiEstaVacio();
 
+            if(string.IsNullOrEmpty(txtdireccion.Text) || string.IsNullOrEmpty(txttelefono.Text) || string.IsNullOrEmpty(txtescolaridad.Text))
+            {
+                if (string.IsNullOrEmpty(txtdireccion.Text))
+                {
+                    errorProvider1.SetError(txtdireccion, "Debe llenar este campo");
+                    txtdireccion.Focus();
+                }
+
+                if (string.IsNullOrEmpty(txttelefono.Text))
+                {
+                    errorProvider1.SetError(txttelefono, "Debe llenar este campo");
+                    txttelefono.Focus();
+                }
+                if (string.IsNullOrEmpty(txtescolaridad.Text))
+                {
+
+                    errorProvider1.SetError(txtescolaridad, "Debe llenar este campo");
+                    txtescolaridad.Focus();
+                }
+                tabEntPadres.SelectedTab = Pest_DatosGenerales;
+                MessageBox.Show("Existen datos escenciales vacios","Mensaje de error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+            }else
+            {
+                errorProvider1.SetError(txtdireccion, "");
+                errorProvider1.SetError(txttelefono, "");
+                errorProvider1.SetError(txtescolaridad, "");
+            }
+            Fun_EstablecerSiEstaVacio();
+            //Datos del Alumno
+            Padres.UpdateAlumnoOtros(txtescolaridad.Text, txtdireccion.Text, txttelefono.Text, Padres.CodAlumno);
+            
             //datos generales
             Padres.Referido_por = txtreferido.Text;
             Padres.Lugar = txtlugar.Text;
@@ -511,6 +545,7 @@ namespace APOAUTIS
             Padres.fun_rasgos_identificables_2();
             MessageBox.Show("se registro el alumno:" + Padres.NomAlumno + " seleccionado", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Fun_Limpiar();
+            Padres.Fun_mostrar_alumno(dtgalumnos);
 
         }
 
@@ -1209,6 +1244,36 @@ namespace APOAUTIS
         private void txtduemesolo_KeyPress(object sender, KeyPressEventArgs e)
         {
             Val.ValirLetrasYEspacios_Direccion(sender, e, txtduemesolo);
+        }
+
+        private void button17_Click_1(object sender, EventArgs e)
+        {
+            tabEntPadres.SelectedTab = Pest_DatosGenerales;
+        }
+
+        private void button11_Click_2(object sender, EventArgs e)
+        {
+            Padres.Cuando = txtcuando.Text;
+            Padres.Donde = txtdonde.Text;
+            Padres.Diag_tratamiento = txtdiag_tratamiento.Text;
+            Padres.fun_aconte_medicos();
+            Padres.Fun_Show(dtg_medicos, Padres.CodAlumno);
+
+        }
+
+        private void txtescolaridad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValidarNombres_SoloLetras(sender, e);
+        }
+
+        private void txtdireccion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValirLetrasYEspacios_Direccion(sender, e, txtdireccion);
+        }
+
+        private void txttelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValidarID(sender, e);
         }
     }
 }

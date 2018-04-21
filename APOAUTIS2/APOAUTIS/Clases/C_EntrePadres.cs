@@ -594,18 +594,23 @@ namespace APOAUTIS.Clases
         }
 
 
-        public void Fun_Show(DataGridView dgv)
+        public void Fun_Show(DataGridView dgv, int Cod_Alumno)
         {
+            if (string.IsNullOrEmpty(Cod_Alumno.ToString()))
+            {
+                Cod_Alumno = 0;
+            }
             cnx.Open();
             try
             {
-                DataAdapter = new MySqlDataAdapter(@"select cuando,donde,DiagnosticoTratamiento from acontecimientomedco", ccnx);
+                sql = string.Format(@"select cuando,donde,DiagnosticoTratamiento from acontecimientomedco where Alumnos_CodAlumno ='{0}'", Cod_Alumno);
+                DataAdapter = new MySqlDataAdapter(sql, ccnx);
                 dt = new DataTable();
                 DataAdapter.Fill(dt);
                 dgv.DataSource = dt;
 
             }
-            catch
+            catch(Exception)
             {
 
             }
@@ -1650,6 +1655,17 @@ values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}
             V_EdadCronologica = FV_EdadCro;
         }
 
+        public void UpdateAlumnoOtros(string Escolaridad, string Direccion, string TelFijo, int CodAlumo)
+        {
+            this.sql = string.Format(@"update alumnos set EscolaridadAlum = '{0}', DireccionAlum = '{1}', TelFijoAlum = '{2}'  
+                                        where CodAlumno = '{3}'", Escolaridad, Direccion, TelFijo, CodAlumo);
+            this.cmd = new MySqlCommand(this.sql, this.cnx);
+            this.cnx.Open();
+            MySqlDataReader Reg = null;
+            Reg = this.cmd.ExecuteReader();
+
+            this.cnx.Close();
+        }
 
     }
 }

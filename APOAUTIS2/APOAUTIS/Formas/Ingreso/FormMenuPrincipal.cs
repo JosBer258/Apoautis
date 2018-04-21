@@ -20,6 +20,10 @@ namespace APOAUTIS.Formas.Ingreso
 {
     public partial class FormMenuPrincipal : Form
     {
+        //3 super---1 normal
+
+        public string CodUsuario;
+
         public FormMenuPrincipal()
         {
             InitializeComponent();
@@ -44,9 +48,16 @@ namespace APOAUTIS.Formas.Ingreso
         {
 
            
-            if (State != 3)
+            if (CodUsuario != "3")
             {
                 usuariosToolStripMenuItem.Visible = false;
+                usuariosToolStripMenuItem.Visible = false;
+                ingresosGastosToolStripMenuItem.Visible = false;
+                montoMatriculaToolStripMenuItem.Visible = false;
+                rangoDeMensualidadesToolStripMenuItem.Visible = false;
+                alumnosToolStripMenuItem.Visible = false;
+                responsablesToolStripMenuItem.Visible = false;
+                mantenimientoToolStripMenuItem.Visible = false;
             }
         }
 

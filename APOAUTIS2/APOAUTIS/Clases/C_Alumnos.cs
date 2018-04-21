@@ -720,7 +720,6 @@ InstProceAlumno, InstDondeEstaIncluido, estado, emerlugar, emertelefono, CodAlum
         public bool Fun_Ingresar_Alumno()
         {
             bool Var_Ver = false;
-            MessageBox.Show(FechaNaciAlum11);
             this.sql = string.Format(@"insert into alumnos(NomAlumno, LugarNaciAlum, FechaNaciAlum,EdadAlum,DireccionAlum,
 TelFijoAlum,CelAlumno,InstProceAlumno,InstDondeEstaIncluido,EmergLugar,EmergTelefono, Estado, SexoAlum, IdAlum ) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}', 4, '{11}','{12}');",
 NomAlumno11, LugarNaciAlum11, FechaNaciAlum11, EdadAlum11, DireccionAlum11, TelFijoAlum11, CelAlumno11, InstProceAlumno11,InstDondeEstaIncluido11, EmergLugar1, EmergTelefono1, SexoAlum11,IdAlum11);
@@ -762,8 +761,10 @@ NomAlumno11, LugarNaciAlum11, FechaNaciAlum11, EdadAlum11, DireccionAlum11, TelF
         
         public void Fun_IngresarResponsables()
         {
-            this.sql = string.Format(@"insert into responsables(NomComRes, LugarTrabajoRes, ProfecionRes, OficioRes, TelTrabajoRes)
-                                        values ('{0}','{1}','{2}','{3}','{4}');",
+            this.sql = string.Format(@"insert into responsables
+(NomComRes, LugarTrabajoRes, ProfecionRes, OficioRes, TelTrabajoRes, 
+NumIdRes, DomicilioRes, TelCasaRes,TelCelRes, CorreoRes, Estado)
+values ('{0}','{1}','{2}','{3}','{4}','0','.','0','0','.','6');",
                 Var_NombreResp, Var_LugarTrabajo, Var_OficioProfesion, Var_OficioProfesion, Var_TelTrabajo);
             this.cnx.Open();
             this.cmd = new MySql.Data.MySqlClient.MySqlCommand(this.sql, this.cnx);
@@ -815,7 +816,24 @@ NomAlumno11, LugarNaciAlum11, FechaNaciAlum11, EdadAlum11, DireccionAlum11, TelF
             return (ultimo);
         }
 
+        public bool ValidarEstudio(int cod)
+        {
+            bool veri = false;
 
+            this.sql = string.Format(@"select * from estudiosocioeconomico where Alumnos_CodAlumno ='{0}';", cod);
+
+            this.cmd = new MySqlCommand(this.sql, this.cnx);
+            this.cnx.Open();
+            MySqlDataReader Reg = null;
+            Reg = this.cmd.ExecuteReader();
+
+            if (Reg.Read())
+            {
+                veri = true;
+            }
+            this.cnx.Close();
+            return veri;
+        }
 
     }
 }

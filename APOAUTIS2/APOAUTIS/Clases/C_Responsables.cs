@@ -701,7 +701,52 @@ namespace APOAUTIS.Clases
         }
 
 
+        public void Fun_ActualizarResponsables(int Cod, string Num_Telefono)
+        {
+            this.sql = string.Format(@"update responsables set TelCelRes='{0}' where CodResp='{1}'", Num_Telefono, Cod);
 
+            this.cmd = new MySqlCommand(this.sql, this.cnx);
+            this.cnx.Open();
+            MySqlDataReader Reg = null;
+            Reg = this.cmd.ExecuteReader();
+            this.cnx.Close();
+        }
+
+        public void Fun_IngresatrOtro(int Cod, string Prentesco, int edad)
+        {
+            this.sql = string.Format(@"insert into   encargadootrofamiliar values(0,'{0}','{1}', '{2}')", Cod, Prentesco, edad);
+
+            this.cmd = new MySqlCommand(this.sql, this.cnx);
+            this.cnx.Open();
+            MySqlDataReader Reg = null;
+            Reg = this.cmd.ExecuteReader();
+            this.cnx.Close();
+        }
+
+
+        public void insertResponsableOtros(string Telefon, string Nombre, string Profecion)
+
+        {
+            try
+            {
+                this.sql = string.Format(@"insert into responsables values (0,'{0}','{1}','{2}','{3}',
+                                    '{4}','{5}','{6}','{7}','{8}','{9}','{10}')",
+                                            Nombre, "0", "0", Profecion, Profecion, "..",
+                                             Telefon, Telefon, Telefon, "0", "6");
+
+                this.cnx.Open();
+                this.cmd = new MySqlCommand(this.sql, this.cnx);
+               
+                MySqlDataReader Reg = null;
+                Reg = this.cmd.ExecuteReader();
+                this.cnx.Close();
+
+            }
+            catch(System.Exception ex) {
+                MessageBox.Show(ex.ToString());
+            }
+            this.cnx.Close();
+        }
 
     }
 }

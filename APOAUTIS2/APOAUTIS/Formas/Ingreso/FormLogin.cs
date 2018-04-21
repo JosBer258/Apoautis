@@ -48,6 +48,7 @@ namespace APOAUTIS
                 {
                     Usuarios.RestablecerIntentos();
                     FormMenuPrincipal menu = new FormMenuPrincipal();
+                    menu.CodUsuario = Usuarios.Var_codigo_estado.ToString();
                     menu.ShowDialog();
                 }
                 else

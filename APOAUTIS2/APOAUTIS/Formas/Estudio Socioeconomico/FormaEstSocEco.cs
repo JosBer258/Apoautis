@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using APOAUTIS.Formas.Estudio_Socioeconomico;
+using APOAUTIS.Clases;
 
 namespace APOAUTIS
 {
@@ -21,6 +22,7 @@ namespace APOAUTIS
         Clases.C_responsablePadre padrep = new Clases.C_responsablePadre();
         Clases.C_responsablesMadre madrep = new Clases.C_responsablesMadre();
         Clases.C_ResponsablesOtro otroresp = new Clases.C_ResponsablesOtro();
+        C_Responsables cResp = new C_Responsables();
         int var_respM = 0;
         int var_respP = 0;
         int var_respO = 0;
@@ -33,51 +35,51 @@ namespace APOAUTIS
 
         double total_ingresos;
         double total_gastos;
+        int Cod_Resp;
 
+        string ihss = " ";
+        string hospitalEscu = " ";
+        string hospitalSanf = " ";
+        string centroSa = " ";
+        string clinicaPar = " ";
+        string otroSalud = " ";
+        string Diabetes = " ";
+        string hiperten = " ";
+        string enferRespi = " ";
+        string ninguna = " ";
+        string otra = " ";
 
-        string ihss;
-        string hospitalEscu;
-        string hospitalSanf;
-        string centroSa;
-        string clinicaPar;
-        string otroSalud;
-        string Diabetes;
-        string hiperten;
-        string enferRespi;
-        string ninguna;
-        string otra;
+        string rb_propia = " ";
+        string rb_alquilada = " ";
+        string rb_otraTenencia = " ";
+        string const_ladrillo = " ";
+        string cont_bloque = " ";
+        string cont_madera = " ";
+        string cont_otro = " ";
+        string piso_tierra = " ";
+        string piso_cemento = " ";
+        string piso_ladrillo = " ";
+        string piso_ceramica = " ";
+        string piso_madera = " ";
+        string piso_otro = " ";
 
-        string rb_propia;
-        string rb_alquilada;
-        string rb_otraTenencia;
-        string const_ladrillo;
-        string cont_bloque;
-        string cont_madera;
-        string cont_otro;
-        string piso_tierra;
-        string piso_cemento;
-        string piso_ladrillo;
-        string piso_ceramica;
-        string piso_madera;
-        string piso_otro;
+        string energia = " ";
+        string agua = " ";
+        string telefono = " ";
+        string alcantarillado = " ";
+        string otroServicio = " ";
 
-        string energia;
-        string agua;
-        string telefono;
-        string alcantarillado;
-        string otroServicio;
-
-        string television;
-        string equipoSonido;
-        string refrigerador;
-        string Estufa;
-        string ducha;
-        string lavadora;
-        string auto;
-        string micro;
-        string compu;
-        string ventilador;
-        string aire;
+        string television = " ";
+        string equipoSonido = " ";
+        string refrigerador = " ";
+        string Estufa = " ";
+        string ducha = " ";
+        string lavadora = " ";
+        string auto = " ";
+        string micro = " ";
+        string compu = " ";
+        string ventilador = " ";
+        string aire= " ";
 
 
 
@@ -118,17 +120,118 @@ namespace APOAUTIS
             tabEstSocioEco.SelectedTab = InformacionVivienda;
         }
 
+        public void ValidarTrabajo()
+        {
+            if (Combox_EsSo_TrabajaMadre_forma.SelectedIndex == -1)
+            {
+                Combox_EsSo_TrabajaMadre_forma.SelectedIndex = 1;
+                txt_EsSo_LugarTrabMadre_forma.Text = "no";
+            }
+
+            if (Combox_EsSo_TrabajaMadre_forma.SelectedIndex == 0)
+            {
+                if (string.IsNullOrEmpty(txt_EsSo_LugarTrabMadre_forma.Text)){
+                    txt_EsSo_LugarTrabMadre_forma.Text = "Desconocido";
+                }
+            }
+
+            if (Combox_EsSo_TrabajaMadre_forma.SelectedIndex == 1)
+            {
+                if (string.IsNullOrEmpty(txt_EsSo_LugarTrabMadre_forma.Text)){
+                    txt_EsSo_LugarTrabMadre_forma.Text = "no";
+                }
+            }
+
+
+        }
+
+        public void Fun_ValidarVacios()
+        {
+            if (string.IsNullOrEmpty(txt_EsSo_GastoMedi_SaludRecre.Text))
+            {
+                txt_EsSo_GastoMedi_SaludRecre.Text = "0";
+            }
+
+
+            if (string.IsNullOrEmpty(txt_EsSo_HabitantesCasa_InfoFami.Text))
+            {
+                txt_EsSo_HabitantesCasa_InfoFami.Text = "0";
+            }
+
+            if (string.IsNullOrEmpty(txt_EsSo_CuantosHijos_InfoFami.Text))
+            {
+                txt_EsSo_CuantosHijos_InfoFami.Text = "0";
+            }
+
+            if (string.IsNullOrEmpty(txt_EsSo_TotalMiemb_InfoFami.Text))
+            {
+                txt_EsSo_TotalMiemb_InfoFami.Text = "0";
+            }
+            if (string.IsNullOrEmpty(txt_EsSo_CuantosFamil_InfoFami.Text))
+            {
+                txt_EsSo_CuantosFamil_InfoFami.Text = "0";
+            }
+            if (string.IsNullOrEmpty(txt_EsSo_TotalTraba_InfoFami.Text))
+            {
+                txt_EsSo_TotalTraba_InfoFami.Text = "0";
+            }
+
+
+          
+        }
         private void button4_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            // string strDate = dateTimePicker1.Value.ToString("yyyy/MM/dd");
-            // DateTime varFeInicio = Convert.toDatetime(dtpFeInicio.Text);
+            C_Alumnos C_Al = new C_Alumnos();
             Var_codigoAlumno = C_datos.CodAlumno;
 
-            
 
-            
 
+            if ( C_Al.ValidarEstudio(Var_codigoAlumno) ==true)
+            {
+                MessageBox.Show("Ya existe un estudio de este alumno", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txt_EsSo_Aporbado_SaludRecre.Text))
+            {
+                MessageBox.Show("Debe ingresar el nombre de la persona que aprobo este ingreso", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            //this.Hide();
+            // string strDate = dateTimePicker1.Value.ToString("yyyy/MM/dd");
+            // DateTime varFeInicio = Convert.toDatetime(dtpFeInicio.Text);
+
+            Fun_ValidarVacios();
+            ValidarIngresosVacios();
+            Fun_VerificarLugaresVacios();
+
+            if (Fun_ValidarExistenciaOtros() == false)
+            {
+                MessageBox.Show("Debe llenar todos los datos", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_EsSo_NomEncarg_DatosGe.Focus();
+                return;
+            }
+
+            ValidarTrabajo();
+
+            if (Fun_ValidarExistenciaMadre() == false)
+            {
+                MessageBox.Show("Debe llenar todos los datos", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_EsSo_NomMadre_DatosGe.Focus();
+                return;
+            }
+
+            if (Fun_ValidarExistenciaPadre() == false)
+            {
+                MessageBox.Show("Debe llenar todos los datos", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_EsSo_NomPadre_DatosGe.Focus();
+                return;
+            }
+
+
+
+          
             Clases.C_EstudioSocioEc estudioSocio = new Clases.C_EstudioSocioEc();
             estudioSocio.CodEstudioSocio = Var_codigoAlumno;
             estudioSocio.CodAlumno= Var_codigoAlumno;
@@ -155,7 +258,7 @@ namespace APOAUTIS
             Clases.C_InformacionFamilia infoFamilia = new Clases.C_InformacionFamilia();
             infoFamilia.CodAlumno1 = Var_codigoAlumno;
             infoFamilia.PersonasHabitan1 = Convert.ToInt32(txt_EsSo_HabitantesCasa_InfoFami.Text.Trim());
-            infoFamilia.TieneMasHijos1 = txt_EsSo_MasHijos_InfoFami.Text.Trim();
+            infoFamilia.TieneMasHijos1 = comboBox1.SelectedItem.ToString();
             infoFamilia.HabitanOtrosFamiliares1 = Convert.ToString(combox_EsSo_CuantosFami_InfoFami.Text);
             infoFamilia.MienEnTotal1 = Convert.ToInt32(txt_EsSo_TotalMiemb_InfoFami.Text.Trim());
             infoFamilia.CuantosMiembrosTrabajan1 = Convert.ToInt32(txt_EsSo_TotalMiemb_InfoFami.Text.Trim());
@@ -183,131 +286,82 @@ namespace APOAUTIS
             int resultado2 = Clases.C_EstudioSocioMetodos.AgregarEInformacionFamilia(infoFamilia);
 
 
-            
 
-            
-              Clases.C_HistorialMedico hisMedico = new Clases.C_HistorialMedico();
-              hisMedico.CodigoAlum = Var_codigoAlumno;
-              hisMedico.LugaresRecibeAtencion1 = Convert.ToString(ihss + " " +hospitalEscu +" " + hospitalSanf + " "+ centroSa + " " + clinicaPar + " " + otroSalud + " ");
-              hisMedico.EnfermedadesPadeceFamilia1 =Convert.ToString(Diabetes + " " + hiperten + " " + enferRespi + " " + ninguna + " " + otra + " ");
-              hisMedico.CuantoGastaMedi1 = Convert.ToDouble(txt_EsSo_GastoMedi_SaludRecre.Text);
+            try
+            {
 
-              int resultado3 = Clases.C_EstudioSocioMetodos.AgregarAtencionMedica(hisMedico);
+                Clases.C_HistorialMedico hisMedico = new Clases.C_HistorialMedico();
+                hisMedico.CodigoAlum = Var_codigoAlumno;
+                hisMedico.LugaresRecibeAtencion1 = Convert.ToString(ihss + " " + hospitalEscu + " " + hospitalSanf + " " + centroSa + " " + clinicaPar + " " + otroSalud + " ");
+                hisMedico.EnfermedadesPadeceFamilia1 = Convert.ToString(Diabetes + " " + hiperten + " " + enferRespi + " " + ninguna + " " + otra + " ");
+                hisMedico.CuantoGastaMedi1 = Convert.ToDouble(txt_EsSo_GastoMedi_SaludRecre.Text);
 
-              if (resultado3 > 0)
-              {
-                  MessageBox.Show("Estudio SocioEconomico Ingresado Exitosamente", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-              }
-              else
-              {
-                  MessageBox.Show("No se pudo guardar ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-              }
+                int resultado3 = Clases.C_EstudioSocioMetodos.AgregarAtencionMedica(hisMedico);
 
-              
-            var_respM = madrep.CodResp;
+                if (resultado3 > 0)
+                {
+                    MessageBox.Show("Estudio SocioEconomico Ingresado Exitosamente", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo guardar ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }catch(System.Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
 
-            Clases.C_responsablesMadre madreresp = new Clases.C_responsablesMadre();
-            madreresp.CodResp = var_respM;
-            madreresp.IdResp = (int)Convert.ToDouble(txt_EsSo_IdentMadre_DatosGe.Text);
-            madreresp.DomicilioResp = Convert.ToString(txt_EsSo_DomiciMadre_DatosGe);
-            madreresp.LugarTrabRes= Convert.ToString(Combox_EsSo_TrabajaMadre_forma.Text);
-            madreresp.TelefonoCasaResp = Convert.ToString(txt_EsSo_TelCasaMadre_DatosGe.Text);
-            madreresp.TelefonoCasaResp = Convert.ToString(txt_EsSo_TelTrabMadre_DatosGe.Text);
 
-            int resultado6 = Clases.C_EstudioSocioMetodos.AgregarMadre(madreresp);
 
-  
+            if (string.IsNullOrEmpty(txt_EsSo_NomMadre_DatosGe.Text) == false && string.IsNullOrEmpty(txt_EsSo_IdentMadre_DatosGe.Text) == false)
+            {
 
-            var_respP = padrep.CodResp;
 
-            Clases.C_responsablePadre padreresp = new Clases.C_responsablePadre();
-            padreresp.CodResp = var_respP;
-            padreresp.IdResp = Convert.ToInt32(txt_EsSo_IdentMadre_DatosGe.Text);
-            padreresp.DomicilioResp = Convert.ToString(txt_EsSo_DomiciMadre_DatosGe);
-            padreresp.LugarTrabRes = Convert.ToString(Combox_EsSo_TrabajaMadre_forma.Text);
-            padreresp.TelefonoCasaResp = Convert.ToString(txt_EsSo_TelCasaMadre_DatosGe.Text);
-            padreresp.TelefonoCasaResp = Convert.ToString(txt_EsSo_TelTrabMadre_DatosGe.Text);
+                Clases.C_responsablesMadre madreresp = new Clases.C_responsablesMadre();
+                madreresp.CodResp = var_respM;
 
-            int resultado7 = Clases.C_EstudioSocioMetodos.AgregarPadre(padreresp);
 
-            
+                madreresp.IdResp = (int)Convert.ToDouble(txt_EsSo_IdentMadre_DatosGe.Text);
+                madreresp.DomicilioResp = Convert.ToString(txt_EsSo_DomiciMadre_DatosGe);
+                madreresp.LugarTrabRes = Convert.ToString(Combox_EsSo_TrabajaMadre_forma.Text);
+                madreresp.TelefonoCasaResp = Convert.ToString(txt_EsSo_TelCasaMadre_DatosGe.Text);
+                madreresp.TelefonoCasaResp = Convert.ToString(txt_EsSo_TelTrabMadre_DatosGe.Text);
 
+                int resultado6 = Clases.C_EstudioSocioMetodos.AgregarMadre(madreresp);
+                cResp.Fun_ActualizarResponsables(madreresp.CodResp, txt_EsSo_CelMadre_DatosGe.Text);
+
+            }
+
+            if (string.IsNullOrEmpty(txt_EsSo_NomPadre_DatosGe.Text) == false && string.IsNullOrEmpty(txt_EsSo_IdentPadre_DatosGe.Text) == false)
+            {
+                //var_respP = padrep.CodResp;
+
+                Clases.C_responsablePadre padreresp = new Clases.C_responsablePadre();
+                padreresp.CodResp = var_respP;
+                padreresp.IdResp = Convert.ToInt32(txt_EsSo_IdentPadre_DatosGe.Text);
+                padreresp.DomicilioResp = Convert.ToString(txt_EsSo_DomiciPadre_DatosGe.Text);
+                padreresp.LugarTrabRes = Convert.ToString(combox_EsSo_TrabajaPadre_forma.Text);
+                padreresp.TelefonoCasaResp = Convert.ToString(txt_EsSo_TelCAsaPadre_DatosGe.Text);
+                padreresp.TelefonoCasaResp = Convert.ToString(txt_EsSo_TelTrabPadre_DatosGe.Text);
+
+                int resultado7 = Clases.C_EstudioSocioMetodos.AgregarPadre(padreresp);
+                cResp.Fun_ActualizarResponsables(padreresp.CodResp, txt_EsSo_CelPadre_DatosGe.Text);
+
+            }
+
+
+            if (string.IsNullOrEmpty(txt_EsSo_NomEncarg_DatosGe.Text) == false && string.IsNullOrEmpty(txt_EsSo_ParentescoEncar_DatosGe.Text) == false)
+            {
+                //Ingreso Repsonsable
+                cResp.insertResponsableOtros(txt_EsSo_TelEncarg_DatosGe.Text, txt_EsSo_NomEncarg_DatosGe.Text, txt_EsSo_OficioEncarg_DatosGe.Text);
+                Cod_Resp = cResp.ObtenerUltimoCodigoResponsable() - 1;
+                cResp.insertResponsableAlumno(Var_codigoAlumno, Cod_Resp, 3);
+                cResp.Fun_IngresatrOtro(Cod_Resp, txt_EsSo_ParentescoEncar_DatosGe.Text, Convert.ToUInt16(txt_EsSo_EdadEncarg_DatosGe.Text));
+
+            }
 
 
            
-
-
-            Clases.C_ResponsablesOtro Otroresp = new Clases.C_ResponsablesOtro();
-            Otroresp.NomRespOtro = txt_EsSo_NomEncarg_DatosGe.Text;
-            Otroresp.Telefono = Convert.ToString(txt_EsSo_TelEncarg_DatosGe.Text);
-            Otroresp.Profesion = txt_EsSo_OficioEncarg_DatosGe.Text;
-
-            int resultado8 = Clases.C_EstudioSocioMetodos.AgregarOtro(Otroresp);
-
-
-
-
-            if (resultado8 > 0)
-            {
-                MessageBox.Show("Estudio SocioEconomico Ingresado Exitosamente", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("nuevo responsable  ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-
-            }
-
-
-            Clases.C_EstudioSocioMetodos.ObtenerOtro();
-
-            var_respO = otroresp.CodRespOtro;
-            Clases.C_ResponsablesOtro tipor = new Clases.C_ResponsablesOtro();
-
-            tipor.CodRespOtro = var_respO;
-            tipor.CodAlumno = Var_codigoAlumno;
-
-
-            int resultado10 = Clases.C_EstudioSocioMetodos.AgregarOtroTipo(tipor);
-
-
-
-
-            if (resultado10 > 0)
-            {
-                MessageBox.Show("tipo resp ", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("otro tipo alumres", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-
-
-
-            Clases.C_ResponsablesOtro tiporesp = new Clases.C_ResponsablesOtro();
-            Otroresp.CodRespOtro = var_respO;
-            tiporesp.Parentesco = txt_EsSo_ParentescoEncar_DatosGe.Text;
-            tiporesp.Edad = Convert.ToInt32(txt_EsSo_EdadEncarg_DatosGe.Text);
-
-
-            int resultado9 = Clases.C_EstudioSocioMetodos.AgregarOtroResp(tiporesp);
-
-
-
-
-            if (resultado9 > 0)
-            {
-                MessageBox.Show("tipo resp ", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("otro tipo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-
-
-
-
-       
 
             Clases.C_LugaresRecreacion recreacion = new Clases.C_LugaresRecreacion();
             recreacion.CodAlumno = Var_codigoAlumno;
@@ -389,41 +443,69 @@ namespace APOAUTIS
             FromBusquedaAlumno frmBusqEstSoc = new FromBusquedaAlumno();
             frmBusqEstSoc.ShowDialog();
 
-
-            if (FromBusquedaAlumno.AlumnoSeleccionado != null)
+            try
             {
-                C_datos.CodAlumno = FromBusquedaAlumno.AlumnoSeleccionado.CodAlumno;
-                txt_EsSo_IdentiEst_DatosGe.Text = Convert.ToString(FromBusquedaAlumno.AlumnoSeleccionado.IdAlumno);
-                txt_EsSo_NombreEst_DatosGe.Text = FromBusquedaAlumno.AlumnoSeleccionado.NombreAlumno;
-                txt_EsSo_LugarNaci_DatosGe.Text = FromBusquedaAlumno.AlumnoSeleccionado.LugarNacAlumno;
-                txt_EsSo_FechaNa_DatosGe.Text = Convert.ToString(FromBusquedaAlumno.AlumnoSeleccionado.Fecha_NacAlumno.Date);
-                txt_EsSo_EdadEst_DatosGe.Text = Convert.ToString(FromBusquedaAlumno.AlumnoSeleccionado.EdadAlumno);
-                txt_EsSo_SexoAlum_DatosGe.Text = Convert.ToString(FromBusquedaAlumno.AlumnoSeleccionado.SexoAlumno);
+                if (FromBusquedaAlumno.AlumnoSeleccionado != null)
+                {
+                    C_datos.CodAlumno = FromBusquedaAlumno.AlumnoSeleccionado.CodAlumno;
+                    txt_EsSo_IdentiEst_DatosGe.Text = Convert.ToString(FromBusquedaAlumno.AlumnoSeleccionado.IdAlumno);
+                    txt_EsSo_NombreEst_DatosGe.Text = FromBusquedaAlumno.AlumnoSeleccionado.NombreAlumno;
+                    txt_EsSo_LugarNaci_DatosGe.Text = FromBusquedaAlumno.AlumnoSeleccionado.LugarNacAlumno;
+                    txt_EsSo_FechaNa_DatosGe.Text = Convert.ToString(FromBusquedaAlumno.AlumnoSeleccionado.Fecha_NacAlumno.Date);
+                    txt_EsSo_EdadEst_DatosGe.Text = Convert.ToString(FromBusquedaAlumno.AlumnoSeleccionado.EdadAlumno);
+                    txt_EsSo_SexoAlum_DatosGe.Text = Convert.ToString(FromBusquedaAlumno.AlumnoSeleccionado.SexoAlumno);
+                }
+            }
+            catch
+            {
+
             }
 
-            if (FromBusquedaAlumno.madreSeleccionado != null)
+
+            try
+            {
+
+                if (FromBusquedaAlumno.madreSeleccionado != null)
             {
                 madrep.CodAlumno = FromBusquedaAlumno.madreSeleccionado.CodAlumno;
+                madrep.CodResp = FromBusquedaAlumno.madreSeleccionado.CodResp;
+                    var_respM = madrep.CodResp;
+                   
+  
 
-
-                txt_EsSo_NomMadre_DatosGe.Text = FromBusquedaAlumno.madreSeleccionado.NombResp;
+                    txt_EsSo_NomMadre_DatosGe.Text = FromBusquedaAlumno.madreSeleccionado.NombResp;
                 txt_EsSo_OficioMadre_forma.Text = FromBusquedaAlumno.madreSeleccionado.ProfesionResp1 + FromBusquedaAlumno.madreSeleccionado.OficioREsp;
                 txt_EsSo_LugarTrabMadre_forma.Text = FromBusquedaAlumno.madreSeleccionado.LugarTrabRes;
                 txt_EsSo_CelMadre_DatosGe.Text = FromBusquedaAlumno.madreSeleccionado.TelefonoCasaResp;
             }
+            }
+            catch
+            {
 
+            }
+
+
+            try { 
             if (FromBusquedaAlumno.padreSeleccionado != null)
             {
                 padrep.CodAlumno = FromBusquedaAlumno.padreSeleccionado.CodAlumno;
+                    padrep.CodResp = FromBusquedaAlumno.padreSeleccionado.CodResp;
+                    var_respP = padrep.CodResp;
 
-
-                txt_EsSo_NomPadre_DatosGe.Text = FromBusquedaAlumno.padreSeleccionado.NombResp;
+                    
+                    txt_EsSo_NomPadre_DatosGe.Text = FromBusquedaAlumno.padreSeleccionado.NombResp;
                 txt_EsSo_OficioPadre_forma.Text = FromBusquedaAlumno.padreSeleccionado.ProfesionResp1 + FromBusquedaAlumno.padreSeleccionado.OficioREsp;
                 txt_EsSo_LugarTrabPadre_forma.Text = FromBusquedaAlumno.padreSeleccionado.LugarTrabRes;
                 txt_EsSo_CelPadre_DatosGe.Text = FromBusquedaAlumno.padreSeleccionado.TelefonoCasaResp;
             }
+        }
+            catch
+            {
 
- 
+            }
+          
+         
+          
 
         }
 
@@ -1271,6 +1353,7 @@ namespace APOAUTIS
             if (combox_EsSo_CuantosFami_InfoFami.Text == "No")
             {
                 txt_EsSo_CuantosFamil_InfoFami.Enabled = false;
+                txt_EsSo_CuantosFamil_InfoFami.Text = "0";
             }
         }
 
@@ -1466,6 +1549,202 @@ namespace APOAUTIS
         }
 
         private void FormaEstSocEco_Load(object sender, EventArgs e)
+        {
+            chekbox_EsSo_OtroSalud_SaludRecre.Checked = true;
+            chekbox_EsSo_NingunaEnfer_SaludRecre.Checked = true;
+            rbtm_EsSo_Propia_InfoVivien.Checked = true;
+            rbtm_EsSo_Bloque_InfoVivien.Checked = true;
+            rbtm_EsSo_Tierra_InfoVivien.Checked = true;
+            chekbox_EsSo_Energia_InfoVivien.Checked = true;
+            chekbox_EsSo_Tele_InfoVivien.Checked = true;
+
+
+            combox_EsSo_Parques_SaludRecre.SelectedIndex = 1;
+            combox_EsSo_CentrosCom_SaludRecre.SelectedIndex = 1;
+            combox_EsSo_Museos_SaludRecre.SelectedIndex = 1;
+            combox_EsSo_Cine_SaludRecre.SelectedIndex = 1;
+            combox_EsSo_Balnearios_SaludRecre.SelectedIndex = 1;
+            combox_EsSo_Playa_SaludRecre.SelectedIndex = 1;
+            combox_EsSo_OtrosLugares_SaludRecre.SelectedIndex = 1;
+            combox_EsSo_CuantosFami_InfoFami.SelectedIndex = 1;
+            comboBox1.SelectedIndex = 1;
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        public bool Fun_ValidarExistenciaMadre()
+        {
+            bool resp = false;
+
+            if(string.IsNullOrEmpty(txt_EsSo_NomMadre_DatosGe.Text)==true 
+                && string.IsNullOrEmpty(txt_EsSo_IdentMadre_DatosGe.Text) == true
+                && string.IsNullOrEmpty(txt_EsSo_DomiciMadre_DatosGe.Text) == true
+                && string.IsNullOrEmpty(txt_EsSo_OficioMadre_forma.Text) == true
+                && string.IsNullOrEmpty(txt_EsSo_TelCasaMadre_DatosGe.Text) == true
+                && string.IsNullOrEmpty(txt_EsSo_CelMadre_DatosGe.Text) == true
+                && string.IsNullOrEmpty(txt_EsSo_TelTrabMadre_DatosGe.Text) == true)
+            {
+                resp= true;
+            }
+
+
+            if (string.IsNullOrEmpty(txt_EsSo_NomMadre_DatosGe.Text) == false
+              && string.IsNullOrEmpty(txt_EsSo_IdentMadre_DatosGe.Text) == false
+              && string.IsNullOrEmpty(txt_EsSo_DomiciMadre_DatosGe.Text) == false
+              && string.IsNullOrEmpty(txt_EsSo_OficioMadre_forma.Text) == false
+              && string.IsNullOrEmpty(txt_EsSo_TelCasaMadre_DatosGe.Text) == false
+              && string.IsNullOrEmpty(txt_EsSo_CelMadre_DatosGe.Text) == false
+              && string.IsNullOrEmpty(txt_EsSo_TelTrabMadre_DatosGe.Text) == false)
+            {
+                resp= true;
+            }
+
+            return resp;
+        }
+
+        public bool Fun_ValidarExistenciaPadre()
+        {
+            bool resp = false;
+
+            if (string.IsNullOrEmpty(txt_EsSo_NomPadre_DatosGe.Text) == true
+            && string.IsNullOrEmpty(txt_EsSo_IdentPadre_DatosGe.Text) == true
+            && string.IsNullOrEmpty(txt_EsSo_DomiciPadre_DatosGe.Text) == true
+            && string.IsNullOrEmpty(txt_EsSo_OficioPadre_forma.Text) == true
+            && string.IsNullOrEmpty(txt_EsSo_TelCAsaPadre_DatosGe.Text) == true
+            && string.IsNullOrEmpty(txt_EsSo_CelPadre_DatosGe.Text) == true
+            && string.IsNullOrEmpty(txt_EsSo_TelTrabPadre_DatosGe.Text) == true)
+            {
+                resp = true;
+            }
+
+
+            if (string.IsNullOrEmpty(txt_EsSo_NomPadre_DatosGe.Text) == false
+              && string.IsNullOrEmpty(txt_EsSo_IdentPadre_DatosGe.Text) == false
+              && string.IsNullOrEmpty(txt_EsSo_DomiciPadre_DatosGe.Text) == false
+              && string.IsNullOrEmpty(txt_EsSo_OficioPadre_forma.Text) == false
+              && string.IsNullOrEmpty(txt_EsSo_TelCAsaPadre_DatosGe.Text) == false
+              && string.IsNullOrEmpty(txt_EsSo_CelPadre_DatosGe.Text) == false
+              && string.IsNullOrEmpty(txt_EsSo_TelTrabPadre_DatosGe.Text) == false)
+            {
+                resp = true;
+            }
+
+          
+
+            return resp;
+        }
+
+        public bool Fun_ValidarExistenciaOtros()
+        {
+            bool resp = false;
+
+            if(string.IsNullOrEmpty(txt_EsSo_NomEncarg_DatosGe.Text)==true && 
+                string.IsNullOrEmpty(txt_EsSo_ParentescoEncar_DatosGe.Text) == true && string.IsNullOrEmpty(txt_EsSo_EdadEncarg_DatosGe.Text) == true &&
+                string.IsNullOrEmpty(txt_EsSo_TelEncarg_DatosGe.Text) == true && string.IsNullOrEmpty(txt_EsSo_OficioEncarg_DatosGe.Text) == true)
+            {
+                resp = true;
+            }
+
+            if (string.IsNullOrEmpty(txt_EsSo_NomEncarg_DatosGe.Text) == false 
+                && string.IsNullOrEmpty(txt_EsSo_ParentescoEncar_DatosGe.Text) == false && string.IsNullOrEmpty(txt_EsSo_EdadEncarg_DatosGe.Text) == false &&
+                string.IsNullOrEmpty(txt_EsSo_TelEncarg_DatosGe.Text) == false && string.IsNullOrEmpty(txt_EsSo_OficioEncarg_DatosGe.Text) == false)
+            {
+                resp = true;
+            }
+
+           
+            return resp;
+        }
+
+        public void ValidarIngresosVacios()
+        {
+            var boxes = groupBox5.Controls.OfType<TextBox>();
+            foreach (var box in boxes)
+            {
+                if (string.IsNullOrEmpty(box.Text))
+                {
+                    box.Text = "0";
+                }
+
+            }
+
+            var boxes1 = groupBox6.Controls.OfType<TextBox>();
+            foreach (var box in boxes1)
+            {
+                if (string.IsNullOrEmpty(box.Text))
+                {
+                    box.Text = "0";
+                }
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (comboBox1.Text == "No")
+            {
+                txt_EsSo_CuantosHijos_InfoFami.Enabled = false;
+                txt_EsSo_CuantosHijos_InfoFami.Text = "0";
+            }
+        }
+
+        public void Fun_VerificarLugaresVacios()
+        {
+            if (combox_EsSo_Parques_SaludRecre.SelectedItem.ToString() == "Si"  && string.IsNullOrEmpty( txt_EsSo_Parques_SaludRecre.Text))
+            {
+                txt_EsSo_Parques_SaludRecre.Text = "Desconocido";
+            }
+
+
+            if (combox_EsSo_CentrosCom_SaludRecre.SelectedItem.ToString() == "Si" && string.IsNullOrEmpty(txt_EsSo_CentrosCom_SaludRecre.Text))
+            {
+                txt_EsSo_CentrosCom_SaludRecre.Text = "Desconocido";
+            }
+
+
+            if (combox_EsSo_Museos_SaludRecre.SelectedItem.ToString() == "Si" && string.IsNullOrEmpty(txt_EsSo_Museos_SaludRecre.Text))
+            {
+                txt_EsSo_Museos_SaludRecre.Text = "Desconocido";
+            }
+
+
+            if (combox_EsSo_Cine_SaludRecre.SelectedItem.ToString() == "Si" && string.IsNullOrEmpty(txt_EsSo_cine_SaludRecre.Text))
+            {
+                txt_EsSo_cine_SaludRecre.Text = "Desconocido";
+            }
+
+            if (combox_EsSo_Balnearios_SaludRecre.SelectedItem.ToString() == "Si" && string.IsNullOrEmpty(txt_EsSo_Balnearios_SaludRecre.Text))
+            {
+                txt_EsSo_Balnearios_SaludRecre.Text = "Desconocido";
+            }
+
+            if (combox_EsSo_Playa_SaludRecre.SelectedItem.ToString() == "Si" && string.IsNullOrEmpty(txt_EsSo_Playa_SaludRecre.Text))
+            {
+                txt_EsSo_Playa_SaludRecre.Text = "Desconocido";
+            }
+
+            if (combox_EsSo_OtrosLugares_SaludRecre.SelectedItem.ToString() == "Si" && string.IsNullOrEmpty(txt_EsSo_OtrosLugares_SaludRecre.Text))
+            {
+                txt_EsSo_OtrosLugares_SaludRecre.Text = "Desconocido";
+            }
+
+
+        }
+
+        private void label72_Click(object sender, EventArgs e)
         {
 
         }
