@@ -103,6 +103,8 @@ namespace APOAUTIS
         {
             Fun_Limpiar();
             Fun_DeshabilitarControles();
+            cAlum.GenerarJornada(Pest1_Cmb_Jornada);
+            cAlum.GenerarTipoMatricula(comboBox1);
             //Extaer ultimos codigos de responsables 
         }
 
@@ -277,6 +279,7 @@ namespace APOAUTIS
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             if (Convert.ToInt32(comboBox1.SelectedValue) == 1)
             {
                 Bttn_Buscar.Visible = false;
@@ -632,7 +635,7 @@ namespace APOAUTIS
             textBox2.Text = Convert.ToString(cAlum.Fun_ExtraerUltimoCodigo() + 2);
             Pest1_txtNumeroMatricula.Text = Convert.ToString(cMatri.GenerarCod());
             cAlum.GenerarJornada(Pest1_Cmb_Jornada);
-            cAlum.GenerarTipoMatricula(comboBox1);
+          //  cAlum.GenerarTipoMatricula(comboBox1);
             Pest4_Cmb_UsaMedicamentos.SelectedIndex = 1;
             comboBox2.SelectedIndex = -1;
             textBox3.Clear();
@@ -664,8 +667,9 @@ namespace APOAUTIS
 
         public void Fun_ExtraerDatos(int cod, string name)
         {
-           
-          
+            Fun_Limpiar();
+
+
             Cl_Busq.Var_Alum_CodAlumno = (int)Convert.ToDouble(cod);
             Pest1_Txt_NomEducador.Text = name;
             Cl_Busq.Fun_ExtraerDatos_Mat_Alumno();
@@ -851,6 +855,11 @@ namespace APOAUTIS
         private void Pest3_Txt_NombrePadre_KeyPress(object sender, KeyPressEventArgs e)
         {
             Val.ValidarNombres_SoloLetras(sender, e);
+        }
+
+        public void Clean()
+        {
+
         }
     }
 }

@@ -28,21 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGlobalShowAlum));
             this.Bttn_Cancelar = new System.Windows.Forms.Button();
             this.Txt_FiltroAlumno = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.DataGrid_Show = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid_Show)).BeginInit();
             this.SuspendLayout();
             // 
             // Bttn_Cancelar
             // 
+            this.Bttn_Cancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Bttn_Cancelar.BackgroundImage")));
+            this.Bttn_Cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Bttn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Bttn_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bttn_Cancelar.Location = new System.Drawing.Point(426, 402);
+            this.Bttn_Cancelar.ForeColor = System.Drawing.SystemColors.Control;
+            this.Bttn_Cancelar.Location = new System.Drawing.Point(14, 402);
             this.Bttn_Cancelar.Name = "Bttn_Cancelar";
-            this.Bttn_Cancelar.Size = new System.Drawing.Size(187, 44);
+            this.Bttn_Cancelar.Size = new System.Drawing.Size(92, 86);
             this.Bttn_Cancelar.TabIndex = 7;
-            this.Bttn_Cancelar.Text = "Cancelar";
             this.Bttn_Cancelar.UseVisualStyleBackColor = true;
             this.Bttn_Cancelar.Click += new System.EventHandler(this.Bttn_Cancelar_Click);
             // 
@@ -50,7 +55,7 @@
             // 
             this.Txt_FiltroAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_FiltroAlumno.Location = new System.Drawing.Point(226, 22);
-            this.Txt_FiltroAlumno.MaxLength = 25;
+            this.Txt_FiltroAlumno.MaxLength = 40;
             this.Txt_FiltroAlumno.Name = "Txt_FiltroAlumno";
             this.Txt_FiltroAlumno.Size = new System.Drawing.Size(385, 24);
             this.Txt_FiltroAlumno.TabIndex = 6;
@@ -72,7 +77,7 @@
             this.DataGrid_Show.AllowUserToAddRows = false;
             this.DataGrid_Show.AllowUserToDeleteRows = false;
             this.DataGrid_Show.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DataGrid_Show.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.DataGrid_Show.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
             this.DataGrid_Show.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGrid_Show.Location = new System.Drawing.Point(14, 67);
             this.DataGrid_Show.Name = "DataGrid_Show";
@@ -83,13 +88,23 @@
             this.DataGrid_Show.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_Show_CellContentDoubleClick);
             this.DataGrid_Show.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_Show_CellDoubleClick);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(32, 491);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Cancelar";
+            // 
             // FormGlobalShowAlum
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(625, 455);
+            this.ClientSize = new System.Drawing.Size(625, 513);
             this.ControlBox = false;
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.DataGrid_Show);
             this.Controls.Add(this.Bttn_Cancelar);
             this.Controls.Add(this.Txt_FiltroAlumno);
@@ -111,5 +126,6 @@
         private System.Windows.Forms.TextBox Txt_FiltroAlumno;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView DataGrid_Show;
+        private System.Windows.Forms.Label label2;
     }
 }

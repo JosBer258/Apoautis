@@ -308,6 +308,27 @@ namespace APOAUTIS.Clases
         }
 
 
+        public void Fecha(object sender, KeyPressEventArgs e, TextBox Text_Prueba)
+        {
+            int a, b;
+            a = Convert.ToInt16(Text_Prueba.Text.Count(Char.IsLetter));
+            b = Convert.ToInt16(Text_Prueba.Text.Count(Char.IsWhiteSpace));
+            if (a == 0 && !Char.IsLetter(e.KeyChar))
+            { e.Handled = true; }
+            else
+            if (char.IsDigit(e.KeyChar) || char.IsLetter(e.KeyChar) ||  char.IsSeparator(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back))
+            {
+                e.Handled = false;
+            }
+            else if ((e.KeyChar == '-'))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
 
         public void Fun_LLenarDias(ComboBox Año, ComboBox Mes, ComboBox dia)
         {

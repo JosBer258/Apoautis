@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaEstSoc));
             this.tabEstSocioEco = new System.Windows.Forms.TabControl();
             this.DatosGenerales = new System.Windows.Forms.TabPage();
@@ -194,8 +195,12 @@
             this.txt_EsSo_GastoMedi_SaludRecre = new System.Windows.Forms.TextBox();
             this.label56 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label79 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabEstSocioEco.SuspendLayout();
             this.DatosGenerales.SuspendLayout();
             this.groupBox13.SuspendLayout();
@@ -210,6 +215,8 @@
             this.groupBox12.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabEstSocioEco
@@ -300,7 +307,7 @@
             this.groupBox13.Controls.Add(this.label67);
             this.groupBox13.Location = new System.Drawing.Point(254, 32);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(311, 134);
+            this.groupBox13.Size = new System.Drawing.Size(317, 134);
             this.groupBox13.TabIndex = 40;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Datos de Entrevista";
@@ -308,7 +315,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 48);
+            this.label7.Location = new System.Drawing.Point(12, 40);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(46, 15);
             this.label7.TabIndex = 41;
@@ -317,6 +324,7 @@
             // txt_fechaEntrevista
             // 
             this.txt_fechaEntrevista.Location = new System.Drawing.Point(155, 39);
+            this.txt_fechaEntrevista.MaxLength = 12;
             this.txt_fechaEntrevista.Name = "txt_fechaEntrevista";
             this.txt_fechaEntrevista.ReadOnly = true;
             this.txt_fechaEntrevista.Size = new System.Drawing.Size(150, 21);
@@ -326,25 +334,29 @@
             // txt_EsSo_PersonaEntre_DatosGe
             // 
             this.txt_EsSo_PersonaEntre_DatosGe.Location = new System.Drawing.Point(155, 91);
+            this.txt_EsSo_PersonaEntre_DatosGe.MaxLength = 44;
             this.txt_EsSo_PersonaEntre_DatosGe.Name = "txt_EsSo_PersonaEntre_DatosGe";
             this.txt_EsSo_PersonaEntre_DatosGe.ReadOnly = true;
             this.txt_EsSo_PersonaEntre_DatosGe.Size = new System.Drawing.Size(150, 21);
             this.txt_EsSo_PersonaEntre_DatosGe.TabIndex = 39;
             this.txt_EsSo_PersonaEntre_DatosGe.TextChanged += new System.EventHandler(this.txt_EsSo_PersonaEntre_DatosGe_TextChanged);
+            this.txt_EsSo_PersonaEntre_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_PersonaEntre_DatosGe_KeyPress);
             // 
             // txt_EsSo_lugar_DatosGe
             // 
             this.txt_EsSo_lugar_DatosGe.Location = new System.Drawing.Point(155, 65);
+            this.txt_EsSo_lugar_DatosGe.MaxLength = 44;
             this.txt_EsSo_lugar_DatosGe.Name = "txt_EsSo_lugar_DatosGe";
             this.txt_EsSo_lugar_DatosGe.ReadOnly = true;
             this.txt_EsSo_lugar_DatosGe.Size = new System.Drawing.Size(150, 21);
             this.txt_EsSo_lugar_DatosGe.TabIndex = 34;
             this.txt_EsSo_lugar_DatosGe.TextChanged += new System.EventHandler(this.textBox66_TextChanged);
+            this.txt_EsSo_lugar_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_lugar_DatosGe_KeyPress);
             // 
             // label69
             // 
             this.label69.AutoSize = true;
-            this.label69.Location = new System.Drawing.Point(12, 71);
+            this.label69.Location = new System.Drawing.Point(12, 66);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(44, 15);
             this.label69.TabIndex = 33;
@@ -396,11 +408,13 @@
             // txt_EsSo_TelTrabPadre_DatosGe
             // 
             this.txt_EsSo_TelTrabPadre_DatosGe.Location = new System.Drawing.Point(946, 55);
+            this.txt_EsSo_TelTrabPadre_DatosGe.MaxLength = 12;
             this.txt_EsSo_TelTrabPadre_DatosGe.Name = "txt_EsSo_TelTrabPadre_DatosGe";
             this.txt_EsSo_TelTrabPadre_DatosGe.ReadOnly = true;
             this.txt_EsSo_TelTrabPadre_DatosGe.Size = new System.Drawing.Size(131, 21);
             this.txt_EsSo_TelTrabPadre_DatosGe.TabIndex = 30;
             this.txt_EsSo_TelTrabPadre_DatosGe.TextChanged += new System.EventHandler(this.txt_EsSo_TelTrabPadre_DatosGe_TextChanged);
+            this.txt_EsSo_TelTrabPadre_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_TelTrabPadre_DatosGe_KeyPress);
             // 
             // label17
             // 
@@ -414,20 +428,24 @@
             // txt_EsSo_CelPadre_DatosGe
             // 
             this.txt_EsSo_CelPadre_DatosGe.Location = new System.Drawing.Point(655, 54);
+            this.txt_EsSo_CelPadre_DatosGe.MaxLength = 12;
             this.txt_EsSo_CelPadre_DatosGe.Name = "txt_EsSo_CelPadre_DatosGe";
             this.txt_EsSo_CelPadre_DatosGe.ReadOnly = true;
             this.txt_EsSo_CelPadre_DatosGe.Size = new System.Drawing.Size(127, 21);
             this.txt_EsSo_CelPadre_DatosGe.TabIndex = 28;
             this.txt_EsSo_CelPadre_DatosGe.TextChanged += new System.EventHandler(this.txt_EsSo_CelPadre_DatosGe_TextChanged);
+            this.txt_EsSo_CelPadre_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_CelPadre_DatosGe_KeyPress);
             // 
             // txt_EsSo_TelCAsaPadre_DatosGe
             // 
             this.txt_EsSo_TelCAsaPadre_DatosGe.Location = new System.Drawing.Point(655, 28);
+            this.txt_EsSo_TelCAsaPadre_DatosGe.MaxLength = 12;
             this.txt_EsSo_TelCAsaPadre_DatosGe.Name = "txt_EsSo_TelCAsaPadre_DatosGe";
             this.txt_EsSo_TelCAsaPadre_DatosGe.ReadOnly = true;
             this.txt_EsSo_TelCAsaPadre_DatosGe.Size = new System.Drawing.Size(127, 21);
             this.txt_EsSo_TelCAsaPadre_DatosGe.TabIndex = 27;
             this.txt_EsSo_TelCAsaPadre_DatosGe.TextChanged += new System.EventHandler(this.txt_EsSo_TelCAsaPadre_DatosGe_TextChanged);
+            this.txt_EsSo_TelCAsaPadre_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_TelCAsaPadre_DatosGe_KeyPress);
             // 
             // label18
             // 
@@ -450,11 +468,13 @@
             // txt_EsSo_LugarTrabPadre_forma
             // 
             this.txt_EsSo_LugarTrabPadre_forma.Location = new System.Drawing.Point(946, 28);
+            this.txt_EsSo_LugarTrabPadre_forma.MaxLength = 140;
             this.txt_EsSo_LugarTrabPadre_forma.Name = "txt_EsSo_LugarTrabPadre_forma";
             this.txt_EsSo_LugarTrabPadre_forma.ReadOnly = true;
             this.txt_EsSo_LugarTrabPadre_forma.Size = new System.Drawing.Size(131, 21);
             this.txt_EsSo_LugarTrabPadre_forma.TabIndex = 22;
             this.txt_EsSo_LugarTrabPadre_forma.TextChanged += new System.EventHandler(this.txt_EsSo_LugarTrabPadre_forma_TextChanged);
+            this.txt_EsSo_LugarTrabPadre_forma.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_LugarTrabPadre_forma_KeyPress);
             // 
             // label21
             // 
@@ -468,11 +488,13 @@
             // txt_EsSo_OficioPadre_forma
             // 
             this.txt_EsSo_OficioPadre_forma.Location = new System.Drawing.Point(400, 28);
+            this.txt_EsSo_OficioPadre_forma.MaxLength = 135;
             this.txt_EsSo_OficioPadre_forma.Name = "txt_EsSo_OficioPadre_forma";
             this.txt_EsSo_OficioPadre_forma.ReadOnly = true;
             this.txt_EsSo_OficioPadre_forma.Size = new System.Drawing.Size(117, 21);
             this.txt_EsSo_OficioPadre_forma.TabIndex = 20;
             this.txt_EsSo_OficioPadre_forma.TextChanged += new System.EventHandler(this.txt_EsSo_OficioPadre_forma_TextChanged);
+            this.txt_EsSo_OficioPadre_forma.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_OficioPadre_forma_KeyPress);
             // 
             // label22
             // 
@@ -486,11 +508,13 @@
             // txt_EsSo_DomiciPadre_DatosGe
             // 
             this.txt_EsSo_DomiciPadre_DatosGe.Location = new System.Drawing.Point(400, 57);
+            this.txt_EsSo_DomiciPadre_DatosGe.MaxLength = 40;
             this.txt_EsSo_DomiciPadre_DatosGe.Name = "txt_EsSo_DomiciPadre_DatosGe";
             this.txt_EsSo_DomiciPadre_DatosGe.ReadOnly = true;
             this.txt_EsSo_DomiciPadre_DatosGe.Size = new System.Drawing.Size(117, 21);
             this.txt_EsSo_DomiciPadre_DatosGe.TabIndex = 18;
             this.txt_EsSo_DomiciPadre_DatosGe.TextChanged += new System.EventHandler(this.txt_EsSo_DomiciPadre_DatosGe_TextChanged);
+            this.txt_EsSo_DomiciPadre_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_DomiciPadre_DatosGe_KeyPress);
             // 
             // label23
             // 
@@ -504,20 +528,24 @@
             // txt_EsSo_IdentPadre_DatosGe
             // 
             this.txt_EsSo_IdentPadre_DatosGe.Location = new System.Drawing.Point(119, 60);
+            this.txt_EsSo_IdentPadre_DatosGe.MaxLength = 13;
             this.txt_EsSo_IdentPadre_DatosGe.Name = "txt_EsSo_IdentPadre_DatosGe";
             this.txt_EsSo_IdentPadre_DatosGe.ReadOnly = true;
             this.txt_EsSo_IdentPadre_DatosGe.Size = new System.Drawing.Size(143, 21);
             this.txt_EsSo_IdentPadre_DatosGe.TabIndex = 16;
             this.txt_EsSo_IdentPadre_DatosGe.TextChanged += new System.EventHandler(this.txt_EsSo_IdentPadre_DatosGe_TextChanged);
+            this.txt_EsSo_IdentPadre_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_IdentPadre_DatosGe_KeyPress);
             // 
             // txt_EsSo_NomPadre_DatosGe
             // 
             this.txt_EsSo_NomPadre_DatosGe.Location = new System.Drawing.Point(119, 34);
+            this.txt_EsSo_NomPadre_DatosGe.MaxLength = 40;
             this.txt_EsSo_NomPadre_DatosGe.Name = "txt_EsSo_NomPadre_DatosGe";
             this.txt_EsSo_NomPadre_DatosGe.ReadOnly = true;
             this.txt_EsSo_NomPadre_DatosGe.Size = new System.Drawing.Size(143, 21);
             this.txt_EsSo_NomPadre_DatosGe.TabIndex = 14;
             this.txt_EsSo_NomPadre_DatosGe.TextChanged += new System.EventHandler(this.txt_EsSo_NomPadre_DatosGe_TextChanged);
+            this.txt_EsSo_NomPadre_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_NomPadre_DatosGe_KeyPress);
             // 
             // label24
             // 
@@ -570,11 +598,13 @@
             // txt_EsSo_IdentiEst_DatosGe
             // 
             this.txt_EsSo_IdentiEst_DatosGe.Location = new System.Drawing.Point(481, 111);
+            this.txt_EsSo_IdentiEst_DatosGe.MaxLength = 13;
             this.txt_EsSo_IdentiEst_DatosGe.Name = "txt_EsSo_IdentiEst_DatosGe";
             this.txt_EsSo_IdentiEst_DatosGe.ReadOnly = true;
             this.txt_EsSo_IdentiEst_DatosGe.Size = new System.Drawing.Size(100, 21);
             this.txt_EsSo_IdentiEst_DatosGe.TabIndex = 9;
             this.txt_EsSo_IdentiEst_DatosGe.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.txt_EsSo_IdentiEst_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_IdentiEst_DatosGe_KeyPress);
             // 
             // label5
             // 
@@ -688,11 +718,13 @@
             // txt_EsSo_NomEncarg_DatosGe
             // 
             this.txt_EsSo_NomEncarg_DatosGe.Location = new System.Drawing.Point(111, 29);
+            this.txt_EsSo_NomEncarg_DatosGe.MaxLength = 40;
             this.txt_EsSo_NomEncarg_DatosGe.Name = "txt_EsSo_NomEncarg_DatosGe";
             this.txt_EsSo_NomEncarg_DatosGe.ReadOnly = true;
             this.txt_EsSo_NomEncarg_DatosGe.Size = new System.Drawing.Size(157, 21);
             this.txt_EsSo_NomEncarg_DatosGe.TabIndex = 33;
             this.txt_EsSo_NomEncarg_DatosGe.TextChanged += new System.EventHandler(this.txt_EsSo_NomEncarg_DatosGe_TextChanged);
+            this.txt_EsSo_NomEncarg_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_NomEncarg_DatosGe_KeyPress);
             // 
             // label30
             // 
@@ -706,20 +738,24 @@
             // txt_EsSo_ParentescoEncar_DatosGe
             // 
             this.txt_EsSo_ParentescoEncar_DatosGe.Location = new System.Drawing.Point(111, 55);
+            this.txt_EsSo_ParentescoEncar_DatosGe.MaxLength = 40;
             this.txt_EsSo_ParentescoEncar_DatosGe.Name = "txt_EsSo_ParentescoEncar_DatosGe";
             this.txt_EsSo_ParentescoEncar_DatosGe.ReadOnly = true;
             this.txt_EsSo_ParentescoEncar_DatosGe.Size = new System.Drawing.Size(157, 21);
             this.txt_EsSo_ParentescoEncar_DatosGe.TabIndex = 34;
             this.txt_EsSo_ParentescoEncar_DatosGe.TextChanged += new System.EventHandler(this.txt_EsSo_ParentescoEncar_DatosGe_TextChanged);
+            this.txt_EsSo_ParentescoEncar_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_ParentescoEncar_DatosGe_KeyPress);
             // 
             // txt_EsSo_OficioEncarg_DatosGe
             // 
             this.txt_EsSo_OficioEncarg_DatosGe.Location = new System.Drawing.Point(628, 25);
+            this.txt_EsSo_OficioEncarg_DatosGe.MaxLength = 135;
             this.txt_EsSo_OficioEncarg_DatosGe.Name = "txt_EsSo_OficioEncarg_DatosGe";
             this.txt_EsSo_OficioEncarg_DatosGe.ReadOnly = true;
             this.txt_EsSo_OficioEncarg_DatosGe.Size = new System.Drawing.Size(170, 21);
             this.txt_EsSo_OficioEncarg_DatosGe.TabIndex = 40;
             this.txt_EsSo_OficioEncarg_DatosGe.TextChanged += new System.EventHandler(this.txt_EsSo_OficioEncarg_DatosGe_TextChanged);
+            this.txt_EsSo_OficioEncarg_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_OficioEncarg_DatosGe_KeyPress);
             // 
             // label29
             // 
@@ -742,20 +778,24 @@
             // txt_EsSo_EdadEncarg_DatosGe
             // 
             this.txt_EsSo_EdadEncarg_DatosGe.Location = new System.Drawing.Point(352, 25);
+            this.txt_EsSo_EdadEncarg_DatosGe.MaxLength = 2;
             this.txt_EsSo_EdadEncarg_DatosGe.Name = "txt_EsSo_EdadEncarg_DatosGe";
             this.txt_EsSo_EdadEncarg_DatosGe.ReadOnly = true;
             this.txt_EsSo_EdadEncarg_DatosGe.Size = new System.Drawing.Size(142, 21);
             this.txt_EsSo_EdadEncarg_DatosGe.TabIndex = 36;
             this.txt_EsSo_EdadEncarg_DatosGe.TextChanged += new System.EventHandler(this.txt_EsSo_EdadEncarg_DatosGe_TextChanged);
+            this.txt_EsSo_EdadEncarg_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_EdadEncarg_DatosGe_KeyPress);
             // 
             // txt_EsSo_TelEncarg_DatosGe
             // 
             this.txt_EsSo_TelEncarg_DatosGe.Location = new System.Drawing.Point(352, 55);
+            this.txt_EsSo_TelEncarg_DatosGe.MaxLength = 12;
             this.txt_EsSo_TelEncarg_DatosGe.Name = "txt_EsSo_TelEncarg_DatosGe";
             this.txt_EsSo_TelEncarg_DatosGe.ReadOnly = true;
             this.txt_EsSo_TelEncarg_DatosGe.Size = new System.Drawing.Size(142, 21);
             this.txt_EsSo_TelEncarg_DatosGe.TabIndex = 38;
             this.txt_EsSo_TelEncarg_DatosGe.TextChanged += new System.EventHandler(this.txt_EsSo_TelEncarg_DatosGe_TextChanged);
+            this.txt_EsSo_TelEncarg_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_TelEncarg_DatosGe_KeyPress);
             // 
             // label28
             // 
@@ -784,7 +824,7 @@
             this.groupBox1.Controls.Add(this.txt_EsSo_IdentMadre_DatosGe);
             this.groupBox1.Controls.Add(this.txt_EsSo_NomMadre_DatosGe);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Location = new System.Drawing.Point(17, 163);
+            this.groupBox1.Location = new System.Drawing.Point(17, 168);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1159, 98);
             this.groupBox1.TabIndex = 0;
@@ -803,11 +843,13 @@
             // txt_EsSo_TelTrabMadre_DatosGe
             // 
             this.txt_EsSo_TelTrabMadre_DatosGe.Location = new System.Drawing.Point(946, 57);
+            this.txt_EsSo_TelTrabMadre_DatosGe.MaxLength = 12;
             this.txt_EsSo_TelTrabMadre_DatosGe.Name = "txt_EsSo_TelTrabMadre_DatosGe";
             this.txt_EsSo_TelTrabMadre_DatosGe.ReadOnly = true;
             this.txt_EsSo_TelTrabMadre_DatosGe.Size = new System.Drawing.Size(131, 21);
             this.txt_EsSo_TelTrabMadre_DatosGe.TabIndex = 30;
             this.txt_EsSo_TelTrabMadre_DatosGe.TextChanged += new System.EventHandler(this.txt_EsSo_TelTrabMadre_DatosGe_TextChanged);
+            this.txt_EsSo_TelTrabMadre_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_TelTrabMadre_DatosGe_KeyPress);
             // 
             // label14
             // 
@@ -821,20 +863,24 @@
             // txt_EsSo_CelMadre_DatosGe
             // 
             this.txt_EsSo_CelMadre_DatosGe.Location = new System.Drawing.Point(655, 58);
+            this.txt_EsSo_CelMadre_DatosGe.MaxLength = 12;
             this.txt_EsSo_CelMadre_DatosGe.Name = "txt_EsSo_CelMadre_DatosGe";
             this.txt_EsSo_CelMadre_DatosGe.ReadOnly = true;
             this.txt_EsSo_CelMadre_DatosGe.Size = new System.Drawing.Size(127, 21);
             this.txt_EsSo_CelMadre_DatosGe.TabIndex = 28;
             this.txt_EsSo_CelMadre_DatosGe.TextChanged += new System.EventHandler(this.txt_EsSo_CelMadre_DatosGe_TextChanged);
+            this.txt_EsSo_CelMadre_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_CelMadre_DatosGe_KeyPress);
             // 
             // txt_EsSo_TelCasaMadre_DatosGe
             // 
             this.txt_EsSo_TelCasaMadre_DatosGe.Location = new System.Drawing.Point(655, 32);
+            this.txt_EsSo_TelCasaMadre_DatosGe.MaxLength = 12;
             this.txt_EsSo_TelCasaMadre_DatosGe.Name = "txt_EsSo_TelCasaMadre_DatosGe";
             this.txt_EsSo_TelCasaMadre_DatosGe.ReadOnly = true;
             this.txt_EsSo_TelCasaMadre_DatosGe.Size = new System.Drawing.Size(127, 21);
             this.txt_EsSo_TelCasaMadre_DatosGe.TabIndex = 27;
             this.txt_EsSo_TelCasaMadre_DatosGe.TextChanged += new System.EventHandler(this.txt_EsSo_TelCasaMadre_DatosGe_TextChanged);
+            this.txt_EsSo_TelCasaMadre_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_TelCasaMadre_DatosGe_KeyPress);
             // 
             // label15
             // 
@@ -857,11 +903,13 @@
             // txt_EsSo_LugarTrabMadre_forma
             // 
             this.txt_EsSo_LugarTrabMadre_forma.Location = new System.Drawing.Point(946, 30);
+            this.txt_EsSo_LugarTrabMadre_forma.MaxLength = 140;
             this.txt_EsSo_LugarTrabMadre_forma.Name = "txt_EsSo_LugarTrabMadre_forma";
             this.txt_EsSo_LugarTrabMadre_forma.ReadOnly = true;
             this.txt_EsSo_LugarTrabMadre_forma.Size = new System.Drawing.Size(131, 21);
             this.txt_EsSo_LugarTrabMadre_forma.TabIndex = 22;
             this.txt_EsSo_LugarTrabMadre_forma.TextChanged += new System.EventHandler(this.txt_EsSo_LugarTrabMadre_forma_TextChanged);
+            this.txt_EsSo_LugarTrabMadre_forma.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_LugarTrabMadre_forma_KeyPress);
             // 
             // label8
             // 
@@ -875,11 +923,13 @@
             // txt_EsSo_OficioMadre_forma
             // 
             this.txt_EsSo_OficioMadre_forma.Location = new System.Drawing.Point(400, 32);
+            this.txt_EsSo_OficioMadre_forma.MaxLength = 135;
             this.txt_EsSo_OficioMadre_forma.Name = "txt_EsSo_OficioMadre_forma";
             this.txt_EsSo_OficioMadre_forma.ReadOnly = true;
             this.txt_EsSo_OficioMadre_forma.Size = new System.Drawing.Size(117, 21);
             this.txt_EsSo_OficioMadre_forma.TabIndex = 20;
             this.txt_EsSo_OficioMadre_forma.TextChanged += new System.EventHandler(this.txt_EsSo_OficioMadre_forma_TextChanged);
+            this.txt_EsSo_OficioMadre_forma.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_OficioMadre_forma_KeyPress);
             // 
             // label9
             // 
@@ -893,11 +943,13 @@
             // txt_EsSo_DomiciMadre_DatosGe
             // 
             this.txt_EsSo_DomiciMadre_DatosGe.Location = new System.Drawing.Point(400, 61);
+            this.txt_EsSo_DomiciMadre_DatosGe.MaxLength = 40;
             this.txt_EsSo_DomiciMadre_DatosGe.Name = "txt_EsSo_DomiciMadre_DatosGe";
             this.txt_EsSo_DomiciMadre_DatosGe.ReadOnly = true;
             this.txt_EsSo_DomiciMadre_DatosGe.Size = new System.Drawing.Size(117, 21);
             this.txt_EsSo_DomiciMadre_DatosGe.TabIndex = 18;
             this.txt_EsSo_DomiciMadre_DatosGe.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
+            this.txt_EsSo_DomiciMadre_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_DomiciMadre_DatosGe_KeyPress);
             // 
             // label10
             // 
@@ -911,20 +963,24 @@
             // txt_EsSo_IdentMadre_DatosGe
             // 
             this.txt_EsSo_IdentMadre_DatosGe.Location = new System.Drawing.Point(119, 59);
+            this.txt_EsSo_IdentMadre_DatosGe.MaxLength = 13;
             this.txt_EsSo_IdentMadre_DatosGe.Name = "txt_EsSo_IdentMadre_DatosGe";
             this.txt_EsSo_IdentMadre_DatosGe.ReadOnly = true;
             this.txt_EsSo_IdentMadre_DatosGe.Size = new System.Drawing.Size(143, 21);
             this.txt_EsSo_IdentMadre_DatosGe.TabIndex = 16;
             this.txt_EsSo_IdentMadre_DatosGe.TextChanged += new System.EventHandler(this.txt_EsSo_IdentMadre_DatosGe_TextChanged);
+            this.txt_EsSo_IdentMadre_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_IdentMadre_DatosGe_KeyPress);
             // 
             // txt_EsSo_NomMadre_DatosGe
             // 
             this.txt_EsSo_NomMadre_DatosGe.Location = new System.Drawing.Point(119, 33);
+            this.txt_EsSo_NomMadre_DatosGe.MaxLength = 40;
             this.txt_EsSo_NomMadre_DatosGe.Name = "txt_EsSo_NomMadre_DatosGe";
             this.txt_EsSo_NomMadre_DatosGe.ReadOnly = true;
             this.txt_EsSo_NomMadre_DatosGe.Size = new System.Drawing.Size(143, 21);
             this.txt_EsSo_NomMadre_DatosGe.TabIndex = 14;
             this.txt_EsSo_NomMadre_DatosGe.TextChanged += new System.EventHandler(this.txt_EsSo_NomMadre_DatosGe_TextChanged);
+            this.txt_EsSo_NomMadre_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_NomMadre_DatosGe_KeyPress);
             // 
             // label12
             // 
@@ -978,10 +1034,12 @@
             // 
             this.txt_EsSo_CuantosFami_InfoFami.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_EsSo_CuantosFami_InfoFami.Location = new System.Drawing.Point(301, 73);
+            this.txt_EsSo_CuantosFami_InfoFami.MaxLength = 40;
             this.txt_EsSo_CuantosFami_InfoFami.Name = "txt_EsSo_CuantosFami_InfoFami";
             this.txt_EsSo_CuantosFami_InfoFami.ReadOnly = true;
             this.txt_EsSo_CuantosFami_InfoFami.Size = new System.Drawing.Size(134, 24);
-            this.txt_EsSo_CuantosFami_InfoFami.TabIndex = 38;
+            this.txt_EsSo_CuantosFami_InfoFami.TabIndex = 3;
+            this.txt_EsSo_CuantosFami_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_CuantosFami_InfoFami_KeyPress);
             // 
             // button2
             // 
@@ -1383,19 +1441,23 @@
             // 
             this.txt_EsSo_TotalTraba_InfoFami.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_EsSo_TotalTraba_InfoFami.Location = new System.Drawing.Point(327, 106);
+            this.txt_EsSo_TotalTraba_InfoFami.MaxLength = 3;
             this.txt_EsSo_TotalTraba_InfoFami.Name = "txt_EsSo_TotalTraba_InfoFami";
             this.txt_EsSo_TotalTraba_InfoFami.ReadOnly = true;
             this.txt_EsSo_TotalTraba_InfoFami.Size = new System.Drawing.Size(225, 24);
-            this.txt_EsSo_TotalTraba_InfoFami.TabIndex = 13;
+            this.txt_EsSo_TotalTraba_InfoFami.TabIndex = 5;
+            this.txt_EsSo_TotalTraba_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_TotalTraba_InfoFami_KeyPress);
             // 
             // txt_EsSo_TotalMiemb_InfoFami
             // 
             this.txt_EsSo_TotalMiemb_InfoFami.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_EsSo_TotalMiemb_InfoFami.Location = new System.Drawing.Point(706, 73);
+            this.txt_EsSo_TotalMiemb_InfoFami.MaxLength = 3;
             this.txt_EsSo_TotalMiemb_InfoFami.Name = "txt_EsSo_TotalMiemb_InfoFami";
             this.txt_EsSo_TotalMiemb_InfoFami.ReadOnly = true;
             this.txt_EsSo_TotalMiemb_InfoFami.Size = new System.Drawing.Size(153, 24);
-            this.txt_EsSo_TotalMiemb_InfoFami.TabIndex = 11;
+            this.txt_EsSo_TotalMiemb_InfoFami.TabIndex = 4;
+            this.txt_EsSo_TotalMiemb_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_TotalMiemb_InfoFami_KeyPress);
             // 
             // txt_EsSo_CuantosFamil_InfoFami
             // 
@@ -1411,28 +1473,32 @@
             // 
             this.txt_EsSo_CuantosHijos_InfoFami.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_EsSo_CuantosHijos_InfoFami.Location = new System.Drawing.Point(809, 43);
+            this.txt_EsSo_CuantosHijos_InfoFami.MaxLength = 3;
             this.txt_EsSo_CuantosHijos_InfoFami.Name = "txt_EsSo_CuantosHijos_InfoFami";
             this.txt_EsSo_CuantosHijos_InfoFami.ReadOnly = true;
             this.txt_EsSo_CuantosHijos_InfoFami.Size = new System.Drawing.Size(153, 24);
-            this.txt_EsSo_CuantosHijos_InfoFami.TabIndex = 9;
+            this.txt_EsSo_CuantosHijos_InfoFami.TabIndex = 2;
             // 
             // txt_EsSo_MasHijos_InfoFami
             // 
             this.txt_EsSo_MasHijos_InfoFami.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_EsSo_MasHijos_InfoFami.Location = new System.Drawing.Point(574, 43);
+            this.txt_EsSo_MasHijos_InfoFami.MaxLength = 40;
             this.txt_EsSo_MasHijos_InfoFami.Name = "txt_EsSo_MasHijos_InfoFami";
             this.txt_EsSo_MasHijos_InfoFami.ReadOnly = true;
             this.txt_EsSo_MasHijos_InfoFami.Size = new System.Drawing.Size(155, 24);
-            this.txt_EsSo_MasHijos_InfoFami.TabIndex = 8;
+            this.txt_EsSo_MasHijos_InfoFami.TabIndex = 1;
             // 
             // txt_EsSo_HabitantesCasa_InfoFami
             // 
             this.txt_EsSo_HabitantesCasa_InfoFami.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_EsSo_HabitantesCasa_InfoFami.Location = new System.Drawing.Point(301, 43);
+            this.txt_EsSo_HabitantesCasa_InfoFami.MaxLength = 3;
             this.txt_EsSo_HabitantesCasa_InfoFami.Name = "txt_EsSo_HabitantesCasa_InfoFami";
             this.txt_EsSo_HabitantesCasa_InfoFami.ReadOnly = true;
             this.txt_EsSo_HabitantesCasa_InfoFami.Size = new System.Drawing.Size(134, 24);
-            this.txt_EsSo_HabitantesCasa_InfoFami.TabIndex = 7;
+            this.txt_EsSo_HabitantesCasa_InfoFami.TabIndex = 0;
+            this.txt_EsSo_HabitantesCasa_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_HabitantesCasa_InfoFami_KeyPress);
             // 
             // label36
             // 
@@ -1532,12 +1598,14 @@
             // txt_servicios_clq_cuenta
             // 
             this.txt_servicios_clq_cuenta.Location = new System.Drawing.Point(229, 389);
+            this.txt_servicios_clq_cuenta.MaxLength = 298;
             this.txt_servicios_clq_cuenta.Multiline = true;
             this.txt_servicios_clq_cuenta.Name = "txt_servicios_clq_cuenta";
             this.txt_servicios_clq_cuenta.ReadOnly = true;
             this.txt_servicios_clq_cuenta.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txt_servicios_clq_cuenta.Size = new System.Drawing.Size(323, 88);
             this.txt_servicios_clq_cuenta.TabIndex = 41;
+            this.txt_servicios_clq_cuenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_servicios_clq_cuenta_KeyPress);
             // 
             // label74
             // 
@@ -1560,12 +1628,14 @@
             // txt_disponeDe
             // 
             this.txt_disponeDe.Location = new System.Drawing.Point(699, 258);
+            this.txt_disponeDe.MaxLength = 360;
             this.txt_disponeDe.Multiline = true;
             this.txt_disponeDe.Name = "txt_disponeDe";
             this.txt_disponeDe.ReadOnly = true;
             this.txt_disponeDe.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txt_disponeDe.Size = new System.Drawing.Size(288, 104);
             this.txt_disponeDe.TabIndex = 38;
+            this.txt_disponeDe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_disponeDe_KeyPress);
             // 
             // groupBox12
             // 
@@ -1594,18 +1664,22 @@
             // txt_piso
             // 
             this.txt_piso.Location = new System.Drawing.Point(200, 78);
+            this.txt_piso.MaxLength = 200;
             this.txt_piso.Name = "txt_piso";
             this.txt_piso.ReadOnly = true;
             this.txt_piso.Size = new System.Drawing.Size(336, 21);
             this.txt_piso.TabIndex = 32;
+            this.txt_piso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_piso_KeyPress);
             // 
             // txt_tenencia
             // 
             this.txt_tenencia.Location = new System.Drawing.Point(200, 26);
+            this.txt_tenencia.MaxLength = 200;
             this.txt_tenencia.Name = "txt_tenencia";
             this.txt_tenencia.ReadOnly = true;
             this.txt_tenencia.Size = new System.Drawing.Size(336, 21);
             this.txt_tenencia.TabIndex = 22;
+            this.txt_tenencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_tenencia_KeyPress);
             // 
             // label66
             // 
@@ -1628,30 +1702,36 @@
             // txt_consturccion
             // 
             this.txt_consturccion.Location = new System.Drawing.Point(200, 52);
+            this.txt_consturccion.MaxLength = 200;
             this.txt_consturccion.Name = "txt_consturccion";
             this.txt_consturccion.ReadOnly = true;
             this.txt_consturccion.Size = new System.Drawing.Size(336, 21);
             this.txt_consturccion.TabIndex = 27;
+            this.txt_consturccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_consturccion_KeyPress);
             // 
             // txt_enfermedaPaFa
             // 
             this.txt_enfermedaPaFa.Location = new System.Drawing.Point(326, 32);
+            this.txt_enfermedaPaFa.MaxLength = 240;
             this.txt_enfermedaPaFa.Multiline = true;
             this.txt_enfermedaPaFa.Name = "txt_enfermedaPaFa";
             this.txt_enfermedaPaFa.ReadOnly = true;
             this.txt_enfermedaPaFa.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txt_enfermedaPaFa.Size = new System.Drawing.Size(288, 62);
             this.txt_enfermedaPaFa.TabIndex = 29;
+            this.txt_enfermedaPaFa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_enfermedaPaFa_KeyPress);
             // 
             // txt_lugares_recibe_atencionMe
             // 
             this.txt_lugares_recibe_atencionMe.Location = new System.Drawing.Point(16, 32);
+            this.txt_lugares_recibe_atencionMe.MaxLength = 240;
             this.txt_lugares_recibe_atencionMe.Multiline = true;
             this.txt_lugares_recibe_atencionMe.Name = "txt_lugares_recibe_atencionMe";
             this.txt_lugares_recibe_atencionMe.ReadOnly = true;
             this.txt_lugares_recibe_atencionMe.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txt_lugares_recibe_atencionMe.Size = new System.Drawing.Size(288, 62);
             this.txt_lugares_recibe_atencionMe.TabIndex = 28;
+            this.txt_lugares_recibe_atencionMe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_lugares_recibe_atencionMe_KeyPress);
             // 
             // label73
             // 
@@ -1674,10 +1754,12 @@
             // txt_EsSo_Aporbado_SaludRecre
             // 
             this.txt_EsSo_Aporbado_SaludRecre.Location = new System.Drawing.Point(668, 76);
+            this.txt_EsSo_Aporbado_SaludRecre.MaxLength = 45;
             this.txt_EsSo_Aporbado_SaludRecre.Name = "txt_EsSo_Aporbado_SaludRecre";
             this.txt_EsSo_Aporbado_SaludRecre.ReadOnly = true;
             this.txt_EsSo_Aporbado_SaludRecre.Size = new System.Drawing.Size(208, 21);
             this.txt_EsSo_Aporbado_SaludRecre.TabIndex = 12;
+            this.txt_EsSo_Aporbado_SaludRecre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Aporbado_SaludRecre_KeyPress);
             // 
             // label71
             // 
@@ -1723,10 +1805,12 @@
             // txt_EsSo_CentrosCom_SaludRecre
             // 
             this.txt_EsSo_CentrosCom_SaludRecre.Location = new System.Drawing.Point(164, 59);
+            this.txt_EsSo_CentrosCom_SaludRecre.MaxLength = 70;
             this.txt_EsSo_CentrosCom_SaludRecre.Name = "txt_EsSo_CentrosCom_SaludRecre";
             this.txt_EsSo_CentrosCom_SaludRecre.ReadOnly = true;
             this.txt_EsSo_CentrosCom_SaludRecre.Size = new System.Drawing.Size(152, 21);
             this.txt_EsSo_CentrosCom_SaludRecre.TabIndex = 20;
+            this.txt_EsSo_CentrosCom_SaludRecre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_CentrosCom_SaludRecre_KeyPress);
             // 
             // label63
             // 
@@ -1740,10 +1824,12 @@
             // txt_EsSo_Museos_SaludRecre
             // 
             this.txt_EsSo_Museos_SaludRecre.Location = new System.Drawing.Point(164, 85);
+            this.txt_EsSo_Museos_SaludRecre.MaxLength = 70;
             this.txt_EsSo_Museos_SaludRecre.Name = "txt_EsSo_Museos_SaludRecre";
             this.txt_EsSo_Museos_SaludRecre.ReadOnly = true;
             this.txt_EsSo_Museos_SaludRecre.Size = new System.Drawing.Size(152, 21);
             this.txt_EsSo_Museos_SaludRecre.TabIndex = 17;
+            this.txt_EsSo_Museos_SaludRecre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Museos_SaludRecre_KeyPress);
             // 
             // label62
             // 
@@ -1757,10 +1843,12 @@
             // txt_EsSo_cine_SaludRecre
             // 
             this.txt_EsSo_cine_SaludRecre.Location = new System.Drawing.Point(423, 60);
+            this.txt_EsSo_cine_SaludRecre.MaxLength = 70;
             this.txt_EsSo_cine_SaludRecre.Name = "txt_EsSo_cine_SaludRecre";
             this.txt_EsSo_cine_SaludRecre.ReadOnly = true;
             this.txt_EsSo_cine_SaludRecre.Size = new System.Drawing.Size(155, 21);
             this.txt_EsSo_cine_SaludRecre.TabIndex = 14;
+            this.txt_EsSo_cine_SaludRecre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_cine_SaludRecre_KeyPress);
             // 
             // label61
             // 
@@ -1774,10 +1862,12 @@
             // txt_EsSo_Playa_SaludRecre
             // 
             this.txt_EsSo_Playa_SaludRecre.Location = new System.Drawing.Point(705, 30);
+            this.txt_EsSo_Playa_SaludRecre.MaxLength = 70;
             this.txt_EsSo_Playa_SaludRecre.Name = "txt_EsSo_Playa_SaludRecre";
             this.txt_EsSo_Playa_SaludRecre.ReadOnly = true;
             this.txt_EsSo_Playa_SaludRecre.Size = new System.Drawing.Size(155, 21);
             this.txt_EsSo_Playa_SaludRecre.TabIndex = 11;
+            this.txt_EsSo_Playa_SaludRecre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Playa_SaludRecre_KeyPress);
             // 
             // label60
             // 
@@ -1791,10 +1881,12 @@
             // txt_EsSo_OtrosLugares_SaludRecre
             // 
             this.txt_EsSo_OtrosLugares_SaludRecre.Location = new System.Drawing.Point(705, 56);
+            this.txt_EsSo_OtrosLugares_SaludRecre.MaxLength = 70;
             this.txt_EsSo_OtrosLugares_SaludRecre.Name = "txt_EsSo_OtrosLugares_SaludRecre";
             this.txt_EsSo_OtrosLugares_SaludRecre.ReadOnly = true;
             this.txt_EsSo_OtrosLugares_SaludRecre.Size = new System.Drawing.Size(155, 21);
             this.txt_EsSo_OtrosLugares_SaludRecre.TabIndex = 8;
+            this.txt_EsSo_OtrosLugares_SaludRecre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_OtrosLugares_SaludRecre_KeyPress);
             // 
             // label59
             // 
@@ -1808,10 +1900,12 @@
             // txt_EsSo_Balnearios_SaludRecre
             // 
             this.txt_EsSo_Balnearios_SaludRecre.Location = new System.Drawing.Point(423, 33);
+            this.txt_EsSo_Balnearios_SaludRecre.MaxLength = 70;
             this.txt_EsSo_Balnearios_SaludRecre.Name = "txt_EsSo_Balnearios_SaludRecre";
             this.txt_EsSo_Balnearios_SaludRecre.ReadOnly = true;
             this.txt_EsSo_Balnearios_SaludRecre.Size = new System.Drawing.Size(155, 21);
             this.txt_EsSo_Balnearios_SaludRecre.TabIndex = 5;
+            this.txt_EsSo_Balnearios_SaludRecre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Balnearios_SaludRecre_KeyPress);
             // 
             // label58
             // 
@@ -1825,10 +1919,12 @@
             // txt_EsSo_Parques_SaludRecre
             // 
             this.txt_EsSo_Parques_SaludRecre.Location = new System.Drawing.Point(164, 33);
+            this.txt_EsSo_Parques_SaludRecre.MaxLength = 70;
             this.txt_EsSo_Parques_SaludRecre.Name = "txt_EsSo_Parques_SaludRecre";
             this.txt_EsSo_Parques_SaludRecre.ReadOnly = true;
             this.txt_EsSo_Parques_SaludRecre.Size = new System.Drawing.Size(152, 21);
             this.txt_EsSo_Parques_SaludRecre.TabIndex = 2;
+            this.txt_EsSo_Parques_SaludRecre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Parques_SaludRecre_KeyPress);
             // 
             // label57
             // 
@@ -1842,10 +1938,12 @@
             // txt_EsSo_GastoMedi_SaludRecre
             // 
             this.txt_EsSo_GastoMedi_SaludRecre.Location = new System.Drawing.Point(668, 34);
+            this.txt_EsSo_GastoMedi_SaludRecre.MaxLength = 9;
             this.txt_EsSo_GastoMedi_SaludRecre.Name = "txt_EsSo_GastoMedi_SaludRecre";
             this.txt_EsSo_GastoMedi_SaludRecre.ReadOnly = true;
             this.txt_EsSo_GastoMedi_SaludRecre.Size = new System.Drawing.Size(208, 21);
             this.txt_EsSo_GastoMedi_SaludRecre.TabIndex = 8;
+            this.txt_EsSo_GastoMedi_SaludRecre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_GastoMedi_SaludRecre_KeyPress);
             // 
             // label56
             // 
@@ -1858,6 +1956,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -1865,6 +1964,40 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1306, 136);
             this.panel1.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label79);
+            this.panel2.Controls.Add(this.button6);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(1167, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(139, 136);
+            this.panel2.TabIndex = 4;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // label79
+            // 
+            this.label79.AutoSize = true;
+            this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label79.Location = new System.Drawing.Point(48, 114);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(52, 13);
+            this.label79.TabIndex = 3;
+            this.label79.Text = "Guardar";
+            // 
+            // button6
+            // 
+            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.SystemColors.Control;
+            this.button6.Location = new System.Drawing.Point(20, 3);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(109, 102);
+            this.button6.TabIndex = 2;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label20
             // 
@@ -1888,6 +2021,10 @@
             this.button4.TabIndex = 0;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // VistaEstSoc
             // 
@@ -1928,6 +2065,9 @@
             this.groupBox9.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2101,5 +2241,9 @@
         private System.Windows.Forms.Label label76;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label79;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

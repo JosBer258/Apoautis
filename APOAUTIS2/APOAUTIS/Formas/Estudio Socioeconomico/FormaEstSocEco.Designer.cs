@@ -34,7 +34,6 @@
             this.label73 = new System.Windows.Forms.Label();
             this.btm_EsSo_Siguiente_DatosGe = new System.Windows.Forms.Button();
             this.label72 = new System.Windows.Forms.Label();
-            this.btm_EsSo_BuscarAlumno_DatosGe = new System.Windows.Forms.Button();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txt_EsSo_lugar_DatosGe = new System.Windows.Forms.TextBox();
@@ -104,7 +103,9 @@
             this.txt_EsSo_IdentMadre_DatosGe = new System.Windows.Forms.TextBox();
             this.txt_EsSo_NomMadre_DatosGe = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.btm_EsSo_BuscarAlumno_DatosGe = new System.Windows.Forms.Button();
             this.InformacionFamilia = new System.Windows.Forms.TabPage();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label75 = new System.Windows.Forms.Label();
             this.btm_EsSo_Siguiente_InfoFami = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -167,7 +168,7 @@
             this.label71 = new System.Windows.Forms.Label();
             this.label70 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.chekbox_EsSo_Ninguno_SaludRecre = new System.Windows.Forms.RadioButton();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.txt_EsSo_CentrosCom_SaludRecre = new System.Windows.Forms.TextBox();
             this.combox_EsSo_CentrosCom_SaludRecre = new System.Windows.Forms.ComboBox();
             this.label63 = new System.Windows.Forms.Label();
@@ -251,7 +252,6 @@
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.label77 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabEstSocioEco.SuspendLayout();
             this.DatosGenerales.SuspendLayout();
             this.groupBox13.SuspendLayout();
@@ -341,21 +341,6 @@
             this.label72.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label72.Click += new System.EventHandler(this.label72_Click);
             // 
-            // btm_EsSo_BuscarAlumno_DatosGe
-            // 
-            this.btm_EsSo_BuscarAlumno_DatosGe.BackColor = System.Drawing.SystemColors.Window;
-            this.btm_EsSo_BuscarAlumno_DatosGe.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btm_EsSo_BuscarAlumno_DatosGe.BackgroundImage")));
-            this.btm_EsSo_BuscarAlumno_DatosGe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btm_EsSo_BuscarAlumno_DatosGe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btm_EsSo_BuscarAlumno_DatosGe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btm_EsSo_BuscarAlumno_DatosGe.ForeColor = System.Drawing.SystemColors.Window;
-            this.btm_EsSo_BuscarAlumno_DatosGe.Location = new System.Drawing.Point(957, 7);
-            this.btm_EsSo_BuscarAlumno_DatosGe.Name = "btm_EsSo_BuscarAlumno_DatosGe";
-            this.btm_EsSo_BuscarAlumno_DatosGe.Size = new System.Drawing.Size(160, 137);
-            this.btm_EsSo_BuscarAlumno_DatosGe.TabIndex = 47;
-            this.btm_EsSo_BuscarAlumno_DatosGe.UseVisualStyleBackColor = false;
-            this.btm_EsSo_BuscarAlumno_DatosGe.Click += new System.EventHandler(this.btm_EsSo_BuscarAlumno_DatosGe_Click);
-            // 
             // groupBox13
             // 
             this.groupBox13.Controls.Add(this.dateTimePicker1);
@@ -382,6 +367,7 @@
             // txt_EsSo_lugar_DatosGe
             // 
             this.txt_EsSo_lugar_DatosGe.Location = new System.Drawing.Point(99, 64);
+            this.txt_EsSo_lugar_DatosGe.MaxLength = 40;
             this.txt_EsSo_lugar_DatosGe.Name = "txt_EsSo_lugar_DatosGe";
             this.txt_EsSo_lugar_DatosGe.Size = new System.Drawing.Size(275, 22);
             this.txt_EsSo_lugar_DatosGe.TabIndex = 34;
@@ -391,6 +377,7 @@
             // txt_EsSo_PersonaEntre_DatosGe
             // 
             this.txt_EsSo_PersonaEntre_DatosGe.Location = new System.Drawing.Point(177, 92);
+            this.txt_EsSo_PersonaEntre_DatosGe.MaxLength = 40;
             this.txt_EsSo_PersonaEntre_DatosGe.Name = "txt_EsSo_PersonaEntre_DatosGe";
             this.txt_EsSo_PersonaEntre_DatosGe.Size = new System.Drawing.Size(197, 22);
             this.txt_EsSo_PersonaEntre_DatosGe.TabIndex = 38;
@@ -463,6 +450,7 @@
             // txt_EsSo_TelTrabPadre_DatosGe
             // 
             this.txt_EsSo_TelTrabPadre_DatosGe.Location = new System.Drawing.Point(746, 83);
+            this.txt_EsSo_TelTrabPadre_DatosGe.MaxLength = 12;
             this.txt_EsSo_TelTrabPadre_DatosGe.Name = "txt_EsSo_TelTrabPadre_DatosGe";
             this.txt_EsSo_TelTrabPadre_DatosGe.Size = new System.Drawing.Size(135, 22);
             this.txt_EsSo_TelTrabPadre_DatosGe.TabIndex = 30;
@@ -480,6 +468,7 @@
             // txt_EsSo_CelPadre_DatosGe
             // 
             this.txt_EsSo_CelPadre_DatosGe.Location = new System.Drawing.Point(746, 57);
+            this.txt_EsSo_CelPadre_DatosGe.MaxLength = 12;
             this.txt_EsSo_CelPadre_DatosGe.Name = "txt_EsSo_CelPadre_DatosGe";
             this.txt_EsSo_CelPadre_DatosGe.Size = new System.Drawing.Size(135, 22);
             this.txt_EsSo_CelPadre_DatosGe.TabIndex = 28;
@@ -488,6 +477,7 @@
             // txt_EsSo_TelCAsaPadre_DatosGe
             // 
             this.txt_EsSo_TelCAsaPadre_DatosGe.Location = new System.Drawing.Point(746, 31);
+            this.txt_EsSo_TelCAsaPadre_DatosGe.MaxLength = 12;
             this.txt_EsSo_TelCAsaPadre_DatosGe.Name = "txt_EsSo_TelCAsaPadre_DatosGe";
             this.txt_EsSo_TelCAsaPadre_DatosGe.Size = new System.Drawing.Size(135, 22);
             this.txt_EsSo_TelCAsaPadre_DatosGe.TabIndex = 27;
@@ -516,12 +506,13 @@
             this.combox_EsSo_TrabajaPadre_forma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combox_EsSo_TrabajaPadre_forma.FormattingEnabled = true;
             this.combox_EsSo_TrabajaPadre_forma.Items.AddRange(new object[] {
-            "\"Si, \"",
-            "\"No, \""});
+            "Si, ",
+            "No, "});
             this.combox_EsSo_TrabajaPadre_forma.Location = new System.Drawing.Point(414, 60);
             this.combox_EsSo_TrabajaPadre_forma.Name = "combox_EsSo_TrabajaPadre_forma";
             this.combox_EsSo_TrabajaPadre_forma.Size = new System.Drawing.Size(136, 24);
             this.combox_EsSo_TrabajaPadre_forma.TabIndex = 24;
+            this.combox_EsSo_TrabajaPadre_forma.SelectedIndexChanged += new System.EventHandler(this.combox_EsSo_TrabajaPadre_forma_SelectedIndexChanged);
             // 
             // label20
             // 
@@ -536,9 +527,11 @@
             // 
             this.txt_EsSo_LugarTrabPadre_forma.Enabled = false;
             this.txt_EsSo_LugarTrabPadre_forma.Location = new System.Drawing.Point(414, 86);
+            this.txt_EsSo_LugarTrabPadre_forma.MaxLength = 130;
             this.txt_EsSo_LugarTrabPadre_forma.Name = "txt_EsSo_LugarTrabPadre_forma";
             this.txt_EsSo_LugarTrabPadre_forma.Size = new System.Drawing.Size(135, 22);
             this.txt_EsSo_LugarTrabPadre_forma.TabIndex = 22;
+            this.txt_EsSo_LugarTrabPadre_forma.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_LugarTrabPadre_forma_KeyPress);
             // 
             // label21
             // 
@@ -553,9 +546,11 @@
             // 
             this.txt_EsSo_OficioPadre_forma.Enabled = false;
             this.txt_EsSo_OficioPadre_forma.Location = new System.Drawing.Point(415, 34);
+            this.txt_EsSo_OficioPadre_forma.MaxLength = 130;
             this.txt_EsSo_OficioPadre_forma.Name = "txt_EsSo_OficioPadre_forma";
             this.txt_EsSo_OficioPadre_forma.Size = new System.Drawing.Size(135, 22);
             this.txt_EsSo_OficioPadre_forma.TabIndex = 20;
+            this.txt_EsSo_OficioPadre_forma.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_OficioPadre_forma_KeyPress);
             // 
             // label22
             // 
@@ -569,6 +564,7 @@
             // txt_EsSo_DomiciPadre_DatosGe
             // 
             this.txt_EsSo_DomiciPadre_DatosGe.Location = new System.Drawing.Point(133, 80);
+            this.txt_EsSo_DomiciPadre_DatosGe.MaxLength = 40;
             this.txt_EsSo_DomiciPadre_DatosGe.Name = "txt_EsSo_DomiciPadre_DatosGe";
             this.txt_EsSo_DomiciPadre_DatosGe.Size = new System.Drawing.Size(132, 22);
             this.txt_EsSo_DomiciPadre_DatosGe.TabIndex = 18;
@@ -586,6 +582,7 @@
             // txt_EsSo_IdentPadre_DatosGe
             // 
             this.txt_EsSo_IdentPadre_DatosGe.Location = new System.Drawing.Point(133, 54);
+            this.txt_EsSo_IdentPadre_DatosGe.MaxLength = 12;
             this.txt_EsSo_IdentPadre_DatosGe.Name = "txt_EsSo_IdentPadre_DatosGe";
             this.txt_EsSo_IdentPadre_DatosGe.Size = new System.Drawing.Size(132, 22);
             this.txt_EsSo_IdentPadre_DatosGe.TabIndex = 16;
@@ -595,9 +592,11 @@
             // 
             this.txt_EsSo_NomPadre_DatosGe.Enabled = false;
             this.txt_EsSo_NomPadre_DatosGe.Location = new System.Drawing.Point(133, 28);
+            this.txt_EsSo_NomPadre_DatosGe.MaxLength = 40;
             this.txt_EsSo_NomPadre_DatosGe.Name = "txt_EsSo_NomPadre_DatosGe";
             this.txt_EsSo_NomPadre_DatosGe.Size = new System.Drawing.Size(132, 22);
             this.txt_EsSo_NomPadre_DatosGe.TabIndex = 14;
+            this.txt_EsSo_NomPadre_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_NomPadre_DatosGe_KeyPress);
             // 
             // label24
             // 
@@ -650,12 +649,13 @@
             // 
             // txt_EsSo_IdentiEst_DatosGe
             // 
-            this.txt_EsSo_IdentiEst_DatosGe.Enabled = false;
             this.txt_EsSo_IdentiEst_DatosGe.Location = new System.Drawing.Point(345, 98);
+            this.txt_EsSo_IdentiEst_DatosGe.MaxLength = 14;
             this.txt_EsSo_IdentiEst_DatosGe.Name = "txt_EsSo_IdentiEst_DatosGe";
             this.txt_EsSo_IdentiEst_DatosGe.Size = new System.Drawing.Size(100, 21);
             this.txt_EsSo_IdentiEst_DatosGe.TabIndex = 9;
             this.txt_EsSo_IdentiEst_DatosGe.TextChanged += new System.EventHandler(this.txt_EsSo_IdentiEst_DatosGe_TextChanged);
+            this.txt_EsSo_IdentiEst_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_IdentiEst_DatosGe_KeyPress);
             // 
             // label5
             // 
@@ -752,7 +752,7 @@
             this.groupBox3.Controls.Add(this.txt_EsSo_TelEncarg_DatosGe);
             this.groupBox3.Controls.Add(this.label28);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(15, 431);
+            this.groupBox3.Location = new System.Drawing.Point(15, 437);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(897, 88);
             this.groupBox3.TabIndex = 2;
@@ -771,6 +771,7 @@
             // txt_EsSo_NomEncarg_DatosGe
             // 
             this.txt_EsSo_NomEncarg_DatosGe.Location = new System.Drawing.Point(119, 29);
+            this.txt_EsSo_NomEncarg_DatosGe.MaxLength = 40;
             this.txt_EsSo_NomEncarg_DatosGe.Name = "txt_EsSo_NomEncarg_DatosGe";
             this.txt_EsSo_NomEncarg_DatosGe.Size = new System.Drawing.Size(146, 22);
             this.txt_EsSo_NomEncarg_DatosGe.TabIndex = 33;
@@ -789,6 +790,7 @@
             // txt_EsSo_ParentescoEncar_DatosGe
             // 
             this.txt_EsSo_ParentescoEncar_DatosGe.Location = new System.Drawing.Point(119, 55);
+            this.txt_EsSo_ParentescoEncar_DatosGe.MaxLength = 40;
             this.txt_EsSo_ParentescoEncar_DatosGe.Name = "txt_EsSo_ParentescoEncar_DatosGe";
             this.txt_EsSo_ParentescoEncar_DatosGe.Size = new System.Drawing.Size(146, 22);
             this.txt_EsSo_ParentescoEncar_DatosGe.TabIndex = 34;
@@ -798,6 +800,7 @@
             // txt_EsSo_OficioEncarg_DatosGe
             // 
             this.txt_EsSo_OficioEncarg_DatosGe.Location = new System.Drawing.Point(746, 26);
+            this.txt_EsSo_OficioEncarg_DatosGe.MaxLength = 140;
             this.txt_EsSo_OficioEncarg_DatosGe.Name = "txt_EsSo_OficioEncarg_DatosGe";
             this.txt_EsSo_OficioEncarg_DatosGe.Size = new System.Drawing.Size(135, 22);
             this.txt_EsSo_OficioEncarg_DatosGe.TabIndex = 40;
@@ -824,6 +827,7 @@
             // txt_EsSo_EdadEncarg_DatosGe
             // 
             this.txt_EsSo_EdadEncarg_DatosGe.Location = new System.Drawing.Point(415, 25);
+            this.txt_EsSo_EdadEncarg_DatosGe.MaxLength = 2;
             this.txt_EsSo_EdadEncarg_DatosGe.Name = "txt_EsSo_EdadEncarg_DatosGe";
             this.txt_EsSo_EdadEncarg_DatosGe.Size = new System.Drawing.Size(135, 22);
             this.txt_EsSo_EdadEncarg_DatosGe.TabIndex = 36;
@@ -832,6 +836,7 @@
             // txt_EsSo_TelEncarg_DatosGe
             // 
             this.txt_EsSo_TelEncarg_DatosGe.Location = new System.Drawing.Point(415, 55);
+            this.txt_EsSo_TelEncarg_DatosGe.MaxLength = 12;
             this.txt_EsSo_TelEncarg_DatosGe.Name = "txt_EsSo_TelEncarg_DatosGe";
             this.txt_EsSo_TelEncarg_DatosGe.Size = new System.Drawing.Size(135, 22);
             this.txt_EsSo_TelEncarg_DatosGe.TabIndex = 38;
@@ -887,6 +892,7 @@
             // txt_EsSo_TelTrabMadre_DatosGe
             // 
             this.txt_EsSo_TelTrabMadre_DatosGe.Location = new System.Drawing.Point(749, 82);
+            this.txt_EsSo_TelTrabMadre_DatosGe.MaxLength = 12;
             this.txt_EsSo_TelTrabMadre_DatosGe.Name = "txt_EsSo_TelTrabMadre_DatosGe";
             this.txt_EsSo_TelTrabMadre_DatosGe.Size = new System.Drawing.Size(132, 22);
             this.txt_EsSo_TelTrabMadre_DatosGe.TabIndex = 30;
@@ -904,6 +910,7 @@
             // txt_EsSo_CelMadre_DatosGe
             // 
             this.txt_EsSo_CelMadre_DatosGe.Location = new System.Drawing.Point(749, 56);
+            this.txt_EsSo_CelMadre_DatosGe.MaxLength = 12;
             this.txt_EsSo_CelMadre_DatosGe.Name = "txt_EsSo_CelMadre_DatosGe";
             this.txt_EsSo_CelMadre_DatosGe.Size = new System.Drawing.Size(132, 22);
             this.txt_EsSo_CelMadre_DatosGe.TabIndex = 28;
@@ -912,9 +919,11 @@
             // txt_EsSo_TelCasaMadre_DatosGe
             // 
             this.txt_EsSo_TelCasaMadre_DatosGe.Location = new System.Drawing.Point(749, 30);
+            this.txt_EsSo_TelCasaMadre_DatosGe.MaxLength = 12;
             this.txt_EsSo_TelCasaMadre_DatosGe.Name = "txt_EsSo_TelCasaMadre_DatosGe";
             this.txt_EsSo_TelCasaMadre_DatosGe.Size = new System.Drawing.Size(132, 22);
             this.txt_EsSo_TelCasaMadre_DatosGe.TabIndex = 27;
+            this.txt_EsSo_TelCasaMadre_DatosGe.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_EsSo_TelCasaMadre_DatosGe_KeyDown);
             this.txt_EsSo_TelCasaMadre_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_TelCasaMadre_DatosGe_KeyPress);
             // 
             // label15
@@ -940,8 +949,8 @@
             this.Combox_EsSo_TrabajaMadre_forma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Combox_EsSo_TrabajaMadre_forma.FormattingEnabled = true;
             this.Combox_EsSo_TrabajaMadre_forma.Items.AddRange(new object[] {
-            "\"Si, \"",
-            "\"No, \""});
+            "Si, ",
+            "No, "});
             this.Combox_EsSo_TrabajaMadre_forma.Location = new System.Drawing.Point(414, 56);
             this.Combox_EsSo_TrabajaMadre_forma.Name = "Combox_EsSo_TrabajaMadre_forma";
             this.Combox_EsSo_TrabajaMadre_forma.Size = new System.Drawing.Size(136, 24);
@@ -960,9 +969,11 @@
             // 
             this.txt_EsSo_LugarTrabMadre_forma.Enabled = false;
             this.txt_EsSo_LugarTrabMadre_forma.Location = new System.Drawing.Point(414, 82);
+            this.txt_EsSo_LugarTrabMadre_forma.MaxLength = 130;
             this.txt_EsSo_LugarTrabMadre_forma.Name = "txt_EsSo_LugarTrabMadre_forma";
             this.txt_EsSo_LugarTrabMadre_forma.Size = new System.Drawing.Size(135, 22);
             this.txt_EsSo_LugarTrabMadre_forma.TabIndex = 22;
+            this.txt_EsSo_LugarTrabMadre_forma.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_LugarTrabMadre_forma_KeyPress);
             // 
             // label8
             // 
@@ -977,9 +988,11 @@
             // 
             this.txt_EsSo_OficioMadre_forma.Enabled = false;
             this.txt_EsSo_OficioMadre_forma.Location = new System.Drawing.Point(415, 30);
+            this.txt_EsSo_OficioMadre_forma.MaxLength = 130;
             this.txt_EsSo_OficioMadre_forma.Name = "txt_EsSo_OficioMadre_forma";
             this.txt_EsSo_OficioMadre_forma.Size = new System.Drawing.Size(135, 22);
             this.txt_EsSo_OficioMadre_forma.TabIndex = 20;
+            this.txt_EsSo_OficioMadre_forma.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_OficioMadre_forma_KeyPress);
             // 
             // label9
             // 
@@ -993,6 +1006,7 @@
             // txt_EsSo_DomiciMadre_DatosGe
             // 
             this.txt_EsSo_DomiciMadre_DatosGe.Location = new System.Drawing.Point(133, 82);
+            this.txt_EsSo_DomiciMadre_DatosGe.MaxLength = 40;
             this.txt_EsSo_DomiciMadre_DatosGe.Name = "txt_EsSo_DomiciMadre_DatosGe";
             this.txt_EsSo_DomiciMadre_DatosGe.Size = new System.Drawing.Size(132, 22);
             this.txt_EsSo_DomiciMadre_DatosGe.TabIndex = 18;
@@ -1010,6 +1024,7 @@
             // txt_EsSo_IdentMadre_DatosGe
             // 
             this.txt_EsSo_IdentMadre_DatosGe.Location = new System.Drawing.Point(133, 56);
+            this.txt_EsSo_IdentMadre_DatosGe.MaxLength = 12;
             this.txt_EsSo_IdentMadre_DatosGe.Name = "txt_EsSo_IdentMadre_DatosGe";
             this.txt_EsSo_IdentMadre_DatosGe.Size = new System.Drawing.Size(132, 22);
             this.txt_EsSo_IdentMadre_DatosGe.TabIndex = 16;
@@ -1019,9 +1034,11 @@
             // 
             this.txt_EsSo_NomMadre_DatosGe.Enabled = false;
             this.txt_EsSo_NomMadre_DatosGe.Location = new System.Drawing.Point(133, 30);
+            this.txt_EsSo_NomMadre_DatosGe.MaxLength = 40;
             this.txt_EsSo_NomMadre_DatosGe.Name = "txt_EsSo_NomMadre_DatosGe";
             this.txt_EsSo_NomMadre_DatosGe.Size = new System.Drawing.Size(132, 22);
             this.txt_EsSo_NomMadre_DatosGe.TabIndex = 14;
+            this.txt_EsSo_NomMadre_DatosGe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_NomMadre_DatosGe_KeyPress);
             // 
             // label12
             // 
@@ -1031,6 +1048,21 @@
             this.label12.Size = new System.Drawing.Size(63, 16);
             this.label12.TabIndex = 13;
             this.label12.Text = "Nombre";
+            // 
+            // btm_EsSo_BuscarAlumno_DatosGe
+            // 
+            this.btm_EsSo_BuscarAlumno_DatosGe.BackColor = System.Drawing.SystemColors.Window;
+            this.btm_EsSo_BuscarAlumno_DatosGe.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btm_EsSo_BuscarAlumno_DatosGe.BackgroundImage")));
+            this.btm_EsSo_BuscarAlumno_DatosGe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btm_EsSo_BuscarAlumno_DatosGe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btm_EsSo_BuscarAlumno_DatosGe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btm_EsSo_BuscarAlumno_DatosGe.ForeColor = System.Drawing.SystemColors.Window;
+            this.btm_EsSo_BuscarAlumno_DatosGe.Location = new System.Drawing.Point(957, 7);
+            this.btm_EsSo_BuscarAlumno_DatosGe.Name = "btm_EsSo_BuscarAlumno_DatosGe";
+            this.btm_EsSo_BuscarAlumno_DatosGe.Size = new System.Drawing.Size(160, 137);
+            this.btm_EsSo_BuscarAlumno_DatosGe.TabIndex = 47;
+            this.btm_EsSo_BuscarAlumno_DatosGe.UseVisualStyleBackColor = false;
+            this.btm_EsSo_BuscarAlumno_DatosGe.Click += new System.EventHandler(this.btm_EsSo_BuscarAlumno_DatosGe_Click);
             // 
             // InformacionFamilia
             // 
@@ -1061,6 +1093,20 @@
             this.InformacionFamilia.UseVisualStyleBackColor = true;
             this.InformacionFamilia.Click += new System.EventHandler(this.InformacionFamilia_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Si",
+            "No"});
+            this.comboBox1.Location = new System.Drawing.Point(573, 24);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(75, 23);
+            this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // label75
             // 
             this.label75.AutoSize = true;
@@ -1072,11 +1118,14 @@
             // 
             // btm_EsSo_Siguiente_InfoFami
             // 
+            this.btm_EsSo_Siguiente_InfoFami.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btm_EsSo_Siguiente_InfoFami.BackgroundImage")));
+            this.btm_EsSo_Siguiente_InfoFami.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btm_EsSo_Siguiente_InfoFami.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btm_EsSo_Siguiente_InfoFami.ForeColor = System.Drawing.SystemColors.Window;
             this.btm_EsSo_Siguiente_InfoFami.Location = new System.Drawing.Point(1026, 402);
             this.btm_EsSo_Siguiente_InfoFami.Name = "btm_EsSo_Siguiente_InfoFami";
             this.btm_EsSo_Siguiente_InfoFami.Size = new System.Drawing.Size(108, 106);
             this.btm_EsSo_Siguiente_InfoFami.TabIndex = 37;
-            this.btm_EsSo_Siguiente_InfoFami.Text = "Siguiente";
             this.btm_EsSo_Siguiente_InfoFami.UseVisualStyleBackColor = true;
             this.btm_EsSo_Siguiente_InfoFami.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -1116,16 +1165,18 @@
             // 
             // txt_EsSo_TotalGastos_InfoFami
             // 
-            this.txt_EsSo_TotalGastos_InfoFami.Location = new System.Drawing.Point(669, 109);
+            this.txt_EsSo_TotalGastos_InfoFami.Location = new System.Drawing.Point(712, 118);
+            this.txt_EsSo_TotalGastos_InfoFami.MaxLength = 9;
             this.txt_EsSo_TotalGastos_InfoFami.Name = "txt_EsSo_TotalGastos_InfoFami";
+            this.txt_EsSo_TotalGastos_InfoFami.ReadOnly = true;
             this.txt_EsSo_TotalGastos_InfoFami.Size = new System.Drawing.Size(100, 21);
-            this.txt_EsSo_TotalGastos_InfoFami.TabIndex = 45;
+            this.txt_EsSo_TotalGastos_InfoFami.TabIndex = 11;
             this.txt_EsSo_TotalGastos_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_TotalGastos_InfoFami_KeyPress);
             // 
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(491, 112);
+            this.label52.Location = new System.Drawing.Point(532, 121);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(49, 15);
             this.label52.TabIndex = 44;
@@ -1134,7 +1185,7 @@
             // label53
             // 
             this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(488, 60);
+            this.label53.Location = new System.Drawing.Point(531, 69);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(172, 15);
             this.label53.TabIndex = 43;
@@ -1142,16 +1193,18 @@
             // 
             // txt_EsSo_Otros_InfoFami
             // 
-            this.txt_EsSo_Otros_InfoFami.Location = new System.Drawing.Point(669, 83);
+            this.txt_EsSo_Otros_InfoFami.Location = new System.Drawing.Point(712, 92);
+            this.txt_EsSo_Otros_InfoFami.MaxLength = 9;
             this.txt_EsSo_Otros_InfoFami.Name = "txt_EsSo_Otros_InfoFami";
             this.txt_EsSo_Otros_InfoFami.Size = new System.Drawing.Size(100, 21);
-            this.txt_EsSo_Otros_InfoFami.TabIndex = 42;
+            this.txt_EsSo_Otros_InfoFami.TabIndex = 10;
+            this.txt_EsSo_Otros_InfoFami.TextChanged += new System.EventHandler(this.txt_EsSo_Otros_InfoFami_TextChanged);
             this.txt_EsSo_Otros_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Otros_InfoFami_KeyPress);
             // 
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(488, 86);
+            this.label54.Location = new System.Drawing.Point(531, 95);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(41, 15);
             this.label54.TabIndex = 41;
@@ -1159,24 +1212,28 @@
             // 
             // txt_EsSo_Alquiler_InfoFami
             // 
-            this.txt_EsSo_Alquiler_InfoFami.Location = new System.Drawing.Point(669, 57);
+            this.txt_EsSo_Alquiler_InfoFami.Location = new System.Drawing.Point(712, 66);
+            this.txt_EsSo_Alquiler_InfoFami.MaxLength = 9;
             this.txt_EsSo_Alquiler_InfoFami.Name = "txt_EsSo_Alquiler_InfoFami";
             this.txt_EsSo_Alquiler_InfoFami.Size = new System.Drawing.Size(100, 21);
-            this.txt_EsSo_Alquiler_InfoFami.TabIndex = 40;
+            this.txt_EsSo_Alquiler_InfoFami.TabIndex = 9;
+            this.txt_EsSo_Alquiler_InfoFami.TextChanged += new System.EventHandler(this.txt_EsSo_Alquiler_InfoFami_TextChanged);
             this.txt_EsSo_Alquiler_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Alquiler_InfoFami_KeyPress);
             // 
             // txt_EsSo_Vestime_InfoFami
             // 
-            this.txt_EsSo_Vestime_InfoFami.Location = new System.Drawing.Point(669, 31);
+            this.txt_EsSo_Vestime_InfoFami.Location = new System.Drawing.Point(712, 40);
+            this.txt_EsSo_Vestime_InfoFami.MaxLength = 9;
             this.txt_EsSo_Vestime_InfoFami.Name = "txt_EsSo_Vestime_InfoFami";
             this.txt_EsSo_Vestime_InfoFami.Size = new System.Drawing.Size(100, 21);
-            this.txt_EsSo_Vestime_InfoFami.TabIndex = 39;
+            this.txt_EsSo_Vestime_InfoFami.TabIndex = 8;
+            this.txt_EsSo_Vestime_InfoFami.TextChanged += new System.EventHandler(this.txt_EsSo_Vestime_InfoFami_TextChanged);
             this.txt_EsSo_Vestime_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Vestime_InfoFami_KeyPress);
             // 
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(488, 34);
+            this.label55.Location = new System.Drawing.Point(531, 43);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(78, 15);
             this.label55.TabIndex = 38;
@@ -1184,16 +1241,18 @@
             // 
             // txt_EsSo_Combus_InfoFami
             // 
-            this.txt_EsSo_Combus_InfoFami.Location = new System.Drawing.Point(354, 109);
+            this.txt_EsSo_Combus_InfoFami.Location = new System.Drawing.Point(386, 118);
+            this.txt_EsSo_Combus_InfoFami.MaxLength = 9;
             this.txt_EsSo_Combus_InfoFami.Name = "txt_EsSo_Combus_InfoFami";
             this.txt_EsSo_Combus_InfoFami.Size = new System.Drawing.Size(100, 21);
-            this.txt_EsSo_Combus_InfoFami.TabIndex = 37;
+            this.txt_EsSo_Combus_InfoFami.TabIndex = 7;
+            this.txt_EsSo_Combus_InfoFami.TextChanged += new System.EventHandler(this.txt_EsSo_Combus_InfoFami_TextChanged);
             this.txt_EsSo_Combus_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Combus_InfoFami_KeyPress);
             // 
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(262, 112);
+            this.label51.Location = new System.Drawing.Point(294, 121);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(87, 15);
             this.label51.TabIndex = 36;
@@ -1201,16 +1260,18 @@
             // 
             // txt_EsSo_Alimentos_InfoFami
             // 
-            this.txt_EsSo_Alimentos_InfoFami.Location = new System.Drawing.Point(132, 109);
+            this.txt_EsSo_Alimentos_InfoFami.Location = new System.Drawing.Point(159, 118);
+            this.txt_EsSo_Alimentos_InfoFami.MaxLength = 9;
             this.txt_EsSo_Alimentos_InfoFami.Name = "txt_EsSo_Alimentos_InfoFami";
             this.txt_EsSo_Alimentos_InfoFami.Size = new System.Drawing.Size(100, 21);
-            this.txt_EsSo_Alimentos_InfoFami.TabIndex = 35;
+            this.txt_EsSo_Alimentos_InfoFami.TabIndex = 3;
+            this.txt_EsSo_Alimentos_InfoFami.TextChanged += new System.EventHandler(this.txt_EsSo_Alimentos_InfoFami_TextChanged);
             this.txt_EsSo_Alimentos_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Alimentos_InfoFami_KeyPress);
             // 
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(13, 112);
+            this.label44.Location = new System.Drawing.Point(40, 121);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(70, 15);
             this.label44.TabIndex = 34;
@@ -1219,7 +1280,7 @@
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(261, 60);
+            this.label45.Location = new System.Drawing.Point(293, 69);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(44, 15);
             this.label45.TabIndex = 33;
@@ -1227,16 +1288,18 @@
             // 
             // txt_EsSo_Educa_InfoFami
             // 
-            this.txt_EsSo_Educa_InfoFami.Location = new System.Drawing.Point(354, 83);
+            this.txt_EsSo_Educa_InfoFami.Location = new System.Drawing.Point(386, 92);
+            this.txt_EsSo_Educa_InfoFami.MaxLength = 9;
             this.txt_EsSo_Educa_InfoFami.Name = "txt_EsSo_Educa_InfoFami";
             this.txt_EsSo_Educa_InfoFami.Size = new System.Drawing.Size(100, 21);
-            this.txt_EsSo_Educa_InfoFami.TabIndex = 32;
+            this.txt_EsSo_Educa_InfoFami.TabIndex = 6;
+            this.txt_EsSo_Educa_InfoFami.TextChanged += new System.EventHandler(this.txt_EsSo_Educa_InfoFami_TextChanged);
             this.txt_EsSo_Educa_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Educa_InfoFami_KeyPress);
             // 
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(261, 86);
+            this.label46.Location = new System.Drawing.Point(293, 95);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(74, 15);
             this.label46.TabIndex = 31;
@@ -1244,24 +1307,28 @@
             // 
             // txt_EsSo_Salud_InfoFami
             // 
-            this.txt_EsSo_Salud_InfoFami.Location = new System.Drawing.Point(354, 57);
+            this.txt_EsSo_Salud_InfoFami.Location = new System.Drawing.Point(386, 66);
+            this.txt_EsSo_Salud_InfoFami.MaxLength = 9;
             this.txt_EsSo_Salud_InfoFami.Name = "txt_EsSo_Salud_InfoFami";
             this.txt_EsSo_Salud_InfoFami.Size = new System.Drawing.Size(100, 21);
-            this.txt_EsSo_Salud_InfoFami.TabIndex = 30;
+            this.txt_EsSo_Salud_InfoFami.TabIndex = 5;
+            this.txt_EsSo_Salud_InfoFami.TextChanged += new System.EventHandler(this.txt_EsSo_Salud_InfoFami_TextChanged);
             this.txt_EsSo_Salud_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Salud_InfoFami_KeyPress);
             // 
             // txt_EsSo_Transp_InfoFami
             // 
-            this.txt_EsSo_Transp_InfoFami.Location = new System.Drawing.Point(354, 31);
+            this.txt_EsSo_Transp_InfoFami.Location = new System.Drawing.Point(386, 40);
+            this.txt_EsSo_Transp_InfoFami.MaxLength = 9;
             this.txt_EsSo_Transp_InfoFami.Name = "txt_EsSo_Transp_InfoFami";
             this.txt_EsSo_Transp_InfoFami.Size = new System.Drawing.Size(100, 21);
-            this.txt_EsSo_Transp_InfoFami.TabIndex = 29;
+            this.txt_EsSo_Transp_InfoFami.TabIndex = 4;
+            this.txt_EsSo_Transp_InfoFami.TextChanged += new System.EventHandler(this.txt_EsSo_Transp_InfoFami_TextChanged);
             this.txt_EsSo_Transp_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Transp_InfoFami_KeyPress);
             // 
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(261, 34);
+            this.label47.Location = new System.Drawing.Point(293, 43);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(76, 15);
             this.label47.TabIndex = 28;
@@ -1270,7 +1337,7 @@
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(13, 60);
+            this.label48.Location = new System.Drawing.Point(40, 69);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(92, 15);
             this.label48.TabIndex = 27;
@@ -1278,16 +1345,18 @@
             // 
             // txt_EsSo_Telefono_InfoFami
             // 
-            this.txt_EsSo_Telefono_InfoFami.Location = new System.Drawing.Point(132, 83);
+            this.txt_EsSo_Telefono_InfoFami.Location = new System.Drawing.Point(159, 92);
+            this.txt_EsSo_Telefono_InfoFami.MaxLength = 9;
             this.txt_EsSo_Telefono_InfoFami.Name = "txt_EsSo_Telefono_InfoFami";
             this.txt_EsSo_Telefono_InfoFami.Size = new System.Drawing.Size(100, 21);
-            this.txt_EsSo_Telefono_InfoFami.TabIndex = 26;
+            this.txt_EsSo_Telefono_InfoFami.TabIndex = 2;
+            this.txt_EsSo_Telefono_InfoFami.TextChanged += new System.EventHandler(this.txt_EsSo_Telefono_InfoFami_TextChanged);
             this.txt_EsSo_Telefono_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Telefono_InfoFami_KeyPress);
             // 
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(13, 86);
+            this.label49.Location = new System.Drawing.Point(40, 95);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(63, 15);
             this.label49.TabIndex = 25;
@@ -1295,24 +1364,28 @@
             // 
             // txt_EsSo_Agua_InfoFami
             // 
-            this.txt_EsSo_Agua_InfoFami.Location = new System.Drawing.Point(132, 57);
+            this.txt_EsSo_Agua_InfoFami.Location = new System.Drawing.Point(159, 66);
+            this.txt_EsSo_Agua_InfoFami.MaxLength = 9;
             this.txt_EsSo_Agua_InfoFami.Name = "txt_EsSo_Agua_InfoFami";
             this.txt_EsSo_Agua_InfoFami.Size = new System.Drawing.Size(100, 21);
-            this.txt_EsSo_Agua_InfoFami.TabIndex = 24;
+            this.txt_EsSo_Agua_InfoFami.TabIndex = 1;
+            this.txt_EsSo_Agua_InfoFami.TextChanged += new System.EventHandler(this.txt_EsSo_Agua_InfoFami_TextChanged);
             this.txt_EsSo_Agua_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Agua_InfoFami_KeyPress);
             // 
             // txt_EsSo_Energia_InfoFami
             // 
-            this.txt_EsSo_Energia_InfoFami.Location = new System.Drawing.Point(132, 31);
+            this.txt_EsSo_Energia_InfoFami.Location = new System.Drawing.Point(159, 40);
+            this.txt_EsSo_Energia_InfoFami.MaxLength = 9;
             this.txt_EsSo_Energia_InfoFami.Name = "txt_EsSo_Energia_InfoFami";
             this.txt_EsSo_Energia_InfoFami.Size = new System.Drawing.Size(100, 21);
-            this.txt_EsSo_Energia_InfoFami.TabIndex = 23;
+            this.txt_EsSo_Energia_InfoFami.TabIndex = 0;
+            this.txt_EsSo_Energia_InfoFami.TextChanged += new System.EventHandler(this.txt_EsSo_Energia_InfoFami_TextChanged);
             this.txt_EsSo_Energia_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Energia_InfoFami_KeyPress);
             // 
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(13, 34);
+            this.label50.Location = new System.Drawing.Point(40, 43);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(117, 15);
             this.label50.TabIndex = 22;
@@ -1346,9 +1419,11 @@
             // txt_EsSo_IngreTotales_InfoFami
             // 
             this.txt_EsSo_IngreTotales_InfoFami.Location = new System.Drawing.Point(705, 50);
+            this.txt_EsSo_IngreTotales_InfoFami.MaxLength = 9;
             this.txt_EsSo_IngreTotales_InfoFami.Name = "txt_EsSo_IngreTotales_InfoFami";
+            this.txt_EsSo_IngreTotales_InfoFami.ReadOnly = true;
             this.txt_EsSo_IngreTotales_InfoFami.Size = new System.Drawing.Size(148, 21);
-            this.txt_EsSo_IngreTotales_InfoFami.TabIndex = 35;
+            this.txt_EsSo_IngreTotales_InfoFami.TabIndex = 6;
             this.txt_EsSo_IngreTotales_InfoFami.TextChanged += new System.EventHandler(this.txt_EsSo_IngreTotales_InfoFami_TextChanged);
             this.txt_EsSo_IngreTotales_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_IngreTotales_InfoFami_KeyPress);
             // 
@@ -1373,9 +1448,11 @@
             // txt_EsSo_IngreOtros_InfoFami
             // 
             this.txt_EsSo_IngreOtros_InfoFami.Location = new System.Drawing.Point(473, 80);
+            this.txt_EsSo_IngreOtros_InfoFami.MaxLength = 9;
             this.txt_EsSo_IngreOtros_InfoFami.Name = "txt_EsSo_IngreOtros_InfoFami";
             this.txt_EsSo_IngreOtros_InfoFami.Size = new System.Drawing.Size(100, 21);
-            this.txt_EsSo_IngreOtros_InfoFami.TabIndex = 32;
+            this.txt_EsSo_IngreOtros_InfoFami.TabIndex = 5;
+            this.txt_EsSo_IngreOtros_InfoFami.TextChanged += new System.EventHandler(this.txt_EsSo_IngreOtros_InfoFami_TextChanged);
             this.txt_EsSo_IngreOtros_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_IngreOtros_InfoFami_KeyPress);
             // 
             // label41
@@ -1390,17 +1467,21 @@
             // txt_EsSo_IngrePencion_InfoFami
             // 
             this.txt_EsSo_IngrePencion_InfoFami.Location = new System.Drawing.Point(473, 54);
+            this.txt_EsSo_IngrePencion_InfoFami.MaxLength = 9;
             this.txt_EsSo_IngrePencion_InfoFami.Name = "txt_EsSo_IngrePencion_InfoFami";
             this.txt_EsSo_IngrePencion_InfoFami.Size = new System.Drawing.Size(100, 21);
-            this.txt_EsSo_IngrePencion_InfoFami.TabIndex = 30;
+            this.txt_EsSo_IngrePencion_InfoFami.TabIndex = 4;
+            this.txt_EsSo_IngrePencion_InfoFami.TextChanged += new System.EventHandler(this.txt_EsSo_IngrePencion_InfoFami_TextChanged);
             this.txt_EsSo_IngrePencion_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_IngrePencion_InfoFami_KeyPress);
             // 
             // txt_EsSo_IngreHijo_InfoFami
             // 
             this.txt_EsSo_IngreHijo_InfoFami.Location = new System.Drawing.Point(473, 28);
+            this.txt_EsSo_IngreHijo_InfoFami.MaxLength = 9;
             this.txt_EsSo_IngreHijo_InfoFami.Name = "txt_EsSo_IngreHijo_InfoFami";
             this.txt_EsSo_IngreHijo_InfoFami.Size = new System.Drawing.Size(100, 21);
-            this.txt_EsSo_IngreHijo_InfoFami.TabIndex = 29;
+            this.txt_EsSo_IngreHijo_InfoFami.TabIndex = 3;
+            this.txt_EsSo_IngreHijo_InfoFami.TextChanged += new System.EventHandler(this.txt_EsSo_IngreHijo_InfoFami_TextChanged);
             this.txt_EsSo_IngreHijo_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_IngreHijo_InfoFami_KeyPress);
             // 
             // label42
@@ -1424,9 +1505,11 @@
             // txt_EsSo_IngreMadre_InfoFami
             // 
             this.txt_EsSo_IngreMadre_InfoFami.Location = new System.Drawing.Point(90, 83);
+            this.txt_EsSo_IngreMadre_InfoFami.MaxLength = 9;
             this.txt_EsSo_IngreMadre_InfoFami.Name = "txt_EsSo_IngreMadre_InfoFami";
             this.txt_EsSo_IngreMadre_InfoFami.Size = new System.Drawing.Size(100, 21);
-            this.txt_EsSo_IngreMadre_InfoFami.TabIndex = 26;
+            this.txt_EsSo_IngreMadre_InfoFami.TabIndex = 2;
+            this.txt_EsSo_IngreMadre_InfoFami.TextChanged += new System.EventHandler(this.txt_EsSo_IngreMadre_InfoFami_TextChanged);
             this.txt_EsSo_IngreMadre_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_IngreMadre_InfoFami_KeyPress);
             // 
             // label38
@@ -1441,17 +1524,20 @@
             // txt_EsSo_IngrePadre_InfoFami
             // 
             this.txt_EsSo_IngrePadre_InfoFami.Location = new System.Drawing.Point(90, 57);
+            this.txt_EsSo_IngrePadre_InfoFami.MaxLength = 9;
             this.txt_EsSo_IngrePadre_InfoFami.Name = "txt_EsSo_IngrePadre_InfoFami";
             this.txt_EsSo_IngrePadre_InfoFami.Size = new System.Drawing.Size(100, 21);
-            this.txt_EsSo_IngrePadre_InfoFami.TabIndex = 24;
+            this.txt_EsSo_IngrePadre_InfoFami.TabIndex = 1;
+            this.txt_EsSo_IngrePadre_InfoFami.TextChanged += new System.EventHandler(this.txt_EsSo_IngrePadre_InfoFami_TextChanged);
             this.txt_EsSo_IngrePadre_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_IngrePadre_InfoFami_KeyPress);
             // 
             // txt_EsSo_IngreAbue_InfoFami
             // 
             this.txt_EsSo_IngreAbue_InfoFami.Location = new System.Drawing.Point(90, 31);
+            this.txt_EsSo_IngreAbue_InfoFami.MaxLength = 9;
             this.txt_EsSo_IngreAbue_InfoFami.Name = "txt_EsSo_IngreAbue_InfoFami";
             this.txt_EsSo_IngreAbue_InfoFami.Size = new System.Drawing.Size(100, 21);
-            this.txt_EsSo_IngreAbue_InfoFami.TabIndex = 23;
+            this.txt_EsSo_IngreAbue_InfoFami.TabIndex = 0;
             this.txt_EsSo_IngreAbue_InfoFami.TextChanged += new System.EventHandler(this.txt_EsSo_IngreAbue_InfoFami_TextChanged);
             this.txt_EsSo_IngreAbue_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_IngreAbue_InfoFami_KeyPress);
             // 
@@ -1468,9 +1554,10 @@
             // 
             this.txt_EsSo_TotalTraba_InfoFami.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_EsSo_TotalTraba_InfoFami.Location = new System.Drawing.Point(275, 92);
+            this.txt_EsSo_TotalTraba_InfoFami.MaxLength = 3;
             this.txt_EsSo_TotalTraba_InfoFami.Name = "txt_EsSo_TotalTraba_InfoFami";
             this.txt_EsSo_TotalTraba_InfoFami.Size = new System.Drawing.Size(162, 21);
-            this.txt_EsSo_TotalTraba_InfoFami.TabIndex = 13;
+            this.txt_EsSo_TotalTraba_InfoFami.TabIndex = 6;
             this.txt_EsSo_TotalTraba_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_TotalTraba_InfoFami_KeyPress);
             // 
             // combox_EsSo_CuantosFami_InfoFami
@@ -1484,34 +1571,37 @@
             this.combox_EsSo_CuantosFami_InfoFami.Location = new System.Drawing.Point(275, 56);
             this.combox_EsSo_CuantosFami_InfoFami.Name = "combox_EsSo_CuantosFami_InfoFami";
             this.combox_EsSo_CuantosFami_InfoFami.Size = new System.Drawing.Size(162, 23);
-            this.combox_EsSo_CuantosFami_InfoFami.TabIndex = 12;
+            this.combox_EsSo_CuantosFami_InfoFami.TabIndex = 3;
             this.combox_EsSo_CuantosFami_InfoFami.SelectedIndexChanged += new System.EventHandler(this.combox_EsSo_CuantosFami_InfoFami_SelectedIndexChanged);
             // 
             // txt_EsSo_TotalMiemb_InfoFami
             // 
             this.txt_EsSo_TotalMiemb_InfoFami.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_EsSo_TotalMiemb_InfoFami.Location = new System.Drawing.Point(874, 56);
+            this.txt_EsSo_TotalMiemb_InfoFami.MaxLength = 3;
             this.txt_EsSo_TotalMiemb_InfoFami.Name = "txt_EsSo_TotalMiemb_InfoFami";
             this.txt_EsSo_TotalMiemb_InfoFami.Size = new System.Drawing.Size(74, 21);
-            this.txt_EsSo_TotalMiemb_InfoFami.TabIndex = 11;
+            this.txt_EsSo_TotalMiemb_InfoFami.TabIndex = 5;
             this.txt_EsSo_TotalMiemb_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_TotalMiemb_InfoFami_KeyPress);
             // 
             // txt_EsSo_CuantosFamil_InfoFami
             // 
             this.txt_EsSo_CuantosFamil_InfoFami.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_EsSo_CuantosFamil_InfoFami.Location = new System.Drawing.Point(573, 56);
+            this.txt_EsSo_CuantosFamil_InfoFami.MaxLength = 3;
             this.txt_EsSo_CuantosFamil_InfoFami.Name = "txt_EsSo_CuantosFamil_InfoFami";
             this.txt_EsSo_CuantosFamil_InfoFami.Size = new System.Drawing.Size(75, 21);
-            this.txt_EsSo_CuantosFamil_InfoFami.TabIndex = 10;
+            this.txt_EsSo_CuantosFamil_InfoFami.TabIndex = 4;
             this.txt_EsSo_CuantosFamil_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_CuantosFamil_InfoFami_KeyPress);
             // 
             // txt_EsSo_CuantosHijos_InfoFami
             // 
             this.txt_EsSo_CuantosHijos_InfoFami.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_EsSo_CuantosHijos_InfoFami.Location = new System.Drawing.Point(733, 27);
+            this.txt_EsSo_CuantosHijos_InfoFami.MaxLength = 3;
             this.txt_EsSo_CuantosHijos_InfoFami.Name = "txt_EsSo_CuantosHijos_InfoFami";
             this.txt_EsSo_CuantosHijos_InfoFami.Size = new System.Drawing.Size(100, 21);
-            this.txt_EsSo_CuantosHijos_InfoFami.TabIndex = 9;
+            this.txt_EsSo_CuantosHijos_InfoFami.TabIndex = 2;
             this.txt_EsSo_CuantosHijos_InfoFami.TextChanged += new System.EventHandler(this.txt_EsSo_CuantosHijos_InfoFami_TextChanged);
             this.txt_EsSo_CuantosHijos_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_CuantosHijos_InfoFami_KeyPress);
             // 
@@ -1519,9 +1609,10 @@
             // 
             this.txt_EsSo_HabitantesCasa_InfoFami.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_EsSo_HabitantesCasa_InfoFami.Location = new System.Drawing.Point(275, 27);
+            this.txt_EsSo_HabitantesCasa_InfoFami.MaxLength = 3;
             this.txt_EsSo_HabitantesCasa_InfoFami.Name = "txt_EsSo_HabitantesCasa_InfoFami";
             this.txt_EsSo_HabitantesCasa_InfoFami.Size = new System.Drawing.Size(162, 21);
-            this.txt_EsSo_HabitantesCasa_InfoFami.TabIndex = 7;
+            this.txt_EsSo_HabitantesCasa_InfoFami.TabIndex = 0;
             this.txt_EsSo_HabitantesCasa_InfoFami.TextChanged += new System.EventHandler(this.txt_EsSo_HabitantesCasa_InfoFami_TextChanged);
             this.txt_EsSo_HabitantesCasa_InfoFami.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_HabitantesCasa_InfoFami_KeyPress);
             // 
@@ -1626,11 +1717,14 @@
             // 
             // button3
             // 
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.SystemColors.Window;
             this.button3.Location = new System.Drawing.Point(1026, 402);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(108, 106);
             this.button3.TabIndex = 25;
-            this.button3.Text = "Siguiente";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -1638,9 +1732,10 @@
             // 
             this.txt_EsSo_Aporbado_SaludRecre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_EsSo_Aporbado_SaludRecre.Location = new System.Drawing.Point(273, 434);
+            this.txt_EsSo_Aporbado_SaludRecre.MaxLength = 40;
             this.txt_EsSo_Aporbado_SaludRecre.Name = "txt_EsSo_Aporbado_SaludRecre";
             this.txt_EsSo_Aporbado_SaludRecre.Size = new System.Drawing.Size(269, 24);
-            this.txt_EsSo_Aporbado_SaludRecre.TabIndex = 12;
+            this.txt_EsSo_Aporbado_SaludRecre.TabIndex = 1;
             this.txt_EsSo_Aporbado_SaludRecre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Aporbado_SaludRecre_KeyPress);
             // 
             // label71
@@ -1665,7 +1760,7 @@
             // 
             // groupBox9
             // 
-            this.groupBox9.Controls.Add(this.chekbox_EsSo_Ninguno_SaludRecre);
+            this.groupBox9.Controls.Add(this.checkBox1);
             this.groupBox9.Controls.Add(this.txt_EsSo_CentrosCom_SaludRecre);
             this.groupBox9.Controls.Add(this.combox_EsSo_CentrosCom_SaludRecre);
             this.groupBox9.Controls.Add(this.label63);
@@ -1695,23 +1790,24 @@
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Lugares que visita con frecuencia";
             // 
-            // chekbox_EsSo_Ninguno_SaludRecre
+            // checkBox1
             // 
-            this.chekbox_EsSo_Ninguno_SaludRecre.AutoSize = true;
-            this.chekbox_EsSo_Ninguno_SaludRecre.Location = new System.Drawing.Point(441, 110);
-            this.chekbox_EsSo_Ninguno_SaludRecre.Name = "chekbox_EsSo_Ninguno_SaludRecre";
-            this.chekbox_EsSo_Ninguno_SaludRecre.Size = new System.Drawing.Size(88, 22);
-            this.chekbox_EsSo_Ninguno_SaludRecre.TabIndex = 21;
-            this.chekbox_EsSo_Ninguno_SaludRecre.TabStop = true;
-            this.chekbox_EsSo_Ninguno_SaludRecre.Text = "Ninguno";
-            this.chekbox_EsSo_Ninguno_SaludRecre.UseVisualStyleBackColor = true;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(538, 113);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(89, 22);
+            this.checkBox1.TabIndex = 22;
+            this.checkBox1.Text = "Ninguno";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // txt_EsSo_CentrosCom_SaludRecre
             // 
-            this.txt_EsSo_CentrosCom_SaludRecre.Location = new System.Drawing.Point(268, 54);
+            this.txt_EsSo_CentrosCom_SaludRecre.Location = new System.Drawing.Point(268, 55);
+            this.txt_EsSo_CentrosCom_SaludRecre.MaxLength = 70;
             this.txt_EsSo_CentrosCom_SaludRecre.Name = "txt_EsSo_CentrosCom_SaludRecre";
             this.txt_EsSo_CentrosCom_SaludRecre.Size = new System.Drawing.Size(140, 24);
-            this.txt_EsSo_CentrosCom_SaludRecre.TabIndex = 20;
+            this.txt_EsSo_CentrosCom_SaludRecre.TabIndex = 1;
             this.txt_EsSo_CentrosCom_SaludRecre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_CentrosCom_SaludRecre_KeyPress);
             this.txt_EsSo_CentrosCom_SaludRecre.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_EsSo_CentrosCom_SaludRecre_KeyUp);
             // 
@@ -1722,7 +1818,7 @@
             this.combox_EsSo_CentrosCom_SaludRecre.Items.AddRange(new object[] {
             "Si",
             "No"});
-            this.combox_EsSo_CentrosCom_SaludRecre.Location = new System.Drawing.Point(193, 54);
+            this.combox_EsSo_CentrosCom_SaludRecre.Location = new System.Drawing.Point(193, 55);
             this.combox_EsSo_CentrosCom_SaludRecre.Name = "combox_EsSo_CentrosCom_SaludRecre";
             this.combox_EsSo_CentrosCom_SaludRecre.Size = new System.Drawing.Size(69, 26);
             this.combox_EsSo_CentrosCom_SaludRecre.TabIndex = 19;
@@ -1731,7 +1827,7 @@
             // label63
             // 
             this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(16, 62);
+            this.label63.Location = new System.Drawing.Point(16, 63);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(168, 18);
             this.label63.TabIndex = 18;
@@ -1739,10 +1835,11 @@
             // 
             // txt_EsSo_Museos_SaludRecre
             // 
-            this.txt_EsSo_Museos_SaludRecre.Location = new System.Drawing.Point(268, 80);
+            this.txt_EsSo_Museos_SaludRecre.Location = new System.Drawing.Point(268, 82);
+            this.txt_EsSo_Museos_SaludRecre.MaxLength = 70;
             this.txt_EsSo_Museos_SaludRecre.Name = "txt_EsSo_Museos_SaludRecre";
             this.txt_EsSo_Museos_SaludRecre.Size = new System.Drawing.Size(140, 24);
-            this.txt_EsSo_Museos_SaludRecre.TabIndex = 17;
+            this.txt_EsSo_Museos_SaludRecre.TabIndex = 2;
             this.txt_EsSo_Museos_SaludRecre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Museos_SaludRecre_KeyPress);
             // 
             // combox_EsSo_Museos_SaludRecre
@@ -1752,7 +1849,7 @@
             this.combox_EsSo_Museos_SaludRecre.Items.AddRange(new object[] {
             "Si",
             "No"});
-            this.combox_EsSo_Museos_SaludRecre.Location = new System.Drawing.Point(193, 80);
+            this.combox_EsSo_Museos_SaludRecre.Location = new System.Drawing.Point(193, 82);
             this.combox_EsSo_Museos_SaludRecre.Name = "combox_EsSo_Museos_SaludRecre";
             this.combox_EsSo_Museos_SaludRecre.Size = new System.Drawing.Size(69, 26);
             this.combox_EsSo_Museos_SaludRecre.TabIndex = 16;
@@ -1761,7 +1858,7 @@
             // label62
             // 
             this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(15, 88);
+            this.label62.Location = new System.Drawing.Point(15, 90);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(68, 18);
             this.label62.TabIndex = 15;
@@ -1769,10 +1866,11 @@
             // 
             // txt_EsSo_cine_SaludRecre
             // 
-            this.txt_EsSo_cine_SaludRecre.Location = new System.Drawing.Point(268, 106);
+            this.txt_EsSo_cine_SaludRecre.Location = new System.Drawing.Point(268, 109);
+            this.txt_EsSo_cine_SaludRecre.MaxLength = 70;
             this.txt_EsSo_cine_SaludRecre.Name = "txt_EsSo_cine_SaludRecre";
             this.txt_EsSo_cine_SaludRecre.Size = new System.Drawing.Size(140, 24);
-            this.txt_EsSo_cine_SaludRecre.TabIndex = 14;
+            this.txt_EsSo_cine_SaludRecre.TabIndex = 3;
             this.txt_EsSo_cine_SaludRecre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_cine_SaludRecre_KeyPress);
             // 
             // combox_EsSo_Cine_SaludRecre
@@ -1782,7 +1880,7 @@
             this.combox_EsSo_Cine_SaludRecre.Items.AddRange(new object[] {
             "Si",
             "No"});
-            this.combox_EsSo_Cine_SaludRecre.Location = new System.Drawing.Point(193, 106);
+            this.combox_EsSo_Cine_SaludRecre.Location = new System.Drawing.Point(193, 109);
             this.combox_EsSo_Cine_SaludRecre.Name = "combox_EsSo_Cine_SaludRecre";
             this.combox_EsSo_Cine_SaludRecre.Size = new System.Drawing.Size(69, 26);
             this.combox_EsSo_Cine_SaludRecre.TabIndex = 13;
@@ -1791,7 +1889,7 @@
             // label61
             // 
             this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(15, 115);
+            this.label61.Location = new System.Drawing.Point(15, 118);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(42, 18);
             this.label61.TabIndex = 12;
@@ -1799,10 +1897,11 @@
             // 
             // txt_EsSo_Playa_SaludRecre
             // 
-            this.txt_EsSo_Playa_SaludRecre.Location = new System.Drawing.Point(627, 54);
+            this.txt_EsSo_Playa_SaludRecre.Location = new System.Drawing.Point(627, 55);
+            this.txt_EsSo_Playa_SaludRecre.MaxLength = 70;
             this.txt_EsSo_Playa_SaludRecre.Name = "txt_EsSo_Playa_SaludRecre";
             this.txt_EsSo_Playa_SaludRecre.Size = new System.Drawing.Size(166, 24);
-            this.txt_EsSo_Playa_SaludRecre.TabIndex = 11;
+            this.txt_EsSo_Playa_SaludRecre.TabIndex = 5;
             this.txt_EsSo_Playa_SaludRecre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Playa_SaludRecre_KeyPress);
             // 
             // combox_EsSo_Playa_SaludRecre
@@ -1812,7 +1911,7 @@
             this.combox_EsSo_Playa_SaludRecre.Items.AddRange(new object[] {
             "Si",
             "No"});
-            this.combox_EsSo_Playa_SaludRecre.Location = new System.Drawing.Point(538, 54);
+            this.combox_EsSo_Playa_SaludRecre.Location = new System.Drawing.Point(538, 55);
             this.combox_EsSo_Playa_SaludRecre.Name = "combox_EsSo_Playa_SaludRecre";
             this.combox_EsSo_Playa_SaludRecre.Size = new System.Drawing.Size(83, 26);
             this.combox_EsSo_Playa_SaludRecre.TabIndex = 10;
@@ -1821,7 +1920,7 @@
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(438, 57);
+            this.label60.Location = new System.Drawing.Point(438, 58);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(72, 18);
             this.label60.TabIndex = 9;
@@ -1829,10 +1928,11 @@
             // 
             // txt_EsSo_OtrosLugares_SaludRecre
             // 
-            this.txt_EsSo_OtrosLugares_SaludRecre.Location = new System.Drawing.Point(627, 80);
+            this.txt_EsSo_OtrosLugares_SaludRecre.Location = new System.Drawing.Point(627, 82);
+            this.txt_EsSo_OtrosLugares_SaludRecre.MaxLength = 70;
             this.txt_EsSo_OtrosLugares_SaludRecre.Name = "txt_EsSo_OtrosLugares_SaludRecre";
             this.txt_EsSo_OtrosLugares_SaludRecre.Size = new System.Drawing.Size(166, 24);
-            this.txt_EsSo_OtrosLugares_SaludRecre.TabIndex = 8;
+            this.txt_EsSo_OtrosLugares_SaludRecre.TabIndex = 6;
             this.txt_EsSo_OtrosLugares_SaludRecre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_OtrosLugares_SaludRecre_KeyPress);
             // 
             // combox_EsSo_OtrosLugares_SaludRecre
@@ -1842,7 +1942,7 @@
             this.combox_EsSo_OtrosLugares_SaludRecre.Items.AddRange(new object[] {
             "Si",
             "No"});
-            this.combox_EsSo_OtrosLugares_SaludRecre.Location = new System.Drawing.Point(538, 80);
+            this.combox_EsSo_OtrosLugares_SaludRecre.Location = new System.Drawing.Point(538, 82);
             this.combox_EsSo_OtrosLugares_SaludRecre.Name = "combox_EsSo_OtrosLugares_SaludRecre";
             this.combox_EsSo_OtrosLugares_SaludRecre.Size = new System.Drawing.Size(83, 26);
             this.combox_EsSo_OtrosLugares_SaludRecre.TabIndex = 7;
@@ -1851,7 +1951,7 @@
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(438, 83);
+            this.label59.Location = new System.Drawing.Point(438, 85);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(51, 18);
             this.label59.TabIndex = 6;
@@ -1860,9 +1960,10 @@
             // txt_EsSo_Balnearios_SaludRecre
             // 
             this.txt_EsSo_Balnearios_SaludRecre.Location = new System.Drawing.Point(627, 28);
+            this.txt_EsSo_Balnearios_SaludRecre.MaxLength = 70;
             this.txt_EsSo_Balnearios_SaludRecre.Name = "txt_EsSo_Balnearios_SaludRecre";
             this.txt_EsSo_Balnearios_SaludRecre.Size = new System.Drawing.Size(166, 24);
-            this.txt_EsSo_Balnearios_SaludRecre.TabIndex = 5;
+            this.txt_EsSo_Balnearios_SaludRecre.TabIndex = 4;
             this.txt_EsSo_Balnearios_SaludRecre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Balnearios_SaludRecre_KeyPress);
             // 
             // combox_EsSo_Balnearios_SaludRecre
@@ -1890,9 +1991,11 @@
             // txt_EsSo_Parques_SaludRecre
             // 
             this.txt_EsSo_Parques_SaludRecre.Location = new System.Drawing.Point(268, 28);
+            this.txt_EsSo_Parques_SaludRecre.MaxLength = 70;
             this.txt_EsSo_Parques_SaludRecre.Name = "txt_EsSo_Parques_SaludRecre";
             this.txt_EsSo_Parques_SaludRecre.Size = new System.Drawing.Size(140, 24);
-            this.txt_EsSo_Parques_SaludRecre.TabIndex = 2;
+            this.txt_EsSo_Parques_SaludRecre.TabIndex = 0;
+            this.txt_EsSo_Parques_SaludRecre.TextChanged += new System.EventHandler(this.txt_EsSo_Parques_SaludRecre_TextChanged);
             this.txt_EsSo_Parques_SaludRecre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_Parques_SaludRecre_KeyPress);
             // 
             // combox_EsSo_Parques_SaludRecre
@@ -1921,9 +2024,10 @@
             // 
             this.txt_EsSo_GastoMedi_SaludRecre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_EsSo_GastoMedi_SaludRecre.Location = new System.Drawing.Point(273, 184);
+            this.txt_EsSo_GastoMedi_SaludRecre.MaxLength = 9;
             this.txt_EsSo_GastoMedi_SaludRecre.Name = "txt_EsSo_GastoMedi_SaludRecre";
             this.txt_EsSo_GastoMedi_SaludRecre.Size = new System.Drawing.Size(269, 24);
-            this.txt_EsSo_GastoMedi_SaludRecre.TabIndex = 8;
+            this.txt_EsSo_GastoMedi_SaludRecre.TabIndex = 0;
             this.txt_EsSo_GastoMedi_SaludRecre.TextChanged += new System.EventHandler(this.txt_EsSo_GastoMedi_SaludRecre_TextChanged);
             this.txt_EsSo_GastoMedi_SaludRecre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EsSo_GastoMedi_SaludRecre_KeyPress);
             // 
@@ -2216,6 +2320,7 @@
             // txt_EsSo_OtroMaterPiso_InfoVivien
             // 
             this.txt_EsSo_OtroMaterPiso_InfoVivien.Location = new System.Drawing.Point(90, 68);
+            this.txt_EsSo_OtroMaterPiso_InfoVivien.MaxLength = 40;
             this.txt_EsSo_OtroMaterPiso_InfoVivien.Name = "txt_EsSo_OtroMaterPiso_InfoVivien";
             this.txt_EsSo_OtroMaterPiso_InfoVivien.Size = new System.Drawing.Size(100, 22);
             this.txt_EsSo_OtroMaterPiso_InfoVivien.TabIndex = 32;
@@ -2261,6 +2366,7 @@
             // txt_EsSo_OtroMaterial_InfoVivien
             // 
             this.txt_EsSo_OtroMaterial_InfoVivien.Location = new System.Drawing.Point(411, 44);
+            this.txt_EsSo_OtroMaterial_InfoVivien.MaxLength = 40;
             this.txt_EsSo_OtroMaterial_InfoVivien.Name = "txt_EsSo_OtroMaterial_InfoVivien";
             this.txt_EsSo_OtroMaterial_InfoVivien.Size = new System.Drawing.Size(100, 22);
             this.txt_EsSo_OtroMaterial_InfoVivien.TabIndex = 27;
@@ -2356,6 +2462,7 @@
             // txt_EsSo_OtraTenencia_InfoVivien
             // 
             this.txt_EsSo_OtraTenencia_InfoVivien.Location = new System.Drawing.Point(411, 27);
+            this.txt_EsSo_OtraTenencia_InfoVivien.MaxLength = 40;
             this.txt_EsSo_OtraTenencia_InfoVivien.Name = "txt_EsSo_OtraTenencia_InfoVivien";
             this.txt_EsSo_OtraTenencia_InfoVivien.Size = new System.Drawing.Size(100, 22);
             this.txt_EsSo_OtraTenencia_InfoVivien.TabIndex = 22;
@@ -2404,6 +2511,7 @@
             // txt_EsSo_OtroServicio_InfoVivien
             // 
             this.txt_EsSo_OtroServicio_InfoVivien.Location = new System.Drawing.Point(247, 57);
+            this.txt_EsSo_OtroServicio_InfoVivien.MaxLength = 40;
             this.txt_EsSo_OtroServicio_InfoVivien.Name = "txt_EsSo_OtroServicio_InfoVivien";
             this.txt_EsSo_OtroServicio_InfoVivien.Size = new System.Drawing.Size(100, 22);
             this.txt_EsSo_OtroServicio_InfoVivien.TabIndex = 21;
@@ -2629,20 +2737,6 @@
             this.button1.TabIndex = 3;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Si",
-            "No"});
-            this.comboBox1.Location = new System.Drawing.Point(573, 24);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(75, 23);
-            this.comboBox1.TabIndex = 51;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // FormaEstSocEco
             // 
@@ -2878,7 +2972,6 @@
         private System.Windows.Forms.Label label69;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.RadioButton chekbox_EsSo_Ninguno_SaludRecre;
         private System.Windows.Forms.TextBox txt_EsSo_CentrosCom_SaludRecre;
         private System.Windows.Forms.ComboBox combox_EsSo_CentrosCom_SaludRecre;
         private System.Windows.Forms.Label label63;
@@ -2927,5 +3020,6 @@
         private System.Windows.Forms.Label label77;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

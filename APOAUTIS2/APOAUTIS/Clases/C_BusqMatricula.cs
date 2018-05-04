@@ -37,7 +37,7 @@ namespace APOAUTIS.Clases
 
         private string var_genero;
         private string var_id;
-
+        private int var_cod_Jornada;
 
         public int Var_fecha_busq
         {
@@ -429,6 +429,19 @@ namespace APOAUTIS.Clases
             }
         }
 
+        public int Var_cod_Jornada
+        {
+            get
+            {
+                return var_cod_Jornada;
+            }
+
+            set
+            {
+                var_cod_Jornada = value;
+            }
+        }
+
         public void Fun_MostrarTodos(System.Windows.Forms.DataGridView Var_MuestraDatos)
         {
             sql = string.Format(@"select B.CodMatricula as 'Codigo Matricula',
@@ -593,7 +606,7 @@ inner join tipo_matricula as C on C.Cod_Tipo=B.Cod_Tipo inner join jornada as D 
             MySql.Data.MySqlClient.MySqlDataReader Reg = cmd.ExecuteReader();
             if (Reg.Read())
             {
-                var_cod = Reg["CodResp"].ToString();
+                Var_cod = Reg["CodResp"].ToString();
                 Var_nombre = Reg["NomComRes"].ToString();
                 Var_profesion = Reg["ProfecionRes"].ToString();
                 Var_lugar = Reg["LugarTrabajoRes"].ToString();

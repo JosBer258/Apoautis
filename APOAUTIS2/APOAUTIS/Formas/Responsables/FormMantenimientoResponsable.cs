@@ -49,6 +49,16 @@ namespace APOAUTIS.Formas.Responsables
             cmbTrabResp.SelectedIndex = 0;
             cmbEstResp.SelectedIndex = 0;
             cmbParentesco.SelectedIndex = 0;
+
+
+            var blankContextMenu = new ContextMenuStrip();
+
+            var boxes = Pest1_Grupo_DatosEncargado.Controls.OfType<TextBox>();
+            foreach (var box in boxes)
+            {
+                box.ContextMenuStrip = blankContextMenu;
+
+            }
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -78,7 +88,7 @@ namespace APOAUTIS.Formas.Responsables
 
         private void txtNomResp_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            Val.ValidarNombres_SoloLetras(sender, e);
         }
 
         private void txtCorrResp_KeyPress(object sender, KeyPressEventArgs e)
@@ -88,7 +98,7 @@ namespace APOAUTIS.Formas.Responsables
 
         private void txtIdResp_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            Val.ValidarID(sender, e);
         }
 
         private void txtDomResp_KeyPress(object sender, KeyPressEventArgs e)
@@ -195,14 +205,14 @@ namespace APOAUTIS.Formas.Responsables
                         cResp.TelCasResp = txtTelCasResp.Text;
                         cResp.TelCelResp = txtTelCelResp.Text;
                         cResp.TelTrabResp = txtTelTrabResp.Text;
-                        cResp.IdResp = (int)Convert.ToDouble(txtIdResp.Text);
+                        cResp.IdResp = txtIdResp.Text;
                         cResp.LugTrab = cmbTrabResp.SelectedItem.ToString() + ", " + txtLugResp.Text;
                         cResp.ProfResp = txtProfResp.Text;
                         cResp.CorrResp = txtCorrResp.Text;
 
                         cResp.updateResp();
                         cResp.Fill_DGV_Resp(DGV_ShowResponsables, CodigA);
-
+                        cResp.EstResp = (int)Convert.ToDouble(cmbEstResp.SelectedValue);
                         cResp.msjUpdateCorrecto();
                         limpiarTxtBox();
                     }
@@ -237,15 +247,17 @@ namespace APOAUTIS.Formas.Responsables
                             cResp.TelCasResp = txtTelCasResp.Text;
                             cResp.TelCelResp = txtTelCelResp.Text;
                             cResp.TelTrabResp = txtTelTrabResp.Text;
-                            cResp.IdResp =(int) Convert.ToDouble(txtIdResp.Text);
+                            cResp.IdResp =txtIdResp.Text;
                             cResp.ProfResp = txtProfResp.Text;
                             cResp.CorrResp = txtCorrResp.Text;
                             
                             cResp.LugTrab = cmbTrabResp.SelectedItem.ToString() + ", " + txtLugResp.Text;
-
+                            /*
                             if (cmbEstResp.SelectedItem.ToString().ToUpperInvariant().Contains("INACTIVO") == true)
                             { cResp.EstResp = 7; }
-                            else { cResp.EstResp = 6; }
+                            else { cResp.EstResp = 6; }*/
+
+                            cResp.EstResp = (int)Convert.ToDouble(cmbEstResp.SelectedValue);
 
                             cResp.updateResp();
                             cResp.Fill_DGV_Resp(DGV_ShowResponsables, CodigA);

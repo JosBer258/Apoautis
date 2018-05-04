@@ -22,6 +22,7 @@ namespace APOAUTIS
         Clases.C_responsablePadre padrep = new Clases.C_responsablePadre();
         Clases.C_responsablesMadre madrep = new Clases.C_responsablesMadre();
         Clases.C_ResponsablesOtro otroresp = new Clases.C_ResponsablesOtro();
+        C_Alumnos alum = new C_Alumnos();
         C_Responsables cResp = new C_Responsables();
         int var_respM = 0;
         int var_respP = 0;
@@ -143,6 +144,29 @@ namespace APOAUTIS
             }
 
 
+
+
+            if (combox_EsSo_TrabajaPadre_forma.SelectedIndex == -1)
+            {
+                combox_EsSo_TrabajaPadre_forma.SelectedIndex = 1;
+                txt_EsSo_LugarTrabPadre_forma.Text = "no";
+            }
+
+            if (combox_EsSo_TrabajaPadre_forma.SelectedIndex == 0)
+            {
+                if (string.IsNullOrEmpty(txt_EsSo_LugarTrabPadre_forma.Text))
+                {
+                    txt_EsSo_LugarTrabPadre_forma.Text = "Desconocido";
+                }
+            }
+
+            if (combox_EsSo_TrabajaPadre_forma.SelectedIndex == 1)
+            {
+                if (string.IsNullOrEmpty(txt_EsSo_LugarTrabPadre_forma.Text))
+                {
+                    txt_EsSo_LugarTrabPadre_forma.Text = "no";
+                }
+            }
         }
 
         public void Fun_ValidarVacios()
@@ -176,19 +200,106 @@ namespace APOAUTIS
                 txt_EsSo_TotalTraba_InfoFami.Text = "0";
             }
 
+            if (string.IsNullOrEmpty(txt_EsSo_GastoMedi_SaludRecre.Text))
+            {
+                txt_EsSo_GastoMedi_SaludRecre.Text = "0";
+            }
 
-          
+
+            int Val1 = 0;
+            int Val2 = 0;
+            int Val3 = 0;
+            int Val4 = 0;
+
+            var boxa = groupBox7.Controls.OfType<CheckBox>();
+            foreach (var box in boxa)
+            {
+
+                if(box.Checked == false)
+                {
+                    Val1++;
+                }
+            }
+
+            if (Val1 == 6)
+            {
+                chekbox_EsSo_OtroSalud_SaludRecre.Checked = true;
+            }
+
+
+
+            var boxb = groupBox8.Controls.OfType<CheckBox>();
+            foreach (var box in boxb)
+            {
+                if (box.Checked == false)
+                {
+                    Val2++;
+                }
+            }
+
+            if (Val2 == 5)
+            {
+                chekbox_EsSo_NingunaEnfer_SaludRecre.Checked = true;
+            }
+
+
+
+            var box100 = groupBox11.Controls.OfType<CheckBox>();
+            foreach (var box in box100)
+            {
+
+                if (box.Checked == false)
+                {
+                    Val3++;
+                }
+            }
+
+            if (Val3 == 5)
+            {
+                chekbox_EsSo_Energia_InfoVivien.Checked = true;
+            }
+
+
+
+
+            var box101 = groupBox10.Controls.OfType<CheckBox>();
+            foreach (var box in box101)
+            {
+
+                if (box.Checked == false)
+                {
+                    Val4++;
+                }
+            }
+
+            if (Val4 == 11)
+            {
+                chekbox_EsSo_Tele_InfoVivien.Checked = true;
+            }
+
+
+
+
         }
         private void button4_Click(object sender, EventArgs e)
         {
             C_Alumnos C_Al = new C_Alumnos();
             Var_codigoAlumno = C_datos.CodAlumno;
 
+            if (string.IsNullOrEmpty(txt_EsSo_NombreEst_DatosGe.Text) == true)
+            {
+                MessageBox.Show("Debe selecionar un alumno", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tabEstSocioEco.SelectedTab = DatosGenerales;
+                return;
+            }
+
 
 
             if ( C_Al.ValidarEstudio(Var_codigoAlumno) ==true)
             {
                 MessageBox.Show("Ya existe un estudio de este alumno", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tabEstSocioEco.SelectedTab = DatosGenerales;
+                Fun_Limpiar();
                 return;
             }
 
@@ -198,9 +309,20 @@ namespace APOAUTIS
                 return;
             }
 
+
+            if(string.IsNullOrEmpty(txt_EsSo_lugar_DatosGe.Text) || string.IsNullOrEmpty(txt_EsSo_PersonaEntre_DatosGe.Text))
+            {
+
+                MessageBox.Show("Debe llenar todos los datos", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tabEstSocioEco.SelectedTab = DatosGenerales;
+                txt_EsSo_lugar_DatosGe.Focus();
+                return;
+            }
             //this.Hide();
             // string strDate = dateTimePicker1.Value.ToString("yyyy/MM/dd");
             // DateTime varFeInicio = Convert.toDatetime(dtpFeInicio.Text);
+
+           
 
             Fun_ValidarVacios();
             ValidarIngresosVacios();
@@ -210,6 +332,7 @@ namespace APOAUTIS
             {
                 MessageBox.Show("Debe llenar todos los datos", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txt_EsSo_NomEncarg_DatosGe.Focus();
+                tabEstSocioEco.SelectedTab = DatosGenerales;
                 return;
             }
 
@@ -218,6 +341,7 @@ namespace APOAUTIS
             if (Fun_ValidarExistenciaMadre() == false)
             {
                 MessageBox.Show("Debe llenar todos los datos", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tabEstSocioEco.SelectedTab = DatosGenerales;
                 txt_EsSo_NomMadre_DatosGe.Focus();
                 return;
             }
@@ -225,13 +349,23 @@ namespace APOAUTIS
             if (Fun_ValidarExistenciaPadre() == false)
             {
                 MessageBox.Show("Debe llenar todos los datos", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tabEstSocioEco.SelectedTab = DatosGenerales;
                 txt_EsSo_NomPadre_DatosGe.Focus();
                 return;
             }
 
+            //Actualizar Alumno
 
+            if (string.IsNullOrEmpty(txt_EsSo_IdentiEst_DatosGe.Text))
+            {
 
-          
+            }else
+            {
+                alum.Fun_ActualizarID(Var_codigoAlumno, txt_EsSo_IdentiEst_DatosGe.Text);
+            }
+
+            
+
             Clases.C_EstudioSocioEc estudioSocio = new Clases.C_EstudioSocioEc();
             estudioSocio.CodEstudioSocio = Var_codigoAlumno;
             estudioSocio.CodAlumno= Var_codigoAlumno;
@@ -300,11 +434,11 @@ namespace APOAUTIS
 
                 if (resultado3 > 0)
                 {
-                    MessageBox.Show("Estudio SocioEconomico Ingresado Exitosamente", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("Estudio SocioEconomico Ingresado Exitosamente", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("No se pudo guardar ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                   // MessageBox.Show("No se pudo guardar ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }catch(System.Exception ex)
             {
@@ -321,7 +455,7 @@ namespace APOAUTIS
                 madreresp.CodResp = var_respM;
 
 
-                madreresp.IdResp = (int)Convert.ToDouble(txt_EsSo_IdentMadre_DatosGe.Text);
+                madreresp.IdResp = txt_EsSo_IdentMadre_DatosGe.Text;
                 madreresp.DomicilioResp = Convert.ToString(txt_EsSo_DomiciMadre_DatosGe);
                 madreresp.LugarTrabRes = Convert.ToString(Combox_EsSo_TrabajaMadre_forma.Text);
                 madreresp.TelefonoCasaResp = Convert.ToString(txt_EsSo_TelCasaMadre_DatosGe.Text);
@@ -338,7 +472,7 @@ namespace APOAUTIS
 
                 Clases.C_responsablePadre padreresp = new Clases.C_responsablePadre();
                 padreresp.CodResp = var_respP;
-                padreresp.IdResp = Convert.ToInt32(txt_EsSo_IdentPadre_DatosGe.Text);
+                padreresp.IdResp = txt_EsSo_IdentPadre_DatosGe.Text;
                 padreresp.DomicilioResp = Convert.ToString(txt_EsSo_DomiciPadre_DatosGe.Text);
                 padreresp.LugarTrabRes = Convert.ToString(combox_EsSo_TrabajaPadre_forma.Text);
                 padreresp.TelefonoCasaResp = Convert.ToString(txt_EsSo_TelCAsaPadre_DatosGe.Text);
@@ -388,7 +522,7 @@ namespace APOAUTIS
 
              int resultado5 = Clases.C_EstudioSocioMetodos.AgregarInfovivienda(vivienda);
 
-        
+            Fun_Limpiar();
 
 
         }
@@ -397,8 +531,7 @@ namespace APOAUTIS
         {
             Formas.Matricula.FormMontoMatricula Monto = new Formas.Matricula.FormMontoMatricula();
             Monto.ShowDialog();
-            /*FormMontoMatricula Monto = new FormMontoMatricula();
-            Monto.ShowDialog();*/
+
         }
 
         private void textBox65_TextChanged(object sender, EventArgs e)
@@ -439,7 +572,7 @@ namespace APOAUTIS
 
         private void btm_EsSo_BuscarAlumno_DatosGe_Click(object sender, EventArgs e)
         {
-
+            Fun_Limpiar();
             FromBusquedaAlumno frmBusqEstSoc = new FromBusquedaAlumno();
             frmBusqEstSoc.ShowDialog();
 
@@ -447,6 +580,8 @@ namespace APOAUTIS
             {
                 if (FromBusquedaAlumno.AlumnoSeleccionado != null)
                 {
+                    
+
                     C_datos.CodAlumno = FromBusquedaAlumno.AlumnoSeleccionado.CodAlumno;
                     txt_EsSo_IdentiEst_DatosGe.Text = Convert.ToString(FromBusquedaAlumno.AlumnoSeleccionado.IdAlumno);
                     txt_EsSo_NombreEst_DatosGe.Text = FromBusquedaAlumno.AlumnoSeleccionado.NombreAlumno;
@@ -540,7 +675,7 @@ namespace APOAUTIS
 
         private void txt_EsSo_IngreAbue_InfoFami_TextChanged(object sender, EventArgs e)
         {
-
+            CalculoIngresos();
         }
 
         private void chekbox_EsSo_ihss_SaludRecre_CheckedChanged(object sender, EventArgs e)
@@ -1044,57 +1179,32 @@ namespace APOAUTIS
 
         private void e(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar != Convert.ToChar(Keys.Back) && !Char.IsLetter(e.KeyChar) && e.KeyChar != Convert.ToChar(Keys.Enter)
-             && e.KeyChar != Convert.ToChar(Keys.Space))
-            {
-
-                e.Handled = true;
-            }
+            Validaciones.ValidarNombres_SoloLetras(sender, e);
         }
 
         private void txt_EsSo_OtroMaterial_InfoVivien_TextChanged(object sender, EventArgs e)
         {
-
+           
         }
 
         private void txt_EsSo_OtroMaterial_InfoVivien_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar != Convert.ToChar(Keys.Back) && !Char.IsLetter(e.KeyChar) && e.KeyChar != Convert.ToChar(Keys.Enter)
-             && e.KeyChar != Convert.ToChar(Keys.Space))
-            {
-
-                e.Handled = true;
-            }
+            Validaciones.ValidarNombres_SoloLetras(sender, e);
         }
 
         private void txt_EsSo_OtroMaterPiso_InfoVivien_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar != Convert.ToChar(Keys.Back) && !Char.IsLetter(e.KeyChar) && e.KeyChar != Convert.ToChar(Keys.Enter)
-             && e.KeyChar != Convert.ToChar(Keys.Space))
-            {
-
-                e.Handled = true;
-            }
+            Validaciones.ValidarNombres_SoloLetras(sender, e);
         }
 
         private void txt_EsSo_OtroServicio_InfoVivien_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar != Convert.ToChar(Keys.Back) && !Char.IsLetter(e.KeyChar) && e.KeyChar != Convert.ToChar(Keys.Enter)
-            && e.KeyChar != Convert.ToChar(Keys.Space))
-            {
-
-                e.Handled = true;
-            }
+            Validaciones.ValidarNombres_SoloLetras(sender, e);
         }
 
         private void txt_EsSo_Parques_SaludRecre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar != Convert.ToChar(Keys.Back) && !Char.IsLetter(e.KeyChar) && e.KeyChar != Convert.ToChar(Keys.Enter)
-            && e.KeyChar != Convert.ToChar(Keys.Space))
-            {
-
-                e.Handled = true;
-            }
+            Validaciones.ValirLetrasYEspaciosMayorEspacio(sender, e, txt_EsSo_Parques_SaludRecre);
         }
 
         private void txt_EsSo_CentrosCom_SaludRecre_KeyUp(object sender, KeyEventArgs e)
@@ -1104,72 +1214,37 @@ namespace APOAUTIS
 
         private void txt_EsSo_Museos_SaludRecre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar != Convert.ToChar(Keys.Back) && !Char.IsLetter(e.KeyChar) && e.KeyChar != Convert.ToChar(Keys.Enter)
-            && e.KeyChar != Convert.ToChar(Keys.Space))
-            {
-
-                e.Handled = true;
-            }
+            Validaciones.ValirLetrasYEspaciosMayorEspacio(sender, e, txt_EsSo_Museos_SaludRecre);
         }
 
         private void txt_EsSo_CentrosCom_SaludRecre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar != Convert.ToChar(Keys.Back) && !Char.IsLetter(e.KeyChar) && e.KeyChar != Convert.ToChar(Keys.Enter)
-            && e.KeyChar != Convert.ToChar(Keys.Space))
-            {
-
-                e.Handled = true;
-            }
+            Validaciones.ValirLetrasYEspaciosMayorEspacio(sender, e, txt_EsSo_CentrosCom_SaludRecre);
         }
 
         private void txt_EsSo_cine_SaludRecre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar != Convert.ToChar(Keys.Back) && !Char.IsLetter(e.KeyChar) && e.KeyChar != Convert.ToChar(Keys.Enter)
-            && e.KeyChar != Convert.ToChar(Keys.Space))
-            {
-
-                e.Handled = true;
-            }
+            Validaciones.ValirLetrasYEspaciosMayorEspacio(sender, e, txt_EsSo_cine_SaludRecre);
         }
 
         private void txt_EsSo_Balnearios_SaludRecre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar != Convert.ToChar(Keys.Back) && !Char.IsLetter(e.KeyChar) && e.KeyChar != Convert.ToChar(Keys.Enter)
-            && e.KeyChar != Convert.ToChar(Keys.Space))
-            {
-
-                e.Handled = true;
-            }
+            Validaciones.ValirLetrasYEspaciosMayorEspacio(sender, e, txt_EsSo_Balnearios_SaludRecre);
         }
 
         private void txt_EsSo_Playa_SaludRecre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar != Convert.ToChar(Keys.Back) && !Char.IsLetter(e.KeyChar) && e.KeyChar != Convert.ToChar(Keys.Enter)
-            && e.KeyChar != Convert.ToChar(Keys.Space))
-            {
-
-                e.Handled = true;
-            }
+            Validaciones.ValirLetrasYEspaciosMayorEspacio(sender, e, txt_EsSo_Playa_SaludRecre);
         }
 
         private void txt_EsSo_OtrosLugares_SaludRecre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar != Convert.ToChar(Keys.Back) && !Char.IsLetter(e.KeyChar) && e.KeyChar != Convert.ToChar(Keys.Enter)
-            && e.KeyChar != Convert.ToChar(Keys.Space))
-            {
-
-                e.Handled = true;
-            }
+            Validaciones.ValirLetrasYEspaciosMayorEspacio(sender, e, txt_EsSo_OtrosLugares_SaludRecre);
         }
 
         private void txt_EsSo_Aporbado_SaludRecre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar != Convert.ToChar(Keys.Back) && !Char.IsLetter(e.KeyChar) && e.KeyChar != Convert.ToChar(Keys.Enter)
-            && e.KeyChar != Convert.ToChar(Keys.Space))
-            {
-
-                e.Handled = true;
-            }
+            Validaciones.ValirLetrasYEspaciosMayorEspacio(sender, e, txt_EsSo_Aporbado_SaludRecre);
         }
 
         private void txt_EsSo_MasHijos_InfoFami_KeyPress(object sender, KeyPressEventArgs e)
@@ -1184,22 +1259,12 @@ namespace APOAUTIS
 
         private void txt_EsSo_PersonaEntre_DatosGe_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar != Convert.ToChar(Keys.Back) && !Char.IsLetter(e.KeyChar) && e.KeyChar != Convert.ToChar(Keys.Enter)
-            && e.KeyChar != Convert.ToChar(Keys.Space))
-            {
-
-                e.Handled = true;
-            }
+            Validaciones.ValirLetrasYEspaciosMayorEspacio(sender, e, txt_EsSo_PersonaEntre_DatosGe);
         }
 
         private void txt_EsSo_lugar_DatosGe_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar != Convert.ToChar(Keys.Back) && !Char.IsLetter(e.KeyChar) && e.KeyChar != Convert.ToChar(Keys.Enter)
-            && e.KeyChar != Convert.ToChar(Keys.Space))
-            {
-
-                e.Handled = true;
-            }
+            Validaciones.ValirLetrasYEspaciosMayorEspacio(sender, e, txt_EsSo_lugar_DatosGe);
         }
 
         private void txt_EsSo_IngreAbue_InfoFami_KeyPress(object sender, KeyPressEventArgs e)
@@ -1234,12 +1299,6 @@ namespace APOAUTIS
 
         private void txt_EsSo_IngreTotales_InfoFami_TextChanged(object sender, EventArgs e)
         {
-            //  txt_EsSo_IngreTotales_InfoFami.Text =Convert.ToString(txt_EsSo_IngreOtros_InfoFami.Text);
-
-            // txt_EsSo_IngreTotales_InfoFami.Text = Convert.ToString(txt_EsSo_IngreAbue_InfoFami.Text+txt_EsSo_IngreHijo_InfoFami.Text+txt_EsSo_IngrePadre_InfoFami.Text+txt_EsSo_IngreMadre_InfoFami.Text+txt_EsSo_IngrePencion_InfoFami.Text+txt_EsSo_IngreOtros_InfoFami.Text);
-
-
-
         }
 
         private void txt_EsSo_HabitantesCasa_InfoFami_TextChanged(object sender, EventArgs e)
@@ -1274,22 +1333,12 @@ namespace APOAUTIS
 
         private void txt_EsSo_DomiciMadre_DatosGe_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar != Convert.ToChar(Keys.Back) && !Char.IsLetter(e.KeyChar) && e.KeyChar != Convert.ToChar(Keys.Enter)
-             && e.KeyChar != Convert.ToChar(Keys.Space))
-            {
-
-                e.Handled = true;
-            }
+            Validaciones.ValirLetrasYEspaciosMayorEspacio(sender, e, txt_EsSo_DomiciMadre_DatosGe);
         }
 
         private void txt_EsSo_DomiciPadre_DatosGe_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar != Convert.ToChar(Keys.Back) && !Char.IsLetter(e.KeyChar) && e.KeyChar != Convert.ToChar(Keys.Enter)
-                && e.KeyChar != Convert.ToChar(Keys.Space))
-            {
-
-                e.Handled = true;
-            }
+            Validaciones.ValirLetrasYEspaciosMayorEspacio(sender, e, txt_EsSo_DomiciPadre_DatosGe);
         }
 
         private void txt_EsSo_NomEncarg_DatosGe_TextChanged(object sender, EventArgs e)
@@ -1299,12 +1348,7 @@ namespace APOAUTIS
 
         private void txt_EsSo_NomEncarg_DatosGe_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar != Convert.ToChar(Keys.Back) && !Char.IsLetter(e.KeyChar) && e.KeyChar != Convert.ToChar(Keys.Enter)
-    && e.KeyChar != Convert.ToChar(Keys.Space))
-            {
-
-                e.Handled = true;
-            }
+            Validaciones.ValirLetrasYEspaciosMayorEspacio(sender, e, txt_EsSo_NomEncarg_DatosGe);
         }
 
         private void txt_EsSo_ParentescoEncar_DatosGe_TextChanged(object sender, EventArgs e)
@@ -1314,22 +1358,12 @@ namespace APOAUTIS
 
         private void txt_EsSo_ParentescoEncar_DatosGe_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar != Convert.ToChar(Keys.Back) && !Char.IsLetter(e.KeyChar) && e.KeyChar != Convert.ToChar(Keys.Enter)
-             && e.KeyChar != Convert.ToChar(Keys.Space))
-            {
-
-                e.Handled = true;
-            }
+            Validaciones.ValirLetrasYEspaciosMayorEspacio(sender, e, txt_EsSo_ParentescoEncar_DatosGe);
         }
 
         private void txt_EsSo_OficioEncarg_DatosGe_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar != Convert.ToChar(Keys.Back) && !Char.IsLetter(e.KeyChar) && e.KeyChar != Convert.ToChar(Keys.Enter)
-             && e.KeyChar != Convert.ToChar(Keys.Space))
-            {
-
-                e.Handled = true;
-            }
+            Validaciones.ValirLetrasYEspaciosMayorEspacio(sender, e, txt_EsSo_OficioEncarg_DatosGe);
         }
 
         private void txt_EsSo_TelCasaMadre_DatosGe_KeyPress(object sender, KeyPressEventArgs e)
@@ -1350,123 +1384,149 @@ namespace APOAUTIS
 
         private void combox_EsSo_CuantosFami_InfoFami_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (combox_EsSo_CuantosFami_InfoFami.Text == "No")
+            if (combox_EsSo_CuantosFami_InfoFami.SelectedIndex==1)
             {
                 txt_EsSo_CuantosFamil_InfoFami.Enabled = false;
                 txt_EsSo_CuantosFamil_InfoFami.Text = "0";
+            }else
+            {
+                txt_EsSo_CuantosFamil_InfoFami.Enabled = true;
+                txt_EsSo_CuantosFamil_InfoFami.Text = string.Empty;
             }
         }
 
         private void combox_EsSo_Parques_SaludRecre_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (combox_EsSo_Parques_SaludRecre.Text == "No")
+            if (combox_EsSo_Parques_SaludRecre.SelectedIndex == 1)
             {
                 txt_EsSo_Parques_SaludRecre.Enabled = false;
+            }
+            else
+            {
+                txt_EsSo_Parques_SaludRecre.Enabled = true;
             }
 
         }
 
         private void combox_EsSo_CentrosCom_SaludRecre_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (combox_EsSo_CentrosCom_SaludRecre.Text == "No")
+            if (combox_EsSo_CentrosCom_SaludRecre.SelectedIndex == 1)
             {
                 txt_EsSo_CentrosCom_SaludRecre.Enabled = false;
+            }else
+            {
+                txt_EsSo_CentrosCom_SaludRecre.Enabled = true;
             }
 
         }
 
         private void combox_EsSo_Museos_SaludRecre_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (combox_EsSo_Museos_SaludRecre.Text == "No")
+            if (combox_EsSo_Museos_SaludRecre.SelectedIndex == 1)
             {
 
                 txt_EsSo_Museos_SaludRecre.Enabled = false;
+            }else
+            {
+                txt_EsSo_Museos_SaludRecre.Enabled = true;
             }
 
         }
 
         private void combox_EsSo_Cine_SaludRecre_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (combox_EsSo_Cine_SaludRecre.Text == "No")
+            if (combox_EsSo_Cine_SaludRecre.SelectedIndex == 1)
             {
                 txt_EsSo_cine_SaludRecre.Enabled = false;
+            }else
+            {
+                txt_EsSo_cine_SaludRecre.Enabled = true;
             }
 
         }
 
         private void combox_EsSo_Balnearios_SaludRecre_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (combox_EsSo_Balnearios_SaludRecre.Text == "No")
+            if (combox_EsSo_Balnearios_SaludRecre.SelectedIndex == 1)
             {
                 txt_EsSo_Balnearios_SaludRecre.Enabled = false;
+            }else
+            {
+                txt_EsSo_Balnearios_SaludRecre.Enabled = true;
             }
 
         }
 
         private void combox_EsSo_Playa_SaludRecre_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (combox_EsSo_Playa_SaludRecre.Text == "No")
+            if (combox_EsSo_Playa_SaludRecre.SelectedIndex == 1)
             {
                 txt_EsSo_Playa_SaludRecre.Enabled = false;
+            }else
+            {
+                txt_EsSo_Playa_SaludRecre.Enabled = true;
             }
 
         }
 
         private void combox_EsSo_OtrosLugares_SaludRecre_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (combox_EsSo_OtrosLugares_SaludRecre.Text == "No")
+            if (combox_EsSo_OtrosLugares_SaludRecre.SelectedIndex == 1)
             {
                 txt_EsSo_OtrosLugares_SaludRecre.Enabled = false;
+            }else
+            {
+                txt_EsSo_OtrosLugares_SaludRecre.Enabled = true;
             }
 
         }
 
         private void txt_EsSo_EdadEncarg_DatosGe_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Validaciones.NumerosReales_NegativosOPositivos(sender, e, txt_EsSo_EdadEncarg_DatosGe);
+            Validaciones.ValidarID(sender, e);
         }
 
         private void txt_EsSo_TelEncarg_DatosGe_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Validaciones.NumerosReales_NegativosOPositivos(sender, e, txt_EsSo_TelEncarg_DatosGe);
+            Validaciones.ValidarID(sender, e);
 
         }
 
         private void txt_EsSo_IdentPadre_DatosGe_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Validaciones.NumerosReales_NegativosOPositivos(sender, e, txt_EsSo_IdentPadre_DatosGe);
+            Validaciones.ValidarID(sender, e);
         }
 
         private void txt_EsSo_IdentMadre_DatosGe_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Validaciones.NumerosReales_NegativosOPositivos(sender, e, txt_EsSo_IdentMadre_DatosGe);
+            Validaciones.ValidarID(sender, e);
         }
 
         private void txt_EsSo_CelMadre_DatosGe_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Validaciones.NumerosReales_NegativosOPositivos(sender, e, txt_EsSo_CelMadre_DatosGe);
+            Validaciones.ValidarID(sender, e);
         }
 
         private void txt_EsSo_TelTrabMadre_DatosGe_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Validaciones.NumerosReales_NegativosOPositivos(sender, e, txt_EsSo_TelTrabMadre_DatosGe);
+            Validaciones.ValidarID(sender, e);
 
         }
 
         private void txt_EsSo_TelCAsaPadre_DatosGe_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Validaciones.NumerosReales_NegativosOPositivos(sender, e, txt_EsSo_TelCAsaPadre_DatosGe);
+            Validaciones.ValidarID(sender, e);
 
         }
 
         private void txt_EsSo_CelPadre_DatosGe_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Validaciones.NumerosReales_NegativosOPositivos(sender, e, txt_EsSo_CelPadre_DatosGe);
+            Validaciones.ValidarID(sender, e);
         }
 
         private void txt_EsSo_TelTrabPadre_DatosGe_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Validaciones.NumerosReales_NegativosOPositivos(sender, e, txt_EsSo_TelTrabPadre_DatosGe);
+            Validaciones.ValidarID(sender, e);
         }
 
         private void txt_EsSo_CuantosFamil_InfoFami_KeyPress(object sender, KeyPressEventArgs e)
@@ -1550,6 +1610,11 @@ namespace APOAUTIS
 
         private void FormaEstSocEco_Load(object sender, EventArgs e)
         {
+            txt_EsSo_OtraTenencia_InfoVivien.Enabled = false;
+txt_EsSo_OtroMaterial_InfoVivien.Enabled = false;
+            txt_EsSo_OtroMaterPiso_InfoVivien.Enabled = false;
+            txt_EsSo_OtroServicio_InfoVivien.Enabled = false;
+
             chekbox_EsSo_OtroSalud_SaludRecre.Checked = true;
             chekbox_EsSo_NingunaEnfer_SaludRecre.Checked = true;
             rbtm_EsSo_Propia_InfoVivien.Checked = true;
@@ -1568,8 +1633,198 @@ namespace APOAUTIS
             combox_EsSo_OtrosLugares_SaludRecre.SelectedIndex = 1;
             combox_EsSo_CuantosFami_InfoFami.SelectedIndex = 1;
             comboBox1.SelectedIndex = 1;
+            ValidarClicDerecho();
         }
 
+        public void Fun_Limpiar()
+        {
+            combox_EsSo_Parques_SaludRecre.SelectedIndex = 1;
+            combox_EsSo_CentrosCom_SaludRecre.SelectedIndex = 1;
+            combox_EsSo_Museos_SaludRecre.SelectedIndex = 1;
+            combox_EsSo_Cine_SaludRecre.SelectedIndex = 1;
+            combox_EsSo_Balnearios_SaludRecre.SelectedIndex = 1;
+            combox_EsSo_Playa_SaludRecre.SelectedIndex = 1;
+            combox_EsSo_OtrosLugares_SaludRecre.SelectedIndex = 1;
+            combox_EsSo_CuantosFami_InfoFami.SelectedIndex = 1;
+            comboBox1.SelectedIndex = 1;
+            Combox_EsSo_TrabajaMadre_forma.SelectedIndex = -1;
+            combox_EsSo_TrabajaPadre_forma.SelectedIndex = -1;
+                checkBox1.Checked = false;
+            txt_EsSo_TotalTraba_InfoFami.Text = string.Empty;
+            txt_EsSo_CuantosFamil_InfoFami.Text = string.Empty;
+            txt_EsSo_TotalMiemb_InfoFami.Text = string.Empty;
+            txt_EsSo_HabitantesCasa_InfoFami.Text = string.Empty;
+            txt_EsSo_CuantosHijos_InfoFami.Text = string.Empty;
+            txt_EsSo_GastoMedi_SaludRecre.Text = string.Empty;
+            txt_EsSo_Aporbado_SaludRecre.Text = string.Empty;
+            txt_EsSo_OtraTenencia_InfoVivien.Text = string.Empty;
+            txt_EsSo_OtroMaterial_InfoVivien.Text = string.Empty;
+            txt_EsSo_OtroMaterPiso_InfoVivien.Text = string.Empty;
+            txt_EsSo_OtroServicio_InfoVivien.Text = string.Empty;
+
+
+            var boxes = groupBox13.Controls.OfType<TextBox>();
+            foreach (var box in boxes)
+            {
+                box.Text = string.Empty;
+
+            }
+
+            var boxes1 = groupBox1.Controls.OfType<TextBox>();
+            foreach (var box in boxes1)
+            {
+                box.Text = string.Empty;
+
+            }
+
+            var boxes5 = groupBox2.Controls.OfType<TextBox>();
+            foreach (var box in boxes5)
+            {
+                box.Text = string.Empty;
+
+            }
+
+            var boxes6 = groupBox3.Controls.OfType<TextBox>();
+            foreach (var box in boxes6)
+            {
+                box.Text = string.Empty;
+
+            }
+            var boxes7 = groupBox6.Controls.OfType<TextBox>();
+            foreach (var box in boxes7)
+            {
+                box.Text = string.Empty;
+
+            }
+            var boxes8 = groupBox5.Controls.OfType<TextBox>();
+            foreach (var box in boxes8)
+            {
+                box.Text = string.Empty;
+
+            }
+            var boxes9 = groupBox9.Controls.OfType<TextBox>();
+            foreach (var box in boxes9)
+            {
+                box.Text = string.Empty;
+
+            }
+
+
+
+            var boxa = groupBox7.Controls.OfType<CheckBox>();
+            foreach (var box in boxa)
+            {
+
+                box.Checked = false;
+            }
+
+
+            var boxb = groupBox8.Controls.OfType<CheckBox>();
+            foreach (var box in boxb)
+            {
+                box.Checked = false;
+
+            }
+
+
+            var box100 = groupBox11.Controls.OfType<CheckBox>();
+            foreach (var box in box100)
+            {
+                box.Checked = false;
+
+            }
+
+            var box101 = groupBox10.Controls.OfType<CheckBox>();
+            foreach (var box in box101)
+            {
+                box.Checked = false;
+
+            }
+
+                chekbox_EsSo_Tele_InfoVivien.Checked = true;
+            chekbox_EsSo_Energia_InfoVivien.Checked = true;
+            chekbox_EsSo_OtroSalud_SaludRecre.Checked = true;
+            chekbox_EsSo_Diabetes_SaludRecre.Checked = true;
+
+            rbtm_EsSo_Propia_InfoVivien.Checked = true;
+            rbtm_EsSo_Ladrillo_InfoVivien.Checked = true;
+            rbtm_EsSo_Tierra_InfoVivien.Checked = true;
+
+        }
+        public void ValidarClicDerecho()
+        {
+            var blankContextMenu = new ContextMenuStrip();
+
+            txt_EsSo_TotalTraba_InfoFami.ContextMenuStrip = blankContextMenu;
+            txt_EsSo_CuantosFamil_InfoFami.ContextMenuStrip = blankContextMenu;
+            txt_EsSo_TotalMiemb_InfoFami.ContextMenuStrip = blankContextMenu;
+            txt_EsSo_HabitantesCasa_InfoFami.ContextMenuStrip = blankContextMenu;
+            txt_EsSo_CuantosHijos_InfoFami.ContextMenuStrip = blankContextMenu;
+            txt_EsSo_GastoMedi_SaludRecre.ContextMenuStrip = blankContextMenu;
+            txt_EsSo_Aporbado_SaludRecre.ContextMenuStrip = blankContextMenu;
+            txt_EsSo_OtraTenencia_InfoVivien.ContextMenuStrip = blankContextMenu;
+            txt_EsSo_OtroMaterial_InfoVivien.ContextMenuStrip = blankContextMenu;
+            txt_EsSo_OtroMaterPiso_InfoVivien.ContextMenuStrip = blankContextMenu;
+            txt_EsSo_OtroServicio_InfoVivien.ContextMenuStrip = blankContextMenu;
+
+
+            var boxes = groupBox13.Controls.OfType<TextBox>();
+            foreach (var box in boxes)
+            {
+                box.ContextMenuStrip = blankContextMenu;
+
+            }
+
+            var boxes1 = groupBox1.Controls.OfType<TextBox>();
+            foreach (var box in boxes1)
+            {
+                box.ContextMenuStrip = blankContextMenu;
+
+            }
+
+            var boxes5 = groupBox2.Controls.OfType<TextBox>();
+            foreach (var box in boxes5)
+            {
+                box.ContextMenuStrip = blankContextMenu;
+
+            }
+
+            var boxes6 = groupBox3.Controls.OfType<TextBox>();
+            foreach (var box in boxes6)
+            {
+                box.ContextMenuStrip = blankContextMenu;
+
+            }
+            var boxes7 = groupBox6.Controls.OfType<TextBox>();
+            foreach (var box in boxes7)
+            {
+                box.ContextMenuStrip = blankContextMenu;
+
+            }
+            var boxes8 = groupBox5.Controls.OfType<TextBox>();
+            foreach (var box in boxes8)
+            {
+                box.ContextMenuStrip = blankContextMenu;
+
+            }
+            var boxes9 = groupBox9.Controls.OfType<TextBox>();
+            foreach (var box in boxes9)
+            {
+                box.ContextMenuStrip = blankContextMenu;
+
+            }
+
+
+            
+                  var boxes19 = groupBox4.Controls.OfType<TextBox>();
+            foreach (var box in boxes19)
+            {
+                box.ContextMenuStrip = blankContextMenu;
+
+            }
+
+
+        }
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
@@ -1694,10 +1949,14 @@ namespace APOAUTIS
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            if (comboBox1.Text == "No")
+            if (comboBox1.SelectedIndex== 1)
             {
                 txt_EsSo_CuantosHijos_InfoFami.Enabled = false;
                 txt_EsSo_CuantosHijos_InfoFami.Text = "0";
+            }else
+            {
+                txt_EsSo_CuantosHijos_InfoFami.Enabled = true;
+                txt_EsSo_CuantosHijos_InfoFami.Text = string.Empty;
             }
         }
 
@@ -1747,6 +2006,392 @@ namespace APOAUTIS
         private void label72_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void chekbox_EsSo_Ninguno_SaludRecre_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void combox_EsSo_TrabajaPadre_forma_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked==true) {
+                combox_EsSo_Parques_SaludRecre.SelectedIndex = 1;
+                combox_EsSo_CentrosCom_SaludRecre.SelectedIndex = 1;
+                combox_EsSo_Museos_SaludRecre.SelectedIndex = 1;
+                combox_EsSo_Cine_SaludRecre.SelectedIndex = 1;
+                combox_EsSo_Balnearios_SaludRecre.SelectedIndex = 1;
+                combox_EsSo_Playa_SaludRecre.SelectedIndex = 1;
+                combox_EsSo_OtrosLugares_SaludRecre.SelectedIndex = 1;
+
+                combox_EsSo_Parques_SaludRecre.Enabled = false;
+                combox_EsSo_CentrosCom_SaludRecre.Enabled = false;
+                combox_EsSo_Museos_SaludRecre.Enabled = false;
+                combox_EsSo_Cine_SaludRecre.Enabled = false;
+                combox_EsSo_Balnearios_SaludRecre.Enabled = false;
+                combox_EsSo_Playa_SaludRecre.Enabled = false;
+                combox_EsSo_OtrosLugares_SaludRecre.Enabled = false;
+
+                txt_EsSo_Parques_SaludRecre.Text = string.Empty;
+                txt_EsSo_CentrosCom_SaludRecre.Text = string.Empty;
+                txt_EsSo_Museos_SaludRecre.Text = string.Empty;
+                txt_EsSo_cine_SaludRecre.Text = string.Empty;
+                txt_EsSo_Balnearios_SaludRecre.Text = string.Empty;
+                txt_EsSo_Playa_SaludRecre.Text = string.Empty;
+                txt_EsSo_OtrosLugares_SaludRecre.Text = string.Empty;
+            }
+            else
+            {
+                combox_EsSo_Parques_SaludRecre.Enabled = true;
+                combox_EsSo_CentrosCom_SaludRecre.Enabled = true;
+                combox_EsSo_Museos_SaludRecre.Enabled = true;
+                combox_EsSo_Cine_SaludRecre.Enabled = true;
+                combox_EsSo_Balnearios_SaludRecre.Enabled = true;
+                combox_EsSo_Playa_SaludRecre.Enabled = true;
+                combox_EsSo_OtrosLugares_SaludRecre.Enabled = true;
+            }
+        }
+
+        private void txt_EsSo_Parques_SaludRecre_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void txt_EsSo_NomMadre_DatosGe_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.ValirLetrasYEspaciosMayorEspacio(sender, e, txt_EsSo_NomMadre_DatosGe);
+        }
+
+        private void txt_EsSo_OficioMadre_forma_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.ValirLetrasYEspaciosMayorEspacio(sender, e, txt_EsSo_OficioMadre_forma);
+        }
+
+        private void txt_EsSo_LugarTrabMadre_forma_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.ValirLetrasYEspaciosMayorEspacio(sender, e, txt_EsSo_LugarTrabMadre_forma);
+        }
+
+        private void txt_EsSo_TelCasaMadre_DatosGe_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void txt_EsSo_OficioPadre_forma_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.ValirLetrasYEspaciosMayorEspacio(sender, e, txt_EsSo_OficioPadre_forma);
+        }
+
+        private void txt_EsSo_LugarTrabPadre_forma_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.ValirLetrasYEspaciosMayorEspacio(sender, e, txt_EsSo_LugarTrabPadre_forma);
+        }
+
+        private void txt_EsSo_NomPadre_DatosGe_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.ValirLetrasYEspaciosMayorEspacio(sender, e, txt_EsSo_NomPadre_DatosGe);
+        }
+
+
+        private void CalculoIngresos()
+        {
+            double Var_Abuela=0;
+            double Var_Padre = 0;
+            double Var_Madre = 0;
+            double Var_Hijo = 0;
+            double Var_Pension = 0;
+            double Var_Otros = 0;
+            double Var_Total = 0;
+
+            if (string.IsNullOrEmpty(txt_EsSo_IngreAbue_InfoFami.Text))
+            {
+                Var_Abuela = 0;
+            }
+            else
+            {
+                Var_Abuela = Convert.ToDouble(txt_EsSo_IngreAbue_InfoFami.Text);
+            }
+
+
+            if (string.IsNullOrEmpty(txt_EsSo_IngrePadre_InfoFami.Text))
+            {
+                Var_Padre = 0;
+            }
+            else
+            {
+                Var_Padre = Convert.ToDouble(txt_EsSo_IngrePadre_InfoFami.Text);
+            }
+
+            if (string.IsNullOrEmpty(txt_EsSo_IngreMadre_InfoFami.Text))
+            {
+                Var_Madre = 0;
+            }
+            else
+            {
+                Var_Madre = Convert.ToDouble(txt_EsSo_IngreMadre_InfoFami.Text);
+            }
+
+            if (string.IsNullOrEmpty(txt_EsSo_IngreHijo_InfoFami.Text))
+            {
+                Var_Hijo = 0;
+                
+            }
+            else
+            {
+                Var_Hijo = Convert.ToDouble(txt_EsSo_IngreHijo_InfoFami.Text);
+            }
+
+            if (string.IsNullOrEmpty(txt_EsSo_IngrePencion_InfoFami.Text))
+            {
+               Var_Pension = 0;
+                
+            }
+            else
+            {
+                Var_Pension = Convert.ToDouble(txt_EsSo_IngrePencion_InfoFami.Text);
+            }
+
+            if (string.IsNullOrEmpty(txt_EsSo_IngreOtros_InfoFami.Text))
+            {
+                Var_Otros = 0;
+                
+            }
+            else
+            {
+                Var_Otros = Convert.ToDouble(txt_EsSo_IngreOtros_InfoFami.Text);
+            }
+
+            Var_Total = Var_Otros + Var_Pension + Var_Hijo + Var_Madre + Var_Padre + Var_Abuela;
+            txt_EsSo_IngreTotales_InfoFami.Text = Var_Total.ToString();
+        }
+
+
+        private void CalculoGastos()
+        {
+            double Var_EnergiaElec=0;
+            double Var_Agua = 0;
+            double Var_Telefono = 0;//--
+            double Var_Alimentos = 0;//--
+            double Var_Trans = 0;//--
+            double Var_Salud = 0;//--
+            double Var_Educacion = 0;//--
+            double Var_Combustibles = 0;//--
+            double Var_Vestimen = 0;//--
+            double Var_Vivienda = 0;//--
+            double Var_Otros = 0;//--
+            double Var_Total = 0;//--
+
+            if (string.IsNullOrEmpty(txt_EsSo_Agua_InfoFami.Text))
+            {
+                Var_Agua = 0;
+            }
+            else
+            {
+                Var_Agua = Convert.ToDouble(txt_EsSo_Agua_InfoFami.Text);
+            }
+
+            if (string.IsNullOrEmpty(txt_EsSo_Energia_InfoFami.Text))
+            {
+                Var_EnergiaElec = 0;
+            }
+            else
+            {
+                Var_EnergiaElec = Convert.ToDouble(txt_EsSo_Energia_InfoFami.Text);
+            }
+
+
+            if (string.IsNullOrEmpty(txt_EsSo_Alimentos_InfoFami.Text))
+            {
+                Var_Alimentos = 0;
+            }
+            else
+            {
+                Var_Alimentos = Convert.ToDouble(txt_EsSo_Alimentos_InfoFami.Text);
+            }
+
+
+            if (string.IsNullOrEmpty(txt_EsSo_Telefono_InfoFami.Text))
+            {
+                Var_Telefono = 0;
+            }
+            else
+            {
+                Var_Telefono = Convert.ToDouble(txt_EsSo_Telefono_InfoFami.Text);
+            }
+
+
+
+
+            if (string.IsNullOrEmpty(txt_EsSo_Transp_InfoFami.Text))
+            {
+                Var_Trans = 0;
+            }
+            else
+            {
+                Var_Trans = Convert.ToDouble(txt_EsSo_Transp_InfoFami.Text);
+            }
+
+
+
+
+            if (string.IsNullOrEmpty(txt_EsSo_Salud_InfoFami.Text))
+            {
+                Var_Salud = 0;
+            }
+            else
+            {
+                Var_Salud = Convert.ToDouble(txt_EsSo_Salud_InfoFami.Text);
+            }
+
+
+
+
+            if (string.IsNullOrEmpty(txt_EsSo_Educa_InfoFami.Text))
+            {
+                Var_Educacion = 0;
+            }
+            else
+            {
+                Var_Educacion = Convert.ToDouble(txt_EsSo_Educa_InfoFami.Text);
+            }
+
+
+
+
+            if (string.IsNullOrEmpty(txt_EsSo_Combus_InfoFami.Text))
+            {
+                Var_Combustibles = 0;
+            }
+            else
+            {
+                Var_Combustibles = Convert.ToDouble(txt_EsSo_Combus_InfoFami.Text);
+            }
+
+
+
+            if (string.IsNullOrEmpty(txt_EsSo_Vestime_InfoFami.Text))
+            {
+                Var_Vestimen = 0;
+            }
+            else
+            {
+                Var_Vestimen = Convert.ToDouble(txt_EsSo_Vestime_InfoFami.Text);
+            }
+
+
+
+            if (string.IsNullOrEmpty(txt_EsSo_Alquiler_InfoFami.Text))
+            {
+                Var_Vivienda = 0;
+            }
+            else
+            {
+                Var_Vivienda = Convert.ToDouble(txt_EsSo_Alquiler_InfoFami.Text);
+            }
+            //------
+            if (string.IsNullOrEmpty(txt_EsSo_Otros_InfoFami.Text))
+            {
+                Var_Otros = 0;
+            }
+            else
+            {
+                Var_Otros = Convert.ToDouble(txt_EsSo_Otros_InfoFami.Text);
+            }
+
+            Var_Total = Var_Otros + Var_Vivienda + Var_Vestimen + Var_Combustibles + Var_Educacion +
+                Var_Salud + Var_Trans + Var_Alimentos + Var_Telefono + Var_Agua + Var_EnergiaElec;
+            txt_EsSo_TotalGastos_InfoFami.Text = Var_Total.ToString();
+        }
+
+
+        private void txt_EsSo_IngrePadre_InfoFami_TextChanged(object sender, EventArgs e)
+        {
+            CalculoIngresos();
+        }
+
+        private void txt_EsSo_IngreMadre_InfoFami_TextChanged(object sender, EventArgs e)
+        {
+            CalculoIngresos();
+        }
+
+        private void txt_EsSo_IngreHijo_InfoFami_TextChanged(object sender, EventArgs e)
+        {
+            CalculoIngresos();
+        }
+
+        private void txt_EsSo_IngrePencion_InfoFami_TextChanged(object sender, EventArgs e)
+        {
+            CalculoIngresos();
+        }
+
+        private void txt_EsSo_IngreOtros_InfoFami_TextChanged(object sender, EventArgs e)
+        {
+            CalculoIngresos();
+        }
+
+        private void txt_EsSo_Energia_InfoFami_TextChanged(object sender, EventArgs e)
+        {
+            CalculoGastos();
+        }
+
+        private void txt_EsSo_Agua_InfoFami_TextChanged(object sender, EventArgs e)
+        {
+            CalculoGastos();
+        }
+
+        private void txt_EsSo_Telefono_InfoFami_TextChanged(object sender, EventArgs e)
+        {
+            CalculoGastos();
+        }
+
+        private void txt_EsSo_Alimentos_InfoFami_TextChanged(object sender, EventArgs e)
+        {
+            CalculoGastos();
+        }
+
+        private void txt_EsSo_Transp_InfoFami_TextChanged(object sender, EventArgs e)
+        {
+            CalculoGastos();
+        }
+
+        private void txt_EsSo_Salud_InfoFami_TextChanged(object sender, EventArgs e)
+        {
+            CalculoGastos();
+        }
+
+        private void txt_EsSo_Educa_InfoFami_TextChanged(object sender, EventArgs e)
+        {
+            CalculoGastos();
+        }
+
+        private void txt_EsSo_Combus_InfoFami_TextChanged(object sender, EventArgs e)
+        {
+            CalculoGastos();
+        }
+
+        private void txt_EsSo_Vestime_InfoFami_TextChanged(object sender, EventArgs e)
+        {
+            CalculoGastos();
+        }
+
+        private void txt_EsSo_Alquiler_InfoFami_TextChanged(object sender, EventArgs e)
+        {
+            CalculoGastos();
+        }
+
+        private void txt_EsSo_Otros_InfoFami_TextChanged(object sender, EventArgs e)
+        {
+            CalculoGastos();
+        }
+
+        private void txt_EsSo_IdentiEst_DatosGe_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.ValidarID(sender, e);
         }
     }
 

@@ -35,6 +35,8 @@
             this.DGV_ShowResponsables = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.Pest1_Grupo_DatosEncargado = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.cmbParentesco = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtCorrResp = new System.Windows.Forms.TextBox();
@@ -65,8 +67,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_ShowResponsables)).BeginInit();
@@ -125,6 +125,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DGV_ShowResponsables.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGV_ShowResponsables.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.DGV_ShowResponsables.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
             this.DGV_ShowResponsables.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DGV_ShowResponsables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_ShowResponsables.Location = new System.Drawing.Point(22, 22);
@@ -187,6 +188,26 @@
             this.Pest1_Grupo_DatosEncargado.TabStop = false;
             this.Pest1_Grupo_DatosEncargado.Text = "Datos de los Encargados";
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(695, 280);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(55, 15);
+            this.label16.TabIndex = 34;
+            this.label16.Text = "Aceptar";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(475, 288);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(56, 15);
+            this.label15.TabIndex = 33;
+            this.label15.Text = "Limpiar";
+            // 
             // cmbParentesco
             // 
             this.cmbParentesco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -199,7 +220,7 @@
             this.cmbParentesco.Location = new System.Drawing.Point(198, 203);
             this.cmbParentesco.Name = "cmbParentesco";
             this.cmbParentesco.Size = new System.Drawing.Size(193, 26);
-            this.cmbParentesco.TabIndex = 32;
+            this.cmbParentesco.TabIndex = 6;
             // 
             // label13
             // 
@@ -218,7 +239,7 @@
             this.txtCorrResp.MaxLength = 45;
             this.txtCorrResp.Name = "txtCorrResp";
             this.txtCorrResp.Size = new System.Drawing.Size(193, 24);
-            this.txtCorrResp.TabIndex = 30;
+            this.txtCorrResp.TabIndex = 5;
             this.txtCorrResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorrResp_KeyPress);
             // 
             // label12
@@ -242,7 +263,7 @@
             this.cmbEstResp.Location = new System.Drawing.Point(572, 82);
             this.cmbEstResp.Name = "cmbEstResp";
             this.cmbEstResp.Size = new System.Drawing.Size(212, 26);
-            this.cmbEstResp.TabIndex = 28;
+            this.cmbEstResp.TabIndex = 11;
             // 
             // cmbTrabResp
             // 
@@ -255,7 +276,7 @@
             this.cmbTrabResp.Location = new System.Drawing.Point(572, 52);
             this.cmbTrabResp.Name = "cmbTrabResp";
             this.cmbTrabResp.Size = new System.Drawing.Size(101, 26);
-            this.cmbTrabResp.TabIndex = 27;
+            this.cmbTrabResp.TabIndex = 10;
             this.cmbTrabResp.SelectedIndexChanged += new System.EventHandler(this.cmbTrabResp_SelectedIndexChanged);
             // 
             // btnLimpiar
@@ -265,10 +286,10 @@
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnLimpiar.Location = new System.Drawing.Point(433, 189);
+            this.btnLimpiar.Location = new System.Drawing.Point(433, 158);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(100, 96);
-            this.btnLimpiar.TabIndex = 24;
+            this.btnLimpiar.Size = new System.Drawing.Size(132, 127);
+            this.btnLimpiar.TabIndex = 14;
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
@@ -279,10 +300,10 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnAceptar.Location = new System.Drawing.Point(685, 189);
+            this.btnAceptar.Location = new System.Drawing.Point(649, 150);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(99, 96);
-            this.btnAceptar.TabIndex = 5;
+            this.btnAceptar.Size = new System.Drawing.Size(135, 127);
+            this.btnAceptar.TabIndex = 13;
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
@@ -300,10 +321,10 @@
             // 
             this.txtTelTrabResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelTrabResp.Location = new System.Drawing.Point(198, 292);
-            this.txtTelTrabResp.MaxLength = 11;
+            this.txtTelTrabResp.MaxLength = 15;
             this.txtTelTrabResp.Name = "txtTelTrabResp";
             this.txtTelTrabResp.Size = new System.Drawing.Size(193, 24);
-            this.txtTelTrabResp.TabIndex = 21;
+            this.txtTelTrabResp.TabIndex = 9;
             this.txtTelTrabResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelTrabResp_KeyPress);
             // 
             // label8
@@ -320,10 +341,10 @@
             // 
             this.txtTelCelResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelCelResp.Location = new System.Drawing.Point(198, 264);
-            this.txtTelCelResp.MaxLength = 11;
+            this.txtTelCelResp.MaxLength = 15;
             this.txtTelCelResp.Name = "txtTelCelResp";
             this.txtTelCelResp.Size = new System.Drawing.Size(193, 24);
-            this.txtTelCelResp.TabIndex = 19;
+            this.txtTelCelResp.TabIndex = 8;
             this.txtTelCelResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelCelResp_KeyPress);
             // 
             // label9
@@ -343,7 +364,7 @@
             this.txtDomResp.MaxLength = 45;
             this.txtDomResp.Name = "txtDomResp";
             this.txtDomResp.Size = new System.Drawing.Size(193, 24);
-            this.txtDomResp.TabIndex = 17;
+            this.txtDomResp.TabIndex = 3;
             this.txtDomResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDomResp_KeyPress);
             // 
             // label10
@@ -360,10 +381,10 @@
             // 
             this.txtProfResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProfResp.Location = new System.Drawing.Point(198, 142);
-            this.txtProfResp.MaxLength = 45;
+            this.txtProfResp.MaxLength = 99;
             this.txtProfResp.Name = "txtProfResp";
             this.txtProfResp.Size = new System.Drawing.Size(193, 24);
-            this.txtProfResp.TabIndex = 15;
+            this.txtProfResp.TabIndex = 4;
             this.txtProfResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProfResp_KeyPress);
             // 
             // label11
@@ -380,10 +401,10 @@
             // 
             this.txtTelCasResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelCasResp.Location = new System.Drawing.Point(198, 236);
-            this.txtTelCasResp.MaxLength = 11;
+            this.txtTelCasResp.MaxLength = 15;
             this.txtTelCasResp.Name = "txtTelCasResp";
             this.txtTelCasResp.Size = new System.Drawing.Size(193, 24);
-            this.txtTelCasResp.TabIndex = 11;
+            this.txtTelCasResp.TabIndex = 7;
             this.txtTelCasResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelCasResp_KeyPress);
             // 
             // label6
@@ -400,10 +421,10 @@
             // 
             this.txtLugResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLugResp.Location = new System.Drawing.Point(572, 113);
-            this.txtLugResp.MaxLength = 45;
+            this.txtLugResp.MaxLength = 44;
             this.txtLugResp.Name = "txtLugResp";
             this.txtLugResp.Size = new System.Drawing.Size(212, 24);
-            this.txtLugResp.TabIndex = 9;
+            this.txtLugResp.TabIndex = 12;
             this.txtLugResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLugResp_KeyPress);
             // 
             // label5
@@ -428,13 +449,12 @@
             // 
             // txtNomResp
             // 
-            this.txtNomResp.Enabled = false;
             this.txtNomResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomResp.Location = new System.Drawing.Point(198, 60);
             this.txtNomResp.MaxLength = 45;
             this.txtNomResp.Name = "txtNomResp";
             this.txtNomResp.Size = new System.Drawing.Size(193, 24);
-            this.txtNomResp.TabIndex = 5;
+            this.txtNomResp.TabIndex = 1;
             this.txtNomResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNomResp_KeyPress);
             // 
             // label3
@@ -449,13 +469,12 @@
             // 
             // txtIdResp
             // 
-            this.txtIdResp.Enabled = false;
             this.txtIdResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdResp.Location = new System.Drawing.Point(198, 88);
             this.txtIdResp.MaxLength = 13;
             this.txtIdResp.Name = "txtIdResp";
             this.txtIdResp.Size = new System.Drawing.Size(193, 24);
-            this.txtIdResp.TabIndex = 3;
+            this.txtIdResp.TabIndex = 2;
             this.txtIdResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdResp_KeyPress);
             // 
             // label2
@@ -476,7 +495,7 @@
             this.txtCodResp.MaxLength = 10;
             this.txtCodResp.Name = "txtCodResp";
             this.txtCodResp.Size = new System.Drawing.Size(98, 24);
-            this.txtCodResp.TabIndex = 1;
+            this.txtCodResp.TabIndex = 0;
             // 
             // label1
             // 
@@ -507,26 +526,6 @@
             this.label14.Size = new System.Drawing.Size(37, 15);
             this.label14.TabIndex = 32;
             this.label14.Text = "Salir";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(457, 288);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(56, 15);
-            this.label15.TabIndex = 33;
-            this.label15.Text = "Limpiar";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(705, 288);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(55, 15);
-            this.label16.TabIndex = 34;
-            this.label16.Text = "Aceptar";
             // 
             // FormMantenimientoResponsable
             // 

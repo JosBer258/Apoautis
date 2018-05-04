@@ -347,5 +347,50 @@ where Alumnos_CodAlumno='{8}'
         }
 
 
+        public void Fun_ActualizarMatricula(int Cod_Jor, int Annio, string Observ, string Entre, int Cod_M)
+        {
+            this.sql = string.Format(@"update matricula
+                                    set Cod_jornada='{0}', AnioIngreso='{1}', Observaciones='{2}', Entrevistador='{3}'
+                                    where CodMatricula='{4}'", Cod_Jor, Annio, Observ, Entre, Cod_M);
+            this.cnx.Open();
+            this.cmd = new MySql.Data.MySqlClient.MySqlCommand(this.sql, this.cnx);
+            int Reg = this.cmd.ExecuteNonQuery();
+
+
+            if (Reg > 0)
+            {
+            }
+            else
+            {
+
+            }
+            this.cnx.Close();
+        }
+
+        public void Fun_ActualizarAl(string Name, string Direc,  string Inst,int Cod)
+        {
+            this.sql = string.Format(@"update alumnos 
+            set NomAlumno='{0}', LugarNaciAlum ='{1}', InstProceAlumno='{2}' where CodAlumno='{3}'", 
+            Name, Direc, Inst, Cod);
+            this.cnx.Open();
+            this.cmd = new MySql.Data.MySqlClient.MySqlCommand(this.sql, this.cnx);
+            int Reg = this.cmd.ExecuteNonQuery();
+
+
+            if (Reg > 0)
+            {
+            }
+            else
+            {
+
+            }
+            this.cnx.Close();
+        }
+
+        public void Fun_OptenerCodigo(System.Windows.Forms.ComboBox Fun_ComBo)
+        {
+
+        }
+
     }
 }

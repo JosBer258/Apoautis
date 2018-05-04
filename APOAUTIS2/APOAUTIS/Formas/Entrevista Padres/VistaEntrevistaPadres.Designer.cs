@@ -58,12 +58,12 @@
             this.checkBox27 = new System.Windows.Forms.CheckBox();
             this.checkBox28 = new System.Windows.Forms.CheckBox();
             this.label167 = new System.Windows.Forms.Label();
-            this.label168 = new System.Windows.Forms.Label();
             this.textBox156 = new System.Windows.Forms.TextBox();
             this.label166 = new System.Windows.Forms.Label();
             this.textBox158 = new System.Windows.Forms.TextBox();
             this.label165 = new System.Windows.Forms.Label();
             this.textBox159 = new System.Windows.Forms.TextBox();
+            this.label168 = new System.Windows.Forms.Label();
             this.Pest_VidaDiaria = new System.Windows.Forms.TabPage();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -223,6 +223,10 @@
             this.PestDatosGen_Bttn_BusquedaAlumno = new System.Windows.Forms.Button();
             this.TapEntrevistaVista = new System.Windows.Forms.TabControl();
             this.label4 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.Pest_RasgosIdentificables.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.groupBox12.SuspendLayout();
@@ -242,6 +246,8 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.TapEntrevistaVista.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button26
@@ -251,7 +257,7 @@
             this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button26.ForeColor = System.Drawing.SystemColors.Control;
-            this.button26.Location = new System.Drawing.Point(4, 548);
+            this.button26.Location = new System.Drawing.Point(4, 547);
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(130, 122);
             this.button26.TabIndex = 137;
@@ -290,42 +296,50 @@
             // textBox148
             // 
             this.textBox148.Location = new System.Drawing.Point(616, 53);
+            this.textBox148.MaxLength = 79;
             this.textBox148.Multiline = true;
             this.textBox148.Name = "textBox148";
             this.textBox148.ReadOnly = true;
             this.textBox148.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox148.Size = new System.Drawing.Size(225, 95);
-            this.textBox148.TabIndex = 128;
+            this.textBox148.TabIndex = 2;
+            this.textBox148.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox148_KeyPress);
             // 
             // textBox150
             // 
             this.textBox150.Location = new System.Drawing.Point(858, 53);
+            this.textBox150.MaxLength = 79;
             this.textBox150.Multiline = true;
             this.textBox150.Name = "textBox150";
             this.textBox150.ReadOnly = true;
             this.textBox150.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox150.Size = new System.Drawing.Size(271, 95);
-            this.textBox150.TabIndex = 126;
+            this.textBox150.TabIndex = 3;
+            this.textBox150.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox150_KeyPress);
             // 
             // textBox152
             // 
             this.textBox152.Location = new System.Drawing.Point(392, 53);
+            this.textBox152.MaxLength = 79;
             this.textBox152.Multiline = true;
             this.textBox152.Name = "textBox152";
             this.textBox152.ReadOnly = true;
             this.textBox152.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox152.Size = new System.Drawing.Size(205, 93);
-            this.textBox152.TabIndex = 124;
+            this.textBox152.TabIndex = 1;
+            this.textBox152.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox152_KeyPress);
             // 
             // textBox154
             // 
             this.textBox154.Location = new System.Drawing.Point(54, 53);
+            this.textBox154.MaxLength = 79;
             this.textBox154.Multiline = true;
             this.textBox154.Name = "textBox154";
             this.textBox154.ReadOnly = true;
             this.textBox154.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox154.Size = new System.Drawing.Size(326, 95);
-            this.textBox154.TabIndex = 122;
+            this.textBox154.TabIndex = 0;
+            this.textBox154.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox154_KeyPress);
             // 
             // label158
             // 
@@ -382,12 +396,12 @@
             this.groupBox12.Controls.Add(this.checkBox27);
             this.groupBox12.Controls.Add(this.checkBox28);
             this.groupBox12.Controls.Add(this.label167);
-            this.groupBox12.Controls.Add(this.label168);
             this.groupBox12.Controls.Add(this.textBox156);
             this.groupBox12.Controls.Add(this.label166);
             this.groupBox12.Controls.Add(this.textBox158);
             this.groupBox12.Controls.Add(this.label165);
             this.groupBox12.Controls.Add(this.textBox159);
+            this.groupBox12.Controls.Add(this.label168);
             this.groupBox12.Location = new System.Drawing.Point(8, 17);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(1180, 281);
@@ -598,28 +612,19 @@
     "a entrevista";
             this.label167.Click += new System.EventHandler(this.label167_Click);
             // 
-            // label168
-            // 
-            this.label168.AutoSize = true;
-            this.label168.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label168.Location = new System.Drawing.Point(66, 19);
-            this.label168.Name = "label168";
-            this.label168.Size = new System.Drawing.Size(323, 30);
-            this.label168.TabIndex = 123;
-            this.label168.Text = "Ha notado que tenga interes particular por algun \r\njuguete u objeto / cuales";
-            this.label168.Click += new System.EventHandler(this.label168_Click);
-            // 
             // textBox156
             // 
             this.textBox156.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox156.Location = new System.Drawing.Point(435, 54);
+            this.textBox156.MaxLength = 149;
             this.textBox156.Multiline = true;
             this.textBox156.Name = "textBox156";
             this.textBox156.ReadOnly = true;
             this.textBox156.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox156.Size = new System.Drawing.Size(344, 60);
-            this.textBox156.TabIndex = 132;
+            this.textBox156.TabIndex = 1;
             this.textBox156.TextChanged += new System.EventHandler(this.textBox156_TextChanged);
+            this.textBox156.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox156_KeyPress);
             // 
             // label166
             // 
@@ -636,20 +641,22 @@
             // 
             this.textBox158.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox158.Location = new System.Drawing.Point(821, 52);
+            this.textBox158.MaxLength = 84;
             this.textBox158.Multiline = true;
             this.textBox158.Name = "textBox158";
             this.textBox158.ReadOnly = true;
             this.textBox158.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox158.Size = new System.Drawing.Size(344, 62);
-            this.textBox158.TabIndex = 128;
+            this.textBox158.TabIndex = 2;
             this.textBox158.TextChanged += new System.EventHandler(this.textBox158_TextChanged);
+            this.textBox158.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox158_KeyPress);
             // 
             // label165
             // 
             this.label165.AutoSize = true;
             this.label165.Enabled = false;
             this.label165.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label165.Location = new System.Drawing.Point(721, 34);
+            this.label165.Location = new System.Drawing.Point(284, 36);
             this.label165.Name = "label165";
             this.label165.Size = new System.Drawing.Size(68, 15);
             this.label165.TabIndex = 131;
@@ -660,13 +667,26 @@
             // 
             this.textBox159.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox159.Location = new System.Drawing.Point(69, 54);
+            this.textBox159.MaxLength = 79;
             this.textBox159.Multiline = true;
             this.textBox159.Name = "textBox159";
             this.textBox159.ReadOnly = true;
             this.textBox159.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox159.Size = new System.Drawing.Size(344, 60);
-            this.textBox159.TabIndex = 124;
+            this.textBox159.TabIndex = 0;
             this.textBox159.TextChanged += new System.EventHandler(this.textBox159_TextChanged);
+            this.textBox159.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox159_KeyPress);
+            // 
+            // label168
+            // 
+            this.label168.AutoSize = true;
+            this.label168.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label168.Location = new System.Drawing.Point(66, 19);
+            this.label168.Name = "label168";
+            this.label168.Size = new System.Drawing.Size(323, 30);
+            this.label168.TabIndex = 123;
+            this.label168.Text = "Ha notado que tenga interes particular por algun \r\njuguete u objeto / cuales";
+            this.label168.Click += new System.EventHandler(this.label168_Click);
             // 
             // Pest_VidaDiaria
             // 
@@ -739,28 +759,34 @@
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(687, 140);
+            this.textBox2.MaxLength = 78;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(310, 21);
-            this.textBox2.TabIndex = 188;
+            this.textBox2.TabIndex = 10;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(687, 111);
+            this.textBox1.MaxLength = 78;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(310, 21);
-            this.textBox1.TabIndex = 187;
+            this.textBox1.TabIndex = 9;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // textBox134
             // 
             this.textBox134.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox134.Location = new System.Drawing.Point(687, 83);
+            this.textBox134.MaxLength = 78;
             this.textBox134.Name = "textBox134";
             this.textBox134.ReadOnly = true;
             this.textBox134.Size = new System.Drawing.Size(310, 21);
-            this.textBox134.TabIndex = 186;
+            this.textBox134.TabIndex = 8;
+            this.textBox134.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox134_KeyPress);
             // 
             // label141
             // 
@@ -776,10 +802,12 @@
             // 
             this.textBox135.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox135.Location = new System.Drawing.Point(687, 50);
+            this.textBox135.MaxLength = 78;
             this.textBox135.Name = "textBox135";
             this.textBox135.ReadOnly = true;
             this.textBox135.Size = new System.Drawing.Size(310, 21);
-            this.textBox135.TabIndex = 184;
+            this.textBox135.TabIndex = 7;
+            this.textBox135.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox135_KeyPress);
             // 
             // label142
             // 
@@ -795,10 +823,12 @@
             // 
             this.textBox137.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox137.Location = new System.Drawing.Point(687, 12);
+            this.textBox137.MaxLength = 78;
             this.textBox137.Name = "textBox137";
             this.textBox137.ReadOnly = true;
             this.textBox137.Size = new System.Drawing.Size(310, 21);
-            this.textBox137.TabIndex = 182;
+            this.textBox137.TabIndex = 6;
+            this.textBox137.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox137_KeyPress);
             // 
             // label145
             // 
@@ -814,10 +844,12 @@
             // 
             this.textBox120.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox120.Location = new System.Drawing.Point(243, 66);
+            this.textBox120.MaxLength = 78;
             this.textBox120.Name = "textBox120";
             this.textBox120.ReadOnly = true;
             this.textBox120.Size = new System.Drawing.Size(273, 21);
-            this.textBox120.TabIndex = 180;
+            this.textBox120.TabIndex = 2;
+            this.textBox120.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox120_KeyPress);
             // 
             // label127
             // 
@@ -833,10 +865,12 @@
             // 
             this.textBox121.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox121.Location = new System.Drawing.Point(243, 39);
+            this.textBox121.MaxLength = 78;
             this.textBox121.Name = "textBox121";
             this.textBox121.ReadOnly = true;
             this.textBox121.Size = new System.Drawing.Size(273, 21);
-            this.textBox121.TabIndex = 178;
+            this.textBox121.TabIndex = 1;
+            this.textBox121.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox121_KeyPress);
             // 
             // label128
             // 
@@ -852,10 +886,12 @@
             // 
             this.textBox122.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox122.Location = new System.Drawing.Point(243, 12);
+            this.textBox122.MaxLength = 78;
             this.textBox122.Name = "textBox122";
             this.textBox122.ReadOnly = true;
             this.textBox122.Size = new System.Drawing.Size(273, 21);
-            this.textBox122.TabIndex = 176;
+            this.textBox122.TabIndex = 0;
+            this.textBox122.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox122_KeyPress);
             // 
             // label129
             // 
@@ -871,19 +907,23 @@
             // 
             this.textBox113.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox113.Location = new System.Drawing.Point(243, 93);
+            this.textBox113.MaxLength = 78;
             this.textBox113.Name = "textBox113";
             this.textBox113.ReadOnly = true;
             this.textBox113.Size = new System.Drawing.Size(273, 21);
-            this.textBox113.TabIndex = 174;
+            this.textBox113.TabIndex = 3;
+            this.textBox113.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox113_KeyPress);
             // 
             // textBox138
             // 
             this.textBox138.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox138.Location = new System.Drawing.Point(287, 226);
+            this.textBox138.MaxLength = 78;
             this.textBox138.Name = "textBox138";
             this.textBox138.ReadOnly = true;
             this.textBox138.Size = new System.Drawing.Size(227, 21);
-            this.textBox138.TabIndex = 173;
+            this.textBox138.TabIndex = 13;
+            this.textBox138.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox138_KeyPress);
             // 
             // label146
             // 
@@ -899,10 +939,12 @@
             // 
             this.textBox139.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox139.Location = new System.Drawing.Point(173, 198);
+            this.textBox139.MaxLength = 78;
             this.textBox139.Name = "textBox139";
             this.textBox139.ReadOnly = true;
             this.textBox139.Size = new System.Drawing.Size(341, 21);
-            this.textBox139.TabIndex = 171;
+            this.textBox139.TabIndex = 12;
+            this.textBox139.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox139_KeyPress);
             // 
             // label147
             // 
@@ -918,10 +960,12 @@
             // 
             this.textBox140.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox140.Location = new System.Drawing.Point(57, 170);
+            this.textBox140.MaxLength = 78;
             this.textBox140.Name = "textBox140";
             this.textBox140.ReadOnly = true;
             this.textBox140.Size = new System.Drawing.Size(457, 21);
-            this.textBox140.TabIndex = 169;
+            this.textBox140.TabIndex = 11;
+            this.textBox140.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox140_KeyPress);
             // 
             // label148
             // 
@@ -947,10 +991,12 @@
             // 
             this.textBox141.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox141.Location = new System.Drawing.Point(243, 120);
+            this.textBox141.MaxLength = 78;
             this.textBox141.Name = "textBox141";
             this.textBox141.ReadOnly = true;
             this.textBox141.Size = new System.Drawing.Size(273, 21);
-            this.textBox141.TabIndex = 166;
+            this.textBox141.TabIndex = 4;
+            this.textBox141.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox141_KeyPress);
             // 
             // label150
             // 
@@ -991,37 +1037,42 @@
             this.groupBox9.Location = new System.Drawing.Point(8, 9);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(1208, 230);
-            this.groupBox9.TabIndex = 134;
+            this.groupBox9.TabIndex = 0;
             this.groupBox9.TabStop = false;
             // 
             // textBox133
             // 
             this.textBox133.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox133.Location = new System.Drawing.Point(207, 185);
+            this.textBox133.MaxLength = 78;
             this.textBox133.Name = "textBox133";
             this.textBox133.ReadOnly = true;
             this.textBox133.Size = new System.Drawing.Size(237, 21);
-            this.textBox133.TabIndex = 54;
+            this.textBox133.TabIndex = 5;
+            this.textBox133.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox133_KeyPress);
             // 
             // textBox123
             // 
             this.textBox123.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox123.Location = new System.Drawing.Point(949, 50);
+            this.textBox123.MaxLength = 78;
             this.textBox123.Multiline = true;
             this.textBox123.Name = "textBox123";
             this.textBox123.ReadOnly = true;
             this.textBox123.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox123.Size = new System.Drawing.Size(246, 77);
-            this.textBox123.TabIndex = 100;
+            this.textBox123.TabIndex = 11;
             // 
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(207, 24);
+            this.textBox3.MaxLength = 78;
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(237, 21);
-            this.textBox3.TabIndex = 133;
+            this.textBox3.TabIndex = 0;
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // label130
             // 
@@ -1047,10 +1098,12 @@
             // 
             this.textBox124.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox124.Location = new System.Drawing.Point(715, 139);
+            this.textBox124.MaxLength = 78;
             this.textBox124.Name = "textBox124";
             this.textBox124.ReadOnly = true;
             this.textBox124.Size = new System.Drawing.Size(219, 21);
-            this.textBox124.TabIndex = 98;
+            this.textBox124.TabIndex = 10;
+            this.textBox124.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox124_KeyPress);
             // 
             // label3
             // 
@@ -1076,19 +1129,24 @@
             // 
             this.textBox131.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox131.Location = new System.Drawing.Point(207, 145);
+            this.textBox131.MaxLength = 78;
             this.textBox131.Name = "textBox131";
             this.textBox131.ReadOnly = true;
             this.textBox131.Size = new System.Drawing.Size(238, 21);
-            this.textBox131.TabIndex = 57;
+            this.textBox131.TabIndex = 4;
+            this.textBox131.TextChanged += new System.EventHandler(this.textBox131_TextChanged);
+            this.textBox131.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox131_KeyPress);
             // 
             // textBox125
             // 
             this.textBox125.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox125.Location = new System.Drawing.Point(715, 109);
+            this.textBox125.MaxLength = 78;
             this.textBox125.Name = "textBox125";
             this.textBox125.ReadOnly = true;
             this.textBox125.Size = new System.Drawing.Size(219, 21);
-            this.textBox125.TabIndex = 96;
+            this.textBox125.TabIndex = 9;
+            this.textBox125.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox125_KeyPress);
             // 
             // label139
             // 
@@ -1124,19 +1182,23 @@
             // 
             this.textBox126.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox126.Location = new System.Drawing.Point(715, 82);
+            this.textBox126.MaxLength = 78;
             this.textBox126.Name = "textBox126";
             this.textBox126.ReadOnly = true;
             this.textBox126.Size = new System.Drawing.Size(217, 21);
-            this.textBox126.TabIndex = 94;
+            this.textBox126.TabIndex = 8;
+            this.textBox126.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox126_KeyPress);
             // 
             // textBox130
             // 
             this.textBox130.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox130.Location = new System.Drawing.Point(208, 56);
+            this.textBox130.MaxLength = 78;
             this.textBox130.Name = "textBox130";
             this.textBox130.ReadOnly = true;
             this.textBox130.Size = new System.Drawing.Size(237, 21);
-            this.textBox130.TabIndex = 81;
+            this.textBox130.TabIndex = 1;
+            this.textBox130.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox130_KeyPress);
             // 
             // label133
             // 
@@ -1162,19 +1224,23 @@
             // 
             this.textBox127.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox127.Location = new System.Drawing.Point(715, 53);
+            this.textBox127.MaxLength = 78;
             this.textBox127.Name = "textBox127";
             this.textBox127.ReadOnly = true;
             this.textBox127.Size = new System.Drawing.Size(219, 21);
-            this.textBox127.TabIndex = 92;
+            this.textBox127.TabIndex = 7;
+            this.textBox127.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox127_KeyPress);
             // 
             // textBox129
             // 
             this.textBox129.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox129.Location = new System.Drawing.Point(207, 83);
+            this.textBox129.MaxLength = 78;
             this.textBox129.Name = "textBox129";
             this.textBox129.ReadOnly = true;
             this.textBox129.Size = new System.Drawing.Size(237, 21);
-            this.textBox129.TabIndex = 84;
+            this.textBox129.TabIndex = 2;
+            this.textBox129.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox129_KeyPress);
             // 
             // label134
             // 
@@ -1210,19 +1276,23 @@
             // 
             this.textBox128.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox128.Location = new System.Drawing.Point(207, 112);
+            this.textBox128.MaxLength = 78;
             this.textBox128.Name = "textBox128";
             this.textBox128.ReadOnly = true;
             this.textBox128.Size = new System.Drawing.Size(237, 21);
-            this.textBox128.TabIndex = 89;
+            this.textBox128.TabIndex = 3;
+            this.textBox128.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox128_KeyPress);
             // 
             // textBox132
             // 
             this.textBox132.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox132.Location = new System.Drawing.Point(715, 24);
+            this.textBox132.MaxLength = 78;
             this.textBox132.Name = "textBox132";
             this.textBox132.ReadOnly = true;
             this.textBox132.Size = new System.Drawing.Size(219, 21);
-            this.textBox132.TabIndex = 55;
+            this.textBox132.TabIndex = 6;
+            this.textBox132.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox132_KeyPress);
             // 
             // Pest_AcontecimientoMedico
             // 
@@ -1256,21 +1326,24 @@
             this.groupBox11.TabIndex = 92;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Como reacciona ante";
+            this.groupBox11.Enter += new System.EventHandler(this.groupBox11_Enter);
             // 
             // textBox143
             // 
             this.textBox143.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox143.Location = new System.Drawing.Point(179, 168);
+            this.textBox143.Location = new System.Drawing.Point(179, 182);
+            this.textBox143.MaxLength = 79;
             this.textBox143.Name = "textBox143";
             this.textBox143.ReadOnly = true;
             this.textBox143.Size = new System.Drawing.Size(405, 21);
-            this.textBox143.TabIndex = 124;
+            this.textBox143.TabIndex = 4;
+            this.textBox143.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox143_KeyPress);
             // 
             // label152
             // 
             this.label152.AutoSize = true;
             this.label152.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label152.Location = new System.Drawing.Point(42, 168);
+            this.label152.Location = new System.Drawing.Point(42, 182);
             this.label152.Name = "label152";
             this.label152.Size = new System.Drawing.Size(122, 30);
             this.label152.TabIndex = 123;
@@ -1279,17 +1352,19 @@
             // textBox144
             // 
             this.textBox144.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox144.Location = new System.Drawing.Point(179, 129);
+            this.textBox144.Location = new System.Drawing.Point(179, 143);
+            this.textBox144.MaxLength = 79;
             this.textBox144.Name = "textBox144";
             this.textBox144.ReadOnly = true;
             this.textBox144.Size = new System.Drawing.Size(405, 21);
-            this.textBox144.TabIndex = 122;
+            this.textBox144.TabIndex = 3;
+            this.textBox144.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox144_KeyPress);
             // 
             // label153
             // 
             this.label153.AutoSize = true;
             this.label153.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label153.Location = new System.Drawing.Point(42, 129);
+            this.label153.Location = new System.Drawing.Point(42, 143);
             this.label153.Name = "label153";
             this.label153.Size = new System.Drawing.Size(107, 30);
             this.label153.TabIndex = 121;
@@ -1299,7 +1374,7 @@
             // 
             this.label154.AutoSize = true;
             this.label154.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label154.Location = new System.Drawing.Point(42, 89);
+            this.label154.Location = new System.Drawing.Point(42, 103);
             this.label154.Name = "label154";
             this.label154.Size = new System.Drawing.Size(106, 30);
             this.label154.TabIndex = 120;
@@ -1309,7 +1384,7 @@
             // 
             this.label155.AutoSize = true;
             this.label155.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label155.Location = new System.Drawing.Point(42, 56);
+            this.label155.Location = new System.Drawing.Point(42, 70);
             this.label155.Name = "label155";
             this.label155.Size = new System.Drawing.Size(111, 15);
             this.label155.TabIndex = 119;
@@ -1318,17 +1393,19 @@
             // textBox145
             // 
             this.textBox145.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox145.Location = new System.Drawing.Point(179, 28);
+            this.textBox145.Location = new System.Drawing.Point(179, 42);
+            this.textBox145.MaxLength = 79;
             this.textBox145.Name = "textBox145";
             this.textBox145.ReadOnly = true;
             this.textBox145.Size = new System.Drawing.Size(405, 21);
-            this.textBox145.TabIndex = 118;
+            this.textBox145.TabIndex = 0;
+            this.textBox145.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox145_KeyPress);
             // 
             // label156
             // 
             this.label156.AutoSize = true;
             this.label156.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label156.Location = new System.Drawing.Point(42, 28);
+            this.label156.Location = new System.Drawing.Point(42, 42);
             this.label156.Name = "label156";
             this.label156.Size = new System.Drawing.Size(131, 15);
             this.label156.TabIndex = 117;
@@ -1337,37 +1414,43 @@
             // textBox146
             // 
             this.textBox146.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox146.Location = new System.Drawing.Point(179, 86);
+            this.textBox146.Location = new System.Drawing.Point(179, 100);
+            this.textBox146.MaxLength = 79;
             this.textBox146.Name = "textBox146";
             this.textBox146.ReadOnly = true;
             this.textBox146.Size = new System.Drawing.Size(405, 21);
-            this.textBox146.TabIndex = 116;
+            this.textBox146.TabIndex = 2;
+            this.textBox146.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox146_KeyPress);
             // 
             // textBox147
             // 
             this.textBox147.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox147.Location = new System.Drawing.Point(179, 56);
+            this.textBox147.Location = new System.Drawing.Point(179, 70);
+            this.textBox147.MaxLength = 79;
             this.textBox147.Name = "textBox147";
             this.textBox147.ReadOnly = true;
             this.textBox147.Size = new System.Drawing.Size(405, 21);
-            this.textBox147.TabIndex = 115;
+            this.textBox147.TabIndex = 1;
+            this.textBox147.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox147_KeyPress);
             // 
             // textBox142
             // 
             this.textBox142.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox142.Location = new System.Drawing.Point(617, 78);
+            this.textBox142.Location = new System.Drawing.Point(617, 92);
+            this.textBox142.MaxLength = 79;
             this.textBox142.Multiline = true;
             this.textBox142.Name = "textBox142";
             this.textBox142.ReadOnly = true;
             this.textBox142.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox142.Size = new System.Drawing.Size(612, 107);
-            this.textBox142.TabIndex = 114;
+            this.textBox142.TabIndex = 5;
+            this.textBox142.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox142_KeyPress);
             // 
             // label151
             // 
             this.label151.AutoSize = true;
             this.label151.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label151.Location = new System.Drawing.Point(614, 43);
+            this.label151.Location = new System.Drawing.Point(614, 57);
             this.label151.Name = "label151";
             this.label151.Size = new System.Drawing.Size(293, 30);
             this.label151.TabIndex = 113;
@@ -1403,20 +1486,24 @@
             // textBox119
             // 
             this.textBox119.Location = new System.Drawing.Point(45, 45);
+            this.textBox119.MaxLength = 76;
             this.textBox119.Name = "textBox119";
             this.textBox119.ReadOnly = true;
             this.textBox119.Size = new System.Drawing.Size(539, 20);
-            this.textBox119.TabIndex = 45;
+            this.textBox119.TabIndex = 0;
+            this.textBox119.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox119_KeyPress);
             // 
             // textBox116
             // 
             this.textBox116.Location = new System.Drawing.Point(48, 177);
+            this.textBox116.MaxLength = 78;
             this.textBox116.Multiline = true;
             this.textBox116.Name = "textBox116";
             this.textBox116.ReadOnly = true;
             this.textBox116.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox116.Size = new System.Drawing.Size(536, 40);
-            this.textBox116.TabIndex = 79;
+            this.textBox116.TabIndex = 3;
+            this.textBox116.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox116_KeyPress);
             // 
             // label122
             // 
@@ -1439,20 +1526,24 @@
             // textBox117
             // 
             this.textBox117.Location = new System.Drawing.Point(48, 113);
+            this.textBox117.MaxLength = 78;
             this.textBox117.Multiline = true;
             this.textBox117.Name = "textBox117";
             this.textBox117.ReadOnly = true;
             this.textBox117.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox117.Size = new System.Drawing.Size(536, 35);
-            this.textBox117.TabIndex = 77;
+            this.textBox117.TabIndex = 2;
+            this.textBox117.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox117_KeyPress);
             // 
             // textBox118
             // 
             this.textBox118.Location = new System.Drawing.Point(143, 70);
+            this.textBox118.MaxLength = 76;
             this.textBox118.Name = "textBox118";
             this.textBox118.ReadOnly = true;
             this.textBox118.Size = new System.Drawing.Size(168, 20);
-            this.textBox118.TabIndex = 49;
+            this.textBox118.TabIndex = 1;
+            this.textBox118.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox118_KeyPress);
             // 
             // label123
             // 
@@ -1528,64 +1619,78 @@
             // textBox101
             // 
             this.textBox101.Location = new System.Drawing.Point(217, 19);
+            this.textBox101.MaxLength = 44;
             this.textBox101.Name = "textBox101";
             this.textBox101.ReadOnly = true;
-            this.textBox101.Size = new System.Drawing.Size(116, 20);
-            this.textBox101.TabIndex = 78;
+            this.textBox101.Size = new System.Drawing.Size(236, 20);
+            this.textBox101.TabIndex = 0;
+            this.textBox101.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox101_KeyPress);
             // 
             // textBox102
             // 
             this.textBox102.Location = new System.Drawing.Point(397, 77);
+            this.textBox102.MaxLength = 44;
             this.textBox102.Multiline = true;
             this.textBox102.Name = "textBox102";
             this.textBox102.ReadOnly = true;
             this.textBox102.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox102.Size = new System.Drawing.Size(346, 68);
-            this.textBox102.TabIndex = 77;
+            this.textBox102.TabIndex = 4;
+            this.textBox102.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox102_KeyPress);
             // 
             // textBox103
             // 
             this.textBox103.Location = new System.Drawing.Point(779, 75);
+            this.textBox103.MaxLength = 44;
             this.textBox103.Multiline = true;
             this.textBox103.Name = "textBox103";
             this.textBox103.ReadOnly = true;
             this.textBox103.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox103.Size = new System.Drawing.Size(379, 70);
-            this.textBox103.TabIndex = 76;
+            this.textBox103.TabIndex = 5;
+            this.textBox103.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox103_KeyPress);
             // 
             // textBox105
             // 
             this.textBox105.Location = new System.Drawing.Point(33, 77);
+            this.textBox105.MaxLength = 44;
             this.textBox105.Multiline = true;
             this.textBox105.Name = "textBox105";
             this.textBox105.ReadOnly = true;
             this.textBox105.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBox105.Size = new System.Drawing.Size(347, 68);
-            this.textBox105.TabIndex = 74;
+            this.textBox105.TabIndex = 3;
+            this.textBox105.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox105_KeyPress);
             // 
             // textBox106
             // 
             this.textBox106.Location = new System.Drawing.Point(285, 208);
+            this.textBox106.MaxLength = 44;
             this.textBox106.Name = "textBox106";
             this.textBox106.ReadOnly = true;
-            this.textBox106.Size = new System.Drawing.Size(173, 20);
-            this.textBox106.TabIndex = 71;
+            this.textBox106.Size = new System.Drawing.Size(458, 20);
+            this.textBox106.TabIndex = 8;
+            this.textBox106.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox106_KeyPress);
             // 
             // textBox107
             // 
             this.textBox107.Location = new System.Drawing.Point(285, 182);
+            this.textBox107.MaxLength = 44;
             this.textBox107.Name = "textBox107";
             this.textBox107.ReadOnly = true;
-            this.textBox107.Size = new System.Drawing.Size(173, 20);
-            this.textBox107.TabIndex = 70;
+            this.textBox107.Size = new System.Drawing.Size(458, 20);
+            this.textBox107.TabIndex = 7;
+            this.textBox107.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox107_KeyPress);
             // 
             // textBox108
             // 
             this.textBox108.Location = new System.Drawing.Point(285, 156);
+            this.textBox108.MaxLength = 44;
             this.textBox108.Name = "textBox108";
             this.textBox108.ReadOnly = true;
-            this.textBox108.Size = new System.Drawing.Size(173, 20);
-            this.textBox108.TabIndex = 68;
+            this.textBox108.Size = new System.Drawing.Size(458, 20);
+            this.textBox108.TabIndex = 6;
+            this.textBox108.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox108_KeyPress);
             // 
             // label107
             // 
@@ -1607,11 +1712,13 @@
             // 
             // textBox109
             // 
-            this.textBox109.Location = new System.Drawing.Point(639, 19);
+            this.textBox109.Location = new System.Drawing.Point(887, 19);
+            this.textBox109.MaxLength = 44;
             this.textBox109.Name = "textBox109";
             this.textBox109.ReadOnly = true;
-            this.textBox109.Size = new System.Drawing.Size(100, 20);
-            this.textBox109.TabIndex = 62;
+            this.textBox109.Size = new System.Drawing.Size(271, 20);
+            this.textBox109.TabIndex = 1;
+            this.textBox109.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox109_KeyPress);
             // 
             // label109
             // 
@@ -1624,11 +1731,13 @@
             // 
             // textBox110
             // 
-            this.textBox110.Location = new System.Drawing.Point(458, 19);
+            this.textBox110.Location = new System.Drawing.Point(567, 19);
+            this.textBox110.MaxLength = 44;
             this.textBox110.Name = "textBox110";
             this.textBox110.ReadOnly = true;
-            this.textBox110.Size = new System.Drawing.Size(57, 20);
-            this.textBox110.TabIndex = 61;
+            this.textBox110.Size = new System.Drawing.Size(203, 20);
+            this.textBox110.TabIndex = 2;
+            this.textBox110.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox110_KeyPress);
             // 
             // label110
             // 
@@ -1678,7 +1787,7 @@
             // label115
             // 
             this.label115.AutoSize = true;
-            this.label115.Location = new System.Drawing.Point(350, 22);
+            this.label115.Location = new System.Drawing.Point(459, 22);
             this.label115.Name = "label115";
             this.label115.Size = new System.Drawing.Size(108, 13);
             this.label115.TabIndex = 58;
@@ -1687,7 +1796,7 @@
             // label116
             // 
             this.label116.AutoSize = true;
-            this.label116.Location = new System.Drawing.Point(528, 24);
+            this.label116.Location = new System.Drawing.Point(776, 22);
             this.label116.Name = "label116";
             this.label116.Size = new System.Drawing.Size(105, 13);
             this.label116.TabIndex = 60;
@@ -1700,7 +1809,7 @@
             this.groupBox4.Controls.Add(this.label118);
             this.groupBox4.Controls.Add(this.textBox112);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(8, 174);
+            this.groupBox4.Location = new System.Drawing.Point(8, 171);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(1172, 71);
             this.groupBox4.TabIndex = 81;
@@ -1719,10 +1828,12 @@
             // textBox111
             // 
             this.textBox111.Location = new System.Drawing.Point(386, 23);
+            this.textBox111.MaxLength = 78;
             this.textBox111.Name = "textBox111";
             this.textBox111.ReadOnly = true;
             this.textBox111.Size = new System.Drawing.Size(225, 21);
-            this.textBox111.TabIndex = 54;
+            this.textBox111.TabIndex = 0;
+            this.textBox111.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox111_KeyPress);
             // 
             // label118
             // 
@@ -1736,10 +1847,12 @@
             // textBox112
             // 
             this.textBox112.Location = new System.Drawing.Point(922, 26);
+            this.textBox112.MaxLength = 79;
             this.textBox112.Name = "textBox112";
             this.textBox112.ReadOnly = true;
             this.textBox112.Size = new System.Drawing.Size(236, 21);
-            this.textBox112.TabIndex = 56;
+            this.textBox112.TabIndex = 1;
+            this.textBox112.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox112_KeyPress);
             // 
             // groupBox7
             // 
@@ -1759,7 +1872,7 @@
             this.groupBox7.Controls.Add(this.label103);
             this.groupBox7.Controls.Add(this.textBox99);
             this.groupBox7.Controls.Add(this.label104);
-            this.groupBox7.Location = new System.Drawing.Point(8, 20);
+            this.groupBox7.Location = new System.Drawing.Point(8, 14);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(1172, 148);
             this.groupBox7.TabIndex = 80;
@@ -1781,32 +1894,38 @@
             // 
             this.PestDes_Txt_HanNotado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PestDes_Txt_HanNotado.Location = new System.Drawing.Point(817, 60);
+            this.PestDes_Txt_HanNotado.MaxLength = 44;
             this.PestDes_Txt_HanNotado.Multiline = true;
             this.PestDes_Txt_HanNotado.Name = "PestDes_Txt_HanNotado";
             this.PestDes_Txt_HanNotado.ReadOnly = true;
             this.PestDes_Txt_HanNotado.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.PestDes_Txt_HanNotado.Size = new System.Drawing.Size(341, 70);
-            this.PestDes_Txt_HanNotado.TabIndex = 78;
+            this.PestDes_Txt_HanNotado.TabIndex = 7;
+            this.PestDes_Txt_HanNotado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PestDes_Txt_HanNotado_KeyPress);
             // 
             // textBox95
             // 
             this.textBox95.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox95.Location = new System.Drawing.Point(387, 60);
+            this.textBox95.MaxLength = 44;
             this.textBox95.Name = "textBox95";
             this.textBox95.ReadOnly = true;
             this.textBox95.Size = new System.Drawing.Size(138, 21);
-            this.textBox95.TabIndex = 75;
+            this.textBox95.TabIndex = 5;
+            this.textBox95.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox95_KeyPress);
             // 
             // PestDesar_Motriz
             // 
             this.PestDesar_Motriz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PestDesar_Motriz.Location = new System.Drawing.Point(541, 60);
+            this.PestDesar_Motriz.MaxLength = 44;
             this.PestDesar_Motriz.Multiline = true;
             this.PestDesar_Motriz.Name = "PestDesar_Motriz";
             this.PestDesar_Motriz.ReadOnly = true;
             this.PestDesar_Motriz.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.PestDesar_Motriz.Size = new System.Drawing.Size(268, 70);
-            this.PestDesar_Motriz.TabIndex = 76;
+            this.PestDesar_Motriz.TabIndex = 6;
+            this.PestDesar_Motriz.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PestDesar_Motriz_KeyPress);
             // 
             // label101
             // 
@@ -1832,28 +1951,34 @@
             // 
             this.textBox96.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox96.Location = new System.Drawing.Point(175, 115);
+            this.textBox96.MaxLength = 44;
             this.textBox96.Name = "textBox96";
             this.textBox96.ReadOnly = true;
             this.textBox96.Size = new System.Drawing.Size(131, 21);
-            this.textBox96.TabIndex = 72;
+            this.textBox96.TabIndex = 3;
+            this.textBox96.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox96_KeyPress);
             // 
             // textBox98
             // 
             this.textBox98.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox98.Location = new System.Drawing.Point(387, 35);
+            this.textBox98.MaxLength = 44;
             this.textBox98.Name = "textBox98";
             this.textBox98.ReadOnly = true;
             this.textBox98.Size = new System.Drawing.Size(138, 21);
-            this.textBox98.TabIndex = 69;
+            this.textBox98.TabIndex = 4;
+            this.textBox98.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox98_KeyPress);
             // 
             // textBox97
             // 
             this.textBox97.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox97.Location = new System.Drawing.Point(175, 64);
+            this.textBox97.MaxLength = 44;
             this.textBox97.Name = "textBox97";
             this.textBox97.ReadOnly = true;
             this.textBox97.Size = new System.Drawing.Size(131, 21);
-            this.textBox97.TabIndex = 71;
+            this.textBox97.TabIndex = 1;
+            this.textBox97.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox97_KeyPress);
             // 
             // label106
             // 
@@ -1879,10 +2004,12 @@
             // 
             this.textBox100.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox100.Location = new System.Drawing.Point(175, 38);
+            this.textBox100.MaxLength = 44;
             this.textBox100.Name = "textBox100";
             this.textBox100.ReadOnly = true;
             this.textBox100.Size = new System.Drawing.Size(131, 21);
-            this.textBox100.TabIndex = 64;
+            this.textBox100.TabIndex = 0;
+            this.textBox100.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox100_KeyPress);
             // 
             // label105
             // 
@@ -1908,10 +2035,12 @@
             // 
             this.textBox99.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox99.Location = new System.Drawing.Point(175, 89);
+            this.textBox99.MaxLength = 44;
             this.textBox99.Name = "textBox99";
             this.textBox99.ReadOnly = true;
             this.textBox99.Size = new System.Drawing.Size(131, 21);
-            this.textBox99.TabIndex = 66;
+            this.textBox99.TabIndex = 2;
+            this.textBox99.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox99_KeyPress);
             // 
             // label104
             // 
@@ -1962,21 +2091,25 @@
             // 
             this.PestAnam_Txt_DatosPostnatales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PestAnam_Txt_DatosPostnatales.Location = new System.Drawing.Point(691, 107);
+            this.PestAnam_Txt_DatosPostnatales.MaxLength = 240;
             this.PestAnam_Txt_DatosPostnatales.Multiline = true;
             this.PestAnam_Txt_DatosPostnatales.Name = "PestAnam_Txt_DatosPostnatales";
             this.PestAnam_Txt_DatosPostnatales.ReadOnly = true;
             this.PestAnam_Txt_DatosPostnatales.Size = new System.Drawing.Size(274, 65);
-            this.PestAnam_Txt_DatosPostnatales.TabIndex = 53;
+            this.PestAnam_Txt_DatosPostnatales.TabIndex = 5;
+            this.PestAnam_Txt_DatosPostnatales.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PestAnam_Txt_DatosPostnatales_KeyPress);
             // 
             // PestAnam_Txt_DatosPerinatales
             // 
             this.PestAnam_Txt_DatosPerinatales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PestAnam_Txt_DatosPerinatales.Location = new System.Drawing.Point(692, 36);
+            this.PestAnam_Txt_DatosPerinatales.MaxLength = 240;
             this.PestAnam_Txt_DatosPerinatales.Multiline = true;
             this.PestAnam_Txt_DatosPerinatales.Name = "PestAnam_Txt_DatosPerinatales";
             this.PestAnam_Txt_DatosPerinatales.ReadOnly = true;
             this.PestAnam_Txt_DatosPerinatales.Size = new System.Drawing.Size(274, 65);
-            this.PestAnam_Txt_DatosPerinatales.TabIndex = 52;
+            this.PestAnam_Txt_DatosPerinatales.TabIndex = 4;
+            this.PestAnam_Txt_DatosPerinatales.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PestAnam_Txt_DatosPerinatales_KeyPress);
             // 
             // label94
             // 
@@ -1992,11 +2125,13 @@
             // 
             this.PestAnam_Txt_DatosPrenatales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PestAnam_Txt_DatosPrenatales.Location = new System.Drawing.Point(248, 107);
+            this.PestAnam_Txt_DatosPrenatales.MaxLength = 240;
             this.PestAnam_Txt_DatosPrenatales.Multiline = true;
             this.PestAnam_Txt_DatosPrenatales.Name = "PestAnam_Txt_DatosPrenatales";
             this.PestAnam_Txt_DatosPrenatales.ReadOnly = true;
             this.PestAnam_Txt_DatosPrenatales.Size = new System.Drawing.Size(298, 65);
-            this.PestAnam_Txt_DatosPrenatales.TabIndex = 50;
+            this.PestAnam_Txt_DatosPrenatales.TabIndex = 3;
+            this.PestAnam_Txt_DatosPrenatales.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PestAnam_Txt_DatosPrenatales_KeyPress);
             // 
             // label95
             // 
@@ -2022,10 +2157,12 @@
             // 
             this.PestA_Txt_PesAlNacer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PestA_Txt_PesAlNacer.Location = new System.Drawing.Point(251, 51);
+            this.PestA_Txt_PesAlNacer.MaxLength = 240;
             this.PestA_Txt_PesAlNacer.Name = "PestA_Txt_PesAlNacer";
             this.PestA_Txt_PesAlNacer.ReadOnly = true;
             this.PestA_Txt_PesAlNacer.Size = new System.Drawing.Size(295, 22);
-            this.PestA_Txt_PesAlNacer.TabIndex = 42;
+            this.PestA_Txt_PesAlNacer.TabIndex = 1;
+            this.PestA_Txt_PesAlNacer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PestA_Txt_PesAlNacer_KeyPress);
             // 
             // label93
             // 
@@ -2041,10 +2178,12 @@
             // 
             this.PestAnam_Txt_DuracionGestacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PestAnam_Txt_DuracionGestacion.Location = new System.Drawing.Point(251, 79);
+            this.PestAnam_Txt_DuracionGestacion.MaxLength = 240;
             this.PestAnam_Txt_DuracionGestacion.Name = "PestAnam_Txt_DuracionGestacion";
             this.PestAnam_Txt_DuracionGestacion.ReadOnly = true;
             this.PestAnam_Txt_DuracionGestacion.Size = new System.Drawing.Size(295, 22);
-            this.PestAnam_Txt_DuracionGestacion.TabIndex = 46;
+            this.PestAnam_Txt_DuracionGestacion.TabIndex = 2;
+            this.PestAnam_Txt_DuracionGestacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PestAnam_Txt_DuracionGestacion_KeyPress);
             // 
             // label97
             // 
@@ -2060,10 +2199,12 @@
             // 
             this.PestAnam_Txt_TipoFamilia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PestAnam_Txt_TipoFamilia.Location = new System.Drawing.Point(251, 23);
+            this.PestAnam_Txt_TipoFamilia.MaxLength = 240;
             this.PestAnam_Txt_TipoFamilia.Name = "PestAnam_Txt_TipoFamilia";
             this.PestAnam_Txt_TipoFamilia.ReadOnly = true;
             this.PestAnam_Txt_TipoFamilia.Size = new System.Drawing.Size(295, 22);
-            this.PestAnam_Txt_TipoFamilia.TabIndex = 44;
+            this.PestAnam_Txt_TipoFamilia.TabIndex = 0;
+            this.PestAnam_Txt_TipoFamilia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PestAnam_Txt_TipoFamilia_KeyPress);
             // 
             // label98
             // 
@@ -2136,11 +2277,13 @@
             // 
             this.PestDatosGen_Txt_Fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PestDatosGen_Txt_Fecha.Location = new System.Drawing.Point(1018, 92);
+            this.PestDatosGen_Txt_Fecha.MaxLength = 40;
             this.PestDatosGen_Txt_Fecha.Name = "PestDatosGen_Txt_Fecha";
             this.PestDatosGen_Txt_Fecha.ReadOnly = true;
             this.PestDatosGen_Txt_Fecha.Size = new System.Drawing.Size(196, 22);
-            this.PestDatosGen_Txt_Fecha.TabIndex = 24;
+            this.PestDatosGen_Txt_Fecha.TabIndex = 5;
             this.PestDatosGen_Txt_Fecha.TextChanged += new System.EventHandler(this.PestDatosGen_Txt_Fecha_TextChanged);
+            this.PestDatosGen_Txt_Fecha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PestDatosGen_Txt_Fecha_KeyPress);
             // 
             // label91
             // 
@@ -2176,11 +2319,13 @@
             // 
             this.PestDatosGen_Txt_Lugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PestDatosGen_Txt_Lugar.Location = new System.Drawing.Point(1018, 64);
+            this.PestDatosGen_Txt_Lugar.MaxLength = 40;
             this.PestDatosGen_Txt_Lugar.Name = "PestDatosGen_Txt_Lugar";
             this.PestDatosGen_Txt_Lugar.ReadOnly = true;
             this.PestDatosGen_Txt_Lugar.Size = new System.Drawing.Size(196, 22);
-            this.PestDatosGen_Txt_Lugar.TabIndex = 22;
+            this.PestDatosGen_Txt_Lugar.TabIndex = 4;
             this.PestDatosGen_Txt_Lugar.TextChanged += new System.EventHandler(this.PestDatosGen_Txt_Lugar_TextChanged);
+            this.PestDatosGen_Txt_Lugar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PestDatosGen_Txt_Lugar_KeyPress);
             // 
             // label90
             // 
@@ -2217,11 +2362,13 @@
             // 
             this.PestDatosGen_Txt_RefiridoPor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PestDatosGen_Txt_RefiridoPor.Location = new System.Drawing.Point(1018, 36);
+            this.PestDatosGen_Txt_RefiridoPor.MaxLength = 40;
             this.PestDatosGen_Txt_RefiridoPor.Name = "PestDatosGen_Txt_RefiridoPor";
             this.PestDatosGen_Txt_RefiridoPor.ReadOnly = true;
             this.PestDatosGen_Txt_RefiridoPor.Size = new System.Drawing.Size(196, 22);
-            this.PestDatosGen_Txt_RefiridoPor.TabIndex = 15;
+            this.PestDatosGen_Txt_RefiridoPor.TabIndex = 3;
             this.PestDatosGen_Txt_RefiridoPor.TextChanged += new System.EventHandler(this.PestDatosGen_Txt_RefiridoPor_TextChanged);
+            this.PestDatosGen_Txt_RefiridoPor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PestDatosGen_Txt_RefiridoPor_KeyPress);
             // 
             // PestDatosGen_Txt_Responsables
             // 
@@ -2251,18 +2398,21 @@
             this.PestDatosGen_Txt_Escolaridad.Name = "PestDatosGen_Txt_Escolaridad";
             this.PestDatosGen_Txt_Escolaridad.ReadOnly = true;
             this.PestDatosGen_Txt_Escolaridad.Size = new System.Drawing.Size(196, 22);
-            this.PestDatosGen_Txt_Escolaridad.TabIndex = 9;
+            this.PestDatosGen_Txt_Escolaridad.TabIndex = 0;
             this.PestDatosGen_Txt_Escolaridad.TextChanged += new System.EventHandler(this.PestDatosGen_Txt_Escolaridad_TextChanged);
+            this.PestDatosGen_Txt_Escolaridad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PestDatosGen_Txt_Escolaridad_KeyPress);
             // 
             // PestDatosGen_Txt_Telefono
             // 
             this.PestDatosGen_Txt_Telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PestDatosGen_Txt_Telefono.Location = new System.Drawing.Point(691, 92);
+            this.PestDatosGen_Txt_Telefono.MaxLength = 12;
             this.PestDatosGen_Txt_Telefono.Name = "PestDatosGen_Txt_Telefono";
             this.PestDatosGen_Txt_Telefono.ReadOnly = true;
             this.PestDatosGen_Txt_Telefono.Size = new System.Drawing.Size(196, 22);
-            this.PestDatosGen_Txt_Telefono.TabIndex = 13;
+            this.PestDatosGen_Txt_Telefono.TabIndex = 2;
             this.PestDatosGen_Txt_Telefono.TextChanged += new System.EventHandler(this.PestDatosGen_Txt_Telefono_TextChanged);
+            this.PestDatosGen_Txt_Telefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PestDatosGen_Txt_Telefono_KeyPress);
             // 
             // label83
             // 
@@ -2301,11 +2451,13 @@
             // 
             this.PestDatosGen_Txt_Direccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PestDatosGen_Txt_Direccion.Location = new System.Drawing.Point(691, 64);
+            this.PestDatosGen_Txt_Direccion.MaxLength = 240;
             this.PestDatosGen_Txt_Direccion.Name = "PestDatosGen_Txt_Direccion";
             this.PestDatosGen_Txt_Direccion.ReadOnly = true;
             this.PestDatosGen_Txt_Direccion.Size = new System.Drawing.Size(196, 22);
-            this.PestDatosGen_Txt_Direccion.TabIndex = 11;
+            this.PestDatosGen_Txt_Direccion.TabIndex = 1;
             this.PestDatosGen_Txt_Direccion.TextChanged += new System.EventHandler(this.PestDatosGen_Txt_Direccion_TextChanged);
+            this.PestDatosGen_Txt_Direccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PestDatosGen_Txt_Direccion_KeyPress);
             // 
             // PestDatosGen_Bttn_BusquedaAlumno
             // 
@@ -2340,11 +2492,54 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(53, 673);
+            this.label4.Location = new System.Drawing.Point(50, 671);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 15);
             this.label4.TabIndex = 0;
             this.label4.Text = "Salir";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 544);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1276, 147);
+            this.panel1.TabIndex = 138;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(1113, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(163, 147);
+            this.panel2.TabIndex = 141;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(60, 127);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 15);
+            this.label6.TabIndex = 139;
+            this.label6.Text = "Guardar";
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
+            this.button2.Location = new System.Drawing.Point(25, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(130, 122);
+            this.button2.TabIndex = 140;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // VistaEntrevistaPadres
             // 
@@ -2356,6 +2551,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.TapEntrevistaVista);
             this.Controls.Add(this.button26);
+            this.Controls.Add(this.panel1);
             this.Name = "VistaEntrevistaPadres";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -2392,6 +2588,9 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.TapEntrevistaVista.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2592,5 +2791,9 @@
         private System.Windows.Forms.Label label162;
         private System.Windows.Forms.Label label164;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button2;
     }
 }

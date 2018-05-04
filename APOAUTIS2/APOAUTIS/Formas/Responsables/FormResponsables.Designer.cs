@@ -109,6 +109,7 @@
             // txtBusqResp
             // 
             this.txtBusqResp.Location = new System.Drawing.Point(174, 35);
+            this.txtBusqResp.MaxLength = 40;
             this.txtBusqResp.Name = "txtBusqResp";
             this.txtBusqResp.Size = new System.Drawing.Size(365, 20);
             this.txtBusqResp.TabIndex = 30;
@@ -135,6 +136,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DGV_ShowResponsables.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGV_ShowResponsables.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.DGV_ShowResponsables.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
             this.DGV_ShowResponsables.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DGV_ShowResponsables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_ShowResponsables.Location = new System.Drawing.Point(21, 75);
@@ -181,8 +183,9 @@
             this.DGV_ShowAlumnosResp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DGV_ShowAlumnosResp.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DGV_ShowAlumnosResp.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.DGV_ShowAlumnosResp.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.DGV_ShowAlumnosResp.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
             this.DGV_ShowAlumnosResp.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DGV_ShowAlumnosResp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_ShowAlumnosResp.Location = new System.Drawing.Point(29, 24);
@@ -258,7 +261,7 @@
             this.txtCorrResp.MaxLength = 45;
             this.txtCorrResp.Name = "txtCorrResp";
             this.txtCorrResp.Size = new System.Drawing.Size(158, 22);
-            this.txtCorrResp.TabIndex = 30;
+            this.txtCorrResp.TabIndex = 5;
             this.txtCorrResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorrResp_KeyPress_1);
             // 
             // label12
@@ -282,7 +285,7 @@
             this.cmbEstResp.Location = new System.Drawing.Point(539, 54);
             this.cmbEstResp.Name = "cmbEstResp";
             this.cmbEstResp.Size = new System.Drawing.Size(193, 24);
-            this.cmbEstResp.TabIndex = 28;
+            this.cmbEstResp.TabIndex = 7;
             // 
             // cmbTrabResp
             // 
@@ -295,7 +298,7 @@
             this.cmbTrabResp.Location = new System.Drawing.Point(539, 28);
             this.cmbTrabResp.Name = "cmbTrabResp";
             this.cmbTrabResp.Size = new System.Drawing.Size(101, 24);
-            this.cmbTrabResp.TabIndex = 27;
+            this.cmbTrabResp.TabIndex = 6;
             this.cmbTrabResp.SelectedIndexChanged += new System.EventHandler(this.cmbTrabResp_SelectedIndexChanged_1);
             // 
             // btnLimpiar
@@ -308,7 +311,7 @@
             this.btnLimpiar.Location = new System.Drawing.Point(860, 28);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(99, 96);
-            this.btnLimpiar.TabIndex = 24;
+            this.btnLimpiar.TabIndex = 13;
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click_1);
             // 
@@ -322,7 +325,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(755, 28);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(99, 96);
-            this.btnAceptar.TabIndex = 5;
+            this.btnAceptar.TabIndex = 12;
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
@@ -340,10 +343,10 @@
             // 
             this.txtTelTrabResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelTrabResp.Location = new System.Drawing.Point(539, 167);
-            this.txtTelTrabResp.MaxLength = 11;
+            this.txtTelTrabResp.MaxLength = 14;
             this.txtTelTrabResp.Name = "txtTelTrabResp";
             this.txtTelTrabResp.Size = new System.Drawing.Size(193, 22);
-            this.txtTelTrabResp.TabIndex = 21;
+            this.txtTelTrabResp.TabIndex = 11;
             this.txtTelTrabResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelTrabResp_KeyPress_1);
             // 
             // label8
@@ -360,10 +363,10 @@
             // 
             this.txtTelCelResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelCelResp.Location = new System.Drawing.Point(539, 139);
-            this.txtTelCelResp.MaxLength = 11;
+            this.txtTelCelResp.MaxLength = 14;
             this.txtTelCelResp.Name = "txtTelCelResp";
             this.txtTelCelResp.Size = new System.Drawing.Size(193, 22);
-            this.txtTelCelResp.TabIndex = 19;
+            this.txtTelCelResp.TabIndex = 10;
             this.txtTelCelResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelCelResp_KeyPress_1);
             // 
             // label9
@@ -383,7 +386,7 @@
             this.txtDomResp.MaxLength = 45;
             this.txtDomResp.Name = "txtDomResp";
             this.txtDomResp.Size = new System.Drawing.Size(158, 22);
-            this.txtDomResp.TabIndex = 17;
+            this.txtDomResp.TabIndex = 3;
             this.txtDomResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDomResp_KeyPress_1);
             // 
             // label10
@@ -400,10 +403,10 @@
             // 
             this.txtProfResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProfResp.Location = new System.Drawing.Point(189, 137);
-            this.txtProfResp.MaxLength = 45;
+            this.txtProfResp.MaxLength = 99;
             this.txtProfResp.Name = "txtProfResp";
             this.txtProfResp.Size = new System.Drawing.Size(158, 22);
-            this.txtProfResp.TabIndex = 15;
+            this.txtProfResp.TabIndex = 4;
             this.txtProfResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProfResp_KeyPress_1);
             // 
             // label11
@@ -420,10 +423,10 @@
             // 
             this.txtTelCasResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelCasResp.Location = new System.Drawing.Point(539, 111);
-            this.txtTelCasResp.MaxLength = 11;
+            this.txtTelCasResp.MaxLength = 13;
             this.txtTelCasResp.Name = "txtTelCasResp";
             this.txtTelCasResp.Size = new System.Drawing.Size(193, 22);
-            this.txtTelCasResp.TabIndex = 11;
+            this.txtTelCasResp.TabIndex = 9;
             this.txtTelCasResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelCasResp_KeyPress_1);
             // 
             // label6
@@ -443,7 +446,7 @@
             this.txtLugResp.MaxLength = 45;
             this.txtLugResp.Name = "txtLugResp";
             this.txtLugResp.Size = new System.Drawing.Size(193, 22);
-            this.txtLugResp.TabIndex = 9;
+            this.txtLugResp.TabIndex = 8;
             this.txtLugResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLugResp_KeyPress_1);
             // 
             // label5
@@ -468,13 +471,13 @@
             // 
             // txtNomResp
             // 
-            this.txtNomResp.Enabled = false;
             this.txtNomResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomResp.Location = new System.Drawing.Point(189, 57);
             this.txtNomResp.MaxLength = 45;
             this.txtNomResp.Name = "txtNomResp";
             this.txtNomResp.Size = new System.Drawing.Size(158, 22);
-            this.txtNomResp.TabIndex = 5;
+            this.txtNomResp.TabIndex = 1;
+            this.txtNomResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNomResp_KeyPress);
             // 
             // label3
             // 
@@ -488,13 +491,13 @@
             // 
             // txtIdResp
             // 
-            this.txtIdResp.Enabled = false;
             this.txtIdResp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdResp.Location = new System.Drawing.Point(189, 83);
             this.txtIdResp.MaxLength = 13;
             this.txtIdResp.Name = "txtIdResp";
             this.txtIdResp.Size = new System.Drawing.Size(158, 22);
-            this.txtIdResp.TabIndex = 3;
+            this.txtIdResp.TabIndex = 2;
+            this.txtIdResp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdResp_KeyPress);
             // 
             // label2
             // 
@@ -514,7 +517,7 @@
             this.txtCodResp.MaxLength = 10;
             this.txtCodResp.Name = "txtCodResp";
             this.txtCodResp.Size = new System.Drawing.Size(98, 22);
-            this.txtCodResp.TabIndex = 1;
+            this.txtCodResp.TabIndex = 0;
             // 
             // label1
             // 

@@ -12,7 +12,7 @@ namespace APOAUTIS.Clases
         private int codAlumno;
         private int codResp;
         private string nombResp;
-        private int idResp;
+        private string idResp;
         private string domicilioResp;
         private string ProfesionResp;
         private string oficioREsp;
@@ -23,7 +23,7 @@ namespace APOAUTIS.Clases
         private string correoResp;
         private int tipoRes;
 
-        public C_responsablesMadre(int codAlumno,int codResp, string nombResp, int idResp, string domicilioResp, string profesionResp1, string oficioREsp, string lugarTrabRes, string telefonoCasaResp, string celResp, string trabajoResp, string correoResp, int tipoRes)
+        public C_responsablesMadre(int codAlumno,int codResp, string nombResp, string idResp, string domicilioResp, string profesionResp1, string oficioREsp, string lugarTrabRes, string telefonoCasaResp, string celResp, string trabajoResp, string correoResp, int tipoRes)
         {
             CodAlumno = codAlumno;
             CodResp = codResp;
@@ -72,7 +72,7 @@ namespace APOAUTIS.Clases
             }
         }
 
-        public int IdResp
+        public string IdResp
         {
             get
             {

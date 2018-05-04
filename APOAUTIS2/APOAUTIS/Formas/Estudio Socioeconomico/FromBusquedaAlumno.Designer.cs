@@ -61,6 +61,7 @@
             // 
             this.Txt_FiltroAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_FiltroAlumno.Location = new System.Drawing.Point(189, 36);
+            this.Txt_FiltroAlumno.MaxLength = 40;
             this.Txt_FiltroAlumno.Name = "Txt_FiltroAlumno";
             this.Txt_FiltroAlumno.Size = new System.Drawing.Size(431, 24);
             this.Txt_FiltroAlumno.TabIndex = 10;
@@ -78,6 +79,8 @@
             // 
             // DGV_Show
             // 
+            this.DGV_Show.AllowUserToAddRows = false;
+            this.DGV_Show.AllowUserToDeleteRows = false;
             this.DGV_Show.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -85,6 +88,7 @@
             this.DGV_Show.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Show.Location = new System.Drawing.Point(14, 95);
             this.DGV_Show.Name = "DGV_Show";
+            this.DGV_Show.ReadOnly = true;
             this.DGV_Show.Size = new System.Drawing.Size(758, 287);
             this.DGV_Show.TabIndex = 8;
             this.DGV_Show.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Show_CellContentClick);

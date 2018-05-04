@@ -15,7 +15,7 @@ namespace APOAUTIS.Clases
     {
         private int codResp;
         private string nomResp;
-        //private string idResp;
+        private string idResp;
         private string domResp;
         private string profResp;
         private int edadResp;
@@ -31,7 +31,7 @@ namespace APOAUTIS.Clases
         private static int abrir;
 
 
-        private int idResp;
+        //private int idResp;
         /*
 
     public int IdResp
@@ -205,7 +205,7 @@ namespace APOAUTIS.Clases
             }
         }
 
-        public int IdResp
+        public string IdResp
         {
             get
             {

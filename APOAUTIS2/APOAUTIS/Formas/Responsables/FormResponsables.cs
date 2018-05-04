@@ -25,6 +25,19 @@ namespace APOAUTIS.Formas.Responsables
             cResp.cargarTodosResp(DGV_ShowResponsables);
             cmbTrabResp.SelectedIndex = 0;
             cmbEstResp.SelectedIndex = 0;
+
+
+
+            var blankContextMenu = new ContextMenuStrip();
+
+            var boxes = Pest1_Grupo_DatosEncargado.Controls.OfType<TextBox>();
+            foreach (var box in boxes)
+            {
+                box.ContextMenuStrip = blankContextMenu;
+
+            }
+
+            txtBusqResp.ContextMenuStrip = blankContextMenu;
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -163,7 +176,7 @@ namespace APOAUTIS.Formas.Responsables
                         cResp.TelCasResp = txtTelCasResp.Text;
                         cResp.TelCelResp = txtTelCelResp.Text;
                         cResp.TelTrabResp = txtTelTrabResp.Text;
-                        cResp.IdResp = Convert.ToInt32(txtIdResp.Text);
+                        cResp.IdResp = (txtIdResp.Text);
                         cResp.LugTrab = cmbTrabResp.SelectedItem.ToString() + ", " + txtLugResp.Text;
                         cResp.ProfResp = txtProfResp.Text;
                         cResp.CorrResp = txtCorrResp.Text;
@@ -172,6 +185,7 @@ namespace APOAUTIS.Formas.Responsables
                         { cResp.EstResp = 7; }
                         else { cResp.EstResp = 6; }
 
+                       
                         cResp.updateResp();
                         cResp.cargarTodosResp(DGV_ShowResponsables);
 
@@ -209,7 +223,7 @@ namespace APOAUTIS.Formas.Responsables
                             cResp.TelCasResp = txtTelCasResp.Text;
                             cResp.TelCelResp = txtTelCelResp.Text;
                             cResp.TelTrabResp = txtTelTrabResp.Text;
-                            cResp.IdResp = Convert.ToInt32(txtIdResp.Text);
+                            cResp.IdResp = txtIdResp.Text;
                             cResp.ProfResp = txtProfResp.Text;
                             cResp.CorrResp = txtCorrResp.Text;
 
@@ -219,6 +233,7 @@ namespace APOAUTIS.Formas.Responsables
                             { cResp.EstResp = 7; }
                             else { cResp.EstResp = 6; }
 
+                   
                             cResp.updateResp();
                             cResp.cargarTodosResp(DGV_ShowResponsables);
 
@@ -267,6 +282,16 @@ namespace APOAUTIS.Formas.Responsables
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtNomResp_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValidarNombres_SoloLetras(sender, e);
+        }
+
+        private void txtIdResp_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Val.ValidarID(sender, e);
         }
     }
 }

@@ -22,10 +22,16 @@ namespace APOAUTIS.Formas.Matricula
         }
 
         private void Form_BusqAlumMat_Load(object sender, EventArgs e)
-        {
-            Show.Fun_MuestraDatosGen(dataGridView1);
-            var blankContextMenu = new ContextMenuStrip();
-            textBox1.ContextMenuStrip = blankContextMenu;
+        {try
+            {
+                Show.Fun_MuestraDatosGen(dataGridView1);
+                var blankContextMenu = new ContextMenuStrip();
+                textBox1.ContextMenuStrip = blankContextMenu;
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -35,14 +41,21 @@ namespace APOAUTIS.Formas.Matricula
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox1.Text))
+            try
             {
-                Show.Fun_MuestraDatosGen(dataGridView1);
+                if (string.IsNullOrEmpty(textBox1.Text))
+                {
+                    Show.Fun_MuestraDatosGen(dataGridView1);
+                }
+                else
+                {
+                    Show.Var_nom_cliente = textBox1.Text;
+                    Show.Fun_MuestraDatosPorAlum(dataGridView1);
+                }
             }
-            else
+            catch (Exception)
             {
-                Show.Var_nom_cliente = textBox1.Text;
-                Show.Fun_MuestraDatosPorAlum(dataGridView1);
+
             }
         }
 

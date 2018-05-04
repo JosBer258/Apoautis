@@ -266,6 +266,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label92 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tabEntPadres.SuspendLayout();
             this.Pest_DatosGenerales.SuspendLayout();
             this.Grupo_Anamnesis.SuspendLayout();
@@ -287,10 +288,14 @@
             this.Pest_VidaDiaria.SuspendLayout();
             this.Grupo_DatosIdentificables.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabEntPadres
             // 
+            this.tabEntPadres.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabEntPadres.Controls.Add(this.Pest_DatosGenerales);
             this.tabEntPadres.Controls.Add(this.Pest_Amnesis);
             this.tabEntPadres.Controls.Add(this.Pest_Desarrollo_Motriz);
@@ -340,12 +345,13 @@
             this.Grupo_Anamnesis.TabIndex = 1;
             this.Grupo_Anamnesis.TabStop = false;
             this.Grupo_Anamnesis.Text = "Anamnesis";
+            this.Grupo_Anamnesis.Enter += new System.EventHandler(this.Grupo_Anamnesis_Enter);
             // 
             // txtdatospostnatales
             // 
             this.txtdatospostnatales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdatospostnatales.Location = new System.Drawing.Point(171, 247);
-            this.txtdatospostnatales.MaxLength = 44;
+            this.txtdatospostnatales.MaxLength = 248;
             this.txtdatospostnatales.Multiline = true;
             this.txtdatospostnatales.Name = "txtdatospostnatales";
             this.txtdatospostnatales.Size = new System.Drawing.Size(297, 52);
@@ -356,7 +362,7 @@
             // 
             this.txtdatosperinatales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdatosperinatales.Location = new System.Drawing.Point(170, 178);
-            this.txtdatosperinatales.MaxLength = 44;
+            this.txtdatosperinatales.MaxLength = 248;
             this.txtdatosperinatales.Multiline = true;
             this.txtdatosperinatales.Name = "txtdatosperinatales";
             this.txtdatosperinatales.Size = new System.Drawing.Size(297, 60);
@@ -397,7 +403,7 @@
             // 
             this.txtdatosprenatales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdatosprenatales.Location = new System.Drawing.Point(170, 118);
-            this.txtdatosprenatales.MaxLength = 44;
+            this.txtdatosprenatales.MaxLength = 248;
             this.txtdatosprenatales.Multiline = true;
             this.txtdatosprenatales.Name = "txtdatosprenatales";
             this.txtdatosprenatales.Size = new System.Drawing.Size(298, 47);
@@ -407,10 +413,10 @@
             // txtpesonacer
             // 
             this.txtpesonacer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpesonacer.Location = new System.Drawing.Point(170, 54);
-            this.txtpesonacer.MaxLength = 44;
+            this.txtpesonacer.Location = new System.Drawing.Point(170, 55);
+            this.txtpesonacer.MaxLength = 248;
             this.txtpesonacer.Name = "txtpesonacer";
-            this.txtpesonacer.Size = new System.Drawing.Size(177, 22);
+            this.txtpesonacer.Size = new System.Drawing.Size(206, 22);
             this.txtpesonacer.TabIndex = 1;
             this.txtpesonacer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpesonacer_KeyPress);
             // 
@@ -427,10 +433,10 @@
             // txtduraciongestacion
             // 
             this.txtduraciongestacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtduraciongestacion.Location = new System.Drawing.Point(171, 80);
-            this.txtduraciongestacion.MaxLength = 44;
+            this.txtduraciongestacion.Location = new System.Drawing.Point(171, 82);
+            this.txtduraciongestacion.MaxLength = 248;
             this.txtduraciongestacion.Name = "txtduraciongestacion";
-            this.txtduraciongestacion.Size = new System.Drawing.Size(177, 22);
+            this.txtduraciongestacion.Size = new System.Drawing.Size(206, 22);
             this.txtduraciongestacion.TabIndex = 2;
             this.txtduraciongestacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtduraciongestacion_KeyPress);
             // 
@@ -448,9 +454,9 @@
             // 
             this.txttipofamilia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttipofamilia.Location = new System.Drawing.Point(170, 28);
-            this.txttipofamilia.MaxLength = 44;
+            this.txttipofamilia.MaxLength = 248;
             this.txttipofamilia.Name = "txttipofamilia";
-            this.txttipofamilia.Size = new System.Drawing.Size(177, 22);
+            this.txttipofamilia.Size = new System.Drawing.Size(206, 22);
             this.txttipofamilia.TabIndex = 0;
             this.txttipofamilia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttipofamilia_KeyPress);
             // 
@@ -642,6 +648,7 @@
             // 
             this.txtdireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdireccion.Location = new System.Drawing.Point(210, 146);
+            this.txtdireccion.MaxLength = 240;
             this.txtdireccion.Name = "txtdireccion";
             this.txtdireccion.Size = new System.Drawing.Size(221, 22);
             this.txtdireccion.TabIndex = 4;
@@ -651,6 +658,7 @@
             // 
             this.txttelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttelefono.Location = new System.Drawing.Point(210, 178);
+            this.txttelefono.MaxLength = 12;
             this.txttelefono.Name = "txttelefono";
             this.txttelefono.Size = new System.Drawing.Size(221, 22);
             this.txttelefono.TabIndex = 5;
@@ -684,6 +692,7 @@
             this.dtgalumnos.AllowUserToAddRows = false;
             this.dtgalumnos.AllowUserToDeleteRows = false;
             this.dtgalumnos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgalumnos.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
             this.dtgalumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgalumnos.Location = new System.Drawing.Point(25, 67);
             this.dtgalumnos.Name = "dtgalumnos";
@@ -696,9 +705,9 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(264, 39);
+            this.textBox1.Location = new System.Drawing.Point(221, 34);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(284, 22);
+            this.textBox1.Size = new System.Drawing.Size(327, 22);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
@@ -707,7 +716,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(25, 42);
+            this.label1.Location = new System.Drawing.Point(25, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(190, 16);
             this.label1.TabIndex = 0;
@@ -921,7 +930,7 @@
             // txtsonido_voca
             // 
             this.txtsonido_voca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsonido_voca.Location = new System.Drawing.Point(457, 33);
+            this.txtsonido_voca.Location = new System.Drawing.Point(457, 31);
             this.txtsonido_voca.MaxLength = 44;
             this.txtsonido_voca.Name = "txtsonido_voca";
             this.txtsonido_voca.Size = new System.Drawing.Size(57, 22);
@@ -982,7 +991,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(376, 33);
+            this.label17.Location = new System.Drawing.Point(376, 31);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(75, 32);
             this.label17.TabIndex = 58;
@@ -1026,7 +1035,7 @@
             // 
             this.txtbuscainter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbuscainter.Location = new System.Drawing.Point(418, 23);
-            this.txtbuscainter.MaxLength = 44;
+            this.txtbuscainter.MaxLength = 78;
             this.txtbuscainter.Name = "txtbuscainter";
             this.txtbuscainter.Size = new System.Drawing.Size(207, 22);
             this.txtbuscainter.TabIndex = 0;
@@ -1046,7 +1055,7 @@
             // 
             this.txtactivi_grupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtactivi_grupo.Location = new System.Drawing.Point(418, 49);
-            this.txtactivi_grupo.MaxLength = 44;
+            this.txtactivi_grupo.MaxLength = 78;
             this.txtactivi_grupo.Name = "txtactivi_grupo";
             this.txtactivi_grupo.Size = new System.Drawing.Size(207, 22);
             this.txtactivi_grupo.TabIndex = 1;
@@ -1333,9 +1342,9 @@
             // 
             this.txtdiag_tratamiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdiag_tratamiento.Location = new System.Drawing.Point(170, 85);
-            this.txtdiag_tratamiento.MaxLength = 44;
+            this.txtdiag_tratamiento.MaxLength = 200;
             this.txtdiag_tratamiento.Name = "txtdiag_tratamiento";
-            this.txtdiag_tratamiento.Size = new System.Drawing.Size(210, 22);
+            this.txtdiag_tratamiento.Size = new System.Drawing.Size(488, 22);
             this.txtdiag_tratamiento.TabIndex = 88;
             this.txtdiag_tratamiento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdiag_tratamiento_KeyPress);
             // 
@@ -1356,9 +1365,9 @@
             // 
             this.txtcuando.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcuando.Location = new System.Drawing.Point(170, 26);
-            this.txtcuando.MaxLength = 44;
+            this.txtcuando.MaxLength = 80;
             this.txtcuando.Name = "txtcuando";
-            this.txtcuando.Size = new System.Drawing.Size(210, 22);
+            this.txtcuando.Size = new System.Drawing.Size(488, 22);
             this.txtcuando.TabIndex = 84;
             this.txtcuando.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcuando_KeyPress);
             // 
@@ -1386,9 +1395,9 @@
             // 
             this.txtdonde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdonde.Location = new System.Drawing.Point(170, 56);
-            this.txtdonde.MaxLength = 44;
+            this.txtdonde.MaxLength = 80;
             this.txtdonde.Name = "txtdonde";
-            this.txtdonde.Size = new System.Drawing.Size(210, 22);
+            this.txtdonde.Size = new System.Drawing.Size(488, 22);
             this.txtdonde.TabIndex = 86;
             this.txtdonde.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdonde_KeyPress);
             // 
@@ -1448,7 +1457,7 @@
             // 
             this.txtdesenvuelve_escuela.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdesenvuelve_escuela.Location = new System.Drawing.Point(498, 160);
-            this.txtdesenvuelve_escuela.MaxLength = 44;
+            this.txtdesenvuelve_escuela.MaxLength = 70;
             this.txtdesenvuelve_escuela.Multiline = true;
             this.txtdesenvuelve_escuela.Name = "txtdesenvuelve_escuela";
             this.txtdesenvuelve_escuela.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1460,7 +1469,7 @@
             // 
             this.txtcual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcual.Location = new System.Drawing.Point(79, 75);
-            this.txtcual.MaxLength = 44;
+            this.txtcual.MaxLength = 70;
             this.txtcual.Name = "txtcual";
             this.txtcual.Size = new System.Drawing.Size(251, 22);
             this.txtcual.TabIndex = 1;
@@ -1489,7 +1498,7 @@
             // 
             this.txtmanifiesta_escuela.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmanifiesta_escuela.Location = new System.Drawing.Point(21, 160);
-            this.txtmanifiesta_escuela.MaxLength = 44;
+            this.txtmanifiesta_escuela.MaxLength = 70;
             this.txtmanifiesta_escuela.Multiline = true;
             this.txtmanifiesta_escuela.Name = "txtmanifiesta_escuela";
             this.txtmanifiesta_escuela.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1501,7 +1510,7 @@
             // 
             this.txtdesde_cuando.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdesde_cuando.Location = new System.Drawing.Point(500, 77);
-            this.txtdesde_cuando.MaxLength = 44;
+            this.txtdesde_cuando.MaxLength = 77;
             this.txtdesde_cuando.Name = "txtdesde_cuando";
             this.txtdesde_cuando.Size = new System.Drawing.Size(371, 22);
             this.txtdesde_cuando.TabIndex = 2;
@@ -1617,8 +1626,8 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(691, 424);
-            this.textBox2.MaxLength = 44;
+            this.textBox2.Location = new System.Drawing.Point(691, 423);
+            this.textBox2.MaxLength = 70;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(238, 21);
             this.textBox2.TabIndex = 27;
@@ -1638,7 +1647,7 @@
             // 
             this.txtuso_inodoro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtuso_inodoro.Location = new System.Drawing.Point(639, 304);
-            this.txtuso_inodoro.MaxLength = 44;
+            this.txtuso_inodoro.MaxLength = 70;
             this.txtuso_inodoro.Name = "txtuso_inodoro";
             this.txtuso_inodoro.Size = new System.Drawing.Size(290, 21);
             this.txtuso_inodoro.TabIndex = 24;
@@ -1658,7 +1667,7 @@
             // 
             this.txtedad_controla_esfinter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtedad_controla_esfinter.Location = new System.Drawing.Point(639, 259);
-            this.txtedad_controla_esfinter.MaxLength = 44;
+            this.txtedad_controla_esfinter.MaxLength = 70;
             this.txtedad_controla_esfinter.Name = "txtedad_controla_esfinter";
             this.txtedad_controla_esfinter.Size = new System.Drawing.Size(290, 21);
             this.txtedad_controla_esfinter.TabIndex = 23;
@@ -1701,7 +1710,7 @@
             // 
             this.txtcoopera_limpiarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcoopera_limpiarse.Location = new System.Drawing.Point(675, 374);
-            this.txtcoopera_limpiarse.MaxLength = 44;
+            this.txtcoopera_limpiarse.MaxLength = 70;
             this.txtcoopera_limpiarse.Name = "txtcoopera_limpiarse";
             this.txtcoopera_limpiarse.Size = new System.Drawing.Size(254, 21);
             this.txtcoopera_limpiarse.TabIndex = 26;
@@ -1734,7 +1743,7 @@
             // 
             this.txtconocer_panal_sucio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtconocer_panal_sucio.Location = new System.Drawing.Point(759, 219);
-            this.txtconocer_panal_sucio.MaxLength = 44;
+            this.txtconocer_panal_sucio.MaxLength = 70;
             this.txtconocer_panal_sucio.Name = "txtconocer_panal_sucio";
             this.txtconocer_panal_sucio.Size = new System.Drawing.Size(170, 21);
             this.txtconocer_panal_sucio.TabIndex = 22;
@@ -1754,7 +1763,7 @@
             // 
             this.txtmuestra_signos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmuestra_signos.Location = new System.Drawing.Point(737, 185);
-            this.txtmuestra_signos.MaxLength = 44;
+            this.txtmuestra_signos.MaxLength = 70;
             this.txtmuestra_signos.Name = "txtmuestra_signos";
             this.txtmuestra_signos.Size = new System.Drawing.Size(192, 21);
             this.txtmuestra_signos.TabIndex = 20;
@@ -1787,7 +1796,7 @@
             // 
             this.txtcontrola_esfinter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcontrola_esfinter.Location = new System.Drawing.Point(722, 154);
-            this.txtcontrola_esfinter.MaxLength = 44;
+            this.txtcontrola_esfinter.MaxLength = 70;
             this.txtcontrola_esfinter.Name = "txtcontrola_esfinter";
             this.txtcontrola_esfinter.Size = new System.Drawing.Size(207, 21);
             this.txtcontrola_esfinter.TabIndex = 19;
@@ -1807,7 +1816,7 @@
             // 
             this.txtropa_preferida.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtropa_preferida.Location = new System.Drawing.Point(507, 124);
-            this.txtropa_preferida.MaxLength = 44;
+            this.txtropa_preferida.MaxLength = 70;
             this.txtropa_preferida.Name = "txtropa_preferida";
             this.txtropa_preferida.Size = new System.Drawing.Size(422, 21);
             this.txtropa_preferida.TabIndex = 17;
@@ -1870,7 +1879,7 @@
             // 
             this.txtcomida_favorita.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcomida_favorita.Location = new System.Drawing.Point(236, 188);
-            this.txtcomida_favorita.MaxLength = 44;
+            this.txtcomida_favorita.MaxLength = 70;
             this.txtcomida_favorita.Name = "txtcomida_favorita";
             this.txtcomida_favorita.Size = new System.Drawing.Size(237, 21);
             this.txtcomida_favorita.TabIndex = 5;
@@ -1880,10 +1889,11 @@
             // 
             this.txtduerme_objetoespe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtduerme_objetoespe.Location = new System.Drawing.Point(236, 159);
-            this.txtduerme_objetoespe.MaxLength = 44;
+            this.txtduerme_objetoespe.MaxLength = 70;
             this.txtduerme_objetoespe.Name = "txtduerme_objetoespe";
             this.txtduerme_objetoespe.Size = new System.Drawing.Size(237, 21);
             this.txtduerme_objetoespe.TabIndex = 4;
+            this.txtduerme_objetoespe.TextChanged += new System.EventHandler(this.txtduerme_objetoespe_TextChanged);
             this.txtduerme_objetoespe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtduerme_objetoespe_KeyPress);
             // 
             // cmbbana_solo
@@ -1913,7 +1923,7 @@
             // 
             this.txtbana_solo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbana_solo.Location = new System.Drawing.Point(256, 489);
-            this.txtbana_solo.MaxLength = 44;
+            this.txtbana_solo.MaxLength = 70;
             this.txtbana_solo.Name = "txtbana_solo";
             this.txtbana_solo.Size = new System.Drawing.Size(217, 21);
             this.txtbana_solo.TabIndex = 14;
@@ -1923,7 +1933,7 @@
             // 
             this.txtduerme_toda_noche.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtduerme_toda_noche.Location = new System.Drawing.Point(282, 130);
-            this.txtduerme_toda_noche.MaxLength = 44;
+            this.txtduerme_toda_noche.MaxLength = 70;
             this.txtduerme_toda_noche.Name = "txtduerme_toda_noche";
             this.txtduerme_toda_noche.Size = new System.Drawing.Size(191, 21);
             this.txtduerme_toda_noche.TabIndex = 3;
@@ -1953,7 +1963,7 @@
             // 
             this.txtcoopera_banarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcoopera_banarse.Location = new System.Drawing.Point(173, 454);
-            this.txtcoopera_banarse.MaxLength = 44;
+            this.txtcoopera_banarse.MaxLength = 70;
             this.txtcoopera_banarse.Name = "txtcoopera_banarse";
             this.txtcoopera_banarse.Size = new System.Drawing.Size(146, 21);
             this.txtcoopera_banarse.TabIndex = 12;
@@ -1983,7 +1993,7 @@
             // 
             this.txtduemesolo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtduemesolo.Location = new System.Drawing.Point(173, 46);
-            this.txtduemesolo.MaxLength = 44;
+            this.txtduemesolo.MaxLength = 70;
             this.txtduemesolo.Name = "txtduemesolo";
             this.txtduemesolo.Size = new System.Drawing.Size(300, 21);
             this.txtduemesolo.TabIndex = 0;
@@ -1993,7 +2003,7 @@
             // 
             this.txtagrada_banarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtagrada_banarse.Location = new System.Drawing.Point(173, 424);
-            this.txtagrada_banarse.MaxLength = 44;
+            this.txtagrada_banarse.MaxLength = 70;
             this.txtagrada_banarse.Name = "txtagrada_banarse";
             this.txtagrada_banarse.Size = new System.Drawing.Size(146, 21);
             this.txtagrada_banarse.TabIndex = 11;
@@ -2023,7 +2033,7 @@
             // 
             this.txthora_acuesta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txthora_acuesta.Location = new System.Drawing.Point(172, 73);
-            this.txthora_acuesta.MaxLength = 44;
+            this.txthora_acuesta.MaxLength = 70;
             this.txthora_acuesta.Name = "txthora_acuesta";
             this.txthora_acuesta.Size = new System.Drawing.Size(301, 21);
             this.txthora_acuesta.TabIndex = 1;
@@ -2033,7 +2043,7 @@
             // 
             this.txtcome_no_comestible.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcome_no_comestible.Location = new System.Drawing.Point(26, 343);
-            this.txtcome_no_comestible.MaxLength = 44;
+            this.txtcome_no_comestible.MaxLength = 70;
             this.txtcome_no_comestible.Multiline = true;
             this.txtcome_no_comestible.Name = "txtcome_no_comestible";
             this.txtcome_no_comestible.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -2065,7 +2075,7 @@
             // 
             this.txthora_levanta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txthora_levanta.Location = new System.Drawing.Point(172, 101);
-            this.txthora_levanta.MaxLength = 44;
+            this.txthora_levanta.MaxLength = 70;
             this.txthora_levanta.Name = "txthora_levanta";
             this.txthora_levanta.Size = new System.Drawing.Size(301, 21);
             this.txthora_levanta.TabIndex = 2;
@@ -2075,7 +2085,7 @@
             // 
             this.txtedad_come_solo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtedad_come_solo.Location = new System.Drawing.Point(211, 286);
-            this.txtedad_come_solo.MaxLength = 44;
+            this.txtedad_come_solo.MaxLength = 70;
             this.txtedad_come_solo.Name = "txtedad_come_solo";
             this.txtedad_come_solo.Size = new System.Drawing.Size(262, 21);
             this.txtedad_come_solo.TabIndex = 9;
@@ -2115,7 +2125,7 @@
             // 
             this.txtcubierto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcubierto.Location = new System.Drawing.Point(350, 246);
-            this.txtcubierto.MaxLength = 44;
+            this.txtcubierto.MaxLength = 70;
             this.txtcubierto.Name = "txtcubierto";
             this.txtcubierto.Size = new System.Drawing.Size(123, 21);
             this.txtcubierto.TabIndex = 8;
@@ -2125,7 +2135,7 @@
             // 
             this.txtcomida_no_gusta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcomida_no_gusta.Location = new System.Drawing.Point(278, 216);
-            this.txtcomida_no_gusta.MaxLength = 44;
+            this.txtcomida_no_gusta.MaxLength = 70;
             this.txtcomida_no_gusta.Name = "txtcomida_no_gusta";
             this.txtcomida_no_gusta.Size = new System.Drawing.Size(195, 21);
             this.txtcomida_no_gusta.TabIndex = 6;
@@ -2155,7 +2165,7 @@
             // 
             this.txtcome_solo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcome_solo.Location = new System.Drawing.Point(104, 246);
-            this.txtcome_solo.MaxLength = 44;
+            this.txtcome_solo.MaxLength = 70;
             this.txtcome_solo.Name = "txtcome_solo";
             this.txtcome_solo.Size = new System.Drawing.Size(126, 21);
             this.txtcome_solo.TabIndex = 7;
@@ -2238,7 +2248,7 @@
             // 
             this.txtrela_hermano2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtrela_hermano2.Location = new System.Drawing.Point(412, 332);
-            this.txtrela_hermano2.MaxLength = 44;
+            this.txtrela_hermano2.MaxLength = 39;
             this.txtrela_hermano2.Multiline = true;
             this.txtrela_hermano2.Name = "txtrela_hermano2";
             this.txtrela_hermano2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -2259,7 +2269,7 @@
             // 
             this.txtrela_hermanos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtrela_hermanos.Location = new System.Drawing.Point(672, 295);
-            this.txtrela_hermanos.MaxLength = 44;
+            this.txtrela_hermanos.MaxLength = 39;
             this.txtrela_hermanos.Name = "txtrela_hermanos";
             this.txtrela_hermanos.Size = new System.Drawing.Size(224, 21);
             this.txtrela_hermanos.TabIndex = 10;
@@ -2278,7 +2288,7 @@
             // 
             this.txtcomportamiento2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcomportamiento2.Location = new System.Drawing.Point(412, 461);
-            this.txtcomportamiento2.MaxLength = 44;
+            this.txtcomportamiento2.MaxLength = 39;
             this.txtcomportamiento2.Multiline = true;
             this.txtcomportamiento2.Name = "txtcomportamiento2";
             this.txtcomportamiento2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -2299,7 +2309,7 @@
             // 
             this.txtcomportamiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcomportamiento.Location = new System.Drawing.Point(608, 422);
-            this.txtcomportamiento.MaxLength = 44;
+            this.txtcomportamiento.MaxLength = 39;
             this.txtcomportamiento.Name = "txtcomportamiento";
             this.txtcomportamiento.Size = new System.Drawing.Size(288, 21);
             this.txtcomportamiento.TabIndex = 12;
@@ -2318,7 +2328,7 @@
             // 
             this.txtrela_padres2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtrela_padres2.Location = new System.Drawing.Point(410, 199);
-            this.txtrela_padres2.MaxLength = 44;
+            this.txtrela_padres2.MaxLength = 39;
             this.txtrela_padres2.Multiline = true;
             this.txtrela_padres2.Name = "txtrela_padres2";
             this.txtrela_padres2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -2339,7 +2349,7 @@
             // 
             this.txtrela_padres.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtrela_padres.Location = new System.Drawing.Point(552, 151);
-            this.txtrela_padres.MaxLength = 44;
+            this.txtrela_padres.MaxLength = 39;
             this.txtrela_padres.Name = "txtrela_padres";
             this.txtrela_padres.Size = new System.Drawing.Size(344, 21);
             this.txtrela_padres.TabIndex = 8;
@@ -2358,7 +2368,7 @@
             // 
             this.txtapego_miembro2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtapego_miembro2.Location = new System.Drawing.Point(410, 73);
-            this.txtapego_miembro2.MaxLength = 44;
+            this.txtapego_miembro2.MaxLength = 39;
             this.txtapego_miembro2.Multiline = true;
             this.txtapego_miembro2.Name = "txtapego_miembro2";
             this.txtapego_miembro2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -2379,7 +2389,7 @@
             // 
             this.txtapego_miebro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtapego_miebro.Location = new System.Drawing.Point(645, 28);
-            this.txtapego_miebro.MaxLength = 44;
+            this.txtapego_miebro.MaxLength = 39;
             this.txtapego_miebro.Name = "txtapego_miebro";
             this.txtapego_miebro.Size = new System.Drawing.Size(251, 21);
             this.txtapego_miebro.TabIndex = 6;
@@ -2398,7 +2408,7 @@
             // 
             this.txtreaccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtreaccion.Location = new System.Drawing.Point(21, 355);
-            this.txtreaccion.MaxLength = 44;
+            this.txtreaccion.MaxLength = 79;
             this.txtreaccion.Multiline = true;
             this.txtreaccion.Name = "txtreaccion";
             this.txtreaccion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -2409,7 +2419,7 @@
             // 
             this.txtcorte_unas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcorte_unas.Location = new System.Drawing.Point(21, 106);
-            this.txtcorte_unas.MaxLength = 44;
+            this.txtcorte_unas.MaxLength = 79;
             this.txtcorte_unas.Name = "txtcorte_unas";
             this.txtcorte_unas.Size = new System.Drawing.Size(362, 22);
             this.txtcorte_unas.TabIndex = 1;
@@ -2418,7 +2428,7 @@
             // 
             this.txtlimpieza_oidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtlimpieza_oidos.Location = new System.Drawing.Point(21, 160);
-            this.txtlimpieza_oidos.MaxLength = 44;
+            this.txtlimpieza_oidos.MaxLength = 79;
             this.txtlimpieza_oidos.Name = "txtlimpieza_oidos";
             this.txtlimpieza_oidos.Size = new System.Drawing.Size(362, 22);
             this.txtlimpieza_oidos.TabIndex = 2;
@@ -2448,7 +2458,7 @@
             // 
             this.txtpersonas_adultos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpersonas_adultos.Location = new System.Drawing.Point(21, 276);
-            this.txtpersonas_adultos.MaxLength = 44;
+            this.txtpersonas_adultos.MaxLength = 79;
             this.txtpersonas_adultos.Name = "txtpersonas_adultos";
             this.txtpersonas_adultos.Size = new System.Drawing.Size(362, 22);
             this.txtpersonas_adultos.TabIndex = 4;
@@ -2457,7 +2467,7 @@
             // 
             this.txtcorte_cabello.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcorte_cabello.Location = new System.Drawing.Point(21, 56);
-            this.txtcorte_cabello.MaxLength = 44;
+            this.txtcorte_cabello.MaxLength = 79;
             this.txtcorte_cabello.Name = "txtcorte_cabello";
             this.txtcorte_cabello.Size = new System.Drawing.Size(362, 22);
             this.txtcorte_cabello.TabIndex = 0;
@@ -2486,7 +2496,7 @@
             // 
             this.txtcepillo_dientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcepillo_dientes.Location = new System.Drawing.Point(21, 219);
-            this.txtcepillo_dientes.MaxLength = 44;
+            this.txtcepillo_dientes.MaxLength = 79;
             this.txtcepillo_dientes.Name = "txtcepillo_dientes";
             this.txtcepillo_dientes.Size = new System.Drawing.Size(362, 22);
             this.txtcepillo_dientes.TabIndex = 3;
@@ -2625,7 +2635,7 @@
             // 
             this.txtda_normal_porque.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtda_normal_porque.Location = new System.Drawing.Point(25, 261);
-            this.txtda_normal_porque.MaxLength = 44;
+            this.txtda_normal_porque.MaxLength = 149;
             this.txtda_normal_porque.Multiline = true;
             this.txtda_normal_porque.Name = "txtda_normal_porque";
             this.txtda_normal_porque.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -2637,7 +2647,7 @@
             // 
             this.txtdescriba_doa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdescriba_doa.Location = new System.Drawing.Point(106, 180);
-            this.txtdescriba_doa.MaxLength = 44;
+            this.txtdescriba_doa.MaxLength = 39;
             this.txtdescriba_doa.Name = "txtdescriba_doa";
             this.txtdescriba_doa.Size = new System.Drawing.Size(337, 22);
             this.txtdescriba_doa.TabIndex = 1;
@@ -2647,7 +2657,7 @@
             // 
             this.txtalgo_mencionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtalgo_mencionar.Location = new System.Drawing.Point(25, 415);
-            this.txtalgo_mencionar.MaxLength = 44;
+            this.txtalgo_mencionar.MaxLength = 83;
             this.txtalgo_mencionar.Multiline = true;
             this.txtalgo_mencionar.Name = "txtalgo_mencionar";
             this.txtalgo_mencionar.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -2659,7 +2669,7 @@
             // 
             this.txtinteres_particular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtinteres_particular.Location = new System.Drawing.Point(25, 88);
-            this.txtinteres_particular.MaxLength = 44;
+            this.txtinteres_particular.MaxLength = 40;
             this.txtinteres_particular.Multiline = true;
             this.txtinteres_particular.Name = "txtinteres_particular";
             this.txtinteres_particular.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -2873,7 +2883,7 @@
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ForeColor = System.Drawing.SystemColors.Control;
-            this.button13.Location = new System.Drawing.Point(1135, 419);
+            this.button13.Location = new System.Drawing.Point(6, 365);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(105, 98);
             this.button13.TabIndex = 135;
@@ -2887,7 +2897,7 @@
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ForeColor = System.Drawing.SystemColors.Control;
-            this.button14.Location = new System.Drawing.Point(1134, 553);
+            this.button14.Location = new System.Drawing.Point(5, 499);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(105, 102);
             this.button14.TabIndex = 136;
@@ -2901,7 +2911,7 @@
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.SystemColors.Control;
-            this.button10.Location = new System.Drawing.Point(1138, 295);
+            this.button10.Location = new System.Drawing.Point(3, 224);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(105, 100);
             this.button10.TabIndex = 142;
@@ -2912,7 +2922,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(1147, 398);
+            this.label10.Location = new System.Drawing.Point(12, 327);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(92, 13);
             this.label10.TabIndex = 143;
@@ -2922,7 +2932,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(1148, 520);
+            this.label11.Location = new System.Drawing.Point(19, 466);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(88, 13);
             this.label11.TabIndex = 144;
@@ -2932,7 +2942,7 @@
             // 
             this.label92.AutoSize = true;
             this.label92.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label92.Location = new System.Drawing.Point(1168, 658);
+            this.label92.Location = new System.Drawing.Point(39, 604);
             this.label92.Name = "label92";
             this.label92.Size = new System.Drawing.Size(42, 13);
             this.label92.TabIndex = 145;
@@ -2942,21 +2952,31 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label92);
+            this.panel1.Controls.Add(this.button10);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.button14);
+            this.panel1.Controls.Add(this.button13);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(1132, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(119, 699);
+            this.panel1.TabIndex = 146;
+            // 
             // FormaEntPadres
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1251, 699);
             this.ControlBox = false;
-            this.Controls.Add(this.label92);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button14);
-            this.Controls.Add(this.button13);
             this.Controls.Add(this.tabEntPadres);
+            this.Controls.Add(this.panel1);
             this.Name = "FormaEntPadres";
             this.Text = "Entrevista de Padres";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormaEntPadres_Load);
             this.tabEntPadres.ResumeLayout(false);
             this.Pest_DatosGenerales.ResumeLayout(false);
@@ -2996,8 +3016,9 @@
             this.Grupo_DatosIdentificables.ResumeLayout(false);
             this.Grupo_DatosIdentificables.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -3239,5 +3260,6 @@
         private System.Windows.Forms.Label label100;
         private System.Windows.Forms.Label label93;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

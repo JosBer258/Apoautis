@@ -62,6 +62,7 @@
             this.dateFechNac = new System.Windows.Forms.DateTimePicker();
             this.dateFechEval = new System.Windows.Forms.DateTimePicker();
             this.Grupo_Busqueda = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.radTodas = new System.Windows.Forms.RadioButton();
             this.txtBusqOB = new System.Windows.Forms.TextBox();
@@ -73,7 +74,6 @@
             this.txtBusqObs = new System.Windows.Forms.TextBox();
             this.radImpDiag = new System.Windows.Forms.RadioButton();
             this.txtBusqImpDiag = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Evaluaciones)).BeginInit();
             this.Grupo_IngresoResultado.SuspendLayout();
             this.Grupo_Busqueda.SuspendLayout();
@@ -89,6 +89,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DGV_Evaluaciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DGV_Evaluaciones.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
             this.DGV_Evaluaciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DGV_Evaluaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Evaluaciones.Location = new System.Drawing.Point(6, 166);
@@ -191,7 +192,7 @@
             // txtObs
             // 
             this.txtObs.Location = new System.Drawing.Point(600, 137);
-            this.txtObs.MaxLength = 45;
+            this.txtObs.MaxLength = 278;
             this.txtObs.Name = "txtObs";
             this.txtObs.Size = new System.Drawing.Size(235, 20);
             this.txtObs.TabIndex = 64;
@@ -452,6 +453,15 @@
             this.Grupo_Busqueda.Text = "Opciones de Busqueda";
             this.Grupo_Busqueda.Enter += new System.EventHandler(this.Grupo_Busqueda_Enter);
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(1066, 121);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(50, 13);
+            this.label16.TabIndex = 94;
+            this.label16.Text = "Imprimir";
+            // 
             // btnImprimir
             // 
             this.btnImprimir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImprimir.BackgroundImage")));
@@ -568,15 +578,6 @@
             this.txtBusqImpDiag.TabIndex = 7;
             this.txtBusqImpDiag.TextChanged += new System.EventHandler(this.txtBusqImpDiag_TextChanged);
             this.txtBusqImpDiag.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBusqImpDiag_KeyPress);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(1066, 121);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(51, 13);
-            this.label16.TabIndex = 94;
-            this.label16.Text = "Aceptar";
             // 
             // FormaEvalPsic
             // 

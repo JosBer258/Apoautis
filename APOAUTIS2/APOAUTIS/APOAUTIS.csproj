@@ -64,7 +64,9 @@
     <Compile Include="Clases\C_AlumDeResp.cs" />
     <Compile Include="Clases\C_Alumnos.cs" />
     <Compile Include="Clases\C_BusqMatricula.cs" />
+    <Compile Include="Clases\C_CambiosSocio.cs" />
     <Compile Include="Clases\C_EntrePadres.cs" />
+    <Compile Include="Clases\C_EntrevistaIngreCambios.cs" />
     <Compile Include="Clases\C_EstudioSocioMetodos.cs" />
     <Compile Include="Clases\C_EvalPsico.cs" />
     <Compile Include="Clases\C_HistorialMedico.cs" />
@@ -97,6 +99,12 @@
     </Compile>
     <Compile Include="Formas\Alumnos\FormGlobalShowAlum.Designer.cs">
       <DependentUpon>FormGlobalShowAlum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas\Alumnos\Form_SelecionarRuta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas\Alumnos\Form_SelecionarRuta.Designer.cs">
+      <DependentUpon>Form_SelecionarRuta.cs</DependentUpon>
     </Compile>
     <Compile Include="Formas\Entrevista Padres\FrmBusquedaEntPadres.cs">
       <SubType>Form</SubType>
@@ -281,6 +289,9 @@
     </Compile>
     <EmbeddedResource Include="Formas\Alumnos\FormGlobalShowAlum.resx">
       <DependentUpon>FormGlobalShowAlum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas\Alumnos\Form_SelecionarRuta.resx">
+      <DependentUpon>Form_SelecionarRuta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formas\Entrevista Padres\FrmBusquedaEntPadres.resx">
       <DependentUpon>FrmBusquedaEntPadres.cs</DependentUpon>

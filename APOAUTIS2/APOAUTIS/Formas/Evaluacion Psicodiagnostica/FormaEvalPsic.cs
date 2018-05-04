@@ -112,7 +112,23 @@ namespace APOAUTIS
             cEval.Fill_DGV_Eval(DGV_Evaluaciones);
             cmbSexo.SelectedIndex = 0;
             ContextMenuStrip cm = new ContextMenuStrip();
-            
+
+            var blankContextMenu = new ContextMenuStrip();
+
+            var boxes = Grupo_IngresoResultado.Controls.OfType<TextBox>();
+            foreach (var box in boxes)
+            {
+                box.ContextMenuStrip = blankContextMenu;
+
+            }
+
+
+            var boxes1 = Grupo_Busqueda.Controls.OfType<TextBox>();
+            foreach (var box in boxes1)
+            {
+                box.ContextMenuStrip = blankContextMenu;
+
+            }
         }
 
         private void radioButton6_CheckedChanged(object sender, EventArgs e)

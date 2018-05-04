@@ -32,26 +32,26 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRangoMensualidad));
             this.Data_Rangos = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Bttn_SalarioMin_Aceptar = new System.Windows.Forms.Button();
             this.Txt_SalarioMinimoActual = new System.Windows.Forms.TextBox();
             this.Bttn_SalarioMin_Cancelar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.Txt_Codigo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Text_Mensualidad = new System.Windows.Forms.TextBox();
+            this.Bttn_Aceptar = new System.Windows.Forms.Button();
             this.Txt_RangoInicial = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.Bttn_Aceptar = new System.Windows.Forms.Button();
             this.Bttn_Ayuda = new System.Windows.Forms.Button();
             this.Bttn_Salir = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Data_Rangos)).BeginInit();
@@ -65,7 +65,7 @@
             this.Data_Rangos.AllowUserToAddRows = false;
             this.Data_Rangos.AllowUserToDeleteRows = false;
             this.Data_Rangos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.Data_Rangos.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Data_Rangos.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
             this.Data_Rangos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Data_Rangos.Location = new System.Drawing.Point(16, 303);
             this.Data_Rangos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -93,6 +93,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cambio de valor de salario minimo";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(415, 96);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(57, 13);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Cancelar";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(341, 96);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(51, 13);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Aceptar";
             // 
             // label1
             // 
@@ -163,6 +183,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Editar mensualidad";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(508, 97);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(51, 13);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Aceptar";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -216,10 +246,26 @@
             // 
             this.Text_Mensualidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Text_Mensualidad.Location = new System.Drawing.Point(342, 80);
+            this.Text_Mensualidad.MaxLength = 5;
             this.Text_Mensualidad.Name = "Text_Mensualidad";
             this.Text_Mensualidad.Size = new System.Drawing.Size(137, 22);
             this.Text_Mensualidad.TabIndex = 15;
             this.Text_Mensualidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Text_Mensualidad_KeyPress);
+            // 
+            // Bttn_Aceptar
+            // 
+            this.Bttn_Aceptar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Bttn_Aceptar.BackgroundImage")));
+            this.Bttn_Aceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Bttn_Aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Bttn_Aceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bttn_Aceptar.ForeColor = System.Drawing.SystemColors.Control;
+            this.Bttn_Aceptar.Location = new System.Drawing.Point(497, 26);
+            this.Bttn_Aceptar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Bttn_Aceptar.Name = "Bttn_Aceptar";
+            this.Bttn_Aceptar.Size = new System.Drawing.Size(72, 68);
+            this.Bttn_Aceptar.TabIndex = 12;
+            this.Bttn_Aceptar.UseVisualStyleBackColor = true;
+            this.Bttn_Aceptar.Click += new System.EventHandler(this.button5_Click);
             // 
             // Txt_RangoInicial
             // 
@@ -240,21 +286,6 @@
             this.comboBox1.Size = new System.Drawing.Size(104, 24);
             this.comboBox1.TabIndex = 13;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // Bttn_Aceptar
-            // 
-            this.Bttn_Aceptar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Bttn_Aceptar.BackgroundImage")));
-            this.Bttn_Aceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Bttn_Aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Bttn_Aceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bttn_Aceptar.ForeColor = System.Drawing.SystemColors.Control;
-            this.Bttn_Aceptar.Location = new System.Drawing.Point(497, 26);
-            this.Bttn_Aceptar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Bttn_Aceptar.Name = "Bttn_Aceptar";
-            this.Bttn_Aceptar.Size = new System.Drawing.Size(72, 68);
-            this.Bttn_Aceptar.TabIndex = 12;
-            this.Bttn_Aceptar.UseVisualStyleBackColor = true;
-            this.Bttn_Aceptar.Click += new System.EventHandler(this.button5_Click);
             // 
             // Bttn_Ayuda
             // 
@@ -288,36 +319,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(341, 96);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 13);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Aceptar";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(415, 96);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 13);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Cancelar";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(508, 97);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 13);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Aceptar";
             // 
             // label9
             // 

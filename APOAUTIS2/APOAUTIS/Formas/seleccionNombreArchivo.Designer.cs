@@ -57,7 +57,7 @@
             // btnAceptar
             // 
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnAceptar.Location = new System.Drawing.Point(72, 106);
+            this.btnAceptar.Location = new System.Drawing.Point(63, 106);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(95, 32);
             this.btnAceptar.TabIndex = 2;
@@ -68,7 +68,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnCancelar.Location = new System.Drawing.Point(183, 106);
+            this.btnCancelar.Location = new System.Drawing.Point(174, 106);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(95, 32);
             this.btnCancelar.TabIndex = 3;
@@ -81,12 +81,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(339, 150);
+            this.ControlBox = false;
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtNombreArchivo);
             this.Controls.Add(this.label1);
             this.Name = "seleccionNombreArchivo";
             this.Text = "Seleccion de Nombre del Archivo";
+            this.Load += new System.EventHandler(this.seleccionNombreArchivo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

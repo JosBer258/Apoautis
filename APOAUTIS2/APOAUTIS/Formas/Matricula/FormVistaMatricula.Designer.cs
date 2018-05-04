@@ -53,7 +53,6 @@
             this.comboBox_atencion_grupal = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Pest1_Txt_NombreEstudiante = new System.Windows.Forms.TextBox();
-            this.Pest1_Txt_Jornada = new System.Windows.Forms.TextBox();
             this.Pest1_Txt_AnoIngreso = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -112,9 +111,13 @@
             this.Pest1_Bttn_BuscarAlumnos = new System.Windows.Forms.Button();
             this.Bttn_Cancelar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label39 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label37 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabMatricula.SuspendLayout();
             this.Pest_DatosGenerales.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -124,6 +127,7 @@
             this.Pest3_Grupo_DatosMadre.SuspendLayout();
             this.Pest3_Grupo_DatosPadre.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -132,7 +136,7 @@
             this.tabMatricula.Controls.Add(this.Pest_DatosGenerales);
             this.tabMatricula.Controls.Add(this.Pest_TiposAtencion);
             this.tabMatricula.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabMatricula.Location = new System.Drawing.Point(12, 110);
+            this.tabMatricula.Location = new System.Drawing.Point(12, 85);
             this.tabMatricula.Name = "tabMatricula";
             this.tabMatricula.SelectedIndex = 0;
             this.tabMatricula.Size = new System.Drawing.Size(1211, 459);
@@ -155,7 +159,7 @@
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(1106, 151);
+            this.label38.Location = new System.Drawing.Point(1106, 133);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(68, 15);
             this.label38.TabIndex = 30;
@@ -191,10 +195,12 @@
             // Pest2_Pest_NombreInstituto
             // 
             this.Pest2_Pest_NombreInstituto.Location = new System.Drawing.Point(579, 152);
+            this.Pest2_Pest_NombreInstituto.MaxLength = 44;
             this.Pest2_Pest_NombreInstituto.Name = "Pest2_Pest_NombreInstituto";
             this.Pest2_Pest_NombreInstituto.ReadOnly = true;
             this.Pest2_Pest_NombreInstituto.Size = new System.Drawing.Size(466, 21);
             this.Pest2_Pest_NombreInstituto.TabIndex = 49;
+            this.Pest2_Pest_NombreInstituto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest2_Pest_NombreInstituto_KeyPress);
             // 
             // label20
             // 
@@ -209,7 +215,7 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(742, 60);
+            this.label32.Location = new System.Drawing.Point(742, 64);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(170, 15);
             this.label32.TabIndex = 47;
@@ -218,7 +224,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(742, 29);
+            this.label19.Location = new System.Drawing.Point(742, 31);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(131, 15);
             this.label19.TabIndex = 46;
@@ -227,7 +233,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(445, 65);
+            this.label18.Location = new System.Drawing.Point(445, 64);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(136, 15);
             this.label18.TabIndex = 45;
@@ -236,7 +242,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(445, 31);
+            this.label17.Location = new System.Drawing.Point(445, 30);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(128, 15);
             this.label17.TabIndex = 44;
@@ -254,11 +260,11 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(86, 93);
+            this.label15.Location = new System.Drawing.Point(86, 90);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(160, 15);
+            this.label15.Size = new System.Drawing.Size(134, 15);
             this.label15.TabIndex = 42;
-            this.label15.Text = "Atencion pre-vocacional";
+            this.label15.Text = "Atencion vocacional";
             // 
             // label14
             // 
@@ -286,7 +292,7 @@
             this.comboBox_atencion_fisica.Items.AddRange(new object[] {
             "Si",
             "No"});
-            this.comboBox_atencion_fisica.Location = new System.Drawing.Point(916, 51);
+            this.comboBox_atencion_fisica.Location = new System.Drawing.Point(916, 59);
             this.comboBox_atencion_fisica.Name = "comboBox_atencion_fisica";
             this.comboBox_atencion_fisica.Size = new System.Drawing.Size(121, 23);
             this.comboBox_atencion_fisica.TabIndex = 39;
@@ -299,7 +305,7 @@
             this.comboBox_atencion_terapia_domicilio.Items.AddRange(new object[] {
             "Si",
             "No"});
-            this.comboBox_atencion_terapia_domicilio.Location = new System.Drawing.Point(916, 20);
+            this.comboBox_atencion_terapia_domicilio.Location = new System.Drawing.Point(916, 26);
             this.comboBox_atencion_terapia_domicilio.Name = "comboBox_atencion_terapia_domicilio";
             this.comboBox_atencion_terapia_domicilio.Size = new System.Drawing.Size(121, 23);
             this.comboBox_atencion_terapia_domicilio.TabIndex = 38;
@@ -384,8 +390,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.Pest1_Txt_NombreEstudiante);
-            this.groupBox1.Controls.Add(this.Pest1_Txt_Jornada);
             this.groupBox1.Controls.Add(this.Pest1_Txt_AnoIngreso);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label11);
@@ -415,42 +421,40 @@
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Generales";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // Pest1_Txt_NombreEstudiante
             // 
             this.Pest1_Txt_NombreEstudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest1_Txt_NombreEstudiante.Location = new System.Drawing.Point(237, 72);
+            this.Pest1_Txt_NombreEstudiante.MaxLength = 44;
             this.Pest1_Txt_NombreEstudiante.Name = "Pest1_Txt_NombreEstudiante";
             this.Pest1_Txt_NombreEstudiante.ReadOnly = true;
             this.Pest1_Txt_NombreEstudiante.Size = new System.Drawing.Size(186, 22);
             this.Pest1_Txt_NombreEstudiante.TabIndex = 5;
-            // 
-            // Pest1_Txt_Jornada
-            // 
-            this.Pest1_Txt_Jornada.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pest1_Txt_Jornada.Location = new System.Drawing.Point(915, 87);
-            this.Pest1_Txt_Jornada.Name = "Pest1_Txt_Jornada";
-            this.Pest1_Txt_Jornada.ReadOnly = true;
-            this.Pest1_Txt_Jornada.Size = new System.Drawing.Size(133, 22);
-            this.Pest1_Txt_Jornada.TabIndex = 25;
+            this.Pest1_Txt_NombreEstudiante.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest1_Txt_NombreEstudiante_KeyPress);
             // 
             // Pest1_Txt_AnoIngreso
             // 
             this.Pest1_Txt_AnoIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest1_Txt_AnoIngreso.Location = new System.Drawing.Point(237, 159);
+            this.Pest1_Txt_AnoIngreso.MaxLength = 4;
             this.Pest1_Txt_AnoIngreso.Name = "Pest1_Txt_AnoIngreso";
             this.Pest1_Txt_AnoIngreso.ReadOnly = true;
             this.Pest1_Txt_AnoIngreso.Size = new System.Drawing.Size(186, 22);
             this.Pest1_Txt_AnoIngreso.TabIndex = 20;
+            this.Pest1_Txt_AnoIngreso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest1_Txt_AnoIngreso_KeyPress);
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(237, 97);
+            this.textBox1.MaxLength = 44;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(186, 22);
             this.textBox1.TabIndex = 27;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label11
             // 
@@ -476,10 +480,12 @@
             // 
             this.Pest1_Txt_Instituto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest1_Txt_Instituto.Location = new System.Drawing.Point(237, 125);
+            this.Pest1_Txt_Instituto.MaxLength = 44;
             this.Pest1_Txt_Instituto.Name = "Pest1_Txt_Instituto";
             this.Pest1_Txt_Instituto.ReadOnly = true;
             this.Pest1_Txt_Instituto.Size = new System.Drawing.Size(186, 22);
             this.Pest1_Txt_Instituto.TabIndex = 18;
+            this.Pest1_Txt_Instituto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest1_Txt_Instituto_KeyPress);
             // 
             // label2
             // 
@@ -572,20 +578,24 @@
             // 
             this.Pest1_Txt_DireccionCompleta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest1_Txt_DireccionCompleta.Location = new System.Drawing.Point(604, 46);
+            this.Pest1_Txt_DireccionCompleta.MaxLength = 120;
             this.Pest1_Txt_DireccionCompleta.Multiline = true;
             this.Pest1_Txt_DireccionCompleta.Name = "Pest1_Txt_DireccionCompleta";
             this.Pest1_Txt_DireccionCompleta.ReadOnly = true;
             this.Pest1_Txt_DireccionCompleta.Size = new System.Drawing.Size(141, 43);
             this.Pest1_Txt_DireccionCompleta.TabIndex = 10;
+            this.Pest1_Txt_DireccionCompleta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest1_Txt_DireccionCompleta_KeyPress);
             // 
             // Pest1_Txt_TelefonoFijo
             // 
             this.Pest1_Txt_TelefonoFijo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest1_Txt_TelefonoFijo.Location = new System.Drawing.Point(915, 53);
+            this.Pest1_Txt_TelefonoFijo.MaxLength = 12;
             this.Pest1_Txt_TelefonoFijo.Name = "Pest1_Txt_TelefonoFijo";
             this.Pest1_Txt_TelefonoFijo.ReadOnly = true;
             this.Pest1_Txt_TelefonoFijo.Size = new System.Drawing.Size(133, 22);
             this.Pest1_Txt_TelefonoFijo.TabIndex = 12;
+            this.Pest1_Txt_TelefonoFijo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest1_Txt_TelefonoFijo_KeyPress);
             // 
             // label5
             // 
@@ -611,10 +621,12 @@
             // 
             this.Pest1_Txt_Celular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest1_Txt_Celular.Location = new System.Drawing.Point(604, 95);
+            this.Pest1_Txt_Celular.MaxLength = 12;
             this.Pest1_Txt_Celular.Name = "Pest1_Txt_Celular";
             this.Pest1_Txt_Celular.ReadOnly = true;
             this.Pest1_Txt_Celular.Size = new System.Drawing.Size(141, 22);
             this.Pest1_Txt_Celular.TabIndex = 16;
+            this.Pest1_Txt_Celular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest1_Txt_Celular_KeyPress);
             // 
             // label6
             // 
@@ -691,22 +703,25 @@
             this.groupBox3.Size = new System.Drawing.Size(1177, 243);
             this.groupBox3.TabIndex = 38;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
+            this.groupBox3.Text = "Datos Médicos y Observaciones";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // Pest4_TxtBox_Observaciones
             // 
-            this.Pest4_TxtBox_Observaciones.Location = new System.Drawing.Point(586, 51);
+            this.Pest4_TxtBox_Observaciones.Location = new System.Drawing.Point(586, 64);
+            this.Pest4_TxtBox_Observaciones.MaxLength = 350;
             this.Pest4_TxtBox_Observaciones.Multiline = true;
             this.Pest4_TxtBox_Observaciones.Name = "Pest4_TxtBox_Observaciones";
             this.Pest4_TxtBox_Observaciones.ReadOnly = true;
             this.Pest4_TxtBox_Observaciones.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.Pest4_TxtBox_Observaciones.Size = new System.Drawing.Size(571, 95);
             this.Pest4_TxtBox_Observaciones.TabIndex = 19;
+            this.Pest4_TxtBox_Observaciones.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest4_TxtBox_Observaciones_KeyPress);
             // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(587, 33);
+            this.label33.Location = new System.Drawing.Point(587, 46);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(101, 15);
             this.label33.TabIndex = 18;
@@ -714,16 +729,18 @@
             // 
             // Pest4_Txt_Entrevistador
             // 
-            this.Pest4_Txt_Entrevistador.Location = new System.Drawing.Point(335, 167);
+            this.Pest4_Txt_Entrevistador.Location = new System.Drawing.Point(335, 180);
+            this.Pest4_Txt_Entrevistador.MaxLength = 44;
             this.Pest4_Txt_Entrevistador.Name = "Pest4_Txt_Entrevistador";
             this.Pest4_Txt_Entrevistador.ReadOnly = true;
             this.Pest4_Txt_Entrevistador.Size = new System.Drawing.Size(206, 21);
             this.Pest4_Txt_Entrevistador.TabIndex = 17;
+            this.Pest4_Txt_Entrevistador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest4_Txt_Entrevistador_KeyPress);
             // 
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(238, 170);
+            this.label35.Location = new System.Drawing.Point(238, 183);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(91, 15);
             this.label35.TabIndex = 16;
@@ -731,7 +748,7 @@
             // 
             // Pest4_Txt_Fecha
             // 
-            this.Pest4_Txt_Fecha.Location = new System.Drawing.Point(78, 170);
+            this.Pest4_Txt_Fecha.Location = new System.Drawing.Point(78, 183);
             this.Pest4_Txt_Fecha.Name = "Pest4_Txt_Fecha";
             this.Pest4_Txt_Fecha.ReadOnly = true;
             this.Pest4_Txt_Fecha.Size = new System.Drawing.Size(136, 21);
@@ -740,7 +757,7 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(26, 170);
+            this.label34.Location = new System.Drawing.Point(26, 183);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(46, 15);
             this.label34.TabIndex = 14;
@@ -748,16 +765,18 @@
             // 
             // Pest4_Txt_UsaMedicamentos
             // 
-            this.Pest4_Txt_UsaMedicamentos.Location = new System.Drawing.Point(267, 105);
+            this.Pest4_Txt_UsaMedicamentos.Location = new System.Drawing.Point(267, 118);
+            this.Pest4_Txt_UsaMedicamentos.MaxLength = 240;
             this.Pest4_Txt_UsaMedicamentos.Name = "Pest4_Txt_UsaMedicamentos";
             this.Pest4_Txt_UsaMedicamentos.ReadOnly = true;
             this.Pest4_Txt_UsaMedicamentos.Size = new System.Drawing.Size(274, 21);
             this.Pest4_Txt_UsaMedicamentos.TabIndex = 12;
+            this.Pest4_Txt_UsaMedicamentos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest4_Txt_UsaMedicamentos_KeyPress);
             // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(11, 111);
+            this.label31.Location = new System.Drawing.Point(11, 124);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(186, 15);
             this.label31.TabIndex = 11;
@@ -765,16 +784,18 @@
             // 
             // Pest4_Txt_TelefonoPorEmergencia
             // 
-            this.Pest4_Txt_TelefonoPorEmergencia.Location = new System.Drawing.Point(267, 66);
+            this.Pest4_Txt_TelefonoPorEmergencia.Location = new System.Drawing.Point(267, 79);
+            this.Pest4_Txt_TelefonoPorEmergencia.MaxLength = 12;
             this.Pest4_Txt_TelefonoPorEmergencia.Name = "Pest4_Txt_TelefonoPorEmergencia";
             this.Pest4_Txt_TelefonoPorEmergencia.ReadOnly = true;
             this.Pest4_Txt_TelefonoPorEmergencia.Size = new System.Drawing.Size(274, 21);
             this.Pest4_Txt_TelefonoPorEmergencia.TabIndex = 10;
+            this.Pest4_Txt_TelefonoPorEmergencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest4_Txt_TelefonoPorEmergencia_KeyPress);
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(11, 74);
+            this.label30.Location = new System.Drawing.Point(11, 87);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(233, 30);
             this.label30.TabIndex = 9;
@@ -782,16 +803,18 @@
             // 
             // Pest4_Txt_DireccionPorEmergencias
             // 
-            this.Pest4_Txt_DireccionPorEmergencias.Location = new System.Drawing.Point(267, 34);
+            this.Pest4_Txt_DireccionPorEmergencias.Location = new System.Drawing.Point(267, 47);
+            this.Pest4_Txt_DireccionPorEmergencias.MaxLength = 240;
             this.Pest4_Txt_DireccionPorEmergencias.Name = "Pest4_Txt_DireccionPorEmergencias";
             this.Pest4_Txt_DireccionPorEmergencias.ReadOnly = true;
             this.Pest4_Txt_DireccionPorEmergencias.Size = new System.Drawing.Size(274, 21);
             this.Pest4_Txt_DireccionPorEmergencias.TabIndex = 8;
+            this.Pest4_Txt_DireccionPorEmergencias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest4_Txt_DireccionPorEmergencias_KeyPress);
             // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(11, 34);
+            this.label29.Location = new System.Drawing.Point(11, 47);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(234, 30);
             this.label29.TabIndex = 7;
@@ -829,19 +852,23 @@
             // 
             this.Pest3_Txt_NombreMadre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest3_Txt_NombreMadre.Location = new System.Drawing.Point(110, 28);
+            this.Pest3_Txt_NombreMadre.MaxLength = 44;
             this.Pest3_Txt_NombreMadre.Name = "Pest3_Txt_NombreMadre";
             this.Pest3_Txt_NombreMadre.ReadOnly = true;
             this.Pest3_Txt_NombreMadre.Size = new System.Drawing.Size(169, 20);
             this.Pest3_Txt_NombreMadre.TabIndex = 10;
+            this.Pest3_Txt_NombreMadre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest3_Txt_NombreMadre_KeyPress);
             // 
             // Pest3_Txt_TelefonoMadre
             // 
             this.Pest3_Txt_TelefonoMadre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest3_Txt_TelefonoMadre.Location = new System.Drawing.Point(988, 28);
+            this.Pest3_Txt_TelefonoMadre.MaxLength = 12;
             this.Pest3_Txt_TelefonoMadre.Name = "Pest3_Txt_TelefonoMadre";
             this.Pest3_Txt_TelefonoMadre.ReadOnly = true;
             this.Pest3_Txt_TelefonoMadre.Size = new System.Drawing.Size(169, 20);
             this.Pest3_Txt_TelefonoMadre.TabIndex = 16;
+            this.Pest3_Txt_TelefonoMadre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest3_Txt_TelefonoMadre_KeyPress);
             // 
             // label27
             // 
@@ -867,19 +894,23 @@
             // 
             this.Pest3_Txt_ProfesionMadre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest3_Txt_ProfesionMadre.Location = new System.Drawing.Point(390, 28);
+            this.Pest3_Txt_ProfesionMadre.MaxLength = 120;
             this.Pest3_Txt_ProfesionMadre.Name = "Pest3_Txt_ProfesionMadre";
             this.Pest3_Txt_ProfesionMadre.ReadOnly = true;
             this.Pest3_Txt_ProfesionMadre.Size = new System.Drawing.Size(169, 20);
             this.Pest3_Txt_ProfesionMadre.TabIndex = 12;
+            this.Pest3_Txt_ProfesionMadre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest3_Txt_ProfesionMadre_KeyPress);
             // 
             // Pest3_Txt_LugarMadre
             // 
             this.Pest3_Txt_LugarMadre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest3_Txt_LugarMadre.Location = new System.Drawing.Point(675, 28);
+            this.Pest3_Txt_LugarMadre.MaxLength = 120;
             this.Pest3_Txt_LugarMadre.Name = "Pest3_Txt_LugarMadre";
             this.Pest3_Txt_LugarMadre.ReadOnly = true;
             this.Pest3_Txt_LugarMadre.Size = new System.Drawing.Size(169, 20);
             this.Pest3_Txt_LugarMadre.TabIndex = 14;
+            this.Pest3_Txt_LugarMadre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest3_Txt_LugarMadre_KeyPress);
             // 
             // label26
             // 
@@ -914,11 +945,13 @@
             // 
             this.Pest3_Txt_NombrePadre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest3_Txt_NombrePadre.Location = new System.Drawing.Point(110, 29);
+            this.Pest3_Txt_NombrePadre.MaxLength = 44;
             this.Pest3_Txt_NombrePadre.Name = "Pest3_Txt_NombrePadre";
             this.Pest3_Txt_NombrePadre.ReadOnly = true;
             this.Pest3_Txt_NombrePadre.Size = new System.Drawing.Size(169, 20);
             this.Pest3_Txt_NombrePadre.TabIndex = 2;
             this.Pest3_Txt_NombrePadre.TextChanged += new System.EventHandler(this.Pest3_Txt_NombrePadre_TextChanged);
+            this.Pest3_Txt_NombrePadre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest3_Txt_NombrePadre_KeyPress);
             // 
             // label21
             // 
@@ -944,19 +977,23 @@
             // 
             this.Pest3_Txt_ProfesionPadre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest3_Txt_ProfesionPadre.Location = new System.Drawing.Point(390, 29);
+            this.Pest3_Txt_ProfesionPadre.MaxLength = 120;
             this.Pest3_Txt_ProfesionPadre.Name = "Pest3_Txt_ProfesionPadre";
             this.Pest3_Txt_ProfesionPadre.ReadOnly = true;
             this.Pest3_Txt_ProfesionPadre.Size = new System.Drawing.Size(169, 20);
             this.Pest3_Txt_ProfesionPadre.TabIndex = 4;
+            this.Pest3_Txt_ProfesionPadre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest3_Txt_ProfesionPadre_KeyPress);
             // 
             // Pest3_Txt_LugarPadre
             // 
             this.Pest3_Txt_LugarPadre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest3_Txt_LugarPadre.Location = new System.Drawing.Point(675, 29);
+            this.Pest3_Txt_LugarPadre.MaxLength = 120;
             this.Pest3_Txt_LugarPadre.Name = "Pest3_Txt_LugarPadre";
             this.Pest3_Txt_LugarPadre.ReadOnly = true;
             this.Pest3_Txt_LugarPadre.Size = new System.Drawing.Size(169, 20);
             this.Pest3_Txt_LugarPadre.TabIndex = 6;
+            this.Pest3_Txt_LugarPadre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest3_Txt_LugarPadre_KeyPress);
             // 
             // label24
             // 
@@ -982,10 +1019,12 @@
             // 
             this.Pest3_Txt_TelefonoPadre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest3_Txt_TelefonoPadre.Location = new System.Drawing.Point(988, 29);
+            this.Pest3_Txt_TelefonoPadre.MaxLength = 12;
             this.Pest3_Txt_TelefonoPadre.Name = "Pest3_Txt_TelefonoPadre";
             this.Pest3_Txt_TelefonoPadre.ReadOnly = true;
             this.Pest3_Txt_TelefonoPadre.Size = new System.Drawing.Size(169, 20);
             this.Pest3_Txt_TelefonoPadre.TabIndex = 8;
+            this.Pest3_Txt_TelefonoPadre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Pest3_Txt_TelefonoPadre_KeyPress);
             // 
             // Pest1_Bttn_BuscarAlumnos
             // 
@@ -1008,9 +1047,9 @@
             this.Bttn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Bttn_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Bttn_Cancelar.ForeColor = System.Drawing.SystemColors.Control;
-            this.Bttn_Cancelar.Location = new System.Drawing.Point(16, 5);
+            this.Bttn_Cancelar.Location = new System.Drawing.Point(18, -5);
             this.Bttn_Cancelar.Name = "Bttn_Cancelar";
-            this.Bttn_Cancelar.Size = new System.Drawing.Size(114, 105);
+            this.Bttn_Cancelar.Size = new System.Drawing.Size(128, 126);
             this.Bttn_Cancelar.TabIndex = 27;
             this.Bttn_Cancelar.UseVisualStyleBackColor = true;
             this.Bttn_Cancelar.Click += new System.EventHandler(this.button4_Click);
@@ -1018,20 +1057,56 @@
             // panel1
             // 
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel1.Controls.Add(this.label36);
             this.panel1.Controls.Add(this.Bttn_Cancelar);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.label36);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 563);
+            this.panel1.Location = new System.Drawing.Point(0, 550);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1235, 128);
+            this.panel1.Size = new System.Drawing.Size(1235, 141);
             this.panel1.TabIndex = 28;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.label39);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(951, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(284, 141);
+            this.panel3.TabIndex = 30;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(140, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(128, 122);
+            this.button1.TabIndex = 29;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(171, 119);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(70, 15);
+            this.label39.TabIndex = 31;
+            this.label39.Text = "Actualizar";
             // 
             // label36
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(56, 107);
+            this.label36.Location = new System.Drawing.Point(60, 118);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(37, 15);
             this.label36.TabIndex = 28;
@@ -1045,7 +1120,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1235, 572);
+            this.panel2.Size = new System.Drawing.Size(1235, 548);
             this.panel2.TabIndex = 29;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -1058,6 +1133,15 @@
             this.label37.Size = new System.Drawing.Size(154, 16);
             this.label37.TabIndex = 27;
             this.label37.Text = "Busqueda de alumno";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(915, 84);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(133, 24);
+            this.comboBox1.TabIndex = 28;
             // 
             // VistaMatricula
             // 
@@ -1089,6 +1173,8 @@
             this.Pest3_Grupo_DatosPadre.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -1100,7 +1186,6 @@
         private System.Windows.Forms.TabControl tabMatricula;
         private System.Windows.Forms.TabPage Pest_DatosGenerales;
         private System.Windows.Forms.Button Pest1_Bttn_BuscarAlumnos;
-        private System.Windows.Forms.TextBox Pest1_Txt_Jornada;
         private System.Windows.Forms.TextBox Pest_txtNumeroMatricula;
         private System.Windows.Forms.Button Pest1_Bttn_Siguiente;
         private System.Windows.Forms.Label label1;
@@ -1183,5 +1268,9 @@
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

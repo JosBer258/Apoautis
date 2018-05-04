@@ -7,6 +7,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
+using System.IO;////////
+using System.Reflection;///////
+using iTextSharp.text.pdf;///////
+using iTextSharp.text;///////
+using System.Web;///////
+
+
 namespace APOAUTIS.Clases
 {
     class C_Alumnos: Conexion
@@ -228,16 +237,82 @@ namespace APOAUTIS.Clases
             get { return fechaIngreso; }
             set { fechaIngreso = value; }
         }
+
+        public string Mensaje_Identificador
+        {
+            get
+            {
+                return mensaje_Identificador;
+            }
+
+            set
+            {
+                mensaje_Identificador = value;
+            }
+        }
+
+        public string Edadcronologica
+        {
+            get
+            {
+                return edadcronologica;
+            }
+
+            set
+            {
+                edadcronologica = value;
+            }
+        }
+
+        public string Fechaimpresion
+        {
+            get
+            {
+                return fechaimpresion;
+            }
+
+            set
+            {
+                fechaimpresion = value;
+            }
+        }
+
+        public int Var_ImpreionAños
+        {
+            get
+            {
+                return var_ImpreionAños;
+            }
+
+            set
+            {
+                var_ImpreionAños = value;
+            }
+        }
+
+        public int Var_ImpresionMeses
+        {
+            get
+            {
+                return var_ImpresionMeses;
+            }
+
+            set
+            {
+                var_ImpresionMeses = value;
+            }
+        }
+
         /*
 
-            
-                
-        
-                
-                
 
-               
-        */
+
+
+
+
+
+
+*/
         public void ingresoAlumnos()
         {
             this.sql = string.Format(@"INSERT INTO alumnos
@@ -360,12 +435,16 @@ where A.IdAlum like'%{0}%'", IdAlum11);
             
         }
 
-
-        public void updateMatricula(int JJornada, string RRecibioEvalu, string OObservaciones, int CCodalumno)
+        /// <summary>
+        /// //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        /// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        /// </summary>
+       
+        public void updateMatricula(int JJornada, string RRecibioEvalu, string OObservaciones, int CCodalumno, int Cod_Matricula)
         {
             
             this.sql = string.Format(@"update matricula set Cod_jornada ='{0}', RecibioEvalu='{1}', Observaciones='{2}'
-where Alumnos_CodAlumno like'%{3}%'", JJornada, RRecibioEvalu, OObservaciones, CCodalumno);
+where Alumnos_CodAlumno = '{3}' and CodMatricula='{4}'", JJornada, RRecibioEvalu, OObservaciones, CCodalumno, Cod_Matricula);
             this.cmd = new MySqlCommand(this.sql, this.cnx);
             this.cnx.Open();
             MySqlDataReader Reg = null;
@@ -373,6 +452,45 @@ where Alumnos_CodAlumno like'%{3}%'", JJornada, RRecibioEvalu, OObservaciones, C
 
             this.cnx.Close();
         }
+
+        public void BusquedaCargarDatosGenero(DataGridView dgv, string a)
+        {
+            cnx.Open();
+            try
+            {
+
+                string busq;
+                busq = a;
+
+
+                this.sql = string.Format
+               (@"select A.CodAlumno as'Codigo de Alumno', A.NomAlumno as 'Nombre completo',
+A.LugarNaciAlum as 'Lugar de Nacimiento', A.FechaNaciAlum as 'Fecha de Nacimiento', A.EdadAlum as 'Edad', A.EdadCronologica
+as 'Edad Cronologica',
+A.SexoAlum as 'Sexo', A.IdAlum as 'Identidad', A.DireccionAlum as 'Direccion', A.TelFijoAlum as 'Telefono fijo', 
+A.CelAlumno as 'Celular', A.EscolaridadAlum as 'Escolaridad',
+A.LugarOrigAlum as 'Lugar de Origen', A.InstProceAlumno as 'Instituto de Procedencia', A.InstDondeEstaIncluido 
+as 'Intituto donde esta incluido' , B.DescripcionEstado as 'Estado',A.EmergLugar as 'Lugar en Caso de Emergencia',   
+A.EmergTelefono as 'Telefono de Emergencia' from alumnos as A inner join estados as B
+on A.Estado=B.CodEstado
+where A.SexoAlum='{0}'
+order by CodAlumno", busq);
+                this.cmd = new MySqlCommand(this.sql, this.cnx);
+                this.DataAdapter = new MySqlDataAdapter(this.cmd);
+                this.dt = new DataTable();
+                this.DataAdapter.Fill(this.dt);
+                dgv.DataSource = this.dt;
+
+
+
+            }
+            catch
+            {
+
+            }
+            cnx.Close();
+        }
+
 
 
         public void llenarDatosMatricula(int CCodAlumno11)
@@ -382,7 +500,7 @@ where Alumnos_CodAlumno like'%{3}%'", JJornada, RRecibioEvalu, OObservaciones, C
 
             this.sql = string.Format(@"select B.CodMatricula,B.Alumnos_CodAlumno,B.Cod_jornada,B.AnioIngreso,
 B.RecibioEvalu,B.Observaciones,B.FechaIngreso from matricula as B
-where B.Alumnos_CodAlumno ='{0}'", CCodAlumno11);
+where B.Alumnos_CodAlumno ='{0}' order by B.CodMatricula desc limit 1", CCodAlumno11);
             this.cmd = new MySqlCommand(this.sql, this.cnx);
             this.cnx.Open();
             MySqlDataReader Reg = null;
@@ -603,6 +721,8 @@ order by CodAlumno", busq);
 
         public DateTime ne;
         public string w;
+
+       
         public void VerificarYear()
         {
             this.sql = string.Format(@"select FechaNaciAlum from alumnos where CodAlumno='{0}'", CodAlumno11);
@@ -835,6 +955,117 @@ values ('{0}','{1}','{2}','{3}','{4}','0','.','0','0','.','6');",
             return veri;
         }
 
+        public void Fun_ActualizarID(int Cod, string ID)
+        {
+            this.sql = string.Format(@"update alumnos set IdAlum='{0}' where  CodAlumno='{1}';", ID, Cod);
+
+            this.cmd = new MySqlCommand(this.sql, this.cnx);
+            this.cnx.Open();
+            MySqlDataReader Reg = null;
+            Reg = this.cmd.ExecuteReader();
+            this.cnx.Close();
+        }
+
+
+        private string mensaje_Identificador;
+
+        private string edadcronologica;
+        private string fechaimpresion;
+
+        public void ExportDataTableToPdf(String strPdfPath, string strHeader, string Nombre, string Mensaje, string edad, string fecha)
+        {
+            System.IO.FileStream fs = new FileStream(strPdfPath, FileMode.Create, FileAccess.Write, FileShare.None);
+            Document document = new Document();
+            document.SetPageSize(iTextSharp.text.PageSize.A4);
+            document.SetMargins(65f, 65f, 10f, 10f);
+            PdfWriter writer = PdfWriter.GetInstance(document, fs);
+
+            document.Open();
+          
+            //Report Header
+            BaseFont bodyfontHead = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1257, BaseFont.NOT_EMBEDDED);
+            iTextSharp.text.Font bodyHead = new iTextSharp.text.Font(bodyfontHead, 17, 1, iTextSharp.text.BaseColor.BLACK);
+
+
+            
+            BaseFont bfntHead = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1257, BaseFont.NOT_EMBEDDED);
+            iTextSharp.text.Font fntHead = new iTextSharp.text.Font(bfntHead, 17, 1, iTextSharp.text.BaseColor.BLACK);
+            Paragraph prgHeading = new Paragraph();
+            prgHeading.Alignment = Element.ALIGN_CENTER;
+            prgHeading.Add(new Chunk("\n\n\n\n\n\n\n\nConstancia", fntHead));
+            document.Add(prgHeading);
+
+
+            Paragraph prBody = new Paragraph();
+            prBody.Alignment = Element.ALIGN_JUSTIFIED;
+
+            prBody.Add(new Chunk("\n\n\n\n", bodyHead));
+            prBody.Add(new Chunk("El suscrito Director Academico del centro de atencion APO-AUTIS por medio de la presente hace constatar que", FontFactory.GetFont("Times New Roman", 11, iTextSharp.text.Font.NORMAL)));
+            prBody.Add(new Chunk(Mensaje_Identificador, FontFactory.GetFont("Times New Roman", 11, iTextSharp.text.Font.NORMAL)));
+            prBody.Add(new Chunk(Nombre, FontFactory.GetFont("Times New Roman", 11, iTextSharp.text.Font.BOLD)));
+            prBody.Add(new Chunk(" con edad cronologica de ", FontFactory.GetFont("Times New Roman", 11, iTextSharp.text.Font.NORMAL)));
+
+            prBody.Add(new Chunk(edadcronologica, FontFactory.GetFont("Times New Roman", 11, iTextSharp.text.Font.NORMAL)));
+
+            prBody.Add(new Chunk(" ,Presenta el Trastorno del Espectro del Autismo, evidenciado en sus dificultades de interacción y comunicación social, por lo cual esta matriculado en el centro de atención APO-AUTIS en donde se le brinda atención terapéutica especializada que le permitan alcanzar el mayor grado de independencia posible en las actividades de la vida diaria. ", FontFactory.GetFont("Times New Roman", 11, iTextSharp.text.Font.NORMAL)));
+
+
+            prBody.Add(new Chunk("\n\nY para los fines que la interesada estime conveniente, se le extiende la presente en la ciudad de Tegucigalpa, MDC, ", FontFactory.GetFont("Times New Roman", 11, iTextSharp.text.Font.NORMAL)));
+            prBody.Add(new Chunk(Fechaimpresion, FontFactory.GetFont("Times New Roman", 11, iTextSharp.text.Font.NORMAL)));
+            prBody.Add(new Chunk("\n\n\n\n\nAtte.: \n\n\n\n\n", FontFactory.GetFont("Times New Roman", 11, iTextSharp.text.Font.NORMAL)));
+
+            document.Add(prBody);
+
+           
+
+            BaseFont bfntFoot = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+            iTextSharp.text.Font fntFoot = new iTextSharp.text.Font(bfntHead, 11, 1, iTextSharp.text.BaseColor.BLACK);
+            Paragraph prgFooting = new Paragraph();
+            prgFooting.Alignment = Element.ALIGN_CENTER;
+            prgFooting.Add(new Chunk("Lic. Adolfo Garcia \nDireccion Académica \nCentro de atencion APO-AUTIS", FontFactory.GetFont("Times New Roman", 11, iTextSharp.text.Font.NORMAL)));
+            document.Add(prgFooting);
+
+            document.Close();
+            writer.Close();
+            fs.Close();
+        }
+
+        private int var_ImpreionAños;
+        private int var_ImpresionMeses;
+
+        public void VerificarYearImpresion()
+        {
+            this.sql = string.Format(@"select FechaNaciAlum from alumnos where CodAlumno='{0}'", CodAlumno11);
+            this.cmd = new MySqlCommand(this.sql, this.cnx);
+            this.cnx.Open();
+            MySqlDataReader Reg = null;
+            Reg = this.cmd.ExecuteReader();
+
+            if (Reg.Read())
+            {
+
+                ne = DateTime.Parse(Reg["FechaNaciAlum"].ToString());
+                DateTime nacimiento = new DateTime(ne.Year, ne.Month, ne.Day); 
+                int edad = DateTime.Today.AddTicks(-nacimiento.Ticks).Year - 1;
+                EdadAlum11 = edad;
+                TimeSpan ts = DateTime.Now.Date - ne.Date;
+
+                double Años = ts.Days / 365;
+                double Meses = Convert.ToInt32((ts.Days - (Años * 365)) / 30.4167);
+
+                Var_ImpreionAños=(int)Años;
+                Var_ImpresionMeses = (int)Meses;
+                this.cnx.Close();
+                updateEdades();
+
+            }
+            else
+            {
+
+            }
+            this.cnx.Close();
+
+        }
     }
 }
 

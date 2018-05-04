@@ -19,6 +19,36 @@ namespace APOAUTIS.Formas.Alumnos
         C_Responsables resp = new C_Responsables();
         C_Validaciones val = new C_Validaciones();
 
+        private static string rutaArchivo;
+        private static string nomArchivo;
+
+        public static string RutaArchivo
+        {
+            get
+            {
+                return rutaArchivo;
+            }
+
+            set
+            {
+                rutaArchivo = value;
+            }
+        }
+
+        public static string NomArchivo
+        {
+            get
+            {
+                return nomArchivo;
+            }
+
+            set
+            {
+                nomArchivo = value;
+            }
+        }
+
+
         private bool Vacios(GroupBox groupBox1)
         {
 
@@ -102,7 +132,9 @@ namespace APOAUTIS.Formas.Alumnos
             Pest2_Pest1_Cmb_RecEvaluacion.SelectedIndex = -1;
 
             Pest1_Txt_CantidadAlumnosSeleccionados.Text = Convert.ToString(Pest1_Dgv_BsqAlm.Rows.Count);
-            
+            comboBox1.SelectedIndex = 0;
+
+
         }
 
 
@@ -149,13 +181,10 @@ namespace APOAUTIS.Formas.Alumnos
                 Pest1_Txt_BusquedaPorNombre.Enabled=true;
                 Pest1_Txt_ID.Enabled = false;
                 Pest1_Txt_ID.Clear();
+                comboBox1.Enabled = false;
+                comboBox1.SelectedIndex = -1;
             }
-            else
-            {
-                Pest1_Txt_BusquedaPorNombre.Enabled = false;
-                Pest1_Txt_ID.Enabled = true;
-                Pest1_Txt_BusquedaPorNombre.Clear();
-            }
+           
         }
 
         private void Pest1_Dgv_BsqAlm_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -272,7 +301,7 @@ namespace APOAUTIS.Formas.Alumnos
                      
                     resp.CodResp = Convert.ToInt32(Pest2_Pest3_Txt_Codigo.Text);
                     resp.NomResp = Pest2_Pest3_Txt_Completo.Text;
-                    resp.IdResp = Convert.ToInt32(Pest2_Pest3_Txt_ID.Text);
+                    resp.IdResp = Pest2_Pest3_Txt_ID.Text;
                     resp.DomResp = Pest2_Pest3_Txt_Domicilio.Text;
                     resp.ProfResp = Pest2_Pest3_Txt_ProfecionUOficio.Text;
                     resp.LugTrab = srt;
@@ -397,7 +426,8 @@ namespace APOAUTIS.Formas.Alumnos
                             {
                                 alumno.updateMatricula(Convert.ToInt32(Pest2_Pest1_Cmb_Jornada.SelectedValue),
                                 Pest2_Pest1_Cmb_RecEvaluacion.SelectedItem.ToString(), Pest2_Pest1_Txt_Observaciones.Text
-                                , alumno.CodAlumno11);
+                                , alumno.CodAlumno11, alumno.CodMatricula);
+
                             alumno.updateAlumnos(Pest2_Pest1_Txt_NombComp.Text, Pest2_Pest1_Txt_Sexo.Text, Pest2_Pest1_Txt_Identidad.Text, Pest2_Pest1_Txt_Direccion.Text,
                           Pest2_Pest1_Txt_TelefonoFijo.Text, Pest2_Pest1_Txt_Celular.Text, Pest2_Pest1_Txt_Escolaridad.Text
                           , Pest2_Pest1_Txt_InstiProcedencia.Text, Pest2_Pest1_Txt_Instituto.Text,
@@ -566,6 +596,94 @@ namespace APOAUTIS.Formas.Alumnos
         private void Pest2_Pest3_Grupo_Encargados_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void Pest1_Radio_ID_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Pest1_Radio_ID.Checked == true)
+            {
+                Pest1_Txt_BusquedaPorNombre.Enabled = false;
+                Pest1_Txt_ID.Enabled = true;
+                Pest1_Txt_BusquedaPorNombre.Clear();
+                comboBox1.Enabled = false;
+                comboBox1.SelectedIndex = -1;
+            }
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true)
+            {
+                Pest1_Txt_BusquedaPorNombre.Enabled = false;
+                Pest1_Txt_BusquedaPorNombre.Clear();
+                comboBox1.Enabled = true;
+                comboBox1.SelectedIndex = -1;
+                Pest1_Txt_ID.Enabled = false;
+                Pest1_Txt_ID.Clear();
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == -1)
+            {
+                alumno.Fun_Show(Pest1_Dgv_BsqAlm);
+            }
+            else
+            {
+                alumno.BusquedaCargarDatosGenero(Pest1_Dgv_BsqAlm, comboBox1.SelectedItem.ToString());
+            }
+            Pest1_Txt_CantidadAlumnosSeleccionados.Text = Convert.ToString(Pest1_Dgv_BsqAlm.Rows.Count);
+        }
+
+        private void Pest1_Dgv_BsqAlm_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form_SelecionarRuta selectNombre = new Form_SelecionarRuta();
+
+            if (string.IsNullOrEmpty(Pest2_Pest1_Txt_Codigo.Text))
+            {
+                
+            }else
+            {
+                alumno.VerificarYear();
+                alumno.VerificarYearImpresion();
+                selectNombre.numericUpDown1.Value = alumno.Var_ImpreionAños;
+                selectNombre.numericUpDown2.Value = alumno.Var_ImpresionMeses;
+
+                selectNombre.NombrePersona.Text = Pest2_Pest1_Txt_NombComp.Text;
+                selectNombre.NombrePersona.ReadOnly = true;
+
+                if (Pest2_Pest1_Txt_Sexo.Text.ToUpper() == "M")
+                {
+                    selectNombre.comboBox1.SelectedIndex = 0;
+                }else
+                {
+                    selectNombre.comboBox1.SelectedIndex = 1;
+                }
+            }
+
+            try
+            {
+                var dialog = new System.Windows.Forms.FolderBrowserDialog();
+                System.Windows.Forms.DialogResult result = dialog.ShowDialog();
+                RutaArchivo = Convert.ToString(dialog.SelectedPath);
+
+                if (RutaArchivo != "")
+                {
+                    
+                    selectNombre.ShowDialog();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Mensaje de Error");
+            }
         }
     }
 }

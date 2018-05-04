@@ -15,6 +15,12 @@ namespace APOAUTIS
 {
     public partial class VistaMatricula : Form
     {
+        public bool Var_Habilitar;
+        C_Validaciones Cl_Val = new C_Validaciones();
+        public int Cod_Madre=0, Cod_Pad=0, Cod_Alumno=0;
+        Clases.C_Alumnos cAlum = new Clases.C_Alumnos();
+        Clases.C_Matricula cMatri = new Clases.C_Matricula();
+
         public VistaMatricula()
         {
             InitializeComponent();
@@ -60,6 +66,9 @@ namespace APOAUTIS
             Cl_Busq.Var_Mat_CodMatricula = (int)Convert.ToDouble(FV_CodMat);
             Cl_Busq.Fun_ExtraerDatos_Mat_Alumno();
 
+            Cod_Alumno = (int)Convert.ToDouble(FV_CodAlum);
+
+
             Pest1_Txt_LugarNacimiento.Text = Cl_Busq.Var_DG_TipoMatricula;
             textBox1.Text = Cl_Busq.Var_Alum_lugarnacimiento;
             Pest1_Txt_FechaNacimiento.Text = Cl_Busq.Var_Alum_fechanacimiento;
@@ -69,7 +78,7 @@ namespace APOAUTIS
             Pest1_Txt_AnoIngreso.Text = Cl_Busq.Var_DG_annioingreso;
             Pest1_Txt_RecibioEvaluacion.Text = Cl_Busq.Var_DG_recibioevaluacion;
             Pest1_Txt_TelefonoFijo.Text = Cl_Busq.Var_Alum_telefonofijo;
-            Pest1_Txt_Jornada.Text = Cl_Busq.Var_DG_Jornada;
+            
             Pest2_Pest_NombreInstituto.Text = Cl_Busq.Var_Alum_IntitutoIncl;
             Pest4_Txt_DireccionPorEmergencias.Text = Cl_Busq.Var_Alum_direcionemergencia;
             Pest4_Txt_TelefonoPorEmergencia.Text = Cl_Busq.Var_Alum_telefonoemergencia;
@@ -77,7 +86,10 @@ namespace APOAUTIS
             Pest4_Txt_Fecha.Text = Cl_Busq.Var_DG_Fecha;
             Pest4_Txt_Entrevistador.Text = Cl_Busq.Var_DG_Entrevistador;
 
-            Pest1_Txt_Jornada.Text = Cl_Busq.Fun_Conseguir_jorm();
+            comboBox1.SelectedValue = Cl_Busq.Var_DG_Jornada;
+            //comboBox1.SelectedValue = Cl_Busq.Fun_Conseguir_jorm();
+
+
             Pest1_Txt_LugarNacimiento.Text = Cl_Busq.Var_DG_TipoMatricula;
 
             Cl_Busq.Fun_UsaMedicamento();
@@ -104,6 +116,7 @@ namespace APOAUTIS
 
             if (Cl_Busq.Fun_ExtraerResponsables(Cl_Busq.Var_Alum_CodAlumno, 1))
             {
+                Cod_Pad = (int)Convert.ToDouble(Cl_Busq.Var_cod);
                 Pest3_Txt_NombrePadre.Text= Cl_Busq.Var_nombre;
                 Pest3_Txt_ProfesionPadre.Text = Cl_Busq.Var_profesion;
                 Pest3_Txt_LugarPadre.Text = Cl_Busq.Var_lugar;
@@ -112,6 +125,7 @@ namespace APOAUTIS
 
             if (Cl_Busq.Fun_ExtraerResponsables(Cl_Busq.Var_Alum_CodAlumno, 2))
             {
+                Cod_Madre = (int) Convert.ToDouble(Cl_Busq.Var_cod);
                 Pest3_Txt_NombreMadre.Text = Cl_Busq.Var_nombre;
                 Pest3_Txt_ProfesionMadre.Text = Cl_Busq.Var_profesion;
                 Pest3_Txt_LugarMadre.Text = Cl_Busq.Var_lugar;
@@ -140,15 +154,21 @@ namespace APOAUTIS
             Pest1_Txt_AnoIngreso.Text = string.Empty;
             Pest1_Txt_RecibioEvaluacion.Text = string.Empty;
             Pest1_Txt_TelefonoFijo.Text = string.Empty;
-            Pest1_Txt_Jornada.Text = string.Empty;
+            comboBox1.SelectedIndex = 0;
             Pest2_Pest_NombreInstituto.Text = string.Empty;
             Pest4_Txt_DireccionPorEmergencias.Text = string.Empty;
             Pest4_Txt_TelefonoPorEmergencia.Text = string.Empty;
             Pest4_TxtBox_Observaciones.Text = string.Empty;
             Pest4_Txt_Fecha.Text = string.Empty;
             Pest4_Txt_Entrevistador.Text = string.Empty;
-            Pest1_Txt_Jornada.Text = string.Empty;
+            comboBox1.SelectedIndex = 0;
             Pest1_Txt_LugarNacimiento.Text = string.Empty;
+            Cod_Madre = 0;
+            Cod_Pad = 0;
+            Cod_Alumno = 0;
+            Pest1_Txt_NombreEstudiante.Text = string.Empty;
+            Pest4_Txt_UsaMedicamentos.Text = string.Empty;
+            Pest_txtNumeroMatricula.Text = string.Empty;
 
         }
 
@@ -165,9 +185,106 @@ namespace APOAUTIS
             }
         }
         
+        public void Habilitar()
+        {
+            
+            Pest1_Txt_NombreEstudiante.ReadOnly = false;
+            textBox1.ReadOnly = false;
+            Pest1_Txt_Instituto.ReadOnly = false;
+            Pest1_Txt_AnoIngreso.ReadOnly = false;
+
+
+
+            Pest1_Txt_DireccionCompleta.ReadOnly = false;
+            Pest1_Txt_Celular.ReadOnly = false;
+            Pest1_Txt_TelefonoFijo.ReadOnly = false;
+            comboBox_atencion_grupal.Enabled = true;
+            comboBox_atencion_vocacional.Enabled = true;
+            comboBox_atencion_prevocacional.Enabled = true;
+            comboBox_atension_escolar.Enabled = true;
+            comboBox_atension_individual.Enabled = true;
+            comboBox_atension_distancia.Enabled = true;
+            comboBox_atencion_terapia_domicilio.Enabled = true;
+            comboBox_atencion_fisica.Enabled = true;
+            Pest2_Pest_NombreInstituto.ReadOnly = false;
+            Pest4_Txt_Entrevistador.ReadOnly = false;
+            Pest4_TxtBox_Observaciones.ReadOnly = false;
+            Pest4_Txt_UsaMedicamentos.ReadOnly = false;
+            Pest4_Txt_TelefonoPorEmergencia.ReadOnly = false;
+            Pest4_Txt_DireccionPorEmergencias.ReadOnly = false;
+
+            Pest3_Txt_NombrePadre.ReadOnly = false;
+            Pest3_Txt_ProfesionPadre.ReadOnly = false;
+            Pest3_Txt_LugarPadre.ReadOnly = false;
+            Pest3_Txt_TelefonoPadre.ReadOnly = false;
+
+            Pest3_Txt_NombreMadre.ReadOnly = false;
+            Pest3_Txt_ProfesionMadre.ReadOnly = false;
+            Pest3_Txt_LugarMadre.ReadOnly = false;
+            Pest3_Txt_TelefonoMadre.ReadOnly = false;
+        }
+
+      
+
+        public void Clic_Derecho()
+        {
+            var blankContextMenu = new ContextMenuStrip();
+
+            var boxes = groupBox1.Controls.OfType<TextBox>();
+            foreach (var box in boxes)
+            {
+                box.ContextMenuStrip = blankContextMenu;
+
+            }
+
+
+            var boxes1 = groupBox2.Controls.OfType<TextBox>();
+            foreach (var box in boxes1)
+            {
+                box.ContextMenuStrip = blankContextMenu;
+
+            }
+
+            var boxes2 = Pest3_Grupo_DatosPadre.Controls.OfType<TextBox>();
+            foreach (var box in boxes2)
+            {
+                box.ContextMenuStrip = blankContextMenu;
+
+            }
+
+
+            var boxes3 = Pest3_Grupo_DatosMadre.Controls.OfType<TextBox>();
+            foreach (var box in boxes3)
+            {
+                box.ContextMenuStrip = blankContextMenu;
+
+            }
+
+
+            var boxes4 = groupBox3.Controls.OfType<TextBox>();
+            foreach (var box in boxes4)
+            {
+                box.ContextMenuStrip = blankContextMenu;
+
+            }
+
+
+        }
         private void VistaMatricula_Load(object sender, EventArgs e)
         {
-           
+            cAlum.GenerarJornada(comboBox1);
+            Clic_Derecho();
+            if (Var_Habilitar == true)
+            {
+                Habilitar();
+            }
+            else
+            {
+                button1.Visible = false;
+                label39.Visible = false;
+            }
+
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -193,6 +310,313 @@ namespace APOAUTIS
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            //
+            if (Fun_VerificarPadre() == true)
+            {
+                MessageBox.Show("Debe Llenar todos los campos", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (Fun_VerificarMadre() == true)
+            {
+                MessageBox.Show("Debe Llenar todos los campos", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (Fun_VerificaarVacios() == true)
+            {
+                MessageBox.Show("Debe Llenar todos los campos", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            Actualizar();
+        }
+
+
+        public void Actualizar()
+        {
+
+        
+
+    
+            cMatri.CodMatricula1 = Convert.ToInt32(Pest_txtNumeroMatricula.Text);
+            cMatri.Alumnos_CodAlumno1 = Cod_Alumno;
+            
+            string Medicamentos =  Pest4_Txt_UsaMedicamentos.Text;
+            cMatri.Fun_ActualiHistoria(Medicamentos, cMatri.Alumnos_CodAlumno1);
+
+            if (Cod_Madre != 0)
+            {
+                cMatri.Fun_ActualiResp(Pest3_Txt_NombreMadre.Text,
+                    Pest3_Txt_ProfesionMadre.Text,
+                    Pest3_Txt_LugarMadre.Text,
+                    Pest3_Txt_TelefonoMadre.Text,
+                    Convert.ToInt32(Cod_Madre));
+            }
+
+
+            if (Cod_Pad !=0)
+            {
+                cMatri.Fun_ActualiResp(Pest3_Txt_NombrePadre.Text,
+                    Pest3_Txt_ProfesionPadre.Text,
+                    Pest3_Txt_LugarPadre.Text,
+                    Pest3_Txt_TelefonoPadre.Text,
+                    Convert.ToInt32(Cod_Pad));
+            }
+
+
+            cMatri.Fun_ActualizAtencion(comboBox_atencion_grupal.SelectedItem.ToString(),
+                comboBox_atencion_prevocacional.SelectedItem.ToString(),
+                comboBox_atencion_vocacional.SelectedItem.ToString(),
+                comboBox_atension_escolar.SelectedItem.ToString(),
+                comboBox_atension_individual.SelectedItem.ToString(),
+                comboBox_atension_distancia.SelectedItem.ToString(),
+                comboBox_atencion_terapia_domicilio.SelectedItem.ToString(),
+                comboBox_atencion_fisica.SelectedItem.ToString(),
+                Cod_Alumno);
+
+
+            cMatri.Fun_ActualizarAlumno(
+               Pest1_Txt_TelefonoFijo.Text,
+                Pest1_Txt_Celular.Text,
+                Pest1_Txt_DireccionCompleta.Text,
+                Pest2_Pest_NombreInstituto.Text,
+                Pest4_Txt_DireccionPorEmergencias.Text,
+                Pest4_Txt_TelefonoPorEmergencia.Text,
+                Cod_Alumno);
+
+            cMatri.Fun_ActualizarMatricula(
+                (int)Convert.ToDouble(comboBox1.SelectedValue),
+                (int)Convert.ToDouble(Pest1_Txt_AnoIngreso.Text),
+                Pest4_TxtBox_Observaciones.Text,
+                Pest4_Txt_Entrevistador.Text,
+                (int)Convert.ToDouble(Pest_txtNumeroMatricula.Text));
+            //atri.Fun_ActualizarMatricula(int Cod_Jor, int Annio, string Observ, string Entre, int Cod_M)
+            //nombre, lugar de nacimiento 
+            //cMatri.Fun_ActualizarAl(string Name, string Direc, int Cod);
+            cMatri.Fun_ActualizarAl(Pest1_Txt_NombreEstudiante.Text, textBox1.Text, Pest1_Txt_Instituto.Text, Cod_Alumno);
+
+            MessageBox.Show("El procedimiento se ha ejecutado exitosamente", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            Fun_Limpiar();
+
+        }
+
+
+
+        private bool Fun_VerificaarVacios()
+        {
+            bool resp = false;
+
+
+
+            var boxes6 = groupBox1.Controls.OfType<TextBox>();
+            foreach (var box in boxes6)
+            {
+                if (string.IsNullOrEmpty(box.Text))
+                {
+                    resp = true;
+                }
+
+            }
+
+
+            var boxes = groupBox2.Controls.OfType<TextBox>();
+            foreach (var box in boxes)
+            {
+                if (string.IsNullOrEmpty(box.Text))
+                {
+                    resp = true;
+                }
+
+            }
+
+
+            var boxesx = groupBox3.Controls.OfType<TextBox>();
+            foreach (var box in boxesx)
+            {
+                if (string.IsNullOrEmpty(box.Text))
+                {
+                    resp = true;
+                }
+
+            }
+
+
+
+            return resp;
+        }
+
+        private bool Fun_VerificarPadre()
+        {
+            bool resp = false;
+
+            
+            if (Cod_Pad != 0)
+            {
+
+                if (string.IsNullOrEmpty(Pest3_Txt_NombrePadre.Text) || string.IsNullOrEmpty(Pest3_Txt_ProfesionPadre.Text) 
+                    || string.IsNullOrEmpty(Pest3_Txt_LugarPadre.Text) || string.IsNullOrEmpty(Pest3_Txt_TelefonoPadre.Text))
+                {
+                    resp = true;
+                }
+
+
+            }
+            else
+                if (Cod_Pad == 0)
+                 {
+                      resp = false;
+                 }
+
+
+            return resp;
+        }
+
+        private bool Fun_VerificarMadre()
+        {
+            bool resp = false;
+
+            if (Cod_Madre != 0)
+            {
+
+                if (string.IsNullOrEmpty(Pest3_Txt_NombreMadre.Text) || string.IsNullOrEmpty(Pest3_Txt_ProfesionMadre.Text) 
+                    || string.IsNullOrEmpty(Pest3_Txt_LugarMadre.Text) || string.IsNullOrEmpty(Pest3_Txt_TelefonoMadre.Text))
+                {
+                    resp = true;
+                }
+
+
+            }else
+                if (Cod_Madre == 0)
+            {
+                resp = false;
+            }
+
+            return resp;
+        }
+
+        private void Pest4_TxtBox_Observaciones_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void Pest4_Txt_Entrevistador_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void Pest4_Txt_UsaMedicamentos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void Pest4_Txt_TelefonoPorEmergencia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void Pest4_Txt_DireccionPorEmergencias_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+            //******************************************************
+        }
+
+        private void Pest1_Txt_NombreEstudiante_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Cl_Val.ValidarNombres_SoloLetras(sender, e);
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //lugar nacimiento
+
+        }
+
+        private void Pest1_Txt_Instituto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Cl_Val.ValirLetrasYEspacios_Direccion(sender, e, Pest1_Txt_Instituto);
+        }
+
+        private void Pest1_Txt_AnoIngreso_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Cl_Val.ValidarID(sender, e);
+        }
+
+        private void Pest1_Txt_DireccionCompleta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Cl_Val.ValirLetrasYEspacios_Direccion(sender, e, Pest1_Txt_DireccionCompleta);
+        }
+
+        private void Pest1_Txt_Celular_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Cl_Val.ValidarID(sender, e);
+        }
+
+        private void Pest1_Txt_TelefonoFijo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Cl_Val.ValidarID(sender, e);
+        }
+
+        private void Pest2_Pest_NombreInstituto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Cl_Val.ValirLetrasYEspacios_Direccion(sender, e, Pest2_Pest_NombreInstituto);
+        }
+
+        private void Pest3_Txt_NombrePadre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Cl_Val.ValidarNombres_SoloLetras(sender, e);
+        }
+
+        private void Pest3_Txt_ProfesionPadre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Cl_Val.ValirLetrasYEspacios_Direccion(sender, e, Pest3_Txt_ProfesionPadre);
+        }
+
+        private void Pest3_Txt_LugarPadre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Cl_Val.ValirLetrasYEspacios_Direccion(sender, e, Pest3_Txt_LugarPadre);
+        }
+
+        private void Pest3_Txt_TelefonoPadre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Cl_Val.ValidarID(sender,e);
+        }
+
+        private void Pest3_Txt_TelefonoMadre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Cl_Val.ValidarID(sender, e);
+        }
+
+        private void Pest3_Txt_LugarMadre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Cl_Val.ValirLetrasYEspacios_Direccion(sender, e, Pest3_Txt_LugarMadre);
+        }
+
+        private void Pest3_Txt_ProfesionMadre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Cl_Val.ValirLetrasYEspacios_Direccion(sender, e, Pest3_Txt_ProfesionMadre);
+        }
+
+        private void Pest3_Txt_NombreMadre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Cl_Val.ValidarNombres_SoloLetras(sender,e);
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+            //******************************************************
         }
     }
 }

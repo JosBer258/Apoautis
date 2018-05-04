@@ -16,8 +16,11 @@ namespace APOAUTIS
     public partial class VistaEntrevistaPadres : Form
     {
         C_VistaEntrevistaPadres CL_Entrevista = new C_VistaEntrevistaPadres();
+        C_Validaciones C_Val = new C_Validaciones();
+        C_EntrevistaIngreCambios C_Cambios = new C_EntrevistaIngreCambios();
         int Var_codig;
         string Var_Nombre;
+        public int Cod_Usuario=0;
 
         public VistaEntrevistaPadres()
         {
@@ -156,10 +159,19 @@ namespace APOAUTIS
         {
             try
             {
+
                 Fun_Limpiar();
+
+                if(C_Cambios.llenarDatosHistoriaMedico(FV_CodAlumno) == false)
+                {
+                    MessageBox.Show("No existe entrevista de padre registrada con este alumno","Mensaje de error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 CL_Entrevista.Var_codigo_alumno = FV_CodAlumno;
                 CL_Entrevista.Var_nombre_completo_alumno = FV_Nombre;
-          
+
+                Var_codig = FV_CodAlumno;
                 PestDatosGen_Txt_NombreCompleto.Text = FV_Nombre;
                 CL_Entrevista.Fun_ExtraerInformacion_Anamnesis();
 
@@ -304,8 +316,135 @@ namespace APOAUTIS
 
         private void VistaEntrevistaPadres_Load(object sender, EventArgs e)
         {
+            if (Cod_Usuario == 3)
+            {
+                panel2.Visible = true;
+                Fun_Habilitar();
+            }
+            else
+            {
+                panel2.Visible = false;
+            }
+
+            ClicDerecho();
         }
 
+        public void Fun_Habilitar()
+        {
+            PestDatosGen_Txt_Escolaridad.ReadOnly = false;
+            PestDatosGen_Txt_Direccion.ReadOnly = false;
+            PestDatosGen_Txt_Telefono.ReadOnly = false;
+            PestDatosGen_Txt_RefiridoPor.ReadOnly = false;
+            PestDatosGen_Txt_Lugar.ReadOnly = false;
+            PestDatosGen_Txt_Fecha.ReadOnly = false;
+
+            var boxes = groupBox2.Controls.OfType<TextBox>();
+            foreach (var box in boxes)
+            {
+                box.ReadOnly = false;
+            }
+
+            var boxes1 = groupBox7.Controls.OfType<TextBox>();
+            foreach (var box in boxes1)
+            {
+                box.ReadOnly = false;
+            }
+
+            var boxes2 = groupBox4.Controls.OfType<TextBox>();
+            foreach (var box in boxes2)
+            {
+                box.ReadOnly = false;
+            }
+
+
+            var boxes3 = groupBox3.Controls.OfType<TextBox>();
+            foreach (var box in boxes3)
+            {
+                box.ReadOnly = false;
+            }
+
+            var boxes4 = groupBox8.Controls.OfType<TextBox>();
+            foreach (var box in boxes4)
+            {
+                box.ReadOnly = false;
+            }
+
+            var boxes5 = groupBox11.Controls.OfType<TextBox>();
+            foreach (var box in boxes5)
+            {
+                box.ReadOnly = false;
+            }
+            var boxes6 = groupBox9.Controls.OfType<TextBox>();
+            foreach (var box in boxes6)
+            {
+                box.ReadOnly = false;
+            }
+            var boxes7 = groupBox10.Controls.OfType<TextBox>();
+            foreach (var box in boxes7)
+            {
+                box.ReadOnly = false;
+            }
+
+            var boxes8 = groupBox12.Controls.OfType<TextBox>();
+            foreach (var box in boxes8)
+            {
+                box.ReadOnly = false;
+            }
+            var boxes9 = groupBox13.Controls.OfType<TextBox>();
+            foreach (var box in boxes9)
+            {
+                box.ReadOnly = false;
+            }
+        }
+
+
+        //VALIDACIONES DE VACIOS
+        private bool GeneralVacios()
+        {
+            bool Resp = false;
+
+            if (string.IsNullOrEmpty(PestDatosGen_Txt_Escolaridad.Text))
+            {
+                Resp = true;
+            }
+            if (string.IsNullOrEmpty(PestDatosGen_Txt_Direccion.Text))
+            {
+                Resp = true;
+            }
+            if (string.IsNullOrEmpty(PestDatosGen_Txt_Telefono.Text))
+            {
+                Resp = true;
+            }
+
+
+            if (string.IsNullOrEmpty(PestDatosGen_Txt_RefiridoPor.Text))
+            {
+                Resp = true;
+            }
+            if (string.IsNullOrEmpty(PestDatosGen_Txt_Lugar.Text))
+            {
+                Resp = true;
+            }
+            if (string.IsNullOrEmpty(PestDatosGen_Txt_Fecha.Text))
+            {
+                Resp = true;
+            }
+
+
+
+            var boxes = groupBox2.Controls.OfType<TextBox>();
+            foreach (var box in boxes)
+            {
+                if (string.IsNullOrEmpty(box.Text))
+                {
+                    Resp = true;
+                }
+                
+            }
+
+            return Resp;
+        }
+        
         private void button24_Click(object sender, EventArgs e)
         {
     
@@ -330,6 +469,11 @@ namespace APOAUTIS
         {
             PestDatosGen_Txt_NombreCompleto.Text = string.Empty;
             //Generales
+            dataGridView2.DataSource = null;
+            dataGridView2.Refresh();
+
+            PestDatosGen_Txt_Responsables.Text = string.Empty;
+
             PestDatosGen_Txt_FechaNacim.Text = string.Empty;
             PestDatosGen_Txt_EdadCron.Text = string.Empty;
             PestDatosGen_Txt_Escolaridad.Text = string.Empty;
@@ -479,6 +623,631 @@ namespace APOAUTIS
         private void Pest_DatosGenerales_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox131_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            if (GeneralVacios() == true)
+            {
+                MessageBox.Show("Debe Llenar todos los Campos", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            LlenarVacios();
+            try
+            {
+                IngresarCambios();
+                Fun_Limpiar();
+                MessageBox.Show("Los datos se guardaron correctamente", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocurrio un error en la actualización", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        private void IngresarCambios()
+        {
+            C_Cambios.ActualizarAlumno(Var_codig, PestDatosGen_Txt_Escolaridad.Text, PestDatosGen_Txt_Direccion.Text, PestDatosGen_Txt_Telefono.Text);
+            C_Cambios.ActualizarEntrevistaPadres(Var_codig, PestDatosGen_Txt_RefiridoPor.Text, textBox158.Text, PestDatosGen_Txt_Lugar.Text, PestDatosGen_Txt_Fecha.Text);
+            C_Cambios.ActualizaAnamnesis(Var_codig, PestAnam_Txt_TipoFamilia.Text, PestAnam_Txt_DuracionGestacion.Text, PestA_Txt_PesAlNacer.Text,
+                PestAnam_Txt_DatosPrenatales.Text, PestAnam_Txt_DatosPerinatales.Text, PestAnam_Txt_DatosPostnatales.Text);
+            C_Cambios.ActualizaRelacion(Var_codig, textBox154.Text, textBox152.Text, textBox148.Text, textBox150.Text);
+            C_Cambios.ActualComoReacciona(Var_codig, textBox145.Text, textBox147.Text, textBox146.Text, textBox144.Text, textBox143.Text, textBox142.Text);
+            C_Cambios.ActualizarMotors(Var_codig, textBox100.Text, textBox99.Text, textBox98.Text, textBox97.Text,
+                textBox95.Text, PestDesar_Motriz.Text, PestDes_Txt_HanNotado.Text);
+
+            C_Cambios.ActualizarComportamiento(Var_codig, textBox111.Text, textBox112.Text,
+            textBox119.Text, textBox118.Text, textBox117.Text, textBox116.Text,
+            textBox159.Text, textBox156.Text);
+
+
+            C_Cambios.ActualizarLenguaje(textBox101.Text,
+                textBox110.Text, textBox109.Text,
+            textBox105.Text,
+            textBox103.Text, textBox102.Text,
+            textBox108.Text, textBox107.Text,
+            textBox106.Text, Var_codig);
+
+            C_Cambios.ActualizarVida(textBox3.Text, textBox130.Text, textBox129.Text, textBox128.Text,
+            textBox131.Text, textBox133.Text, textBox132.Text, textBox127.Text,
+            textBox126.Text, textBox125.Text, textBox124.Text, textBox123.Text,
+            textBox122.Text, textBox121.Text, textBox120.Text, textBox113.Text, textBox141.Text,
+            textBox140.Text, textBox139.Text, textBox138.Text, textBox137.Text,
+            textBox135.Text, textBox134.Text, textBox1.Text, textBox2.Text, Var_codig);
+        }
+
+        private void ClicDerecho()
+        {
+            var blankContextMenu = new ContextMenuStrip();
+
+            var boxes = groupBox1.Controls.OfType<TextBox>();
+            foreach (var box in boxes)
+            {
+                box.ContextMenuStrip = blankContextMenu;
+
+            }
+
+            var boxes1 = groupBox2.Controls.OfType<TextBox>();
+            foreach (var box in boxes1)
+            {
+                box.ContextMenuStrip = blankContextMenu;
+
+            }
+
+      
+
+            var boxes2 = groupBox7.Controls.OfType<TextBox>();
+            foreach (var box in boxes2)
+            {
+                box.ContextMenuStrip = blankContextMenu;
+
+            }
+
+            var boxes3 = groupBox4.Controls.OfType<TextBox>();
+            foreach (var box in boxes3)
+            {
+                box.ContextMenuStrip = blankContextMenu;
+
+            }
+
+            var boxes4 = groupBox3.Controls.OfType<TextBox>();
+            foreach (var box in boxes4)
+            {
+                box.ContextMenuStrip = blankContextMenu;
+
+            }
+
+            var boxes5 = groupBox8.Controls.OfType<TextBox>();
+            foreach (var box in boxes5)
+            {
+                box.ContextMenuStrip = blankContextMenu;
+
+            }
+
+            var boxes6 = groupBox11.Controls.OfType<TextBox>();
+            foreach (var box in boxes6)
+            {
+                box.ContextMenuStrip = blankContextMenu;
+
+            }
+
+           
+            var boxes8 = groupBox9.Controls.OfType<TextBox>();
+            foreach (var box in boxes8)
+            {
+                box.ContextMenuStrip = blankContextMenu;
+
+            }
+            var boxes7 = groupBox10.Controls.OfType<TextBox>();
+            foreach (var box in boxes7)
+            {
+                box.ContextMenuStrip = blankContextMenu;
+
+            }
+
+
+            var boxes11 = groupBox12.Controls.OfType<TextBox>();
+            foreach (var box in boxes11)
+            {
+                box.ContextMenuStrip = blankContextMenu;
+
+            }
+            var boxes9 = groupBox13.Controls.OfType<TextBox>();
+            foreach (var box in boxes9)
+            {
+                box.ContextMenuStrip = blankContextMenu;
+
+            }
+
+
+        }
+
+        
+        private void LlenarVacios()
+        {
+            if (string.IsNullOrEmpty(textBox158.Text))
+            {
+                textBox158.Text = "Ninguno";
+            }
+
+            if (string.IsNullOrEmpty(textBox156.Text))
+            {
+                textBox156.Text = "Normal";
+            }
+
+            
+            if (string.IsNullOrEmpty(textBox159.Text))
+            {
+                textBox159.Text = "No";
+            }
+
+
+            if (string.IsNullOrEmpty(textBox154.Text))
+            {
+                textBox154.Text = "No";
+            }
+
+            if (string.IsNullOrEmpty(textBox152.Text))
+            {
+                textBox152.Text = "Normal";
+            }
+
+            if (string.IsNullOrEmpty(textBox148.Text))
+            {
+                textBox148.Text = "Normal";
+            }
+
+            if (string.IsNullOrEmpty(textBox150.Text))
+            {
+                textBox150.Text = "Normal";
+            }
+
+
+            var boxes = groupBox9.Controls.OfType<TextBox>();
+            foreach (var box in boxes)
+            {
+                if (string.IsNullOrEmpty(box.Text))
+                {
+                    box.Text = "--";
+                }
+
+            }
+
+            var boxes1 = groupBox10.Controls.OfType<TextBox>();
+            foreach (var box in boxes1)
+            {
+                if (string.IsNullOrEmpty(box.Text))
+                {
+                    box.Text = "--";
+                }
+
+            }
+
+            var boxes2 = groupBox8.Controls.OfType<TextBox>();
+            foreach (var box in boxes2)
+            {
+                if (string.IsNullOrEmpty(box.Text))
+                {
+                    box.Text = "--";
+                }
+
+            }
+
+
+            var boxes3 = groupBox11.Controls.OfType<TextBox>();
+            foreach (var box in boxes3)
+            {
+                if (string.IsNullOrEmpty(box.Text))
+                {
+                    box.Text = "--";
+                }
+
+            }
+
+            var boxes4 = groupBox7.Controls.OfType<TextBox>();
+            foreach (var box in boxes4)
+            {
+                if (string.IsNullOrEmpty(box.Text))
+                {
+                    box.Text = "--";
+                }
+
+            }
+    
+            var boxes5 = groupBox4.Controls.OfType<TextBox>();
+            foreach (var box in boxes5)
+            {
+                if (string.IsNullOrEmpty(box.Text))
+                {
+                    box.Text = "--";
+                }
+
+            }
+
+            var boxes6 = groupBox3.Controls.OfType<TextBox>();
+            foreach (var box in boxes6)
+            {
+                if (string.IsNullOrEmpty(box.Text))
+                {
+                    box.Text = "--";
+                }
+
+            }
+
+
+        }
+
+        private void PestAnam_Txt_DatosPostnatales_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender,e, PestAnam_Txt_DatosPostnatales);
+        }
+
+        private void PestAnam_Txt_DatosPerinatales_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, PestAnam_Txt_DatosPerinatales);
+        }
+
+        private void PestAnam_Txt_DatosPrenatales_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, PestAnam_Txt_DatosPrenatales);
+        }
+
+        private void PestAnam_Txt_DuracionGestacion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, PestAnam_Txt_DuracionGestacion);
+        }
+
+        private void PestA_Txt_PesAlNacer_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, PestA_Txt_PesAlNacer);
+        }
+
+        private void PestAnam_Txt_TipoFamilia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios(sender, e, PestAnam_Txt_TipoFamilia);
+        }
+
+        private void PestDatosGen_Txt_Escolaridad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios(sender, e, PestDatosGen_Txt_Escolaridad);
+        }
+
+        private void PestDatosGen_Txt_Direccion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, PestDatosGen_Txt_Direccion);
+        }
+
+        private void PestDatosGen_Txt_Telefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValidarID(sender,e);
+        }
+
+        private void PestDatosGen_Txt_RefiridoPor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios(sender, e, PestDatosGen_Txt_RefiridoPor);
+        }
+
+        private void PestDatosGen_Txt_Lugar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, PestDatosGen_Txt_Lugar);
+        }
+
+        private void PestDatosGen_Txt_Fecha_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.Fecha(sender, e, PestDatosGen_Txt_Fecha);
+        }
+
+        private void textBox158_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender,e, textBox158);
+        }
+
+        private void groupBox11_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox156_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox156);
+        }
+
+        private void textBox159_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox159);
+        }
+
+        private void textBox150_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox150);
+        }
+
+        private void textBox148_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox148);
+        }
+
+        private void textBox152_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox152);
+        }
+
+        private void textBox154_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender,e, textBox154);
+        }
+
+        private void textBox119_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox119);
+        }
+
+        private void textBox118_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox118);
+        }
+
+        private void textBox117_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox117);
+        }
+
+        private void textBox116_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox116);
+        }
+
+        private void textBox145_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox145);
+        }
+
+        private void textBox147_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox147);
+        }
+
+        private void textBox146_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox146);
+        }
+
+        private void textBox144_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox144);
+        }
+
+        private void textBox143_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox143);
+        }
+
+        private void textBox142_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox142);
+        }
+
+        private void textBox106_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox106);
+        }
+
+        private void textBox107_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox107);
+        }
+
+        private void textBox108_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox108);
+        }
+
+        private void textBox103_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox103);
+        }
+
+        private void textBox102_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox102);
+        }
+
+        private void textBox105_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox105);
+        }
+
+        private void textBox109_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox109);
+        }
+
+        private void textBox110_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox110);
+        }
+
+        private void textBox101_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox101);
+        }
+
+        private void textBox111_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox111);
+        }
+
+        private void textBox112_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox112);
+        }
+
+        private void PestDes_Txt_HanNotado_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, PestDes_Txt_HanNotado);
+        }
+
+        private void PestDesar_Motriz_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, PestDesar_Motriz);
+        }
+
+        private void textBox100_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox100);
+        }
+
+        private void textBox97_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox97);
+        }
+
+        private void textBox99_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox99);
+        }
+
+        private void textBox96_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox96);
+        }
+
+        private void textBox98_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox98);
+        }
+
+        private void textBox95_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox95);
+        }
+
+        private void textBox124_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox124);
+        }
+
+        private void textBox125_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox125);
+        }
+
+        private void textBox126_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox126);
+        }
+
+        private void textBox127_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox127);
+        }
+
+        private void textBox132_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox132);
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox2);
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox1);
+        }
+
+        private void textBox134_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox134);
+        }
+
+        private void textBox135_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox135);
+        }
+
+        private void textBox137_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox137);
+        }
+
+        private void textBox138_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox138);
+        }
+
+        private void textBox139_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox139);
+        }
+
+        private void textBox140_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox140);
+        }
+
+        private void textBox141_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox141);
+        }
+
+        private void textBox113_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox113);
+        }
+
+        private void textBox120_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox120);
+        }
+
+        private void textBox121_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox121);
+        }
+
+        private void textBox122_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox122);
+        }
+
+        private void textBox133_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox133);
+        }
+
+        private void textBox131_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox131);
+        }
+
+        private void textBox128_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox128);
+        }
+
+        private void textBox129_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox129);
+        }
+
+        private void textBox130_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox130);
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Val.ValirLetrasYEspacios_Direccion(sender, e, textBox3);
         }
     }
 }

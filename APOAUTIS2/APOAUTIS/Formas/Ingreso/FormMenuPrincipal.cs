@@ -103,19 +103,23 @@ namespace APOAUTIS.Formas.Ingreso
 
         private void vistaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             VistaEntrevistaPadres vistaEntPadres = new VistaEntrevistaPadres();
+            vistaEntPadres.Cod_Usuario = Convert.ToInt32(this.CodUsuario);
             vistaEntPadres.ShowDialog();
         }
 
         private void ingresoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             FormaEstSocEco estSocioEco = new FormaEstSocEco();
+
             estSocioEco.ShowDialog();
         }
 
         private void vistaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             VistaEstSoc vistaEsSc = new VistaEstSoc();
+            vistaEsSc.Cod_Usuario = Convert.ToInt16( this.CodUsuario);
             vistaEsSc.ShowDialog();
         }
 
@@ -128,6 +132,15 @@ namespace APOAUTIS.Formas.Ingreso
         private void vistaToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             VistaMatricula vistaMat = new VistaMatricula();
+            if (CodUsuario != "3")
+            {
+                vistaMat.Var_Habilitar = false;
+            }
+            else
+            {
+                vistaMat.Var_Habilitar = true;
+            }
+            
             vistaMat.ShowDialog();
         }
 

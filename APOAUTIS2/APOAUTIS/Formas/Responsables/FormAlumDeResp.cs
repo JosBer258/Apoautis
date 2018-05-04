@@ -10,8 +10,7 @@ using System.Windows.Forms;
 
 using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
-
-
+using APOAUTIS.Clases;
 
 namespace APOAUTIS.Formas.Responsables
 {
@@ -35,7 +34,9 @@ namespace APOAUTIS.Formas.Responsables
 
         private void FormAlumDeResp_Load(object sender, EventArgs e)
         {
-            
+
+            var blankContextMenu = new ContextMenuStrip();
+            Txt_FiltroAlumno.ContextMenuStrip = blankContextMenu;
             adr.mostarAlumnos(DataGrid_Show);
         }
 
@@ -47,6 +48,12 @@ namespace APOAUTIS.Formas.Responsables
         private void Txt_FiltroAlumno_TextChanged(object sender, EventArgs e)
         {
             adr.buscarAlumno(DataGrid_Show, Txt_FiltroAlumno.Text);
+        }
+
+        private void Txt_FiltroAlumno_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            C_Validaciones Val = new C_Validaciones();
+            Val.ValidarNombres_SoloLetras(sender, e);
         }
     }
 }

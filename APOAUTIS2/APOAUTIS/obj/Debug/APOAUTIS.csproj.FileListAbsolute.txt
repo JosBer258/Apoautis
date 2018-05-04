@@ -213,3 +213,4 @@ C:\Users\Geovana\Desktop\SW\Apoautis\APOAUTIS2\APOAUTIS\bin\Debug\itextsharp.xml
 C:\Users\Geovana\Desktop\SW\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.seleccionNombreArchivo.resources
 C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\bin\Debug\itextsharp.xml
 C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.seleccionNombreArchivo.resources
+C:\Users\Josias\Documents\Proyectos GitHub\Apoautis\APOAUTIS2\APOAUTIS\obj\Debug\APOAUTIS.Formas.Alumnos.Form_SelecionarRuta.resources

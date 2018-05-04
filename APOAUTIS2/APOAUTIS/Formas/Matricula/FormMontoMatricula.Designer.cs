@@ -54,6 +54,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.Gruop_MuestraDatos.SuspendLayout();
             this.Gruop_Busqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Show)).BeginInit();
@@ -77,6 +79,8 @@
             // 
             // Gruop_MuestraDatos
             // 
+            this.Gruop_MuestraDatos.Controls.Add(this.label11);
+            this.Gruop_MuestraDatos.Controls.Add(this.comboBox1);
             this.Gruop_MuestraDatos.Controls.Add(this.label10);
             this.Gruop_MuestraDatos.Controls.Add(this.label9);
             this.Gruop_MuestraDatos.Controls.Add(this.Bttn_Limpiar);
@@ -93,7 +97,7 @@
             this.Gruop_MuestraDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gruop_MuestraDatos.Location = new System.Drawing.Point(12, 12);
             this.Gruop_MuestraDatos.Name = "Gruop_MuestraDatos";
-            this.Gruop_MuestraDatos.Size = new System.Drawing.Size(724, 135);
+            this.Gruop_MuestraDatos.Size = new System.Drawing.Size(724, 167);
             this.Gruop_MuestraDatos.TabIndex = 15;
             this.Gruop_MuestraDatos.TabStop = false;
             this.Gruop_MuestraDatos.Text = "Muestra de los datos";
@@ -135,7 +139,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 108);
+            this.label5.Location = new System.Drawing.Point(30, 110);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 13);
             this.label5.TabIndex = 11;
@@ -144,7 +148,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 83);
+            this.label4.Location = new System.Drawing.Point(28, 86);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 13);
             this.label4.TabIndex = 10;
@@ -166,7 +170,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 54);
+            this.label3.Location = new System.Drawing.Point(28, 62);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 13);
             this.label3.TabIndex = 9;
@@ -175,7 +179,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 27);
+            this.label2.Location = new System.Drawing.Point(28, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(135, 13);
             this.label2.TabIndex = 8;
@@ -184,7 +188,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(74, 22);
+            this.label1.Location = new System.Drawing.Point(74, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 7;
@@ -192,14 +196,14 @@
             // Txt_Mensualidad
             // 
             this.Txt_Mensualidad.Enabled = false;
-            this.Txt_Mensualidad.Location = new System.Drawing.Point(166, 101);
+            this.Txt_Mensualidad.Location = new System.Drawing.Point(166, 107);
             this.Txt_Mensualidad.Name = "Txt_Mensualidad";
             this.Txt_Mensualidad.Size = new System.Drawing.Size(182, 20);
             this.Txt_Mensualidad.TabIndex = 4;
             // 
             // Txt_Responsable
             // 
-            this.Txt_Responsable.Location = new System.Drawing.Point(166, 47);
+            this.Txt_Responsable.Location = new System.Drawing.Point(166, 59);
             this.Txt_Responsable.Name = "Txt_Responsable";
             this.Txt_Responsable.ReadOnly = true;
             this.Txt_Responsable.Size = new System.Drawing.Size(273, 20);
@@ -208,14 +212,14 @@
             // Txt_TotalIngreso
             // 
             this.Txt_TotalIngreso.Enabled = false;
-            this.Txt_TotalIngreso.Location = new System.Drawing.Point(166, 73);
+            this.Txt_TotalIngreso.Location = new System.Drawing.Point(166, 83);
             this.Txt_TotalIngreso.Name = "Txt_TotalIngreso";
             this.Txt_TotalIngreso.Size = new System.Drawing.Size(182, 20);
             this.Txt_TotalIngreso.TabIndex = 1;
             // 
             // Txt_NombreAlumno
             // 
-            this.Txt_NombreAlumno.Location = new System.Drawing.Point(166, 23);
+            this.Txt_NombreAlumno.Location = new System.Drawing.Point(166, 35);
             this.Txt_NombreAlumno.Name = "Txt_NombreAlumno";
             this.Txt_NombreAlumno.ReadOnly = true;
             this.Txt_NombreAlumno.Size = new System.Drawing.Size(273, 20);
@@ -230,9 +234,9 @@
             this.Gruop_Busqueda.Controls.Add(this.DGV_Show);
             this.Gruop_Busqueda.Controls.Add(this.Txt_Filtro_Matricula);
             this.Gruop_Busqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gruop_Busqueda.Location = new System.Drawing.Point(12, 166);
+            this.Gruop_Busqueda.Location = new System.Drawing.Point(12, 196);
             this.Gruop_Busqueda.Name = "Gruop_Busqueda";
-            this.Gruop_Busqueda.Size = new System.Drawing.Size(879, 315);
+            this.Gruop_Busqueda.Size = new System.Drawing.Size(879, 285);
             this.Gruop_Busqueda.TabIndex = 16;
             this.Gruop_Busqueda.TabStop = false;
             this.Gruop_Busqueda.Text = "Busqueda";
@@ -255,12 +259,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DGV_Show.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DGV_Show.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.DGV_Show.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
             this.DGV_Show.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Show.Location = new System.Drawing.Point(6, 63);
+            this.DGV_Show.Location = new System.Drawing.Point(6, 64);
             this.DGV_Show.Name = "DGV_Show";
             this.DGV_Show.ReadOnly = true;
-            this.DGV_Show.Size = new System.Drawing.Size(867, 246);
+            this.DGV_Show.Size = new System.Drawing.Size(867, 215);
             this.DGV_Show.TabIndex = 0;
             this.DGV_Show.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Show_CellContentClick);
             this.DGV_Show.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Show_CellContentDoubleClick);
@@ -327,6 +331,28 @@
             this.label7.TabIndex = 19;
             this.label7.Text = "Salir";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Normal",
+            "Extraordinaria"});
+            this.comboBox1.Location = new System.Drawing.Point(166, 132);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(182, 21);
+            this.comboBox1.TabIndex = 23;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(30, 135);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(125, 13);
+            this.label11.TabIndex = 24;
+            this.label11.Text = "Tipo de Mensualidad";
+            // 
             // FormMontoMatricula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,5 +405,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

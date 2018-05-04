@@ -368,6 +368,7 @@ namespace APOAUTIS
             Padres.fun_aconte_academicos(txtinteres_particular.Text, Com);
 
             //funcion de vida diaria
+            
             Padres.Duerme_solo = txtduemesolo.Text;
             Padres.Hora_acuesta = txthora_acuesta.Text;
             Padres.Hora_levanta = txthora_levanta.Text;
@@ -1274,6 +1275,16 @@ namespace APOAUTIS
         private void txttelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
             Val.ValidarID(sender, e);
+        }
+
+        private void Grupo_Anamnesis_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtduerme_objetoespe_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

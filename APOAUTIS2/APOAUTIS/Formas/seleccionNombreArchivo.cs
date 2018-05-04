@@ -48,12 +48,17 @@ namespace APOAUTIS.Formas
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             txtNombreArchivo.Text = "";
-            this.Hide();
+            this.Close();
         }
 
         private void txtNombreArchivo_KeyPress(object sender, KeyPressEventArgs e)
         {
             cEval.validarNumerosYLetras(sender, e);
+        }
+
+        private void seleccionNombreArchivo_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

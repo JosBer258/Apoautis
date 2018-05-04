@@ -194,7 +194,7 @@
             // 
             this.Pest1_Txt_NomEducador.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest1_Txt_NomEducador.Location = new System.Drawing.Point(175, 59);
-            this.Pest1_Txt_NomEducador.MaxLength = 40;
+            this.Pest1_Txt_NomEducador.MaxLength = 44;
             this.Pest1_Txt_NomEducador.Name = "Pest1_Txt_NomEducador";
             this.Pest1_Txt_NomEducador.Size = new System.Drawing.Size(192, 22);
             this.Pest1_Txt_NomEducador.TabIndex = 1;
@@ -224,7 +224,7 @@
             // 
             this.Pest1_Txt_DireccionCompleta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest1_Txt_DireccionCompleta.Location = new System.Drawing.Point(847, 91);
-            this.Pest1_Txt_DireccionCompleta.MaxLength = 40;
+            this.Pest1_Txt_DireccionCompleta.MaxLength = 240;
             this.Pest1_Txt_DireccionCompleta.Multiline = true;
             this.Pest1_Txt_DireccionCompleta.Name = "Pest1_Txt_DireccionCompleta";
             this.Pest1_Txt_DireccionCompleta.Size = new System.Drawing.Size(183, 61);
@@ -266,7 +266,7 @@
             // 
             this.Pest1_Txt_InstProced.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest1_Txt_InstProced.Location = new System.Drawing.Point(534, 91);
-            this.Pest1_Txt_InstProced.MaxLength = 40;
+            this.Pest1_Txt_InstProced.MaxLength = 44;
             this.Pest1_Txt_InstProced.Name = "Pest1_Txt_InstProced";
             this.Pest1_Txt_InstProced.Size = new System.Drawing.Size(183, 22);
             this.Pest1_Txt_InstProced.TabIndex = 6;
@@ -317,7 +317,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(18, 153);
+            this.label11.Location = new System.Drawing.Point(16, 146);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(117, 32);
             this.label11.TabIndex = 19;
@@ -337,7 +337,7 @@
             // 
             this.Pest1_Txt_LugarNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest1_Txt_LugarNacimiento.Location = new System.Drawing.Point(175, 87);
-            this.Pest1_Txt_LugarNacimiento.MaxLength = 40;
+            this.Pest1_Txt_LugarNacimiento.MaxLength = 59;
             this.Pest1_Txt_LugarNacimiento.Name = "Pest1_Txt_LugarNacimiento";
             this.Pest1_Txt_LugarNacimiento.Size = new System.Drawing.Size(192, 22);
             this.Pest1_Txt_LugarNacimiento.TabIndex = 2;
@@ -410,7 +410,7 @@
             // Pest2_Pest_NombreInstituto
             // 
             this.Pest2_Pest_NombreInstituto.Location = new System.Drawing.Point(385, 111);
-            this.Pest2_Pest_NombreInstituto.MaxLength = 40;
+            this.Pest2_Pest_NombreInstituto.MaxLength = 44;
             this.Pest2_Pest_NombreInstituto.Name = "Pest2_Pest_NombreInstituto";
             this.Pest2_Pest_NombreInstituto.Size = new System.Drawing.Size(626, 26);
             this.Pest2_Pest_NombreInstituto.TabIndex = 8;
@@ -851,7 +851,7 @@
             // 
             this.Pest4_TxtBox_Observaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest4_TxtBox_Observaciones.Location = new System.Drawing.Point(442, 141);
-            this.Pest4_TxtBox_Observaciones.MaxLength = 40;
+            this.Pest4_TxtBox_Observaciones.MaxLength = 350;
             this.Pest4_TxtBox_Observaciones.Multiline = true;
             this.Pest4_TxtBox_Observaciones.Name = "Pest4_TxtBox_Observaciones";
             this.Pest4_TxtBox_Observaciones.Size = new System.Drawing.Size(512, 67);
@@ -882,7 +882,7 @@
             // 
             this.Pest4_Txt_DireccionPorEmergencias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest4_Txt_DireccionPorEmergencias.Location = new System.Drawing.Point(442, 34);
-            this.Pest4_Txt_DireccionPorEmergencias.MaxLength = 40;
+            this.Pest4_Txt_DireccionPorEmergencias.MaxLength = 240;
             this.Pest4_Txt_DireccionPorEmergencias.Name = "Pest4_Txt_DireccionPorEmergencias";
             this.Pest4_Txt_DireccionPorEmergencias.Size = new System.Drawing.Size(512, 21);
             this.Pest4_Txt_DireccionPorEmergencias.TabIndex = 0;
@@ -892,7 +892,7 @@
             // 
             this.Pest4_Txt_CualesMedic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest4_Txt_CualesMedic.Location = new System.Drawing.Point(442, 86);
-            this.Pest4_Txt_CualesMedic.MaxLength = 40;
+            this.Pest4_Txt_CualesMedic.MaxLength = 240;
             this.Pest4_Txt_CualesMedic.Multiline = true;
             this.Pest4_Txt_CualesMedic.Name = "Pest4_Txt_CualesMedic";
             this.Pest4_Txt_CualesMedic.Size = new System.Drawing.Size(512, 49);
@@ -987,9 +987,11 @@
             // 
             // textBox2
             // 
+            this.textBox2.Enabled = false;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(97, 19);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(92, 20);
             this.textBox2.TabIndex = 10;
             // 
@@ -1051,7 +1053,7 @@
             // Pest3_Txt_ProfesionMadre
             // 
             this.Pest3_Txt_ProfesionMadre.Location = new System.Drawing.Point(323, 40);
-            this.Pest3_Txt_ProfesionMadre.MaxLength = 40;
+            this.Pest3_Txt_ProfesionMadre.MaxLength = 120;
             this.Pest3_Txt_ProfesionMadre.Name = "Pest3_Txt_ProfesionMadre";
             this.Pest3_Txt_ProfesionMadre.Size = new System.Drawing.Size(299, 20);
             this.Pest3_Txt_ProfesionMadre.TabIndex = 1;
@@ -1060,7 +1062,7 @@
             // Pest3_Txt_LugarMadre
             // 
             this.Pest3_Txt_LugarMadre.Location = new System.Drawing.Point(783, 12);
-            this.Pest3_Txt_LugarMadre.MaxLength = 40;
+            this.Pest3_Txt_LugarMadre.MaxLength = 120;
             this.Pest3_Txt_LugarMadre.Name = "Pest3_Txt_LugarMadre";
             this.Pest3_Txt_LugarMadre.Size = new System.Drawing.Size(175, 20);
             this.Pest3_Txt_LugarMadre.TabIndex = 2;
@@ -1098,9 +1100,11 @@
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(97, 19);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(92, 20);
             this.textBox1.TabIndex = 8;
             // 
@@ -1148,7 +1152,7 @@
             // 
             this.Pest3_Txt_ProfesionPadre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest3_Txt_ProfesionPadre.Location = new System.Drawing.Point(323, 41);
-            this.Pest3_Txt_ProfesionPadre.MaxLength = 40;
+            this.Pest3_Txt_ProfesionPadre.MaxLength = 123;
             this.Pest3_Txt_ProfesionPadre.Name = "Pest3_Txt_ProfesionPadre";
             this.Pest3_Txt_ProfesionPadre.Size = new System.Drawing.Size(299, 20);
             this.Pest3_Txt_ProfesionPadre.TabIndex = 1;
@@ -1158,7 +1162,7 @@
             // 
             this.Pest3_Txt_LugarPadre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pest3_Txt_LugarPadre.Location = new System.Drawing.Point(783, 19);
-            this.Pest3_Txt_LugarPadre.MaxLength = 40;
+            this.Pest3_Txt_LugarPadre.MaxLength = 120;
             this.Pest3_Txt_LugarPadre.Name = "Pest3_Txt_LugarPadre";
             this.Pest3_Txt_LugarPadre.Size = new System.Drawing.Size(184, 20);
             this.Pest3_Txt_LugarPadre.TabIndex = 2;
@@ -1210,9 +1214,6 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Primer Ingreso",
-            "Reingreso"});
             this.comboBox1.Location = new System.Drawing.Point(186, 24);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(239, 28);
@@ -1320,6 +1321,7 @@
             this.Name = "FrmMatricula";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Matricula";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmMatricula_Load);
             this.tabMatricula.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

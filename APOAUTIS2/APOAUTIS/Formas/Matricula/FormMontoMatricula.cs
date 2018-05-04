@@ -34,6 +34,8 @@ namespace APOAUTIS.Formas.Matricula
             Cl_Mon.Fun_MuestraDatosGen(DGV_Show);
             var blankContextMenu = new ContextMenuStrip();
             Txt_Filtro_Matricula.ContextMenuStrip = blankContextMenu;
+            comboBox1.SelectedIndex = 0;
+
         }
 
         public void Fun_CargarDatos(int Var_Codigo, string Var_Nombre)
@@ -124,6 +126,7 @@ namespace APOAUTIS.Formas.Matricula
             Txt_NombreAlumno.Clear();
             Txt_Responsable.Clear();
             Txt_TotalIngreso.Clear();
+            comboBox1.SelectedIndex = 0;
         }
 
         private void Txt_Filtro_Matricula_TextChanged(object sender, EventArgs e)
@@ -138,8 +141,22 @@ namespace APOAUTIS.Formas.Matricula
             }
         }
 
+        private void Fun_Clean()
+        {
+            var boxes6 = Gruop_MuestraDatos.Controls.OfType<TextBox>();
+            foreach (var box in boxes6)
+            {
+                box.Clear();
+
+            }
+
+            Cl_Mon.Var_mensualidad=0;
+            Cl_Mon.Var_total_ingresos="0";
+            comboBox1.SelectedIndex = 0;
+        }
         private void DGV_Show_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            Fun_Clean();
             try { 
 
             DataGridViewRow row = DGV_Show.Rows[e.RowIndex];
@@ -152,6 +169,7 @@ namespace APOAUTIS.Formas.Matricula
 
         private void DGV_Show_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            Fun_Clean();
             try
             {
                 DataGridViewRow row = DGV_Show.Rows[e.RowIndex];
@@ -182,6 +200,34 @@ namespace APOAUTIS.Formas.Matricula
         private void Gruop_MuestraDatos_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(Txt_NombreAlumno.Text))
+            {
+                return;
+            }
+
+            if (comboBox1.SelectedIndex == 0)
+            {
+                if (string.IsNullOrEmpty(Txt_TotalIngreso.Text))
+                {
+                    Txt_Mensualidad.Text = "0";
+                }
+                else
+                {
+                    Cl_Mon.Fun_ExtraerTotalMen();
+                    Cl_Mon.Fun_CalcularMensualidad();
+                    Txt_Mensualidad.Text = Cl_Mon.Var_mensualidad.ToString();
+                    Txt_TotalIngreso.Text = Cl_Mon.Var_total_ingresos;
+                }
+            }
+            else
+            {
+                Txt_Mensualidad.Text = "0";
+                Cl_Mon.Var_mensualidad = 0;
+            }
         }
     }
 }

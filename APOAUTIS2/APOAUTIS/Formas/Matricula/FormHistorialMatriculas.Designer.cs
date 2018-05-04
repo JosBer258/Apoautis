@@ -51,7 +51,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DGV_Show.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DGV_Show.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.DGV_Show.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
             this.DGV_Show.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Show.Location = new System.Drawing.Point(14, 155);
             this.DGV_Show.Name = "DGV_Show";

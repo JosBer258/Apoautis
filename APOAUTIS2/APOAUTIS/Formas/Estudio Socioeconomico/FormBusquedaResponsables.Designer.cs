@@ -36,9 +36,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.DGV_responsables = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_responsables)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -96,6 +96,7 @@
             this.Txt_FiltroResponsable.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_FiltroResponsable.Location = new System.Drawing.Point(198, 33);
             this.Txt_FiltroResponsable.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Txt_FiltroResponsable.MaxLength = 40;
             this.Txt_FiltroResponsable.Name = "Txt_FiltroResponsable";
             this.Txt_FiltroResponsable.Size = new System.Drawing.Size(326, 24);
             this.Txt_FiltroResponsable.TabIndex = 16;
@@ -113,6 +114,8 @@
             // 
             // DGV_responsables
             // 
+            this.DGV_responsables.AllowUserToAddRows = false;
+            this.DGV_responsables.AllowUserToDeleteRows = false;
             this.DGV_responsables.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -121,6 +124,7 @@
             this.DGV_responsables.Location = new System.Drawing.Point(16, 109);
             this.DGV_responsables.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.DGV_responsables.Name = "DGV_responsables";
+            this.DGV_responsables.ReadOnly = true;
             this.DGV_responsables.Size = new System.Drawing.Size(621, 334);
             this.DGV_responsables.TabIndex = 14;
             this.DGV_responsables.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_responsables_CellContentClick);
@@ -138,14 +142,14 @@
             this.panel1.TabIndex = 20;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // label2
+            // label4
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(534, 71);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 15);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Buscar Alumno";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(145, 107);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(64, 15);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Cancelar";
             // 
             // label3
             // 
@@ -156,14 +160,14 @@
             this.label3.TabIndex = 22;
             this.label3.Text = "Aceptar";
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(145, 107);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 15);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Cancelar";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(534, 71);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(103, 15);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Buscar Alumno";
             // 
             // FormBusquedaResponsables
             // 

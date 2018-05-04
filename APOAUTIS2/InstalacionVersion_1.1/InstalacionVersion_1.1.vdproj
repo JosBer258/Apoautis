@@ -16,7 +16,7 @@
         "Entry"
         {
         "MsmKey" = "8:_25FC2DF06E1846A4B2FF657C3F1EACDC"
-        "OwnerKey" = "8:_8544294DB642499E85BE5C2BC157EC34"
+        "OwnerKey" = "8:_CE1AA1F1D65C43E8A5042588EC99B358"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -39,20 +39,14 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_8544294DB642499E85BE5C2BC157EC34"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_88F2EEAA4A4E6219A919F30204577F36"
-        "OwnerKey" = "8:_8544294DB642499E85BE5C2BC157EC34"
+        "OwnerKey" = "8:_CE1AA1F1D65C43E8A5042588EC99B358"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_A543CB0728B7D3188CA4B8F03AFFB14E"
-        "OwnerKey" = "8:_8544294DB642499E85BE5C2BC157EC34"
+        "OwnerKey" = "8:_CE1AA1F1D65C43E8A5042588EC99B358"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -63,8 +57,14 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_CE1AA1F1D65C43E8A5042588EC99B358"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_D3C505999213293352AAA8F5F3B87FDD"
-        "OwnerKey" = "8:_8544294DB642499E85BE5C2BC157EC34"
+        "OwnerKey" = "8:_CE1AA1F1D65C43E8A5042588EC99B358"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -76,7 +76,7 @@
         "Entry"
         {
         "MsmKey" = "8:_D4881351CBD8ED65D23371431837C820"
-        "OwnerKey" = "8:_8544294DB642499E85BE5C2BC157EC34"
+        "OwnerKey" = "8:_CE1AA1F1D65C43E8A5042588EC99B358"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -88,7 +88,7 @@
         "Entry"
         {
         "MsmKey" = "8:_DA53A74DD582AE2538FED2ABCF34986F"
-        "OwnerKey" = "8:_8544294DB642499E85BE5C2BC157EC34"
+        "OwnerKey" = "8:_CE1AA1F1D65C43E8A5042588EC99B358"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -112,7 +112,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_8544294DB642499E85BE5C2BC157EC34"
+        "OwnerKey" = "8:_CE1AA1F1D65C43E8A5042588EC99B358"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -195,6 +195,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -740,29 +748,29 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_6AC3F528754746509B0FE1EAD625421F"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_7E7EE89047484B598C3A6249F36CAB91"
             {
-            "Name" = "8:Apoautis"
+            "Name" = "8:Apo_Autis_2"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_8544294DB642499E85BE5C2BC157EC34"
+            "Target" = "8:_CE1AA1F1D65C43E8A5042588EC99B358"
             "Folder" = "8:_E36A235D13E944B7A6599C90A1F4EF3A"
             "WorkingFolder" = "8:_E575128DDCA84232A3FCF3E57BBAFA14"
             "Icon" = "8:_7B009FDB7DFB4770BA93E243C1F7D272"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_AD24E472711B4AFE8798EC1A6C4C4FB4"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_DD4E17E4182744E3B79EB82B468FEF9F"
             {
-            "Name" = "8:Apo-Autis"
+            "Name" = "8:Apo_Autis_2"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_8544294DB642499E85BE5C2BC157EC34"
+            "Target" = "8:_CE1AA1F1D65C43E8A5042588EC99B358"
             "Folder" = "8:_FE59E911AF9B48798312F9D48336CDF8"
             "WorkingFolder" = "8:_E575128DDCA84232A3FCF3E57BBAFA14"
             "Icon" = "8:_7B009FDB7DFB4770BA93E243C1F7D272"
@@ -1167,7 +1175,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_8544294DB642499E85BE5C2BC157EC34"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_CE1AA1F1D65C43E8A5042588EC99B358"
             {
             "SourcePath" = "8:..\\APOAUTIS\\obj\\Debug\\APOAUTIS.exe"
             "TargetName" = "8:"

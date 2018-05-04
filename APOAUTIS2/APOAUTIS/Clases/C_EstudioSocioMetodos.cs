@@ -267,10 +267,10 @@ namespace APOAUTIS.Clases
                     madre.NombResp = _reader.GetString(2);
                     if (string.IsNullOrEmpty(_reader.GetInt32(3).ToString()))
                     {
-                        madre.IdResp = 0;
+                        madre.IdResp = "0";
                     }else
                     {
-                        madre.IdResp = _reader.GetInt32(3);
+                        madre.IdResp = _reader.GetString(3);
                     }
                   
                     madre.DomicilioResp = _reader.GetString(4);
@@ -317,10 +317,10 @@ namespace APOAUTIS.Clases
                     padre.NombResp = _reader.GetString(2);
                     if (string.IsNullOrEmpty(_reader.GetInt32(3).ToString()))
                     {
-                        padre.IdResp = 0;
+                        padre.IdResp = "0";
                     }else
                     {
-                        padre.IdResp = _reader.GetInt32(3);
+                        padre.IdResp = _reader.GetString(3);
                     }
                   
                     padre.DomicilioResp = _reader.GetString(4);
@@ -366,12 +366,12 @@ namespace APOAUTIS.Clases
                     otro.Telefono = _reader.GetString(7);
                     otro.TipoResp = _reader.GetInt32(8);
 
-
+           
                     lista.Add(otro);
                 }
-                catch (Exception)
+                catch (System.Exception e)
                 {
-
+                  
                 }
             }
 
@@ -385,17 +385,19 @@ namespace APOAUTIS.Clases
             C_EstudioSocioEc Estudio = new C_EstudioSocioEc();
             MySqlConnection conexion = C_EstudioSocioMetodos.ObtenerConexion();
             conexion.Open();
-            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT Alumnos_CodAlumno, Lugar, Fecha, PersonaEntrevis, RevisaAproPor FROM estudiosocioeconomico where Alumnos_CodAlumno = '{0}'", cod), conexion);
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT Alumnos_CodAlumno, Lugar, Fecha, PersonaEntrevis, RevisaAproPor,CodEstudioSE FROM estudiosocioeconomico where Alumnos_CodAlumno = '{0}'", cod), conexion);
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
             {
                 try
                 {
+
                     Estudio.CodAlumno = _reader.GetInt32(0);
                     Estudio.LugarEntrevista = _reader.GetString(1);
                     Estudio.FechaEntrevista = _reader.GetString(2);
                     Estudio.PersonaEntrevis = _reader.GetString(3);
                     Estudio.EntrevistadoPor1 = _reader.GetString(4);
+                    Estudio.CodEstudioSocio = _reader.GetInt32(5);
                 }
                 catch (Exception)
                 {
@@ -457,7 +459,7 @@ namespace APOAUTIS.Clases
                 
 
                     madre.NombResp = _reader.GetString(2);
-                    madre.IdResp = _reader.GetInt32(3);
+                    madre.IdResp = _reader.GetString(3);
                     madre.DomicilioResp = _reader.GetString(4);
                     madre.ProfesionResp1 = _reader.GetString(5);
                     madre.OficioREsp = _reader.GetString(6);
@@ -496,7 +498,7 @@ namespace APOAUTIS.Clases
                     padre.CodResp = _reader.GetInt32(1);
                     
                     padre.NombResp = _reader.GetString(2);
-                    padre.IdResp = _reader.GetInt32(3);
+                    padre.IdResp = _reader.GetString(3);
                     padre.DomicilioResp = _reader.GetString(4);
                     padre.ProfesionResp1 = _reader.GetString(5);
                     padre.OficioREsp = _reader.GetString(6);
@@ -537,6 +539,7 @@ namespace APOAUTIS.Clases
                 otro.Cel = _reader.GetString(6);
                 otro.TipoResp = _reader.GetInt32(7);
 
+               
             }
 
             conexion.Close();
@@ -679,26 +682,28 @@ Playa, Otros from lugaresrecreacion where Alumnos_CodAlumno = '{0}'", cod), cone
                     familia.PersonasHabitan1 = _reader.GetInt32(1);
                     familia.TieneMasHijos1 = _reader.GetString(2);
                     familia.HabitanOtrosFamiliares1 = _reader.GetString(3);
-                    familia.CuantosMiembrosTrabajan1 = _reader.GetInt32(4);
-                    familia.IngresoAbuela1 = _reader.GetDouble(5);
-                    familia.IngresoMadre1 = _reader.GetDouble(6);
-                    familia.IngresoPadre1 = _reader.GetDouble(7);
-                    familia.IngresoHijo1 = _reader.GetDouble(8);
-                    familia.Pension1 = _reader.GetDouble(9);
-                    familia.OtrosIngresos1 = _reader.GetDouble(10);
-                    familia.TotalIngresos1 = _reader.GetDouble(11);
-                    familia.GastosEnergia1 = _reader.GetDouble(12);
-                    familia.GastoAgua1 = _reader.GetDouble(13);
-                    familia.GastoTel1 = _reader.GetDouble(14);
-                    familia.GastoComida1 = _reader.GetDouble(15);
-                    familia.GastoTransp1 = _reader.GetDouble(16);
-                    familia.GastoSalub1 = _reader.GetDouble(17);
-                    familia.GastoEduca1 = _reader.GetDouble(18);
-                    familia.GastoGaso1 = _reader.GetDouble(19);
-                    familia.GastoRpa1 = _reader.GetDouble(20);
-                    familia.GastoVivienda1 = _reader.GetDouble(21);
-                    familia.OtrosGastos1 = _reader.GetDouble(22);
-                    familia.TotalGastos1 = _reader.GetDouble(23);
+                    familia.CuantosMiembrosTrabajan1 = _reader.GetInt32(5);
+                    familia.MienEnTotal1= _reader.GetInt32(4);
+
+                    familia.IngresoAbuela1 = _reader.GetDouble(6);
+                    familia.IngresoMadre1 = _reader.GetDouble(7);
+                    familia.IngresoPadre1 = _reader.GetDouble(8);
+                    familia.IngresoHijo1 = _reader.GetDouble(9);
+                    familia.Pension1 = _reader.GetDouble(10);
+                    familia.OtrosIngresos1 = _reader.GetDouble(11);
+                    familia.TotalIngresos1 = _reader.GetDouble(12);
+                    familia.GastosEnergia1 = _reader.GetDouble(13);
+                    familia.GastoAgua1 = _reader.GetDouble(14);
+                    familia.GastoTel1 = _reader.GetDouble(15);
+                    familia.GastoComida1 = _reader.GetDouble(16);
+                    familia.GastoTransp1 = _reader.GetDouble(17);
+                    familia.GastoSalub1 = _reader.GetDouble(18);
+                    familia.GastoEduca1 = _reader.GetDouble(19);
+                    familia.GastoGaso1 = _reader.GetDouble(20);
+                    familia.GastoRpa1 = _reader.GetDouble(21);
+                    familia.GastoVivienda1 = _reader.GetDouble(22);
+                    familia.OtrosGastos1 = _reader.GetDouble(23);
+                    familia.TotalGastos1 = _reader.GetDouble(24);
                 }
                 catch (Exception)
                 {

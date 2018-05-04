@@ -51,7 +51,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DataGrid_Show.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.DataGrid_Show.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.DataGrid_Show.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.DataGrid_Show.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
             this.DataGrid_Show.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DataGrid_Show.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGrid_Show.Location = new System.Drawing.Point(30, 31);
@@ -86,6 +86,7 @@
             this.Txt_FiltroAlumno.Size = new System.Drawing.Size(422, 24);
             this.Txt_FiltroAlumno.TabIndex = 10;
             this.Txt_FiltroAlumno.TextChanged += new System.EventHandler(this.Txt_FiltroAlumno_TextChanged);
+            this.Txt_FiltroAlumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_FiltroAlumno_KeyPress);
             // 
             // label1
             // 

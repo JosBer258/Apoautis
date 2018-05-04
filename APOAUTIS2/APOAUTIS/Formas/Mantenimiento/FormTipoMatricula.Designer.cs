@@ -144,6 +144,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(100, 68);
+            this.textBox2.MaxLength = 43;
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(134, 51);
@@ -153,6 +154,7 @@
             // 
             this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(100, 41);
+            this.textBox1.MaxLength = 9;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(134, 21);
             this.textBox1.TabIndex = 0;

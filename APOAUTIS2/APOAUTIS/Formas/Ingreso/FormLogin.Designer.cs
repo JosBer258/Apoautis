@@ -90,6 +90,7 @@
             this.Txt_Contrasenna.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_Contrasenna.Location = new System.Drawing.Point(232, 166);
             this.Txt_Contrasenna.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.Txt_Contrasenna.MaxLength = 20;
             this.Txt_Contrasenna.Name = "Txt_Contrasenna";
             this.Txt_Contrasenna.Size = new System.Drawing.Size(248, 26);
             this.Txt_Contrasenna.TabIndex = 121;
@@ -115,6 +116,7 @@
             this.Txt_NombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_NombreUsuario.Location = new System.Drawing.Point(232, 116);
             this.Txt_NombreUsuario.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.Txt_NombreUsuario.MaxLength = 40;
             this.Txt_NombreUsuario.Name = "Txt_NombreUsuario";
             this.Txt_NombreUsuario.Size = new System.Drawing.Size(248, 26);
             this.Txt_NombreUsuario.TabIndex = 119;
